@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 15:00:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 15:05:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,193 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】-3-学习阅读Class文件结构(javap版)</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</link><pubDate>Thu, 05 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】-4-学习阅读Class文件指令-概览</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/</link><pubDate>Thu, 05 Aug 2021 15:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
+&lt;p>在《【编译引擎】学习阅读Class文件结构(javap版)》中，我们看到了Code属性包含了JVM指令序列。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702135411052.png" alt="image-20210702135411052">&lt;/p>
+&lt;p>在理解了Class文件结构之后，学习JVM指令有助于我们更进一步地理解Class文件结构。&lt;/p>
+&lt;p>然而，JVM指令是JVM规范另一个大篇幅知识点，我们应该如何高效学习它呢？&lt;/p>
+&lt;p>本文将通过上述代码，阐述JVM指令的执行过程(例如：局部变量表中的数据入栈、栈上数据存储回局部变量表等)，为读者展示JVM指令的全貌以及学习方法。&lt;/p>
+&lt;h1 id="1题目">1.题目&lt;/h1>
+&lt;p>在《【案例开放XXX】Java知识点学习交流-学习阅读Class文件结构》中，我们看到了Code属性包含了JVM指令序列。&lt;/p>
+&lt;p>&lt;em>？补充图片&lt;/em>&lt;/p>
+&lt;p>在理解了Class文件结构之后，学习JVM指令有助于我们更进一步地理解Class文件结构。&lt;/p>
+&lt;p>然而，JVM指令是JVM规范另一个大篇幅知识点，我们应该如何高效学习它呢？&lt;/p>
+&lt;p>本文将通过上述代码，阐述JVM指令的执行过程(例如：局部变量表中的数据入栈、栈上数据存储回局部变量表等)，为读者展示JVM指令的全貌以及学习方法。&lt;/p>
+&lt;h1 id="2jvm指令概览">2.JVM指令概览&lt;/h1>
+&lt;h2 id="21本质-信息压缩">2.1.本质-信息压缩&lt;/h2>
+&lt;p>在学习具体的JVM之前，我们应该先来看看JVM指令的本质以及它存在的意义。&lt;/p>
+&lt;p>不知道您是否考虑过这样一个问题：&amp;ldquo;如何表达一个方法的实现呢？&amp;rdquo;&lt;/p>
+&lt;p>您可能会说：可以用代码来描述，如下伪码所示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kt">void&lt;/span> &lt;span class="nf">func1&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">print&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>那么，我们把问题增加一些限制：&amp;ldquo;如何用最小的信息量表达一个方法的实现？&amp;rdquo;&lt;/p>
+&lt;p>聪明的读者可能会想到&amp;quot;代号法&amp;rdquo;，即为上述伪码取个特殊的代号(假设&amp;quot;int i = 1&amp;quot;的代号是&amp;quot;帅哥&amp;rdquo;，&amp;ldquo;print(i)&amp;ldquo;的代号是&amp;quot;美女&amp;rdquo;)，那么上述伪码可以简化为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kt">void&lt;/span> &lt;span class="nf">func1&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">帅哥&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">美女&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们继续把问题增加一些限制：&amp;ldquo;如何用计算机能理解的最小信息量表达一个方法的实现？&amp;rdquo;&lt;/p>
+&lt;p>什么是计算机能理解的信息？显然是字节。所以，我们可以约定&amp;quot;0A&amp;quot;就是&amp;quot;帅哥&amp;rdquo;，&amp;ldquo;0B&amp;quot;就是&amp;quot;美女&amp;rdquo;，如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kt">void&lt;/span> &lt;span class="nf">func1&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">0A&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">0B&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同样的信息，在某些场景下(对于人)越大越好，在某些场景下(对于机器)越小越好。&lt;/p>
+&lt;p>更关键的是，二者能相互转换——这就好像三体中智子的高维折叠和低维展开。&lt;/p>
+&lt;p>这或许就是计算机的世界中，最令人着迷的地方。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702144922740.png" alt="image-20210702144922740">&lt;/p>
+&lt;h2 id="22jvm指令格式">2.2.JVM指令格式&lt;/h2>
+&lt;p>JVM指令的格式一般是这样的：&lt;/p>
+&lt;blockquote>
+&lt;p>操作码+操作数&lt;/p>
+&lt;/blockquote>
+&lt;p>操作码为1个字节，在JVM规范中约定了这个字节表达的具体的JVM指令含义。&lt;/p>
+&lt;p>这是一个有趣的细节：1个字节是8位，所以JVM指令的操作码最多只有255个&lt;/p>
+&lt;p>操作数可以没有，也可能有多个。&lt;/p>
+&lt;h2 id="23jvm指令分类">2.3.JVM指令分类&lt;/h2>
+&lt;p>JVM规范中的JVM指令非常多，我们可以根据指令的使用场景分类，本文仅列举实战中最常用的场景：&lt;/p>
+&lt;ul>
+&lt;li>加载与存储：比如将局部变量表的数据放到虚拟机栈中&lt;/li>
+&lt;li>算数指令：比如i++&lt;/li>
+&lt;li>类型转换指令：比如int转double&lt;/li>
+&lt;li>对象创建/字段访问：比如创建一个类的实例，并且访问该实例的某个属性&lt;/li>
+&lt;li>方法调用：比如访问一个类的静态方法&lt;/li>
+&lt;li>异常处理：比如抛出一个异常&lt;/li>
+&lt;li>……&lt;/li>
+&lt;/ul>
+&lt;h2 id="24真理都在规范中">2.4.真理都在规范中&lt;/h2>
+&lt;p>当我们具备了前面的基本知识，最高效、最准确地学习JVM指令，就要查阅JVM规范了：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702150908956.png" alt="image-20210702150908956">&lt;/p>
+&lt;h1 id="3实例解读">3.实例解读&lt;/h1>
+&lt;p>为了方便阅读，我们将javap输出的日志简化后展示如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">String&lt;/span>&lt;span class="o">[]);&lt;/span>
+&lt;span class="err">……………………&lt;/span>
+&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">getstatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// Field java/lang/System.out:Ljava/io/PrintStream;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="c1">// String start
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// Method java/io/PrintStream.println:(Ljava/lang/String;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokestatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="c1">// Method test:()V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">11&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">getstatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// Field java/lang/System.out:Ljava/io/PrintStream;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">14&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span> &lt;span class="c1">// String end
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">16&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// Method java/io/PrintStream.println:(Ljava/lang/String;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">19&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
+&lt;span class="err">……………………&lt;/span>
+&lt;span class="kd">private&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">test&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="err">……………………&lt;/span>
+&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span> &lt;span class="c1">// class java/lang/IllegalArgumentException
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">dup&lt;/span>
+&lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span> &lt;span class="c1">// String exception
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">6&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="c1">// Method java/lang/IllegalArgumentException.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:(Ljava/lang/String;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">athrow&lt;/span>
+&lt;span class="err">……………………&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="31对象创建指令">3.1对象创建指令&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152821188.png" alt="image-20210702152821188">&lt;/p>
+&lt;p>new是操作码，#7是操作数。&lt;/p>
+&lt;p>#7表示常量池中的常量，从javap的输出可知，#7表示IllegalArgumentException异常。&lt;/p>
+&lt;p>new表示创建了IllegalArgumentException异常对象。&lt;/p>
+&lt;p>创建了异常对象后，对象本身放到堆中，对象的内存地址会放到栈中。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152324438.png" alt="image-20210702152324438">&lt;/p>
+&lt;p>下一步就是dup，dup只有操作码，没有操作数。&lt;/p>
+&lt;p>dup就是将栈中前一个元素进行了复制。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152609221.png" alt="image-20210702152609221">&lt;/p>
+&lt;p>那么为什么要dup呢？&lt;/p>
+&lt;p>这就涉及到后面方法调用的指令了，当执行了&lt;code>invokespecial&lt;/code>指令，就会将栈中的&lt;code>#0001&lt;/code>出栈。&lt;/p>
+&lt;p>所以，一般创建了对象后，会紧跟着dup一下。&lt;/p>
+&lt;h2 id="32常量入栈指令">3.2.常量入栈指令&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152857941.png" alt="image-20210702152857941">&lt;/p>
+&lt;p>ldc是操作码，#8是操作数。&lt;/p>
+&lt;p>根据javap的输出提示，#8表示的是字符串类型常量&amp;quot;exception&amp;rdquo;。&lt;/p>
+&lt;p>ldc负责将这个常量入栈：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153046669.png" alt="image-20210702153046669">&lt;/p>
+&lt;h2 id="33方法调用指令">3.3.方法调用指令&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153131436.png" alt="image-20210702153131436">&lt;/p>
+&lt;p>invokespecial是操作码，#9是操作数&lt;/p>
+&lt;p>#9表示&lt;code>IllegalArgumentException&lt;/code>异常的构造函数&lt;/p>
+&lt;p>invokespecial表示了调用特定的函数，在这里调用的是&lt;code>IllegalArgumentException&lt;/code>异常的构造函数，并且需要给构造函数输入一个字符串参数&amp;quot;exception&amp;rdquo;。&lt;/p>
+&lt;p>此时运行时数据区变成了这样：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153403860.png" alt="image-20210702153403860">&lt;/p>
+&lt;h2 id="34异常处理指令">3.4.异常处理指令&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153452470.png" alt="image-20210702153452470">&lt;/p>
+&lt;p>athrow只有操作码，表示抛出&lt;code>IllegalArgumentException&lt;/code>异常，并结束了test方法。&lt;/p>
+&lt;p>至此，我们通过test()方法，就覆盖了JVM指令主要的4个场景：创建对象-&amp;gt;常量入栈-&amp;gt;调用方法-&amp;gt;抛出异常。&lt;/p>
+&lt;h2 id="35main函数的jvm指令执行过程">3.5.main函数的JVM指令执行过程&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153713484.png" alt="image-20210702153713484">&lt;/p>
+&lt;p>有了3.1~3.4的基础，我们再看main函数的执行就很容易举一反三了：&lt;/p>
+&lt;p>&lt;code>getstatic #2&lt;/code>属于类/对象的属性获取场景，即将System.out放到栈中&lt;/p>
+&lt;p>&lt;code>invokevirtual #4&lt;/code>类似invokestatic指令，也是调用方法，即调用System.out.println&lt;/p>
+&lt;p>此时，控制台打印了&amp;quot;start&amp;rdquo;。&lt;/p>
+&lt;p>执行到invokestatic #5，即执行了test()方法，会抛出异常，导致main函数不再往下执行后面的JVM指令。&lt;/p>
+&lt;p>因此，最终控制台打印了start后抛出&lt;code>IllegalArgumentException&lt;/code>异常&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;p>本文接着javap案例，进一步解读了javap的JVM指令部分，具体如下：&lt;/p>
+&lt;ul>
+&lt;li>JVM指令的本质是信息压缩&lt;/li>
+&lt;li>JVM指令格式一般包含1个操作码+N个操作数&lt;/li>
+&lt;li>可以根据场景对JVM指令分类，有助于高效学习JVM指令&lt;/li>
+&lt;li>通过一个示例代码，解读了JVM指令的运行过程&lt;/li>
+&lt;/ul>
+&lt;h1 id="5参考资料">5.参考资料&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html">https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html&lt;/a>&lt;/p>
+&lt;p>《深入理解Java虚拟机：JVM高级特性与最佳实践》&lt;/p>
+&lt;/blockquote></description></item><item><title>【编译引擎】-3-学习阅读Class文件结构(javap版)</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</link><pubDate>Thu, 05 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
 &lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)》中，我们一起直接阅读了Class文件的16进制版本。&lt;/p>
 &lt;p>虽然这种方式可以帮助我们深刻理解Class文件结构，但如果您从事的是应用软件开发(而不是编译器相关工作)，这样就比较低效了。&lt;/p>
 &lt;p>今天我们就来看看JVM提供的javap，如何提升我们解读Class结构的工作效率。&lt;/p>

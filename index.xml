@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Mar 2019 16:01:23 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://jherculesqz.github.io/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://jherculesqz.github.io/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 14:37:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://jherculesqz.github.io/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://jherculesqz.github.io/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,131 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>Math Preview</title><link>https://jherculesqz.github.io/post/math-preview/</link><pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><guid>https://jherculesqz.github.io/post/math-preview/</guid><description>&lt;p>&lt;a href="https://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo, currently processed as KaTex&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</link><pubDate>Thu, 05 Aug 2021 14:37:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</guid><description>&lt;h1 id="1起于累土为什么要阅读字节码">1.起于累土：为什么要阅读字节码&lt;/h1>
+&lt;p>笔者最近的一项工作是设计一套课程，用于辅导新员工如何做好性能优化。&lt;/p>
+&lt;p>这项工作很快遇到了问题：&lt;/p>
+&lt;blockquote>
+&lt;p>讲内存泄露/溢出的定位工具，就要求听众先对JVM的运行时数据区有基本理解。&lt;/p>
+&lt;p>讲运行时数据区，又要求听众先大致理解类加载子系统如何一步步地将字节码加载到内存中。&lt;/p>
+&lt;p>讲类加载子系统，又要求听众先理解字节码表示了哪些&amp;quot;静态信息&amp;rdquo;。&lt;/p>
+&lt;p>&amp;hellip;.&lt;/p>
+&lt;/blockquote>
+&lt;p>性能优化是一个复杂的系统化话题，性能优化的手段分为3个级别：&lt;/p>
+&lt;p>&lt;strong>倔强青铜级：时空转移&lt;/strong>&lt;/p>
+&lt;p>当计算效率不足时，用空间换时间。例如：将需要频繁使用的数据，提前缓存在内存中。&lt;/p>
+&lt;p>当内存空间不足时，用时间换空间。例如：将不需要的缓存数据去掉，动态计算。&lt;/p>
+&lt;p>在这个层次上解决问题，&lt;strong>优点是朴实&lt;/strong>，&lt;strong>缺点是此消彼长、绵绵无期&lt;/strong>：&lt;/p>
+&lt;p>因为&lt;strong>时间换空间&lt;/strong>与&lt;strong>空间换时间&lt;/strong>本质是互逆的手段。&lt;/p>
+&lt;p>一个软件产品可能在迭代1暴露出了计算效率不足，采用了空间换时间。&lt;/p>
+&lt;p>到了迭代2又因为迭代1的性能优化导致空间不足，又要将大量的缓存替换为实时计算。&lt;/p>
+&lt;p>……&lt;/p>
+&lt;p>笔者的一位程序猿朋友，在多次时间换空间、空间换时间的性能优化工作之后，发出了一句颇有哲理的感慨：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>时间是不可能被消灭的，只能被转移&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-1.png" alt="image-20201128154031535">&lt;/p>
+&lt;p>&lt;strong>永恒钻石级：业务裁剪&lt;/strong>&lt;/p>
+&lt;p>能用这个级别手法的，一般是老程序猿。&lt;/p>
+&lt;p>凭借多年的业务领域经验，深刻理解了业务流程中哪些步骤是冗余的。&lt;/p>
+&lt;p>无论是时间瓶颈或者空间瓶颈，删掉冗余代码，一招搞定。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-2.png" alt="image-20201128155657776">&lt;/p>
+&lt;p>在这个层次上解决问题，&lt;strong>优点还是朴实，缺点是比较依赖业务专家，无法批量复制与推广&lt;/strong>。&lt;/p>
+&lt;p>&lt;strong>最强王者级：底层优化&lt;/strong>&lt;/p>
+&lt;p>使用这种手法，就要求程序猿对于JVM、操作系统、网络有比较深刻的认识，大部分程序猿都止步此。&lt;/p>
+&lt;p>通过对静态逻辑(字节码)的理解和动态逻辑(运行时)的理解，精确找到空间瓶颈和时间瓶颈，进而采用更加具有通用性的手段开展优化工作。&lt;/p>
+&lt;p>如果说&lt;strong>性能优化是九层之塔&lt;/strong>，那么&lt;strong>阅读字节码&lt;/strong>就是累土中的重要基石之一。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-3.png" alt="image-20201128160013429">&lt;/p>
+&lt;h1 id="2编程界的通天塔字节码的宏观意义">2.编程界的通天塔：字节码的宏观意义&lt;/h1>
+&lt;p>知乎上有一个趣帖&lt;code>全世界为什么不能统一语言？&lt;/code>(&lt;a href="https://www.zhihu.com/question/22133387">https://www.zhihu.com/question/22133387&lt;/a>)&lt;/p>
+&lt;p>有一个有趣的回答：&amp;ldquo;你想造通天塔就直说&amp;rdquo;。&lt;/p>
+&lt;p>通天塔，也叫巴别塔，传说人类想建造一个通往天堂的天梯而触怒了神灵，于是神灵将人类的语言隔绝，导致人类种族语言不通。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-1.png" alt="image-20201128163114423">&lt;/p>
+&lt;p>编程界也存在多种编程语言，任何VM类型的语言(含编译、执行)都存在如下流程：&lt;/p>
+&lt;blockquote>
+&lt;p>前端编译器：将源代码转换为字节码&lt;/p>
+&lt;p>字节码加载模块：将字节码加载到运行时数据区(就是内存)&lt;/p>
+&lt;p>解释执行器：根据内存中的VM栈，执行字节码&lt;/p>
+&lt;p>后端编译器：将频繁执行的字节码直接生成为机器码缓存下来，提升执行效率&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-2.png" alt="image-20201126100836623">&lt;/p>
+&lt;p>我们会发现，字节码加载、运行时数据区似乎大同小异，于是进一步简化上述流程：&lt;/p>
+&lt;blockquote>
+&lt;p>字节码加载取决于运行时数据区&lt;/p>
+&lt;p>运行时数据区的理论主要是分代理论、回收理论等&lt;/p>
+&lt;/blockquote>
+&lt;p>从简化的流程中，我们可以看到，一种编程语言的&lt;strong>源代码语法无论多么&amp;quot;花哨&amp;rdquo;&lt;/strong>(满足不同领域的程序猿不同的编程风格)，&lt;strong>最终都要回归到朴实的字节码&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-3.png" alt="image-20201126105406046">&lt;/p>
+&lt;p>在Java这种语言中，JVM提供了&lt;strong>javac和javap&lt;/strong>两种工具实现前端编译和前端反编译的互逆操作：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-4.png" alt="image-20201126105515858">&lt;/p>
+&lt;p>试想一下，&lt;strong>如果字节码是一种规范&lt;/strong>，&amp;ldquo;类加载子系统、运行时数据区、解释执行器、后端编译器&amp;quot;就有可能做成&lt;strong>VM内置的标准件&lt;/strong>，那么开发一种新的编程语言只需要关注2点：&lt;/p>
+&lt;blockquote>
+&lt;p>1.如何设计一种新的语法，满足新编程领域的特征、风格？&lt;/p>
+&lt;p>2.如何将新的语法源代码，转换为标准的字节码？&lt;/p>
+&lt;/blockquote>
+&lt;p>设计一种新的编程语言，上述2点并不是很困难，而真正的技术门槛、技术成本是那些VM内置的标准件。&lt;/p>
+&lt;p>这将是一种可怕的效率提升革命，于是Java之父Gosling强调：&lt;/p>
+&lt;blockquote>
+&lt;p>JVM能支持各种符合字节码规范的新兴编程语言，Java只是JVM上能运行的编程语言之一。&lt;/p>
+&lt;p>Java并不牛逼，JVM才是最牛逼的。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-5.png" alt="image-20201126110532663">&lt;/p>
+&lt;p>&lt;strong>字节码就是统一的机器语言：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>从程序猿的视角看，无论使用怎样不同的编程语言，都能被前端编译器转换为标准的JVM字节码；&lt;/p>
+&lt;p>从CPU的视角看，无论是怎样不同的CPU架构，后端编译器都能将标准的JVM字节码转换为不同的机器码；&lt;/p>
+&lt;/blockquote>
+&lt;p>目前，JVM支持了很多编程语言，其中包含了注入Kotlin这种热度很高的新型语言：&lt;/p>
+&lt;blockquote>
+&lt;p>数据来源：https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-6.png" alt="1.png">&lt;/p>
+&lt;h1 id="3引用地图字节码的微观逻辑">3.引用地图：字节码的微观逻辑&lt;/h1>
+&lt;p>JVM字节码的规范很复杂，在深入细节之前，最好先理解字节码的微观逻辑。&lt;/p>
+&lt;p>首先写一段简单的代码Demo4.java：&lt;/p>
+&lt;blockquote>
+&lt;p>这个类只有一个无参构造函数&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-1.png" alt="image-20201128171824843">&lt;/p>
+&lt;p>再通过前端编译器，从Demo4.java生成Demo4.class:&lt;/p>
+&lt;blockquote>
+&lt;p>用16进制编辑器打开&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-2.png" alt="image-20201128172301948">&lt;/p>
+&lt;p>Class文件分为2个部分：常量池和方法区&lt;/p>
+&lt;blockquote>
+&lt;p>红色框：常量池区域&lt;/p>
+&lt;p>橙色框：方法区区域&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-3.png" alt="image-20201128174147100">&lt;/p>
+&lt;p>这里的常量、方法，不是Java语法中的常量、方法，而是&lt;strong>站在VM的角度看到的常量和方法&lt;/strong>。&lt;/p>
+&lt;p>例如：&amp;ldquo;Demo4&amp;quot;这个字符串，在Java源代码中出现了2次：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-4.png" alt="image-20201128175010006">&lt;/p>
+&lt;p>JVM将&amp;quot;Demo4&amp;quot;这个字符串放在了常量池中：&lt;/p>
+&lt;blockquote>
+&lt;p>蓝色框：Demo4字面量&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-5.png" alt="image-20201128175430731">&lt;/p>
+&lt;p>在Java源代码中第一处表达类名时，JVM只需要用1个字节，&lt;strong>最终指向&lt;/strong>常量池中&amp;quot;Demo4&amp;quot;的位置：&lt;/p>
+&lt;blockquote>
+&lt;p>最终指向：此处简化了从ClassInfo常量逐级指向Utf8_info常量的过程&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-6.png" alt="image-20201128175906442">&lt;/p>
+&lt;p>从上述例子可以看到，JVM字节码的微观逻辑就是&lt;strong>引用&lt;/strong>，引用的目的就是复用，复用的目的就是用&lt;strong>最小的字节数表达信息&lt;/strong>。&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;p>本文主要内容：&lt;/p>
+&lt;ul>
+&lt;li>论述阅读字节码对于深入理解编程语言特性的意义&lt;/li>
+&lt;li>JVM字节码规范对于设计新的编程语言的价值&lt;/li>
+&lt;li>JVM字节码如何通过引用地图，实现最小字节数表示最大的信息量。&lt;/li>
+&lt;/ul>
+&lt;p>下一步，笔者将通过一段代码实例，深入Class文件结构的细节。&lt;/p>
+&lt;h1 id="5参考文献">5.参考文献&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;a href="https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages">https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm">https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.zhihu.com/question/20003582">https://www.zhihu.com/question/20003582&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.imooc.com/article/296373">https://www.imooc.com/article/296373&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>Math Preview</title><link>https://jherculesqz.github.io/post/math-preview/</link><pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><guid>https://jherculesqz.github.io/post/math-preview/</guid><description>&lt;p>&lt;a href="https://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo, currently processed as KaTex&lt;/a>&lt;/p>
 &lt;h2 id="repeating-fractions">Repeating fractions&lt;/h2>
 &lt;p>&lt;span class="math">\[
 \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }

@@ -1106,131 +1106,131 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;/blockquote>
 &lt;p>进一步理解Class字节码如何为JVM&lt;strong>构建动态全局观&lt;/strong>。&lt;/p>
 &lt;p>**高能预警：**如果您能耐心地看到这句话，恭喜您，距离&amp;rdquo;&lt;strong>看着16进制享受而诡魅的微笑&lt;/strong>&amp;ldquo;又近了一步，加油！&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/44.png" alt="image-20201203144947702">&lt;/p></description></item><item><title>【执行引擎】-0-随机应变+有备而来</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/</link><pubDate>Thu, 05 Aug 2021 14:50:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/</guid><description>&lt;p>2017年，JEP317中提到了Graal编译器。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/1.png" alt="1">&lt;/p>
-&lt;p>Graal编译器来自Oracle Labs更早的实验项目，随后并入GraalVM。&lt;/p>
-&lt;p>Graal的商业目标是啥呢？Oracle借助Stack Overflow委婉地做了表达：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/2.png" alt="2">&lt;/p>
-&lt;p>虽然Stack Overflow随后无情删帖，我们依然记住了关键词——&lt;strong>ultimate programming language&lt;/strong>&lt;/p>
-&lt;p>什么语言有勇气宣称自己是&amp;quot;宇宙无敌终极编程语言&amp;rdquo;？&amp;ldquo;宇宙无敌终极编程语言&amp;quot;又是如何实现的呢？&lt;/p>
-&lt;p>如果想深入探讨上述问题，我们必须先理解一个重要的知识——JVM的&lt;strong>执行引擎&lt;/strong>。&lt;/p>
-&lt;h1 id="0x01执行引擎的3大流派">0x01.执行引擎的3大流派&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>解释型流派：随机应变&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>Java的早期版本就属于解释型流派，从此也就留下了&amp;quot;Java性能不如C++&amp;quot;的口实。&lt;/p>
-&lt;p>如下图红线所示，源代码通过前端编译器转换成字节码。在运行态，&lt;strong>解释器实时理解字节码&lt;/strong>，将字节码翻译成CPU可以执行的机器码。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/3_1.png" alt="3_1">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>提前编译流派：有备而来&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>如下图蓝线所示，如果我们暂不纠结&amp;quot;dll/so不等于机器码&amp;quot;的细节，提前编译器直接将源代码转换为抽象的机器码。&lt;/p>
-&lt;p>接受这个流派，就意味着要承认**&amp;ldquo;Compile Once, Run Anywhere&amp;rdquo;(一次编译，到处去浪)**只是个美好的愿望。&lt;/p>
-&lt;p>因此，IBM于1996年发布了提前编译器(IBM High Performance Compiler for Java)之后很长一段时间，提前编译流派就没有太多的故事和发展。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/3_2.png" alt="3_2">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>即时编译流派：随机应变+有备而来&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>即时编译流派(JIT)的思路是&lt;strong>解释器&lt;/strong>和&lt;strong>编译器&lt;/strong>协同工作。&lt;/p>
-&lt;p>如下图红色线和紫色线所示，解释器先工作，过程中会发现某些字节码被频繁解释，于是&lt;strong>即时编译器&lt;/strong>开始工作，即时编译器将这些&lt;strong>热点代码&lt;/strong>转换为机器码，当热点代码需要再次执行时就不用解释了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/3_3.png" alt="3_3">&lt;/p>
-&lt;h1 id="0x02为什么历史选择了即时编译流派">0x02.为什么历史选择了即时编译流派?&lt;/h1>
-&lt;p>解释型流派有点像吃铁板烧，顾客根据当时的心情，跟厨师说：&amp;ldquo;来一份马粪胆搭配牡丹虾、北海道带子、鳕场蟹&amp;rdquo;，厨师理解了顾客意图，现场制作美味。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/4.png" alt="4">&lt;/p>
-&lt;p>随机应变的执行过程，给我们带来一些好处：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>减少准备工作的等待时间&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>如果是订酒席，我们就需要提前点菜、厨师提前做好。现场的就餐过程，只是把做好的菜端上来。&lt;/p>
-&lt;p>稍大型的C++项目，将源代码编译成机器码，就是个漫长的过程。这个过程就像提前点菜、厨师提前把菜做好。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>具备运行时修正的可能性&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>吃铁板烧的顾客点完菜，可能随后改了主意：“北海道带子换黑毛和牛吧”。如果是订酒席，厨师已经把菜做好了，顾客显然不能修改了。&lt;/p>
-&lt;p>边解释边执行，就具备了**&amp;ldquo;动态性&amp;rdquo;**，这也是Java、Python、Ruby等语言的动态性的理论基础。&lt;/p>
-&lt;p>随机应变的执行过程，也带来了弊端：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>慢&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>现场点菜，厨师越慢逼格越高，因为吃铁板烧不是个赶时间的事。但程序执行截然相反，执行效率堪比压榨CPU的性能极限。&lt;/p>
-&lt;p>从宏观上看，随机应变相较于有备而来，少了准备过程，应该会慢。&lt;/p>
-&lt;p>从微观上看，为什么解释型相比于提前编译型慢呢？关键点在于编译优化。&lt;/p>
-&lt;p>例如：源代码中有一段空循环，编译器会发现这段无用功，输出机器码时进行抹除，然而解释器只是无脑地循环10万次。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">for(int i=0;i&amp;lt;100000;i++){
-;
-}
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>本文无法展开编译优化这个更大的课题，但至少我们可以获得如下认知：&lt;/p>
-&lt;p>&lt;strong>解释型流派与提前编译流派是天平的两端&lt;/strong>&lt;/p>
-&lt;p>&lt;strong>即时编译流派本质是，在&amp;quot;边解释边执行&amp;quot;的基础上，实现了动态编译&lt;/strong>&lt;/p>
-&lt;h1 id="0x03为什么即时编译器不止一种">0x03.为什么即时编译器不止一种?&lt;/h1>
-&lt;p>前文，我们提到了编译优化，优化手段有的很常规，有的却很激进。本文摘录了一些激进的优化：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/44.png" alt="image-20201203144947702">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</link><pubDate>Thu, 05 Aug 2021 14:54:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</guid><description>&lt;h1 id="1起于累土为什么要阅读字节码">1.起于累土：为什么要阅读字节码&lt;/h1>
+&lt;p>笔者最近的一项工作是设计一套课程，用于辅导新员工如何做好性能优化。&lt;/p>
+&lt;p>这项工作很快遇到了问题：&lt;/p>
 &lt;blockquote>
-&lt;p>Dead Code Elimination：无用代码消除
-Loop Unrolling：循环展开
-Loop Expression Hoisting：循环表达式外提
-Common Subexpression Elimination：消除公共子表达式
-Constant Propagation：常量传播
-Basic Block Reordering：基本块重排序
-Range Check Elimination：范围检查消除
-Null Check Elimination：空值检查消除
-Guarding Inlining：守护内联
-Branch Frequency Prediction：分支频率预测&lt;/p>
+&lt;p>讲内存泄露/溢出的定位工具，就要求听众先对JVM的运行时数据区有基本理解。&lt;/p>
+&lt;p>讲运行时数据区，又要求听众先大致理解类加载子系统如何一步步地将字节码加载到内存中。&lt;/p>
+&lt;p>讲类加载子系统，又要求听众先理解字节码表示了哪些&amp;quot;静态信息&amp;rdquo;。&lt;/p>
+&lt;p>&amp;hellip;.&lt;/p>
 &lt;/blockquote>
-&lt;p>如下图所示，Hotspot虚拟机的即时编译器就包含了C1和C2，同时在Java10加入了C2的替代者Graal。&lt;/p>
-&lt;p>C1的职责只是常规的编译优化，C2则承担了更多激进优化的任务。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/5.png" alt="5">&lt;/p>
-&lt;h1 id="0x04解释器与多种即时编译器的配合关系">0x04.解释器与多种即时编译器的配合关系&lt;/h1>
-&lt;p>即时编译流派，首先还是解释器工作，热点代码触发即时编译器，即时编译一旦出现激进优化失败，就把执行权还给解释器。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/6.png" alt="6">&lt;/p>
-&lt;p>以Hotspot为例，我们进一步打开解释器与即时编译器的配合过程：&lt;/p>
+&lt;p>性能优化是一个复杂的系统化话题，性能优化的手段分为3个级别：&lt;/p>
+&lt;p>&lt;strong>倔强青铜级：时空转移&lt;/strong>&lt;/p>
+&lt;p>当计算效率不足时，用空间换时间。例如：将需要频繁使用的数据，提前缓存在内存中。&lt;/p>
+&lt;p>当内存空间不足时，用时间换空间。例如：将不需要的缓存数据去掉，动态计算。&lt;/p>
+&lt;p>在这个层次上解决问题，&lt;strong>优点是朴实&lt;/strong>，&lt;strong>缺点是此消彼长、绵绵无期&lt;/strong>：&lt;/p>
+&lt;p>因为&lt;strong>时间换空间&lt;/strong>与&lt;strong>空间换时间&lt;/strong>本质是互逆的手段。&lt;/p>
+&lt;p>一个软件产品可能在迭代1暴露出了计算效率不足，采用了空间换时间。&lt;/p>
+&lt;p>到了迭代2又因为迭代1的性能优化导致空间不足，又要将大量的缓存替换为实时计算。&lt;/p>
+&lt;p>……&lt;/p>
+&lt;p>笔者的一位程序猿朋友，在多次时间换空间、空间换时间的性能优化工作之后，发出了一句颇有哲理的感慨：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>时间是不可能被消灭的，只能被转移&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-1.png" alt="image-20201128154031535">&lt;/p>
+&lt;p>&lt;strong>永恒钻石级：业务裁剪&lt;/strong>&lt;/p>
+&lt;p>能用这个级别手法的，一般是老程序猿。&lt;/p>
+&lt;p>凭借多年的业务领域经验，深刻理解了业务流程中哪些步骤是冗余的。&lt;/p>
+&lt;p>无论是时间瓶颈或者空间瓶颈，删掉冗余代码，一招搞定。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-2.png" alt="image-20201128155657776">&lt;/p>
+&lt;p>在这个层次上解决问题，&lt;strong>优点还是朴实，缺点是比较依赖业务专家，无法批量复制与推广&lt;/strong>。&lt;/p>
+&lt;p>&lt;strong>最强王者级：底层优化&lt;/strong>&lt;/p>
+&lt;p>使用这种手法，就要求程序猿对于JVM、操作系统、网络有比较深刻的认识，大部分程序猿都止步此。&lt;/p>
+&lt;p>通过对静态逻辑(字节码)的理解和动态逻辑(运行时)的理解，精确找到空间瓶颈和时间瓶颈，进而采用更加具有通用性的手段开展优化工作。&lt;/p>
+&lt;p>如果说&lt;strong>性能优化是九层之塔&lt;/strong>，那么&lt;strong>阅读字节码&lt;/strong>就是累土中的重要基石之一。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-3.png" alt="image-20201128160013429">&lt;/p>
+&lt;h1 id="2编程界的通天塔字节码的宏观意义">2.编程界的通天塔：字节码的宏观意义&lt;/h1>
+&lt;p>知乎上有一个趣帖&lt;code>全世界为什么不能统一语言？&lt;/code>(&lt;a href="https://www.zhihu.com/question/22133387">https://www.zhihu.com/question/22133387&lt;/a>)&lt;/p>
+&lt;p>有一个有趣的回答：&amp;ldquo;你想造通天塔就直说&amp;rdquo;。&lt;/p>
+&lt;p>通天塔，也叫巴别塔，传说人类想建造一个通往天堂的天梯而触怒了神灵，于是神灵将人类的语言隔绝，导致人类种族语言不通。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-1.png" alt="image-20201128163114423">&lt;/p>
+&lt;p>编程界也存在多种编程语言，任何VM类型的语言(含编译、执行)都存在如下流程：&lt;/p>
+&lt;blockquote>
+&lt;p>前端编译器：将源代码转换为字节码&lt;/p>
+&lt;p>字节码加载模块：将字节码加载到运行时数据区(就是内存)&lt;/p>
+&lt;p>解释执行器：根据内存中的VM栈，执行字节码&lt;/p>
+&lt;p>后端编译器：将频繁执行的字节码直接生成为机器码缓存下来，提升执行效率&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-2.png" alt="image-20201126100836623">&lt;/p>
+&lt;p>我们会发现，字节码加载、运行时数据区似乎大同小异，于是进一步简化上述流程：&lt;/p>
+&lt;blockquote>
+&lt;p>字节码加载取决于运行时数据区&lt;/p>
+&lt;p>运行时数据区的理论主要是分代理论、回收理论等&lt;/p>
+&lt;/blockquote>
+&lt;p>从简化的流程中，我们可以看到，一种编程语言的&lt;strong>源代码语法无论多么&amp;quot;花哨&amp;rdquo;&lt;/strong>(满足不同领域的程序猿不同的编程风格)，&lt;strong>最终都要回归到朴实的字节码&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-3.png" alt="image-20201126105406046">&lt;/p>
+&lt;p>在Java这种语言中，JVM提供了&lt;strong>javac和javap&lt;/strong>两种工具实现前端编译和前端反编译的互逆操作：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-4.png" alt="image-20201126105515858">&lt;/p>
+&lt;p>试想一下，&lt;strong>如果字节码是一种规范&lt;/strong>，&amp;ldquo;类加载子系统、运行时数据区、解释执行器、后端编译器&amp;quot;就有可能做成&lt;strong>VM内置的标准件&lt;/strong>，那么开发一种新的编程语言只需要关注2点：&lt;/p>
+&lt;blockquote>
+&lt;p>1.如何设计一种新的语法，满足新编程领域的特征、风格？&lt;/p>
+&lt;p>2.如何将新的语法源代码，转换为标准的字节码？&lt;/p>
+&lt;/blockquote>
+&lt;p>设计一种新的编程语言，上述2点并不是很困难，而真正的技术门槛、技术成本是那些VM内置的标准件。&lt;/p>
+&lt;p>这将是一种可怕的效率提升革命，于是Java之父Gosling强调：&lt;/p>
+&lt;blockquote>
+&lt;p>JVM能支持各种符合字节码规范的新兴编程语言，Java只是JVM上能运行的编程语言之一。&lt;/p>
+&lt;p>Java并不牛逼，JVM才是最牛逼的。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-5.png" alt="image-20201126110532663">&lt;/p>
+&lt;p>&lt;strong>字节码就是统一的机器语言：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>从程序猿的视角看，无论使用怎样不同的编程语言，都能被前端编译器转换为标准的JVM字节码；&lt;/p>
+&lt;p>从CPU的视角看，无论是怎样不同的CPU架构，后端编译器都能将标准的JVM字节码转换为不同的机器码；&lt;/p>
+&lt;/blockquote>
+&lt;p>目前，JVM支持了很多编程语言，其中包含了注入Kotlin这种热度很高的新型语言：&lt;/p>
+&lt;blockquote>
+&lt;p>数据来源：https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-6.png" alt="1.png">&lt;/p>
+&lt;h1 id="3引用地图字节码的微观逻辑">3.引用地图：字节码的微观逻辑&lt;/h1>
+&lt;p>JVM字节码的规范很复杂，在深入细节之前，最好先理解字节码的微观逻辑。&lt;/p>
+&lt;p>首先写一段简单的代码Demo4.java：&lt;/p>
+&lt;blockquote>
+&lt;p>这个类只有一个无参构造函数&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-1.png" alt="image-20201128171824843">&lt;/p>
+&lt;p>再通过前端编译器，从Demo4.java生成Demo4.class:&lt;/p>
+&lt;blockquote>
+&lt;p>用16进制编辑器打开&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-2.png" alt="image-20201128172301948">&lt;/p>
+&lt;p>Class文件分为2个部分：常量池和方法区&lt;/p>
+&lt;blockquote>
+&lt;p>红色框：常量池区域&lt;/p>
+&lt;p>橙色框：方法区区域&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-3.png" alt="image-20201128174147100">&lt;/p>
+&lt;p>这里的常量、方法，不是Java语法中的常量、方法，而是&lt;strong>站在VM的角度看到的常量和方法&lt;/strong>。&lt;/p>
+&lt;p>例如：&amp;ldquo;Demo4&amp;quot;这个字符串，在Java源代码中出现了2次：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-4.png" alt="image-20201128175010006">&lt;/p>
+&lt;p>JVM将&amp;quot;Demo4&amp;quot;这个字符串放在了常量池中：&lt;/p>
+&lt;blockquote>
+&lt;p>蓝色框：Demo4字面量&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-5.png" alt="image-20201128175430731">&lt;/p>
+&lt;p>在Java源代码中第一处表达类名时，JVM只需要用1个字节，&lt;strong>最终指向&lt;/strong>常量池中&amp;quot;Demo4&amp;quot;的位置：&lt;/p>
+&lt;blockquote>
+&lt;p>最终指向：此处简化了从ClassInfo常量逐级指向Utf8_info常量的过程&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-6.png" alt="image-20201128175906442">&lt;/p>
+&lt;p>从上述例子可以看到，JVM字节码的微观逻辑就是&lt;strong>引用&lt;/strong>，引用的目的就是复用，复用的目的就是用&lt;strong>最小的字节数表达信息&lt;/strong>。&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;p>本文主要内容：&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Java 6以前，1个解释器+1个即时编译器&lt;/strong>&lt;/li>
+&lt;li>论述阅读字节码对于深入理解编程语言特性的意义&lt;/li>
+&lt;li>JVM字节码规范对于设计新的编程语言的价值&lt;/li>
+&lt;li>JVM字节码如何通过引用地图，实现最小字节数表示最大的信息量。&lt;/li>
 &lt;/ul>
-&lt;p>通过JVM的参数配置，我们只有2种选择：要么用**&amp;ldquo;解释器+C1即时编译器&amp;rdquo;**，要么用**&amp;ldquo;解释器+C2即时编译器&amp;rdquo;**。&lt;/p>
-&lt;p>这种做法的缺点就是把选择困难症留给了Java程序员——我怎么知道这段代码适合激进优化还是保守优化呢？&lt;/p>
-&lt;p>实际上，大部分情况是适合激进优化和保守优化的代码是纠缠在一起的。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Java 7以后，1个解释器+动态选择即时编译器&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>Java7以后，引入了&amp;rdquo;&lt;strong>分层编译&lt;/strong>&amp;ldquo;的理念，进而支持了动态选择即时编译器。&lt;/p>
-&lt;p>理解&amp;quot;分层编译&amp;rdquo;，先看&amp;quot;层&amp;rdquo;：&lt;/p>
+&lt;p>下一步，笔者将通过一段代码实例，深入Class文件结构的细节。&lt;/p>
+&lt;h1 id="5参考文献">5.参考文献&lt;/h1>
 &lt;blockquote>
-&lt;p>第0层：程序解释运行。解释器不开启性能监控功能。&lt;/p>
-&lt;p>第1层：C1编译。进行简单和可靠的优化，不开启性能监控。&lt;/p>
-&lt;p>第2层：C1编译。仅开启方法及回边次数统计等有限的性能监控。&lt;/p>
-&lt;p>第3层：C1编译。开启全部性能监控，进一步收集分支跳转、虚方法调用版本等信息。&lt;/p>
-&lt;p>第4层：C2编译。启用更多耗时较长的优化，还会依据性能监控信息进行不可靠的激进优化。&lt;/p>
-&lt;/blockquote>
-&lt;p>再看&amp;quot;分&amp;rdquo;——分是指**&amp;ldquo;分场景&amp;rdquo;**：&lt;/p>
-&lt;blockquote>
-&lt;p>普通场景：此场景下，热点代码触发C1，C1逐步开启全量性能监控，就会触发C2。&lt;/p>
-&lt;p>简单代码场景：此场景下，热点代码触发C1，C1逐步开启全量监控，发现没必要C2，则关闭全量监控。&lt;/p>
-&lt;p>C1繁忙场景：此场景下，C1繁忙，热点代码直接触发了C2。&lt;/p>
-&lt;p>C2繁忙场景：此场景下，C2繁忙，热点代码触发C1，先开启有限的监控，随后进行全量监控，最后进入C2。&lt;/p>
-&lt;/blockquote>
-&lt;p>分场景触发的过程，周全且精细化地逐级开启性能监控，充分体现了JVM设计的精巧。这种精巧的设计其实也可以移植到性能敏感的产品中。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/7.png" alt="7">&lt;/p>
-&lt;blockquote>
-&lt;p>参考：https://www.infoq.cn/article/java-10-jit-compiler-graal&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="0x05总结">0x05.总结&lt;/h1>
-&lt;p>本文的目标是宏观阐述JVM执行引擎的全貌：&lt;/p>
-&lt;blockquote>
-&lt;p>1.JVM执行引擎的3大流派&lt;/p>
-&lt;p>2.如何看待即时编译流派的利与弊&lt;/p>
-&lt;p>3.解释器与即时编译器的配合方式——分层编译&lt;/p>
-&lt;/blockquote>
-&lt;p>结合笔者另外两篇文章《【类加载机制】从一道面试题开始》、《【运行时数据区】用仓库管理员的视角理解运行时数据区》，我们已经从宏观上看到了&lt;strong>JVM的三大构成&lt;/strong>，笔者将在后续文章中，与读者们继续深入与探索个中细节。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/9.png" alt="image-20200916175340096">&lt;/p></description></item><item><title>【编译引擎】-2-学习阅读Class文件结构(16进制版)-中</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/</link><pubDate>Thu, 05 Aug 2021 14:50:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/</guid><description>&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)-上》中，笔者讲解了如何以16进制的方式，解读Demo2.java对应字节码的常量池。&lt;/p>
+&lt;p>&lt;a href="https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages">https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm">https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.zhihu.com/question/20003582">https://www.zhihu.com/question/20003582&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.imooc.com/article/296373">https://www.imooc.com/article/296373&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>【编译引擎】-2-学习阅读Class文件结构(16进制版)-中</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/</link><pubDate>Thu, 05 Aug 2021 14:50:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/</guid><description>&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)-上》中，笔者讲解了如何以16进制的方式，解读Demo2.java对应字节码的常量池。&lt;/p>
 &lt;p>我们继续解读Demo2.class字节码的属性表、方法表等重要的片段。&lt;/p>
 &lt;h1 id="1对类的描述访问标识">1.对类的描述：访问标识&lt;/h1>
 &lt;blockquote>
@@ -1424,7 +1424,636 @@ Branch Frequency Prediction：分支频率预测&lt;/p>
 &lt;p>方法内部相关的信息&lt;/p>
 &lt;/blockquote>
 &lt;p>如果您能耐心地看到这句话，恭喜您，距离&amp;rdquo;&lt;strong>看着16进制享受而诡魅的微笑&lt;/strong>&amp;ldquo;又近了一步，加油！&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%AD/45.png" alt="image-20201210174921805">&lt;/p></description></item><item><title>【运行时数据区】-0-用仓库管理员的视角理解运行时数据区</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</link><pubDate>Thu, 05 Aug 2021 14:40:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</guid><description>&lt;h1 id="0x01面试题">0x01.面试题&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%AD/45.png" alt="image-20201210174921805">&lt;/p></description></item><item><title>【工具】-0-一文搞懂JDK命令行工具</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%B7%A5%E5%85%B7-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82jdk%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/</link><pubDate>Thu, 05 Aug 2021 08:09:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%B7%A5%E5%85%B7-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82jdk%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/</guid><description>&lt;h1 id="1工欲善其事jdk提供的工具">1.工欲善其事：JDK提供的工具&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>Java试题&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>JVM调优的常见命令行工具描述正确的有：&lt;/p>
+&lt;p>A.jstat可以实时显示本地或远程JVM进程中类加载、内存、垃圾收集、JIT编译等数据&lt;/p>
+&lt;p>B.jmap用于查询当前运行的JVM属性和参数的值&lt;/p>
+&lt;p>C.jstack用于生成当前JVM的所有线程快照&lt;/p>
+&lt;p>D.jps命令用于查询正在运行的JVM进程&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>试题解读&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>这道题考察JDK自带命令行工具的理解，这些工具用于性能调优、疑难问题定位。&lt;/p>
+&lt;p>在生产环境定位时，要求定位/调优工具自身具备极高的性能，否则会对本来就有问题的生产环境产生干扰。&lt;/p>
+&lt;p>JDK自带的命令行工具以其的高性能、实用性，成为实战中必须掌握的工具，是Java程序猿的调优武器库。&lt;/p>
+&lt;p>&lt;img src="images/1.png" alt="image-20210521073310456">&lt;/p>
+&lt;h1 id="2总览">2.总览&lt;/h1>
+&lt;h2 id="21主流工具概览">2.1.主流工具概览&lt;/h2>
+&lt;p>目前，主流的Java性能监控与调优工具如下图所示：&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="image-20210521094038209">&lt;/p>
+&lt;p>这些工具主要分为两个流派：&amp;ldquo;&lt;code>命令行流派&lt;/code>&amp;quot;与&amp;quot;&lt;code>可视化流派&lt;/code>&amp;rdquo;&lt;/p>
+&lt;ul>
+&lt;li>**命令行流派：**强调实用性。体积小、资源消耗小，适用于生产环境的问题定位与调优。&lt;/li>
+&lt;li>**可视化流派：**强调颜值即正义。可视化图表、一目了然，适用于开发环境上复现、定位问题。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/3.png" alt="image-20210521100601641">&lt;/p>
+&lt;p>这两种流派各有适用的场景，辩证统一，所以还是那句话：&amp;ldquo;成年人不做选择，两样我都要&amp;rdquo;。&lt;/p>
+&lt;p>&lt;img src="images/4.png" alt="image-20210521104216938">&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">说明1：本文仅讲解命令行流派的工具，笔者在后续文章中再探讨可视化流派工具。
+说明2：不能简单地将Arthas看作工具，后续开专题探讨。
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="22理解命令行工具的内在逻辑">2.2.理解命令行工具的内在逻辑&lt;/h2>
+&lt;p>对于这些命令行工具，有一种观点：&lt;code>没有必要记下来，用到的时候再查资料&lt;/code>。&lt;/p>
+&lt;p>因为这些命令行工具比较多，每个命令行也有很多参数，记下来是一件枯燥的事。&lt;/p>
+&lt;p>但，这个观点成立有一个前提：我们必须理解这些命令行工具的&lt;code>内在逻辑&lt;/code>：&lt;/p>
+&lt;ul>
+&lt;li>**逻辑1：**这些命令行工具的关系是什么？&lt;/li>
+&lt;li>**逻辑2：**每个工具解决什么问题？&lt;/li>
+&lt;li>**逻辑3：**每个工具的参数集合分哪几类？&lt;/li>
+&lt;/ul>
+&lt;p>如果没有理解上述&lt;code>内在逻辑&lt;/code>，需要用的时候再查资料也很难入手。&lt;/p>
+&lt;p>对于&lt;code>逻辑1：这些命令行工具的关系&lt;/code>，笔者提供一种&lt;code>基于实战问题定位的场景&lt;/code>的理解方式：&lt;/p>
+&lt;ul>
+&lt;li>**STEP1.进程监控：**首先，找到生产环境中待定位的Java进程。&lt;/li>
+&lt;li>**STEP2.配置查询：**进一步，查看此Java进程的JVM配置。&lt;/li>
+&lt;li>**STEP3.JVM状态监控与初步分析：**再进一步，查看此Java进程的内存、线程、JIT的整体情况。&lt;/li>
+&lt;li>&lt;strong>STEP4.内存监控与分析&lt;/strong>：如果STEP3发现了可能的内存问题，就深入分析内存。&lt;/li>
+&lt;li>**STEP5.线程监控与分析：**如果STEP3发现了可能的线程问题，就深入分析线程。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/5.png" alt="image-20210521111701312">&lt;/p>
+&lt;h2 id="23进阶的方法">2.3.进阶的方法&lt;/h2>
+&lt;ul>
+&lt;li>**命令行手册：**我们可以通过官方的命令行手册，深入学习它们。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/6.png" alt="image-20210521112755277">&lt;/p>
+&lt;ul>
+&lt;li>**工具源码：**通过这些命令行工具的源码，可以更深入地理解JVM状态监控的原理和API。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">https://hg.openjdk.java.net/jdk/jdk11/file/1ddf9a99e4ad/src/jdk.jcmd/share/classes/sun/tools
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="images/7.png" alt="image-20210521112939223">&lt;/p>
+&lt;h1 id="3进程监控-jps">3.进程监控-jps&lt;/h1>
+&lt;h2 id="31解决什么问题">3.1.解决什么问题&lt;/h2>
+&lt;p>jps用来显示指定系统内所有正在运行的HotSpot虚拟机进程信息。&lt;/p>
+&lt;h2 id="32参数">3.2.参数&lt;/h2>
+&lt;ul>
+&lt;li>jps的参数格式如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">jps [options] [hostid]
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们可以通过几个实际的例子，快速理解&lt;code>[options]&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>**例子：**&lt;code>jps&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>**例子：**&lt;code>jps -q&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>**例子：**&lt;code>jps -lmv&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/8.png" alt="image-20210521113905035">&lt;/p>
+&lt;p>我们可以发现，无论怎样的options，一定会显示&lt;code>JVM identifiers&lt;/code>，不同的options只是在&lt;code>JVM identifiers&lt;/code>的基础上显示更多的额外信息。&lt;/p>
+&lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
+&lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jps.html#CHDCGECD&lt;/code>&lt;/p>
+&lt;p>&lt;img src="images/9.png" alt="image-20210521114215905">&lt;/p>
+&lt;h1 id="4配置查询-jinfo">4.配置查询-jinfo&lt;/h1>
+&lt;h2 id="41解决什么问题">4.1.解决什么问题&lt;/h2>
+&lt;p>jinfo用来查看JVM虚拟机参数，同时可以修改部分JVM虚拟机参数。&lt;/p>
+&lt;h2 id="42参数">4.2.参数&lt;/h2>
+&lt;ul>
+&lt;li>jinfo的参数格式如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">jinfo [ option ] pid
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们可以通过几个实际的例子，快速理解&lt;code>[options]&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>**例子：**&lt;code>jinfo &amp;lt;pid&amp;gt;&lt;/code>——查看此JVM进程所有的配置&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/10.png" alt="image-20210521115021019">&lt;/p>
+&lt;ul>
+&lt;li>**例子：**&lt;code>jinfo -sysprops &amp;lt;pid&amp;gt;&lt;/code>——等价于查看&lt;code>System.getProperties()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/11.png" alt="image-20210521115146579">&lt;/p>
+&lt;ul>
+&lt;li>**例子：**&lt;code>jinfo -flags &amp;lt;pid&amp;gt;&lt;/code>——查看所有参数&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/12.png" alt="image-20210521115222055">&lt;/p>
+&lt;ul>
+&lt;li>**例子：**&lt;code>jinfo -flags &amp;lt;参数名&amp;gt; &amp;lt;pid&amp;gt;&lt;/code>——查看某个参数的值&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/13.png" alt="image-20210521115244080">&lt;/p>
+&lt;p>我们可以发现：&lt;/p>
+&lt;ul>
+&lt;li>JVM进程的配置分为两类：&lt;code>系统环境变量&lt;/code>和&lt;code>JVM参数&lt;/code>，jinfo的参数用来输出上述两类配置。&lt;/li>
+&lt;li>jinfo支持输出所有的配置值，也可以输出某一个指定参数的值。&lt;/li>
+&lt;/ul>
+&lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
+&lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jinfo.html#BCGEBFDD&lt;/code>&lt;/p>
+&lt;p>&lt;img src="images/14.png" alt="image-20210521115706311">&lt;/p>
+&lt;h1 id="5jvm状态监控与初步分析-jstat">5.JVM状态监控与初步分析-jstat&lt;/h1>
+&lt;h2 id="51解决什么问题">5.1.解决什么问题&lt;/h2>
+&lt;p>jstat可以输出JVM的各类状态(类加载、内存、GC、JIT)。&lt;/p>
+&lt;p>初步定位的时候，就是通过上述状态，找到诸如内存泄露、线程死锁等问题的蛛丝马迹。&lt;/p>
+&lt;h2 id="52参数">5.2.参数&lt;/h2>
+&lt;ul>
+&lt;li>jstat的参数格式如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">jstat [ generalOption | outputOptions vmid [ interval[s|ms] [ count ] ]
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>**例子：**jstat -class -t -h3 &lt;pid> 1000 5——采集类加载信息(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/15.png" alt="image-20210521132054749">&lt;/p>
+&lt;ul>
+&lt;li>**例子：**jstat -compiler -t -h3 &lt;pid> 1000 5——采集JIT信息(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/16.png" alt="image-20210521132151306">&lt;/p>
+&lt;ul>
+&lt;li>**例子：**jstat -printcompilation -t -h3 &lt;pid> 1000 5——采集已经被JIT编译过的方法(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/17.png" alt="image-20210521132611139">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>**例子：**jstat -gc -t -h3 &lt;pid> 1000 5——采集GC的情况(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>**例子：**jstat -gccapacity -t -h3 &lt;pid> 1000 5&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>**例子：**jstat -gcutil -t -h3 &lt;pid> 1000 5&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>**例子：**jstat -gccause -t -h3 &lt;pid> 1000 5&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/18.png" alt="image-20210521133656978">&lt;/p>
+&lt;p>我们可以发现：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>采样相关的参数：&lt;/strong>-t(Timestamp列，单位s) 、-h(周期性的增加表头)、interval(采样周期，单位ms)、count(采集次数)&lt;/li>
+&lt;li>&lt;strong>类加载相关的参数：&lt;/strong>-class，显示ClassLoader信息，如：类加载数量、类卸载数量、总空间、类装载消耗的时间。&lt;/li>
+&lt;li>&lt;strong>JIT相关的参数：&lt;/strong>-compiler(显示JIT编译过的方法、耗时)、-printcompilation(输出已经被JIT编译的方法)&lt;/li>
+&lt;li>**垃圾回收相关的参数：**gcXxx，例如：-gc：显示GC相关的堆信息。包括Eden、两个Survivor区、老年代、永久代等的容量、已用空间、GC时间合计等信息。&lt;/li>
+&lt;/ul>
+&lt;p>在此展开看一下垃圾回收相关参数输出的Gc信息，我们可以发现无论哪个gcXxx参数，都会输出如下信息：&lt;/p>
+&lt;ul>
+&lt;li>新生代相关&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">S0C：第1个幸存者区的大小(字节)
+S1C：第2个幸存者区的大小(字节)
+S0U：第1个幸存者区的已使用大小(字节)
+S1U：第2个幸存者区的已使用大小(字节)
+EC：Eden区的大小(字节)
+EU：Eden区的已使用大小(字节)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>老年代相关&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">OC：老年代的大小(字节)
+OU：老年代的已使用大小(字节)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>方法区相关&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">MC：方法区的大小
+MU：方法区的已使用大小
+CCSC：压缩类空间的大小
+CCSU：压缩类空间的已使用大小
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>GC相关——如果发现两行之间的GC时间占总时间过长或者内存占用不断增加，说明可能有内存问题。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">YGC：从app启动到采样时，发生的YGC次数
+YGCT：从app启动到采样时，发生的YGC的消耗时间(秒)
+FGC：从app启动到采样时，发生的FullGC次数
+FGTC：从app启动到采样时，发生的FullGC的消耗时间(秒)
+GCT：从app启动到采样时，发生的GC的总时间(秒)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="images/19.png" alt="image-20210521133405766">&lt;/p>
+&lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
+&lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jstat.html#BEHHGFAE&lt;/code>&lt;/p>
+&lt;p>&lt;img src="images/20.png" alt="image-20210521131317493">&lt;/p>
+&lt;h1 id="6内存监控与分析-jmapjhat">6.内存监控与分析-jmap/jhat&lt;/h1>
+&lt;h2 id="61解决什么问题">6.1.解决什么问题&lt;/h2>
+&lt;ul>
+&lt;li>jmap可以将内存信息导出为dump文件(也叫做堆转储快照文件)。
+&lt;ul>
+&lt;li>当用jstat初步定位发现疑似内存泄露时，就可以通过jmap将内存快照导出出来，进一步定位。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>jhat可以导入jmap导出的内存快照文件，进行相对可视化的查看。
+&lt;ul>
+&lt;li>jhat内置了一个微型的http服务器，用于查看dump文件的分析结果。&lt;/li>
+&lt;li>JDK11已经删除了jhat，官方推荐用VisualVM替代。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="62参数">6.2.参数&lt;/h2>
+&lt;ul>
+&lt;li>jmap的参数格式如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">jmap [option] &amp;lt;pid&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>**例子：**jmap -dump:format=b,file=&amp;lt;filepath.hprof&amp;gt; &lt;pid>——手动导出某个时间点的内存快照，会触发1次FullGC，dump文件中会保存FullGC后留下的对象信息，对于大内存镜像会比较耗时。&lt;/li>
+&lt;li>**例子：**java -jar xxx.jar -Xmx100m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=&amp;lt;filepath.hprof&amp;gt;——当待定位的系统发生OOM的时候出现闪退时，此时会自动导出dump文件。&lt;/li>
+&lt;/ul>
+&lt;p>当然，如何分析dump文件是一个更大的话题，后续再展开。仅针对jmap命令行了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
+&lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jmap.html#CEGCECJB&lt;/code>&lt;/p>
+&lt;p>&lt;img src="images/21.png" alt="image-20210521135354519">&lt;/p>
+&lt;h1 id="7线程监控与分析-jstack">7.线程监控与分析-jstack&lt;/h1>
+&lt;h2 id="71解决什么问题">7.1.解决什么问题&lt;/h2>
+&lt;p>jstack可以生成虚拟机指定进程当前时刻的线程快照，用于定位线程长时间停顿的原因。&lt;/p>
+&lt;h2 id="72参数">7.2.参数&lt;/h2>
+&lt;ul>
+&lt;li>jstack的参数格式如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">jstack &amp;lt;pid&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>**例子：**jstack &lt;pid>——如果程序中有线程死锁，会在dump文件中体现出来。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/22.png" alt="image-20210521140136121">&lt;/p>
+&lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
+&lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jstack.html#BABGJDIF&lt;/code>&lt;/p>
+&lt;p>&lt;img src="images/23.png" alt="image-20210521135529140">&lt;/p>
+&lt;h1 id="8总结">8.总结&lt;/h1>
+&lt;p>本文主要内容：&lt;/p>
+&lt;ul>
+&lt;li>JVM性能监控与调优的工具有两种流派：命令行工具、可视化工具。&lt;/li>
+&lt;li>学习命令行工具集的内在逻辑：工具间的关系、每个工具解决的问题、每个工具的参数分类。&lt;/li>
+&lt;li>进程监控工具：jps&lt;/li>
+&lt;li>配置查询工具：jinfo&lt;/li>
+&lt;li>JVM状态监控工具：jstat&lt;/li>
+&lt;li>内存监控与分析工具：jmap、jhat(jdk11用VisualVM替代)&lt;/li>
+&lt;li>线程监控与分析工具：jstack&lt;/li>
+&lt;/ul>
+&lt;h1 id="9参考文献">9.参考文献&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/">https://docs.oracle.com/javase/8/docs/technotes/tools/windows/&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>【执行引擎】-0-随机应变+有备而来</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/</link><pubDate>Thu, 05 Aug 2021 08:09:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/</guid><description>&lt;p>2017年，JEP317中提到了Graal编译器。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/1.png" alt="1">&lt;/p>
+&lt;p>Graal编译器来自Oracle Labs更早的实验项目，随后并入GraalVM。&lt;/p>
+&lt;p>Graal的商业目标是啥呢？Oracle借助Stack Overflow委婉地做了表达：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/2.png" alt="2">&lt;/p>
+&lt;p>虽然Stack Overflow随后无情删帖，我们依然记住了关键词——&lt;strong>ultimate programming language&lt;/strong>&lt;/p>
+&lt;p>什么语言有勇气宣称自己是&amp;quot;宇宙无敌终极编程语言&amp;rdquo;？&amp;ldquo;宇宙无敌终极编程语言&amp;quot;又是如何实现的呢？&lt;/p>
+&lt;p>如果想深入探讨上述问题，我们必须先理解一个重要的知识——JVM的&lt;strong>执行引擎&lt;/strong>。&lt;/p>
+&lt;h1 id="0x01执行引擎的3大流派">0x01.执行引擎的3大流派&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>解释型流派：随机应变&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Java的早期版本就属于解释型流派，从此也就留下了&amp;quot;Java性能不如C++&amp;quot;的口实。&lt;/p>
+&lt;p>如下图红线所示，源代码通过前端编译器转换成字节码。在运行态，&lt;strong>解释器实时理解字节码&lt;/strong>，将字节码翻译成CPU可以执行的机器码。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/3_1.png" alt="3_1">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>提前编译流派：有备而来&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>如下图蓝线所示，如果我们暂不纠结&amp;quot;dll/so不等于机器码&amp;quot;的细节，提前编译器直接将源代码转换为抽象的机器码。&lt;/p>
+&lt;p>接受这个流派，就意味着要承认**&amp;ldquo;Compile Once, Run Anywhere&amp;rdquo;(一次编译，到处去浪)**只是个美好的愿望。&lt;/p>
+&lt;p>因此，IBM于1996年发布了提前编译器(IBM High Performance Compiler for Java)之后很长一段时间，提前编译流派就没有太多的故事和发展。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/3_2.png" alt="3_2">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>即时编译流派：随机应变+有备而来&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>即时编译流派(JIT)的思路是&lt;strong>解释器&lt;/strong>和&lt;strong>编译器&lt;/strong>协同工作。&lt;/p>
+&lt;p>如下图红色线和紫色线所示，解释器先工作，过程中会发现某些字节码被频繁解释，于是&lt;strong>即时编译器&lt;/strong>开始工作，即时编译器将这些&lt;strong>热点代码&lt;/strong>转换为机器码，当热点代码需要再次执行时就不用解释了。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/3_3.png" alt="3_3">&lt;/p>
+&lt;h1 id="0x02为什么历史选择了即时编译流派">0x02.为什么历史选择了即时编译流派?&lt;/h1>
+&lt;p>解释型流派有点像吃铁板烧，顾客根据当时的心情，跟厨师说：&amp;ldquo;来一份马粪胆搭配牡丹虾、北海道带子、鳕场蟹&amp;rdquo;，厨师理解了顾客意图，现场制作美味。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/4.png" alt="4">&lt;/p>
+&lt;p>随机应变的执行过程，给我们带来一些好处：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>减少准备工作的等待时间&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>如果是订酒席，我们就需要提前点菜、厨师提前做好。现场的就餐过程，只是把做好的菜端上来。&lt;/p>
+&lt;p>稍大型的C++项目，将源代码编译成机器码，就是个漫长的过程。这个过程就像提前点菜、厨师提前把菜做好。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>具备运行时修正的可能性&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>吃铁板烧的顾客点完菜，可能随后改了主意：“北海道带子换黑毛和牛吧”。如果是订酒席，厨师已经把菜做好了，顾客显然不能修改了。&lt;/p>
+&lt;p>边解释边执行，就具备了**&amp;ldquo;动态性&amp;rdquo;**，这也是Java、Python、Ruby等语言的动态性的理论基础。&lt;/p>
+&lt;p>随机应变的执行过程，也带来了弊端：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>慢&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>现场点菜，厨师越慢逼格越高，因为吃铁板烧不是个赶时间的事。但程序执行截然相反，执行效率堪比压榨CPU的性能极限。&lt;/p>
+&lt;p>从宏观上看，随机应变相较于有备而来，少了准备过程，应该会慢。&lt;/p>
+&lt;p>从微观上看，为什么解释型相比于提前编译型慢呢？关键点在于编译优化。&lt;/p>
+&lt;p>例如：源代码中有一段空循环，编译器会发现这段无用功，输出机器码时进行抹除，然而解释器只是无脑地循环10万次。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">for(int i=0;i&amp;lt;100000;i++){
+;
+}
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>本文无法展开编译优化这个更大的课题，但至少我们可以获得如下认知：&lt;/p>
+&lt;p>&lt;strong>解释型流派与提前编译流派是天平的两端&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>即时编译流派本质是，在&amp;quot;边解释边执行&amp;quot;的基础上，实现了动态编译&lt;/strong>&lt;/p>
+&lt;h1 id="0x03为什么即时编译器不止一种">0x03.为什么即时编译器不止一种?&lt;/h1>
+&lt;p>前文，我们提到了编译优化，优化手段有的很常规，有的却很激进。本文摘录了一些激进的优化：&lt;/p>
+&lt;blockquote>
+&lt;p>Dead Code Elimination：无用代码消除
+Loop Unrolling：循环展开
+Loop Expression Hoisting：循环表达式外提
+Common Subexpression Elimination：消除公共子表达式
+Constant Propagation：常量传播
+Basic Block Reordering：基本块重排序
+Range Check Elimination：范围检查消除
+Null Check Elimination：空值检查消除
+Guarding Inlining：守护内联
+Branch Frequency Prediction：分支频率预测&lt;/p>
+&lt;/blockquote>
+&lt;p>如下图所示，Hotspot虚拟机的即时编译器就包含了C1和C2，同时在Java10加入了C2的替代者Graal。&lt;/p>
+&lt;p>C1的职责只是常规的编译优化，C2则承担了更多激进优化的任务。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/5.png" alt="5">&lt;/p>
+&lt;h1 id="0x04解释器与多种即时编译器的配合关系">0x04.解释器与多种即时编译器的配合关系&lt;/h1>
+&lt;p>即时编译流派，首先还是解释器工作，热点代码触发即时编译器，即时编译一旦出现激进优化失败，就把执行权还给解释器。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/6.png" alt="6">&lt;/p>
+&lt;p>以Hotspot为例，我们进一步打开解释器与即时编译器的配合过程：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Java 6以前，1个解释器+1个即时编译器&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>通过JVM的参数配置，我们只有2种选择：要么用**&amp;ldquo;解释器+C1即时编译器&amp;rdquo;**，要么用**&amp;ldquo;解释器+C2即时编译器&amp;rdquo;**。&lt;/p>
+&lt;p>这种做法的缺点就是把选择困难症留给了Java程序员——我怎么知道这段代码适合激进优化还是保守优化呢？&lt;/p>
+&lt;p>实际上，大部分情况是适合激进优化和保守优化的代码是纠缠在一起的。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Java 7以后，1个解释器+动态选择即时编译器&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Java7以后，引入了&amp;rdquo;&lt;strong>分层编译&lt;/strong>&amp;ldquo;的理念，进而支持了动态选择即时编译器。&lt;/p>
+&lt;p>理解&amp;quot;分层编译&amp;rdquo;，先看&amp;quot;层&amp;rdquo;：&lt;/p>
+&lt;blockquote>
+&lt;p>第0层：程序解释运行。解释器不开启性能监控功能。&lt;/p>
+&lt;p>第1层：C1编译。进行简单和可靠的优化，不开启性能监控。&lt;/p>
+&lt;p>第2层：C1编译。仅开启方法及回边次数统计等有限的性能监控。&lt;/p>
+&lt;p>第3层：C1编译。开启全部性能监控，进一步收集分支跳转、虚方法调用版本等信息。&lt;/p>
+&lt;p>第4层：C2编译。启用更多耗时较长的优化，还会依据性能监控信息进行不可靠的激进优化。&lt;/p>
+&lt;/blockquote>
+&lt;p>再看&amp;quot;分&amp;rdquo;——分是指**&amp;ldquo;分场景&amp;rdquo;**：&lt;/p>
+&lt;blockquote>
+&lt;p>普通场景：此场景下，热点代码触发C1，C1逐步开启全量性能监控，就会触发C2。&lt;/p>
+&lt;p>简单代码场景：此场景下，热点代码触发C1，C1逐步开启全量监控，发现没必要C2，则关闭全量监控。&lt;/p>
+&lt;p>C1繁忙场景：此场景下，C1繁忙，热点代码直接触发了C2。&lt;/p>
+&lt;p>C2繁忙场景：此场景下，C2繁忙，热点代码触发C1，先开启有限的监控，随后进行全量监控，最后进入C2。&lt;/p>
+&lt;/blockquote>
+&lt;p>分场景触发的过程，周全且精细化地逐级开启性能监控，充分体现了JVM设计的精巧。这种精巧的设计其实也可以移植到性能敏感的产品中。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/7.png" alt="7">&lt;/p>
+&lt;blockquote>
+&lt;p>参考：https://www.infoq.cn/article/java-10-jit-compiler-graal&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="0x05总结">0x05.总结&lt;/h1>
+&lt;p>本文的目标是宏观阐述JVM执行引擎的全貌：&lt;/p>
+&lt;blockquote>
+&lt;p>1.JVM执行引擎的3大流派&lt;/p>
+&lt;p>2.如何看待即时编译流派的利与弊&lt;/p>
+&lt;p>3.解释器与即时编译器的配合方式——分层编译&lt;/p>
+&lt;/blockquote>
+&lt;p>结合笔者另外两篇文章《【类加载机制】从一道面试题开始》、《【运行时数据区】用仓库管理员的视角理解运行时数据区》，我们已经从宏观上看到了&lt;strong>JVM的三大构成&lt;/strong>，笔者将在后续文章中，与读者们继续深入与探索个中细节。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/9.png" alt="image-20200916175340096">&lt;/p></description></item><item><title>【垃圾回收】-0-垃圾回收体系的主脉络</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</link><pubDate>Thu, 05 Aug 2021 08:08:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
+&lt;p>如果您的女盆友非常喜欢&lt;strong>买买买&lt;/strong>，她将会面临一个严峻的问题——&lt;strong>储物空间不够&lt;/strong>。&lt;/p>
+&lt;p>所以她需要定期**&amp;ldquo;断舍离&amp;rdquo;**：过一段时间将陈旧的包包、衣服移到不常用的储物柜，再过一段时间把这些不常用的衣物丢掉。&lt;/p>
+&lt;p>Java代码也像女盆友一样，喜欢**&amp;ldquo;买买买&amp;rdquo;**——创建大量对象，所以也会面临**内存空间不足**。&lt;/p>
+&lt;p>JVM的垃圾回收机制承担了**&amp;ldquo;断舍离&amp;rdquo;**的职责。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/image-20210122102351258.png" alt="image-20210122102351258">&lt;/p>
+&lt;p>下面，我们来宏观地理解一下垃圾回收体系的主脉络。&lt;/p>
+&lt;h1 id="2where垃圾收集的目标区域">2.Where：垃圾收集的目标区域&lt;/h1>
+&lt;h2 id="目标区域">目标区域&lt;/h2>
+&lt;p>垃圾回收，&lt;strong>首先要圈定范围&lt;/strong>。&lt;/p>
+&lt;p>垃圾回收的目标区域主要发生在运行时数据区的&lt;strong>堆、方法区&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/2.png" alt="image-20210107141117798">&lt;/p>
+&lt;p>稍微回顾一下运行时数据区的一些知识：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>堆(Heap)&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>堆=年轻代+老年代&lt;/p>
+&lt;p>年轻代=伊甸园区(Eden)+幸存者区0(S0)+幸存者区1(S1)&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/3.png" alt="image-20210107143110413">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>方法区(Method Area)&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>方法区是站在类加载子系统的角度的一种逻辑说法。&lt;/p>
+&lt;p>方法区的具体实现是什么呢？&lt;/p>
+&lt;p>JDK8之前，是永久代。&lt;/p>
+&lt;p>JDK8以后，是采用堆外内存实现的元空间。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/4.png" alt="image-20210107143140440">&lt;/p>
+&lt;p>所以，更准确地说，垃圾回收的目标区域主要发生在运行时数据区的&lt;strong>年轻代、老年代、元空间&lt;/strong>。&lt;/p>
+&lt;h2 id="被回收区域的特征">被回收区域的特征&lt;/h2>
+&lt;p>根据分代理论，运行时数据区的各个区域存放的对象有如下特点：&lt;/p>
+&lt;ul>
+&lt;li>伊甸园区存放的对象，可以简化理解为新对象，有点像&lt;strong>刚买回来的2021新款LV包包&lt;/strong>&lt;/li>
+&lt;li>幸存者区存放的对象，可以简化理解为存活了一段时间的对象，有点像&lt;strong>去年买回来的LV包包&lt;/strong>&lt;/li>
+&lt;li>老年代存放的对象，可以简化理解为存活很久的对象或者很大的对象，有点像&lt;strong>过气的LV包包&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/image-20210122135157426.png" alt="image-20210122135157426">&lt;/p>
+&lt;h2 id="不同区域不同回收方式">不同区域，不同回收方式&lt;/h2>
+&lt;p>每次收拾储物空间，可以根据当前的时间、当前的需要，分批收拾。&lt;/p>
+&lt;p>垃圾收集也一样，面对不同区域的对象，也会采用不同的回收方式分批回收：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>部分收集法&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>YGC&lt;/strong>：也叫Minor GC，针对年轻代垃圾收集。&lt;/li>
+&lt;li>&lt;strong>OGC&lt;/strong>：也叫Major GC，针对老年代垃圾收集。&lt;/li>
+&lt;li>&lt;strong>混合GC&lt;/strong>：年轻代、老年代一起垃圾收集。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>全量收集法&lt;/strong>：年轻代、老年代、元空间一起垃圾收集。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/6.png" alt="image-20210107152239170">&lt;/p>
+&lt;h1 id="3when何时会触发垃圾回收">3.When：何时会触发垃圾回收&lt;/h1>
+&lt;p>明确了垃圾回收的范围，下一步就是明确回收时机。&lt;/p>
+&lt;ul>
+&lt;li>YGC：年轻代的伊甸园区满，就好像放新款包包的储物格满了，就会触发YGC。&lt;/li>
+&lt;li>OGC：老年代满，就好像老款专属储物格满了，会触发OGC。&lt;/li>
+&lt;li>FullGC：触发FullGC的条件很多(详见下图)，就好像整个储物柜一起收集。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/7.png" alt="image-20210107154209483">&lt;/p>
+&lt;h1 id="4how垃圾回收算法">4.How：垃圾回收算法&lt;/h1>
+&lt;p>&lt;em>说明：本文篇幅有限，不展开任何算法的细节，仅帮助读者建立宏观概念，笔者将在后续文章中详细阐述各种算法细节。&lt;/em>&lt;/p>
+&lt;h2 id="41什么是垃圾">4.1.什么是垃圾？&lt;/h2>
+&lt;p>断舍离的时候，什么样的包包算**&amp;ldquo;过时&amp;rdquo;**？一定是有个标准的。&lt;/p>
+&lt;p>对于垃圾回收算法也一样，认定无用对象的经典算法有两种：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>引用计数算法&lt;/strong>：此算法是在每个对象上增加一个计数器，表示这个对象被多少其它对象引用了。如果某个对象的引用计数器=0，则这个对象被定义为垃圾。&lt;/li>
+&lt;li>&lt;strong>可达性分析算法&lt;/strong>：此算法规定了一组满足条件的对象作为根节点，从这些根节点出发，搜索对象的引用链条，最终形成一个有向图，图中孤立的对象节点，就被定义为垃圾。&lt;/li>
+&lt;/ul>
+&lt;p>上述垃圾评价算法，各有利弊，后续会展开讨论，在此仅需要有一个概念：这套算法，就是帮助JVM识别一个对象是否属于垃圾。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/8.png" alt="image-20210107172657461">&lt;/p>
+&lt;h2 id="42如何回收垃圾">4.2.如何回收垃圾？&lt;/h2>
+&lt;p>识别出了垃圾，就要&lt;strong>有节奏地&lt;/strong>、&lt;strong>高效&lt;/strong>地开展垃圾回收。&lt;/p>
+&lt;p>好吧，问题来了：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>有节奏意味着慢慢来&lt;/strong>：肯定要给女盆友时间慢慢收拾，把稍微过时的包包放到不常用的储物格子，把非常过时的包包直接丢掉。&lt;/li>
+&lt;li>&lt;strong>高效意味着快&lt;/strong>：如果女盆友收拾的太慢，就没有人给您做饭了。&lt;/li>
+&lt;/ul>
+&lt;p>这也是影响JVM性能优化最大的课题：&lt;/p>
+&lt;ul>
+&lt;li>如何快速垃圾回收&lt;/li>
+&lt;li>如何避免STW问题：Stop The World问题，就是垃圾回收过程中，导致业务代码卡顿。&lt;/li>
+&lt;/ul>
+&lt;p>这些就是现存的这么多种垃圾回收算法要攻克的核心课题。&lt;/p>
+&lt;p>我们接下来宏观地理解一下各类&lt;strong>垃圾回收算法&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/9.png" alt="image-20210107170509963">&lt;/p>
+&lt;p>我们先看看3种最基础、最经典的&lt;strong>基础算法&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Mark-Sweep&lt;/strong>：标记-清除算法&lt;/li>
+&lt;li>&lt;strong>Copying&lt;/strong>：复制算法&lt;/li>
+&lt;li>&lt;strong>Mark-Compact&lt;/strong>：标记-压缩算法&lt;/li>
+&lt;/ul>
+&lt;p>从收集的区域看，有1种基于上述3种基础算法的&lt;strong>组合算法&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分代收集算法&lt;/strong>：本质就是不同的区域，采用不同的上述3种基础算法。&lt;/li>
+&lt;/ul>
+&lt;p>从收集的方式看，有1种基于上述3种基础算法&lt;strong>组合算法&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>增量收集算法&lt;/strong>：本质是业务代码运行和垃圾回收交替进行。&lt;/li>
+&lt;/ul>
+&lt;p>随着Java的不断发展，又发展出一种新的门派&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分区算法&lt;/strong>：本质是将内存区域划分为很多小方格，每个格子按需放对象，与分代理论最大的不同是，同一类型的对象不一定要放在逻辑连续的代。如下图，同样是伊甸园区的对象，并不需要占据逻辑连续的伊甸园区。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/10.png" alt="image-20210107161323691">&lt;/p>
+&lt;h1 id="5垃圾回收器垃圾回收算法的具体实现">5.垃圾回收器：垃圾回收算法的具体实现&lt;/h1>
+&lt;p>&lt;em>说明：本文篇幅有限，在后续文章中展开垃圾回收器的细节。&lt;/em>&lt;/p>
+&lt;p>垃圾回收器是垃圾回收算法的具体实现，但是理解垃圾回收器对我们有两个难题：&lt;/p>
+&lt;ul>
+&lt;li>有多种垃圾回收器&lt;/li>
+&lt;li>每种垃圾回收器都主攻某种场景，为了满足大部分业务场景，必须合理组合使用多种垃圾回收器&lt;/li>
+&lt;/ul>
+&lt;h2 id="51为什么会有多种垃圾回收器呢">5.1.为什么会有多种垃圾回收器呢？&lt;/h2>
+&lt;p>除了业务软件对JVM垃圾回收性能的诉求，还有商业原因(例如：Sun认了Oracle当爸爸，例如：RedHat企图当干爹，但亲爹Oracle不让)。&lt;/p>
+&lt;h2 id="52如何搭配使用多种垃圾回收器呢">5.2.如何搭配使用多种垃圾回收器呢？&lt;/h2>
+&lt;p>本文仅以JDK8为例，列举出垃圾回收器的经典搭配方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Serial+Serial Old&lt;/strong>： Serial回收器处理年轻代，Serial Old回收器处理老年代。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/11.png" alt="image-20210107182038415">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>ParNew+CMS+Serial Old&lt;/strong>： ParNew处理年轻代，CMS处理老年代，当CMS失效时，Serial Old回收器兜底老年代。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/12.png" alt="image-20210107182113952">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Parallel Scanvenge+Parallel Old&lt;/strong>： Parallel Scanvenge处理年轻代，Parallel Old处理老年代。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/13.png" alt="image-20210107182137752">&lt;/p>
+&lt;ul>
+&lt;li>**Parallel Scanvenge + Serial Old：**Parallel Scanvenge处理年轻代，Serial Old处理老年代。这种搭配关系在JDK14以后就开始废弃了。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/14.png" alt="image-20210107182201742">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>G1&lt;/strong>：G1是个神奇的存在，一个回收器通吃年轻代和老年代。这也是JVM目前主推的回收器。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/15.png" alt="image-20210107221548740">&lt;/p>
+&lt;h1 id="总结">总结&lt;/h1>
+&lt;p>本文讲解了垃圾回收体系的主脉络：&lt;/p>
+&lt;ul>
+&lt;li>垃圾回收发生在年轻代、老年代、方法区。&lt;/li>
+&lt;li>垃圾回收的方式：YGC(Minor GC)、OGC(Major GC)、FullGC&lt;/li>
+&lt;li>年轻代伊甸园区满时，触发YGC&lt;/li>
+&lt;li>老年代满时，触发OGC&lt;/li>
+&lt;li>有多种条件，触发FullGC(详见前文配图)&lt;/li>
+&lt;li>引用计数算法和可达性分析算法，用来识别哪些对象是垃圾。&lt;/li>
+&lt;li>垃圾回收的三种基础算法：标记-清除算法(Mark-Sweep)、复制算法(Copying)、标记-压缩算法(Mark-Compact)&lt;/li>
+&lt;li>垃圾回收的两种组合算法：分代收集算法、增量收集算法&lt;/li>
+&lt;li>垃圾回收的新门派组合算法：分区收集算法&lt;/li>
+&lt;li>由于商业原因和业务需求，JVM提供7种经典垃圾回收器。&lt;/li>
+&lt;li>实战时，搭配使用不通过垃圾回收器，满足回收年轻代和老年代的场景。&lt;/li>
+&lt;li>G1是一种特殊的垃圾收集器，通吃年轻代和老年代的垃圾回收。&lt;/li>
+&lt;/ul>
+&lt;p>如果从宏观上理解了垃圾回收体系的全貌，相信聪明的读者不用死记硬背也能得到题目的答案，请您将答案写在下面的评论区吧！&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/image-20210122140538305.png" alt="image-20210122140538305">&lt;/p>
+&lt;h1 id="废弃">废弃&lt;/h1>
+&lt;p>如果把&lt;strong>JVM&lt;/strong>类比为一座&lt;strong>工厂&lt;/strong>，那么运行时产生的各种&lt;strong>对象&lt;/strong>就像这座工厂里的&lt;strong>打工人&lt;/strong>，&lt;strong>运行时数据区&lt;/strong>就像打工人的&lt;strong>工位&lt;/strong>。&lt;/p>
+&lt;p>铁打的营盘流水的兵，工位有限，企业主会安排HR开展裁员工作——清理没价值的打工人，为新人腾出工位。&lt;/p>
+&lt;p>&lt;strong>垃圾回收体系&lt;/strong>就是JVM中，扮演了这个最无情的角色。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/1.png" alt="image-20210107150610240">&lt;/p>
+&lt;p>站在打工人(对象)的角度，垃圾回收体系是无情的存在。&lt;/p>
+&lt;p>但站在企业主(JVM)的角度，垃圾回收体系是维系正常生产的重要部件。&lt;/p></description></item><item><title>【运行时数据区】-0-用仓库管理员的视角理解运行时数据区</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</link><pubDate>Thu, 05 Aug 2021 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</guid><description>&lt;h1 id="0x01面试题">0x01.面试题&lt;/h1>
 &lt;p>&amp;ldquo;运行时数据区&amp;quot;是JVM面试题的热门考点。&lt;/p>
 &lt;p>实战中，内存泄露的定位、性能调优，往往也取决于我们对&amp;quot;运行时数据区&amp;quot;理解深度。&lt;/p>
 &lt;p>以下面试题来自百度搜索：&lt;/p>
@@ -1587,131 +2216,190 @@ Branch Frequency Prediction：分支频率预测&lt;/p>
 &lt;li>方法区、堆是共享的，虚拟机栈是独享的&lt;/li>
 &lt;li>方法区是直接使用了操作系统内存&lt;/li>
 &lt;/ul>
-&lt;p>另外，JVM中诸多技术点较为抽象，用通俗易懂的方式进行类比，非常有利于我们更快更好的学习、攻克JVM。笔者其它的文章也会尽量延续这种方式。&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</link><pubDate>Thu, 05 Aug 2021 14:37:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</guid><description>&lt;h1 id="1起于累土为什么要阅读字节码">1.起于累土：为什么要阅读字节码&lt;/h1>
-&lt;p>笔者最近的一项工作是设计一套课程，用于辅导新员工如何做好性能优化。&lt;/p>
-&lt;p>这项工作很快遇到了问题：&lt;/p>
+&lt;p>另外，JVM中诸多技术点较为抽象，用通俗易懂的方式进行类比，非常有利于我们更快更好的学习、攻克JVM。笔者其它的文章也会尽量延续这种方式。&lt;/p></description></item><item><title>【类加载机制】-0-从一道面试题开始</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/</link><pubDate>Thu, 05 Aug 2021 08:06:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/</guid><description>&lt;h1 id="0x01一道面试题">0x01.一道面试题&lt;/h1>
+&lt;p>&lt;strong>请阐述Java自带哪些加载器以及对应的职责？&lt;/strong>&lt;/p>
 &lt;blockquote>
-&lt;p>讲内存泄露/溢出的定位工具，就要求听众先对JVM的运行时数据区有基本理解。&lt;/p>
-&lt;p>讲运行时数据区，又要求听众先大致理解类加载子系统如何一步步地将字节码加载到内存中。&lt;/p>
-&lt;p>讲类加载子系统，又要求听众先理解字节码表示了哪些&amp;quot;静态信息&amp;rdquo;。&lt;/p>
-&lt;p>&amp;hellip;.&lt;/p>
+&lt;p>(1)Bootstrap ClassLoader(启动类加载器)：负责加载&amp;lt;JAVA_HOME&amp;gt;\lib目录，或-Xbootclasspath指定目录下的jar。
+特殊说明：JVM认为合理的jar文件名才会被加载，例如：rt.jar、tools.jar，文件名不符合的jar即使放在上述目录下也不会被加载。&lt;/p>
+&lt;p>(2)Extension ClassLoader(扩展类加载器)：负责加载&amp;lt;JAVA_HOME&amp;gt;\lib\ext目录，或java.ext.dirs指定目录下的jar。
+特殊说明：Java9以后引入了模块化机制，此加载器被此机制取代。&lt;/p>
+&lt;p>(3)Application ClassLoader(应用程序类加载器)：负责加载用户类路径(ClassPath)上的jar包。&lt;/p>
 &lt;/blockquote>
-&lt;p>性能优化是一个复杂的系统化话题，性能优化的手段分为3个级别：&lt;/p>
-&lt;p>&lt;strong>倔强青铜级：时空转移&lt;/strong>&lt;/p>
-&lt;p>当计算效率不足时，用空间换时间。例如：将需要频繁使用的数据，提前缓存在内存中。&lt;/p>
-&lt;p>当内存空间不足时，用时间换空间。例如：将不需要的缓存数据去掉，动态计算。&lt;/p>
-&lt;p>在这个层次上解决问题，&lt;strong>优点是朴实&lt;/strong>，&lt;strong>缺点是此消彼长、绵绵无期&lt;/strong>：&lt;/p>
-&lt;p>因为&lt;strong>时间换空间&lt;/strong>与&lt;strong>空间换时间&lt;/strong>本质是互逆的手段。&lt;/p>
-&lt;p>一个软件产品可能在迭代1暴露出了计算效率不足，采用了空间换时间。&lt;/p>
-&lt;p>到了迭代2又因为迭代1的性能优化导致空间不足，又要将大量的缓存替换为实时计算。&lt;/p>
-&lt;p>……&lt;/p>
-&lt;p>笔者的一位程序猿朋友，在多次时间换空间、空间换时间的性能优化工作之后，发出了一句颇有哲理的感慨：&lt;/p>
+&lt;p>此题考察JVM的类加载机制，关于类加载机制可以衍生出的考察方式也很多：
+例如：请你选出哪些不是Java自带的类加载器；
+例如：给出各类类加载器的描述、职责，选错误的；
+例如：将上述类加载器的特殊说明作为干扰选项；&lt;/p>
+&lt;h1 id="0x02不要背要理解">0x02.不要背，要理解&lt;/h1>
+&lt;p>至此，我们似乎没必要大费周章地解读这样一道记忆题。背下来不就可以了吗？笔者认为不是：
+发展24年的Java及JVM，历经若干版本的商业斗争[1]，衍生出若干语(语)言(法)特(陷)性(阱)。
+&amp;ldquo;背下来就行&amp;quot;的前提有二，可惜对于Java这些语(语)言(法)特(陷)性(阱)都不成立：&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>时间是不可能被消灭的，只能被转移&lt;/strong>&lt;/p>
+&lt;p>(1)知识输入是无二义性的、与时俱进的。
+(2)知识输入是有限集。&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-1.png" alt="image-20201128154031535">&lt;/p>
-&lt;p>&lt;strong>永恒钻石级：业务裁剪&lt;/strong>&lt;/p>
-&lt;p>能用这个级别手法的，一般是老程序猿。&lt;/p>
-&lt;p>凭借多年的业务领域经验，深刻理解了业务流程中哪些步骤是冗余的。&lt;/p>
-&lt;p>无论是时间瓶颈或者空间瓶颈，删掉冗余代码，一招搞定。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-2.png" alt="image-20201128155657776">&lt;/p>
-&lt;p>在这个层次上解决问题，&lt;strong>优点还是朴实，缺点是比较依赖业务专家，无法批量复制与推广&lt;/strong>。&lt;/p>
-&lt;p>&lt;strong>最强王者级：底层优化&lt;/strong>&lt;/p>
-&lt;p>使用这种手法，就要求程序猿对于JVM、操作系统、网络有比较深刻的认识，大部分程序猿都止步此。&lt;/p>
-&lt;p>通过对静态逻辑(字节码)的理解和动态逻辑(运行时)的理解，精确找到空间瓶颈和时间瓶颈，进而采用更加具有通用性的手段开展优化工作。&lt;/p>
-&lt;p>如果说&lt;strong>性能优化是九层之塔&lt;/strong>，那么&lt;strong>阅读字节码&lt;/strong>就是累土中的重要基石之一。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-3.png" alt="image-20201128160013429">&lt;/p>
-&lt;h1 id="2编程界的通天塔字节码的宏观意义">2.编程界的通天塔：字节码的宏观意义&lt;/h1>
-&lt;p>知乎上有一个趣帖&lt;code>全世界为什么不能统一语言？&lt;/code>(&lt;a href="https://www.zhihu.com/question/22133387">https://www.zhihu.com/question/22133387&lt;/a>)&lt;/p>
-&lt;p>有一个有趣的回答：&amp;ldquo;你想造通天塔就直说&amp;rdquo;。&lt;/p>
-&lt;p>通天塔，也叫巴别塔，传说人类想建造一个通往天堂的天梯而触怒了神灵，于是神灵将人类的语言隔绝，导致人类种族语言不通。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-1.png" alt="image-20201128163114423">&lt;/p>
-&lt;p>编程界也存在多种编程语言，任何VM类型的语言(含编译、执行)都存在如下流程：&lt;/p>
+&lt;p>所以，笔者坚定的认为只有Java程序员最有资格喊出&amp;rdquo;&lt;strong>我秃了，我也变强了&lt;/strong>&amp;quot;。
+所以，笔者坚定的认为只有&amp;rdquo;&lt;strong>深刻理解JVM&lt;/strong>&amp;quot;(即，深刻理解语法特性到JVM层，甚至操作系统层)，是Java程序员的最有效的防秃良药。
+&lt;img src="images/1.png" alt="1">&lt;/p>
 &lt;blockquote>
-&lt;p>前端编译器：将源代码转换为字节码&lt;/p>
-&lt;p>字节码加载模块：将字节码加载到运行时数据区(就是内存)&lt;/p>
-&lt;p>解释执行器：根据内存中的VM栈，执行字节码&lt;/p>
-&lt;p>后端编译器：将频繁执行的字节码直接生成为机器码缓存下来，提升执行效率&lt;/p>
+&lt;p>[1]：A new future for Java：https://theboreddev.com/a-new-future-for-java/&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-2.png" alt="image-20201126100836623">&lt;/p>
-&lt;p>我们会发现，字节码加载、运行时数据区似乎大同小异，于是进一步简化上述流程：&lt;/p>
+&lt;h1 id="0x03从韩国星工厂看类加载机制的全貌">0x03.从韩国星工厂看类加载机制的全貌&lt;/h1>
 &lt;blockquote>
-&lt;p>字节码加载取决于运行时数据区&lt;/p>
-&lt;p>运行时数据区的理论主要是分代理论、回收理论等&lt;/p>
+&lt;p>From《深入理解Java虚拟机》-周志明&lt;/p>
+&lt;p>Java虚拟机将描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终变成被虚拟机可以直接使用的Java类型，这个过程被称作Java虚拟机的类加载机制&amp;hellip;&amp;hellip;与那些在编译时需要进行连接的语言不同，在Java语言里面，类型的加载、连接和初始化过程都是在程序运行期间完成的&amp;hellip;&amp;hellip;用户可以通过Java预置的或自定义类加载器&amp;hellip;作为其程序代码的一部分。&lt;/p>
 &lt;/blockquote>
-&lt;p>从简化的流程中，我们可以看到，一种编程语言的&lt;strong>源代码语法无论多么&amp;quot;花哨&amp;rdquo;&lt;/strong>(满足不同领域的程序猿不同的编程风格)，&lt;strong>最终都要回归到朴实的字节码&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-3.png" alt="image-20201126105406046">&lt;/p>
-&lt;p>在Java这种语言中，JVM提供了&lt;strong>javac和javap&lt;/strong>两种工具实现前端编译和前端反编译的互逆操作：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-4.png" alt="image-20201126105515858">&lt;/p>
-&lt;p>试想一下，&lt;strong>如果字节码是一种规范&lt;/strong>，&amp;ldquo;类加载子系统、运行时数据区、解释执行器、后端编译器&amp;quot;就有可能做成&lt;strong>VM内置的标准件&lt;/strong>，那么开发一种新的编程语言只需要关注2点：&lt;/p>
+&lt;p>从这段经典且严谨的描述，我们可以抽象8个问题，以此宏观地获得类加载机制的全貌：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">问题1：加载什么？
+问题2：加载得到了什么？
+问题3：从哪里加载？
+问题4：加载到哪里去？
+问题5：何时加载？
+问题6：加载流程有几步？
+问题7：加载流程如何实现？
+问题8：类加载器的约束？
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="1加载什么">(1)加载什么？&lt;/h2>
+&lt;p>我们在.java文件中编写了一堆代码，被转换成字节码(.class文件)，&lt;strong>JVM加载就是这个字节码&lt;/strong>。
+这个&lt;strong>字节码描述的信息&lt;/strong>[2]包括(但不限于)：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">有哪些类、哪些接口；
+每个类有哪些属性、行为；
+类和类的关系；
+...
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这些信息就是程序员定义的&amp;quot;模板&amp;rdquo;，在程序运行时，当需要基于类A创建实例对象a时，JVM就要先找到类A对应的&amp;quot;模板&amp;rdquo;。&lt;/p>
+&lt;p>这些&amp;quot;模板&amp;rdquo;，就像韩国星工场包装女团时的&amp;quot;剧本&amp;rdquo;，每个女星都是基于某个&amp;quot;模板&amp;quot;创建的实例对象，女星的身高、体重、才艺就是&amp;quot;模板&amp;quot;中描述的&amp;quot;属性、行为&amp;rdquo;。
+&lt;img src="images/2.png" alt="2">&lt;/p>
 &lt;blockquote>
-&lt;p>1.如何设计一种新的语法，满足新编程领域的特征、风格？&lt;/p>
-&lt;p>2.如何将新的语法源代码，转换为标准的字节码？&lt;/p>
+&lt;p>[2]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
 &lt;/blockquote>
-&lt;p>设计一种新的编程语言，上述2点并不是很困难，而真正的技术门槛、技术成本是那些VM内置的标准件。&lt;/p>
-&lt;p>这将是一种可怕的效率提升革命，于是Java之父Gosling强调：&lt;/p>
+&lt;h2 id="2加载得到了什么">(2)加载得到了什么？&lt;/h2>
+&lt;p>字节码加载到内存后得到的信息内容还是(1)中提到的字节码中包含的信息，但信息形式变了，抽象、简单地理解为&lt;strong>JVM能认识的数据结构&lt;/strong>[3]。&lt;/p>
+&lt;p>这就像娱乐公司的策划团队在电脑上写好了女团出道的&amp;quot;剧本&amp;rdquo;，女团的经纪人要无差错地仔细阅读&amp;quot;剧本&amp;quot;的电子件，把&amp;quot;剧本&amp;quot;存储在大脑中，以备后续使用。
+&lt;img src="images/3.png" alt="3">&lt;/p>
 &lt;blockquote>
-&lt;p>JVM能支持各种符合字节码规范的新兴编程语言，Java只是JVM上能运行的编程语言之一。&lt;/p>
-&lt;p>Java并不牛逼，JVM才是最牛逼的。&lt;/p>
+&lt;p>[3]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-5.png" alt="image-20201126110532663">&lt;/p>
-&lt;p>&lt;strong>字节码就是统一的机器语言：&lt;/strong>&lt;/p>
+&lt;h2 id="3从哪里加载">(3)从哪里加载？&lt;/h2>
+&lt;p>用一张表，说明字节码文件与经纪人的类比关系：&lt;/p>
+&lt;p>&lt;img src="images/t1.png" alt="t1">&lt;/p>
+&lt;p>这一点也是&lt;strong>JVM给Java程序员的自由&lt;/strong>，很多著名的产品就是在这个点上做了文章。&lt;/p>
+&lt;h2 id="4加载到哪里去">(4)加载到哪里去？&lt;/h2>
+&lt;p>这个问题最好回答：内存，具体指的是JVM的&lt;strong>运行时数据区&lt;/strong>，再具体一点是运行时数据区中的&lt;strong>方法区&lt;/strong>[4]&lt;/p>
+&lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
 &lt;blockquote>
-&lt;p>从程序猿的视角看，无论使用怎样不同的编程语言，都能被前端编译器转换为标准的JVM字节码；&lt;/p>
-&lt;p>从CPU的视角看，无论是怎样不同的CPU架构，后端编译器都能将标准的JVM字节码转换为不同的机器码；&lt;/p>
+&lt;p>[4]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
 &lt;/blockquote>
-&lt;p>目前，JVM支持了很多编程语言，其中包含了注入Kotlin这种热度很高的新型语言：&lt;/p>
-&lt;blockquote>
-&lt;p>数据来源：https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/p>
+&lt;h2 id="5何时加载">(5)何时加载？&lt;/h2>
+&lt;p>类加载发生在运行时，这也是Java、C#这类语言推崇的动态性。&lt;/p>
+&lt;p>动态性是一把双刃剑，运行时加载意味着需要&amp;quot;边执行，边连接&amp;rdquo;。
+这就好像女团经纪人不是提前把&amp;quot;剧本&amp;quot;烂熟于胸，而是到了女团演出现场，才掏出&amp;quot;剧本&amp;rdquo;，现场理解、现场执行。
+以现实生活的经验，这样的经纪人，看起来不太靠谱。&lt;/p>
+&lt;p>当然，动态性一定是源于某些特定场景和需求，Java为了靠谱，也引出了虚拟机中另一个大的课题：JIT(即时编译)，围绕着&amp;quot;如何提升运行时的编译效率&amp;quot;会有很多有趣的故事。&lt;/p>
+&lt;h2 id="6加载流程有几步">(6)加载流程有几步？&lt;/h2>
+&lt;p>在(2)中我们提到女团的经纪人要无差错地仔细阅读&amp;quot;剧本&amp;quot;的电子件，关键词是&lt;strong>无差错&lt;/strong>
+我们再用一张表，类比一下[5]&lt;/p>
+&lt;p>&lt;img src="images/t2.png" alt="image-20200905163221231">&lt;/p>
+&lt;p>表格中存在不严谨(通俗)的表达，但相信读者已经关注到了两个核心要点：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">(1)加载流程有几步
+(2)每一步的作用是什么
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>[5]上述加载流程每一步存在一些JVM实现的细节，例如：上述步骤一定是顺序执行的吗？例如：直接引用需要反复解析吗？这些都有必要详细解读，本文暂不展开&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-6.png" alt="1.png">&lt;/p>
-&lt;h1 id="3引用地图字节码的微观逻辑">3.引用地图：字节码的微观逻辑&lt;/h1>
-&lt;p>JVM字节码的规范很复杂，在深入细节之前，最好先理解字节码的微观逻辑。&lt;/p>
-&lt;p>首先写一段简单的代码Demo4.java：&lt;/p>
+&lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
+&lt;h2 id="7加载流程如何实现">(7)加载流程如何实现？&lt;/h2>
+&lt;p>至此，终于可以和本文开头的面试题呼应上了，前文我们探讨了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">加载什么=&amp;gt;加载得到了什么=&amp;gt;从哪里加载=&amp;gt;加载到哪里去=&amp;gt;何时加载=&amp;gt;加载流程有几步
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>那么这都是JVM的规范、规格，怎么实现？&lt;strong>类加载器&lt;/strong>就是类加载机制的具体实现。
+不同类型的加载器相当于公司不同的角色，都去自己专属的文件夹去查找并加载类&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">Bootstrap加载器相当于经济公司老板
+Extension加载器相当于经纪人
+Application加载器相当于女团艺人
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="8类加载器的约束">(8)类加载器的约束？&lt;/h2>
+&lt;p>既然有不同的类加载器，它们之间必然有配合关系，否则两个人干了同一个工作，对外口径还不同，咋办？
+JVM定义了这种配合关系，还取了个高大上的名字&amp;quot;双亲委派模型&amp;rdquo;，笔者认为这种模型应该叫&amp;quot;保姆式管理模型&amp;rdquo;
+还是一张表类比一下：&lt;/p>
+&lt;p>&lt;img src="images/t3.png" alt="image-20200905163353382">&lt;/p>
+&lt;p>&lt;img src="images/6.png" alt="6">&lt;/p>
+&lt;p>双亲委派模型，本质上是说&amp;quot;领导先上，领导不行我再上&amp;rdquo;。
+这种管理风格，自然也有弊端。历史上有&lt;strong>4次破坏双亲委派模型&lt;/strong>[6]的事件。
+破坏双亲委派模型的本质，是&amp;quot;管理团队的风格多样化&amp;rdquo;，例如：&amp;ldquo;扁平化团队&amp;rdquo;、&amp;ldquo;先干了再说团队&amp;quot;等等。&lt;/p>
 &lt;blockquote>
-&lt;p>这个类只有一个无参构造函数&lt;/p>
+&lt;p>[6]每种&amp;quot;管理风格&amp;quot;也各有利弊，这也是JVM发展历程中可以仔细学习的技术点，笔者在后续文章中再来探讨&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-1.png" alt="image-20201128171824843">&lt;/p>
-&lt;p>再通过前端编译器，从Demo4.java生成Demo4.class:&lt;/p>
-&lt;blockquote>
-&lt;p>用16进制编辑器打开&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-2.png" alt="image-20201128172301948">&lt;/p>
-&lt;p>Class文件分为2个部分：常量池和方法区&lt;/p>
-&lt;blockquote>
-&lt;p>红色框：常量池区域&lt;/p>
-&lt;p>橙色框：方法区区域&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-3.png" alt="image-20201128174147100">&lt;/p>
-&lt;p>这里的常量、方法，不是Java语法中的常量、方法，而是&lt;strong>站在VM的角度看到的常量和方法&lt;/strong>。&lt;/p>
-&lt;p>例如：&amp;ldquo;Demo4&amp;quot;这个字符串，在Java源代码中出现了2次：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-4.png" alt="image-20201128175010006">&lt;/p>
-&lt;p>JVM将&amp;quot;Demo4&amp;quot;这个字符串放在了常量池中：&lt;/p>
-&lt;blockquote>
-&lt;p>蓝色框：Demo4字面量&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-5.png" alt="image-20201128175430731">&lt;/p>
-&lt;p>在Java源代码中第一处表达类名时，JVM只需要用1个字节，&lt;strong>最终指向&lt;/strong>常量池中&amp;quot;Demo4&amp;quot;的位置：&lt;/p>
-&lt;blockquote>
-&lt;p>最终指向：此处简化了从ClassInfo常量逐级指向Utf8_info常量的过程&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-6.png" alt="image-20201128175906442">&lt;/p>
-&lt;p>从上述例子可以看到，JVM字节码的微观逻辑就是&lt;strong>引用&lt;/strong>，引用的目的就是复用，复用的目的就是用&lt;strong>最小的字节数表达信息&lt;/strong>。&lt;/p>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;p>本文主要内容：&lt;/p>
-&lt;ul>
-&lt;li>论述阅读字节码对于深入理解编程语言特性的意义&lt;/li>
-&lt;li>JVM字节码规范对于设计新的编程语言的价值&lt;/li>
-&lt;li>JVM字节码如何通过引用地图，实现最小字节数表示最大的信息量。&lt;/li>
-&lt;/ul>
-&lt;p>下一步，笔者将通过一段代码实例，深入Class文件结构的细节。&lt;/p>
-&lt;h1 id="5参考文献">5.参考文献&lt;/h1>
-&lt;blockquote>
-&lt;p>&lt;a href="https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages">https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm">https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.zhihu.com/question/20003582">https://www.zhihu.com/question/20003582&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.imooc.com/article/296373">https://www.imooc.com/article/296373&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>【宏观】从Java概念图理解Java体系</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</link><pubDate>Thu, 05 Aug 2021 08:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</guid><description>&lt;p>Java历经多年发展，知识体系庞大且复杂，包含大量的概念、技术点、原理等。&lt;/p>
+&lt;h1 id="0x03-小结">0x03 小结&lt;/h1>
+&lt;p>我们从一道面试题开始，通过8个问题看到了类加载机制的全貌。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">加载什么-&amp;gt;加载得到了什么-&amp;gt;从哪里加载-&amp;gt;加载到哪里去-&amp;gt;何时加载-&amp;gt;加载流程有几步-&amp;gt;加载流程如何实现-&amp;gt;类加载器的约束
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>本文篇幅有限，还留下了一些重要、有趣的细节，未来笔者还会继续展开&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">字节码描述的信息
+JVM能认识的数据结构
+方法区的结构
+加载流程每一步存在一些JVM实现的细节
+破坏双亲委派模型
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后，笔者还想谈谈&amp;quot;理解优于记忆&amp;quot;的个人观点：深入理解JVM的原理对于实战的意义就是&amp;quot;先验知识&amp;rdquo;，是&amp;quot;性能调优、内存泄露、OSGI&amp;quot;等疑难杂症、高级框架的&amp;quot;基础&amp;rdquo;，如果能看到这类面试题背后的Why、What、How，您就获得了探寻计算机秘境的不二法门。&lt;/p></description></item><item><title>【宏观】从Java概念图理解Java体系</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</link><pubDate>Thu, 05 Aug 2021 08:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</guid><description>&lt;p>Java历经多年发展，知识体系庞大且复杂，包含大量的概念、技术点、原理等。&lt;/p>
 &lt;p>即使从事多年Java开发，依然不敢很肯定完全吃透了Java。&lt;/p>
 &lt;p>仿佛在知识的海洋中游泳，游了很久也看不到边际。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603115307805.png" alt="image-20210603115307805">&lt;/p>

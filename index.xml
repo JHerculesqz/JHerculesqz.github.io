@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 14:55:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 15:00:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,435 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】-2-学习阅读Class文件结构(16进制版)-下</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/</link><pubDate>Thu, 05 Aug 2021 14:55:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/</guid><description>&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)-上》、《【编译引擎】学习阅读Class文件结构(16进制版)-中》两篇文章中，笔者讲解了如何以16进制的方式，解读Demo2.java对应字节码的常量池、字段表、方法表。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】-3-学习阅读Class文件结构(javap版)</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</link><pubDate>Thu, 05 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
+&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)》中，我们一起直接阅读了Class文件的16进制版本。&lt;/p>
+&lt;p>虽然这种方式可以帮助我们深刻理解Class文件结构，但如果您从事的是应用软件开发(而不是编译器相关工作)，这样就比较低效了。&lt;/p>
+&lt;p>今天我们就来看看JVM提供的javap，如何提升我们解读Class结构的工作效率。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210129115436313.png" alt="image-20210129115436313">&lt;/p>
+&lt;h1 id="2javap">2.javap&lt;/h1>
+&lt;h2 id="21命令行学习方法">2.1.命令行学习方法&lt;/h2>
+&lt;p>最好的学习资源就是官方文档：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F">https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>在这里，我们可以获得最全面的javap使用指导。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604135122739.png" alt="image-20210604135122739">&lt;/p>
+&lt;h2 id="22命令行详解">2.2.命令行详解&lt;/h2>
+&lt;h3 id="221javap的命令行结构">2.2.1.javap的命令行结构&lt;/h3>
+&lt;blockquote>
+&lt;p>javap [options] classfiles&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>[options]：javap的命令行选项&lt;/p>
+&lt;p>classfiles：是我们需要反汇编的一个或多个类文件。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604135556794.png" alt="image-20210604135556794">&lt;/p>
+&lt;h3 id="222最常用的options">2.2.2.最常用的options&lt;/h3>
+&lt;p>实战中，比较常用的options是输出所有显示所有类和成员、输出类的附件信息(如：堆栈大小、局部变量数量和方法的参数)&lt;/p>
+&lt;blockquote>
+&lt;p>javap -v -p Test.class&lt;/p>
+&lt;/blockquote>
+&lt;p>其中，&lt;/p>
+&lt;ul>
+&lt;li>-v：输出类的附件信息(如：堆栈大小、局部变量数量和方法的参数)&lt;/li>
+&lt;li>-p：显示所有的类和成员&lt;/li>
+&lt;/ul>
+&lt;h3 id="223梳理options">2.2.3.梳理options&lt;/h3>
+&lt;p>在官方文档中，javap的options很多，笔者做了这样的归类：&lt;/p>
+&lt;ul>
+&lt;li>与类有关的options：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>-l：打印行和局部变量表&lt;/p>
+&lt;p>-package：显示程序包/受保护的/公共类和成员 (默认)&lt;/p>
+&lt;p>-public：只显示公共类和成员&lt;/p>
+&lt;p>-protected：只显示受保护的和公共的类和成员&lt;/p>
+&lt;p>-p -private：显示所有的类和成员&lt;/p>
+&lt;p>-s：打印内部类型签名&lt;/p>
+&lt;p>-constants：显示static final常量&lt;/p>
+&lt;p>-c：打印类中每个方法的反汇编代码，例如，组成Java字节码的指令&lt;/p>
+&lt;p>-v，-verbose：打印堆栈大小、局部变量数量和方法的参数&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>与JVM有关的options：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>-classpath &lt;path>，-cp &lt;path>：指定javap命令用于查找类的路径。覆盖默认的CLASSPATH环境变量
+-bootclasspath &lt;path>：指定加载引导类的路径。默认情况下，引导类是实现位于jre/lib/rt.jar和其它几个jar
+-extdir dirs：覆盖扩展类的位置。扩展的默认位置是java.ext.dirs的值
+Joption：将指定的选项传递给JVM(JVM的options详见java命令文档)
+eg:
+javap -J-version
+javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
+-sysinfo：显示正在处理的类的系统信息(路径、大小、日期、MD5哈希值)&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="224javap的形和神">2.2.4.javap的形和神&lt;/h3>
+&lt;p>前面解读了javap的命令行手册，这些只能算作javap的形，也比较好掌握，我们看看官方文档的javap输出的例子：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Compiled&lt;/span> &lt;span class="n">from&lt;/span> &lt;span class="s">&amp;#34;HelloWorldFrame.java&amp;#34;&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">HelloWorldFrame&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">javax&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">swing&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">JFrame&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">String&lt;/span> &lt;span class="n">message&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="nf">HelloWorldFrame&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="c1">// Method javax/swing/JFrame.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// String Hello World!
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">putfield&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="c1">// Field message:Ljava/lang/String;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">11&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// class HelloWorldFrame$1
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">14&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">dup&lt;/span>
+&lt;span class="n">15&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">16&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="c1">// Method HelloWorldFrame$1.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:(LHelloWorldFrame;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">19&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span> &lt;span class="c1">// Method setContentPane:(Ljava/awt/Container;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">22&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">23&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">bipush&lt;/span> &lt;span class="n">100&lt;/span>
+&lt;span class="n">25&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">bipush&lt;/span> &lt;span class="n">100&lt;/span>
+&lt;span class="n">27&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span> &lt;span class="c1">// Method setSize:(II)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">30&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">String&lt;/span>&lt;span class="o">[]);&lt;/span>
+&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span> &lt;span class="c1">// class HelloWorldFrame
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">dup&lt;/span>
+&lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="c1">// Method &amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">astore_1&lt;/span>
+&lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_1&lt;/span>
+&lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">iconst_1&lt;/span>
+&lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">10&lt;/span> &lt;span class="c1">// Method setVisible:(Z)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">13&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不了解JVM字节码的程序猿依然看不懂，这些就是javap的神。&lt;/p>
+&lt;p>这就好像&lt;code>辟邪剑法&lt;/code>与&lt;code>辟邪剑谱&lt;/code>的关系。&lt;/p>
+&lt;p>接下来，我们就来解读一下javap的输出结果——字节码。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604142536789.png" alt="image-20210604142536789">&lt;/p>
+&lt;h1 id="3javap输出结果解读">3.javap输出结果解读&lt;/h1>
+&lt;blockquote>
+&lt;p>说明：Java虚拟机规范中很大的篇幅就是约定字节码各个Section的职责、含义、约束，以及JVM指令集，本文不可能一一详尽阐述。因此本文聚焦于解读字节码的总体结构，旨在最快速地为大家建立Class文件结构的脉络，后续案例也会进一步展开字节码技术，对试题进行更有深度的解读。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="31字节码的基础知识">3.1.字节码的基础知识&lt;/h2>
+&lt;p>为了便于不太了解JVM字节码的程序猿更快进入下一章节，我们简单回顾和小结一下字节码的知识：&lt;/p>
+&lt;ul>
+&lt;li>STEP1.我们通过java命令，将.java文件转化为.class文件(也就是字节码)&lt;/li>
+&lt;li>STEP2.字节码文件本身是什么呢？我们可以用16进制编辑器打开它&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>字节码文件本身就是一串字节流。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604144157084.png" alt="image-20210604144157084">&lt;/p>
+&lt;ul>
+&lt;li>STEP3.为了看的更加清楚一些，我们将有关联的字节用同一种颜色着色：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>如果您做过网络协议的开发，会发现字节码(字节流)与协议栈(如：ModBus)的逻辑很类似，几个字节为一组表达一个信息。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604144211764.png" alt="image-20210604144211764">&lt;/p>
+&lt;ul>
+&lt;li>STEP4.抽象一下上述着色字节流，我们可以将Class文件结构抽象如下&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>字节码基础属性&lt;/p>
+&lt;p>常量池：占据字节码文件最大的篇幅&lt;/p>
+&lt;p>类的基本信息：包含类名的索引、类访问标识、父类名的索引、实现了多少接口等信息&lt;/p>
+&lt;p>字段列表：包含有多少字段，每个字段名的索引、访问标识等&lt;/p>
+&lt;p>方法列表：包含多少方法，每个方法名的索引、访问标识、方法的实现等&lt;/p>
+&lt;p>附加属性&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604145305097.png" alt="image-20210604145305097">&lt;/p>
+&lt;h2 id="32通过示例代码解读javap的输出">3.2.通过示例代码，解读javap的输出&lt;/h2>
+&lt;p>我们以一段示例代码，来解读javap的输出：&lt;/p>
+&lt;ul>
+&lt;li>示例代码：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604150455456.png" alt="image-20210604150455456">&lt;/p>
+&lt;ul>
+&lt;li>javap输出&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;span class="lnt">81
+&lt;/span>&lt;span class="lnt">82
+&lt;/span>&lt;span class="lnt">83
+&lt;/span>&lt;span class="lnt">84
+&lt;/span>&lt;span class="lnt">85
+&lt;/span>&lt;span class="lnt">86
+&lt;/span>&lt;span class="lnt">87
+&lt;/span>&lt;span class="lnt">88
+&lt;/span>&lt;span class="lnt">89
+&lt;/span>&lt;span class="lnt">90
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">javap&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">v&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="n">Demo2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">class&lt;/span>
+&lt;span class="n">Classfile&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">C&lt;/span>&lt;span class="o">:/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">class&lt;/span>
+&lt;span class="n">Last&lt;/span> &lt;span class="n">modified&lt;/span> &lt;span class="n">2021&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">25&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">size&lt;/span> &lt;span class="n">613&lt;/span> &lt;span class="n">bytes&lt;/span>
+&lt;span class="n">MD5&lt;/span> &lt;span class="n">checksum&lt;/span> &lt;span class="n">f7c661d99330a1eefb32b6429e5a48b4&lt;/span>
+&lt;span class="n">Compiled&lt;/span> &lt;span class="n">from&lt;/span> &lt;span class="s">&amp;#34;Demo2.java&amp;#34;&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">com&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">firelord&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">zsample&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">jvm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">frontcompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">Demo2&lt;/span>
+&lt;span class="n">minor&lt;/span> &lt;span class="n">version&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">0&lt;/span>
+&lt;span class="n">major&lt;/span> &lt;span class="n">version&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">52&lt;/span>
+&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PUBLIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ACC_SUPER&lt;/span>
+&lt;span class="n">Constant&lt;/span> &lt;span class="n">pool&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Methodref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">21&lt;/span> &lt;span class="c1">// java/lang/Object.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Fieldref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">22&lt;/span> &lt;span class="c1">// com/firelord/zsample/lang/jvm/frontcompiler/Demo2.field1:I
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Fieldref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">23&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">24&lt;/span> &lt;span class="c1">// java/lang/System.out:Ljava/io/PrintStream;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">25&lt;/span> &lt;span class="c1">// hello world
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Methodref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">26&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">27&lt;/span> &lt;span class="c1">// java/io/PrintStream.println:(Ljava/lang/String;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">28&lt;/span> &lt;span class="c1">// com/firelord/zsample/lang/jvm/frontcompiler/Demo2
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">29&lt;/span> &lt;span class="c1">// java/lang/Object
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">field1&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">I&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">10&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">11&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="o">()&lt;/span>&lt;span class="n">V&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">12&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Code&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">13&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">LineNumberTable&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">14&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">LocalVariableTable&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">15&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="k">this&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">16&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Lcom&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">17&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">hello&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">18&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">i&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">19&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">SourceFile&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">20&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Demo2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">java&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">21&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">11&lt;/span> &lt;span class="c1">// &amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">22&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="c1">// field1:I
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">23&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">30&lt;/span> &lt;span class="c1">// java/lang/System
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">24&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">31&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">32&lt;/span> &lt;span class="c1">// out:Ljava/io/PrintStream;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">25&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">hello&lt;/span> &lt;span class="n">world&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">26&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">33&lt;/span> &lt;span class="c1">// java/io/PrintStream
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">27&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">34&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">35&lt;/span> &lt;span class="c1">// println:(Ljava/lang/String;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">28&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">29&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">java&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Object&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">30&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">java&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">System&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">31&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">out&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">32&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Ljava&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">PrintStream&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">33&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">java&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">PrintStream&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">34&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">println&lt;/span>
+&lt;span class="err">#&lt;/span>&lt;span class="n">35&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Ljava&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">;)&lt;/span>&lt;span class="n">V&lt;/span>
+&lt;span class="o">{&lt;/span>
+&lt;span class="kd">private&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">field1&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">descriptor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">I&lt;/span>
+&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PRIVATE&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="n">com&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">firelord&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">zsample&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">jvm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">frontcompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">Demo2&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">descriptor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">()&lt;/span>&lt;span class="n">V&lt;/span>
+&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PUBLIC&lt;/span>
+&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">stack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">locals&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">args_size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">1&lt;/span>
+&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="c1">// Method java/lang/Object.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
+&lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">iconst_1&lt;/span>
+&lt;span class="n">6&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">putfield&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// Field field1:I
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
+&lt;span class="n">LineNumberTable&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">line&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">0&lt;/span>
+&lt;span class="n">line&lt;/span> &lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">4&lt;/span>
+&lt;span class="n">LocalVariableTable&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">Start&lt;/span> &lt;span class="n">Length&lt;/span> &lt;span class="n">Slot&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="n">Signature&lt;/span>
+&lt;span class="n">0&lt;/span> &lt;span class="n">10&lt;/span> &lt;span class="n">0&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="n">Lcom&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">hello&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">descriptor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">()&lt;/span>&lt;span class="n">V&lt;/span>
+&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PUBLIC&lt;/span>
+&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">stack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">locals&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">args_size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">1&lt;/span>
+&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">iconst_1&lt;/span>
+&lt;span class="n">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">istore_1&lt;/span>
+&lt;span class="n">2&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">getstatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="c1">// Field java/lang/System.out:Ljava/io/PrintStream;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// String hello world
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="c1">// Method java/io/PrintStream.println:(Ljava/lang/String;)V
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
+&lt;span class="n">LineNumberTable&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">line&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">0&lt;/span>
+&lt;span class="n">line&lt;/span> &lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">2&lt;/span>
+&lt;span class="n">line&lt;/span> &lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">10&lt;/span>
+&lt;span class="n">LocalVariableTable&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="n">Start&lt;/span> &lt;span class="n">Length&lt;/span> &lt;span class="n">Slot&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="n">Signature&lt;/span>
+&lt;span class="n">0&lt;/span> &lt;span class="n">11&lt;/span> &lt;span class="n">0&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="n">Lcom&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">2&lt;/span> &lt;span class="n">9&lt;/span> &lt;span class="n">1&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="n">I&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="nl">SourceFile:&lt;/span> &lt;span class="s">&amp;#34;Demo2.java&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="321class文件基础信息">3.2.1.Class文件基础信息&lt;/h3>
+&lt;p>Class文件的基础信息包括：&lt;/p>
+&lt;ul>
+&lt;li>class文件的路径&lt;/li>
+&lt;li>class文件的修改时间、class文件的大小&lt;/li>
+&lt;li>class文件的MD5值&lt;/li>
+&lt;li>java文件的名称&lt;/li>
+&lt;li>jdk的大版本/小版本号&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604151205810.png" alt="image-20210604151205810">&lt;/p>
+&lt;h3 id="332常量池">3.3.2.常量池&lt;/h3>
+&lt;p>常量池的细节知识有很多，但是有3个关键点：&lt;/p>
+&lt;ul>
+&lt;li>访问权限、字符串等等，都是JVM所认为的&amp;quot;常量&amp;rdquo;&lt;/li>
+&lt;li>常量池中存储了多种类型的常量&lt;/li>
+&lt;li>常量之间以类似&amp;quot;指针&amp;quot;的形式来表达源代码&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>例如：class Demo2，那么常量池有就会有一个UTF-8类型的常量表示&amp;quot;Demo2&amp;rdquo;，还会有一个类的符号引用指向&amp;quot;Demo2&amp;quot;这个UTF-8的常量。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604151237501.png" alt="image-20210604151237501">&lt;/p>
+&lt;h3 id="333访问标识类索引">3.3.3.访问标识、类索引&lt;/h3>
+&lt;p>在常量池的基础上，JVM首先要表达源文件中的类，类的关键要素包括：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>类名：javap的输出结果中有多处呈现了类名是Demo2。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>类的访问权限：本例中，javap的输出就是表示Demo2类是public的，并且继承于Object类&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604151731952.png" alt="image-20210604151731952">&lt;/p>
+&lt;h3 id="334字段表">3.3.4.字段表&lt;/h3>
+&lt;p>进一步，字节码要表达：&lt;/p>
+&lt;ul>
+&lt;li>Demo2类中有几个字段：javap的输出告诉我们，Demo2只有1个字段field1&lt;/li>
+&lt;li>field1字段的数据类型：从输出可以看到，field1是int类型&lt;/li>
+&lt;li>field1字段的访问权限：从输出可以看出，field1是private&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604152056658.png" alt="image-20210604152056658">&lt;/p>
+&lt;h3 id="335方法表">3.3.5.方法表&lt;/h3>
+&lt;p>更进一步，字节码要表达：&lt;/p>
+&lt;ul>
+&lt;li>Demo2@类中有几个方法：本例中，有一个默认的构造函数，还有一个hello方法&lt;/li>
+&lt;li>方法的原型：从输出看，hello方法的访问权限是public，返回值是void，没有输入参数&lt;/li>
+&lt;li>方法的具体实现：从输出看，hello方法被转换为了73~88行的JVM指令序列、行号表、局部变量表。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604152334770.png" alt="image-20210604152334770">&lt;/p>
+&lt;blockquote>
+&lt;p>说明：本文篇幅有限，无法展开讲解hello方法的指令执行过程，以及如何动态set/get局部变量表。有兴趣的读者可以尝试解读一下hello方法的指令执行过程。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;p>本文解读了javap的使用以及javap的输出结果，具体如下：&lt;/p>
+&lt;ul>
+&lt;li>理解字节码以及JVM价值&lt;/li>
+&lt;li>javap的学习方法&lt;/li>
+&lt;li>javap命令行常用option&lt;/li>
+&lt;li>javap命令行的options解读&lt;/li>
+&lt;li>字节码的主体结构&lt;/li>
+&lt;li>通过一个示例代码，演练了javap输出结果中各个section的含义&lt;/li>
+&lt;/ul>
+&lt;h1 id="5参考资料">5.参考资料&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;a href="https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F">https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F&lt;/a>&lt;/p>
+&lt;p>《深入理解Java虚拟机：JVM高级特性与最佳实践》&lt;/p>
+&lt;/blockquote></description></item><item><title>【编译引擎】-2-学习阅读Class文件结构(16进制版)-下</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/</link><pubDate>Thu, 05 Aug 2021 14:55:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/</guid><description>&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)-上》、《【编译引擎】学习阅读Class文件结构(16进制版)-中》两篇文章中，笔者讲解了如何以16进制的方式，解读Demo2.java对应字节码的常量池、字段表、方法表。&lt;/p>
 &lt;p>我们继续解读Demo2.class字节码的方法表的Code属性片段。&lt;/p>
 &lt;h1 id="1复杂信息的树状表达属性树">1.复杂信息的树状表达：属性树&lt;/h1>
 &lt;p>如果说前面两篇文章描述的信息相对简单，那么当我们需要用一种形式表达一个函数的实现就显得更加复杂了。&lt;/p>

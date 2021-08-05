@@ -9,7 +9,7 @@
 &lt;ul>
 &lt;li>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/Me.png" alt="Me">&lt;/p>
+&lt;p>&lt;img src="about/Me.png" alt="Me">&lt;/p>
 &lt;p>It makes use of a variety of open source projects including:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/spf13/cobra">Cobra&lt;/a>&lt;/li>

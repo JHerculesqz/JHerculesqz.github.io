@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 14:37:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Aug 2021 14:39:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,227 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</link><pubDate>Thu, 05 Aug 2021 14:37:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</guid><description>&lt;h1 id="1起于累土为什么要阅读字节码">1.起于累土：为什么要阅读字节码&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8A/</link><pubDate>Thu, 05 Aug 2021 14:39:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8A/</guid><description>&lt;p>大学时有个段子：什么是最牛逼的程序猿？&lt;/p>
+&lt;p>最牛程序猿深情地注视着屏幕上一堆16进制，露出满足而诡魅的微笑。&lt;/p>
+&lt;p>同学问他在看啥，他小声说：蒼井そら。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/1.png" alt="image-20201203084643095">&lt;/p>
+&lt;p>好，下面，我们也来学习阅读一下16进制版的Class文件。&lt;/p>
+&lt;h1 id="1源头class规范">1.源头：Class规范&lt;/h1>
+&lt;p>每一个Java版本发布时，会公布两份规范文档(以Java8为例)：&lt;/p>
+&lt;blockquote>
+&lt;p>Java语言规范：《The Java Language Specification, Java SE 8 Edition》&lt;/p>
+&lt;p>Java虚拟机规范：《The Java Virtual Machine Specification, Java SE 8 Edition》&lt;/p>
+&lt;/blockquote>
+&lt;p>Java虚拟机规范中有很大篇幅就是描述Class文件格式的规格，它也是帮助我们学习、理解Class文件最好的参考资料。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/2.png" alt="image-20201203090336783">&lt;/p>
+&lt;h1 id="2验证演练代码">2.验证：演练代码&lt;/h1>
+&lt;p>为了更好地覆盖JVM规范中描述的Class文件格式主脉络，笔者设计了如下示例代码：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/3.png" alt="image-20201203085719069">&lt;/p>
+&lt;p>这段代码体现了5种Java的语法特征：&lt;/p>
+&lt;blockquote>
+&lt;p>类：Demo2&lt;/p>
+&lt;p>成员变量：私有成员变量filed1，int类型，初始值为1&lt;/p>
+&lt;p>方法：公有方法hello，无参数无返回值&lt;/p>
+&lt;p>局部变量：局部变量i，int类型，初始值为1&lt;/p>
+&lt;p>语句：打印语句println，打印内容为hello world&lt;/p>
+&lt;/blockquote>
+&lt;p>使用javac编译上述代码，我们会得到Demo2.class文件，用16进制编辑器打开如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/4.png" alt="image-20201203101943544">&lt;/p>
+&lt;p>为了更清晰的查看，我们将上述数据复制到Excel表格中，着色&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/5.png" alt="image-20201203112942827">&lt;/p>
+&lt;h1 id="3合法性检查依据魔数版本号">3.合法性检查依据：魔数、版本号&lt;/h1>
+&lt;p>首先，通过阅读规范，我们获得如下知识：&lt;/p>
+&lt;blockquote>
+&lt;p>魔数：4个字节&lt;/p>
+&lt;p>副版本号：2个字节&lt;/p>
+&lt;p>主版本号：2个字节&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/6.png" alt="image-20201203102514844">&lt;/p>
+&lt;p>然后，在IDE中将&lt;strong>魔数&lt;/strong>标记出来：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/7.png" alt="image-20201203113140375">&lt;/p>
+&lt;p>然后，在IDE中将&lt;strong>版本号&lt;/strong>标记出来：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/8.png" alt="image-20201203113240887">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分析&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>魔数值和版本号是JVM加载Class文件时的合法性检查依据：&lt;/p>
+&lt;blockquote>
+&lt;p>如果16进制文件内容的开始不是&lt;strong>CA FE BA BE&lt;/strong>，则JVM就认为这个文件不是合法的Class文件；&lt;/p>
+&lt;p>如果16进制文件内容的版本号与JVM版本号不匹配，则JVM就拒绝加载。&lt;strong>00 00 00 34&lt;/strong>，表示Java8对应的JVM可以加载。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>技术直男的浪漫&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>这里值得提到一个趣闻：魔数值&lt;strong>CA FE BA BE&lt;/strong>，应该这样断句：&lt;strong>CAFE BABE&lt;/strong>。&lt;/p>
+&lt;p>Gosling，这位资深技术直男，就是这样温情地形容，他发明的这个编程语言——&lt;strong>咖啡宝贝&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/9.png" alt="image-20201203105231554">&lt;/p>
+&lt;h1 id="4信息仓库常量池">4.信息仓库：常量池&lt;/h1>
+&lt;h2 id="41常量池计数器">4.1.常量池计数器&lt;/h2>
+&lt;p>在笔者前一篇文章《【编译引擎】学习阅读Class文件结构的意义》中提到：&lt;/p>
+&lt;blockquote>
+&lt;p>常量池：本质是一张表格。&lt;/p>
+&lt;p>常量：是站在JVM角度看，公用的一些常量值，为了压缩Class文件的大小而存在。&lt;/p>
+&lt;/blockquote>
+&lt;p>因此，JVM规范才规定Class文件中，有2个字节的&lt;strong>常量池计数器&lt;/strong>(表示常量表格的长度)，紧接着的&lt;strong>N个字节&lt;/strong>存储&lt;strong>M个常量&lt;/strong>的具体内容&lt;/p>
+&lt;blockquote>
+&lt;p>M个常量：M=常量池计数器的值 - 1&lt;/p>
+&lt;p>N个字节：N是变长的，因为每个常量类型不同，有的常量需要4个字节存储，有的常量需要很多字节存储。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/10.png" alt="image-20201203110434464">&lt;/p>
+&lt;ul>
+&lt;li>首先，找到&lt;strong>常量池计数器&lt;/strong>=&lt;strong>00 24&lt;/strong>，转换为10进制是36，说明&lt;strong>常量池中存储了35个常量&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>一个规范中的细节：The &lt;code>constant_pool&lt;/code> table is indexed from 1 to &lt;code>constant_pool_count&lt;/code> - 1.&lt;/p>
+&lt;p>这段话的意思是，常量池计数器值-1就是常量个数&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/11.png" alt="image-20201203114851834">&lt;/p>
+&lt;h2 id="42n种常量类型">4.2.N种常量类型&lt;/h2>
+&lt;p>接下来，我们解读具体的常量，前文讲过，常量有不同的类型，那么Class文件如何表达常量类型呢？&lt;/p>
+&lt;p>规范中，采用了如下结构表示不同类型的常量：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/12.png" alt="image-20201203115414837">&lt;/p>
+&lt;p>那么，JVM支持多少种类型的常量呢？&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/13.png" alt="image-20201203115520340">&lt;/p>
+&lt;p>本文的演练代码中，涉及到了种类型的常量：&lt;/p>
+&lt;blockquote>
+&lt;p>CONSTANT_Utf8：1&lt;/p>
+&lt;p>CONSTANT_String：8&lt;/p>
+&lt;p>CONSTANT_Class：7&lt;/p>
+&lt;p>CONSTANT_Fieldref：9&lt;/p>
+&lt;p>CONSTANT_NameAndType：12&lt;/p>
+&lt;p>CONSTANT_Methodref：10&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="43constant_utf8类型的常量">4.3.CONSTANT_Utf8类型的常量&lt;/h2>
+&lt;blockquote>
+&lt;p>JVM规范：The &lt;code>CONSTANT_Utf8_info&lt;/code> structure is used to represent constant string values&lt;/p>
+&lt;/blockquote>
+&lt;p>这种类型的常量，就是表达字符串字面量。&lt;/p>
+&lt;p>它的结构如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/14.png" alt="image-20201203120726026">&lt;/p>
+&lt;p>我们以第25个常量为例，尝试理解一下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/15.png" alt="image-20201203120926294">&lt;/p>
+&lt;p>这个常量值=&lt;strong>01 00 0B 68 65 6C 6C 6F 20 77 6F 72 6C 64&lt;/strong>，如下图所示的含义&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/16.png" alt="image-20201203121756603">&lt;/p>
+&lt;p>第25个常量，表示的就是演练代码中的打印的字符串内容：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/17.png" alt="image-20201203122016513">&lt;/p>
+&lt;h2 id="44constant_string类型的常量">4.4.CONSTANT_String类型的常量&lt;/h2>
+&lt;blockquote>
+&lt;p>JVM规范：The &lt;code>CONSTANT_String_info&lt;/code> structure is used to represent constant objects of the type &lt;code>String&lt;/code>:&lt;/p>
+&lt;/blockquote>
+&lt;p>这种类型的常量，是字符串对象类型的，它的值指向4.3中描述的字符串字面量。&lt;/p>
+&lt;p>它的结构如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/18.png" alt="image-20201203122939616">&lt;/p>
+&lt;p>我们以第5个常量为例，尝试理解一下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/19.png" alt="image-20201203122644594">&lt;/p>
+&lt;p>这个常量的值= &lt;strong>08 00 19&lt;/strong>，如下图所示的含义：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/20.png" alt="image-20201203123306833">&lt;/p>
+&lt;p>结合第5个常量和第25个常量，再看演练代码，我们窥见&lt;strong>JVM处理字符串的原理&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/21.png" alt="image-20201203123552479">&lt;/p>
+&lt;h2 id="45constant_class类型的常量">4.5.CONSTANT_Class类型的常量&lt;/h2>
+&lt;blockquote>
+&lt;p>JVM规范：The &lt;code>CONSTANT_Class_info&lt;/code> structure is used to represent a class or an interface&lt;/p>
+&lt;/blockquote>
+&lt;p>这种类型的常量，表示类或者接口&lt;/p>
+&lt;p>它的结构如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/22.png" alt="image-20201203124237102">&lt;/p>
+&lt;p>我们以第6个常量为例，尝试理解一下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/23.png" alt="image-20201203124334512">&lt;/p>
+&lt;p>这个常量的值= &lt;strong>07 00 1C&lt;/strong>，结合第28个常量，如下图所示的含义：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/24.png" alt="image-20201203124818815">&lt;/p>
+&lt;p>再看演练代码，CONSTANT_Class类型的常量表达了演练代码中定义的Demo2类：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/25.png" alt="image-20201203124958357">&lt;/p>
+&lt;h2 id="46constant_fieldref类型的常量">4.6.CONSTANT_Fieldref类型的常量&lt;/h2>
+&lt;blockquote>
+&lt;p>JVM规范：Fields, methods, and interface methods are represented by similar structures:&lt;/p>
+&lt;/blockquote>
+&lt;p>这种类型的常量，表示字段(例如：一个类中的成员变量)。JVM规范还告诉我们，实例方法、接口方法都是同样的Class格式。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/26.png" alt="image-20201203125455813">&lt;/p>
+&lt;p>我们以第2个常量为例，尝试理解一下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/27.png" alt="image-20201203125918470">&lt;/p>
+&lt;p>这个常量的值= &lt;strong>09 00 06 00 16&lt;/strong>，结合第6个常量和第22个常量，如下图所示的含义：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/28.png" alt="image-20201203130857438">&lt;/p>
+&lt;p>但是第22个常量=&lt;strong>0C 00 08 00 09&lt;/strong>表示了什么呢？我们看下一章节的解读&lt;/p>
+&lt;h2 id="47constant_nameandtype类型的常量">4.7.CONSTANT_NameAndType类型的常量&lt;/h2>
+&lt;blockquote>
+&lt;p>JVM规范：The &lt;code>CONSTANT_NameAndType_info&lt;/code> structure is used to represent a field or method, without indicating which class or interface type it belongs to&lt;/p>
+&lt;/blockquote>
+&lt;p>这种类型的常量，表示一个字段的类型信息&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/29.png" alt="image-20201203131307059">&lt;/p>
+&lt;p>我们以第22个常量为例，尝试理解一下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/30.png" alt="image-20201203131134360">&lt;/p>
+&lt;p>这个常量的值= &lt;strong>0C 00 08 00 09&lt;/strong>，结合第8个常量和第9个常量，如下图所示的含义：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/31.png" alt="image-20201203131856257">&lt;/p>
+&lt;p>至此，我们就看到了演练代码中在JVM中如何表达&lt;code>int field1&lt;/code>信息了：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/32.png" alt="image-20201203132039284">&lt;/p>
+&lt;h2 id="48constant_methodref类型的常量">4.8.CONSTANT_Methodref类型的常量&lt;/h2>
+&lt;blockquote>
+&lt;p>JVM规范：Fields, methods, and interface methods are represented by similar structures:&lt;/p>
+&lt;/blockquote>
+&lt;p>这种类型的常量，表示方法。JVM规范还告诉我们，它的结构和字段类型常量都是同样的Class格式。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/33.png" alt="image-20201203132452923">&lt;/p>
+&lt;p>我们以第5个常量为例，尝试理解一下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/34.png" alt="image-20201203132633860">&lt;/p>
+&lt;p>这个常量的值= &lt;strong>0A 00 1A 00 1B&lt;/strong>，结合第26、27个常量，如下图所示的含义：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/35.png" alt="image-20201203134131024">&lt;/p>
+&lt;h1 id="5总结常量池构建的静态全局观">5.总结：常量池构建的静态全局观&lt;/h1>
+&lt;p>根据演练代码产生的Class文件，JVM构建了35个常量：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/36.png" alt="image-20201203134423990">&lt;/p>
+&lt;p>我们以图形化的方式进一步看看，Class文件的常量池到底为JVM构建了怎样的&lt;strong>信息树&lt;/strong>？&lt;/p>
+&lt;h2 id="51源代码中有哪些方法引用">5.1.源代码中有哪些方法引用&lt;/h2>
+&lt;p>常量池构建了方法引用的信息树，我们可以看到&lt;strong>两颗方法引用树&lt;/strong>，如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/37.png" alt="image-20201203143257328">&lt;/p>
+&lt;p>以其中一棵树为例，遍历这棵树，我们可以得到如图的信息：&lt;/p>
+&lt;blockquote>
+&lt;p>源代码中有一个方法，此方法属于Object类，方法名为&lt;init>，方法无输入参数，无返回&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/38.png" alt="image-20201203143352283">&lt;/p>
+&lt;h2 id="52源代码中有哪些字段引用">5.2.源代码中有哪些字段引用&lt;/h2>
+&lt;p>常量池构建了字段引用的信息树，我们可以看到&lt;strong>两颗字段引用树&lt;/strong>，如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/39.png" alt="image-20201203143527781">&lt;/p>
+&lt;p>以其中一棵树为例，遍历这棵树，我们可以得到如图的信息：&lt;/p>
+&lt;blockquote>
+&lt;p>源代码中有一个字段，此字段属于Demo2类，字段名为field1，字段数据类型为int&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/40.png" alt="image-20201203143719972">&lt;/p>
+&lt;h2 id="53源代码中有哪些字符串对象">5.3.源代码中有哪些字符串对象&lt;/h2>
+&lt;p>常量池构建了字符串类型对象的信息树，我们可以看到&lt;strong>一颗字符串对象树&lt;/strong>，如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/41.png" alt="image-20201203143839084">&lt;/p>
+&lt;p>以这棵树为例，遍历这棵树，我们可以得到如图的信息：&lt;/p>
+&lt;blockquote>
+&lt;p>源代码中有一个字符串对象，此字符串对象的值是hello world&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/42.png" alt="image-20201203143944970">&lt;/p>
+&lt;h2 id="54源代码中其它的字符串字面量">5.4.源代码中其它的字符串字面量&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/43.png" alt="image-20201203144014111">&lt;/p>
+&lt;h2 id="55静态的全局观">5.5.静态的全局观&lt;/h2>
+&lt;p>至此，我们已经看到了常量池为JVM诠释了Java源代码中的信息树。&lt;/p>
+&lt;p>&lt;strong>常量池中的这些信息树，为JVM构建出了一个静态的全局观&lt;/strong>。&lt;/p>
+&lt;p>通过这些信息树，我们已经能&lt;strong>反演出Java源代码中的静态结构&lt;/strong>：&lt;/p>
+&lt;blockquote>
+&lt;p>有几个类？&lt;/p>
+&lt;p>类中有几个成员变量？&lt;/p>
+&lt;p>类中有几个方法？&lt;/p>
+&lt;p>每个成员变量的名称、数据类型&lt;/p>
+&lt;p>每个方法的名称、输入参数列表、返回值类型&lt;/p>
+&lt;/blockquote>
+&lt;p>但常量池中还有一些信息孤点，我们无法反演出一些&lt;strong>动态结构&lt;/strong>：&lt;/p>
+&lt;blockquote>
+&lt;p>成员变量的状态变化过程&lt;/p>
+&lt;p>方法体内的运行过程&lt;/p>
+&lt;p>方法内局部变量的变化过程&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="6下一步">6.下一步&lt;/h1>
+&lt;p>笔者下篇会继续阅读本演练代码对应的Class文件剩余部分，包括&lt;/p>
+&lt;blockquote>
+&lt;p>访问标识&lt;/p>
+&lt;p>类索引&lt;/p>
+&lt;p>字段表&lt;/p>
+&lt;p>方法表&lt;/p>
+&lt;p>属性表&lt;/p>
+&lt;/blockquote>
+&lt;p>进一步理解Class字节码如何为JVM&lt;strong>构建动态全局观&lt;/strong>。&lt;/p>
+&lt;p>**高能预警：**如果您能耐心地看到这句话，恭喜您，距离&amp;rdquo;&lt;strong>看着16进制享受而诡魅的微笑&lt;/strong>&amp;ldquo;又近了一步，加油！&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/44.png" alt="image-20201203144947702">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</link><pubDate>Thu, 05 Aug 2021 14:37:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</guid><description>&lt;h1 id="1起于累土为什么要阅读字节码">1.起于累土：为什么要阅读字节码&lt;/h1>
 &lt;p>笔者最近的一项工作是设计一套课程，用于辅导新员工如何做好性能优化。&lt;/p>
 &lt;p>这项工作很快遇到了问题：&lt;/p>
 &lt;blockquote>

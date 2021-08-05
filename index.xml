@@ -1441,19 +1441,19 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;p>这道题考察JDK自带命令行工具的理解，这些工具用于性能调优、疑难问题定位。&lt;/p>
 &lt;p>在生产环境定位时，要求定位/调优工具自身具备极高的性能，否则会对本来就有问题的生产环境产生干扰。&lt;/p>
 &lt;p>JDK自带的命令行工具以其的高性能、实用性，成为实战中必须掌握的工具，是Java程序猿的调优武器库。&lt;/p>
-&lt;p>&lt;img src="images/1.png" alt="image-20210521073310456">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/1.png" alt="image-20210521073310456">&lt;/p>
 &lt;h1 id="2总览">2.总览&lt;/h1>
 &lt;h2 id="21主流工具概览">2.1.主流工具概览&lt;/h2>
 &lt;p>目前，主流的Java性能监控与调优工具如下图所示：&lt;/p>
-&lt;p>&lt;img src="images/2.png" alt="image-20210521094038209">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/2.png" alt="image-20210521094038209">&lt;/p>
 &lt;p>这些工具主要分为两个流派：&amp;ldquo;&lt;code>命令行流派&lt;/code>&amp;quot;与&amp;quot;&lt;code>可视化流派&lt;/code>&amp;rdquo;&lt;/p>
 &lt;ul>
 &lt;li>**命令行流派：**强调实用性。体积小、资源消耗小，适用于生产环境的问题定位与调优。&lt;/li>
 &lt;li>**可视化流派：**强调颜值即正义。可视化图表、一目了然，适用于开发环境上复现、定位问题。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/3.png" alt="image-20210521100601641">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/3.png" alt="image-20210521100601641">&lt;/p>
 &lt;p>这两种流派各有适用的场景，辩证统一，所以还是那句话：&amp;ldquo;成年人不做选择，两样我都要&amp;rdquo;。&lt;/p>
-&lt;p>&lt;img src="images/4.png" alt="image-20210521104216938">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/4.png" alt="image-20210521104216938">&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1482,12 +1482,12 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;li>&lt;strong>STEP4.内存监控与分析&lt;/strong>：如果STEP3发现了可能的内存问题，就深入分析内存。&lt;/li>
 &lt;li>**STEP5.线程监控与分析：**如果STEP3发现了可能的线程问题，就深入分析线程。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/5.png" alt="image-20210521111701312">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/5.png" alt="image-20210521111701312">&lt;/p>
 &lt;h2 id="23进阶的方法">2.3.进阶的方法&lt;/h2>
 &lt;ul>
 &lt;li>**命令行手册：**我们可以通过官方的命令行手册，深入学习它们。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/6.png" alt="image-20210521112755277">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/6.png" alt="image-20210521112755277">&lt;/p>
 &lt;ul>
 &lt;li>**工具源码：**通过这些命令行工具的源码，可以更深入地理解JVM状态监控的原理和API。&lt;/li>
 &lt;/ul>
@@ -1499,7 +1499,7 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">https://hg.openjdk.java.net/jdk/jdk11/file/1ddf9a99e4ad/src/jdk.jcmd/share/classes/sun/tools
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="images/7.png" alt="image-20210521112939223">&lt;/p>
+&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/7.png" alt="image-20210521112939223">&lt;/p>
 &lt;h1 id="3进程监控-jps">3.进程监控-jps&lt;/h1>
 &lt;h2 id="31解决什么问题">3.1.解决什么问题&lt;/h2>
 &lt;p>jps用来显示指定系统内所有正在运行的HotSpot虚拟机进程信息。&lt;/p>
@@ -1527,11 +1527,11 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;p>**例子：**&lt;code>jps -lmv&lt;/code>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/8.png" alt="image-20210521113905035">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/8.png" alt="image-20210521113905035">&lt;/p>
 &lt;p>我们可以发现，无论怎样的options，一定会显示&lt;code>JVM identifiers&lt;/code>，不同的options只是在&lt;code>JVM identifiers&lt;/code>的基础上显示更多的额外信息。&lt;/p>
 &lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
 &lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jps.html#CHDCGECD&lt;/code>&lt;/p>
-&lt;p>&lt;img src="images/9.png" alt="image-20210521114215905">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/9.png" alt="image-20210521114215905">&lt;/p>
 &lt;h1 id="4配置查询-jinfo">4.配置查询-jinfo&lt;/h1>
 &lt;h2 id="41解决什么问题">4.1.解决什么问题&lt;/h2>
 &lt;p>jinfo用来查看JVM虚拟机参数，同时可以修改部分JVM虚拟机参数。&lt;/p>
@@ -1551,19 +1551,19 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;ul>
 &lt;li>**例子：**&lt;code>jinfo &amp;lt;pid&amp;gt;&lt;/code>——查看此JVM进程所有的配置&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/10.png" alt="image-20210521115021019">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/10.png" alt="image-20210521115021019">&lt;/p>
 &lt;ul>
 &lt;li>**例子：**&lt;code>jinfo -sysprops &amp;lt;pid&amp;gt;&lt;/code>——等价于查看&lt;code>System.getProperties()&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/11.png" alt="image-20210521115146579">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/11.png" alt="image-20210521115146579">&lt;/p>
 &lt;ul>
 &lt;li>**例子：**&lt;code>jinfo -flags &amp;lt;pid&amp;gt;&lt;/code>——查看所有参数&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/12.png" alt="image-20210521115222055">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/12.png" alt="image-20210521115222055">&lt;/p>
 &lt;ul>
 &lt;li>**例子：**&lt;code>jinfo -flags &amp;lt;参数名&amp;gt; &amp;lt;pid&amp;gt;&lt;/code>——查看某个参数的值&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/13.png" alt="image-20210521115244080">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/13.png" alt="image-20210521115244080">&lt;/p>
 &lt;p>我们可以发现：&lt;/p>
 &lt;ul>
 &lt;li>JVM进程的配置分为两类：&lt;code>系统环境变量&lt;/code>和&lt;code>JVM参数&lt;/code>，jinfo的参数用来输出上述两类配置。&lt;/li>
@@ -1571,7 +1571,7 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;/ul>
 &lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
 &lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jinfo.html#BCGEBFDD&lt;/code>&lt;/p>
-&lt;p>&lt;img src="images/14.png" alt="image-20210521115706311">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/14.png" alt="image-20210521115706311">&lt;/p>
 &lt;h1 id="5jvm状态监控与初步分析-jstat">5.JVM状态监控与初步分析-jstat&lt;/h1>
 &lt;h2 id="51解决什么问题">5.1.解决什么问题&lt;/h2>
 &lt;p>jstat可以输出JVM的各类状态(类加载、内存、GC、JIT)。&lt;/p>
@@ -1591,15 +1591,15 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;/div>&lt;ul>
 &lt;li>**例子：**jstat -class -t -h3 &lt;pid> 1000 5——采集类加载信息(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/15.png" alt="image-20210521132054749">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/15.png" alt="image-20210521132054749">&lt;/p>
 &lt;ul>
 &lt;li>**例子：**jstat -compiler -t -h3 &lt;pid> 1000 5——采集JIT信息(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/16.png" alt="image-20210521132151306">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/16.png" alt="image-20210521132151306">&lt;/p>
 &lt;ul>
 &lt;li>**例子：**jstat -printcompilation -t -h3 &lt;pid> 1000 5——采集已经被JIT编译过的方法(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/17.png" alt="image-20210521132611139">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/17.png" alt="image-20210521132611139">&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>**例子：**jstat -gc -t -h3 &lt;pid> 1000 5——采集GC的情况(每1000ms采样一次，采集5次，每3行打印1次表头)。&lt;/p>
@@ -1614,7 +1614,7 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;p>**例子：**jstat -gccause -t -h3 &lt;pid> 1000 5&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/18.png" alt="image-20210521133656978">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/18.png" alt="image-20210521133656978">&lt;/p>
 &lt;p>我们可以发现：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>采样相关的参数：&lt;/strong>-t(Timestamp列，单位s) 、-h(周期性的增加表头)、interval(采样周期，单位ms)、count(采集次数)&lt;/li>
@@ -1693,10 +1693,10 @@ FGTC：从app启动到采样时，发生的FullGC的消耗时间(秒)
 GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="images/19.png" alt="image-20210521133405766">&lt;/p>
+&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/19.png" alt="image-20210521133405766">&lt;/p>
 &lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
 &lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jstat.html#BEHHGFAE&lt;/code>&lt;/p>
-&lt;p>&lt;img src="images/20.png" alt="image-20210521131317493">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/20.png" alt="image-20210521131317493">&lt;/p>
 &lt;h1 id="6内存监控与分析-jmapjhat">6.内存监控与分析-jmap/jhat&lt;/h1>
 &lt;h2 id="61解决什么问题">6.1.解决什么问题&lt;/h2>
 &lt;ul>
@@ -1730,7 +1730,7 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/ul>
 &lt;p>当然，如何分析dump文件是一个更大的话题，后续再展开。仅针对jmap命令行了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
 &lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jmap.html#CEGCECJB&lt;/code>&lt;/p>
-&lt;p>&lt;img src="images/21.png" alt="image-20210521135354519">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/21.png" alt="image-20210521135354519">&lt;/p>
 &lt;h1 id="7线程监控与分析-jstack">7.线程监控与分析-jstack&lt;/h1>
 &lt;h2 id="71解决什么问题">7.1.解决什么问题&lt;/h2>
 &lt;p>jstack可以生成虚拟机指定进程当前时刻的线程快照，用于定位线程长时间停顿的原因。&lt;/p>
@@ -1749,10 +1749,10 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/div>&lt;ul>
 &lt;li>**例子：**jstack &lt;pid>——如果程序中有线程死锁，会在dump文件中体现出来。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/22.png" alt="image-20210521140136121">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/22.png" alt="image-20210521140136121">&lt;/p>
 &lt;p>了解到这个程度，实战中如有需要，可以再进一步查看命令行手册：&lt;/p>
 &lt;p>&lt;code>https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jstack.html#BABGJDIF&lt;/code>&lt;/p>
-&lt;p>&lt;img src="images/23.png" alt="image-20210521135529140">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82JDK%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/23.png" alt="image-20210521135529140">&lt;/p>
 &lt;h1 id="8总结">8.总结&lt;/h1>
 &lt;p>本文主要内容：&lt;/p>
 &lt;ul>

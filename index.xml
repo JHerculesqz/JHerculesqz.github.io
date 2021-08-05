@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Mar 2019 16:01:23 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://jherculesqz.github.io/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://jherculesqz.github.io/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
-&lt;li>一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，发现还是希望有一个自己独立的空间。&lt;/li>
-&lt;li>随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己坚持写下去。&lt;/li>
-&lt;li>按照&lt;a href="https://archiveprogram.github.com">Archive Program&lt;/a>计划的愿景：我的博客会在&amp;rdquo; GitHub北极代码库&amp;quot;中保存千年。想想1000年以后，我的后代们能读到我这个中二祖先的文字，还是一件挺浪漫的事情。&lt;/li>
-&lt;li>感谢GitHub Pages、Hugo、Jane提供的技术支持。&lt;/li>
+&lt;li>一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，发现还是&lt;strong>希望有一个自己独立的空间&lt;/strong>。&lt;/li>
+&lt;li>随着年龄增长，逐渐欲说还休，还是&lt;strong>文字更有韵味&lt;/strong>，希望自己坚持写下去。&lt;/li>
+&lt;li>按照&lt;a href="https://archiveprogram.github.com">Archive Program&lt;/a>计划的愿景：我的博客会在&amp;rdquo; GitHub北极代码库&amp;quot;中保存千年。想想1000年以后，&lt;strong>我的后代们能读到我这个中二祖先的文字&lt;/strong>，还是一件挺浪漫的事情。&lt;/li>
+&lt;li>感谢&lt;strong>GitHub Pages、Hugo、Jane&lt;/strong>提供的技术支持。&lt;/li>
 &lt;/ul>
 &lt;h1 id="关于我">关于我&lt;/h1>
+&lt;ul>
+&lt;li>&lt;/li>
+&lt;/ul>
 &lt;p>It makes use of a variety of open source projects including:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/spf13/cobra">Cobra&lt;/a>&lt;/li>

@@ -1835,16 +1835,16 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;h1 id="0x03为什么即时编译器不止一种">0x03.为什么即时编译器不止一种?&lt;/h1>
 &lt;p>前文，我们提到了编译优化，优化手段有的很常规，有的却很激进。本文摘录了一些激进的优化：&lt;/p>
 &lt;blockquote>
-&lt;p>Dead Code Elimination：无用代码消除
-Loop Unrolling：循环展开
-Loop Expression Hoisting：循环表达式外提
-Common Subexpression Elimination：消除公共子表达式
-Constant Propagation：常量传播
-Basic Block Reordering：基本块重排序
-Range Check Elimination：范围检查消除
-Null Check Elimination：空值检查消除
-Guarding Inlining：守护内联
-Branch Frequency Prediction：分支频率预测&lt;/p>
+&lt;p>Dead Code Elimination：无用代码消除&lt;/p>
+&lt;p>Loop Unrolling：循环展开&lt;/p>
+&lt;p>Loop Expression Hoisting：循环表达式外提&lt;/p>
+&lt;p>Common Subexpression Elimination：消除公共子表达式&lt;/p>
+&lt;p>Constant Propagation：常量传播&lt;/p>
+&lt;p>Basic Block Reordering：基本块重排序&lt;/p>
+&lt;p>Range Check Elimination：范围检查消除&lt;/p>
+&lt;p>Null Check Elimination：空值检查消除&lt;/p>
+&lt;p>Guarding Inlining：守护内联&lt;/p>
+&lt;p>Branch Frequency Prediction：分支频率预测&lt;/p>
 &lt;/blockquote>
 &lt;p>如下图所示，Hotspot虚拟机的即时编译器就包含了C1和C2，同时在Java10加入了C2的替代者Graal。&lt;/p>
 &lt;p>C1的职责只是常规的编译优化，C2则承担了更多激进优化的任务。&lt;/p>

@@ -1424,4 +1424,211 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;p>&lt;a href="https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm">https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://www.zhihu.com/question/20003582">https://www.zhihu.com/question/20003582&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://www.imooc.com/article/296373">https://www.imooc.com/article/296373&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>【宏观】从Java概念图理解Java体系</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</link><pubDate>Thu, 05 Aug 2021 08:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</guid><description>&lt;p>Java历经多年发展，知识体系庞大且复杂，包含大量的概念、技术点、原理等。&lt;/p>
+&lt;p>即使从事多年Java开发，依然不敢很肯定完全吃透了Java。&lt;/p>
+&lt;p>仿佛在知识的海洋中游泳，游了很久也看不到边际。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603115307805.png" alt="image-20210603115307805">&lt;/p>
+&lt;p>怎样避免这种困境，提高Java的学习效率呢？&lt;/p>
+&lt;p>笔者认为最好的方法是掌握Java体系的全貌，进而在实战中有计划、有针对性的迭代式学习。&lt;/p>
+&lt;h1 id="1从java概念图理解java体系">1.从Java概念图理解Java体系&lt;/h1>
+&lt;p>在《Java Platform Standard Edition 8 Documentation》中，列举了一张图——&amp;ldquo;Java Conceptual Diagram&amp;rdquo;——即Java概念图。&lt;/p>
+&lt;p>虽然这张概念图不能代表Java体系的全部，但是这张概念图为我们提供了两个重要信息：&lt;/p>
+&lt;ul>
+&lt;li>Java SE的产品构成。&lt;/li>
+&lt;li>各个产品的关系。&lt;/li>
+&lt;li>产品包含了哪些组件。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603120446121.png" alt="image-20210603120446121">&lt;/p>
+&lt;h2 id="11javase的产品构成">1.1.JavaSE的产品构成&lt;/h2>
+&lt;p>在文档的开篇：&lt;/p>
+&lt;blockquote>
+&lt;p>Oracle has two products that implement Java Platform Standard Edition (Java SE) 8: Java SE Development Kit (JDK) 8 and Java SE Runtime Environment (JRE) 8.&lt;/p>
+&lt;/blockquote>
+&lt;p>Oracle告诉我们：&lt;/p>
+&lt;blockquote>
+&lt;p>Java SE 8 = 产品1(JDK 8) + 产品2(JRE 8)&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Java SE 8，全称Java Platform Standard Edition (Java SE) 8&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>产品1：JDK 8，全称 Java SE Development Kit (JDK) 8&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>产品2：JRE8，全称 Java SE Runtime Environment (JRE) 8&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="12jdk8与jre8的关系">1.2.JDK8与JRE8的关系&lt;/h2>
+&lt;p>在文档的Section2：&lt;/p>
+&lt;blockquote>
+&lt;p>JDK 8 is a superset of JRE 8, and contains everything that is in JRE 8, plus tools such as the compilers and debuggers necessary for developing applets and applications. JRE 8 provides the libraries, the Java Virtual Machine (JVM), and other components to run applets and applications written in the Java programming language. Note that the JRE includes components not required by the Java SE specification, including both standard and non-standard Java components.&lt;/p>
+&lt;/blockquote>
+&lt;p>我们可以知道：&lt;/p>
+&lt;blockquote>
+&lt;p>JDK 8 是 JRE 8 的超集&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>JDK8：除了包含 JRE 8，JDK8额外还有开发小程序和应用程序所需的编译器和调试器等工具。&lt;/li>
+&lt;li>JRE 8：提供了库、Java 虚拟机 (JVM) 和其他组件来运行用 Java 编程语言编写的小程序和应用程序。JRE 包括了Java SE 规范不需要的组件，包括标准和非标准 Java 组件。&lt;/li>
+&lt;/ul>
+&lt;h1 id="2java-language">2.Java Language&lt;/h1>
+&lt;p>在Java的概念架构中，第一个组件是&amp;quot;Java Language&amp;rdquo;，这个组件包含了Java的语言语法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603144339225.png" alt="image-20210603144339225">&lt;/p>
+&lt;p>那么，我们应该如何学习这个组件呢？&lt;/p>
+&lt;h2 id="21了解java各版本的新特性列表">2.1.了解Java各版本的新特性列表&lt;/h2>
+&lt;p>这是一件非常重要的事，通过新特性，可以把握Java语言以及编程语言的发展趋势。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603145513209.png" alt="image-20210603145513209">&lt;/p>
+&lt;h2 id="22浅尝辄止java-language-specification">2.2.浅尝辄止《Java Language Specification》&lt;/h2>
+&lt;p>《Java Language Specification》——Java语言规范。这份文档像一本工具书，刚开始更适合&amp;quot;浅尝辄止&amp;rdquo;。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603150036175.png" alt="image-20210603150036175">&lt;/p>
+&lt;p>从这份规范的作者，我们就可以知道《Java Language Specification》的分量。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603150736346.png" alt="image-20210603150736346">&lt;/p>
+&lt;p>《Java Language Specification》讲述的内容，可以概括为如下8点：&lt;/p>
+&lt;h3 id="1语言的设计思想">(1)语言的设计思想&lt;/h3>
+&lt;p>规范的开篇讲解了Java编程语言的语言风格、词法结构、句法、语法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603151646129.png" alt="image-20210603151646129">&lt;/p>
+&lt;p>每种编程语言都要遵循一种套路，编译原理就是这种套路的高度抽象，有兴趣更加深入地理解《Java Language Specification》上述章节中的一些概念，可以阅读&lt;code>龙书&lt;/code>和&lt;code>虎书&lt;/code>这两部经典著作：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603154258626.png" alt="image-20210603154258626">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603154332760.png" alt="image-20210603154332760">&lt;/p>
+&lt;h3 id="2变量">(2)变量&lt;/h3>
+&lt;p>Java语言规范中，将数据类型、变量、类型擦除等放在一起讲的，这是站在&amp;quot;编译原理&amp;quot;的视角来阐述的。&lt;/p>
+&lt;p>作为编程语言的学习者和使用者，可以先了解Java这种语言如何声明与初始化。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603152148650.png" alt="image-20210603152148650">&lt;/p>
+&lt;h3 id="3数据类型">(3)数据类型&lt;/h3>
+&lt;p>这部分讲述了Java提供的基础数据类型、包装类型，重点阐述了数据类型转换、拆箱装箱等。&lt;/p>
+&lt;p>这部分是实战中最常用的语法知识。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153325400.png" alt="image-20210603153325400">&lt;/p>
+&lt;h3 id="4表达式">(4)表达式&lt;/h3>
+&lt;p>这部分讲述了Java的表达式、运算优先级等语法知识，这也是一种编程语言的基础语法设施。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153403473.png" alt="image-20210603153403473">&lt;/p>
+&lt;h3 id="5控制语句">(5)控制语句&lt;/h3>
+&lt;p>在14章中，讲述了块、语句，控制语言也是编程语言语法的重要基础设施之一。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153426618.png" alt="image-20210603153426618">&lt;/p>
+&lt;h3 id="6方法面向对象">(6)方法、面向对象&lt;/h3>
+&lt;p>在Java语言规范的第8/9章中，阐述了类、接口相关的语法。&lt;/p>
+&lt;p>这些语法知识属于面向对象的编程语言的重中之重。&lt;/p>
+&lt;p>第13章，还阐述了类、接口的语法演进。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153521546.png" alt="image-20210603153521546">&lt;/p>
+&lt;h3 id="7异常处理">(7)异常处理&lt;/h3>
+&lt;p>异常有哪些种类？如何处理异常？异常体系也是一种编程语言的基础设施。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153533675.png" alt="image-20210603153533675">&lt;/p>
+&lt;h3 id="8代码组织方式package">(8)代码组织方式(package)&lt;/h3>
+&lt;p>在Java 8中，包是相对比较好理解和掌握的语言语法，也是编程语言的基础设施。&lt;/p>
+&lt;blockquote>
+&lt;p>在模块化的激烈斗争中，Java 11支持了模块化特性，模块化特性在Java 11中是重要的学习内容。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153610292.png" alt="image-20210603153610292">&lt;/p>
+&lt;h2 id="23反复探索java-language-specification">2.3.反复探索《Java Language Specification》&lt;/h2>
+&lt;p>《Java语言规范》作为一门编程语言的规范，词句必然是简洁精炼、高屋建瓴、高度抽象的。&lt;/p>
+&lt;p>比如在讲解类型推断的部分，《Java语言规范》采用了接近数学公式的抽象逻辑表达，严谨、逻辑性极强。&lt;/p>
+&lt;p>反复阅读这种思维模式，非常有利于提升我们的抽象能力和逻辑能力。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603163351690.png" alt="image-20210603163351690">&lt;/p>
+&lt;p>我们可以把《Java编程规范》当做一本工具书。&lt;/p>
+&lt;p>当实战中踩到某个语法陷阱时，回过头再来翻阅《Java语言规范》是一种不错的学习方法。&lt;/p>
+&lt;p>每当带着实战中的教训和经验，重读规范中的语句，就会理解其中的隐喻和背后的原因。&lt;/p>
+&lt;p>这有点像佛教徒学习《金刚经》的修行过程，刚开始看山是山，而后经历看山不是山、看山又是山的过程。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603163049574.png" alt="image-20210603163049574">&lt;/p>
+&lt;h1 id="3libraries">3.Libraries&lt;/h1>
+&lt;p>Java概念架构中第二大组件就是语言本身自带的类库，《Java语言规范》将这些类库分为了3大类：&lt;/p>
+&lt;ul>
+&lt;li>Lang and Util Packages&lt;/li>
+&lt;li>Other Base Libraries&lt;/li>
+&lt;li>Integration Libraries&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明1：User Interface Toolkits属于使用Java进行客户端开发的定向场景，所以本文不展开描述&lt;/p>
+&lt;p>说明2：Deployment属于没落和抛弃的特性，本文不展开描述&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603163604627.png" alt="image-20210603163604627">&lt;/p>
+&lt;p>按照这样的划分方式，还是很难直奔主题地抓住Java提供的类库重点，我们可以进行另一种分类：&lt;/p>
+&lt;ul>
+&lt;li>核心类库：基于Java Language的语法特性，实现的类库。&lt;/li>
+&lt;li>扩展类库：基于核心类库实现的类库，这种类库用来解决实战中的某种应用场景。&lt;/li>
+&lt;/ul>
+&lt;h2 id="31核心类库">3.1.核心类库&lt;/h2>
+&lt;p>核心类库主要包括：集合、多线程、反射&lt;/p>
+&lt;p>集合、多线程、反射，也促进了Java体系中，产生了各种有趣的类库、模块、中间件。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603170428978.png" alt="image-20210603170428978">&lt;/p>
+&lt;p>其中，&lt;code>Collections&lt;/code>官方文档的逻辑脉络，比较好地可以指导我们高效学习Java类库。(以List为例)&lt;/p>
+&lt;ul>
+&lt;li>首先，官方文档讲述了集合体系的宏观结构，这个是掌握好集合的第一步。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603171247671.png" alt="image-20210603171247671">&lt;/p>
+&lt;ul>
+&lt;li>然后，文档中讲解了List操作的几大类场景，以这些场景作为线索，我们可以去查阅List中对应的API。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603172058619.png" alt="image-20210603172058619">&lt;/p>
+&lt;ul>
+&lt;li>最后，文档描述了一下List的API的算法实现。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>理解API的算法实现也是一件非常重要的事情：只有理解了API的实现采用了哪种经典算法，才能更好地选择合适的API解决合适的实战问题。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603172416586.png" alt="image-20210603172416586">&lt;/p>
+&lt;h2 id="32扩展类库">3.2.扩展类库&lt;/h2>
+&lt;p>扩展类库主要包括：IO编程、序列化、正则表达式、数据库、网络编程。&lt;/p>
+&lt;p>这些类库的API很多，短时间的集中学习也不太可能熟练掌握。&lt;/p>
+&lt;p>笔者的经验是先了解这些类库的原理、能做哪些事情，然后在实战中使用这些API。&lt;/p>
+&lt;p>NIO就是一个很好的例子，我们可以理解一些原理性的知识：&lt;/p>
+&lt;ul>
+&lt;li>BIO、NIO、AIO是什么&lt;/li>
+&lt;li>NIO中的Buffer、Channel、Selector是什么&lt;/li>
+&lt;li>零拷贝&lt;/li>
+&lt;/ul>
+&lt;p>等到实战中需要用到NIO的时候，再查阅NIO的类库API。&lt;/p>
+&lt;h1 id="4java-virtual-machine">4.Java Virtual Machine&lt;/h1>
+&lt;p>Java虚拟机是整个Java体系的基石，也是Java概念架构中最难突破的第三大组件。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603173309154.png" alt="image-20210603173309154">&lt;/p>
+&lt;p>JVM本身就是一个庞大的技术体系：&lt;/p>
+&lt;ul>
+&lt;li>字节码&lt;/li>
+&lt;li>类加载子系统&lt;/li>
+&lt;li>运行时数据区&lt;/li>
+&lt;li>垃圾回收算法和垃圾回收器&lt;/li>
+&lt;li>JIT&lt;/li>
+&lt;/ul>
+&lt;p>所以，JVM是一个长期、反复的学习过程，随着对JVM的理解加深，我们再次回顾&lt;code>Java Language&lt;/code>、&lt;code>Libraries&lt;/code>，会看到语法特性、类库的在虚拟机层面的底层实现，甚至到操作系统的底层实现。&lt;/p>
+&lt;h1 id="5tools--tool-apis">5.Tools &amp;amp; Tool APIs&lt;/h1>
+&lt;p>Java概念架构中第四大组件就是工具以及工具API。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603174538915.png" alt="image-20210603174538915">&lt;/p>
+&lt;p>从工具形态看，Java的工具包括：&lt;/p>
+&lt;ul>
+&lt;li>命令行工具&lt;/li>
+&lt;li>GUI工具&lt;/li>
+&lt;/ul>
+&lt;p>从应用场景看，Java的工具包括：&lt;/p>
+&lt;ul>
+&lt;li>编译&lt;/li>
+&lt;li>监控&lt;/li>
+&lt;li>辅助(例如：javadoc)&lt;/li>
+&lt;/ul>
+&lt;p>无论怎样分类，怎样才算掌握了这种工具呢？&lt;/p>
+&lt;p>笔者曾经陷入过2种误区：&lt;/p>
+&lt;ul>
+&lt;li>误区1：刚开始，觉得工具本身不是很关键的技术点，等到用的时候再查Java的工具手册就好了。结果等到真的查文档的时候，才发现怎么有这么多参数、这么多概念要理解？真是&amp;quot;书到用时方恨少&amp;rdquo;。&lt;/li>
+&lt;li>误区2：经历了误区1的伤，很容易陷入另一个极端——那我就把工具手册逐字逐句的仔细阅读，把命令行参数都敲一遍。结果发现，即使背下来了命令行的参数也没用，因为工具最难掌握的是工具输出的报告，这些报告中包含着定位内存泄露、线程死锁的线索。为什么这些工具输出的报告难以看懂呢？因为这些工具的监视对象、作用对象是JVM，输出的报告中有大量的JVM的概念、术语。&lt;/li>
+&lt;/ul>
+&lt;p>所以，真正掌握这些Tools，强依赖对&lt;code>Java Virtual Machine&lt;/code>的深入理解。&lt;/p>
+&lt;p>&lt;code>Tools &amp;amp; Tool APIs&lt;/code>中另一个重点/亮点就是APIs：&lt;/p>
+&lt;ul>
+&lt;li>在JDK1.4中，JVM提供了JVMPI，这是用来监控JVM信息的接口。&lt;/li>
+&lt;li>在JDK1.4中，JVM提供了JVMDI，这是用来调试JVM的接口。(例如：IDE就是依赖这种接口实现了编译、调试等功能)&lt;/li>
+&lt;li>在JDK5中，JVM提供了JVMTI，最终收编了JVMPI和JVMDI，提供了更高级的JVM接口。&lt;/li>
+&lt;li>在JDK9中，JVM提供了JVMICI，可以用来扩展编译能力的接口。&lt;/li>
+&lt;/ul>
+&lt;p>比如：一个已经在运行的Java进程中，如何动态运行一段用户提交的java源码呢？就可以通过JVMTI实现。&lt;/p>
+&lt;h1 id="6总结">6.总结&lt;/h1>
+&lt;p>本文主要内容：&lt;/p>
+&lt;ul>
+&lt;li>了解Java体系的全貌，是一种高效学习Java的方法。&lt;/li>
+&lt;li>Java的概念架构。&lt;/li>
+&lt;li>Java概念架构中的组件1：Java Language&lt;/li>
+&lt;li>Java概念架构中的组件2：Libraries&lt;/li>
+&lt;li>Java概念架构中的组件3：Java Virtual Machine&lt;/li>
+&lt;li>Java概念架构中的组件4：Tools &amp;amp; Tool APIs&lt;/li>
+&lt;/ul>
+&lt;h1 id="7参考文献">7.参考文献&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;a href="https://docs.oracle.com/javase/8/docs/">https://docs.oracle.com/javase/8/docs/&lt;/a>&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

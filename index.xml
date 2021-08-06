@@ -23,29 +23,6 @@
 &lt;p>查阅java.exe文档，有三个参数：&lt;code>-Xcomp&lt;/code>、&lt;code>-Xint&lt;/code>、&lt;code>-Xmixed&lt;/code>，引发了笔者的思考：&lt;/p>
 &lt;p>虽然JIT是JVM中技术含量极高的核心特性之一，但实战中我们却极少触及(除非您从事的是编译器相关的工作)。&lt;/p>
 &lt;p>我们应该如何快速了解JIT的各种编译模式？如何针对性地在实战灵活使用它们？本着将围绕上述问题与读者展开探讨。&lt;/p>
-&lt;h1 id="1试题">1.试题&lt;/h1>
-&lt;h2 id="11java试题">1.1.Java试题&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">JVM中，可以通过哪种参数，强制虚拟机不使用即时编译器？
-A.-clint
-B.-server
-C.-Xint
-D.-Xcomp
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>答案：C&lt;/p>
-&lt;h2 id="12试题解读">1.2.试题解读&lt;/h2>
-&lt;p>本题考查的知识点是JIT(Just-In-Time compilation)，java.exe的命令行参数支持强制虚拟机以不同模式(解释模式、编译模式、混合模式)运行。&lt;/p>
-&lt;p>虽然JIT是JVM中技术含量极高的核心特性之一，但实战中我们却极少触及(除非您从事的是编译器相关的工作)。&lt;/p>
-&lt;p>我们应该如何快速了解JIT的各种编译模式？如何针对性地在实战灵活使用它们？本着将围绕上述问题与读者展开探讨。&lt;/p>
 &lt;h1 id="2对立统一编译能力的技术指标">2.对立统一：编译能力的技术指标&lt;/h1>
 &lt;h2 id="21在折腾啥">2.1.在折腾啥？&lt;/h2>
 &lt;p>了解编译能力技术指标之前，我们先搞清楚现代编译器在折腾啥？&lt;/p>

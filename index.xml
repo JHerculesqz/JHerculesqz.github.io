@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 06 Aug 2021 15:00:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Aug 2021 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,187 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【执行引擎】-1-理清前端编译、即时编译、提前编译</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/</link><pubDate>Fri, 06 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/</guid><description>&lt;h1 id="1如何学习jit">1.如何学习JIT？&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</link><pubDate>Sun, 22 Aug 2021 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</guid><description>&lt;h1 id="1why谁来挽救我的长发">1.Why：谁来挽救我的长发&lt;/h1>
+&lt;p>在Java 6之前，JDK版本升级节奏比较慢，Java程序猿对Java语言本身的学习压力较小(具体体现在&amp;quot;&lt;code>频率低&lt;/code>&amp;quot;和&amp;quot;&lt;code>资源多&lt;/code>&amp;rdquo;)：&lt;/p>
+&lt;ul>
+&lt;li>频率低：如果已经掌握了Java 6或之前的某个版本，那么学习Java新版本也不那么紧迫。&lt;/li>
+&lt;li>资源多：如果您阅读英文资料有点困难，那么等一段时间后，Java新版本的中文资料非常多。&lt;/li>
+&lt;/ul>
+&lt;p>然而，随着Oracle完成收购Sun和JRockit，Oracle宣布Java将按照&lt;code>每半年发布一个版本，每三年发布一个LTS版本&lt;/code>的节奏&lt;code>小步快跑&lt;/code>。&lt;/p>
+&lt;p>Java这种快速迭代的版本节奏，给Java程序猿带来了学习新知识的负担。这种学习负担，通常在产品中表现出2种现象：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>现象1：Java程序猿并未掌握好7年前发布的Java8的众多新特性。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>2014年3月，Java8发布。7年过去了，依然还有很多Java程序猿没有真正掌握Lambda表达式&amp;amp;Stream等Java 8的新特性。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>现象2：市面上的Java新特性资料，少有做到&amp;quot;全面&amp;rdquo;、&amp;ldquo;条理&amp;rdquo;、&amp;ldquo;及时&amp;rdquo;&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>笔者所在的公司曾邀请业界一些咨询公司来讲解Java11的新特性，效果不尽如人意。或只是对Java11新特性的罗列，或过于强调某些单点新特性(如：&amp;ldquo;模块化&amp;rdquo;)，甚至部分新特性的阐述与Oracle最新文档是矛盾的。&lt;/p>
+&lt;/blockquote>
+&lt;p>终于，Oracle的版本节奏，成为带走Java程序猿飘飘长发的一个新的因素。。。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210820192105074.png" alt="image-20210820192105074">&lt;/p>
+&lt;p>如何高效率地学习Java新特性呢？&lt;/p>
+&lt;p>如何挽救我们的长发？&lt;/p>
+&lt;p>笔者试图通过本文，探讨快速自学Java新特性的方法，希望这篇文章能挽救你我的一头秀发。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210821233636736.png" alt="image-20210821233636736">&lt;/p>
+&lt;h1 id="2what什么是jepjsr">2.What：什么是JEP/JSR&lt;/h1>
+&lt;p>我们先来看一下Java 8至今的项目里程碑：&lt;/p>
+&lt;blockquote>
+&lt;p>2014.3，Java8发布
+2017.9.21，Java9发布
+2018.1.16，Java9.0.4发布
+2018.7.17，Java10.0.2发布
+2019.1.15，Java11.0.2发布-&amp;gt;2021.7.20，Java11.0.12发布
+2019.7.16，Java12.0.2发布
+2020.1.14，Java13.0.2发布
+2020.7.14，Java14.0.2发布
+2021.1.19, Java15.0.2发布
+2021.7.20，Java16.0.2发布&lt;/p>
+&lt;/blockquote>
+&lt;p>其中，Oracle从Java9开始，每个版本的发布周期是6个月，每个LTS版本发布周期是3年。&lt;/p>
+&lt;p>从Java9以后的版本看，Oracle的确严格执行了6个月准时发版本的承诺。&lt;/p>
+&lt;blockquote>
+&lt;p>一个有趣的事件是：Java9的正式发布与Java8相隔了4年。&lt;/p>
+&lt;p>并且由于多次跳票一度动摇了业界对Java的信心，那阵子Java恶评如潮。&lt;/p>
+&lt;p>不过仔细阅读了Java9的新特性列表，我们可以发现Java9新增了非常多的新特性，它们为后续的Java11奠定了坚实的基础。&lt;/p>
+&lt;/blockquote>
+&lt;p>Oracle的确把吹过的牛逼实现了，实现的还挺彻底。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210821234525704.png" alt="image-20210821234525704">&lt;/p>
+&lt;p>帮助Oracle准时发版本的背后就是JSR、JSR：&lt;/p>
+&lt;ul>
+&lt;li>JEP：JDK Enhancement Proposals，JDK改进提案&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>为Java增加新特性，可以向JCP(Java Community Process)提交JEP，即JDK改进提案。&lt;/p>
+&lt;p>通过评审的JEP将列入新版本的Java开发计划，并且明确具体落地的Java版本。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>JSR：Java Specification Requests，Java规范提案。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>为Java增加新特性的另一个途径是向JCP提出一个新的、正式的规范(Specification)，纳入到《Java Specification》或者《JVM Specification》。&lt;/p>
+&lt;/blockquote>
+&lt;p>我们可以把JEP、JSR简单理解为Oracle管理Java新特性的需求清单，&lt;/p>
+&lt;p>需求清单中每条需求都会被专门的组织评审并确定落地版本，Java9的JEP列表如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822002010521.png" alt="image-20210822002010521">&lt;/p>
+&lt;p>当然，这又引出了新的问题：JEP列表只是&lt;code>&amp;quot;平铺直述&amp;quot;&lt;/code>地罗列了该Java版本中的新特性，我们如何高效、有条理地阅读和理解JEP列表呢？&lt;/p>
+&lt;h1 id="3how梳理jep列表">3.How：梳理JEP列表&lt;/h1>
+&lt;h2 id="31编程语言的知识脉络">3.1.编程语言的知识脉络&lt;/h2>
+&lt;h3 id="311java语言的知识脉络">3.1.1.Java语言的知识脉络&lt;/h3>
+&lt;p>大部分现代编程语言(如：C++、Java等)，其包含的技术点可以按照分为3个层次：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>语言语法：编程语言定义的一套语言语法规则。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>类库：编程语言通常提供给程序猿的类库，类库也可以分为两个小类：&lt;/p>
+&lt;ul>
+&lt;li>核心类库：基于该语言语法实现的类库。&lt;/li>
+&lt;li>扩展类库：基于核心类库实现的更高级的类库。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>编译器与调优：编程语言的编译器(或解释器)会提供一些编译选项、运行时参数，程序猿可以根据自己的场景提升应用软件的运行效率。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>具体到Java，细化具体的技术点：&lt;/p>
+&lt;ul>
+&lt;li>语言语法：声明与初始化、数据类型、表达式、控制语句、方法、面向对象、异常、代码组织结构&lt;/li>
+&lt;li>核心类库：集合与泛型、多线程编程、反射&lt;/li>
+&lt;li>扩展类库：IO编程、数据库编程、网络编程、安全类库、正则表达式……&lt;/li>
+&lt;li>JVM：字节码结构&amp;amp;前端编译器、类加载、运行时数据区、垃圾回收算法与垃圾收集器、JIT&amp;amp;AOT、工具链&lt;/li>
+&lt;/ul>
+&lt;p>上述编程语言的知识脉络，基本覆盖了Java程序猿在&lt;code>Java语言&lt;/code>领域比较完整的技术栈。&lt;/p>
+&lt;p>假设一个Java程序猿小明，&lt;/p>
+&lt;p>首先，熟练掌握了&lt;code>Java语言语法&lt;/code>，就能开始编写一个产品的业务逻辑代码了。&lt;/p>
+&lt;p>进一步，熟练掌握了&lt;code>Java核心类库&lt;/code>与&lt;code>Java扩展类库&lt;/code>，就能从开发效率、安全性、性能三方面，提升这些业务逻辑代码的质量。&lt;/p>
+&lt;p>再进一步，深刻理解JVM，就能看到这些业务逻辑代码在Java虚拟机内部的执行过程，进而从更高的维度、更高级的手段解决Java代码的疑难杂症、安全性、性能问题。&lt;/p>
+&lt;h3 id="312jep与java语言知识脉络的关系">3.1.2.JEP与Java语言知识脉络的关系&lt;/h3>
+&lt;p>回到JEP列表，每一个JEP，都会标注这个需求单所属的组件，即改进了Java的哪一类技术点，也能与上述编程语言的知识脉络一一对应。&lt;/p>
+&lt;p>比如：JEP 110，就是在改进了&lt;code>扩展类库-网络编程&lt;/code>技术点。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822073959702.png" alt="image-20210822073959702">&lt;/p>
+&lt;p>笔者以Java9的JEP列表为例，&lt;/p>
+&lt;p>在按照编程语言知识脉络分类前，&lt;strong>很难从技术点的罗列中，看出Java9新增的91个新特性到底对Java8有哪些方面的改进&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822074441769.png" alt="image-20210822074441769">&lt;/p>
+&lt;p>按照编程语言知识脉络分类后，可以很清晰地看到Java9在4个方面的改进：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>语言语法：&lt;/p>
+&lt;ul>
+&lt;li>表达式：钻石表达式升级&lt;/li>
+&lt;li>面向对象：接口的私有方法&lt;/li>
+&lt;li>代码组织：支持了模块化——★大改进
+&lt;ul>
+&lt;li>其中，模块化特性影响了Java的N个模块，涉及好多条JEP，这也是Java9变化最大的特性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>核心类库：&lt;/p>
+&lt;ul>
+&lt;li>集合与泛型：提供了of方法&lt;/li>
+&lt;li>多线程编程：提升了多线程编程部分类库API的性能&lt;/li>
+&lt;li>反射：增强了MethodHandle&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>扩展类库：&lt;/p>
+&lt;ul>
+&lt;li>IO编程：优化了Xml类库的内部实现，提升了安全性&lt;/li>
+&lt;li>安全类库：更新了安全算法、证书、密钥库等——★大改进&lt;/li>
+&lt;li>Js引擎：引入了Nashorn——★大改进&lt;/li>
+&lt;li>GUI编程：升级了JavaFx——★大改进&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>JVM：——★大改进&lt;/p>
+&lt;ul>
+&lt;li>字节码格式：字符串相加生成的字节码优化，提升性能&lt;/li>
+&lt;li>运行时数据区：字符串的存储结构发生了变化，提升性能&lt;/li>
+&lt;li>GC：G1上位、CMS下台、废弃某些垃圾收集器组合，提升性能&lt;/li>
+&lt;li>JIT&amp;amp;AOT：优化C1/C2、支持更多平台，提升性能与JIT性能&lt;/li>
+&lt;li>工具链：规范/细化javac的编译告警，提升前端编译器分层归因性能&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822081029823.png" alt="image-20210822081029823">&lt;/p>
+&lt;h3 id="313从梳理后的jep列表宏观理解新版本java">3.1.3.从梳理后的JEP列表，宏观理解新版本Java&lt;/h3>
+&lt;p>基于梳理后的JEP列表，我们可以清晰地宏观理解新版本Java，还是以Java9为例：&lt;/p>
+&lt;ul>
+&lt;li>看Oracle的商业意图：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>期望占据&amp;quot;模块化&amp;quot;的标准话语权。&lt;/p>
+&lt;p>期望在Js引擎、GUI编程上发力(但从Java10、Java11看，这两个领域都放弃了)。&lt;/p>
+&lt;p>期望强化垃圾回收器和JIT的地位。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>看技术意图：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>在性能方面，Oracle做了不少底层优化，如果Java程序猿合理利用即可获得比较好的性能提升。&lt;/p>
+&lt;p>在安全方面，Oracle也默默地做了很多底层工作，如果Java程序猿合理利用即可获得比较好的安全提升。&lt;/p>
+&lt;p>在语法方面，Oracle基于Coin项目，添加了若干更加便捷的语法小优化。&lt;/p>
+&lt;/blockquote>
+&lt;p>因此，我们很容易判断出Java程序猿应该学习哪些Java9的新特性：&lt;/p>
+&lt;ul>
+&lt;li>性能方面：要重点掌握多线程编程的底层优化、JIT底层优化、字符串优化的原理，对产品性能有帮助。&lt;/li>
+&lt;li>语法方面：要重点掌握模块化新特性，对产品升级到Java9有比较大的影响。&lt;/li>
+&lt;li>语法方面：要熟练掌握语法小改进，对产品开发效率有帮助。&lt;/li>
+&lt;li>安全方面：了解改动点的基本原理即可，在产品开发中不要错误使用即可。&lt;/li>
+&lt;/ul>
+&lt;h2 id="32梳理java91011的jep列表">3.2.梳理Java9/10/11的JEP列表&lt;/h2>
+&lt;p>接下来，笔者将Java9、Java10、Java11的新特性按照上述方法进行梳理，后续再详细解读各新特性：&lt;/p>
+&lt;h3 id="321java9新特性">3.2.1.Java9新特性&lt;/h3>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822081029823.png" alt="image-20210822081029823">&lt;/p>
+&lt;h3 id="322java10新特性">3.2.2.Java10新特性&lt;/h3>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083115018.png" alt="image-20210822083115018">&lt;/p>
+&lt;h3 id="323java11新特性">3.2.3.Java11新特性&lt;/h3>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083247655.png" alt="image-20210822083247655">&lt;/p></description></item><item><title>【执行引擎】-1-理清前端编译、即时编译、提前编译</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/</link><pubDate>Fri, 06 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/</guid><description>&lt;h1 id="1如何学习jit">1.如何学习JIT？&lt;/h1>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E3%80%81%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E3%80%81%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/1.png" alt="1">&lt;/p>
 &lt;p>查阅java.exe文档，有三个参数：&lt;code>-Xcomp&lt;/code>、&lt;code>-Xint&lt;/code>、&lt;code>-Xmixed&lt;/code>，引发了笔者的思考：&lt;/p>
 &lt;p>虽然JIT是JVM中技术含量极高的核心特性之一，但实战中我们却极少触及(除非您从事的是编译器相关的工作)。&lt;/p>
@@ -2729,184 +2909,4 @@ JVM能认识的数据结构
 &lt;h1 id="7参考文献">7.参考文献&lt;/h1>
 &lt;blockquote>
 &lt;p>&lt;a href="https://docs.oracle.com/javase/8/docs/">https://docs.oracle.com/javase/8/docs/&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title/><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</guid><description>&lt;h1 id="1why谁来挽救我的长发">1.Why：谁来挽救我的长发&lt;/h1>
-&lt;p>在Java 6之前，JDK版本升级节奏比较慢，Java程序猿对Java语言本身的学习压力较小(具体体现在&amp;quot;&lt;code>频率低&lt;/code>&amp;quot;和&amp;quot;&lt;code>资源多&lt;/code>&amp;rdquo;)：&lt;/p>
-&lt;ul>
-&lt;li>频率低：如果已经掌握了Java 6或之前的某个版本，那么学习Java新版本也不那么紧迫。&lt;/li>
-&lt;li>资源多：如果您阅读英文资料有点困难，那么等一段时间后，Java新版本的中文资料非常多。&lt;/li>
-&lt;/ul>
-&lt;p>然而，随着Oracle完成收购Sun和JRockit，Oracle宣布Java将按照&lt;code>每半年发布一个版本，每三年发布一个LTS版本&lt;/code>的节奏&lt;code>小步快跑&lt;/code>。&lt;/p>
-&lt;p>Java这种快速迭代的版本节奏，给Java程序猿带来了学习新知识的负担。这种学习负担，通常在产品中表现出2种现象：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>现象1：Java程序猿并未掌握好7年前发布的Java8的众多新特性。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>2014年3月，Java8发布。7年过去了，依然还有很多Java程序猿没有真正掌握Lambda表达式&amp;amp;Stream等Java 8的新特性。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>现象2：市面上的Java新特性资料，少有做到&amp;quot;全面&amp;rdquo;、&amp;ldquo;条理&amp;rdquo;、&amp;ldquo;及时&amp;rdquo;&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>笔者所在的公司曾邀请业界一些咨询公司来讲解Java11的新特性，效果不尽如人意。或只是对Java11新特性的罗列，或过于强调某些单点新特性(如：&amp;ldquo;模块化&amp;rdquo;)，甚至部分新特性的阐述与Oracle最新文档是矛盾的。&lt;/p>
-&lt;/blockquote>
-&lt;p>终于，Oracle的版本节奏，成为带走Java程序猿飘飘长发的一个新的因素。。。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210820192105074.png" alt="image-20210820192105074">&lt;/p>
-&lt;p>如何高效率地学习Java新特性呢？&lt;/p>
-&lt;p>如何挽救我们的长发？&lt;/p>
-&lt;p>笔者试图通过本文，探讨快速自学Java新特性的方法，希望这篇文章能挽救你我的一头秀发。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210821233636736.png" alt="image-20210821233636736">&lt;/p>
-&lt;h1 id="2what什么是jepjsr">2.What：什么是JEP/JSR&lt;/h1>
-&lt;p>我们先来看一下Java 8至今的项目里程碑：&lt;/p>
-&lt;blockquote>
-&lt;p>2014.3，Java8发布
-2017.9.21，Java9发布
-2018.1.16，Java9.0.4发布
-2018.7.17，Java10.0.2发布
-2019.1.15，Java11.0.2发布-&amp;gt;2021.7.20，Java11.0.12发布
-2019.7.16，Java12.0.2发布
-2020.1.14，Java13.0.2发布
-2020.7.14，Java14.0.2发布
-2021.1.19, Java15.0.2发布
-2021.7.20，Java16.0.2发布&lt;/p>
-&lt;/blockquote>
-&lt;p>其中，Oracle从Java9开始，每个版本的发布周期是6个月，每个LTS版本发布周期是3年。&lt;/p>
-&lt;p>从Java9以后的版本看，Oracle的确严格执行了6个月准时发版本的承诺。&lt;/p>
-&lt;blockquote>
-&lt;p>一个有趣的事件是：Java9的正式发布与Java8相隔了4年。&lt;/p>
-&lt;p>并且由于多次跳票一度动摇了业界对Java的信心，那阵子Java恶评如潮。&lt;/p>
-&lt;p>不过仔细阅读了Java9的新特性列表，我们可以发现Java9新增了非常多的新特性，它们为后续的Java11奠定了坚实的基础。&lt;/p>
-&lt;/blockquote>
-&lt;p>Oracle的确把吹过的牛逼实现了，实现的还挺彻底。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210821234525704.png" alt="image-20210821234525704">&lt;/p>
-&lt;p>帮助Oracle准时发版本的背后就是JSR、JSR：&lt;/p>
-&lt;ul>
-&lt;li>JEP：JDK Enhancement Proposals，JDK改进提案&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>为Java增加新特性，可以向JCP(Java Community Process)提交JEP，即JDK改进提案。&lt;/p>
-&lt;p>通过评审的JEP将列入新版本的Java开发计划，并且明确具体落地的Java版本。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>JSR：Java Specification Requests，Java规范提案。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>为Java增加新特性的另一个途径是向JCP提出一个新的、正式的规范(Specification)，纳入到《Java Specification》或者《JVM Specification》。&lt;/p>
-&lt;/blockquote>
-&lt;p>我们可以把JEP、JSR简单理解为Oracle管理Java新特性的需求清单，&lt;/p>
-&lt;p>需求清单中每条需求都会被专门的组织评审并确定落地版本，Java9的JEP列表如下图：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822002010521.png" alt="image-20210822002010521">&lt;/p>
-&lt;p>当然，这又引出了新的问题：JEP列表只是&lt;code>&amp;quot;平铺直述&amp;quot;&lt;/code>地罗列了该Java版本中的新特性，我们如何高效、有条理地阅读和理解JEP列表呢？&lt;/p>
-&lt;h1 id="3how梳理jep列表">3.How：梳理JEP列表&lt;/h1>
-&lt;h2 id="31编程语言的知识脉络">3.1.编程语言的知识脉络&lt;/h2>
-&lt;h3 id="311java语言的知识脉络">3.1.1.Java语言的知识脉络&lt;/h3>
-&lt;p>大部分现代编程语言(如：C++、Java等)，其包含的技术点可以按照分为3个层次：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>语言语法：编程语言定义的一套语言语法规则。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>类库：编程语言通常提供给程序猿的类库，类库也可以分为两个小类：&lt;/p>
-&lt;ul>
-&lt;li>核心类库：基于该语言语法实现的类库。&lt;/li>
-&lt;li>扩展类库：基于核心类库实现的更高级的类库。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>编译器与调优：编程语言的编译器(或解释器)会提供一些编译选项、运行时参数，程序猿可以根据自己的场景提升应用软件的运行效率。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>具体到Java，细化具体的技术点：&lt;/p>
-&lt;ul>
-&lt;li>语言语法：声明与初始化、数据类型、表达式、控制语句、方法、面向对象、异常、代码组织结构&lt;/li>
-&lt;li>核心类库：集合与泛型、多线程编程、反射&lt;/li>
-&lt;li>扩展类库：IO编程、数据库编程、网络编程、安全类库、正则表达式……&lt;/li>
-&lt;li>JVM：字节码结构&amp;amp;前端编译器、类加载、运行时数据区、垃圾回收算法与垃圾收集器、JIT&amp;amp;AOT、工具链&lt;/li>
-&lt;/ul>
-&lt;p>上述编程语言的知识脉络，基本覆盖了Java程序猿在&lt;code>Java语言&lt;/code>领域比较完整的技术栈。&lt;/p>
-&lt;p>假设一个Java程序猿小明，&lt;/p>
-&lt;p>首先，熟练掌握了&lt;code>Java语言语法&lt;/code>，就能开始编写一个产品的业务逻辑代码了。&lt;/p>
-&lt;p>进一步，熟练掌握了&lt;code>Java核心类库&lt;/code>与&lt;code>Java扩展类库&lt;/code>，就能从开发效率、安全性、性能三方面，提升这些业务逻辑代码的质量。&lt;/p>
-&lt;p>再进一步，深刻理解JVM，就能看到这些业务逻辑代码在Java虚拟机内部的执行过程，进而从更高的维度、更高级的手段解决Java代码的疑难杂症、安全性、性能问题。&lt;/p>
-&lt;h3 id="312jep与java语言知识脉络的关系">3.1.2.JEP与Java语言知识脉络的关系&lt;/h3>
-&lt;p>回到JEP列表，每一个JEP，都会标注这个需求单所属的组件，即改进了Java的哪一类技术点，也能与上述编程语言的知识脉络一一对应。&lt;/p>
-&lt;p>比如：JEP 110，就是在改进了&lt;code>扩展类库-网络编程&lt;/code>技术点。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822073959702.png" alt="image-20210822073959702">&lt;/p>
-&lt;p>笔者以Java9的JEP列表为例，&lt;/p>
-&lt;p>在按照编程语言知识脉络分类前，&lt;strong>很难从技术点的罗列中，看出Java9新增的91个新特性到底对Java8有哪些方面的改进&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822074441769.png" alt="image-20210822074441769">&lt;/p>
-&lt;p>按照编程语言知识脉络分类后，可以很清晰地看到Java9在4个方面的改进：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>语言语法：&lt;/p>
-&lt;ul>
-&lt;li>表达式：钻石表达式升级&lt;/li>
-&lt;li>面向对象：接口的私有方法&lt;/li>
-&lt;li>代码组织：支持了模块化——★大改进
-&lt;ul>
-&lt;li>其中，模块化特性影响了Java的N个模块，涉及好多条JEP，这也是Java9变化最大的特性。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>核心类库：&lt;/p>
-&lt;ul>
-&lt;li>集合与泛型：提供了of方法&lt;/li>
-&lt;li>多线程编程：提升了多线程编程部分类库API的性能&lt;/li>
-&lt;li>反射：增强了MethodHandle&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>扩展类库：&lt;/p>
-&lt;ul>
-&lt;li>IO编程：优化了Xml类库的内部实现，提升了安全性&lt;/li>
-&lt;li>安全类库：更新了安全算法、证书、密钥库等——★大改进&lt;/li>
-&lt;li>Js引擎：引入了Nashorn——★大改进&lt;/li>
-&lt;li>GUI编程：升级了JavaFx——★大改进&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>JVM：——★大改进&lt;/p>
-&lt;ul>
-&lt;li>字节码格式：字符串相加生成的字节码优化，提升性能&lt;/li>
-&lt;li>运行时数据区：字符串的存储结构发生了变化，提升性能&lt;/li>
-&lt;li>GC：G1上位、CMS下台、废弃某些垃圾收集器组合，提升性能&lt;/li>
-&lt;li>JIT&amp;amp;AOT：优化C1/C2、支持更多平台，提升性能与JIT性能&lt;/li>
-&lt;li>工具链：规范/细化javac的编译告警，提升前端编译器分层归因性能&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822081029823.png" alt="image-20210822081029823">&lt;/p>
-&lt;h3 id="313从梳理后的jep列表宏观理解新版本java">3.1.3.从梳理后的JEP列表，宏观理解新版本Java&lt;/h3>
-&lt;p>基于梳理后的JEP列表，我们可以清晰地宏观理解新版本Java，还是以Java9为例：&lt;/p>
-&lt;ul>
-&lt;li>看Oracle的商业意图：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>期望占据&amp;quot;模块化&amp;quot;的标准话语权。&lt;/p>
-&lt;p>期望在Js引擎、GUI编程上发力(但从Java10、Java11看，这两个领域都放弃了)。&lt;/p>
-&lt;p>期望强化垃圾回收器和JIT的地位。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>看技术意图：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>在性能方面，Oracle做了不少底层优化，如果Java程序猿合理利用即可获得比较好的性能提升。&lt;/p>
-&lt;p>在安全方面，Oracle也默默地做了很多底层工作，如果Java程序猿合理利用即可获得比较好的安全提升。&lt;/p>
-&lt;p>在语法方面，Oracle基于Coin项目，添加了若干更加便捷的语法小优化。&lt;/p>
-&lt;/blockquote>
-&lt;p>因此，我们很容易判断出Java程序猿应该学习哪些Java9的新特性：&lt;/p>
-&lt;ul>
-&lt;li>性能方面：要重点掌握多线程编程的底层优化、JIT底层优化、字符串优化的原理，对产品性能有帮助。&lt;/li>
-&lt;li>语法方面：要重点掌握模块化新特性，对产品升级到Java9有比较大的影响。&lt;/li>
-&lt;li>语法方面：要熟练掌握语法小改进，对产品开发效率有帮助。&lt;/li>
-&lt;li>安全方面：了解改动点的基本原理即可，在产品开发中不要错误使用即可。&lt;/li>
-&lt;/ul>
-&lt;h2 id="32梳理java91011的jep列表">3.2.梳理Java9/10/11的JEP列表&lt;/h2>
-&lt;p>接下来，笔者将Java9、Java10、Java11的新特性按照上述方法进行梳理，后续再详细解读各新特性：&lt;/p>
-&lt;h3 id="321java9新特性">3.2.1.Java9新特性&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822081029823.png" alt="image-20210822081029823">&lt;/p>
-&lt;h3 id="322java10新特性">3.2.2.Java10新特性&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083115018.png" alt="image-20210822083115018">&lt;/p>
-&lt;h3 id="323java11新特性">3.2.3.Java11新特性&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083247655.png" alt="image-20210822083247655">&lt;/p></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>

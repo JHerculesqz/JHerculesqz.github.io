@@ -205,7 +205,7 @@
 &lt;p>显然，不是所有的跳票，都不能留给人悬念。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/1.png" alt="image-20210830095628354">&lt;/p>
 &lt;p>笔者在《&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/">【Java新特性】-0-学习Java新特性，如何快人一步&lt;/a>》中分享了一种快速学习Java新特性的方法，本文将采用这种方法，对于Java9新特性的全貌进行解读。&lt;/p>
-&lt;h1 id="1java9新特性全貌">1.Java9新特性全貌&lt;/h1>
+&lt;h2 id="1java9新特性全貌">1.Java9新特性全貌&lt;/h2>
 &lt;p>Java9的新特性覆盖了四个方面：&lt;/p>
 &lt;ul>
 &lt;li>
@@ -222,8 +222,8 @@
 &lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/Java9%E6%96%B0%E7%89%B9%E6%80%A7.png" alt="Java9新特性">&lt;/p>
-&lt;h1 id="2语言语法">2.语言语法&lt;/h1>
-&lt;h2 id="21jep">2.1.JEP&lt;/h2>
+&lt;h2 id="2语言语法">2.语言语法&lt;/h2>
+&lt;h3 id="21jep">2.1.JEP&lt;/h3>
 &lt;p>JEP涉及的改进包括：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>声明与初始化&lt;/strong>：下划线&amp;rdquo;_&amp;quot;，不再是合法字符。&lt;/li>
@@ -241,7 +241,7 @@
 &lt;p>说明：Coin项目是Java团队针对Java语言语法的改进专项，其中吸收了不少从其它现代编程语言中吸收的有趣语法特性，即使这些改进不一定都会在Java中落地，了解它们也能看到在现代编程语言中的广受欢迎的语法特性、语言设计思想。&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95-JEP.png" alt="语言语法-JEP">&lt;/p>
-&lt;h2 id="22-issues">2.2. Issues&lt;/h2>
+&lt;h3 id="22-issues">2.2. Issues&lt;/h3>
 &lt;p>Java9在语言语法方面的其它小改进：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>数据类型&lt;/strong>：主要是API层次的改进
@@ -261,8 +261,8 @@
 &lt;p>说明：除了通过JEP可以看到新版本Java的变化，还可以通过JDK Bug System(&lt;a href="https://bugs.openjdk.java.net/">https://bugs.openjdk.java.net/&lt;/a>)识别出新版本Java的改动。&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95-JDKx.png" alt="语言语法-JDKx">&lt;/p>
-&lt;h1 id="3核心类库">3.核心类库&lt;/h1>
-&lt;h2 id="31jep">3.1.JEP&lt;/h2>
+&lt;h2 id="3核心类库">3.核心类库&lt;/h2>
+&lt;h3 id="31jep">3.1.JEP&lt;/h3>
 &lt;p>JEP涉及的改进包括：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>集合与泛型&lt;/strong>：新增了of方法，便于简化创建集合的代码。&lt;/li>
@@ -275,7 +275,7 @@
 &lt;li>了解MethodHandle相关API，有助于编写更有技巧性的代码。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%BA%93-JEP.png" alt="核心类库-JEP">&lt;/p>
-&lt;h2 id="32-issues">3.2. Issues&lt;/h2>
+&lt;h3 id="32-issues">3.2. Issues&lt;/h3>
 &lt;p>Java9在核心类库的其它小改进：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>集合与泛型&lt;/strong>：Collections包有少量优化，新增了一些Stream的API——重点。&lt;/li>
@@ -288,8 +288,8 @@
 &lt;li>熟悉juc包的变化，增强并发编程能力。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%BA%93-JDKx.png" alt="核心类库-JDKx">&lt;/p>
-&lt;h1 id="4扩展类库">4.扩展类库&lt;/h1>
-&lt;h2 id="41jep">4.1.JEP&lt;/h2>
+&lt;h2 id="4扩展类库">4.扩展类库&lt;/h2>
+&lt;h3 id="41jep">4.1.JEP&lt;/h3>
 &lt;p>JEP涉及的改进包括：&lt;/p>
 &lt;ul>
 &lt;li>
@@ -313,7 +313,7 @@
 &lt;p>说明：对于进程相关的库，没有找到更合适的归类方法，暂时放在IO编程分类了。&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/%E6%89%A9%E5%B1%95%E7%B1%BB%E5%BA%93-JEP.png" alt="扩展类库-JEP">&lt;/p>
-&lt;h2 id="42issues">4.2.Issues&lt;/h2>
+&lt;h3 id="42issues">4.2.Issues&lt;/h3>
 &lt;p>Java9在扩展类库的其它小改进：&lt;/p>
 &lt;ul>
 &lt;li>修改了IO &amp;amp; NIO对应的API及其底层实现，用来提升性能和健壮性——这是学习的重点。&lt;/li>
@@ -324,8 +324,8 @@
 &lt;li>熟悉IO &amp;amp; NIO新的API，以便提升IO编程相关性能。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/%E6%89%A9%E5%B1%95%E7%B1%BB%E5%BA%93-JDKx.png" alt="扩展类库-JDKx">&lt;/p>
-&lt;h1 id="5jvm">5.JVM&lt;/h1>
-&lt;h2 id="51jep">5.1.JEP&lt;/h2>
+&lt;h2 id="5jvm">5.JVM&lt;/h2>
+&lt;h3 id="51jep">5.1.JEP&lt;/h3>
 &lt;p>JEP涉及的改进包括：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>编译引擎&amp;amp;类加载&lt;/strong>：模块化导致的双亲委派模型的变化，字符串相加的字节码优化。&lt;/li>
@@ -342,7 +342,7 @@
 &lt;li>了解分层编译的原理性知识，了解提前编译器原理和目标。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/JVM-JEP.png" alt="JVM-JEP">&lt;/p>
-&lt;h2 id="52issues">5.2.Issues&lt;/h2>
+&lt;h3 id="52issues">5.2.Issues&lt;/h3>
 &lt;p>Java9在语言语法方面的其它小改进：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>java.lang.ref&lt;/strong>：对强、软、弱、虚引用的处理进行了增强。&lt;/li>
@@ -353,7 +353,7 @@
 &lt;li>理解强、软、弱、虚引用的原理。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-2-Java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/JVM-JDKx.png" alt="JVM-JDKx">&lt;/p>
-&lt;h1 id="6下一步">6.下一步&lt;/h1>
+&lt;h2 id="6下一步">6.下一步&lt;/h2>
 &lt;p>通过上述解读，相信各位读者对Java9的新特性全景，应该有了一定的理解。&lt;/p>
 &lt;p>笔者将在后续文章中，详细剖析上述重点特性。&lt;/p></description></item><item><title>【执行引擎】-1-理清前端编译、即时编译、提前编译</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/</link><pubDate>Fri, 06 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/</guid><description>&lt;h1 id="1如何学习jit">1.如何学习JIT？&lt;/h1>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E3%80%81%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E3%80%81%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/1.png" alt="1">&lt;/p>

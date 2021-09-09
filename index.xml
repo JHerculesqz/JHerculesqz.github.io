@@ -2699,7 +2699,7 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/blockquote>
 &lt;p>所以，笔者坚定的认为只有Java程序员最有资格喊出&amp;rdquo;&lt;strong>我秃了，我也变强了&lt;/strong>&amp;quot;。
 所以，笔者坚定的认为只有&amp;rdquo;&lt;strong>深刻理解JVM&lt;/strong>&amp;quot;(即，深刻理解语法特性到JVM层，甚至操作系统层)，是Java程序员的最有效的防秃良药。
-&lt;img src="images/1.png" alt="1">&lt;/p>
+&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/1.png" alt="1">&lt;/p>
 &lt;blockquote>
 &lt;p>[1]：A new future for Java：https://theboreddev.com/a-new-future-for-java/&lt;/p>
 &lt;/blockquote>
@@ -2750,24 +2750,24 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/div>
 &lt;/div>&lt;p>这些信息就是程序员定义的&amp;quot;模板&amp;rdquo;，在程序运行时，当需要基于类A创建实例对象a时，JVM就要先找到类A对应的&amp;quot;模板&amp;rdquo;。&lt;/p>
 &lt;p>这些&amp;quot;模板&amp;rdquo;，就像韩国星工场包装女团时的&amp;quot;剧本&amp;rdquo;，每个女星都是基于某个&amp;quot;模板&amp;quot;创建的实例对象，女星的身高、体重、才艺就是&amp;quot;模板&amp;quot;中描述的&amp;quot;属性、行为&amp;rdquo;。
-&lt;img src="images/2.png" alt="2">&lt;/p>
+&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/2.png" alt="2">&lt;/p>
 &lt;blockquote>
 &lt;p>[2]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="2加载得到了什么">(2)加载得到了什么？&lt;/h2>
 &lt;p>字节码加载到内存后得到的信息内容还是(1)中提到的字节码中包含的信息，但信息形式变了，抽象、简单地理解为&lt;strong>JVM能认识的数据结构&lt;/strong>[3]。&lt;/p>
 &lt;p>这就像娱乐公司的策划团队在电脑上写好了女团出道的&amp;quot;剧本&amp;rdquo;，女团的经纪人要无差错地仔细阅读&amp;quot;剧本&amp;quot;的电子件，把&amp;quot;剧本&amp;quot;存储在大脑中，以备后续使用。
-&lt;img src="images/3.png" alt="3">&lt;/p>
+&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/3.png" alt="3">&lt;/p>
 &lt;blockquote>
 &lt;p>[3]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="3从哪里加载">(3)从哪里加载？&lt;/h2>
 &lt;p>用一张表，说明字节码文件与经纪人的类比关系：&lt;/p>
-&lt;p>&lt;img src="images/t1.png" alt="t1">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/t1.png" alt="t1">&lt;/p>
 &lt;p>这一点也是&lt;strong>JVM给Java程序员的自由&lt;/strong>，很多著名的产品就是在这个点上做了文章。&lt;/p>
 &lt;h2 id="4加载到哪里去">(4)加载到哪里去？&lt;/h2>
 &lt;p>这个问题最好回答：内存，具体指的是JVM的&lt;strong>运行时数据区&lt;/strong>，再具体一点是运行时数据区中的&lt;strong>方法区&lt;/strong>[4]&lt;/p>
-&lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/4.png" alt="4">&lt;/p>
 &lt;blockquote>
 &lt;p>[4]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
 &lt;/blockquote>
@@ -2780,7 +2780,7 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;h2 id="6加载流程有几步">(6)加载流程有几步？&lt;/h2>
 &lt;p>在(2)中我们提到女团的经纪人要无差错地仔细阅读&amp;quot;剧本&amp;quot;的电子件，关键词是&lt;strong>无差错&lt;/strong>
 我们再用一张表，类比一下[5]&lt;/p>
-&lt;p>&lt;img src="images/t2.png" alt="image-20200905163221231">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/t2.png" alt="image-20200905163221231">&lt;/p>
 &lt;p>表格中存在不严谨(通俗)的表达，但相信读者已经关注到了两个核心要点：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2795,7 +2795,7 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/div>&lt;blockquote>
 &lt;p>[5]上述加载流程每一步存在一些JVM实现的细节，例如：上述步骤一定是顺序执行的吗？例如：直接引用需要反复解析吗？这些都有必要详细解读，本文暂不展开&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/5.png" alt="5">&lt;/p>
 &lt;h2 id="7加载流程如何实现">(7)加载流程如何实现？&lt;/h2>
 &lt;p>至此，终于可以和本文开头的面试题呼应上了，前文我们探讨了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -2824,8 +2824,8 @@ Application加载器相当于女团艺人
 &lt;p>既然有不同的类加载器，它们之间必然有配合关系，否则两个人干了同一个工作，对外口径还不同，咋办？
 JVM定义了这种配合关系，还取了个高大上的名字&amp;quot;双亲委派模型&amp;rdquo;，笔者认为这种模型应该叫&amp;quot;保姆式管理模型&amp;rdquo;
 还是一张表类比一下：&lt;/p>
-&lt;p>&lt;img src="images/t3.png" alt="image-20200905163353382">&lt;/p>
-&lt;p>&lt;img src="images/6.png" alt="6">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/t3.png" alt="image-20200905163353382">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/6.png" alt="6">&lt;/p>
 &lt;p>双亲委派模型，本质上是说&amp;quot;领导先上，领导不行我再上&amp;rdquo;。
 这种管理风格，自然也有弊端。历史上有&lt;strong>4次破坏双亲委派模型&lt;/strong>[6]的事件。
 破坏双亲委派模型的本质，是&amp;quot;管理团队的风格多样化&amp;rdquo;，例如：&amp;ldquo;扁平化团队&amp;rdquo;、&amp;ldquo;先干了再说团队&amp;quot;等等。&lt;/p>

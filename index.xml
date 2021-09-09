@@ -2513,7 +2513,181 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;p>&lt;strong>垃圾回收体系&lt;/strong>就是JVM中，扮演了这个最无情的角色。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/1.png" alt="image-20210107150610240">&lt;/p>
 &lt;p>站在打工人(对象)的角度，垃圾回收体系是无情的存在。&lt;/p>
-&lt;p>但站在企业主(JVM)的角度，垃圾回收体系是维系正常生产的重要部件。&lt;/p></description></item><item><title>【运行时数据区】-0-用仓库管理员的视角理解运行时数据区</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</link><pubDate>Thu, 05 Aug 2021 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</guid><description>&lt;h1 id="0x01面试题">0x01.面试题&lt;/h1>
+&lt;p>但站在企业主(JVM)的角度，垃圾回收体系是维系正常生产的重要部件。&lt;/p></description></item><item><title>【类加载机制】-1-类加载器剖析-类加载器速览</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/</link><pubDate>Thu, 05 Aug 2021 08:08:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/</guid><description>&lt;h1 id="1一道面试题">1.一道面试题&lt;/h1>
+&lt;p>这是一道经典的面试题：请描述一下Tomcat如何实现自己独特的类加载机制。&lt;/p>
+&lt;p>这道题可以引申出很多类加载器的细节问题：&lt;/p>
+&lt;blockquote>
+&lt;p>例如：Tomcat为什么要实现一套与JVM不同的类加载机制？&lt;/p>
+&lt;p>例如：Tomcat有哪几种类加载器？&lt;/p>
+&lt;p>例如：双亲委派模型不满足Tomcat的要求吗？&lt;/p>
+&lt;p>例如：自己定义一个恶意系统类(比如Object类)，会对Tomcat造成伤害吗？&lt;/p>
+&lt;/blockquote>
+&lt;p>这些细节问题，涉及到&amp;quot;类加载器&amp;quot;的一些原理性知识，结合笔者之前的文章《【类加载机制】从一道面试题开始》，我们一起来学习一下类加载器。&lt;/p>
+&lt;h1 id="2类加载器的实战价值">2.类加载器的实战价值&lt;/h1>
+&lt;p>类加载器是JVM类加载机制的具体实现。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/1.png" alt="image-20201224172135407">&lt;/p>
+&lt;ul>
+&lt;li>类加载器的第一个实战用途就是&lt;strong>定位异常&lt;/strong>：当使用一些三方件时，并且部署在某些容器中，运行时环境一旦出现ClassNotFoundException，就需要利用类加载器的知识进行问题定位。&lt;/li>
+&lt;li>类加载器的第二个实战用途就是&lt;strong>安全&lt;/strong>：java的二进制天然地容易被反编译，为了进行&lt;strong>二进制保护&lt;/strong>，通常会自定义类加载器。&lt;/li>
+&lt;/ul>
+&lt;h1 id="3类加载器的分类">3.类加载器的分类&lt;/h1>
+&lt;p>在Java8中，类加载器的逻辑关系如下图所示：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/2.png" alt="image-20201224175405793">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从提供者看&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>JVM自带1个类加载器：&lt;strong>BootstrapClassLoader&lt;/strong>&lt;/p>
+&lt;p>JDK自带2个类加载器：&lt;strong>ExtClassLoader&lt;/strong>、&lt;strong>AppClassLoader&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从关系看&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>BootstrapClassLoader：它会创建ExtClassLoader和AppClassLoader，它是ExtClassLoader的父级加载器。&lt;/p>
+&lt;p>ExtClassLoader是AppClassLoader的父级加载器。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从实现看&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>BootstrapClassLoader&lt;/strong>：用C++实现&lt;/p>
+&lt;p>&lt;strong>ExtClassLoader&lt;/strong>：用Java实现，继承自ClassLoader&lt;/p>
+&lt;p>&lt;strong>AppClassLoader&lt;/strong>：用Java实现，继承自ClassLoader&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从职责看&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>BootstrapClassLoader&lt;/strong>：加载(JAVA_HOME/jre/lib/*.jar或sun.boot.class.path下所有内容，用于提供JVM自身需要的类。&lt;/p>
+&lt;p>&lt;strong>ExtClassLoader&lt;/strong>：加载属性java.ext.dirs所指定的目录中的类库，或从JDK的安装目录jre/lib/ext/*.jar。&lt;/p>
+&lt;p>&lt;strong>AppClassLoader&lt;/strong>：加载环境变量classpath中的jar或属性java.class.path指定路径下的类库。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>限制&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>BootstrapClassLoader&lt;/strong>：为了安全，只加载包名为java、javax、sun开头的类文件&lt;/p>
+&lt;p>JVM自带了上述3种类加载器，就不得不面临两个问题：&lt;/p>
+&lt;blockquote>
+&lt;p>1.加载流程问题：有一个类A，哪个类加载器负责去加载？&lt;/p>
+&lt;p>2.唯一性问题：有一个类A，不同的类加载器能同时加载它吗？&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="4相对唯一">4.相对唯一&lt;/h1>
+&lt;p>类加载机制这样定义类的唯一性，必须满足如下两个条件：&lt;/p>
+&lt;ul>
+&lt;li>第一、加载到JVM中的&lt;strong>类模板本身是相同的&lt;/strong>&lt;/li>
+&lt;li>第二、加载这个类的&lt;strong>加载器是同一个&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>第一个条件比较好理解，这个被加载的类，&lt;strong>来自同一个class文件、类的全限定名相同&lt;/strong>。&lt;/p>
+&lt;p>第二个条件则体现了哲学定义中的&amp;quot;唯一&amp;rdquo;——&lt;strong>在一定约束下&lt;/strong>，事物具备独一无二的性质。&lt;/p>
+&lt;p>反过来理解第二个条件，我们可以得到如下推论：&lt;/p>
+&lt;ul>
+&lt;li>推论1：两个类加载器可以加载同一个类&lt;/li>
+&lt;li>推论2：如果发生了推论1，则此时JVM中加载完成的2个类模板被JVM认为是2个不同的类模板。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/3.png" alt="image-20201225072929911">&lt;/p>
+&lt;h1 id="5双亲委派">5.双亲委派&lt;/h1>
+&lt;p>明白了&amp;quot;相对唯一性&amp;rdquo;，JVM还是要讲一点**&amp;ldquo;江湖规矩&amp;rdquo;**——在没有某些特殊诉求的情况下，还是要约束一下类加载器们不能太渣，不要反复加载同一个类模板。&lt;/p>
+&lt;p>JVM定义了这么一套加载规则：&lt;/p>
+&lt;ul>
+&lt;li>类加载器存在上下级关系：Bootstrap是一把手，Ext是二把手，App是小弟。&lt;/li>
+&lt;li>类加载器存在先后顺序：一把手(Bootstrap)初始化的时候，将二把手(Ext)、小弟(App)给创建出来。&lt;/li>
+&lt;li>类加载器存在加载询问机制：
+&lt;ul>
+&lt;li>当小弟(App)准备加载1个类模板，会先去求助一下二把手(Ext)加载过这个类吗、能不能帮我加载一下？&lt;/li>
+&lt;li>二把手(Ext)收到小弟(App)的求助，也会马上去求助一把手(Bootstrap)。&lt;/li>
+&lt;li>一把手(Bootstrap)没有更上级可以求助，于是看看自己能否加载，如果不能，就把权力下放给二把手(Ext)。&lt;/li>
+&lt;li>二把手(Ext)一样的处理逻辑，如果不能加载，就把权力下放给小弟(App)。&lt;/li>
+&lt;li>绕了这么一大圈，小弟(App)还得自己加载。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>这套加载规则，就是双亲委派模型，Parents Delegation Model，也被称为溯源委派加载模型。&lt;/p>
+&lt;p>为啥JVM为这种加载规则取了这么奇怪的名字？&lt;/p>
+&lt;p>笔者听到一个段子觉得比较贴切——说，类加载的相对唯一性就是&amp;rdquo;&lt;strong>渣男逻辑&lt;/strong>&amp;quot;，而双亲委派模型就是&amp;rdquo;&lt;strong>妈宝模型&lt;/strong>&amp;quot;：&lt;/p>
+&lt;blockquote>
+&lt;p>小明(App)的家庭作业不会做，就叫妈妈(Ext)帮忙做。&lt;/p>
+&lt;p>妈妈(Ext)有点忙就叫奶奶(Bootstrap)做。&lt;/p>
+&lt;p>奶奶(Bootstrap)说我现在不舒服，还是妈妈(Ext)做吧。&lt;/p>
+&lt;p>妈妈(Ext)说我现在忙着做饭，小明(App)你自己来吧。&lt;/p>
+&lt;p>小明(App)看绕了一圈，还得自己做作业。&lt;/p>
+&lt;/blockquote>
+&lt;p>理解清楚这个&amp;quot;双亲&amp;quot;的含义，我们就知道在很多讲JVM原理的文章中，提到的父级加载器、父类加载器，不是表示这三种类加载器是父子关系，而是上下级关系。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/4.png" alt="image-20201225075247217">&lt;/p>
+&lt;h1 id="6测试">6.测试&lt;/h1>
+&lt;p>我们用几个测试用例，验证一下：&lt;/p>
+&lt;h2 id="61验证三种类加载器的上下级关系">6.1.验证三种类加载器的上下级关系&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>代码：&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>先获得AppClassLoader，然后调用getParent()，获得上一级ClassLoader&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/5.png" alt="image-20201225093801335">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>运行结果：&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明AppClassLoader的上级是ExtClassLoader，ExtClassLoader的上级是Bootrap(C++实现，所以打印为null)&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/6.png" alt="image-20201225094741928">&lt;/p>
+&lt;h2 id="62验证bootstrapclassloader已经加载的类">6.2.验证BootstrapClassLoader已经加载的类&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>代码&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>通过getBootstrapClassPath，获得Bootstrap加载器已经加载的类&lt;/p>
+&lt;p>再找到Bootstrap加载器已经加载的某一个类对应的类加载器，反过来验证它的类加载器是否是Bootstrap。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/7.png" alt="image-20201225095543911">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>运行结果&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Bootstrap的职责是加载JVM自身需要的类，目录如下图：&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/8.png" alt="image-20201225095633865">&lt;/p>
+&lt;h2 id="63验证extclassloader已经加载的类">6.3.验证ExtClassLoader已经加载的类&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>代码&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>获得java.ext.dirs对应的文件路径，再选择该路径下的类，查看类加载器类型&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/9.png" alt="image-20201225100147120">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>运行结果&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>ExtClassLoader的职责是加载java.ext.dirs下的类&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/10.png" alt="image-20201225100228926">&lt;/p>
+&lt;h2 id="64尝试破坏javalang包">6.4.尝试破坏java.lang包&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>代码&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>自建一个java.lang.String类&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/11.png" alt="image-20201225101209635">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/12.png" alt="image-20201225101245483">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>运行结果&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>类加载器加载的时候，认为这是一个被禁止的包路径，防御了我们伪造java.lang包下的基础类&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/13.png" alt="image-20201225101409744">&lt;/p>
+&lt;h1 id="7总结">7.总结&lt;/h1>
+&lt;p>类加载器是类加载机制的具体实现，本文讲解了如下知识点：&lt;/p>
+&lt;ul>
+&lt;li>类加载器的分类&lt;/li>
+&lt;li>类加载器的相对唯一性&lt;/li>
+&lt;li>双亲委派模型&lt;/li>
+&lt;li>通过代码，验证了：
+&lt;ul>
+&lt;li>类加载器之间的上下级关系&lt;/li>
+&lt;li>Bootstrap、Ext类加载器的职责&lt;/li>
+&lt;li>JVM如何防御我们对核心库的破坏行为&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="8参考">8.参考&lt;/h1>
+&lt;blockquote>
+&lt;p>《深入理解Java虚拟机》-周志明&lt;/p>
+&lt;/blockquote></description></item><item><title>【运行时数据区】-0-用仓库管理员的视角理解运行时数据区</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</link><pubDate>Thu, 05 Aug 2021 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</guid><description>&lt;h1 id="0x01面试题">0x01.面试题&lt;/h1>
 &lt;p>&amp;ldquo;运行时数据区&amp;quot;是JVM面试题的热门考点。&lt;/p>
 &lt;p>实战中，内存泄露的定位、性能调优，往往也取决于我们对&amp;quot;运行时数据区&amp;quot;理解深度。&lt;/p>
 &lt;p>以下面试题来自百度搜索：&lt;/p>

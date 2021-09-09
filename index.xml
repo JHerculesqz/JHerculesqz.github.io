@@ -198,7 +198,294 @@
 &lt;h3 id="322java10新特性">3.2.2.Java10新特性&lt;/h3>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083115018.png" alt="image-20210822083115018">&lt;/p>
 &lt;h3 id="323java11新特性">3.2.3.Java11新特性&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083247655.png" alt="image-20210822083247655">&lt;/p></description></item><item><title>【Java新特性】-2-Java9新特性宏观解读</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/</link><pubDate>Sun, 22 Aug 2021 10:00:59 +0805</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>Java9命运多舛，一次次跳票(据说经历了4次跳票)，极大地影响了Java开发者的信心。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-0-%E6%80%8E%E4%B9%88%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5%E5%9C%B0%E5%AD%A6%E4%B9%A0Java%E6%96%B0%E7%89%B9%E6%80%A7/image-20210822083247655.png" alt="image-20210822083247655">&lt;/p></description></item><item><title>【Java新特性】-3-Java9的类加载机制变化</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/</link><pubDate>Sun, 22 Aug 2021 10:01:59 +0805</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/</guid><description>&lt;h1 id="1why">1.Why&lt;/h1>
+&lt;p>在Java Bug System中，我们可以看到Java9与ClassLoader相关的一系列issue：&lt;/p>
+&lt;blockquote>
+&lt;p>JDK-8170294：java.lang: Define behaviour of &lt;code>null&lt;/code> resource name&lt;/p>
+&lt;p>JDK-8161230：java.lang: Add &lt;code>ClassLoader.resources()&lt;/code>&lt;/p>
+&lt;p>JDK-8165346：java.lang: Specify exceptional condition for &lt;code>get*Package()&lt;/code>&lt;/p>
+&lt;p>JDK-8165793：java.lang: Add &lt;code>ClassLoader.isRegisteredAsParallelCapable()&lt;/code>&lt;/p>
+&lt;p>JDK-6516909：java.lang: Enhanced &lt;code>ClassLoader&lt;/code> with respect to loading array classes&lt;/p>
+&lt;p>JDK-8165563：java.lang: Update &lt;code>ClassLoader.getSystemClassLoader()&lt;/code>&lt;/p>
+&lt;p>JDK-7180225：java.lang: Declare &lt;code>SecurityException&lt;/code> consistently in class loader methods&lt;/p>
+&lt;p>JDK-8155770：Networking: Document support of &lt;code>jar:&lt;/code> scheme URLs in &lt;code>URLClassLoader&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>这些Issue表明了两个信息：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>变化&lt;/strong>：在Java9，JVM的类加载机制发生了变化。&lt;/li>
+&lt;li>&lt;strong>变化不大&lt;/strong>：JVM类加载机制的变化不大。如果有较大的变化，就不会只通过几个issue来实施，应该通过JEP来落地。&lt;/li>
+&lt;/ul>
+&lt;p>进一步思考一下，不难理解&lt;code>为什么JVM会出现类加载机制的变化?&lt;/code>：&lt;/p>
+&lt;p>以&lt;code>Ext ClassLoader&lt;/code>为例：&lt;/p>
+&lt;p>在Java9之前，JDK为了具有扩展性，会将&lt;code>扩展&lt;/code>的jar包放到&lt;code>&amp;lt;JAVA_HOME&amp;gt;\lib\ext&lt;/code>和&lt;code>java.ext.dirts&lt;/code>下，&lt;code>Ext ClassLoader&lt;/code>负责加载这些&lt;code>扩展包&lt;/code>。&lt;/p>
+&lt;p>而从Java9开始，Java9引入了&lt;code>JPMS(Java Platform Module System)&lt;/code>，模块化机制帮助Java类库天然地具备扩展性。&lt;/p>
+&lt;p>因此，原来的扩展机制可以废弃掉，用来加载这些路径类库的类加载器——&lt;code>Ext ClassLoader&lt;/code>也就完成了它的历史使命。&lt;/p>
+&lt;blockquote>
+&lt;p>说明：Java9中，基于JPMS机制，tools.jar、rt.jar从物理层面上被拆分成了10+个jmod文件。&lt;/p>
+&lt;/blockquote>
+&lt;p>至于，类加载机制的变化不大，说明Java9不会因为JPMS而推翻JVM原有的&lt;code>双亲委派模型&lt;/code>和&lt;code>类加载机制&lt;/code>，只是为了在引入JPMS的同时，保证Java9的前向兼容性。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-3-Java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/image-20210909131341238.png" alt="image-20210909131341238">&lt;/p>
+&lt;h1 id="2变化点1新的双亲委派模型">2.变化点1：新的双亲委派模型&lt;/h1>
+&lt;p>在&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/">《【类加载机制】-1-类加载器剖析-类加载器速览》&lt;/a>中，笔者对Java8的双亲委派模型评价为&lt;code>&amp;quot;妈宝模型&amp;quot;&lt;/code>。&lt;/p>
+&lt;p>即，任何一个待加载的类，都要从&lt;code>Application ClassLoader&lt;/code>一路向上，问上级类加载器能否加载。&lt;/p>
+&lt;p>在Java9，因为有了JPMS机制，任何一个类一定都有归属的&lt;code>module&lt;/code>。&lt;/p>
+&lt;p>如果事先就定义好系统级的类加载器能够加载哪些系统级的&lt;code>module&lt;/code>，那么这些&lt;code>module&lt;/code>下的类就不必在加载的时候，都要走一圈&lt;code>向上级类加载器询问能否加载&lt;/code>的过程了。&lt;/p>
+&lt;p>新的双亲委派模型，本质上就是在原有的双亲委派模型的基础上，给各种类加载器约定了&lt;code>责任田&lt;/code>——即，谁的孩子谁直接带走。&lt;/p>
+&lt;p>下图对比了Java9前后的双亲委派模型差异。&lt;/p>
+&lt;p>比如：已知&lt;code>类A&lt;/code>归属于&lt;code>系统moduleB&lt;/code>，JVM已经约定&lt;code>系统moduleB&lt;/code>由&lt;code>BootStrap ClassLoader&lt;/code>加载，&lt;/p>
+&lt;p>因此，当加载类A时，如下图蓝色线，类A直接交给&lt;code>BootStrap ClassLoader&lt;/code>加载。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-3-Java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/image-20210909135001699.png" alt="image-20210909135001699">&lt;/p>
+&lt;p>附：Java9中各个类加载器默认加载的&lt;code>module&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>摘自《深入理解JVM》,周志明&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>BootStrap ClassLoader负责加载的模块：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>java.base&lt;/p>
+&lt;p>java.datatransfer&lt;/p>
+&lt;p>java.desktop&lt;/p>
+&lt;p>java.instrument&lt;/p>
+&lt;p>java.logging&lt;/p>
+&lt;p>java.management&lt;/p>
+&lt;p>java.management.rmi&lt;/p>
+&lt;p>java.naming&lt;/p>
+&lt;p>java.prefs&lt;/p>
+&lt;p>java.rmi&lt;/p>
+&lt;p>java.security.sasl&lt;/p>
+&lt;p>java.xml&lt;/p>
+&lt;p>jdk.httpserver&lt;/p>
+&lt;p>jdk.internal.vm.ci&lt;/p>
+&lt;p>jdk.management&lt;/p>
+&lt;p>jdk.management.agent&lt;/p>
+&lt;p>jdk.naming.rmi&lt;/p>
+&lt;p>jdk.net&lt;/p>
+&lt;p>jdk.sctp&lt;/p>
+&lt;p>jdk.unsupported&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>Platform ClassLoader负责的&lt;code>module&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>java.activation*&lt;/p>
+&lt;p>java.compiler*&lt;/p>
+&lt;p>java.corba*&lt;/p>
+&lt;p>java.scripting&lt;/p>
+&lt;p>java.se&lt;/p>
+&lt;p>java.se.ee&lt;/p>
+&lt;p>java.security.jgss&lt;/p>
+&lt;p>java.smartcardio&lt;/p>
+&lt;p>java.sql&lt;/p>
+&lt;p>java.sql.rowset&lt;/p>
+&lt;p>java.transaction*&lt;/p>
+&lt;p>java.xml.bind*&lt;/p>
+&lt;p>java.xml.crypto&lt;/p>
+&lt;p>java.xml.ws*&lt;/p>
+&lt;p>java.xml.ws.annotation*&lt;/p>
+&lt;p>jdk.accessibility&lt;/p>
+&lt;p>jdk.charsets&lt;/p>
+&lt;p>jdk.crypto.cryptoki&lt;/p>
+&lt;p>jdk.crypto.ec&lt;/p>
+&lt;p>jdk.dynalink&lt;/p>
+&lt;p>jdk.incubator.httpclient&lt;/p>
+&lt;p>jdk.internal.vm.compiler*&lt;/p>
+&lt;p>jdk.jsobject&lt;/p>
+&lt;p>jdk.localedata&lt;/p>
+&lt;p>jdk.naming.dns&lt;/p>
+&lt;p>jdk.scripting.nashorn&lt;/p>
+&lt;p>jdk.security.auth&lt;/p>
+&lt;p>jdk.security.jgss&lt;/p>
+&lt;p>jdk.xml.dom&lt;/p>
+&lt;p>jdk.zipfs&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>App ClassLoader负责加载的&lt;code>module&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>jdk.aot&lt;/p>
+&lt;p>jdk.attach&lt;/p>
+&lt;p>jdk.compiler&lt;/p>
+&lt;p>jdk.editpad&lt;/p>
+&lt;p>jdk.hotspot.agent&lt;/p>
+&lt;p>jdk.internal.ed&lt;/p>
+&lt;p>jdk.internal.jvmstat&lt;/p>
+&lt;p>jdk.internal.le&lt;/p>
+&lt;p>jdk.internal.opt&lt;/p>
+&lt;p>jdk.jartool&lt;/p>
+&lt;p>jdk.javadoc&lt;/p>
+&lt;p>jdk.jcmd&lt;/p>
+&lt;p>jdk.jconsole&lt;/p>
+&lt;p>jdk.jdeps&lt;/p>
+&lt;p>jdk.jdi&lt;/p>
+&lt;p>jdk.jdwp.agent&lt;/p>
+&lt;p>jdk.jlink&lt;/p>
+&lt;p>jdk.jshell&lt;/p>
+&lt;p>jdk.jstatd&lt;/p>
+&lt;p>jdk.pack&lt;/p>
+&lt;p>jdk.policytool&lt;/p>
+&lt;p>jdk.rmic&lt;/p>
+&lt;p>jdk.scripting.nashorn.shell&lt;/p>
+&lt;p>jdk.xml.bind*&lt;/p>
+&lt;p>jdk.xml.ws*&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="3变化点2classloader的类层次关系">3.变化点2：ClassLoader的类层次关系&lt;/h1>
+&lt;ul>
+&lt;li>在Java9之前，JDK没有提供&lt;code>BootStrapClassLoader&lt;/code>类，&lt;code>ExtClassLoader&lt;/code>类和&lt;code>AppClassLoader&lt;/code>类继承于URLClassLoader。&lt;/li>
+&lt;li>在Java9之后，JDK提供了&lt;code>BootClassLoader&lt;/code>类，同时&lt;code>BootClassLoader&lt;/code>、&lt;code>PlatformClassLoader&lt;/code>、&lt;code>AppClassLoader&lt;/code>类继承于&lt;code>BuiltinClassLoader&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-3-Java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/image-20210909145749490.png" alt="image-20210909145749490">&lt;/p>
+&lt;p>查看Java9的&lt;code>BuiltinClassLoader::loadClass()&lt;/code>方法源码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">protected&lt;/span> &lt;span class="n">Class&lt;/span>&lt;span class="o">&amp;lt;?&amp;gt;&lt;/span> &lt;span class="n">loadClassOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">cn&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="n">resolve&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="kd">synchronized&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">getClassLoadingLock&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// check if already loaded
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">Class&lt;/span>&lt;span class="o">&amp;lt;?&amp;gt;&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">findLoadedClass&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// find the candidate module for this class
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">LoadedModule&lt;/span> &lt;span class="n">loadedModule&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">findLoadedModule&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">loadedModule&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// package is in a module
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">BuiltinClassLoader&lt;/span> &lt;span class="n">loader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">loadedModule&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">loader&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">loader&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">VM&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isModuleSystemInited&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">findClassInModuleOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">loadedModule&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// delegate to the other loader
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">loader&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">loadClassOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// check parent
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">parent&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">loadClassOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">// check class path
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">hasClassPath&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">VM&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isModuleSystemInited&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">findClassOnClassPathOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">resolve&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="n">resolveClass&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以看到：JVM优先从&lt;code>module&lt;/code>中查找是否加载了待加载的类：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="c1">// find the candidate module for this class
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">loadedModule&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// package is in a module
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">BuiltinClassLoader&lt;/span> &lt;span class="n">loader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">loadedModule&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">loader&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">loader&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">VM&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isModuleSystemInited&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">findClassInModuleOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">loadedModule&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// delegate to the other loader
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">loader&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">loadClassOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当待加载类不归属于&lt;code>系统级module&lt;/code>，则还是沿用原来的双亲委派模型去加载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// check parent
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">parent&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">loadClassOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">// check class path
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">hasClassPath&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">VM&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isModuleSystemInited&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">findClassOnClassPathOrNull&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cn&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="4参考">4.参考&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">深入理解JVM——周志明
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【Java新特性】-2-Java9新特性宏观解读</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/</link><pubDate>Sun, 22 Aug 2021 10:00:59 +0805</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>Java9命运多舛，一次次跳票(据说经历了4次跳票)，极大地影响了Java开发者的信心。&lt;/p>
 &lt;p>在·www.reddit.com·上，能看到诸如： &lt;a href="https://www.reddit.com/r/java/comments/5mrubn/so_how_do_you_feel_about_java_9/">&amp;lsquo;Java 9, it did break some things,&amp;rsquo; Oracle bod admits to devs still clinging to version 8&lt;/a>这类讨论，这些讨论中充满了Java开发者的不安与焦虑。&lt;/p>
 &lt;p>但这些讨论过于强调Java9的某些单点特性和跳票本身。&lt;/p>
 &lt;p>显然，不是局部特性的成败，就能决定Java9的成败。&lt;/p>

@@ -567,7 +567,7 @@ StackWalkerTest.stackWalker avgt 3 1.159 ± 2.166 us/op
 &lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">native&lt;/span> &lt;span class="n">R&lt;/span> &lt;span class="nf">callStackWalk&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="kt">long&lt;/span> &lt;span class="n">mode&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">skipframes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">batchSize&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">startIndex&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">frames&lt;/span>&lt;span class="o">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>暂时没有再深入到JVM的源码，但可以脑补一下，JVM层抓取虚拟机栈的机制不可能有极大的变化，及时做了特殊处理，也不可能有极大的性能提升。&lt;/p>
+&lt;/div>&lt;p>暂时没有再深入到JVM的源码，但可以脑补一下，JVM层抓取虚拟机栈的机制不可能有极大的变化，即使做了特殊处理，也不可能有极大的性能提升。&lt;/p>
 &lt;p>综合上述测试结果和源码分析，我们基本可以得到这样的结论：&lt;strong>&lt;code>StackWalker::getCallerClass()&lt;/code>性能方面没有太大的变化&lt;/strong>。&lt;/p>
 &lt;h3 id="532get的范围-limitestimatedepthskip">5.3.2.get的范围-limit、estimateDepth、skip&lt;/h3>
 &lt;p>先看一下比较常用的对walk的Stream处理：&lt;/p>
@@ -1054,7 +1054,6 @@ ToStringTest.stackWalker avgt 3 20.032 ± 27.051 us/op
 &lt;p>Log4J的程序猿最后定位的原因是业务侧没有使用&lt;code>private static final&lt;/code>修饰logger对象，同时业务侧采用的是ZGC，&lt;/p>
 &lt;p>而logger对象记录日志时又调用了&lt;code>StackWalker&lt;/code>，StackWalker调用JVM::fetch接口时在C++的代码中产生的栈帧对象又不会被ZGC回收(ZGC的Bug)，而C++代码中的栈帧对象又是以Map的形式存储，当Map中的对象越来越多，Hash冲突就越多，于是越查找越慢，最后JVM不断消耗CPU。。。&lt;/p>
 &lt;p>这也是触动笔者较大的感触：学习标准库的初级境界是&amp;rdquo;&lt;strong>能用&lt;/strong>&amp;quot;，高级的境界是&amp;rdquo;&lt;strong>用好&lt;/strong>&amp;quot;，&amp;ldquo;用好&amp;quot;的关键有依赖于程序猿的&lt;strong>基本功&lt;/strong>与&lt;strong>探索力&lt;/strong>：&lt;/p>
-&lt;p>学习标准库的初级境界是&amp;rdquo;&lt;strong>能用&lt;/strong>&amp;quot;，高级的境界是&amp;rdquo;&lt;strong>用好&lt;/strong>&amp;quot;，&amp;ldquo;用好&amp;quot;的关键有依赖于程序猿的&lt;strong>基本功&lt;/strong>与&lt;strong>探索力&lt;/strong>：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>基本功&lt;/strong>：面对一种编程语言，基本功往往是先验知识。
 &lt;ul>

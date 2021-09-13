@@ -1,0 +1,492 @@
+<!doctype html><html lang=zh-cn itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>【Java新特性】-4-Java9-StackWalker - 妙木山</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=yes"><meta name=MobileOptimized content="width"><meta name=HandheldFriendly content="true"><meta name=applicable-device content="pc,mobile"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=mobile-web-app-capable content="yes"><meta name=author content="猴王无敌"><meta name=description content="1.困扰 每一个JEP都会通过Motivation描述改进的目标，通过Summary描述改进的内容，通过Description描述改进的细节与"><meta name=keywords content="Java9新特性,Java新特性,Java拾遗,妙木山"><meta name=generator content="Hugo 0.74.2"><link rel=canonical href=https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-4-java9-stackwalker/><link rel=icon href=/favicon.ico><link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous><meta property="og:title" content="【Java新特性】-4-Java9-StackWalker"><meta property="og:description" content="1.困扰 每一个JEP都会通过Motivation描述改进的目标，通过Summary描述改进的内容，通过Description描述改进的细节与"><meta property="og:type" content="article"><meta property="og:url" content="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-4-java9-stackwalker/"><meta property="article:published_time" content="2021-08-22T10:02:59+08:05"><meta property="article:modified_time" content="2021-08-22T10:02:59+08:05"><meta itemprop=name content="【Java新特性】-4-Java9-StackWalker"><meta itemprop=description content="1.困扰 每一个JEP都会通过Motivation描述改进的目标，通过Summary描述改进的内容，通过Description描述改进的细节与"><meta itemprop=datePublished content="2021-08-22T10:02:59+08:05"><meta itemprop=dateModified content="2021-08-22T10:02:59+08:05"><meta itemprop=wordCount content="8355"><meta itemprop=keywords content="Java拾遗-Java新特性,"><meta name=twitter:card content="summary"><meta name=twitter:title content="【Java新特性】-4-Java9-StackWalker"><meta name=twitter:description content="1.困扰 每一个JEP都会通过Motivation描述改进的目标，通过Summary描述改进的内容，通过Description描述改进的细节与"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>妙木山</a></div><div class=mobile-navbar-icon><span></span><span></span><span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/>首页</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/categories/>技术专栏</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/tags/>Tags</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/post/>全部文章</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/about/>关于</a></li></ul></nav><link rel=stylesheet href=/lib/photoswipe/photoswipe.min.css><link rel=stylesheet href=/lib/photoswipe/default-skin/default-skin.min.css><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header id=header class="header container"><div class=logo-wrapper><a href=/ class=logo>妙木山</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/>首页</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/categories/>技术专栏</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/post/>全部文章</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/about/>关于</a></li></ul></nav></header><div id=mobile-panel><main id=main class="main bg-llight"><div class=content-wrapper><div id=content class="content container"><article class="post bg-white"><header class=post-header><h1 class=post-title>【Java新特性】-4-Java9-StackWalker</h1><div class=post-meta><time datetime=2021-08-22 class=post-time>2021-08-22</time><div class=post-category><a href=https://jherculesqz.github.io/categories/java%E6%8B%BE%E9%81%97/>Java拾遗</a></div><span class=more-meta>约 8355 字</span>
+<span class=more-meta>预计阅读 17 分钟</span>
+<span id=busuanzi_container_page_pv>| 阅读 <span id=busuanzi_value_page_pv></span></span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class=post-toc-content><nav id=TableOfContents><ul><li><a href=#1困扰>1.困扰</a></li><li><a href=#2基础知识回顾虚拟机栈>2.基础知识回顾：虚拟机栈</a></li><li><a href=#3为什么要获得虚拟机栈>3.为什么要获得虚拟机栈？</a></li><li><a href=#4how能用>4.How：能用</a><ul><li><a href=#41getinstance--foreach>4.1.getInstance + forEach</a></li><li><a href=#42getinstance--walk>4.2.getInstance + walk</a></li></ul></li><li><a href=#5how用好>5.How：用好</a><ul><li><a href=#51安全性-walk为什么禁止返回stream>5.1.安全性-walk()为什么禁止返回Stream？</a></li><li><a href=#52易用性-getcallerclass-简化get方式>5.2.易用性-getCallerClass()-简化get方式</a></li><li><a href=#53性能>5.3.性能</a><ul><li><a href=#531get的方式-getcallerclass>5.3.1.get的方式-getCallerClass</a></li><li><a href=#532get的范围-limitestimatedepthskip>5.3.2.get的范围-limit、estimateDepth、skip</a></li><li><a href=#533get结果的处理-stackframe>5.3.3.get结果的处理-StackFrame</a></li></ul></li></ul></li><li><a href=#6思考>6.思考</a></li><li><a href=#7参考>7.参考</a></li></ul></nav></div></div><div class=post-content><h1 id=1困扰>1.困扰</h1><p>每一个JEP都会通过<code>Motivation</code>描述改进的目标，通过<code>Summary</code>描述改进的内容，通过<code>Description</code>描述改进的细节与效果。</p><p>但，对于<code>StackWalker</code>这类<strong>新增、修改API</strong>的JEP，往往看完以后会有一种"眼睛会了手不会"的感觉(阅读它们的javadoc，也有同样的感觉)。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210911112706063.png alt=image-20210911112706063></p><p>以JEP259和<code>StackWalker</code>的javadoc为例：</p><blockquote><p><strong>摘自 JEP259-Motivation章节</strong>：</p><p>There is no standard API to traverse selected frames on the execution stack efficiently and access the <code>Class</code> instance of each frame.</p><p>There are existing APIs that provide access to a thread&rsquo;s stack:</p><ul><li><code>Throwable::getStackTrace</code> and <code>Thread::getStackTrace</code> return an array of <code>StackTraceElement</code> objects, which contain the class name and method name of each stack-trace element.</li><li><code>SecurityManager::getClassContext</code> is a protected method, which allows a <code>SecurityManager</code> subclass to access the class context.</li></ul><p>………………</p><p><strong>摘自JEP259</strong>：Summary</p><p>Define an efficient standard API for stack walking that allows easy filtering of, and lazy access to, the information in stack traces.</p><p>………………</p><p><strong>摘自javadoc：</strong></p><p>A stack walker.</p><p>The walk method opens a sequential stream of StackFrames for the current thread and then applies the given function to walk the StackFrame stream.</p><p>The stream reports stack frame elements in order, from the top most frame that represents the execution point at which the stack was generated to the bottom most frame.</p><p>The StackFrame stream is closed when the walk method returns. If an attempt is made to reuse the closed stream, IllegalStateException will be thrown.</p></blockquote><p>大意就是说，如果Java程序猿想获得虚拟机栈，用老的API(<code>Throwable::getStackTrace</code>)，即不易用，也不高性能。新的API(<code>StackWalker</code>)已经完美的解决了这个问题。</p><p>阅读完JEP，笔者情不自禁地产生了若干疑问：</p><ul><li>为什么需要获得虚拟机栈？<ul><li>前提：我们已经理解了虚拟机栈的相关基础知识。</li></ul></li><li>为啥返回了<code>Stream</code>就要抛<code>IllegalStateException </code>？</li><li>过滤就能提升性能？——假设被搜索的全集是线性的，那么获得子集和获得全集的性能损耗似乎只有对象的创建。</li><li>什么是<code>lazy access</code>？</li><li>……</li></ul><p>这可能就是产生"眼睛会了手不会"困扰的根源：</p><ul><li>JEP和javadoc默认我们已经具备了这个API相关的先验知识。<ul><li>比如：<code>StackWalker</code>的JEP已经默认我们理解了虚拟机栈、虚拟机栈帧等。</li><li>比如：<code>StackWalker</code>的Javadoc默认我们理解JIT可能进行的栈上优化的影响。</li></ul></li><li>JEP和javadoc无法在有限的篇幅展开技术细节，只能描述技术结论。<ul><li>比如：<code>StackWalker</code>的JEP只能描述它的性能优于老的API，却无法展开阐述它是开展的性能优化，我们不了解完整的性能优化逻辑链，就有可能错误地使用<code>StackWalker</code>的API(甚至，大名鼎鼎的log4j团队也在StackWalker踩过坑，见后文)。</li></ul></li></ul><h1 id=2基础知识回顾虚拟机栈>2.基础知识回顾：虚拟机栈</h1><ul><li>在JVM的运行时数据区中，有一块区域叫做"虚拟机栈&rdquo;</li><li>JVM为每个线程维护一个虚拟机栈。</li><li>每个虚拟机栈中包含若干栈帧。</li><li>每个栈帧对应一个方法<ul><li>比如：线程1从函数1开始，函数1调用函数2，那么JVM会为线程1开辟1个虚拟机栈，函数1栈帧和函数2栈帧依次入栈，函数2执行完出栈，函数1继续执行完成后出栈。</li></ul></li><li>每个栈帧的最关键信息是操作数栈，每个操作数栈存储的就是这个函数的实现。<ul><li>操作数栈存储的内容是JVM指令序列，JVM就是在执行这个指令序列来执行这个函数体。</li></ul></li></ul><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210911115656192.png alt=image-20210911115656192></p><h1 id=3为什么要获得虚拟机栈>3.为什么要获得虚拟机栈？</h1><p>根据<code>1.基础知识回顾：虚拟机栈</code>，我们知道虚拟机栈可以反应某个线程内，函数的调用链，比如：</p><ul><li>场景1：业务代码从main函数开始，层层调用了哪些函数？</li><li>场景2：业务代码启动了某个线程，这个线程内部层层调用了哪些函数？</li></ul><p>什么时候需要获得"函数调用链"呢？比如：</p><ul><li>日志组件log4j，它打印错误日志的时候，就需要打印出"函数调用链&rdquo;。</li><li>安全检查的时候，我们可以通过"函数调用链"识别是否有不安全的调用者、不安全的调用链路。</li></ul><h1 id=4how能用>4.How：能用</h1><p>StackWalker提供了4种方法：</p><ul><li><strong>getInstace</strong>：获得StackWalker实例</li><li><strong>forEach</strong>：遍历栈帧</li><li><strong>walk</strong>：通过Stream方式遍历栈帧</li><li><strong>其它</strong>：getCallerClass()</li></ul><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210911162315472.png alt=image-20210911162315472></p><p>从实战角度，有两种使用方式：</p><ul><li>getInstance + forEach</li><li>getInstance + walk</li></ul><h2 id=41getinstance--foreach>4.1.getInstance + forEach</h2><p>先看一下<code>getInstance和forEach</code>结合使用的实例代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>// getInstance + forEach
+</span><span class=c1></span><span class=n>StackWalker</span> <span class=n>stackWalker</span> <span class=o>=</span> <span class=n>StackWalker</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>Option</span><span class=o>.</span><span class=na>RETAIN_CLASS_REFERENCE</span><span class=o>);</span>
+<span class=n>stackWalker</span><span class=o>.</span><span class=na>forEach</span><span class=o>(</span><span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>::</span><span class=n>println</span><span class=o>);</span>
+</code></pre></td></tr></table></div></div><p><code>forEach</code>方法等效于</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>stackWalker</span><span class=o>.</span><span class=na>walk</span><span class=o>((</span><span class=n>s</span><span class=o>)</span> <span class=o>-&gt;</span> <span class=o>{</span>
+    <span class=n>s</span><span class=o>.</span><span class=na>forEach</span><span class=o>(</span><span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>::</span><span class=n>println</span><span class=o>);</span>
+    <span class=k>return</span> <span class=kc>null</span><span class=o>;</span>
+<span class=o>});</span>
+</code></pre></td></tr></table></div></div><h2 id=42getinstance--walk>4.2.getInstance + walk</h2><p>再看一下<code>getInstance和walk</code>结合使用的实例代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>// getInstance + walk
+</span><span class=c1></span><span class=n>StackWalker</span> <span class=n>stackWalker</span> <span class=o>=</span> <span class=n>StackWalker</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>Option</span><span class=o>.</span><span class=na>RETAIN_CLASS_REFERENCE</span><span class=o>);</span>
+<span class=n>List</span><span class=o>&lt;</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>StackFrame</span><span class=o>&gt;</span> <span class=n>stack</span> <span class=o>=</span> <span class=n>stackWalker</span><span class=o>.</span><span class=na>walk</span><span class=o>((</span><span class=n>s</span><span class=o>)</span> <span class=o>-&gt;</span> <span class=n>s</span><span class=o>.</span><span class=na>collect</span><span class=o>(</span><span class=n>Collectors</span><span class=o>.</span><span class=na>toList</span><span class=o>()));</span>
+<span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>stack</span><span class=o>.</span><span class=na>toString</span><span class=o>());</span>
+</code></pre></td></tr></table></div></div><p>通常，面向谷歌编程的我们，都能对<code>StackWalker</code>了解到这个程度。但想在实战中用好它，还需要进一步探索。</p><h1 id=5how用好>5.How：用好</h1><h2 id=51安全性-walk为什么禁止返回stream>5.1.安全性-walk()为什么禁止返回Stream？</h2><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210911164640764.png alt=image-20210911164640764></p><p>如上图所示，<code>walk方法</code>的入参<code>function</code>，这个回调的输入是<code>Stream&lt;StackFrame></code>，返回值是T。<code>walk方法</code>的返回值也是T。</p><p>从语法上，显然可以通过<code>function</code>将<code>Stream&lt;StackFrame></code>作为<code>walk方法</code>的返回值保存下来。我们可以对保存下来的Stream继续进行二次操作。但运行结果是抛出了异常<code>IllegalStateException </code>。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>// 返回了Stream
+</span><span class=c1></span><span class=n>Stream</span><span class=o>&lt;</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>StackFrame</span><span class=o>&gt;</span> <span class=n>returnStreamError</span> <span class=o>=</span> <span class=n>stackWalker</span><span class=o>.</span><span class=na>walk</span><span class=o>(</span><span class=n>frames</span> <span class=o>-&gt;</span> <span class=n>frames</span><span class=o>);</span>
+<span class=c1>// 继续对Stream进行操作
+</span><span class=c1></span><span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>returnStreamError</span><span class=o>.</span><span class=na>count</span><span class=o>());</span>
+</code></pre></td></tr></table></div></div><p>我们很容易这样想：当我们在某个时刻调用walk方法时，walk方法通过调用JVM底层某个API获得此时此刻的调用栈的快照，那么我们将这个调用栈快照以Stream的形式保存下来进行二次操作，似乎是逻辑合理的。为什么这个API要禁止这种行为呢？</p><p>然而，逻辑合理不代表<strong>安全</strong>：基于JVM在运行时的栈优化原理，JVM可能出于性能优化的理由，在任意时刻改变当前的栈结构进行修改。因此，不仅我们保存Stream的行为不安全，每次调用<code>StackWalker#walk()</code>方法时，都要重新调用JVM侧的native方法，重新对本次调用时刻的虚拟机栈进行快照：</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210911174312200.png alt=image-20210911174312200></p><blockquote><p>说明：上述截图，来自于StackStreamFactory.java#callStackWalk方法</p></blockquote><h2 id=52易用性-getcallerclass-简化get方式>5.2.易用性-getCallerClass()-简化get方式</h2><p>在实战中，我们会有这样一种需求：<code>获得调用者的Class对象</code>。</p><p>在Java9之前，我们除了通过反射法，还有一种"曲线救国"的手段：</p><ul><li>STEP1.继承SecurityMananger，提供一个<code>SecurityManager::getClassContext</code>方法的包装接口。<ul><li><code>SecurityManager::getClassContext</code>方法可以返回调用栈的Class数组。</li><li><code>SecurityManager::getClassContext</code>方法是protected类型的方法。</li><li><code>SecurityManager::getClassContext</code>方法的内部实现是调用了native方法——<code>protected native Class&lt;?>[] getClassContext()</code>。</li></ul></li></ul><blockquote><p>说明：反射法就是先通过Thread::getStackTrace方法获得调用者的类标识符，再通过反射进而获得调用者的Class对象</p></blockquote><p>我们通过示例代码来感受一下这种"曲线救国"的手段：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>// 自定义SecurityManager
+</span><span class=c1></span><span class=kd>public</span> <span class=kd>static</span> <span class=kd>class</span> <span class=nc>CustomSecurityManager</span> <span class=kd>extends</span> <span class=n>SecurityManager</span> <span class=o>{</span>
+    <span class=c1>// 暴露protected getClassContext()方法
+</span><span class=c1></span>    <span class=kd>public</span> <span class=n>Class</span><span class=o>&lt;?&gt;[]</span> <span class=n>getClassContextWrapper</span><span class=o>()</span> <span class=o>{</span>
+        <span class=k>return</span> <span class=n>getClassContext</span><span class=o>();</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+<span class=err>……</span>
+<span class=kd>private</span> <span class=kd>static</span> <span class=kd>class</span> <span class=nc>StackWalker3</span> <span class=o>{</span>
+    <span class=kd>private</span> <span class=kd>static</span> <span class=n>CustomSecurityManager</span> <span class=n>customSecurityManager</span> <span class=o>=</span> <span class=k>new</span> <span class=n>CustomSecurityManager</span><span class=o>();</span>
+
+    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>stackWalk3</span><span class=o>()</span> <span class=o>{</span>
+        <span class=c1>// get caller class
+</span><span class=c1></span>        <span class=n>Class</span><span class=o>&lt;?&gt;[]</span> <span class=n>clazzArrOld</span> <span class=o>=</span> <span class=n>customSecurityManager</span><span class=o>.</span><span class=na>getClassContextWrapper</span><span class=o>();</span>
+        <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>clazzArrOld</span><span class=o>[</span><span class=n>2</span><span class=o>].</span><span class=na>getName</span><span class=o>());</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+<span class=err>……</span>
+</code></pre></td></tr></table></div></div><p>这种方法比反射法的优点就是省略了自行反射，弊端是获取Class&lt;?>[]中第N个元素——因为这个数组表示的调用栈的size会随着调用者不同而变化，确定要获取哪个元素的索引，将会变成隐晦的"业务潜规则&rdquo;。</p><p>在Java9，有了<code>StackWalker</code>，我们再来体验一下新的访问方式：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>// get caller class
+</span><span class=c1></span><span class=n>Class</span><span class=o>&lt;?&gt;</span> <span class=n>clazzNew</span> <span class=o>=</span> <span class=n>stackWalker</span><span class=o>.</span><span class=na>getCallerClass</span><span class=o>();</span>
+<span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>clazzNew</span><span class=o>.</span><span class=na>getName</span><span class=o>());</span>
+</code></pre></td></tr></table></div></div><p>这样的感觉就很"舒服"了，一行代码就可以获得调用者的Class&lt;?>。</p><p><code>getCallerClass()</code>方法的内部实现，依然是调用了<code>walk</code>方法。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913083651592.png alt=image-20210913083651592></p><blockquote><p>说明：见JDK源码-StackStreamFactory.java</p></blockquote><h2 id=53性能>5.3.性能</h2><p>JEP259中强调了<code>StackWalker</code>提升了获取虚拟机栈的性能，归纳网上各种技术资料的观点：</p><ul><li><strong>观点1</strong>：<code>getCallerClass()</code>可以提升性能</li><li><strong>观点2</strong>：<code>limit、estimateDepth、skip</code>可以提升性能</li><li><strong>观点3</strong>：延迟加载<code>StackFrame</code>可以提升性能</li></ul><p><code>StackWalker</code>的本质是get的过程，</p><p>如果我们抽象一下get的过程，可以包括两个步骤：</p><ul><li><strong>STEP1.get</strong>：JDK层调用JVM的native接口，获得虚拟机此时此刻的栈帧集合。</li><li><strong>STEP2.返回get的结果集</strong>：JVM的native接口返回抓取的栈帧集合。</li></ul><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913115502150.png alt=image-20210913115502150></p><p>那么，我们可以脑补一下可行的性能优化措施：</p><ul><li><strong>约束get的范围</strong>：支持"分页查找&rdquo;，限制get的行为是获取部分栈帧集合。</li><li><strong>懒加载get的结果集</strong>：JVM层用C++实现，JDK层用Java实现，获得的栈帧集合需要从C++的内存数据转换为Java的内存数据。如果高频调用<code>StackWalker</code>提供的接口，频繁地反序列化栈帧集合的数据结构势必造成性能瓶颈。</li></ul><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913121844567.png alt=image-20210913121844567></p><p>基于上述推理，我们可以进一步猜测网上各种技术资料的3个观点是否有可能逻辑成立：</p><ul><li><strong>观点1可能没有显著的性能提升</strong>：<code>getCallerClass()</code>仅仅是对walk的包装函数，没有约束get的范围，同时结果集的数据结构也和<code>SecurityManager.getClassContext()</code>的不同，没有同等的可比性。因此，观点1可能是个性能提升的伪命题。</li><li><strong>观点2可能有性能提升</strong>：<code>limit、estimateDepth、skip</code>本质是在约束get的范围，有性能提升的可能性。</li><li><strong>观点3可能有性能提升</strong>：延迟加载<code>StackFrame</code>可以提升性能</li></ul><p>我们接下来从测试数据和JDK源码，逐一论证。</p><h3 id=531get的方式-getcallerclass>5.3.1.get的方式-getCallerClass</h3><p>一些文章说<code>getCallerClass()</code>的性能会优于<code>SecurityManager::getClassContext()</code>，经过实测，并没有太大的差距：</p><p>笔者写了一段测试代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@BenchmarkMode</span><span class=o>(</span><span class=n>Mode</span><span class=o>.</span><span class=na>AverageTime</span><span class=o>)</span>
+<span class=nd>@Warmup</span><span class=o>(</span><span class=n>iterations</span> <span class=o>=</span> <span class=n>3</span><span class=o>)</span>
+<span class=nd>@Measurement</span><span class=o>(</span><span class=n>iterations</span> <span class=o>=</span> <span class=n>3</span><span class=o>,</span> <span class=n>time</span> <span class=o>=</span> <span class=n>5</span><span class=o>,</span> <span class=n>timeUnit</span> <span class=o>=</span> <span class=n>TimeUnit</span><span class=o>.</span><span class=na>MICROSECONDS</span><span class=o>)</span>
+<span class=nd>@Threads</span><span class=o>(</span><span class=n>1</span><span class=o>)</span>
+<span class=nd>@Fork</span><span class=o>(</span><span class=n>1</span><span class=o>)</span>
+<span class=nd>@OutputTimeUnit</span><span class=o>(</span><span class=n>TimeUnit</span><span class=o>.</span><span class=na>MICROSECONDS</span><span class=o>)</span>
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>StackWalkerTest</span> <span class=o>{</span>
+    <span class=nd>@State</span><span class=o>(</span><span class=n>Scope</span><span class=o>.</span><span class=na>Benchmark</span><span class=o>)</span>
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kd>class</span> <span class=nc>ShareData</span> <span class=o>{</span>
+        <span class=kd>public</span> <span class=n>StackWalkerTest</span> <span class=n>comp1</span> <span class=o>=</span> <span class=k>new</span> <span class=n>StackWalkerTest</span><span class=o>();</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kd>class</span> <span class=nc>CustomSecurityManager</span> <span class=kd>extends</span> <span class=n>SecurityManager</span> <span class=o>{</span>
+        <span class=kd>public</span> <span class=n>Class</span><span class=o>&lt;?&gt;[]</span> <span class=n>getClassContextWrapper</span><span class=o>()</span> <span class=o>{</span>
+            <span class=k>return</span> <span class=n>getClassContext</span><span class=o>();</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+
+    <span class=kd>private</span> <span class=kd>static</span> <span class=kd>final</span> <span class=n>CustomSecurityManager</span> <span class=n>customSecurityManager</span> <span class=o>=</span> <span class=k>new</span> <span class=n>CustomSecurityManager</span><span class=o>();</span>
+
+    <span class=nd>@Benchmark</span>
+    <span class=kd>public</span> <span class=n>Object</span> <span class=nf>securityManager</span><span class=o>()</span> <span class=o>{</span>
+        <span class=k>return</span> <span class=n>customSecurityManager</span><span class=o>.</span><span class=na>getClassContextWrapper</span><span class=o>()[</span><span class=n>1</span><span class=o>];</span>
+    <span class=o>}</span>
+
+    <span class=nd>@Benchmark</span>
+    <span class=kd>public</span> <span class=n>Object</span> <span class=nf>stackWalker</span><span class=o>()</span> <span class=o>{</span>
+        <span class=k>return</span> <span class=n>StackWalker</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>Option</span><span class=o>.</span><span class=na>RETAIN_CLASS_REFERENCE</span><span class=o>).</span><span class=na>getCallerClass</span><span class=o>();</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>测试结果如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>Benchmark                        Mode  Cnt  Score   Error  Units
+StackWalkerTest.securityManager  avgt    3  1.112 ± 1.830  us/op
+StackWalkerTest.stackWalker      avgt    3  1.159 ± 2.166  us/op
+</code></pre></td></tr></table></div></div><p>从测试结果看，<code>getCallerClass()</code>并没有性能提升。</p><p>进一步对比JDK源码：</p><ul><li><code>SecurityManager::getClassContext()</code>最终调用了</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>native</span> <span class=n>Class</span><span class=o>&lt;?&gt;[]</span> <span class=n>getClassContext</span><span class=o>()</span>
+</code></pre></td></tr></table></div></div><ul><li><code>StackWalker::getCallerClass()</code>最终调用了</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>native</span> <span class=n>R</span> <span class=nf>callStackWalk</span><span class=o>(</span><span class=kt>long</span> <span class=n>mode</span><span class=o>,</span> <span class=kt>int</span> <span class=n>skipframes</span><span class=o>,</span> <span class=kt>int</span> <span class=n>batchSize</span><span class=o>,</span> <span class=kt>int</span> <span class=n>startIndex</span><span class=o>,</span> <span class=n>T</span><span class=o>[]</span> <span class=n>frames</span><span class=o>)</span>
+</code></pre></td></tr></table></div></div><p>暂时没有再深入到JVM的源码，但可以脑补一下，JVM层抓取虚拟机栈的机制不可能有极大的变化，及时做了特殊处理，也不可能有极大的性能提升。</p><p>综合上述测试结果和源码分析，我们基本可以得到这样的结论：<strong><code>StackWalker::getCallerClass()</code>性能方面没有太大的变化</strong>。</p><h3 id=532get的范围-limitestimatedepthskip>5.3.2.get的范围-limit、estimateDepth、skip</h3><p>先看一下比较常用的对walk的Stream处理：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>// filter1
+</span><span class=c1></span><span class=kd>final</span> <span class=n>List</span><span class=o>&lt;</span><span class=n>Class</span><span class=o>&lt;?&gt;&gt;</span> <span class=n>filter1</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;&gt;();</span>
+<span class=n>filter1</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>StackWalker1</span><span class=o>.</span><span class=na>class</span><span class=o>);</span>
+<span class=n>Optional</span><span class=o>&lt;</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>StackFrame</span><span class=o>&gt;</span> <span class=n>filter1Res</span> <span class=o>=</span> <span class=n>stackWalker</span>
+    <span class=o>.</span><span class=na>walk</span><span class=o>(</span><span class=n>s</span> <span class=o>-&gt;</span> <span class=n>s</span><span class=o>.</span><span class=na>filter</span><span class=o>(</span><span class=n>f</span> <span class=o>-&gt;</span> <span class=n>filter1</span><span class=o>.</span><span class=na>contains</span><span class=o>(</span><span class=n>f</span><span class=o>.</span><span class=na>getDeclaringClass</span><span class=o>())).</span><span class=na>findFirst</span><span class=o>());</span>
+<span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>filter1Res</span><span class=o>);</span>
+
+<span class=c1>// filter2
+</span><span class=c1></span><span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;Filter2:&#34;</span><span class=o>);</span>
+<span class=n>List</span><span class=o>&lt;</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>StackFrame</span><span class=o>&gt;</span> <span class=n>filter2</span> <span class=o>=</span> <span class=n>stackWalker</span><span class=o>.</span><span class=na>walk</span><span class=o>(</span><span class=n>s</span> <span class=o>-&gt;</span> <span class=n>s</span><span class=o>.</span><span class=na>limit</span><span class=o>(</span><span class=n>2</span><span class=o>).</span><span class=na>collect</span><span class=o>(</span><span class=n>Collectors</span><span class=o>.</span><span class=na>toList</span><span class=o>()));</span>
+<span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>filter2</span><span class=o>);</span>
+</code></pre></td></tr></table></div></div><p>写到这里，我们只能得到这样一个结论：</p><ul><li><strong>性能提升的可能性</strong>：<code>StackWalker.walk()</code>方法通过支持业务侧根据需要获得栈帧子集，这只是性能提升的可能性。<ul><li>如果业务侧需要获得栈帧的全集，那么也不能说这就是<code>StackWalker.walk()</code>方法性能提升的根因。</li></ul></li></ul><p>但，我们知道JDK提供的很多集合类，都存在&rdquo;<strong>初始容量</strong>&ldquo;问题，因此采用limit、skip方式限定get的范围可能有不同的性能表现。</p><h4 id=5321用limit限定get范围>5.3.2.1.用limit限定get范围</h4><p>栈本质是线性结构，如果栈帧数量为N，那么理论上不断增加limit的数量M，查询时间应该是线性递增的。</p><p>笔者写了这样一段测试代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@State</span><span class=o>(</span><span class=n>Scope</span><span class=o>.</span><span class=na>Benchmark</span><span class=o>)</span>
+<span class=nd>@BenchmarkMode</span><span class=o>(</span><span class=n>Mode</span><span class=o>.</span><span class=na>AverageTime</span><span class=o>)</span>
+<span class=nd>@Warmup</span><span class=o>(</span><span class=n>iterations</span> <span class=o>=</span> <span class=n>3</span><span class=o>)</span>
+<span class=nd>@Measurement</span><span class=o>(</span><span class=n>iterations</span> <span class=o>=</span> <span class=n>3</span><span class=o>,</span> <span class=n>time</span> <span class=o>=</span> <span class=n>5</span><span class=o>,</span> <span class=n>timeUnit</span> <span class=o>=</span> <span class=n>TimeUnit</span><span class=o>.</span><span class=na>MICROSECONDS</span><span class=o>)</span>
+<span class=nd>@Threads</span><span class=o>(</span><span class=n>1</span><span class=o>)</span>
+<span class=nd>@Fork</span><span class=o>(</span><span class=n>1</span><span class=o>)</span>
+<span class=nd>@OutputTimeUnit</span><span class=o>(</span><span class=n>TimeUnit</span><span class=o>.</span><span class=na>MICROSECONDS</span><span class=o>)</span>
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>LimitTest</span> <span class=o>{</span>
+    <span class=nd>@Param</span><span class=o>(</span><span class=n>value</span> <span class=o>=</span> <span class=o>{</span><span class=s>&#34;1&#34;</span><span class=o>,</span> <span class=s>&#34;2&#34;</span><span class=o>,</span> <span class=s>&#34;3&#34;</span><span class=o>,</span> <span class=s>&#34;4&#34;</span><span class=o>,</span> <span class=s>&#34;5&#34;</span><span class=o>,</span> <span class=s>&#34;6&#34;</span><span class=o>,</span> <span class=s>&#34;7&#34;</span><span class=o>,</span> <span class=s>&#34;8&#34;</span><span class=o>,</span> <span class=s>&#34;9&#34;</span><span class=o>,</span> <span class=s>&#34;10&#34;</span><span class=o>,</span> <span class=s>&#34;11&#34;</span><span class=o>,</span> <span class=s>&#34;12&#34;</span><span class=o>,</span> <span class=s>&#34;13&#34;</span><span class=o>,</span> <span class=s>&#34;14&#34;</span><span class=o>,</span> <span class=s>&#34;15&#34;</span><span class=o>,</span> <span class=s>&#34;16&#34;</span><span class=o>,</span> <span class=s>&#34;17&#34;</span><span class=o>,</span> <span class=s>&#34;18&#34;</span><span class=o>})</span>
+    <span class=kt>int</span> <span class=n>limit</span><span class=o>;</span>
+
+    <span class=kd>private</span> <span class=n>StackWalker</span> <span class=n>stackWalker</span> <span class=o>=</span> <span class=n>StackWalker</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>Option</span><span class=o>.</span><span class=na>RETAIN_CLASS_REFERENCE</span><span class=o>);</span>
+
+    <span class=nd>@Benchmark</span>
+    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>stackWalker</span><span class=o>(</span><span class=n>Blackhole</span> <span class=n>b</span><span class=o>)</span> <span class=o>{</span>
+        <span class=c1>// LimitTestObj构造了一个多级调用的调用栈
+</span><span class=c1></span>        <span class=n>LimitTestObj</span><span class=o>.</span><span class=na>test1</span><span class=o>(()</span> <span class=o>-&gt;</span> <span class=o>{</span>
+            <span class=c1>// 用limit处理Stream
+</span><span class=c1></span>            <span class=n>stackWalker</span><span class=o>.</span><span class=na>walk</span><span class=o>(</span><span class=n>s</span> <span class=o>-&gt;</span> <span class=o>{</span>
+                <span class=n>s</span><span class=o>.</span><span class=na>limit</span><span class=o>(</span><span class=n>limit</span><span class=o>).</span><span class=na>forEach</span><span class=o>(</span><span class=n>b</span><span class=o>::</span><span class=n>consume</span><span class=o>);</span>
+                <span class=k>return</span> <span class=kc>null</span><span class=o>;</span>
+            <span class=o>});</span>
+        <span class=o>});</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>附LimitTestObj代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>class</span> <span class=nc>LimitTestObj</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test1</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test2</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test2</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test3</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test3</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test4</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test4</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test5</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test5</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test6</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test6</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test7</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test7</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test8</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test8</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test9</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test9</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test10</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test10</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test11</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test11</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test12</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test12</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test13</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test13</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test14</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test14</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test15</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test15</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test16</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test16</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test17</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test17</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test18</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test18</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>test19</span><span class=o>(</span><span class=n>callback</span><span class=o>);</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>test19</span><span class=o>(</span><span class=n>ILimitTestCallback</span> <span class=n>callback</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>callback</span><span class=o>.</span><span class=na>run</span><span class=o>();</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+
+<span class=kd>interface</span> <span class=nc>ILimitTestCallback</span> <span class=o>{</span>
+    <span class=kt>void</span> <span class=nf>run</span><span class=o>();</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>测试结果如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>Benchmark	(limit)	Mode	Cnt	Score		Error	Units
+LimitTest.stackWalker	1	avgt	3	1.297	±	5.239	us/op
+LimitTest.stackWalker	2	avgt	3	1.467	±	14.593	us/op
+LimitTest.stackWalker	3	avgt	3	1.964	±	2.089	us/op
+LimitTest.stackWalker	4	avgt	3	2.371	±	0.93	us/op
+LimitTest.stackWalker	5	avgt	3	3.147	±	1.169	us/op
+LimitTest.stackWalker	6	avgt	3	3.744	±	8.11	us/op
+LimitTest.stackWalker	7	avgt	3	3.808	±	5.468	us/op
+LimitTest.stackWalker	8	avgt	3	7.098	±	1.072	us/op
+LimitTest.stackWalker	9	avgt	3	5.94	±	3.466	us/op
+LimitTest.stackWalker	10	avgt	3	6.172	±	14.064	us/op
+LimitTest.stackWalker	11	avgt	3	6.202	±	3.207	us/op
+LimitTest.stackWalker	12	avgt	3	6.467	±	18.106	us/op
+LimitTest.stackWalker	13	avgt	3	6.714	±	4.904	us/op
+LimitTest.stackWalker	14	avgt	3	6.667	±	29.945	us/op
+LimitTest.stackWalker	15	avgt	3	6.767	±	7.403	us/op
+LimitTest.stackWalker	16	avgt	3	8.857	±	8.56	us/op
+LimitTest.stackWalker	17	avgt	3	6.682	±	7.17	us/op
+LimitTest.stackWalker	18	avgt	3	6.705	±	3.477	us/op
+</code></pre></td></tr></table></div></div><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913144346707.png alt=image-20210913144346707></p><p>我们可以发现测试结果并没有完全遵循线性规律，而是在limit=8、limit=16出现一个性能跳变。</p><p>为什么会出现性能跳变呢？这里细化一下get的调用过程，如下图：</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913145348392.png alt=image-20210913145348392></p><p>所以，遇到8的倍数，就有可能因为Buffer的扩容出现性能跳变，打破性能的线性化增长。</p><p>我们如何消峰呢？根据<code>StackStreamFactory</code>的源码，初始化Buffer时，如果<code>StackWalker.getInstace</code>时设置了<code>estimateDepath</code>参数，Buffer的Size就是以此为准。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913151127327.png alt=image-20210913151127327></p><p>因此，我们可以将limit和estimateDepth结合起来，减少Buffer扩容的影响，示例代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>StackWalker</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>Set</span><span class=o>.</span><span class=na>of</span><span class=o>(</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>Option</span><span class=o>.</span><span class=na>RETAIN_CLASS_REFERENCE</span><span class=o>),</span> <span class=n>limit</span> <span class=o>+</span> <span class=n>2</span><span class=o>)</span>
+    <span class=o>.</span><span class=na>walk</span><span class=o>(</span><span class=n>s</span> <span class=o>-&gt;</span> <span class=o>{</span>
+        <span class=n>s</span><span class=o>.</span><span class=na>limit</span><span class=o>(</span><span class=n>limit</span> <span class=o>+</span> <span class=n>2</span><span class=o>).</span><span class=na>forEach</span><span class=o>(</span><span class=n>b</span><span class=o>::</span><span class=n>consume</span><span class=o>);</span>
+        <span class=k>return</span> <span class=kc>null</span><span class=o>;</span>
+    <span class=o>});</span>
+</code></pre></td></tr></table></div></div><p>基于limit和estimateDepth结合的做法，测试结果中8的峰值被消减掉了：</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913153246532.png alt=image-20210913153246532></p><h4 id=5322skip>5.3.2.2.skip</h4><p>我们编写了这样一段测试代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@State</span><span class=o>(</span><span class=n>Scope</span><span class=o>.</span><span class=na>Benchmark</span><span class=o>)</span>
+<span class=nd>@BenchmarkMode</span><span class=o>(</span><span class=n>Mode</span><span class=o>.</span><span class=na>AverageTime</span><span class=o>)</span>
+<span class=nd>@Warmup</span><span class=o>(</span><span class=n>iterations</span> <span class=o>=</span> <span class=n>3</span><span class=o>)</span>
+<span class=nd>@Measurement</span><span class=o>(</span><span class=n>iterations</span> <span class=o>=</span> <span class=n>3</span><span class=o>,</span> <span class=n>time</span> <span class=o>=</span> <span class=n>5</span><span class=o>,</span> <span class=n>timeUnit</span> <span class=o>=</span> <span class=n>TimeUnit</span><span class=o>.</span><span class=na>MICROSECONDS</span><span class=o>)</span>
+<span class=nd>@Threads</span><span class=o>(</span><span class=n>1</span><span class=o>)</span>
+<span class=nd>@Fork</span><span class=o>(</span><span class=n>1</span><span class=o>)</span>
+<span class=nd>@OutputTimeUnit</span><span class=o>(</span><span class=n>TimeUnit</span><span class=o>.</span><span class=na>MICROSECONDS</span><span class=o>)</span>
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>LimitTest4</span> <span class=o>{</span>
+    <span class=nd>@Param</span><span class=o>(</span><span class=n>value</span> <span class=o>=</span> <span class=o>{</span><span class=s>&#34;1&#34;</span><span class=o>,</span> <span class=s>&#34;2&#34;</span><span class=o>,</span> <span class=s>&#34;4&#34;</span><span class=o>,</span> <span class=s>&#34;6&#34;</span><span class=o>,</span> <span class=s>&#34;8&#34;</span><span class=o>,</span> <span class=s>&#34;10&#34;</span><span class=o>,</span> <span class=s>&#34;12&#34;</span><span class=o>,</span> <span class=s>&#34;14&#34;</span><span class=o>,</span> <span class=s>&#34;16&#34;</span><span class=o>})</span>
+    <span class=kt>int</span> <span class=n>skip</span><span class=o>;</span>
+
+    <span class=nd>@Benchmark</span>
+    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>stackWalker</span><span class=o>(</span><span class=n>Blackhole</span> <span class=n>b</span><span class=o>)</span> <span class=o>{</span>
+        <span class=n>LimitTestObj</span><span class=o>.</span><span class=na>test1</span><span class=o>(()</span> <span class=o>-&gt;</span> <span class=o>{</span>
+            <span class=n>StackWalker</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>StackWalker</span><span class=o>.</span><span class=na>Option</span><span class=o>.</span><span class=na>RETAIN_CLASS_REFERENCE</span><span class=o>)</span>
+                    <span class=o>.</span><span class=na>walk</span><span class=o>(</span><span class=n>s</span> <span class=o>-&gt;</span> <span class=o>{</span>
+                        <span class=n>s</span><span class=o>.</span><span class=na>skip</span><span class=o>(</span><span class=n>skip</span><span class=o>).</span><span class=na>forEach</span><span class=o>(</span><span class=n>b</span><span class=o>::</span><span class=n>consume</span><span class=o>);</span>
+                        <span class=k>return</span> <span class=kc>null</span><span class=o>;</span>
+                    <span class=o>});</span>
+        <span class=o>});</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>测试结果是skip并不会产生太大的性能差异：</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913155815509.png alt=image-20210913155815509></p><p>为什么skip并不会带来性能的差异呢？</p><p>因为，根据前文细化的get细节，即使设置了skip，<code>StackWalker</code>也是从第一帧开始调用JVM::fectchStackFrame方法。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913145348392.png alt=image-20210913145348392></p><h4 id=5323小结>5.3.2.3.小结</h4><p>至此，我们可以得到这样的结论：</p><ul><li><code>StackWalker.walk()</code>方法支持业务侧限定get范围，给了业务侧性能提升的可能性。<ul><li>在Java9之前，即使业务侧只需要获得1个栈帧，JDK也会获得JVM中的全部栈帧。</li></ul></li><li><code>StackWalker.walk()</code>方法在限定get范围时，如果可以预估栈帧的size，可以通过limit+estimateDepth降低性能跳变。</li></ul><h3 id=533get结果的处理-stackframe>5.3.3.get结果的处理-StackFrame</h3><p>在JEP259中，强调了<code>StackTraceElement</code>类是一个<code>代价不菲</code>的数据结构。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913162826236.png alt=image-20210913162826236></p><p>我们来详细解读一下<code>StackFrame</code>、<code>StackFrameInfo</code>、<code>StackTraceElement</code>的关系：</p><p>首先，在walk的过程中仅仅会创建<code>StackFrameInfo</code>，它实现了<code>StackFrame</code>接口，<code>StackFrameInfo</code>只有简单的几个属性：</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913163134017.png alt=image-20210913163134017></p><p>其中，<code>JLIA</code>是<code>JavaLangInvokeAccess</code>类型的，一路跟踪进去，它本质就是对<code>java.lang.invoke</code>包下的一组API的封装。</p><p>也就是说，在walk期间构造的<code>StackFrameInfo</code>仅仅通过JVM的native接口获得了一些足够支撑反射的信息，大部分在JDK侧通过反射就能获得的信息，就不用调用性能代价更高的JVM的native接口去获取了。</p><p>另外，调用了<code>StackFrameInfo</code>对象的<code>getFileName()</code>、<code>getLineNumber()</code>、<code>toString()</code>方法后，这些方法会调用<code>toStackTraceElement()</code>，这个函数将会生成<code>StackFrameElement</code>对象，在这个对象中，将会调用JVM的native接口，虽然<code>StackeFrameElement</code>具备完整的栈帧信息，但是需要通过JVM的native接口获得，所以性能将下降很多。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90Java%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%91-4-Java9-StackWalker/image-20210913164023218.png alt=image-20210913164023218></p><p>我们可以这样进行对比测试：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java></code></pre></td></tr></table></div></div><p>测试结果发现：如果在不必要的场景下，触发了<code>StackFrameElement</code>的生成，性能表现还不如Java9之前使用<code>Thread::getStackTrace</code>。</p><p>至此，我们可以得到两个结论：</p><ul><li><strong><code>StackWalker</code>性能优化的核心原理</strong>：JDK侧通过反射可以获得虚拟机栈中的大部分信息，JVM侧中虽然有虚拟机栈的全量信息，但从JDK侧获取的性能代价非常小，因此<code>StackWalker</code>所谓的延迟加载就是在非必要的情况下绝不去从JVM去获取虚拟机栈的信息。</li><li><strong>慎用<code>StackWalker</code>的性能敏感方法</strong>：<code>getFileName()</code>、<code>getLineNumber()</code>、<code>toString()</code>方法会触发从JVM获取虚拟机栈的信息，如果业务非必要，慎用。</li></ul><h1 id=6思考>6.思考</h1><p>在学习<code>StackWalker</code>之初(见第4章节)，是<code>模糊</code>的，</p><p>在理解了<code>StackWalker</code>的内部实现(见第5.3.1~5.3.3章节)，我们形成了JDK完整的&rdquo;<strong>性能提升逻辑链</strong>"：</p><ul><li><strong>性能优化的主要措施</strong>：<code>StackWalker</code>主要是使用轻量级对象<code>StackFrameInfo</code>，降低调用JVM的native接口的性能消耗，这才是性能消耗的大头。</li><li><strong>性能优化的辅助措施</strong>：<code>StackWalker</code>通过支持业务侧限定查询结果的范围，辅助降低了性能消耗。</li></ul><p>有了完整的"性能提升逻辑链&rdquo;，我们才能得到<strong>用好<code>StackWalker</code>的实战经验</strong>：</p><ul><li><strong>缩小get的范围</strong>：业务侧可以根据需要，通过limit+estimateDepth，提升获取虚拟机栈的性能。</li><li><strong>尽量使用轻量级结果对象</strong>：业务侧可以尽量避免调用<code>getFileName()</code>、<code>getLineNumber()</code>、<code>toString()</code>方法。</li></ul><p>笔者在查阅<code>StackWalker</code>相关资料的时候，还发现了一个有趣与Log4J有关的案例：</p><blockquote><p><a href=https://issues.apache.org/jira/browse/LOG4J2-2880>https://issues.apache.org/jira/browse/LOG4J2-2880</a></p></blockquote><p>Log4J有这么一个问题单，大致意思就是升级为Java11之后，Log4j会导致CPU得到100%，这个结果将会相当严重。。。</p><p>Log4J的程序猿最后定位的原因是业务侧没有使用<code>private static final</code>修饰logger对象，同时业务侧采用的是ZGC，</p><p>而logger对象记录日志时又调用了<code>StackWalker</code>，StackWalker调用JVM::fetch接口时在C++的代码中产生的栈帧对象又不会被ZGC回收(ZGC的Bug)，而C++代码中的栈帧对象又是以Map的形式存储，当Map中的对象越来越多，Hash冲突就越多，于是越查找越慢，最后JVM不断消耗CPU。。。</p><p>这也是触动笔者较大的感触：学习标准库的初级境界是&rdquo;<strong>能用</strong>"，高级的境界是&rdquo;<strong>用好</strong>"，&ldquo;用好"的关键有依赖于程序猿的<strong>基本功</strong>与<strong>探索力</strong>：</p><p>学习标准库的初级境界是&rdquo;<strong>能用</strong>"，高级的境界是&rdquo;<strong>用好</strong>"，&ldquo;用好"的关键有依赖于程序猿的<strong>基本功</strong>与<strong>探索力</strong>：</p><ul><li><strong>基本功</strong>：面对一种编程语言，基本功往往是先验知识。<ul><li>不要以"实战中用不到"给自己设限(仅停留在语言语法层面)，最好能深入到底层(API的源码->JVM->操作系统->硬件)。</li></ul></li><li><strong>探索逻辑的完备性</strong>：不要盲目接受新特性"宣称"的优点，特别是一些性能敏感的API。通过JDK/JVM源码推理出完备的逻辑链，避免在产品中踩坑。</li><li><strong>探索细节背后的故事</strong>：不要忽略javadoc里的细节或结论，这些细节很可能是API提供者曾经花费大量精力攻克的难关，也可能是API提供者设计的精妙机关。</li></ul><p>没有达到&rdquo;<strong>用好</strong>&ldquo;的境界，就有可能在不合适的场景下使用&rdquo;<strong>新特性/新API</strong>"，最终得到极差的**&ldquo;性能&rdquo;、&ldquo;安全性&rdquo;**等。</p><h1 id=7参考>7.参考</h1><blockquote><p><a href=https://issues.apache.org/jira/browse/LOG4J2-2880>https://issues.apache.org/jira/browse/LOG4J2-2880</a></p><p><a href=https://mail.openjdk.java.net/pipermail/zgc-dev/2019-March/000612.html>https://mail.openjdk.java.net/pipermail/zgc-dev/2019-March/000612.html</a></p><p><a href=https://openjdk.java.net/jeps/259>https://openjdk.java.net/jeps/259</a></p><p><a href=https://cr.openjdk.java.net/~mchung/jdk9/jep259/api/java/lang/StackWalker.html>https://cr.openjdk.java.net/~mchung/jdk9/jep259/api/java/lang/StackWalker.html</a></p></blockquote></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>猴王无敌</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2021-08-22</span></p><p class=copyright-item><span class=item-title>许可协议</span>
+<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-nd/4.0/ target=_blank>CC BY-NC-ND 4.0</a></span></p></div><div class=post-reward><input type=checkbox name=reward id=reward hidden>
+<label class=reward-button for=reward>赞赏支持</label><div class=qr-code><label class=qr-code-image for=reward><img class=image src=/weixin.png>
+<span>微信打赏</span></label>
+<label class=qr-code-image for=reward><img class=image src=/alipay.png>
+<span>支付宝打赏</span></label></div></div><footer class=post-footer><div class=post-tags><a href=https://jherculesqz.github.io/tags/java%E6%8B%BE%E9%81%97-java%E6%96%B0%E7%89%B9%E6%80%A7/>Java拾遗-Java新特性</a></div><nav class=post-nav><a class=prev href=/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417l277.93508-310.326815c11.338233-12.190647 11.035334-32.285311-.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"/></svg></i><span class="prev-text nav-default">【Java新特性】-0-学习Java新特性，如何快人一步</span>
+<span class="prev-text nav-mobile">上一篇</span></a>
+<a class=next href=/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/><span class="next-text nav-default">【Java新特性】-3-Java9的类加载机制变化</span>
+<span class="prev-text nav-mobile">下一篇</span>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"/></svg></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=icon-links><a href=mailto:JHercules_qz@qq.com rel="me noopener" class=iconfont title=email><svg class="icon" viewBox="0 0 1451 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><path d="M664.781909 681.472759.0 97.881301C0 3.997201 71.046997.0 71.046997.0H474.477909 961.649408 1361.641813S1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759S764.482731 685.154773 753.594283 688.65053V688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858V688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759zM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633.0 212.052267.0 212.052267V942.809523L83.726336 1024H682.532949 753.579947 1348.948139L1432.688811 942.809523V212.052267S893.138176 701.759633 817.019477 767.734955C777.248 802.205449 742.347691 811.03081 718.063616 811.603883z"/></svg></a><a href=https://github.com/JHerculesqz rel="me noopener" class=iconfont title=github target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><path d="M512 12.672c-282.88.0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667.0-12.16-.426667-44.373333-.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333.0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333.0.0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667.0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72.0 68.522667-.64 123.562667-.64 140.202666.0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"/></svg></a><a href=https://jherculesqz.github.io/index.xml rel="noopener alternate" type=application/rss+xml class=iconfont title=rss target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><path d="M819.157333 1024C819.157333 574.592 449.408 204.8.0 204.8V0c561.706667.0 1024 462.293333 1024 1024H819.157333zM140.416 743.04a140.8 140.8.0 01140.501333 140.586667A140.928 140.928.0 01140.074667 1024C62.72 1024 0 961.109333.0 883.626667S62.933333 743.082667 140.416 743.04zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352.0 678.784 306.517333 678.784 678.826667z"/></svg></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme - <a class=theme-link href=https://github.com/xianmin/hugo-theme-jane>Jane</a></span>
+<span class=copyright-year>&copy;
+2021
+<span class=heart><i class=iconfont><svg class="icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14"><path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7.0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1.0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2.0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3.1-42.5-8-83.6-24-122.2z" fill="#8a8a8a"/></svg></i></span><span class=author>猴王无敌</span></span>
+<span id=busuanzi_container>访客数/访问量：<span id=busuanzi_value_site_uv></span>/<span id=busuanzi_value_site_pv></span></span></div></footer><div class=back-to-top id=back-to-top><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><path d="M510.866688 227.694839 95.449397 629.218702h235.761562L329.15309 958.01517h362.40389L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777h894.052392v131.813095H63.840492V63.962777zm0 0"/></svg></i></div></div><script type=text/javascript src=/lib/jquery/jquery-3.2.1.min.js></script><script type=text/javascript src=/lib/slideout/slideout-1.0.1.min.js></script><script type=text/javascript src=/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin=anonymous></script><script type=text/javascript src=/js/load-photoswipe.js></script><script type=text/javascript src=/lib/photoswipe/photoswipe.min.js></script><script type=text/javascript src=/lib/photoswipe/photoswipe-ui-default.min.js></script><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script></body></html>

@@ -964,12 +964,72 @@ LimitTest.stackWalker 18 avgt 3 6.705 ± 3.477 us/op
 &lt;p>我们可以这样进行对比测试：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;/code>&lt;/pre>&lt;/td>
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="nd">@BenchmarkMode&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Mode&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">AverageTime&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="nd">@Warmup&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">iterations&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="nd">@Measurement&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">iterations&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">5&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">timeUnit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">TimeUnit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">MICROSECONDS&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="nd">@Threads&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="nd">@Fork&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="nd">@OutputTimeUnit&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">TimeUnit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">MICROSECONDS&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">ToStringTest&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="nd">@State&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Scope&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">Benchmark&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">ShareData&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="n">ToStringTest&lt;/span> &lt;span class="n">comp1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">ToStringTest&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="nd">@Benchmark&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">getStackTrace&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Blackhole&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">var&lt;/span> &lt;span class="n">stackTraceElementArr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Throwable&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">getStackTrace&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">StackTraceElement&lt;/span> &lt;span class="n">e&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">stackTraceElementArr&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">b&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">consume&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">e&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="nd">@Benchmark&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">stackWalker&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Blackhole&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">StackWalker&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getInstance&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">forEach&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">f&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">consume&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">toStackTraceElement&lt;/span>&lt;span class="o">()));&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>测试结果发现：如果在不必要的场景下，触发了&lt;code>StackFrameElement&lt;/code>的生成，性能表现还不如Java9之前使用&lt;code>Thread::getStackTrace&lt;/code>。&lt;/p>
-&lt;p>至此，我们可以得到两个结论：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">Benchmark Mode Cnt Score Error Units
+ToStringTest.getStackTrace avgt 3 11.047 ± 16.395 us/op
+ToStringTest.stackWalker avgt 3 20.032 ± 27.051 us/op
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>至此，我们可以得到两个结论：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;code>StackWalker&lt;/code>性能优化的核心原理&lt;/strong>：JDK侧通过反射可以获得虚拟机栈中的大部分信息，JVM侧中虽然有虚拟机栈的全量信息，但从JDK侧获取的性能代价非常小，因此&lt;code>StackWalker&lt;/code>所谓的延迟加载就是在非必要的情况下绝不去从JVM去获取虚拟机栈的信息。&lt;/li>
 &lt;li>&lt;strong>慎用&lt;code>StackWalker&lt;/code>的性能敏感方法&lt;/strong>：&lt;code>getFileName()&lt;/code>、&lt;code>getLineNumber()&lt;/code>、&lt;code>toString()&lt;/code>方法会触发从JVM获取虚拟机栈的信息，如果业务非必要，慎用。&lt;/li>

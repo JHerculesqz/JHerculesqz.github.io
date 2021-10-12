@@ -27,27 +27,27 @@
 &lt;p>这是一种娓娓道来的&lt;code>知识论述&lt;/code>，即JVM的知识本身已经是客观存在，作者会摆出他的&lt;code>MainIdea&lt;/code>和&lt;code>Support Idea&lt;/code>，而后通过&lt;code>事实&lt;/code>和&lt;code>例子&lt;/code>事实进行&lt;code>推理&lt;/code>，进而证明作者对JVM的规格理解的正确性和逻辑自洽性。&lt;/p>
 &lt;p>然而，无论马可波罗讲故事的能力有多强，他描述的神秘东方始终是他看到的客观存在。&lt;/p>
 &lt;p>因此，如果我没有亲自阅读JDK和JVM的源码，那还是别人的故事。&lt;/p>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012225213714.png" alt="image-20211012225213714">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012225213714.png" alt="image-20211012225213714">&lt;/p>
 &lt;h1 id="2阅读openjdk源码从这里开始">2.阅读OpenJDK源码，从这里开始&lt;/h1>
 &lt;p>下载了OpenJDK 8的源码，您会面对着海量的代码，不知如何入手。&lt;/p>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230038531.png" alt="image-20211012230038531">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230038531.png" alt="image-20211012230038531">&lt;/p>
 &lt;p>笔者认为，不如想想JVM的体系结构：&lt;/p>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012225535950.png" alt="image-20211012225535950">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012225535950.png" alt="image-20211012225535950">&lt;/p>
 &lt;p>JVM体系中，第一个环节是将&lt;code>源代码(.java)&lt;/code>变成&lt;code>字节码(.class)&lt;/code>，也就是说&lt;code>前端编译器(javac)&lt;/code>承载了《Java语言规范》和《Java虚拟机规范》中大部分的规格。&lt;/p>
 &lt;p>至少，可以认为，阅读&lt;code>前端编译器(javac)&lt;/code>的源码，可以理解编译期的静态行为。&lt;/p>
 &lt;p>从javac对应的源码看，也的确如此：&lt;/p>
 &lt;ul>
 &lt;li>comp包中可以看到语义分析、数据流分析、语法糖擦除、泛型擦除等代码&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230328641.png" alt="image-20211012230328641">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230328641.png" alt="image-20211012230328641">&lt;/p>
 &lt;ul>
 &lt;li>jvm包可以看到从AST树生成字节码的代码&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230413468.png" alt="image-20211012230413468">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230413468.png" alt="image-20211012230413468">&lt;/p>
 &lt;ul>
 &lt;li>parser包可以看到词法分析生成TokenQueue的代码&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230441083.png" alt="image-20211012230441083">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230441083.png" alt="image-20211012230441083">&lt;/p>
 &lt;p>上述三点，基本就覆盖了《Java语言规范》的大部分内容，也覆盖了《Java虚拟机规范》中关于字节码规格的大部分内容。&lt;/p>
 &lt;h1 id="3javac的入口解读">3.javac的入口解读&lt;/h1>
 &lt;h2 id="31langtoolssrcshareclassescomsuntoolsjavacmainjava">3.1.langtools/src/share/classes/com/sun/tools/javac/Main.java&lt;/h2>
@@ -56,12 +56,12 @@
 &lt;blockquote>
 &lt;p>这个类仅有3个方法，main函数调用了compile函数&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230802827.png" alt="image-20211012230802827">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230802827.png" alt="image-20211012230802827">&lt;/p>
 &lt;h3 id="与周边类的关系">与周边类的关系&lt;/h3>
 &lt;blockquote>
 &lt;p>在Main#compile()函数中，又去调用了&lt;code> com/sun/tools/javac/main/Main.java&lt;/code>&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230924610.png" alt="image-20211012230924610">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230924610.png" alt="image-20211012230924610">&lt;/p>
 &lt;h2 id="32langtoolssrcshareclassescomsuntoolsjavacmainmainjava">3.2.langtools/src/share/classes/com/sun/tools/javac/main/Main.java&lt;/h2>
 &lt;p>这个类承载了javac真正开始干活儿的流程，代码略多，我们从&lt;code>类的属性&lt;/code>、&lt;code>类的行为&lt;/code>、&lt;code>与周边类的关系&lt;/code>来剖析它。&lt;/p>
 &lt;h3 id="类的属性">类的属性&lt;/h3>
@@ -72,12 +72,12 @@
 &lt;p>filenames：维护了用户在javac后面输入的待编译的.java源文件。&lt;/p>
 &lt;p>fileManager：javac内置的一个文件管理模块，负责对待编译的.java源文件进行处理。&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012231318310.png" alt="image-20211012231318310">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012231318310.png" alt="image-20211012231318310">&lt;/p>
 &lt;h3 id="类的行为">类的行为&lt;/h3>
 &lt;p>除了compile方法、processArgs方法，其它都属于打辅助的方法(如：bugMessge方法就是对log对象进行了封装，用于记录错误日志)，这些辅助方法笔者就不在此赘述了，依然可以参考&lt;code>https://github.com/JHerculesqz/jdk8&lt;/code>上笔者详细标注的注释说明。&lt;/p>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012231906655.png" alt="image-20211012231906655">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012231906655.png" alt="image-20211012231906655">&lt;/p>
 &lt;p>我们在此稍微展开一下compile方法的细节：&lt;/p>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012232303828.png" alt="image-20211012232303828">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012232303828.png" alt="image-20211012232303828">&lt;/p>
 &lt;p>我们可以将这个方法拆分为3段：&lt;/p>
 &lt;ul>
 &lt;li>前戏：初始化Main中的各个成员对象。&lt;/li>
@@ -611,7 +611,7 @@
 &lt;/div>
 &lt;/div>&lt;h3 id="与周边类的关系-1">与周边类的关系&lt;/h3>
 &lt;p>从前文的源码分析可以看到，当前类最终是调用&lt;code>JavaCompiler#compile方法&lt;/code>实现的前端编译过程，而&lt;code>JavaCompiler&lt;/code>有依赖了&lt;code>Options类&lt;/code>读写javac的命令行配置参数。&lt;/p>
-&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012233450136.png" alt="image-20211012233450136">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012233450136.png" alt="image-20211012233450136">&lt;/p>
 &lt;h1 id="4总结">4.总结&lt;/h1>
 &lt;ul>
 &lt;li>本文表达了笔者的对于深入理解JVM的一种观点：即，通过阅读OpenJDK源码才能达到真正的理解JVM。&lt;/li>

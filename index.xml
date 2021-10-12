@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Aug 2021 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Oct 2021 23:39:00 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,605 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【Java新特性】-0-学习Java新特性，如何快人一步</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</link><pubDate>Sun, 22 Aug 2021 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</guid><description>&lt;h1 id="1why谁来挽救我的长发">1.Why：谁来挽救我的长发&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【宏观】如何更加深入理解Java虚拟机</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</link><pubDate>Tue, 12 Oct 2021 23:39:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid><description>&lt;h1 id="1深入理解jvm那还是别人的故事">1.深入理解JVM——那还是别人的故事&lt;/h1>
+&lt;p>国庆期间，思考了一个问题：&lt;code>怎样才算深入理解了Java虚拟机？&lt;/code>&lt;/p>
+&lt;p>把周志明的《深入理解Java虚拟机》看5遍算不算透彻理解了JVM？&lt;/p>
+&lt;p>似乎不算：笔者已经阅读过好几遍，其中部分章节应该超过5遍。但，依然觉得很多技术点如同罩上了一层薄纱。&lt;/p>
+&lt;p>为什么会这样呢？&lt;/p>
+&lt;p>如果把《Java语言规范》和《Java虚拟机规范》看作是JDK和JVM的需求说明书，那么《深入理解Java虚拟机》就相当于周志明老师梳理总结的JDK和JVM的规格说明书。&lt;/p>
+&lt;p>这是一种娓娓道来的&lt;code>知识论述&lt;/code>，即JVM的知识本身已经是客观存在，作者会摆出他的&lt;code>MainIdea&lt;/code>和&lt;code>Support Idea&lt;/code>，而后通过&lt;code>事实&lt;/code>和&lt;code>例子&lt;/code>事实进行&lt;code>推理&lt;/code>，进而证明作者对JVM的规格理解的正确性和逻辑自洽性。&lt;/p>
+&lt;p>然而，无论马可波罗讲故事的能力有多强，他描述的神秘东方始终是他看到的客观存在。&lt;/p>
+&lt;p>因此，如果我没有亲自阅读JDK和JVM的源码，那还是别人的故事。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012225213714.png" alt="image-20211012225213714">&lt;/p>
+&lt;h1 id="2阅读openjdk源码从这里开始">2.阅读OpenJDK源码，从这里开始&lt;/h1>
+&lt;p>下载了OpenJDK 8的源码，您会面对着海量的代码，不知如何入手。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230038531.png" alt="image-20211012230038531">&lt;/p>
+&lt;p>笔者认为，不如想想JVM的体系结构：&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012225535950.png" alt="image-20211012225535950">&lt;/p>
+&lt;p>JVM体系中，第一个环节是将&lt;code>源代码(.java)&lt;/code>变成&lt;code>字节码(.class)&lt;/code>，也就是说&lt;code>前端编译器(javac)&lt;/code>承载了《Java语言规范》和《Java虚拟机规范》中大部分的规格。&lt;/p>
+&lt;p>至少，可以认为，阅读&lt;code>前端编译器(javac)&lt;/code>的源码，可以理解编译期的静态行为。&lt;/p>
+&lt;p>从javac对应的源码看，也的确如此：&lt;/p>
+&lt;ul>
+&lt;li>comp包中可以看到语义分析、数据流分析、语法糖擦除、泛型擦除等代码&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230328641.png" alt="image-20211012230328641">&lt;/p>
+&lt;ul>
+&lt;li>jvm包可以看到从AST树生成字节码的代码&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230413468.png" alt="image-20211012230413468">&lt;/p>
+&lt;ul>
+&lt;li>parser包可以看到词法分析生成TokenQueue的代码&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230441083.png" alt="image-20211012230441083">&lt;/p>
+&lt;p>上述三点，基本就覆盖了《Java语言规范》的大部分内容，也覆盖了《Java虚拟机规范》中关于字节码规格的大部分内容。&lt;/p>
+&lt;h1 id="3javac的入口解读">3.javac的入口解读&lt;/h1>
+&lt;h2 id="31langtoolssrcshareclassescomsuntoolsjavacmainjava">3.1.langtools/src/share/classes/com/sun/tools/javac/Main.java&lt;/h2>
+&lt;p>这是javac的入口类，代码结构很简单&lt;/p>
+&lt;h3 id="类结构">类结构&lt;/h3>
+&lt;blockquote>
+&lt;p>这个类仅有3个方法，main函数调用了compile函数&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230802827.png" alt="image-20211012230802827">&lt;/p>
+&lt;h3 id="与周边类的关系">与周边类的关系&lt;/h3>
+&lt;blockquote>
+&lt;p>在Main#compile()函数中，又去调用了&lt;code> com/sun/tools/javac/main/Main.java&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012230924610.png" alt="image-20211012230924610">&lt;/p>
+&lt;h2 id="32langtoolssrcshareclassescomsuntoolsjavacmainmainjava">3.2.langtools/src/share/classes/com/sun/tools/javac/main/Main.java&lt;/h2>
+&lt;p>这个类承载了javac真正开始干活儿的流程，代码略多，我们从&lt;code>类的属性&lt;/code>、&lt;code>类的行为&lt;/code>、&lt;code>与周边类的关系&lt;/code>来剖析它。&lt;/p>
+&lt;h3 id="类的属性">类的属性&lt;/h3>
+&lt;p>笔者只在此列举几个重要的属性，其它的属性可以到&lt;code>https://github.com/JHerculesqz/jdk8&lt;/code>上找到笔者详细标注的注释说明。&lt;/p>
+&lt;blockquote>
+&lt;p>recognizedOptions：这是一个Option数组，每个Option元素可以认为是javac后面命令行配置参数。这个数组记录了javac内置的合法的命令行参数。&lt;/p>
+&lt;p>optionHelper：这是OptionHelper这个抽象类的具体实现类，它的主要职责就是维护用户实际在javac后面输入的命令行参数。&lt;/p>
+&lt;p>filenames：维护了用户在javac后面输入的待编译的.java源文件。&lt;/p>
+&lt;p>fileManager：javac内置的一个文件管理模块，负责对待编译的.java源文件进行处理。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012231318310.png" alt="image-20211012231318310">&lt;/p>
+&lt;h3 id="类的行为">类的行为&lt;/h3>
+&lt;p>除了compile方法、processArgs方法，其它都属于打辅助的方法(如：bugMessge方法就是对log对象进行了封装，用于记录错误日志)，这些辅助方法笔者就不在此赘述了，依然可以参考&lt;code>https://github.com/JHerculesqz/jdk8&lt;/code>上笔者详细标注的注释说明。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012231906655.png" alt="image-20211012231906655">&lt;/p>
+&lt;p>我们在此稍微展开一下compile方法的细节：&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012232303828.png" alt="image-20211012232303828">&lt;/p>
+&lt;p>我们可以将这个方法拆分为3段：&lt;/p>
+&lt;ul>
+&lt;li>前戏：初始化Main中的各个成员对象。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="n">Result&lt;/span> &lt;span class="nf">compile&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">classNames&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Context&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">JavaFileObject&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Iterable&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">Processor&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">processors&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ：前戏：在上下文对象中塞out对象，初始化log对象、options对象、fileNames、classnames
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">outKey&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">out&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">log&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">options&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="n">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// creates a new one
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="n">filenames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">LinkedHashSet&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">File&lt;/span>&lt;span class="o">&amp;gt;();&lt;/span>
+&lt;span class="n">classnames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">ListBuffer&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;();&lt;/span>
+&lt;span class="n">JavaCompiler&lt;/span> &lt;span class="n">comp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>命令行参数处理：调用Main#processsArgs方法，处理javac后面的命令行参数&lt;/li>
+&lt;/ul>
+&lt;p>注意：这里有一些高级技术细节，当前不必深入其中，在展开这些高级技术细节时可以再来展开这部分源码。&lt;/p>
+&lt;blockquote>
+&lt;p>比如：JVM支持我们自己实现javac的插件，这里插件生命周期的初始化部分就在这段代码中。&lt;/p>
+&lt;p>比如：javac在关闭nonBatchMode模式后，启用编译缓存，也在这段代码中。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="n">Result&lt;/span> &lt;span class="nf">compile&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">classNames&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Context&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">JavaFileObject&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Iterable&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">Processor&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">processors&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">{&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="cm">/*
+&lt;/span>&lt;span class="cm"> * TODO: Logic below about what is an acceptable command line
+&lt;/span>&lt;span class="cm"> * should be updated to take annotation processing semantics
+&lt;/span>&lt;span class="cm"> * into account.
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ：如果各种不合法，返回编译错误，并告知记得敲一下-help
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">0&lt;/span>
+&lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">classNames&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">classNames&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">Option&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">HELP&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">process&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">optionHelper&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;-help&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">CMDERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="n">Collection&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">File&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">files&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ：调用Main#processArgs，获得命令行参数中的.java文件对象列表
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">files&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">processArgs&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">CommandLine&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">parse&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="o">),&lt;/span> &lt;span class="n">classNames&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">//HCZ：Main#processArgs竟然返回了null？，返回错误信息
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">files&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// null signals an error in options, abort
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">CMDERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">files&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">classnames&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// it is allowed to compile nothing if just asking for help or version info
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//HCZ：文件列表是Empty，说明可能是javac --help/-X/-version/-fullversion，则返回正确
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isSet&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">HELP&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">||&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isSet&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">X&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">||&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isSet&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">VERSION&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">||&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isSet&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">FULLVERSION&lt;/span>&lt;span class="o">))&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">OK&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">JavaCompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">explicitAnnotationProcessingRequested&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ:还不太懂？
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">error&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;err.no.source.files.classes&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ:又不是-help这种参数配置，说明用户输入错了，返回错误
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">error&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;err.no.source.files&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">CMDERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">FileNotFoundException&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ：指定的文件找不到，则返回错误
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">warning&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;err.file.not.found&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getMessage&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">//HCZ：如果指定了stdout，清一下log对象，重定向到System.out上
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="n">forceStdOut&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isSet&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;stdout&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">forceStdOut&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">flush&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">setWriters&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">PrintWriter&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">));&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">//HCZ：如果没有设置nonBatchMode，则在上下文对象中创建CacheFSInfo对象，用于多次编译时的缓存。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// allow System property in following line as a Mustang legacy
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="n">batchMode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isUnset&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;nonBatchMode&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getProperty&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;nonBatchMode&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">batchMode&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="n">CacheFSInfo&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">preRegister&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">// FIXME: this code will not be invoked if using JavacTask.parse/analyze/generate
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// invoke any available plugins
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//HCZ：如果存在javac的插件，则...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//啥是javac插件？参考：https://www.baeldung.com/java-build-compiler-plugin
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//？待研究：如下初始化javac插件的逻辑细节。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">plugins&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">get&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">PLUGIN&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">plugins&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">JavacProcessingEnvironment&lt;/span> &lt;span class="n">pEnv&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">JavacProcessingEnvironment&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">ClassLoader&lt;/span> &lt;span class="n">cl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pEnv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getProcessorClassLoader&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">ServiceLoader&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Plugin&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">sl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ServiceLoader&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">load&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Plugin&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">class&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">cl&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">Set&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="n">pluginsToCall&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">LinkedHashSet&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;();&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">plugin&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">plugins&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">split&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;\\x00&amp;#34;&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">pluginsToCall&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">add&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">from&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">plugin&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">split&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;\\s+&amp;#34;&lt;/span>&lt;span class="o">)));&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="n">JavacTask&lt;/span> &lt;span class="n">task&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">Iterator&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Plugin&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">iter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">iterator&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">iter&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">hasNext&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">Plugin&lt;/span> &lt;span class="n">plugin&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">iter&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">next&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">pluginsToCall&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">plugin&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getName&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">head&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">pluginsToCall&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">remove&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">task&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="n">task&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">JavacTask&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">pEnv&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">plugin&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">init&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">task&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">tail&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">toArray&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">String&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">tail&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">size&lt;/span>&lt;span class="o">()]));&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Throwable&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">apiMode&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">pluginMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">pluginsToCall&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">printLines&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">PrefixKind&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">JAVAC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;msg.plugin.not.found&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">head&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>调用JavaComplier#compile，进行真正的.java到.class的编译&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明：这里也可以跳过xdoclint的代码。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="n">Result&lt;/span> &lt;span class="nf">compile&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">classNames&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Context&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">JavaFileObject&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Iterable&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">Processor&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">processors&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">{&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="c1">//HCZ：初始化JavaCompiler
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">comp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">JavaCompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">// FIXME: this code will not be invoked if using JavacTask.parse/analyze/generate
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//HCZ：xdoclint相关
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//待研究：如下xdoclint的各种初始化细节
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">xdoclint&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">get&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">XDOCLINT&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">String&lt;/span> &lt;span class="n">xdoclintCustom&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">get&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">XDOCLINT_CUSTOM&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">xdoclint&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">xdoclintCustom&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">Set&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">doclintOpts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">LinkedHashSet&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;();&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">xdoclint&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">add&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">DocLint&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">XMSGS_OPTION&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">xdoclintCustom&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">xdoclintCustom&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">split&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;\\s+&amp;#34;&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">())&lt;/span>
+&lt;span class="k">continue&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">add&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">replace&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">XDOCLINT_CUSTOM&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">text&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">DocLint&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">XMSGS_CUSTOM_PREFIX&lt;/span>&lt;span class="o">));&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(!(&lt;/span>&lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">size&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">1&lt;/span>
+&lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">iterator&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">next&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">DocLint&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">XMSGS_CUSTOM_PREFIX&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;none&amp;#34;&lt;/span>&lt;span class="o">)))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">JavacTask&lt;/span> &lt;span class="n">t&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">BasicJavacTask&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">// standard doclet normally generates H1, H2
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">add&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">DocLint&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">XIMPLICIT_HEADERS&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">new&lt;/span> &lt;span class="n">DocLint&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">init&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">toArray&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">String&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">doclintOpts&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">size&lt;/span>&lt;span class="o">()]));&lt;/span>
+&lt;span class="n">comp&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">keepComments&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">//HCZ：如果有待编译的java文件列表，则...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">fileManager&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">get&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">JavaFileManager&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">class&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(!&lt;/span>&lt;span class="n">files&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// add filenames to fileObjects
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//HCZ：这里为啥又要初始化一次JavaCompiler？
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">comp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">JavaCompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">instance&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">//HCZ：待研究，啥是otherFiles？
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">JavaFileObject&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">otherFiles&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nil&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">JavacFileManager&lt;/span> &lt;span class="n">dfm&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">JavacFileManager&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="n">fileManager&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">JavaFileObject&lt;/span> &lt;span class="n">fo&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">dfm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getJavaFileObjectsFromFiles&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">files&lt;/span>&lt;span class="o">))&lt;/span>
+&lt;span class="n">otherFiles&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">otherFiles&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">prepend&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">fo&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">JavaFileObject&lt;/span> &lt;span class="n">fo&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">otherFiles&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="n">fileObjects&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">prepend&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">fo&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">//HCZ：调用JavaCompiler#compile方法，里面有机关，详见那边的标注
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">comp&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">compile&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">fileObjects&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">classnames&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">toList&lt;/span>&lt;span class="o">(),&lt;/span>
+&lt;span class="n">processors&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">expectDiagKeys&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">expectDiagKeys&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="o">())&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">printRawLines&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;all expected diagnostics found&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">OK&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">printRawLines&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;expected diagnostic keys not found: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">log&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">expectDiagKeys&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ERROR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">comp&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">errorCount&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ERROR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">IOException&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>收尾工作：各种异常捕获后的收尾工作&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="n">Result&lt;/span> &lt;span class="nf">compile&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">classNames&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Context&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">JavaFileObject&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fileObjects&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="n">Iterable&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">Processor&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">processors&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="o">{&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">IOException&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">ioMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">OutOfMemoryError&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">resourceMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">StackOverflowError&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">resourceMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">FatalError&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">feMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">AnnotationProcessingError&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">apiMode&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getCause&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="n">apMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SYSERR&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">ClientCodeException&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// as specified by javax.tools.JavaCompiler#getTask
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// and javax.tools.JavaCompiler.CompilationTask#call
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getCause&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">PropagatedException&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getCause&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Throwable&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// Nasty. If we&amp;#39;ve already reported an error, compensate
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// for buggy compiler error recovery by swallowing thrown
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// exceptions.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">comp&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">comp&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">errorCount&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">0&lt;/span> &lt;span class="o">||&lt;/span>
+&lt;span class="n">options&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">isSet&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;dev&amp;#34;&lt;/span>&lt;span class="o">))&lt;/span>
+&lt;span class="n">bugMessage&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ABNORMAL&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">finally&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">comp&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">comp&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">close&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">ClientCodeException&lt;/span> &lt;span class="n">ex&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">ex&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getCause&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="n">filenames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">OK&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="err">…………&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="与周边类的关系-1">与周边类的关系&lt;/h3>
+&lt;p>从前文的源码分析可以看到，当前类最终是调用&lt;code>JavaCompiler#compile方法&lt;/code>实现的前端编译过程，而&lt;code>JavaCompiler&lt;/code>有依赖了&lt;code>Options类&lt;/code>读写javac的命令行配置参数。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/image-20211012233450136.png" alt="image-20211012233450136">&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;ul>
+&lt;li>本文表达了笔者的对于深入理解JVM的一种观点：即，通过阅读OpenJDK源码才能达到真正的理解JVM。&lt;/li>
+&lt;li>本文解析了javac入口部分的源码，为后续进一步理解JVM的前端编译过程奠定了基础。&lt;/li>
+&lt;/ul></description></item><item><title>【Java新特性】-0-学习Java新特性，如何快人一步</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</link><pubDate>Sun, 22 Aug 2021 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/</guid><description>&lt;h1 id="1why谁来挽救我的长发">1.Why：谁来挽救我的长发&lt;/h1>
 &lt;p>在Java 6之前，JDK版本升级节奏比较慢，Java程序猿对Java语言本身的学习压力较小(具体体现在&amp;quot;&lt;code>频率低&lt;/code>&amp;quot;和&amp;quot;&lt;code>资源多&lt;/code>&amp;rdquo;)：&lt;/p>
 &lt;ul>
 &lt;li>频率低：如果已经掌握了Java 6或之前的某个版本，那么学习Java新版本也不那么紧迫。&lt;/li>

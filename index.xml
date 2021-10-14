@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Oct 2021 23:39:00 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Oct 2021 08:09:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,40 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【宏观】如何更加深入理解Java虚拟机</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</link><pubDate>Tue, 12 Oct 2021 23:39:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid><description>&lt;h1 id="1深入理解jvm那还是别人的故事">1.深入理解JVM——那还是别人的故事&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【置顶】Java拾遗</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</link><pubDate>Thu, 14 Oct 2021 08:09:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</guid><description>&lt;p>Java是个庞大的体系，心中有许多想写下来的内容。&lt;/p>
+&lt;p>陆续写了一些后，自己的表达脉络也逐渐清晰起来。&lt;/p>
+&lt;p>就用此文将已经发布的、即将编写的文章汇总起来，便于读者阅读。&lt;/p>
+&lt;h1 id="宏观">宏观&lt;/h1>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/">【宏观】从Java概念图理解Java体系&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/">【宏观】如何更加深入理解Java虚拟机&lt;/a>&lt;/p>
+&lt;h1 id="jvm">JVM&lt;/h1>
+&lt;h2 id="前端编译">前端编译&lt;/h2>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/">【编译引擎】 1 学习阅读Class文件结构的意义&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8A/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-上&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-中&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-下&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/">【编译引擎】-3-学习阅读Class文件结构(javap版)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/">【编译引擎】-4-学习阅读Class文件指令-概览&lt;/a>&lt;/p>
+&lt;h2 id="类加载">类加载&lt;/h2>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/">【类加载机制】-0-从一道面试题开始&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/">【类加载机制】-1-类加载器剖析-类加载器速览&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/">【类加载机制】-8-Init阶段细节-顺序，再谈赋值-上&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/">【类加载机制】-8-Init阶段细节-顺序，再谈赋值-下&lt;/a>&lt;/p>
+&lt;h2 id="运行时数据区">运行时数据区&lt;/h2>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/">【运行时数据区】-0-用仓库管理员的视角理解运行时数据区&lt;/a>&lt;/p>
+&lt;h2 id="垃圾回收">垃圾回收&lt;/h2>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/">【垃圾回收】-0-垃圾回收体系的主脉络&lt;/a>&lt;/p>
+&lt;h2 id="执行引擎">执行引擎&lt;/h2>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/">【执行引擎】-0-随机应变+有备而来&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/">【执行引擎】-1-理清前端编译、即时编译、提前编译&lt;/a>&lt;/p>
+&lt;h1 id="工具链">工具链&lt;/h1>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%B7%A5%E5%85%B7-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82jdk%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/">【工具】-0-一文搞懂JDK命令行工具&lt;/a>&lt;/p>
+&lt;h1 id="java新特性">Java新特性&lt;/h1>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/">【Java新特性】-0-学习Java新特性，如何快人一步&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/">【Java新特性】-2-Java9新特性宏观解读&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/">【Java新特性】-3-Java9的类加载机制变化&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-4-java9-stackwalker/">【Java新特性】-4-Java9-StackWalker&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91Java%E6%8B%BE%E9%81%97/image-20211014110327766.png" alt="image-20211014110327766">&lt;/p></description></item><item><title>【宏观】如何更加深入理解Java虚拟机</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</link><pubDate>Tue, 12 Oct 2021 23:39:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid><description>&lt;h1 id="1深入理解jvm那还是别人的故事">1.深入理解JVM——那还是别人的故事&lt;/h1>
 &lt;p>国庆期间，思考了一个问题：&lt;code>怎样才算深入理解了Java虚拟机？&lt;/code>&lt;/p>
 &lt;p>把周志明的《深入理解Java虚拟机》看5遍算不算透彻理解了JVM？&lt;/p>
 &lt;p>似乎不算：笔者已经阅读过好几遍，其中部分章节应该超过5遍。但，依然觉得很多技术点如同罩上了一层薄纱。&lt;/p>
@@ -4626,167 +4659,4 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;h1 id="8参考">8.参考&lt;/h1>
 &lt;blockquote>
 &lt;p>《深入理解Java虚拟机》-周志明&lt;/p>
-&lt;/blockquote></description></item><item><title>【运行时数据区】-0-用仓库管理员的视角理解运行时数据区</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</link><pubDate>Thu, 05 Aug 2021 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</guid><description>&lt;h1 id="0x01面试题">0x01.面试题&lt;/h1>
-&lt;p>&amp;ldquo;运行时数据区&amp;quot;是JVM面试题的热门考点。&lt;/p>
-&lt;p>实战中，内存泄露的定位、性能调优，往往也取决于我们对&amp;quot;运行时数据区&amp;quot;理解深度。&lt;/p>
-&lt;p>以下面试题来自百度搜索：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>From百度&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>三面：请阐述JVM内存模型，有哪些区？分别干什么的？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>From蚂蚁金服&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>请阐述Java8内存分代改进?&lt;/p>
-&lt;p>JVM内存分哪几个区，每个区的作用是什么？&lt;/p>
-&lt;p>一面： JVM内存分布/内存结构？栈和堆的区别？堆的结构？为什么两个survivor区？&lt;/p>
-&lt;p>二面： Eden和survivor的比例分配?&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>From小米&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>JVM为什么要有新生代和老年代?&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>From字节跳动&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>二面： Java的内存分区&lt;/p>
-&lt;p>二面：讲讲JVM运行时数据区&lt;/p>
-&lt;p>什么时候对象会进入老年代？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>From京东&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>JVM的内存结构，Eden和Survivor比例 。&lt;/p>
-&lt;p>JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>From拼多多&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>JVM内存分哪几个区，每个区的作用是什么？&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="0x02如何更好的理解运行时数据区">0x02.如何更好的理解运行时数据区&lt;/h1>
-&lt;p>笔者认为**&amp;ldquo;理解优于记忆&amp;rdquo;**，在笔者其它文章中，也反复表达了这个观点。&lt;/p>
-&lt;p>那么，对于运行时数据区，怎样&lt;strong>理解的方法&lt;/strong>更好？怎样的&lt;strong>理解程度&lt;/strong>才算透彻？&lt;/p>
-&lt;p>运行时数据区，本质就是JVM能够管理的内存。&lt;/p>
-&lt;p>&lt;strong>管理内存，我们要考虑如下几件事：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从职责的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>内存分几个区域？每个内存分区装什么数据？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>从优化的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>怎样充分利用内存？(防御经典的内存碎片问题)&lt;/p>
-&lt;p>将不同类型的数据(短生命周期的数据、体积大的数据等)存入内存的流程怎样更高效？&lt;/p>
-&lt;p>废弃的数据何时回收、如何回收？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>从协作的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>不同的线程公用同一个内存分区，如何保证安全可靠？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>从归属的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>如果是虚拟机流派的语言，则要考虑这片内存属于虚拟机内存还是操作系统&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>用大白话理解&lt;/strong>，&lt;strong>管理内存&lt;/strong>和&lt;strong>管理仓库&lt;/strong>是一个意思：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从职责的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>仓库分几个货架？每个货架装什么货物？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>从优化的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>怎样充分利用仓库？(货架上零零散散的放着货物，又不好找，来了大的货物也放不下)&lt;/p>
-&lt;p>将不同类型的货物(有的货物就是临时放一下、有的货物很大)放进货架的流程怎样更高效？&lt;/p>
-&lt;p>废弃的货物何时回收、如何回收？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>从协作的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>两个不同的管理员都要往同一个货架上放东西，怎么协调？&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>从归属的角度看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>如果菜鸟驿站的仓库放不下，能不能租一下顺丰的仓库呢？&lt;/p>
-&lt;/blockquote>
-&lt;p>笔者学习运行时数据区时，脑海中就出现了一位仓库管理员，那些复杂抽象的理论也变得简单了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/1.png" alt="image-20200906184141304">&lt;/p>
-&lt;h1 id="0x03运行时数据区的全景">0x03.运行时数据区的全景&lt;/h1>
-&lt;p>&lt;strong>首先，我们要知道运行时数据区包括哪5个区域？&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>程序计数器&lt;/p>
-&lt;p>方法区&lt;/p>
-&lt;p>堆&lt;/p>
-&lt;p>虚拟机栈&lt;/p>
-&lt;p>本地方法栈&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>然后，我们再看运行时数据区如何与JVM中的上下游模块交互？&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>STEP1.程序员编写的java文件被&amp;quot;编译器&amp;quot;转换为.class文件&lt;/p>
-&lt;p>STEP2.类加载子系统将.class文件加载到&amp;quot;运行时数据区&amp;quot;的&amp;quot;方法区&amp;rdquo;&lt;/p>
-&lt;p>STEP3.执行引擎执行&amp;quot;方法区&amp;quot;中的方法，不断改变着&amp;quot;运行时数据区&amp;quot;的&amp;quot;堆&amp;rdquo;、&amp;ldquo;虚拟机栈&amp;quot;中的数据&lt;/p>
-&lt;/blockquote>
-&lt;p>为避免陷入上述步骤中术语的细节，我们借助仓库货架，&lt;strong>通俗的类比&lt;/strong>一下[1]：&lt;/p>
-&lt;blockquote>
-&lt;p>STEP1.小美下单买了件衣服，淘宝店家将小美的订单转换成出库单——淘宝店家就像&amp;quot;编译器&amp;rdquo;&lt;/p>
-&lt;p>STEP2.仓库管理员全蛋哥将出库单打印出来，还把商家的入库单也打印出来了。——打印出来的纸件就像&amp;quot;方法区&amp;rdquo;&lt;/p>
-&lt;p>STEP3.全蛋哥按照入库单、出库单，在仓库货架上搬货出库和入库，完成一笔就在纸上打个勾。——货架就像&amp;quot;堆&amp;rdquo;，卷毛弟在入库单、出库单上打的勾的过程就像是在更新&amp;quot;虚拟机栈&amp;rdquo;&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/2.png" alt="2">&lt;/p>
-&lt;h1 id="0x04从优化角度看管理重点">0x04.从优化角度看管理重点&lt;/h1>
-&lt;p>读到这里，如果您已经建立了&lt;strong>内存管理与仓库管理的类比关系&lt;/strong>，我们就可以&lt;strong>从优化的角度，思考一下管理环节的重点&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>方法区的职责是存储&amp;quot;模板&amp;rdquo;&lt;/strong>，例如：程序员在代码中定义了哪些类、类和类的关系等。那么方法区是管理的重点吗？有的读者会认为&amp;quot;模板&amp;quot;太多就有可能导致方法区不够用，这种想法对吗？读者可以阅读笔者的另一篇文章《【类加载机制】从一道面试题开始》，尝试寻找答案。本文先不下结论，暂且认为&amp;rdquo;&lt;strong>方法区可能是管理重点&amp;rdquo;&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>堆的职责是存储&amp;quot;广义的对象&amp;rdquo;&lt;/strong>，例如：根据某个类创建对象，对象的实体就是放在堆中。堆够不够用，是程序员决定的，就好像仓库的货架够不够用是消费者下订单多少决定的。但JVM和仓库管理员应该尽量优化货架的摆放，保证尽量不要让货架放不下。因此，&amp;quot;&lt;strong>堆肯定是管理重点&lt;/strong>&amp;rdquo;&lt;/li>
-&lt;li>&lt;strong>虚拟机栈的职责是&amp;quot;记录方法执行时产生的过程数据产生数据&amp;rdquo;&lt;/strong>，这句话有点抽象，我们可以想象一张出库单要求在1号货架拿出一箱酒、在2号货架拿出一件衣服。仓库管理员抱着一箱酒再去2号货架拿衣服肯定不方便，于是仓库管理员临时把一箱酒放在仓库角落，等拿到衣服以后再把酒抱起来一起出库。我们继续想象，如果有10个仓库管理员都这么操作，仓库角落就乱七八糟的临时放了一堆东西。。。于是，&amp;quot;&lt;strong>虚拟机栈也成为了管理重点&lt;/strong>&amp;rdquo;&lt;/li>
-&lt;li>程序计数器、本地方法栈，概念、职责都比较好理解，笔者在后续文章中详述，这里就直接给出结论**&amp;ldquo;程序计数器、本地方法栈不是管理重点&amp;rdquo;**&lt;/li>
-&lt;li>读者可以结合下图，再理解一下上述文字。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/3.png" alt="2">&lt;/p>
-&lt;h1 id="0x05从协作角度看共享区域">0x05.从协作角度看共享区域&lt;/h1>
-&lt;ul>
-&lt;li>前文已经阐述了方法区的职责，管理员全蛋哥能看的&amp;quot;模板&amp;rdquo;，管理员卷毛弟肯定也能看。因此，&lt;strong>方法区肯定是共享的&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>堆是共享的&lt;/strong>。有一种场景，全蛋哥看了一下卷毛弟的出库单：咦，你也是拿货送给世纪彩城的客户啊，要不我这个单子的货你一起送了呗。&lt;/li>
-&lt;li>&lt;strong>虚拟机栈是独享&lt;/strong>的。这个更好理解，要全蛋哥和卷毛弟只打一份出库单，手牵手去出货，除了摩擦出火花，工作效率应该高不起来。&lt;/li>
-&lt;li>对于程序计数器、本地方法栈，本文只说结论&lt;strong>程序计数器、本地方法栈是独享&lt;/strong>的。&lt;/li>
-&lt;li>读者可以结合下图，再理解一下上述文字。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/4.png" alt="4">&lt;/p>
-&lt;h1 id="0x06从归属角度看内存">0x06.从归属角度看内存&lt;/h1>
-&lt;ul>
-&lt;li>这里要“剧透”方法区的一个细节，即，方法区中包含了一个&amp;quot;常量池&amp;quot;区域。这就导致了方法区可能经常不够用。于是在JVM的发展历程中，逐渐直接使用了操作系统的内存。这就好像自家的仓库不够用了，就租用了隔壁家更大的仓库一样。&lt;/li>
-&lt;li>读者可以结合下图，再理解一下[1]。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/5.png" alt="5">&lt;/p>
-&lt;blockquote>
-&lt;p>[1]：不同虚拟机尝试的实现细节不同，上图中方法区以及方法区的归属特指HotSpot的JDK8+版本。&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="0x07总结">0x07.总结&lt;/h1>
-&lt;p>从上述的分析与论述中，我们很容易发现：&lt;/p>
-&lt;ul>
-&lt;li>方法区、堆、虚拟机栈是内存管理的重点&lt;/li>
-&lt;li>方法区、堆是共享的，虚拟机栈是独享的&lt;/li>
-&lt;li>方法区是直接使用了操作系统内存&lt;/li>
-&lt;/ul>
-&lt;p>另外，JVM中诸多技术点较为抽象，用通俗易懂的方式进行类比，非常有利于我们更快更好的学习、攻克JVM。笔者其它的文章也会尽量延续这种方式。&lt;/p></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>

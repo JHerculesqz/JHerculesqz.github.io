@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Oct 2021 08:09:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Oct 2021 17:23:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,7 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【置顶】Java拾遗</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</link><pubDate>Thu, 14 Oct 2021 08:09:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</guid><description>&lt;p>Java是个庞大的体系，心中有许多想写下来的内容。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【置顶】Java拾遗</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</link><pubDate>Thu, 14 Oct 2021 17:23:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</guid><description>&lt;p>Java是个庞大的体系，心中有许多想写下来的内容。&lt;/p>
 &lt;p>陆续写了一些后，自己的表达脉络也逐渐清晰起来。&lt;/p>
 &lt;p>就用此文将已经发布的、即将编写的文章汇总起来，便于读者阅读。&lt;/p>
 &lt;h1 id="宏观">宏观&lt;/h1>
@@ -51,7 +51,510 @@
 &lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/">【Java新特性】-2-Java9新特性宏观解读&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/">【Java新特性】-3-Java9的类加载机制变化&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-4-java9-stackwalker/">【Java新特性】-4-Java9-StackWalker&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91Java%E6%8B%BE%E9%81%97/image-20211014110327766.png" alt="image-20211014110327766">&lt;/p></description></item><item><title>【宏观】如何更加深入理解Java虚拟机</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</link><pubDate>Tue, 12 Oct 2021 23:39:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid><description>&lt;h1 id="1深入理解jvm那还是别人的故事">1.深入理解JVM——那还是别人的故事&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91Java%E6%8B%BE%E9%81%97/image-20211014110327766.png" alt="image-20211014110327766">&lt;/p></description></item><item><title>【编译引擎】-8-阅读前端编译源码的准备工作</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</link><pubDate>Thu, 14 Oct 2021 15:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</guid><description>&lt;h1 id="1理解前端编译的规格">1.理解前端编译的规格&lt;/h1>
+&lt;p>在正式阅读OpenJDK前端编译器源码之前，建议先阅读笔者的这几篇文章，可以对JVM的前端编译的规格有一定了解：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/">【编译引擎】 1 学习阅读Class文件结构的意义&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8A/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-上&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-中&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-下&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/">【编译引擎】-3-学习阅读Class文件结构(javap版)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/">【编译引擎】-4-学习阅读Class文件指令-概览&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>当我们对前端编译器的规格、术语、概念有了一定了解后，就可以阅读如下几个基础模块的代码，建立阅读前端编译器核心代码的基础。&lt;/p>
+&lt;h1 id="2前端编译器基础模块1-javac的入口类">2.前端编译器基础模块1-javac的入口类&lt;/h1>
+&lt;p>这部分代码可以参考这篇文章中的&amp;quot;3.javac的入口解读&amp;quot;章节，此处不赘述&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/">【宏观】如何更加深入理解Java虚拟机&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="3前端编译器基础模块2-参数管理">3.前端编译器基础模块2-参数管理&lt;/h1>
+&lt;p>javac主要通过如下三个类实现了参数管理：&lt;/p>
+&lt;blockquote>
+&lt;p>com/sun/tools/javac/main/Option.java&lt;/p>
+&lt;p>com/sun/tools/javac/main/OptionHelper.java&lt;/p>
+&lt;p>com/sun/tools/javac/util/Options.java&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="31comsuntoolsjavacmainoptionjava">3.1.com/sun/tools/javac/main/Option.java&lt;/h2>
+&lt;p>Option是一个枚举类，是参数管理的核心类&lt;/p>
+&lt;h3 id="从关键属性看">从关键属性看&lt;/h3>
+&lt;p>Option的关键属性有：&lt;code>text&lt;/code>、&lt;code>kind&lt;/code>、&lt;code>group&lt;/code>、&lt;code>argsNameKey&lt;/code>、&lt;code>descrKey&lt;/code>、&lt;code>choiceKind&lt;/code>、&lt;code>choices&lt;/code>。&lt;/p>
+&lt;p>具体见如下代码标注：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="kd">enum&lt;/span> &lt;span class="n">Option&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="err">……&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * HCZ:
+&lt;/span>&lt;span class="cm"> * 命令配置的text
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">final&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * HCZ:
+&lt;/span>&lt;span class="cm"> * javac的命令行参数配置分类，可选值：标准的、-X这种扩展的、javac的隐藏属性
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="n">OptionKind&lt;/span> &lt;span class="n">kind&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * HCZ：
+&lt;/span>&lt;span class="cm"> * javac的命令行参数配置分组，可选值：Basic、javac文件系统专有、信息类参数、操作类参数
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="n">OptionGroup&lt;/span> &lt;span class="n">group&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/** Documentation key for arguments.
+&lt;/span>&lt;span class="cm"> * HCZ:
+&lt;/span>&lt;span class="cm"> * 命令配置的argsNameKey
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">argsNameKey&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/** Documentation key for description.
+&lt;/span>&lt;span class="cm"> * HCZ:
+&lt;/span>&lt;span class="cm"> * 命令配置的descrKey
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">descrKey&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/** Suffix option (-foo=bar or -foo:bar)
+&lt;/span>&lt;span class="cm"> * HCZ：
+&lt;/span>&lt;span class="cm"> * 命令配置是否具有后缀
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="n">hasSuffix&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/** The kind of choices for this option, if any.
+&lt;/span>&lt;span class="cm"> * HCZ：
+&lt;/span>&lt;span class="cm"> * javac的命令行参数配置的选择类型，可选值：其中任意1个、N个
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="n">ChoiceKind&lt;/span> &lt;span class="n">choiceKind&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="cm">/** The choices for this option, if any, and whether or not the choices
+&lt;/span>&lt;span class="cm"> * are hidden
+&lt;/span>&lt;span class="cm"> * HCZ:
+&lt;/span>&lt;span class="cm"> * 记录任1orN个选项的具体选项
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">final&lt;/span> &lt;span class="n">Map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">Boolean&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">choices&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="err">……&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="从枚举值看">从枚举值看&lt;/h3>
+&lt;p>javac支持的命令行参数就是与Option类的枚举值对应的。笔者将javac官方文档与Option类的枚举值进行了对应：&lt;/p>
+&lt;blockquote>
+&lt;p>javac官方文档：https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="javac文档中的standard-optionscross-compilation-optionscompact-profile-option">javac文档中的Standard Options、Cross-Compilation Options、Compact Profile Option&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Standard&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Akey&lt;/span>&lt;span class="o">[=&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">A&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-A&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.key.equals.value&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.A&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">cp&lt;/span> &lt;span class="n">path&lt;/span> &lt;span class="n">or&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">classpath&lt;/span> &lt;span class="n">path&lt;/span>
+&lt;span class="nf">CLASSPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-classpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.classpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">CP&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-cp&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.classpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Djava&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ext&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">dirs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">directories&lt;/span>
+&lt;span class="nf">DJAVA_EXT_DIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Djava.ext.dirs=&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.extdirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Djava&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">endorsed&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">dirs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">directories&lt;/span>
+&lt;span class="nf">DJAVA_ENDORSED_DIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Djava.endorsed.dirs=&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.endorseddirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="n">directory&lt;/span>
+&lt;span class="nf">D&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-d&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.directory&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.d&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">deprecation&lt;/span>
+&lt;span class="nf">DEPRECATION&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-deprecation&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.deprecation&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">encoding&lt;/span> &lt;span class="n">encoding&lt;/span>
+&lt;span class="nf">ENCODING&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-encoding&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.encoding&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.encoding&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">endorseddirs&lt;/span> &lt;span class="n">directories&lt;/span>
+&lt;span class="nf">ENDORSEDDIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-endorseddirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.endorseddirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">extdirs&lt;/span> &lt;span class="n">directories&lt;/span>
+&lt;span class="nf">EXTDIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-extdirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.extdirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>
+&lt;span class="nf">G&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-g&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.g&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">none&lt;/span>
+&lt;span class="nf">G_NONE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-g:none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.g.none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">keyword&lt;/span> &lt;span class="n">list&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">G_CUSTOM&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-g:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.g.lines.vars.source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ANYOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;lines&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;vars&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;source&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">help&lt;/span>
+&lt;span class="nf">H&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-h&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.directory&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.headerDest&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">HELP&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-help&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.help&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">implicit&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">class&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">none&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">IMPLICIT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-implicit:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.implicit&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;class&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Joption&lt;/span>
+&lt;span class="nf">J&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-J&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.flag&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.J&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">nowarn&lt;/span>
+&lt;span class="nf">NOWARN&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-nowarn&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.nowarn&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">parameters&lt;/span>
+&lt;span class="nf">PARAMETERS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-parameters&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="s">&amp;#34;opt.parameters&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">proc&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">[&lt;/span>&lt;span class="n">none&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">only&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">PROC&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-proc:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.proc.none.only&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;only&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">processor&lt;/span> &lt;span class="n">class1&lt;/span> &lt;span class="o">[,&lt;/span>&lt;span class="n">class2&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">class3&lt;/span>&lt;span class="o">...]&lt;/span>
+&lt;span class="nf">PROCESSOR&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-processor&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.class.list&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.processor&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">processorpath&lt;/span> &lt;span class="n">path&lt;/span>
+&lt;span class="nf">PROCESSORPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-processorpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.processorpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">s&lt;/span> &lt;span class="n">dir&lt;/span>
+&lt;span class="nf">S&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-s&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.directory&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.sourceDest&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">source&lt;/span> &lt;span class="n">release&lt;/span>
+&lt;span class="nf">SOURCE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.release&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">sourcepath&lt;/span> &lt;span class="n">sourcepath&lt;/span>
+&lt;span class="nf">SOURCEPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-sourcepath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.sourcepath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">verbose&lt;/span>
+&lt;span class="nf">VERBOSE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-verbose&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.verbose&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">version&lt;/span>
+&lt;span class="nf">VERSION&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-version&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.version&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">werror&lt;/span>
+&lt;span class="nf">WERROR&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Werror&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Werror&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">X&lt;/span>
+&lt;span class="nf">X&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-X&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.X&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">Cross&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">Compilation&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">target&lt;/span> &lt;span class="n">version&lt;/span>
+&lt;span class="nf">TARGET&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-target&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.release&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.target&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">bootclasspath&lt;/span> &lt;span class="n">bootclasspath&lt;/span>
+&lt;span class="nf">BOOTCLASSPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-bootclasspath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.bootclasspath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">Compact&lt;/span> &lt;span class="n">Profile&lt;/span> &lt;span class="n">Option&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">profile&lt;/span>
+&lt;span class="nf">PROFILE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-profile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.profile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.profile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="javac官方文档的nonstandard-options">javac官方文档的Nonstandard Options&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Nonstandard&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xbootclasspath&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">path&lt;/span>
+&lt;span class="nf">XBOOTCLASSPATH_PREPEND&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xbootclasspath/p:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xbootclasspath.p&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xbootclasspath&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">path&lt;/span>
+&lt;span class="nf">XBOOTCLASSPATH_APPEND&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xbootclasspath/a:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xbootclasspath.a&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xbootclasspath&lt;/span>&lt;span class="o">/:&lt;/span>&lt;span class="n">path&lt;/span>
+&lt;span class="nf">XBOOTCLASSPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xbootclasspath:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.bootclasspath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:[-]&lt;/span>&lt;span class="n">group&lt;/span> &lt;span class="o">[/&lt;/span>&lt;span class="n">access&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="kd">protected&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="o">,-&lt;/span>&lt;span class="n">html&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="kn">package&lt;/span>
+&lt;span class="err">-&lt;/span>&lt;span class="nn">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">none&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="o">[/&lt;/span>&lt;span class="n">access&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">XDOCLINT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xdoclint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xdoclint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">XDOCLINT_CUSTOM&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xdoclint:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xdoclint.subopts&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xdoclint.custom&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>
+&lt;span class="nf">XLINT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xlint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xlint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">none&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:-&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;span class="nf">XLINT_CUSTOM&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xlint:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xlint.suboptlist&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ANYOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">getXLintChoices&lt;/span>&lt;span class="o">()),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xmaxerrs&lt;/span> &lt;span class="n">number&lt;/span>
+&lt;span class="nf">XMAXERRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xmaxerrs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.number&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.maxerrs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xmaxwarns&lt;/span> &lt;span class="n">number&lt;/span>
+&lt;span class="nf">XMAXWARNS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xmaxwarns&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.number&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.maxwarns&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xstdout&lt;/span> &lt;span class="n">filename&lt;/span>
+&lt;span class="nf">XSTDOUT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xstdout&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.file&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xstdout&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xprefer&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">newer&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">source&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">XPREFER&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xprefer:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.prefer&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;newer&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xpkginfo&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">always&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">legacy&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">nonempty&lt;/span>&lt;span class="o">]&lt;/span>
+&lt;span class="nf">XPKGINFO&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xpkginfo:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.pkginfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;always&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;legacy&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;nonempty&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">Xprint&lt;/span>
+&lt;span class="nf">XPRINT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xprint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.print&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">XprintProcessorInfo&lt;/span>
+&lt;span class="nf">XPRINTPROCESSORINFO&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XprintProcessorInfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.printProcessorInfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">-&lt;/span>&lt;span class="n">XprintRounds&lt;/span>
+&lt;span class="nf">XPRINTROUNDS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XprintRounds&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.printRounds&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="javac官方文档的command-line-argument-files">javac官方文档的Command-Line Argument Files&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Command&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">Line&lt;/span> &lt;span class="n">Argument&lt;/span> &lt;span class="n">Files&lt;/span>
+&lt;span class="nf">AT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;@&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.file&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.AT&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="javac官方文档上没有对应的枚举值的隐藏参数">javac官方文档上没有对应的枚举值的隐藏参数&lt;/h4>
+&lt;p>除了前两个被定义为EXTEND类型的参数，后面的都是被定为为HIDDEN类型的参数&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">PLUGIN&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xplugin:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.plugin&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.plugin&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">XDIAGS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xdiags:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.diags&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;compact&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;verbose&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">FULLVERSION&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-fullversion&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">DIAGS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XDdiags=&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">MOREINFO&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-moreinfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">PROMPT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-prompt&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">DOE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-doe&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">PRINTSOURCE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-printsource&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">WARNUNCHECKED&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-warnunchecked&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">O&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-O&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">XJCOV&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xjcov&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="n">XD&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XD&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">SOURCEFILE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;sourcefile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211013173627325-1634183614455.png" alt="image-20211013173627325">&lt;/p>
+&lt;h4 id="结论">结论&lt;/h4>
+&lt;p>从上述源码的分析，我们可以得到以下结论：&lt;/p>
+&lt;blockquote>
+&lt;p>javac的命令行参数被分为了STANDARD、EXTENDED、HIDDEN。其中，&lt;/p>
+&lt;p>STANDARD参数会写进javac官方文档的Standard Options、Cross-Compilation Options、Compact Profile Option章节；&lt;/p>
+&lt;p>EXTENDED会写进javac官方文档Nonstandard Options章节；&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="延伸">延伸&lt;/h4>
+&lt;p>其它JDK自带的命令行工具，都有类似的Option模块处理命令行参数(如下&lt;code>java.c&lt;/code>源码中)。&lt;/p>
+&lt;p>源码中有如此机制，我们可以得到一下命令行工具学习的新思路：&lt;/p>
+&lt;blockquote>
+&lt;p>我们可以在学习JDK命令行工具的时候，不仅局限于对应的官方文档，还可以通过Options类的枚举值探索一些隐藏的命令行参数。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014154700768.png" alt="image-20211014154700768">&lt;/p>
+&lt;h3 id="从构造函数看">从构造函数看&lt;/h3>
+&lt;blockquote>
+&lt;p>如下N个构造函数，支撑了各个枚举值的定义。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014155636948.png" alt="image-20211014155636948">&lt;/p>
+&lt;h3 id="从方法看">从方法看&lt;/h3>
+&lt;p>Option的方法如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014155805308.png" alt="image-20211014155805308">&lt;/p>
+&lt;p>关键方法是process方法，它通过将待处理的Option对象加入到OptionHelper中，支撑了2.1章节涉及的&lt;code>Main#processArgs方法&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm">* HCZ：
+&lt;/span>&lt;span class="cm">* 将待处理的option加入到OptionHelper对象
+&lt;/span>&lt;span class="cm">*/&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="nf">process&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">OptionHelper&lt;/span> &lt;span class="n">helper&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">option&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">choices&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">choiceKind&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">ChoiceKind&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ONEOF&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// some clients like to see just one of option+choice set
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">choices&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">keySet&lt;/span>&lt;span class="o">())&lt;/span>
+&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">remove&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">option&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">String&lt;/span> &lt;span class="n">opt&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">option&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">opt&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">opt&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">// some clients like to see option (without trailing &amp;#34;:&amp;#34;)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// set to arg
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">nm&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">option&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">substring&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">option&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">nm&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">// set option+word for each word in arg
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">split&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;,+&amp;#34;&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">String&lt;/span> &lt;span class="n">opt&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">option&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">opt&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">opt&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">option&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="从周边关系看">从周边关系看&lt;/h3>
+&lt;blockquote>
+&lt;p>在Main#optionHelper中，实现了OptionHelper的匿名类
+在Main#options中，维护了Options对象&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014160156265.png" alt="image-20211014160156265">&lt;/p>
+&lt;h2 id="32optionhelper和options">3.2.OptionHelper和Options&lt;/h2>
+&lt;blockquote>
+&lt;p>com/sun/tools/javac/util/Options.java和com/sun/tools/javac/main/OptionHelper.java两个类都是Option类的辅助类，&lt;/p>
+&lt;p>主要是一些集合的CRUD操作，读者有兴趣可以自行阅读。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;ul>
+&lt;li>本文回顾了JVM前端编译器的规格。&lt;/li>
+&lt;li>本文分析了前端编译器的基础模块—javac的入口模块&lt;/li>
+&lt;li>本文分析了前端编译器的基础模块——参数配置模块&lt;/li>
+&lt;/ul></description></item><item><title>【宏观】如何更加深入理解Java虚拟机</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</link><pubDate>Tue, 12 Oct 2021 23:39:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid><description>&lt;h1 id="1深入理解jvm那还是别人的故事">1.深入理解JVM——那还是别人的故事&lt;/h1>
 &lt;p>国庆期间，思考了一个问题：&lt;code>怎样才算深入理解了Java虚拟机？&lt;/code>&lt;/p>
 &lt;p>把周志明的《深入理解Java虚拟机》看5遍算不算透彻理解了JVM？&lt;/p>
 &lt;p>似乎不算：笔者已经阅读过好几遍，其中部分章节应该超过5遍。但，依然觉得很多技术点如同罩上了一层薄纱。&lt;/p>
@@ -4485,178 +4988,4 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;p>&lt;strong>垃圾回收体系&lt;/strong>就是JVM中，扮演了这个最无情的角色。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/1.png" alt="image-20210107150610240">&lt;/p>
 &lt;p>站在打工人(对象)的角度，垃圾回收体系是无情的存在。&lt;/p>
-&lt;p>但站在企业主(JVM)的角度，垃圾回收体系是维系正常生产的重要部件。&lt;/p></description></item><item><title>【类加载机制】-1-类加载器剖析-类加载器速览</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/</link><pubDate>Thu, 05 Aug 2021 08:08:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/</guid><description>&lt;h1 id="1一道面试题">1.一道面试题&lt;/h1>
-&lt;p>这是一道经典的面试题：请描述一下Tomcat如何实现自己独特的类加载机制。&lt;/p>
-&lt;p>这道题可以引申出很多类加载器的细节问题：&lt;/p>
-&lt;blockquote>
-&lt;p>例如：Tomcat为什么要实现一套与JVM不同的类加载机制？&lt;/p>
-&lt;p>例如：Tomcat有哪几种类加载器？&lt;/p>
-&lt;p>例如：双亲委派模型不满足Tomcat的要求吗？&lt;/p>
-&lt;p>例如：自己定义一个恶意系统类(比如Object类)，会对Tomcat造成伤害吗？&lt;/p>
-&lt;/blockquote>
-&lt;p>这些细节问题，涉及到&amp;quot;类加载器&amp;quot;的一些原理性知识，结合笔者之前的文章《【类加载机制】从一道面试题开始》，我们一起来学习一下类加载器。&lt;/p>
-&lt;h1 id="2类加载器的实战价值">2.类加载器的实战价值&lt;/h1>
-&lt;p>类加载器是JVM类加载机制的具体实现。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/1.png" alt="image-20201224172135407">&lt;/p>
-&lt;ul>
-&lt;li>类加载器的第一个实战用途就是&lt;strong>定位异常&lt;/strong>：当使用一些三方件时，并且部署在某些容器中，运行时环境一旦出现ClassNotFoundException，就需要利用类加载器的知识进行问题定位。&lt;/li>
-&lt;li>类加载器的第二个实战用途就是&lt;strong>安全&lt;/strong>：java的二进制天然地容易被反编译，为了进行&lt;strong>二进制保护&lt;/strong>，通常会自定义类加载器。&lt;/li>
-&lt;/ul>
-&lt;h1 id="3类加载器的分类">3.类加载器的分类&lt;/h1>
-&lt;p>在Java8中，类加载器的逻辑关系如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/2.png" alt="image-20201224175405793">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从提供者看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>JVM自带1个类加载器：&lt;strong>BootstrapClassLoader&lt;/strong>&lt;/p>
-&lt;p>JDK自带2个类加载器：&lt;strong>ExtClassLoader&lt;/strong>、&lt;strong>AppClassLoader&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从关系看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>BootstrapClassLoader：它会创建ExtClassLoader和AppClassLoader，它是ExtClassLoader的父级加载器。&lt;/p>
-&lt;p>ExtClassLoader是AppClassLoader的父级加载器。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从实现看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>BootstrapClassLoader&lt;/strong>：用C++实现&lt;/p>
-&lt;p>&lt;strong>ExtClassLoader&lt;/strong>：用Java实现，继承自ClassLoader&lt;/p>
-&lt;p>&lt;strong>AppClassLoader&lt;/strong>：用Java实现，继承自ClassLoader&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从职责看&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>BootstrapClassLoader&lt;/strong>：加载(JAVA_HOME/jre/lib/*.jar或sun.boot.class.path下所有内容，用于提供JVM自身需要的类。&lt;/p>
-&lt;p>&lt;strong>ExtClassLoader&lt;/strong>：加载属性java.ext.dirs所指定的目录中的类库，或从JDK的安装目录jre/lib/ext/*.jar。&lt;/p>
-&lt;p>&lt;strong>AppClassLoader&lt;/strong>：加载环境变量classpath中的jar或属性java.class.path指定路径下的类库。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>限制&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>BootstrapClassLoader&lt;/strong>：为了安全，只加载包名为java、javax、sun开头的类文件&lt;/p>
-&lt;p>JVM自带了上述3种类加载器，就不得不面临两个问题：&lt;/p>
-&lt;blockquote>
-&lt;p>1.加载流程问题：有一个类A，哪个类加载器负责去加载？&lt;/p>
-&lt;p>2.唯一性问题：有一个类A，不同的类加载器能同时加载它吗？&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="4相对唯一">4.相对唯一&lt;/h1>
-&lt;p>类加载机制这样定义类的唯一性，必须满足如下两个条件：&lt;/p>
-&lt;ul>
-&lt;li>第一、加载到JVM中的&lt;strong>类模板本身是相同的&lt;/strong>&lt;/li>
-&lt;li>第二、加载这个类的&lt;strong>加载器是同一个&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>第一个条件比较好理解，这个被加载的类，&lt;strong>来自同一个class文件、类的全限定名相同&lt;/strong>。&lt;/p>
-&lt;p>第二个条件则体现了哲学定义中的&amp;quot;唯一&amp;rdquo;——&lt;strong>在一定约束下&lt;/strong>，事物具备独一无二的性质。&lt;/p>
-&lt;p>反过来理解第二个条件，我们可以得到如下推论：&lt;/p>
-&lt;ul>
-&lt;li>推论1：两个类加载器可以加载同一个类&lt;/li>
-&lt;li>推论2：如果发生了推论1，则此时JVM中加载完成的2个类模板被JVM认为是2个不同的类模板。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/3.png" alt="image-20201225072929911">&lt;/p>
-&lt;h1 id="5双亲委派">5.双亲委派&lt;/h1>
-&lt;p>明白了&amp;quot;相对唯一性&amp;rdquo;，JVM还是要讲一点**&amp;ldquo;江湖规矩&amp;rdquo;**——在没有某些特殊诉求的情况下，还是要约束一下类加载器们不能太渣，不要反复加载同一个类模板。&lt;/p>
-&lt;p>JVM定义了这么一套加载规则：&lt;/p>
-&lt;ul>
-&lt;li>类加载器存在上下级关系：Bootstrap是一把手，Ext是二把手，App是小弟。&lt;/li>
-&lt;li>类加载器存在先后顺序：一把手(Bootstrap)初始化的时候，将二把手(Ext)、小弟(App)给创建出来。&lt;/li>
-&lt;li>类加载器存在加载询问机制：
-&lt;ul>
-&lt;li>当小弟(App)准备加载1个类模板，会先去求助一下二把手(Ext)加载过这个类吗、能不能帮我加载一下？&lt;/li>
-&lt;li>二把手(Ext)收到小弟(App)的求助，也会马上去求助一把手(Bootstrap)。&lt;/li>
-&lt;li>一把手(Bootstrap)没有更上级可以求助，于是看看自己能否加载，如果不能，就把权力下放给二把手(Ext)。&lt;/li>
-&lt;li>二把手(Ext)一样的处理逻辑，如果不能加载，就把权力下放给小弟(App)。&lt;/li>
-&lt;li>绕了这么一大圈，小弟(App)还得自己加载。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>这套加载规则，就是双亲委派模型，Parents Delegation Model，也被称为溯源委派加载模型。&lt;/p>
-&lt;p>为啥JVM为这种加载规则取了这么奇怪的名字？&lt;/p>
-&lt;p>笔者听到一个段子觉得比较贴切——说，类加载的相对唯一性就是&amp;rdquo;&lt;strong>渣男逻辑&lt;/strong>&amp;quot;，而双亲委派模型就是&amp;rdquo;&lt;strong>妈宝模型&lt;/strong>&amp;quot;：&lt;/p>
-&lt;blockquote>
-&lt;p>小明(App)的家庭作业不会做，就叫妈妈(Ext)帮忙做。&lt;/p>
-&lt;p>妈妈(Ext)有点忙就叫奶奶(Bootstrap)做。&lt;/p>
-&lt;p>奶奶(Bootstrap)说我现在不舒服，还是妈妈(Ext)做吧。&lt;/p>
-&lt;p>妈妈(Ext)说我现在忙着做饭，小明(App)你自己来吧。&lt;/p>
-&lt;p>小明(App)看绕了一圈，还得自己做作业。&lt;/p>
-&lt;/blockquote>
-&lt;p>理解清楚这个&amp;quot;双亲&amp;quot;的含义，我们就知道在很多讲JVM原理的文章中，提到的父级加载器、父类加载器，不是表示这三种类加载器是父子关系，而是上下级关系。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/4.png" alt="image-20201225075247217">&lt;/p>
-&lt;h1 id="6测试">6.测试&lt;/h1>
-&lt;p>我们用几个测试用例，验证一下：&lt;/p>
-&lt;h2 id="61验证三种类加载器的上下级关系">6.1.验证三种类加载器的上下级关系&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码：&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>先获得AppClassLoader，然后调用getParent()，获得上一级ClassLoader&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/5.png" alt="image-20201225093801335">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>运行结果：&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明AppClassLoader的上级是ExtClassLoader，ExtClassLoader的上级是Bootrap(C++实现，所以打印为null)&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/6.png" alt="image-20201225094741928">&lt;/p>
-&lt;h2 id="62验证bootstrapclassloader已经加载的类">6.2.验证BootstrapClassLoader已经加载的类&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>通过getBootstrapClassPath，获得Bootstrap加载器已经加载的类&lt;/p>
-&lt;p>再找到Bootstrap加载器已经加载的某一个类对应的类加载器，反过来验证它的类加载器是否是Bootstrap。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/7.png" alt="image-20201225095543911">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>运行结果&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>Bootstrap的职责是加载JVM自身需要的类，目录如下图：&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/8.png" alt="image-20201225095633865">&lt;/p>
-&lt;h2 id="63验证extclassloader已经加载的类">6.3.验证ExtClassLoader已经加载的类&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>获得java.ext.dirs对应的文件路径，再选择该路径下的类，查看类加载器类型&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/9.png" alt="image-20201225100147120">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>运行结果&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>ExtClassLoader的职责是加载java.ext.dirs下的类&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/10.png" alt="image-20201225100228926">&lt;/p>
-&lt;h2 id="64尝试破坏javalang包">6.4.尝试破坏java.lang包&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>自建一个java.lang.String类&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/11.png" alt="image-20201225101209635">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/12.png" alt="image-20201225101245483">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>运行结果&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>类加载器加载的时候，认为这是一个被禁止的包路径，防御了我们伪造java.lang包下的基础类&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/13.png" alt="image-20201225101409744">&lt;/p>
-&lt;h1 id="7总结">7.总结&lt;/h1>
-&lt;p>类加载器是类加载机制的具体实现，本文讲解了如下知识点：&lt;/p>
-&lt;ul>
-&lt;li>类加载器的分类&lt;/li>
-&lt;li>类加载器的相对唯一性&lt;/li>
-&lt;li>双亲委派模型&lt;/li>
-&lt;li>通过代码，验证了：
-&lt;ul>
-&lt;li>类加载器之间的上下级关系&lt;/li>
-&lt;li>Bootstrap、Ext类加载器的职责&lt;/li>
-&lt;li>JVM如何防御我们对核心库的破坏行为&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="8参考">8.参考&lt;/h1>
-&lt;blockquote>
-&lt;p>《深入理解Java虚拟机》-周志明&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>但站在企业主(JVM)的角度，垃圾回收体系是维系正常生产的重要部件。&lt;/p></description></item></channel></rss>

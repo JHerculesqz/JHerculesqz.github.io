@@ -4108,7 +4108,189 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;p>3.解释器与即时编译器的配合方式——分层编译&lt;/p>
 &lt;/blockquote>
 &lt;p>结合笔者另外两篇文章《【类加载机制】从一道面试题开始》、《【运行时数据区】用仓库管理员的视角理解运行时数据区》，我们已经从宏观上看到了&lt;strong>JVM的三大构成&lt;/strong>，笔者将在后续文章中，与读者们继续深入与探索个中细节。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/9.png" alt="image-20200916175340096">&lt;/p></description></item><item><title>【垃圾回收】-0-垃圾回收体系的主脉络</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</link><pubDate>Thu, 05 Aug 2021 08:08:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/9.png" alt="image-20200916175340096">&lt;/p></description></item><item><title>【类加载机制】-8-Init阶段细节-顺序，再谈赋值-下</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/</link><pubDate>Thu, 05 Aug 2021 08:08:33 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/</guid><description>&lt;h1 id="1面试题static与继承的结合">1.面试题：static与继承的结合&lt;/h1>
+&lt;p>书接上文，在上一篇案例中，我们通过识别哪些static字段&amp;quot;不生成clinit方法&amp;rdquo;，进而理解了面试题中哪些static元素不会打印。&lt;/p>
+&lt;p>本文进一步分析那些会生成clinit方法，在哪些场景下会被调用。&lt;/p>
+&lt;h1 id="2场景1创建类的实例">2.场景1：创建类的实例&lt;/h1>
+&lt;p>以下代码创建了类的实例：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/1.png" alt="image-20210319142108479">&lt;/p>
+&lt;p>运行代码后，可以发现，类Test1生成了clinit方法被调用了。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/2.png" alt="image-20210319142237424">&lt;/p>
+&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>通过new方式，创建类的实例时，类中的clinit方法会被执行&lt;/p>
+&lt;/blockquote>
+&lt;p>聪明的读者，可以尝试以下方式创建类的实例，看看clinit方法是否会被执行&lt;/p>
+&lt;blockquote>
+&lt;p>反射&lt;/p>
+&lt;p>克隆&lt;/p>
+&lt;p>反序列化&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="3场景2调用类的静态方法">3.场景2：调用类的静态方法&lt;/h1>
+&lt;p>以下代码演示了调用类的静态方法：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/3.png" alt="image-20210319143319830">&lt;/p>
+&lt;p>运行代码后，可以发现字节码中出现了invokestatic指令，类Test3生成了clinit方法被调用了。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/4.png" alt="image-20210319143417477">&lt;/p>
+&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>调用类的静态方法时，类中的clinit方法会被执行&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="3场景3调用类接口的静态字段">3.场景3：调用类、接口的静态字段&lt;/h1>
+&lt;p>以下代码演示了调用类的静态字段：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/5.png" alt="image-20210319143711917">&lt;/p>
+&lt;p>运行代码后，可以发现main函数中(说明：一次只放出一条打印语句)，Test4的a2、A5、A6、A7会触发clinit方法，而A3、A4、A8不会触发clinit方法。&lt;/p>
+&lt;p>为什么呢？&lt;/p>
+&lt;p>因为A3、A4、A8就是上篇提到的不会生成clinit的场景。&lt;/p>
+&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>调用类中静态字段，且静态字段会生成clinit时，类中的clinit方法会被执行&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="4场景4使用javalangreflect包中的方法反射类的方法时">4.场景4：使用java.lang.reflect包中的方法反射类的方法时&lt;/h1>
+&lt;p>以下代码演示了使用Class.forName：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/6.png" alt="image-20210319144451690">&lt;/p>
+&lt;p>运行代码，可以发现clinit方法被执行了&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/7.png" alt="image-20210319144543469">&lt;/p>
+&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>使用java.lang.reflect包中的方法反射类的方法时，类中的clinit方法会被执行&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="5场景5初始化子类">5.场景5：初始化子类&lt;/h1>
+&lt;p>以下代码演示了创建子类的实例：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/8.png" alt="image-20210319144638827">&lt;/p>
+&lt;p>运行代码，可以发现，依次执行了父类的clinit方法、子类的clinit方法&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/9.png" alt="image-20210319144834224">&lt;/p>
+&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>初始化子类时，如果父类还没有初始化，则会触发父类的初始化&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="6场景6接口中定义了default方法">6.场景6：接口中定义了default方法&lt;/h1>
+&lt;p>如下代码演示了在接口中定义default方法&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/10.png" alt="image-20210319145731549">&lt;/p>
+&lt;p>运行代码，可以发现，接口的clinit方法被执行了&lt;/p>
+&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>如果接口中定义了default方法，clinit方法被执行&lt;/p>
+&lt;/blockquote>
+&lt;p>反过来思考，如果接口中没有定义default方法呢？读者可以删掉示例中的default方法，看看clinit方法是否会被执行。&lt;/p>
+&lt;h1 id="7总结">7.总结&lt;/h1>
+&lt;p>本文分析了Java实战中极为常用的关键词：static&lt;/p>
+&lt;ul>
+&lt;li>javac自动生成clinit的原则：被static修饰的字段和代码块都可能触发自动生成clinit。&lt;/li>
+&lt;li>不生成clinit的场景本质：被static final修饰、基础数据类型或String类型、赋值不涉及对象生成的场景，都不会触发自动生成clinit&lt;/li>
+&lt;li>能够调用clinit的场景
+&lt;ul>
+&lt;li>通过new方式创建类的实例&lt;/li>
+&lt;li>调用类的静态方法&lt;/li>
+&lt;li>调用类和接口的静态字段&lt;/li>
+&lt;li>反射类&lt;/li>
+&lt;li>初始化子类&lt;/li>
+&lt;li>接口中定义default方法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/12.png" alt="image-20210304003623960">&lt;/p>
+&lt;h1 id="8参考资料">8.参考资料&lt;/h1>
+&lt;blockquote>
+&lt;p>《深入理解Java虚拟机》的类加载章节-周志明&lt;/p>
+&lt;/blockquote></description></item><item><title>【类加载机制】-8-Init阶段细节-顺序，再谈赋值-上</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/</link><pubDate>Thu, 05 Aug 2021 08:08:32 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/</guid><description>&lt;h1 id="1面试题static与继承的结合">1.面试题：static与继承的结合&lt;/h1>
+&lt;p>&amp;ldquo;根据static代码块与继承结合的代码，输出打印结果&amp;rdquo;，属于各类面试、认证中比较高频的题目：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/1.png" alt="image-20210303230717801">&lt;/p>
+&lt;p>大多数解析文章这样解读：&lt;/p>
+&lt;blockquote>
+&lt;p>这道题考察了Java中父类先行的语法特性，即：&lt;/p>
+&lt;p>(1)子类的static代码块执行前会执行父类的static代码块&lt;/p>
+&lt;p>(2)子类的构造函数执行前会执行父类的构造函数&lt;/p>
+&lt;/blockquote>
+&lt;p>但，笔者想结合之前探讨过的系列文章(字节码解读、类加载子系统)，更深入地探索一下这道题背后&amp;quot;看山不是山&amp;quot;的别样含义。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/2.png" alt="image-20210303232220180">&lt;/p>
+&lt;h1 id="2关联static与jvm的关联">2.关联：static与JVM的关联&lt;/h1>
+&lt;p>想看透这道题，就要先透彻的理解static与JVM的关联。&lt;/p>
+&lt;p>我们知道，JVM的类加载子系统分为如下环节：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/3.png" alt="image-20210303232545951">&lt;/p>
+&lt;p>在JVM规范中，这样定义&amp;quot;连接之准备&amp;quot;环节：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Preparation&lt;/em> involves creating the static fields for a class or interface and initializing such fields to their default values (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.3">§2.3&lt;/a>, &lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.4">§2.4&lt;/a>). This does not require the execution of any Java Virtual Machine code; explicit initializers for static fields are executed as part of initialization (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.5">§5.5&lt;/a>), not preparation.&lt;/p>
+&lt;/blockquote>
+&lt;p>就是说在这个阶段，JVM会对static字段赋值——赋值特指&amp;quot;默认值&amp;rdquo;。&lt;/p>
+&lt;p>在JVM规范中，描述&amp;quot;初始化&amp;quot;环节时，又提到了诸多&amp;quot;触发赋值&amp;quot;的可能性：&lt;/p>
+&lt;blockquote>
+&lt;p>A class or interface C may be initialized only as a result of:&lt;/p>
+&lt;p>The execution of any one of the Java Virtual Machine instructions &lt;em>new&lt;/em>, &lt;em>getstatic&lt;/em>, &lt;em>putstatic&lt;/em>, or &lt;em>invokestatic&lt;/em> that references C (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.new">§&lt;em>new&lt;/em>&lt;/a>, &lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.getstatic">§&lt;em>getstatic&lt;/em>&lt;/a>, &lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.putstatic">§&lt;em>putstatic&lt;/em>&lt;/a>, &lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokestatic">§&lt;em>invokestatic&lt;/em>&lt;/a>). These instructions reference a class or interface directly or indirectly through either a field reference or a method reference.&lt;/p>
+&lt;p>……&lt;/p>
+&lt;/blockquote>
+&lt;p>根据JVM规范，说明对于static字段，在如下两个环节都有可能赋值：&lt;/p>
+&lt;ul>
+&lt;li>连接之准备&lt;/li>
+&lt;li>初始化&lt;/li>
+&lt;/ul>
+&lt;p>就是因为&amp;quot;可能&amp;quot;这两个字，就会分离出多种不同的场景。&lt;/p>
+&lt;p>也正因为对这多种不同场景的理解不足，进而导致&amp;quot;程序运行结果与程序猿的预期不一致&amp;quot;的诸多现网惨案。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/4.png" alt="image-20210303234350403">&lt;/p>
+&lt;h1 id="3主要工作生成并执行clinit方法">3.主要工作：生成并执行clinit方法&lt;/h1>
+&lt;p>JVM在初始化环节，最主要的工作是执行clinit方法。&lt;/p>
+&lt;p>JVM规范中，这样描述clinit方法：&lt;/p>
+&lt;blockquote>
+&lt;p>The name &lt;code>&amp;lt;clinit&amp;gt;&lt;/code> is supplied by a compiler. Because the name &lt;code>&amp;lt;clinit&amp;gt;&lt;/code> is not a valid identifier, it cannot be used directly in a program written in the Java programming language. Class and interface initialization methods are invoked implicitly by the Java Virtual Machine; they are never invoked directly from any Java Virtual Machine instruction, but are invoked only indirectly as part of the class initialization process.&lt;/p>
+&lt;/blockquote>
+&lt;p>我们可以这样理解：&lt;/p>
+&lt;blockquote>
+&lt;p>(1)clinit是Javac自动生成的：意味着程序猿无法自定义一个同名方法，更无法在程序中主动调用。&lt;/p>
+&lt;p>(2)clinit由&amp;quot;类的静态成员的赋值语句&amp;quot;和&amp;quot;static代码块&amp;quot;产生。&lt;/p>
+&lt;/blockquote>
+&lt;p>阅读到这里，您可能会想：以前我所知道的static，在JVM层上，不就多了个clinit方法的技术点吗？记下来好了！&lt;/p>
+&lt;p>然而，你以为就这么结束了吗。。。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/5.png" alt="image-20210303235720279">&lt;/p>
+&lt;h1 id="4特殊场景那些不会生成clinit的场景">4.特殊场景：那些不会生成clinit的场景&lt;/h1>
+&lt;p>那么，是不是所有static字段都会生成并执行clinit呢？&lt;/p>
+&lt;p>JVM规范描述问题的思维通常是正向的，但换成逆向的思维，就会发现很多隐藏的机关。&lt;/p>
+&lt;p>比如这个static，在某些场景下，就不会生成clinit方法(clinit都不会生成，当然更不会执行)。&lt;/p>
+&lt;ul>
+&lt;li>场景1：最容易想到的场景是非static的字段，显然不会生成clinit。&lt;/li>
+&lt;/ul>
+&lt;p>我们可以尝试下面这段代码(非static字段)，通过查看字节码，可以证明我们的猜想是正确的：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/6.png" alt="image-20210304002309247">&lt;/p>
+&lt;ul>
+&lt;li>场景2：static final字段，看起来是&amp;quot;常量&amp;rdquo;，应该可以在连接之准备阶段完成吧，所以不会生成clinit吧？&lt;/li>
+&lt;/ul>
+&lt;p>我们尝试下述代码(一个int类型的常量)，查看字节码，似乎这个猜想是正确的：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/7.png" alt="image-20210304002433572">&lt;/p>
+&lt;p>如果不是基本类型int，而是它的包装类型呢，查看字节码，似乎发现这个猜想不太完备：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/8.png" alt="image-20210304002521797">&lt;/p>
+&lt;p>那我们能否修正一下对场景2的猜想：&lt;/p>
+&lt;blockquote>
+&lt;p>static final修饰的基本类型，不会生成clinit&lt;/p>
+&lt;/blockquote>
+&lt;p>我们为基本类型int赋值时使用Integer.valueOf，查看字节码发现，依然生成了clinit：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/9.png" alt="image-20210304002613980">&lt;/p>
+&lt;p>看来我们的场景2猜想又要完善一下了：&lt;/p>
+&lt;blockquote>
+&lt;p>static final修饰的基本类型，并且不使用会通过构造器产生新对象的方式赋值，不会生成clinit&lt;/p>
+&lt;/blockquote>
+&lt;p>我们继续破解：如果我们用的是static final String呢？查看字节码发现，竟然也不会产生clinit：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/10.png" alt="image-20210304002643182">&lt;/p>
+&lt;p>但为字符串赋值是采用的String.valueOf，查看字节码发现，又会产生clinit：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/11.png" alt="image-20210304002709459">&lt;/p>
+&lt;p>我们最终完善了场景2：&lt;/p>
+&lt;blockquote>
+&lt;p>static final修饰的，基本类型或String类型，不会采用构造器方式赋值的场景，不会生成clinit&lt;/p>
+&lt;/blockquote>
+&lt;p>其实，跳出推断过程和结论，我们可以朴实地猜想一下JVM实现者的设计思路：&lt;/p>
+&lt;blockquote>
+&lt;p>在连接阶段，并不会执行Java类中的任何代码，因此只要会产生对象的代码，都无法执行。&lt;/p>
+&lt;p>因此，JVM才会设计出一个&amp;quot;初始化&amp;quot;环节——生成clinit方法，为static字段赋值、运行static代码块。&lt;/p>
+&lt;p>如果static字段能够满足不产生对象的要求，JVM索性将这种字段在连接阶段就给处理掉。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>本文分析了Java实战中极为常用的关键词：static：&lt;/p>
+&lt;ul>
+&lt;li>static与JVM的关联：static修饰的字段、代码块与JVM的初始化环节、连接环节有密切联系&lt;/li>
+&lt;li>JVM的初始化环节会执行javac自动生成clinit&lt;/li>
+&lt;li>javac自动生成clinit的原则：被static修饰的字段和代码块都可能触发自动生成clinit。&lt;/li>
+&lt;li>不生成clinit的场景本质：被static final修饰、基础数据类型或String类型、赋值不涉及对象生成的场景，都不会触发自动生成clinit&lt;/li>
+&lt;/ul>
+&lt;p>理解了不生成clinit的场景，那么肯定不会与&amp;quot;开篇提到的static执行顺序&amp;quot;扯上关系；&lt;/p>
+&lt;p>下一步，我们会进一步探讨生成clinit的场景的static执行顺序问题。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/12.png" alt="image-20210304003623960">&lt;/p></description></item><item><title>【垃圾回收】-0-垃圾回收体系的主脉络</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</link><pubDate>Thu, 05 Aug 2021 08:08:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
 &lt;p>如果您的女盆友非常喜欢&lt;strong>买买买&lt;/strong>，她将会面临一个严峻的问题——&lt;strong>储物空间不够&lt;/strong>。&lt;/p>
 &lt;p>所以她需要定期**&amp;ldquo;断舍离&amp;rdquo;**：过一段时间将陈旧的包包、衣服移到不常用的储物柜，再过一段时间把这些不常用的衣物丢掉。&lt;/p>
 &lt;p>Java代码也像女盆友一样，喜欢**&amp;ldquo;买买买&amp;rdquo;**——创建大量对象，所以也会面临**内存空间不足**。&lt;/p>
@@ -4607,394 +4789,4 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;li>方法区、堆是共享的，虚拟机栈是独享的&lt;/li>
 &lt;li>方法区是直接使用了操作系统内存&lt;/li>
 &lt;/ul>
-&lt;p>另外，JVM中诸多技术点较为抽象，用通俗易懂的方式进行类比，非常有利于我们更快更好的学习、攻克JVM。笔者其它的文章也会尽量延续这种方式。&lt;/p></description></item><item><title>【类加载机制】-0-从一道面试题开始</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/</link><pubDate>Thu, 05 Aug 2021 08:06:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/</guid><description>&lt;h1 id="0x01一道面试题">0x01.一道面试题&lt;/h1>
-&lt;p>&lt;strong>请阐述Java自带哪些加载器以及对应的职责？&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>(1)Bootstrap ClassLoader(启动类加载器)：负责加载&amp;lt;JAVA_HOME&amp;gt;\lib目录，或-Xbootclasspath指定目录下的jar。
-特殊说明：JVM认为合理的jar文件名才会被加载，例如：rt.jar、tools.jar，文件名不符合的jar即使放在上述目录下也不会被加载。&lt;/p>
-&lt;p>(2)Extension ClassLoader(扩展类加载器)：负责加载&amp;lt;JAVA_HOME&amp;gt;\lib\ext目录，或java.ext.dirs指定目录下的jar。
-特殊说明：Java9以后引入了模块化机制，此加载器被此机制取代。&lt;/p>
-&lt;p>(3)Application ClassLoader(应用程序类加载器)：负责加载用户类路径(ClassPath)上的jar包。&lt;/p>
-&lt;/blockquote>
-&lt;p>此题考察JVM的类加载机制，关于类加载机制可以衍生出的考察方式也很多：
-例如：请你选出哪些不是Java自带的类加载器；
-例如：给出各类类加载器的描述、职责，选错误的；
-例如：将上述类加载器的特殊说明作为干扰选项；&lt;/p>
-&lt;h1 id="0x02不要背要理解">0x02.不要背，要理解&lt;/h1>
-&lt;p>至此，我们似乎没必要大费周章地解读这样一道记忆题。背下来不就可以了吗？笔者认为不是：
-发展24年的Java及JVM，历经若干版本的商业斗争[1]，衍生出若干语(语)言(法)特(陷)性(阱)。
-&amp;ldquo;背下来就行&amp;quot;的前提有二，可惜对于Java这些语(语)言(法)特(陷)性(阱)都不成立：&lt;/p>
-&lt;blockquote>
-&lt;p>(1)知识输入是无二义性的、与时俱进的。
-(2)知识输入是有限集。&lt;/p>
-&lt;/blockquote>
-&lt;p>所以，笔者坚定的认为只有Java程序员最有资格喊出&amp;rdquo;&lt;strong>我秃了，我也变强了&lt;/strong>&amp;quot;。
-所以，笔者坚定的认为只有&amp;rdquo;&lt;strong>深刻理解JVM&lt;/strong>&amp;quot;(即，深刻理解语法特性到JVM层，甚至操作系统层)，是Java程序员的最有效的防秃良药。
-&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/1.png" alt="1">&lt;/p>
-&lt;blockquote>
-&lt;p>[1]：A new future for Java：https://theboreddev.com/a-new-future-for-java/&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="0x03从韩国星工厂看类加载机制的全貌">0x03.从韩国星工厂看类加载机制的全貌&lt;/h1>
-&lt;blockquote>
-&lt;p>From《深入理解Java虚拟机》-周志明&lt;/p>
-&lt;p>Java虚拟机将描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终变成被虚拟机可以直接使用的Java类型，这个过程被称作Java虚拟机的类加载机制&amp;hellip;&amp;hellip;与那些在编译时需要进行连接的语言不同，在Java语言里面，类型的加载、连接和初始化过程都是在程序运行期间完成的&amp;hellip;&amp;hellip;用户可以通过Java预置的或自定义类加载器&amp;hellip;作为其程序代码的一部分。&lt;/p>
-&lt;/blockquote>
-&lt;p>从这段经典且严谨的描述，我们可以抽象8个问题，以此宏观地获得类加载机制的全貌：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">问题1：加载什么？
-问题2：加载得到了什么？
-问题3：从哪里加载？
-问题4：加载到哪里去？
-问题5：何时加载？
-问题6：加载流程有几步？
-问题7：加载流程如何实现？
-问题8：类加载器的约束？
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="1加载什么">(1)加载什么？&lt;/h2>
-&lt;p>我们在.java文件中编写了一堆代码，被转换成字节码(.class文件)，&lt;strong>JVM加载就是这个字节码&lt;/strong>。
-这个&lt;strong>字节码描述的信息&lt;/strong>[2]包括(但不限于)：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">有哪些类、哪些接口；
-每个类有哪些属性、行为；
-类和类的关系；
-...
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这些信息就是程序员定义的&amp;quot;模板&amp;rdquo;，在程序运行时，当需要基于类A创建实例对象a时，JVM就要先找到类A对应的&amp;quot;模板&amp;rdquo;。&lt;/p>
-&lt;p>这些&amp;quot;模板&amp;rdquo;，就像韩国星工场包装女团时的&amp;quot;剧本&amp;rdquo;，每个女星都是基于某个&amp;quot;模板&amp;quot;创建的实例对象，女星的身高、体重、才艺就是&amp;quot;模板&amp;quot;中描述的&amp;quot;属性、行为&amp;rdquo;。
-&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/2.png" alt="2">&lt;/p>
-&lt;blockquote>
-&lt;p>[2]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="2加载得到了什么">(2)加载得到了什么？&lt;/h2>
-&lt;p>字节码加载到内存后得到的信息内容还是(1)中提到的字节码中包含的信息，但信息形式变了，抽象、简单地理解为&lt;strong>JVM能认识的数据结构&lt;/strong>[3]。&lt;/p>
-&lt;p>这就像娱乐公司的策划团队在电脑上写好了女团出道的&amp;quot;剧本&amp;rdquo;，女团的经纪人要无差错地仔细阅读&amp;quot;剧本&amp;quot;的电子件，把&amp;quot;剧本&amp;quot;存储在大脑中，以备后续使用。
-&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/3.png" alt="3">&lt;/p>
-&lt;blockquote>
-&lt;p>[3]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="3从哪里加载">(3)从哪里加载？&lt;/h2>
-&lt;p>用一张表，说明字节码文件与经纪人的类比关系：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/t1.png" alt="t1">&lt;/p>
-&lt;p>这一点也是&lt;strong>JVM给Java程序员的自由&lt;/strong>，很多著名的产品就是在这个点上做了文章。&lt;/p>
-&lt;h2 id="4加载到哪里去">(4)加载到哪里去？&lt;/h2>
-&lt;p>这个问题最好回答：内存，具体指的是JVM的&lt;strong>运行时数据区&lt;/strong>，再具体一点是运行时数据区中的&lt;strong>方法区&lt;/strong>[4]&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/4.png" alt="4">&lt;/p>
-&lt;blockquote>
-&lt;p>[4]本文聚焦类加载机制的全貌，在后续文章中展开&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="5何时加载">(5)何时加载？&lt;/h2>
-&lt;p>类加载发生在运行时，这也是Java、C#这类语言推崇的动态性。&lt;/p>
-&lt;p>动态性是一把双刃剑，运行时加载意味着需要&amp;quot;边执行，边连接&amp;rdquo;。
-这就好像女团经纪人不是提前把&amp;quot;剧本&amp;quot;烂熟于胸，而是到了女团演出现场，才掏出&amp;quot;剧本&amp;rdquo;，现场理解、现场执行。
-以现实生活的经验，这样的经纪人，看起来不太靠谱。&lt;/p>
-&lt;p>当然，动态性一定是源于某些特定场景和需求，Java为了靠谱，也引出了虚拟机中另一个大的课题：JIT(即时编译)，围绕着&amp;quot;如何提升运行时的编译效率&amp;quot;会有很多有趣的故事。&lt;/p>
-&lt;h2 id="6加载流程有几步">(6)加载流程有几步？&lt;/h2>
-&lt;p>在(2)中我们提到女团的经纪人要无差错地仔细阅读&amp;quot;剧本&amp;quot;的电子件，关键词是&lt;strong>无差错&lt;/strong>
-我们再用一张表，类比一下[5]&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/t2.png" alt="image-20200905163221231">&lt;/p>
-&lt;p>表格中存在不严谨(通俗)的表达，但相信读者已经关注到了两个核心要点：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">(1)加载流程有几步
-(2)每一步的作用是什么
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>[5]上述加载流程每一步存在一些JVM实现的细节，例如：上述步骤一定是顺序执行的吗？例如：直接引用需要反复解析吗？这些都有必要详细解读，本文暂不展开&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/5.png" alt="5">&lt;/p>
-&lt;h2 id="7加载流程如何实现">(7)加载流程如何实现？&lt;/h2>
-&lt;p>至此，终于可以和本文开头的面试题呼应上了，前文我们探讨了&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">加载什么=&amp;gt;加载得到了什么=&amp;gt;从哪里加载=&amp;gt;加载到哪里去=&amp;gt;何时加载=&amp;gt;加载流程有几步
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>那么这都是JVM的规范、规格，怎么实现？&lt;strong>类加载器&lt;/strong>就是类加载机制的具体实现。
-不同类型的加载器相当于公司不同的角色，都去自己专属的文件夹去查找并加载类&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">Bootstrap加载器相当于经济公司老板
-Extension加载器相当于经纪人
-Application加载器相当于女团艺人
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="8类加载器的约束">(8)类加载器的约束？&lt;/h2>
-&lt;p>既然有不同的类加载器，它们之间必然有配合关系，否则两个人干了同一个工作，对外口径还不同，咋办？
-JVM定义了这种配合关系，还取了个高大上的名字&amp;quot;双亲委派模型&amp;rdquo;，笔者认为这种模型应该叫&amp;quot;保姆式管理模型&amp;rdquo;
-还是一张表类比一下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/t3.png" alt="image-20200905163353382">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/6.png" alt="6">&lt;/p>
-&lt;p>双亲委派模型，本质上是说&amp;quot;领导先上，领导不行我再上&amp;rdquo;。
-这种管理风格，自然也有弊端。历史上有&lt;strong>4次破坏双亲委派模型&lt;/strong>[6]的事件。
-破坏双亲委派模型的本质，是&amp;quot;管理团队的风格多样化&amp;rdquo;，例如：&amp;ldquo;扁平化团队&amp;rdquo;、&amp;ldquo;先干了再说团队&amp;quot;等等。&lt;/p>
-&lt;blockquote>
-&lt;p>[6]每种&amp;quot;管理风格&amp;quot;也各有利弊，这也是JVM发展历程中可以仔细学习的技术点，笔者在后续文章中再来探讨&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="0x03-小结">0x03 小结&lt;/h1>
-&lt;p>我们从一道面试题开始，通过8个问题看到了类加载机制的全貌。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">加载什么-&amp;gt;加载得到了什么-&amp;gt;从哪里加载-&amp;gt;加载到哪里去-&amp;gt;何时加载-&amp;gt;加载流程有几步-&amp;gt;加载流程如何实现-&amp;gt;类加载器的约束
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>本文篇幅有限，还留下了一些重要、有趣的细节，未来笔者还会继续展开&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">字节码描述的信息
-JVM能认识的数据结构
-方法区的结构
-加载流程每一步存在一些JVM实现的细节
-破坏双亲委派模型
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>最后，笔者还想谈谈&amp;quot;理解优于记忆&amp;quot;的个人观点：深入理解JVM的原理对于实战的意义就是&amp;quot;先验知识&amp;rdquo;，是&amp;quot;性能调优、内存泄露、OSGI&amp;quot;等疑难杂症、高级框架的&amp;quot;基础&amp;rdquo;，如果能看到这类面试题背后的Why、What、How，您就获得了探寻计算机秘境的不二法门。&lt;/p></description></item><item><title>【宏观】从Java概念图理解Java体系</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</link><pubDate>Thu, 05 Aug 2021 08:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/</guid><description>&lt;p>Java历经多年发展，知识体系庞大且复杂，包含大量的概念、技术点、原理等。&lt;/p>
-&lt;p>即使从事多年Java开发，依然不敢很肯定完全吃透了Java。&lt;/p>
-&lt;p>仿佛在知识的海洋中游泳，游了很久也看不到边际。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603115307805.png" alt="image-20210603115307805">&lt;/p>
-&lt;p>怎样避免这种困境，提高Java的学习效率呢？&lt;/p>
-&lt;p>笔者认为最好的方法是掌握Java体系的全貌，进而在实战中有计划、有针对性的迭代式学习。&lt;/p>
-&lt;h1 id="1从java概念图理解java体系">1.从Java概念图理解Java体系&lt;/h1>
-&lt;p>在《Java Platform Standard Edition 8 Documentation》中，列举了一张图——&amp;ldquo;Java Conceptual Diagram&amp;rdquo;——即Java概念图。&lt;/p>
-&lt;p>虽然这张概念图不能代表Java体系的全部，但是这张概念图为我们提供了两个重要信息：&lt;/p>
-&lt;ul>
-&lt;li>Java SE的产品构成。&lt;/li>
-&lt;li>各个产品的关系。&lt;/li>
-&lt;li>产品包含了哪些组件。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603120446121.png" alt="image-20210603120446121">&lt;/p>
-&lt;h2 id="11javase的产品构成">1.1.JavaSE的产品构成&lt;/h2>
-&lt;p>在文档的开篇：&lt;/p>
-&lt;blockquote>
-&lt;p>Oracle has two products that implement Java Platform Standard Edition (Java SE) 8: Java SE Development Kit (JDK) 8 and Java SE Runtime Environment (JRE) 8.&lt;/p>
-&lt;/blockquote>
-&lt;p>Oracle告诉我们：&lt;/p>
-&lt;blockquote>
-&lt;p>Java SE 8 = 产品1(JDK 8) + 产品2(JRE 8)&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Java SE 8，全称Java Platform Standard Edition (Java SE) 8&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>产品1：JDK 8，全称 Java SE Development Kit (JDK) 8&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>产品2：JRE8，全称 Java SE Runtime Environment (JRE) 8&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="12jdk8与jre8的关系">1.2.JDK8与JRE8的关系&lt;/h2>
-&lt;p>在文档的Section2：&lt;/p>
-&lt;blockquote>
-&lt;p>JDK 8 is a superset of JRE 8, and contains everything that is in JRE 8, plus tools such as the compilers and debuggers necessary for developing applets and applications. JRE 8 provides the libraries, the Java Virtual Machine (JVM), and other components to run applets and applications written in the Java programming language. Note that the JRE includes components not required by the Java SE specification, including both standard and non-standard Java components.&lt;/p>
-&lt;/blockquote>
-&lt;p>我们可以知道：&lt;/p>
-&lt;blockquote>
-&lt;p>JDK 8 是 JRE 8 的超集&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>JDK8：除了包含 JRE 8，JDK8额外还有开发小程序和应用程序所需的编译器和调试器等工具。&lt;/li>
-&lt;li>JRE 8：提供了库、Java 虚拟机 (JVM) 和其他组件来运行用 Java 编程语言编写的小程序和应用程序。JRE 包括了Java SE 规范不需要的组件，包括标准和非标准 Java 组件。&lt;/li>
-&lt;/ul>
-&lt;h1 id="2java-language">2.Java Language&lt;/h1>
-&lt;p>在Java的概念架构中，第一个组件是&amp;quot;Java Language&amp;rdquo;，这个组件包含了Java的语言语法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603144339225.png" alt="image-20210603144339225">&lt;/p>
-&lt;p>那么，我们应该如何学习这个组件呢？&lt;/p>
-&lt;h2 id="21了解java各版本的新特性列表">2.1.了解Java各版本的新特性列表&lt;/h2>
-&lt;p>这是一件非常重要的事，通过新特性，可以把握Java语言以及编程语言的发展趋势。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603145513209.png" alt="image-20210603145513209">&lt;/p>
-&lt;h2 id="22浅尝辄止java-language-specification">2.2.浅尝辄止《Java Language Specification》&lt;/h2>
-&lt;p>《Java Language Specification》——Java语言规范。这份文档像一本工具书，刚开始更适合&amp;quot;浅尝辄止&amp;rdquo;。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603150036175.png" alt="image-20210603150036175">&lt;/p>
-&lt;p>从这份规范的作者，我们就可以知道《Java Language Specification》的分量。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603150736346.png" alt="image-20210603150736346">&lt;/p>
-&lt;p>《Java Language Specification》讲述的内容，可以概括为如下8点：&lt;/p>
-&lt;h3 id="1语言的设计思想">(1)语言的设计思想&lt;/h3>
-&lt;p>规范的开篇讲解了Java编程语言的语言风格、词法结构、句法、语法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603151646129.png" alt="image-20210603151646129">&lt;/p>
-&lt;p>每种编程语言都要遵循一种套路，编译原理就是这种套路的高度抽象，有兴趣更加深入地理解《Java Language Specification》上述章节中的一些概念，可以阅读&lt;code>龙书&lt;/code>和&lt;code>虎书&lt;/code>这两部经典著作：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603154258626.png" alt="image-20210603154258626">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603154332760.png" alt="image-20210603154332760">&lt;/p>
-&lt;h3 id="2变量">(2)变量&lt;/h3>
-&lt;p>Java语言规范中，将数据类型、变量、类型擦除等放在一起讲的，这是站在&amp;quot;编译原理&amp;quot;的视角来阐述的。&lt;/p>
-&lt;p>作为编程语言的学习者和使用者，可以先了解Java这种语言如何声明与初始化。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603152148650.png" alt="image-20210603152148650">&lt;/p>
-&lt;h3 id="3数据类型">(3)数据类型&lt;/h3>
-&lt;p>这部分讲述了Java提供的基础数据类型、包装类型，重点阐述了数据类型转换、拆箱装箱等。&lt;/p>
-&lt;p>这部分是实战中最常用的语法知识。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153325400.png" alt="image-20210603153325400">&lt;/p>
-&lt;h3 id="4表达式">(4)表达式&lt;/h3>
-&lt;p>这部分讲述了Java的表达式、运算优先级等语法知识，这也是一种编程语言的基础语法设施。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153403473.png" alt="image-20210603153403473">&lt;/p>
-&lt;h3 id="5控制语句">(5)控制语句&lt;/h3>
-&lt;p>在14章中，讲述了块、语句，控制语言也是编程语言语法的重要基础设施之一。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153426618.png" alt="image-20210603153426618">&lt;/p>
-&lt;h3 id="6方法面向对象">(6)方法、面向对象&lt;/h3>
-&lt;p>在Java语言规范的第8/9章中，阐述了类、接口相关的语法。&lt;/p>
-&lt;p>这些语法知识属于面向对象的编程语言的重中之重。&lt;/p>
-&lt;p>第13章，还阐述了类、接口的语法演进。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153521546.png" alt="image-20210603153521546">&lt;/p>
-&lt;h3 id="7异常处理">(7)异常处理&lt;/h3>
-&lt;p>异常有哪些种类？如何处理异常？异常体系也是一种编程语言的基础设施。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153533675.png" alt="image-20210603153533675">&lt;/p>
-&lt;h3 id="8代码组织方式package">(8)代码组织方式(package)&lt;/h3>
-&lt;p>在Java 8中，包是相对比较好理解和掌握的语言语法，也是编程语言的基础设施。&lt;/p>
-&lt;blockquote>
-&lt;p>在模块化的激烈斗争中，Java 11支持了模块化特性，模块化特性在Java 11中是重要的学习内容。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603153610292.png" alt="image-20210603153610292">&lt;/p>
-&lt;h2 id="23反复探索java-language-specification">2.3.反复探索《Java Language Specification》&lt;/h2>
-&lt;p>《Java语言规范》作为一门编程语言的规范，词句必然是简洁精炼、高屋建瓴、高度抽象的。&lt;/p>
-&lt;p>比如在讲解类型推断的部分，《Java语言规范》采用了接近数学公式的抽象逻辑表达，严谨、逻辑性极强。&lt;/p>
-&lt;p>反复阅读这种思维模式，非常有利于提升我们的抽象能力和逻辑能力。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603163351690.png" alt="image-20210603163351690">&lt;/p>
-&lt;p>我们可以把《Java编程规范》当做一本工具书。&lt;/p>
-&lt;p>当实战中踩到某个语法陷阱时，回过头再来翻阅《Java语言规范》是一种不错的学习方法。&lt;/p>
-&lt;p>每当带着实战中的教训和经验，重读规范中的语句，就会理解其中的隐喻和背后的原因。&lt;/p>
-&lt;p>这有点像佛教徒学习《金刚经》的修行过程，刚开始看山是山，而后经历看山不是山、看山又是山的过程。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603163049574.png" alt="image-20210603163049574">&lt;/p>
-&lt;h1 id="3libraries">3.Libraries&lt;/h1>
-&lt;p>Java概念架构中第二大组件就是语言本身自带的类库，《Java语言规范》将这些类库分为了3大类：&lt;/p>
-&lt;ul>
-&lt;li>Lang and Util Packages&lt;/li>
-&lt;li>Other Base Libraries&lt;/li>
-&lt;li>Integration Libraries&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明1：User Interface Toolkits属于使用Java进行客户端开发的定向场景，所以本文不展开描述&lt;/p>
-&lt;p>说明2：Deployment属于没落和抛弃的特性，本文不展开描述&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603163604627.png" alt="image-20210603163604627">&lt;/p>
-&lt;p>按照这样的划分方式，还是很难直奔主题地抓住Java提供的类库重点，我们可以进行另一种分类：&lt;/p>
-&lt;ul>
-&lt;li>核心类库：基于Java Language的语法特性，实现的类库。&lt;/li>
-&lt;li>扩展类库：基于核心类库实现的类库，这种类库用来解决实战中的某种应用场景。&lt;/li>
-&lt;/ul>
-&lt;h2 id="31核心类库">3.1.核心类库&lt;/h2>
-&lt;p>核心类库主要包括：集合、多线程、反射&lt;/p>
-&lt;p>集合、多线程、反射，也促进了Java体系中，产生了各种有趣的类库、模块、中间件。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603170428978.png" alt="image-20210603170428978">&lt;/p>
-&lt;p>其中，&lt;code>Collections&lt;/code>官方文档的逻辑脉络，比较好地可以指导我们高效学习Java类库。(以List为例)&lt;/p>
-&lt;ul>
-&lt;li>首先，官方文档讲述了集合体系的宏观结构，这个是掌握好集合的第一步。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603171247671.png" alt="image-20210603171247671">&lt;/p>
-&lt;ul>
-&lt;li>然后，文档中讲解了List操作的几大类场景，以这些场景作为线索，我们可以去查阅List中对应的API。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603172058619.png" alt="image-20210603172058619">&lt;/p>
-&lt;ul>
-&lt;li>最后，文档描述了一下List的API的算法实现。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>理解API的算法实现也是一件非常重要的事情：只有理解了API的实现采用了哪种经典算法，才能更好地选择合适的API解决合适的实战问题。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603172416586.png" alt="image-20210603172416586">&lt;/p>
-&lt;h2 id="32扩展类库">3.2.扩展类库&lt;/h2>
-&lt;p>扩展类库主要包括：IO编程、序列化、正则表达式、数据库、网络编程。&lt;/p>
-&lt;p>这些类库的API很多，短时间的集中学习也不太可能熟练掌握。&lt;/p>
-&lt;p>笔者的经验是先了解这些类库的原理、能做哪些事情，然后在实战中使用这些API。&lt;/p>
-&lt;p>NIO就是一个很好的例子，我们可以理解一些原理性的知识：&lt;/p>
-&lt;ul>
-&lt;li>BIO、NIO、AIO是什么&lt;/li>
-&lt;li>NIO中的Buffer、Channel、Selector是什么&lt;/li>
-&lt;li>零拷贝&lt;/li>
-&lt;/ul>
-&lt;p>等到实战中需要用到NIO的时候，再查阅NIO的类库API。&lt;/p>
-&lt;h1 id="4java-virtual-machine">4.Java Virtual Machine&lt;/h1>
-&lt;p>Java虚拟机是整个Java体系的基石，也是Java概念架构中最难突破的第三大组件。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603173309154.png" alt="image-20210603173309154">&lt;/p>
-&lt;p>JVM本身就是一个庞大的技术体系：&lt;/p>
-&lt;ul>
-&lt;li>字节码&lt;/li>
-&lt;li>类加载子系统&lt;/li>
-&lt;li>运行时数据区&lt;/li>
-&lt;li>垃圾回收算法和垃圾回收器&lt;/li>
-&lt;li>JIT&lt;/li>
-&lt;/ul>
-&lt;p>所以，JVM是一个长期、反复的学习过程，随着对JVM的理解加深，我们再次回顾&lt;code>Java Language&lt;/code>、&lt;code>Libraries&lt;/code>，会看到语法特性、类库的在虚拟机层面的底层实现，甚至到操作系统的底层实现。&lt;/p>
-&lt;h1 id="5tools--tool-apis">5.Tools &amp;amp; Tool APIs&lt;/h1>
-&lt;p>Java概念架构中第四大组件就是工具以及工具API。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91%E7%90%86%E8%A7%A3Java%E6%A6%82%E5%BF%B5%E5%9B%BE/image-20210603174538915.png" alt="image-20210603174538915">&lt;/p>
-&lt;p>从工具形态看，Java的工具包括：&lt;/p>
-&lt;ul>
-&lt;li>命令行工具&lt;/li>
-&lt;li>GUI工具&lt;/li>
-&lt;/ul>
-&lt;p>从应用场景看，Java的工具包括：&lt;/p>
-&lt;ul>
-&lt;li>编译&lt;/li>
-&lt;li>监控&lt;/li>
-&lt;li>辅助(例如：javadoc)&lt;/li>
-&lt;/ul>
-&lt;p>无论怎样分类，怎样才算掌握了这种工具呢？&lt;/p>
-&lt;p>笔者曾经陷入过2种误区：&lt;/p>
-&lt;ul>
-&lt;li>误区1：刚开始，觉得工具本身不是很关键的技术点，等到用的时候再查Java的工具手册就好了。结果等到真的查文档的时候，才发现怎么有这么多参数、这么多概念要理解？真是&amp;quot;书到用时方恨少&amp;rdquo;。&lt;/li>
-&lt;li>误区2：经历了误区1的伤，很容易陷入另一个极端——那我就把工具手册逐字逐句的仔细阅读，把命令行参数都敲一遍。结果发现，即使背下来了命令行的参数也没用，因为工具最难掌握的是工具输出的报告，这些报告中包含着定位内存泄露、线程死锁的线索。为什么这些工具输出的报告难以看懂呢？因为这些工具的监视对象、作用对象是JVM，输出的报告中有大量的JVM的概念、术语。&lt;/li>
-&lt;/ul>
-&lt;p>所以，真正掌握这些Tools，强依赖对&lt;code>Java Virtual Machine&lt;/code>的深入理解。&lt;/p>
-&lt;p>&lt;code>Tools &amp;amp; Tool APIs&lt;/code>中另一个重点/亮点就是APIs：&lt;/p>
-&lt;ul>
-&lt;li>在JDK1.4中，JVM提供了JVMPI，这是用来监控JVM信息的接口。&lt;/li>
-&lt;li>在JDK1.4中，JVM提供了JVMDI，这是用来调试JVM的接口。(例如：IDE就是依赖这种接口实现了编译、调试等功能)&lt;/li>
-&lt;li>在JDK5中，JVM提供了JVMTI，最终收编了JVMPI和JVMDI，提供了更高级的JVM接口。&lt;/li>
-&lt;li>在JDK9中，JVM提供了JVMICI，可以用来扩展编译能力的接口。&lt;/li>
-&lt;/ul>
-&lt;p>比如：一个已经在运行的Java进程中，如何动态运行一段用户提交的java源码呢？就可以通过JVMTI实现。&lt;/p>
-&lt;h1 id="6总结">6.总结&lt;/h1>
-&lt;p>本文主要内容：&lt;/p>
-&lt;ul>
-&lt;li>了解Java体系的全貌，是一种高效学习Java的方法。&lt;/li>
-&lt;li>Java的概念架构。&lt;/li>
-&lt;li>Java概念架构中的组件1：Java Language&lt;/li>
-&lt;li>Java概念架构中的组件2：Libraries&lt;/li>
-&lt;li>Java概念架构中的组件3：Java Virtual Machine&lt;/li>
-&lt;li>Java概念架构中的组件4：Tools &amp;amp; Tool APIs&lt;/li>
-&lt;/ul>
-&lt;h1 id="7参考文献">7.参考文献&lt;/h1>
-&lt;blockquote>
-&lt;p>&lt;a href="https://docs.oracle.com/javase/8/docs/">https://docs.oracle.com/javase/8/docs/&lt;/a>&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>另外，JVM中诸多技术点较为抽象，用通俗易懂的方式进行类比，非常有利于我们更快更好的学习、攻克JVM。笔者其它的文章也会尽量延续这种方式。&lt;/p></description></item></channel></rss>

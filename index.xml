@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Oct 2021 17:23:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 05 Nov 2021 15:05:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,296 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【置顶】Java拾遗</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</link><pubDate>Thu, 14 Oct 2021 17:23:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</guid><description>&lt;p>Java是个庞大的体系，心中有许多想写下来的内容。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【编译引擎】-9-阅读前端编译源码-词法分析-1</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/</link><pubDate>Fri, 05 Nov 2021 15:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/</guid><description>&lt;h1 id="1编译器的宏观过程">1.编译器的宏观过程&lt;/h1>
+&lt;p>下图摘自《Compilers, Principles, Techniques, &amp;amp;Tools》(后文简称&lt;strong>龙书&lt;/strong>)，描述了编译器工作时的宏观过程，每个方块表示编译器内部的一个&amp;quot;模块&amp;rdquo;，每个箭头表示该模块的&amp;quot;输入&amp;quot;与&amp;quot;输出&amp;rdquo;：&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105093625343.png" alt="image-20211105093625343">&lt;/p>
+&lt;p>下图摘自《现代编译原理-C语言描述》(后文简称&lt;strong>虎书&lt;/strong>)，进一步细化了编译器的宏观流程：&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105093134007.png" alt="image-20211105093134007">&lt;/p>
+&lt;p>上述环节复杂且技术术语繁多，我们可以结合JVM的特点，以及即将剖析的javac源码，做了部分抽象与精简：&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105094818994.png" alt="image-20211105094818994">&lt;/p>
+&lt;p>从上图看，笔者做了2个抽象：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>简化步骤&lt;/strong>：将涉及&lt;code>优化&lt;/code>、&lt;code>分析&lt;/code>的环节简化为&lt;code>代码优化&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>步骤分组&lt;/strong>：将6个步骤分为&lt;code>前端编译&lt;/code>和&lt;code>后端编译&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>简化步骤比较好理解，重点看看对步骤的分组——在龙书中，对&lt;code>前端编译(frontend)&lt;/code>和&lt;code>后端编译(backend)&lt;/code>做了定义：&lt;/p>
+&lt;blockquote>
+&lt;p>分析部分的环节被称作&lt;code>前端编译(frontend)&lt;/code>，综合部分的环节被称作&lt;code>后端编译(backend)&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105101708866.png" alt="image-20211105101708866">&lt;/p>
+&lt;p>怎么理解&lt;code>分析部分&lt;/code>和&lt;code>综合部分&lt;/code>呢？站在JVM的角度看：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分析部分&lt;/strong>：从java源代码生成字节码的过程就属于分析部分，即对&lt;code>源码&lt;/code>进行分析，最终分解为多个组成元素的过程。&lt;/li>
+&lt;li>&lt;strong>综合部分&lt;/strong>：对JVM正在执行的字节码进行JIT就属于综合部分，即从C1、C2等层次进行优化，最终生成CPU可以执行的机器码。&lt;/li>
+&lt;/ul>
+&lt;p>在很多现代编译器中，不仅和JVM一样将编译过程分为前后端，并且一个编译器还可能包含多个&lt;strong>前端编译器(frontend)&lt;strong>和多个&lt;/strong>后端编译器(backend)&lt;/strong>，用来应对不同的应用场景。&lt;/p>
+&lt;h1 id="2javac在宏观过程中的位置">2.javac在宏观过程中的位置&lt;/h1>
+&lt;p>回顾了编译器的宏观流程，javac本质上属于&lt;strong>前端编译器&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105100413500.png" alt="image-20211105100413500">&lt;/p>
+&lt;p>从javac的源码中，可以看到如下几个核心的package，分别覆盖了词法分析、语法分析和语义分析。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105100722357.png" alt="image-20211105100722357">&lt;/p>
+&lt;h1 id="3词法分析的概念">3.词法分析的概念&lt;/h1>
+&lt;p>我们通过解读龙书中这段话，来理解一下&lt;code>词法分析&lt;/code>中的几个关键概念：&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105105314706.png" alt="image-20211105105314706">&lt;/p>
+&lt;p>&lt;code>词法分析(Lexical Analysis)&lt;/code>：将源代码字符流拆解成一个个的子元素，每个子元素叫做&lt;code>词素(lexeme)&lt;/code>，进一步将词素转换为&lt;code>词法单元(Token)&lt;/code>。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>说明1：1个源代码文件会包含N个&lt;code>词素&lt;/code>，每个词素会转换为1个&lt;code>Token&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>说明2：词法单元最终会存储到&lt;code>符号表(Symbol Table)&lt;/code>中。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105110450245.png" alt="image-20211105110450245">&lt;/p>
+&lt;p>举一个具体的例子(代码片段原子龙书)：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">position&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">initial&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">rate&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">60&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在词法分析过程中：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>position被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;identifier, 1&amp;gt;&lt;/strong>。&lt;/p>
+&lt;ul>
+&lt;li>其中，identifier后文简写为id，1是该token在&lt;code>符号表&lt;/code>中的位置。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>=被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;assign(=)&amp;gt;&lt;/strong>。&lt;/p>
+&lt;ul>
+&lt;li>其中，=是一个赋值运算符，因此它对应的&lt;code>词法单元(Token)&lt;/code>没有&lt;code>attribute-value&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>initial被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;identifier, 2&amp;gt;&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>+被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;assign(+)&amp;gt;&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>rate被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;identifier, 3&amp;gt;&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>*被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;assign(*)&amp;gt;&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>60被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;number, 4&amp;gt;&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>最终，词法分析输出：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">assign&lt;/span>&lt;span class="o">(=)&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">assign&lt;/span>&lt;span class="o">(+)&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">3&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">assign&lt;/span>&lt;span class="o">(*)&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">number&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105113030363.png" alt="image-20211105113030363">&lt;/p>
+&lt;h1 id="4javac中对词素的具体实现-name-and-table">4.javac中对词素的具体实现-Name and Table&lt;/h1>
+&lt;p>在javac的源码中，定义了Name和Table，基本可以与&lt;code>词素(lexeme)&lt;/code>对应：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>com/sun/tools/javac/util/Name.java&lt;/code>&lt;/li>
+&lt;li>&lt;code>com/sun/tools/javac/util/SharedNameTable.java#NameImpl&lt;/code>&lt;/li>
+&lt;li>&lt;code>com/sun/tools/javac/util/Names.java&lt;/code>&lt;/li>
+&lt;li>&lt;code>com/sun/tools/javac/util/Name.java#Table&lt;/code>&lt;/li>
+&lt;li>&lt;code>com/sun/tools/javac/util/SharedNameTable.java&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="41comsuntoolsjavacutilnamejava">4.1.com/sun/tools/javac/util/Name.java&lt;/h2>
+&lt;h3 id="从属性看">从属性看&lt;/h3>
+&lt;p>Name对象的本质是将源代码中的单词、符号分词了，每个分词就是一个Name对象。&lt;/p>
+&lt;p>有2个关键点需要注意：&lt;/p>
+&lt;ul>
+&lt;li>源代码字符流在javac是中是以&lt;code>byte[]&lt;/code>存储的，所以Name对象包含了1个byteArray属性，该属性存储了当前Name对象对应的源代码子字符流。&lt;/li>
+&lt;li>相同&lt;code>内容&lt;/code>的分词是&lt;strong>同一个Name对象&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105114107760.png" alt="image-20211105114107760">&lt;/p>
+&lt;h3 id="从方法看">从方法看&lt;/h3>
+&lt;p>Name对象提供了对Name对象本身、Name对象之间的各种操作。&lt;/p>
+&lt;p>有1个关键点需要注意：&lt;/p>
+&lt;ul>
+&lt;li>Table对象将源代码字符流转换成了byte数组，为了提升性能，实现了&lt;code>输入缓冲&lt;/code>和&lt;code>哨兵标记&lt;/code>(详见龙书，后文解读&lt;code>JavaCompiler#readSource方法&lt;/code>也会展开)。因此，Name对象中提供了诸如&lt;code>getByteArray()&lt;/code>、&lt;code>getByteAt()&lt;/code>等方法，从该Name对象所属的Table对象中反查对应的源代码字符流。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105114821297.png" alt="image-20211105114821297">&lt;/p>
+&lt;h2 id="42comsuntoolsjavacutilsharednametablejavanameimpl">4.2.com/sun/tools/javac/util/SharedNameTable.java#NameImpl&lt;/h2>
+&lt;h3 id="从属性看-1">从属性看&lt;/h3>
+&lt;p>&lt;code>NameImpl&lt;/code>类是&lt;code>SharedNameTable&lt;/code>类中的内部类。&lt;/p>
+&lt;blockquote>
+&lt;p>疑惑：笔者没有理解为什么要如此设计。&lt;/p>
+&lt;/blockquote>
+&lt;p>其中，有1个关键点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>NameImpl对象&lt;/code>中维护了&lt;code>next&lt;/code>属性，这就要说到&lt;code>Table对象&lt;/code>的实现——&lt;code>Table对象&lt;/code>按照HashTable实现，HashTable的Key是每个&lt;code>Name对象&lt;/code>的&lt;code>hashCode&lt;/code>，Value是对应的&lt;code>NameImpl对象&lt;/code>。当1个新的&lt;code>NameImpl对象&lt;/code>准备加入到HashTable时，如果Key发生hash冲突时，就会将这个新的&lt;code>NameImpl对象&lt;/code>加到这个Key对应的已经存在的&lt;code>NameImpl对象&lt;/code>的next属性中，形成一个单链表。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105115710065.png" alt="image-20211105115710065">&lt;/p>
+&lt;h3 id="从行为看">从行为看&lt;/h3>
+&lt;p>从行为上看，只是具体实现了Name基类的&lt;code>getByteXxx方法&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105141543612.png" alt="image-20211105141543612">&lt;/p>
+&lt;h2 id="43comsuntoolsjavacutilnamesjava">4.3.com/sun/tools/javac/util/Names.java&lt;/h2>
+&lt;h3 id="从属性看-2">从属性看&lt;/h3>
+&lt;p>&lt;code>Names对象&lt;/code>维护了N个&lt;code>Name对象&lt;/code>，这些&lt;code>Name对象&lt;/code>就是Java中定义的关键字、保留字。&lt;/p>
+&lt;p>&lt;code>Names对象&lt;/code>还维护了&lt;code>Table对象&lt;/code>。&lt;/p>
+&lt;p>这里也有2个关键点：&lt;/p>
+&lt;ul>
+&lt;li>这些关键字、保留字类型的&lt;code>Name对象&lt;/code>在&lt;code>JavaCompiler&lt;/code>初始化时就会被创建出来。&lt;/li>
+&lt;li>当正式开始词法分析的时，在解读源代码字符流时，会去获取已经缓存的这些关键字、保留字&lt;code>Name对象&lt;/code>，而不需要动态创建。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java拾遗/【编译引擎】-9-阅读前端编译源码-词法分析-1/image-20211105141807347.png" alt="image-20211105141807347" style="zoom:50%;" />&lt;/p>
+&lt;h3 id="从行为看-1">从行为看&lt;/h3>
+&lt;p>&lt;code>Names对象&lt;/code>提供了&lt;code>fromXxx方法&lt;/code>，这些方法的实现会去调用&lt;code>Table对象&lt;/code>的接口，这些方法更新&lt;code>Table对象&lt;/code>(如：更新Hash表，解决Hash冲突等)，并返回&lt;code>Name对象&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105142706561.png" alt="image-20211105142706561">&lt;/p>
+&lt;h2 id="44comsuntoolsjavacutilnamejavatable">4.4.com/sun/tools/javac/util/Name.java#Table&lt;/h2>
+&lt;h3 id="从属性看-3">从属性看&lt;/h3>
+&lt;p>&lt;code>Table对象&lt;/code>维护了&lt;code>Names对象&lt;/code>，前文已经描述了&lt;code>Names对象&lt;/code>中维护了多个关键字、保留字的&lt;code>Name对象&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105151027295.png" alt="image-20211105151027295">&lt;/p>
+&lt;h3 id="从行为看-2">从行为看&lt;/h3>
+&lt;p>提供了给&lt;code>Names对象&lt;/code>调用的&lt;code>fromXxx方法&lt;/code>，这些方法更新&lt;code>Table对象&lt;/code>(如：更新Hash表，解决Hash冲突等)，并返回&lt;code>Name对象&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105151037438.png" alt="image-20211105151037438">&lt;/p>
+&lt;h2 id="45comsuntoolsjavacutilsharednametablejava">4.5.com/sun/tools/javac/util/SharedNameTable.java&lt;/h2>
+&lt;h3 id="从属性看-4">从属性看&lt;/h3>
+&lt;p>&lt;code>SharedNameTable&lt;/code>是&lt;code>Table&lt;/code>的具体实现类。&lt;/p>
+&lt;p>&lt;code>SharedNameTable&lt;/code>对象维护了hashes属性，是Hash表的具体实现，其中&lt;code>NameImpl[]&lt;/code>的数组索引是每个&lt;code>NameImpl对象&lt;/code>的hashCode。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105151550397.png" alt="image-20211105151550397">&lt;/p>
+&lt;h3 id="从行为看-3">从行为看&lt;/h3>
+&lt;p>关键点还是Hash表的具体实现，具体以fromChars方法的代码注释：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="nd">@Override&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="nf">fromChars&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="kt">char&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">cs&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="c1">//HCZ：获得bytes数组中下一个可用的位置
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">nc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nc&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="c1">//HCZ：对bytes数组进行扩容(如果有必要)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">byte&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">bytes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">bytes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ArrayUtils&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ensureCapacity&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">len&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="c1">//HCZ：将char数组转换为byte数组，并且写入到bytes属性中，返回bytes属性中最后的index，得到byte数组的长度。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">nbytes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Convert&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">chars2utf&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cs&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="c1">//HCZ：根据bytes数组中下一个可用位置(也就是新写入的char数组的startIndex)、根据新写入的char数组转换后的byte数组长度，计算得到hashCode。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">h&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hashValue&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="n">hashMask&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="c1">//HCZ：从hashes数组中(就是NameImpl对象数组)，获得与新计算出来的hashCode相同的冲突NameImpl对象。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">NameImpl&lt;/span> &lt;span class="n">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hashes&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">h&lt;/span>&lt;span class="o">];&lt;/span>
+&lt;span class="c1">//HCZ：如果能找到冲突的NameImpl对象，说明hashCode冲突了，就将NameImpl对象的next指向新的NameImpl对象，形成单链表。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">while&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">n&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;span class="o">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getByteLength&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">nbytes&lt;/span> &lt;span class="o">||&lt;/span>
+&lt;span class="o">!&lt;/span>&lt;span class="n">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">index&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">)))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">next&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="c1">//HCZ：如果没有找到冲突的NameImpl对象，就创建新的NameImpl对象，并记录到hashes属性。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">n&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">NameImpl&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hashes&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">h&lt;/span>&lt;span class="o">];&lt;/span>
+&lt;span class="n">hashes&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">h&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nc&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">nbytes&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nc&lt;/span>&lt;span class="o">++;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="5javac中对词法单元的具体实现-tokenkind-and-token">5.javac中对词法单元的具体实现-TokenKind and Token&lt;/h1>
+&lt;p>在javac的源码中，定义了TokenKind和Token，基本可以与&lt;code>词法单元(Token)&lt;/code>对应：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>com/sun/tools/javac/parser/Tokens.java#TokenKind&lt;/code>&lt;/li>
+&lt;li>&lt;code>com/sun/tools/javac/parser/Tokens.java#Token&lt;/code>&lt;/li>
+&lt;li>&lt;code>com/sun/tools/javac/parser/Tokens.java#Tokens&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="51comsuntoolsjavacparsertokensjavatokenkind">5.1.com/sun/tools/javac/parser/Tokens.java#TokenKind&lt;/h2>
+&lt;h3 id="从属性看-5">从属性看&lt;/h3>
+&lt;p>TokenKind是一个枚举类，定义了Java中的关键字、保留字、运算符等。&lt;/p>
+&lt;p>每个枚举值对应&lt;code>词法单元(Token)&lt;/code>的&lt;code>token-name&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="Java拾遗/【编译引擎】-9-阅读前端编译源码-词法分析-1/image-20211105152645860.png" alt="image-20211105152645860" style="zoom:50%;" />&lt;/p>
+&lt;h2 id="52comsuntoolsjavacparsertokensjavatoken">5.2.com/sun/tools/javac/parser/Tokens.java#Token&lt;/h2>
+&lt;h3 id="从属性看-6">从属性看&lt;/h3>
+&lt;p>从&lt;code>3.词法分析的概念&lt;/code>中可以知道，&lt;code>词法单元(Token)&lt;/code>有多种类型，如：标识符Token、运算符Token、字面量Token等。&lt;/p>
+&lt;p>因此，javac实现了如下Token继承关系：&lt;/p>
+&lt;p>其中，Token的各个子类除了有kind属性外，还有各自特有的属性。&lt;/p>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105154224005.png" alt="image-20211105154224005">&lt;/p>
+&lt;h3 id="从行为看-4">从行为看&lt;/h3>
+&lt;p>Token对象提供了各种get方法，表达Token对象的&lt;code>&amp;lt;token-name，attribute-value&amp;gt;&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="Java拾遗/【编译引擎】-9-阅读前端编译源码-词法分析-1/image-20211105155258304.png" alt="image-20211105155258304" style="zoom:50%;" />&lt;/p>
+&lt;h2 id="53comsuntoolsjavacparsertokensjavatokens">5.3.com/sun/tools/javac/parser/Tokens.java#Tokens&lt;/h2>
+&lt;h3 id="从属性看-7">从属性看&lt;/h3>
+&lt;p>&lt;code>Tokens对象&lt;/code>维护了2个关键的属性：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>key&lt;/code>：数组索引是Name对象在Hash表中的index，value是TokenKind对象。&lt;/li>
+&lt;li>&lt;code>tokenName&lt;/code>：数组索引是TokenKind对应枚举值的序号，value是Name对象。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105155218544.png" alt="image-20211105155218544">&lt;/p>
+&lt;h3 id="从行为看-5">从行为看&lt;/h3>
+&lt;p>从&lt;code>Tokens对象&lt;/code>提供的方法看，有2个关键点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>调用链1&lt;/strong>：创建&lt;code>JavaCompiler对象&lt;/code>时，会触发&lt;code>Names&lt;/code>的构造函数，
+&lt;ul>
+&lt;li>进而触发&lt;code>SharedNameTable&lt;/code>的构造函数。&lt;/li>
+&lt;li>进而触发&lt;code>NameImpl&lt;/code>的构造函数，继而触发了&lt;code>Names&lt;/code>对象的初始化。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>调用链2&lt;/strong>：创建&lt;code>ParserFactory&lt;/code>对象时，会触发&lt;code>Tokens&lt;/code>的构造函数，
+&lt;ul>
+&lt;li>进而触发了&lt;code>Tokens&lt;/code>的构造函数，继而在&lt;code>Tokens&lt;/code>对象中建立了&lt;code>Name&lt;/code>到&lt;code>Token&lt;/code>、&lt;code>Token&lt;/code>到&lt;code>Name&lt;/code>的双向映射。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105155228126.png" alt="image-20211105155228126">&lt;/p>
+&lt;h1 id="6一些感慨理论产品化">6.一些感慨：理论、产品化&lt;/h1>
+&lt;p>有一次讨论LLVM的时候，一位老前辈感慨过：老美的下一代在玩编译器，我们的下一代还在捣腾CRUD。&lt;/p>
+&lt;blockquote>
+&lt;p>感兴趣的读者，可以去搜索一下LLVM的作者在研究生阶段的论文以及他的职业经历。&lt;/p>
+&lt;/blockquote>
+&lt;p>包括笔者引用的三本编译器领域圣经：&lt;code>龙书、虎书、鲸书&lt;/code>以及其中我们现在还要反复咀嚼的编译理论，距今也有几十年多年的历史。&lt;/p>
+&lt;p>能够透彻理解JVM原理的程序猿并不多，真的阅读JVM源码的更少，这或许就是我们在技术上还需要弥补的巨大差距。&lt;/p>
+&lt;p>另外，通过阅读javac在词法分析部分的源码，我们就可以发现：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>编译器理论&lt;/strong>是指导&lt;strong>产品化的灵魂&lt;/strong>(如：词素、词法单元、有限状态机等)。&lt;/li>
+&lt;li>&lt;strong>产品化&lt;/strong>却&lt;strong>在实践中&lt;/strong>会考虑更多因素(如：输入缓冲和哨兵标志、词素Hash表等)，&lt;strong>高于编译器理论&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h2 id="7下一步">7.下一步&lt;/h2>
+&lt;p>接下来，笔者会继续分析javac在词法分析环节，如何实现有限状态机。&lt;/p>
+&lt;h1 id="z参考">z.参考&lt;/h1>
+&lt;blockquote>
+&lt;p>龙书：《Compilers, Principles, Techniques, &amp;amp;Tools》Second Edition&lt;/p>
+&lt;p>虎书：《现代编译原理-C语言描述》&lt;/p>
+&lt;/blockquote></description></item><item><title>【置顶】Java拾遗</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</link><pubDate>Thu, 14 Oct 2021 17:23:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</guid><description>&lt;p>Java是个庞大的体系，心中有许多想写下来的内容。&lt;/p>
 &lt;p>陆续写了一些后，自己的表达脉络也逐渐清晰起来。&lt;/p>
 &lt;p>就用此文将已经发布的、即将编写的文章汇总起来，便于读者阅读。&lt;/p>
 &lt;h1 id="宏观">宏观&lt;/h1>
@@ -4827,166 +5116,4 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;/ul>
 &lt;p>理解了不生成clinit的场景，那么肯定不会与&amp;quot;开篇提到的static执行顺序&amp;quot;扯上关系；&lt;/p>
 &lt;p>下一步，我们会进一步探讨生成clinit的场景的static执行顺序问题。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/12.png" alt="image-20210304003623960">&lt;/p></description></item><item><title>【垃圾回收】-0-垃圾回收体系的主脉络</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</link><pubDate>Thu, 05 Aug 2021 08:08:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
-&lt;p>如果您的女盆友非常喜欢&lt;strong>买买买&lt;/strong>，她将会面临一个严峻的问题——&lt;strong>储物空间不够&lt;/strong>。&lt;/p>
-&lt;p>所以她需要定期**&amp;ldquo;断舍离&amp;rdquo;**：过一段时间将陈旧的包包、衣服移到不常用的储物柜，再过一段时间把这些不常用的衣物丢掉。&lt;/p>
-&lt;p>Java代码也像女盆友一样，喜欢**&amp;ldquo;买买买&amp;rdquo;**——创建大量对象，所以也会面临**内存空间不足**。&lt;/p>
-&lt;p>JVM的垃圾回收机制承担了**&amp;ldquo;断舍离&amp;rdquo;**的职责。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/image-20210122102351258.png" alt="image-20210122102351258">&lt;/p>
-&lt;p>下面，我们来宏观地理解一下垃圾回收体系的主脉络。&lt;/p>
-&lt;h1 id="2where垃圾收集的目标区域">2.Where：垃圾收集的目标区域&lt;/h1>
-&lt;h2 id="目标区域">目标区域&lt;/h2>
-&lt;p>垃圾回收，&lt;strong>首先要圈定范围&lt;/strong>。&lt;/p>
-&lt;p>垃圾回收的目标区域主要发生在运行时数据区的&lt;strong>堆、方法区&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/2.png" alt="image-20210107141117798">&lt;/p>
-&lt;p>稍微回顾一下运行时数据区的一些知识：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>堆(Heap)&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>堆=年轻代+老年代&lt;/p>
-&lt;p>年轻代=伊甸园区(Eden)+幸存者区0(S0)+幸存者区1(S1)&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/3.png" alt="image-20210107143110413">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>方法区(Method Area)&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>方法区是站在类加载子系统的角度的一种逻辑说法。&lt;/p>
-&lt;p>方法区的具体实现是什么呢？&lt;/p>
-&lt;p>JDK8之前，是永久代。&lt;/p>
-&lt;p>JDK8以后，是采用堆外内存实现的元空间。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/4.png" alt="image-20210107143140440">&lt;/p>
-&lt;p>所以，更准确地说，垃圾回收的目标区域主要发生在运行时数据区的&lt;strong>年轻代、老年代、元空间&lt;/strong>。&lt;/p>
-&lt;h2 id="被回收区域的特征">被回收区域的特征&lt;/h2>
-&lt;p>根据分代理论，运行时数据区的各个区域存放的对象有如下特点：&lt;/p>
-&lt;ul>
-&lt;li>伊甸园区存放的对象，可以简化理解为新对象，有点像&lt;strong>刚买回来的2021新款LV包包&lt;/strong>&lt;/li>
-&lt;li>幸存者区存放的对象，可以简化理解为存活了一段时间的对象，有点像&lt;strong>去年买回来的LV包包&lt;/strong>&lt;/li>
-&lt;li>老年代存放的对象，可以简化理解为存活很久的对象或者很大的对象，有点像&lt;strong>过气的LV包包&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/image-20210122135157426.png" alt="image-20210122135157426">&lt;/p>
-&lt;h2 id="不同区域不同回收方式">不同区域，不同回收方式&lt;/h2>
-&lt;p>每次收拾储物空间，可以根据当前的时间、当前的需要，分批收拾。&lt;/p>
-&lt;p>垃圾收集也一样，面对不同区域的对象，也会采用不同的回收方式分批回收：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>部分收集法&lt;/strong>
-&lt;ul>
-&lt;li>&lt;strong>YGC&lt;/strong>：也叫Minor GC，针对年轻代垃圾收集。&lt;/li>
-&lt;li>&lt;strong>OGC&lt;/strong>：也叫Major GC，针对老年代垃圾收集。&lt;/li>
-&lt;li>&lt;strong>混合GC&lt;/strong>：年轻代、老年代一起垃圾收集。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>全量收集法&lt;/strong>：年轻代、老年代、元空间一起垃圾收集。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/6.png" alt="image-20210107152239170">&lt;/p>
-&lt;h1 id="3when何时会触发垃圾回收">3.When：何时会触发垃圾回收&lt;/h1>
-&lt;p>明确了垃圾回收的范围，下一步就是明确回收时机。&lt;/p>
-&lt;ul>
-&lt;li>YGC：年轻代的伊甸园区满，就好像放新款包包的储物格满了，就会触发YGC。&lt;/li>
-&lt;li>OGC：老年代满，就好像老款专属储物格满了，会触发OGC。&lt;/li>
-&lt;li>FullGC：触发FullGC的条件很多(详见下图)，就好像整个储物柜一起收集。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/7.png" alt="image-20210107154209483">&lt;/p>
-&lt;h1 id="4how垃圾回收算法">4.How：垃圾回收算法&lt;/h1>
-&lt;p>&lt;em>说明：本文篇幅有限，不展开任何算法的细节，仅帮助读者建立宏观概念，笔者将在后续文章中详细阐述各种算法细节。&lt;/em>&lt;/p>
-&lt;h2 id="41什么是垃圾">4.1.什么是垃圾？&lt;/h2>
-&lt;p>断舍离的时候，什么样的包包算**&amp;ldquo;过时&amp;rdquo;**？一定是有个标准的。&lt;/p>
-&lt;p>对于垃圾回收算法也一样，认定无用对象的经典算法有两种：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>引用计数算法&lt;/strong>：此算法是在每个对象上增加一个计数器，表示这个对象被多少其它对象引用了。如果某个对象的引用计数器=0，则这个对象被定义为垃圾。&lt;/li>
-&lt;li>&lt;strong>可达性分析算法&lt;/strong>：此算法规定了一组满足条件的对象作为根节点，从这些根节点出发，搜索对象的引用链条，最终形成一个有向图，图中孤立的对象节点，就被定义为垃圾。&lt;/li>
-&lt;/ul>
-&lt;p>上述垃圾评价算法，各有利弊，后续会展开讨论，在此仅需要有一个概念：这套算法，就是帮助JVM识别一个对象是否属于垃圾。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/8.png" alt="image-20210107172657461">&lt;/p>
-&lt;h2 id="42如何回收垃圾">4.2.如何回收垃圾？&lt;/h2>
-&lt;p>识别出了垃圾，就要&lt;strong>有节奏地&lt;/strong>、&lt;strong>高效&lt;/strong>地开展垃圾回收。&lt;/p>
-&lt;p>好吧，问题来了：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>有节奏意味着慢慢来&lt;/strong>：肯定要给女盆友时间慢慢收拾，把稍微过时的包包放到不常用的储物格子，把非常过时的包包直接丢掉。&lt;/li>
-&lt;li>&lt;strong>高效意味着快&lt;/strong>：如果女盆友收拾的太慢，就没有人给您做饭了。&lt;/li>
-&lt;/ul>
-&lt;p>这也是影响JVM性能优化最大的课题：&lt;/p>
-&lt;ul>
-&lt;li>如何快速垃圾回收&lt;/li>
-&lt;li>如何避免STW问题：Stop The World问题，就是垃圾回收过程中，导致业务代码卡顿。&lt;/li>
-&lt;/ul>
-&lt;p>这些就是现存的这么多种垃圾回收算法要攻克的核心课题。&lt;/p>
-&lt;p>我们接下来宏观地理解一下各类&lt;strong>垃圾回收算法&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/9.png" alt="image-20210107170509963">&lt;/p>
-&lt;p>我们先看看3种最基础、最经典的&lt;strong>基础算法&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Mark-Sweep&lt;/strong>：标记-清除算法&lt;/li>
-&lt;li>&lt;strong>Copying&lt;/strong>：复制算法&lt;/li>
-&lt;li>&lt;strong>Mark-Compact&lt;/strong>：标记-压缩算法&lt;/li>
-&lt;/ul>
-&lt;p>从收集的区域看，有1种基于上述3种基础算法的&lt;strong>组合算法&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>分代收集算法&lt;/strong>：本质就是不同的区域，采用不同的上述3种基础算法。&lt;/li>
-&lt;/ul>
-&lt;p>从收集的方式看，有1种基于上述3种基础算法&lt;strong>组合算法&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>增量收集算法&lt;/strong>：本质是业务代码运行和垃圾回收交替进行。&lt;/li>
-&lt;/ul>
-&lt;p>随着Java的不断发展，又发展出一种新的门派&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>分区算法&lt;/strong>：本质是将内存区域划分为很多小方格，每个格子按需放对象，与分代理论最大的不同是，同一类型的对象不一定要放在逻辑连续的代。如下图，同样是伊甸园区的对象，并不需要占据逻辑连续的伊甸园区。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/10.png" alt="image-20210107161323691">&lt;/p>
-&lt;h1 id="5垃圾回收器垃圾回收算法的具体实现">5.垃圾回收器：垃圾回收算法的具体实现&lt;/h1>
-&lt;p>&lt;em>说明：本文篇幅有限，在后续文章中展开垃圾回收器的细节。&lt;/em>&lt;/p>
-&lt;p>垃圾回收器是垃圾回收算法的具体实现，但是理解垃圾回收器对我们有两个难题：&lt;/p>
-&lt;ul>
-&lt;li>有多种垃圾回收器&lt;/li>
-&lt;li>每种垃圾回收器都主攻某种场景，为了满足大部分业务场景，必须合理组合使用多种垃圾回收器&lt;/li>
-&lt;/ul>
-&lt;h2 id="51为什么会有多种垃圾回收器呢">5.1.为什么会有多种垃圾回收器呢？&lt;/h2>
-&lt;p>除了业务软件对JVM垃圾回收性能的诉求，还有商业原因(例如：Sun认了Oracle当爸爸，例如：RedHat企图当干爹，但亲爹Oracle不让)。&lt;/p>
-&lt;h2 id="52如何搭配使用多种垃圾回收器呢">5.2.如何搭配使用多种垃圾回收器呢？&lt;/h2>
-&lt;p>本文仅以JDK8为例，列举出垃圾回收器的经典搭配方法：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Serial+Serial Old&lt;/strong>： Serial回收器处理年轻代，Serial Old回收器处理老年代。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/11.png" alt="image-20210107182038415">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>ParNew+CMS+Serial Old&lt;/strong>： ParNew处理年轻代，CMS处理老年代，当CMS失效时，Serial Old回收器兜底老年代。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/12.png" alt="image-20210107182113952">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Parallel Scanvenge+Parallel Old&lt;/strong>： Parallel Scanvenge处理年轻代，Parallel Old处理老年代。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/13.png" alt="image-20210107182137752">&lt;/p>
-&lt;ul>
-&lt;li>**Parallel Scanvenge + Serial Old：**Parallel Scanvenge处理年轻代，Serial Old处理老年代。这种搭配关系在JDK14以后就开始废弃了。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/14.png" alt="image-20210107182201742">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>G1&lt;/strong>：G1是个神奇的存在，一个回收器通吃年轻代和老年代。这也是JVM目前主推的回收器。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/15.png" alt="image-20210107221548740">&lt;/p>
-&lt;h1 id="总结">总结&lt;/h1>
-&lt;p>本文讲解了垃圾回收体系的主脉络：&lt;/p>
-&lt;ul>
-&lt;li>垃圾回收发生在年轻代、老年代、方法区。&lt;/li>
-&lt;li>垃圾回收的方式：YGC(Minor GC)、OGC(Major GC)、FullGC&lt;/li>
-&lt;li>年轻代伊甸园区满时，触发YGC&lt;/li>
-&lt;li>老年代满时，触发OGC&lt;/li>
-&lt;li>有多种条件，触发FullGC(详见前文配图)&lt;/li>
-&lt;li>引用计数算法和可达性分析算法，用来识别哪些对象是垃圾。&lt;/li>
-&lt;li>垃圾回收的三种基础算法：标记-清除算法(Mark-Sweep)、复制算法(Copying)、标记-压缩算法(Mark-Compact)&lt;/li>
-&lt;li>垃圾回收的两种组合算法：分代收集算法、增量收集算法&lt;/li>
-&lt;li>垃圾回收的新门派组合算法：分区收集算法&lt;/li>
-&lt;li>由于商业原因和业务需求，JVM提供7种经典垃圾回收器。&lt;/li>
-&lt;li>实战时，搭配使用不通过垃圾回收器，满足回收年轻代和老年代的场景。&lt;/li>
-&lt;li>G1是一种特殊的垃圾收集器，通吃年轻代和老年代的垃圾回收。&lt;/li>
-&lt;/ul>
-&lt;p>如果从宏观上理解了垃圾回收体系的全貌，相信聪明的读者不用死记硬背也能得到题目的答案，请您将答案写在下面的评论区吧！&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/image-20210122140538305.png" alt="image-20210122140538305">&lt;/p>
-&lt;h1 id="废弃">废弃&lt;/h1>
-&lt;p>如果把&lt;strong>JVM&lt;/strong>类比为一座&lt;strong>工厂&lt;/strong>，那么运行时产生的各种&lt;strong>对象&lt;/strong>就像这座工厂里的&lt;strong>打工人&lt;/strong>，&lt;strong>运行时数据区&lt;/strong>就像打工人的&lt;strong>工位&lt;/strong>。&lt;/p>
-&lt;p>铁打的营盘流水的兵，工位有限，企业主会安排HR开展裁员工作——清理没价值的打工人，为新人腾出工位。&lt;/p>
-&lt;p>&lt;strong>垃圾回收体系&lt;/strong>就是JVM中，扮演了这个最无情的角色。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E3%80%91-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/1.png" alt="image-20210107150610240">&lt;/p>
-&lt;p>站在打工人(对象)的角度，垃圾回收体系是无情的存在。&lt;/p>
-&lt;p>但站在企业主(JVM)的角度，垃圾回收体系是维系正常生产的重要部件。&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/12.png" alt="image-20210304003623960">&lt;/p></description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Mar 2022 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 25 May 2022 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,313 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【宏观】-0-浅谈数据仓库</title><link>https://jherculesqz.github.io/post/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</link><pubDate>Sun, 20 Mar 2022 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</guid><description>&lt;p>国内的数据行业领域大致有&lt;strong>3个市场分水岭&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【宏观】-0-性能之巅笔记-上</title><link>https://jherculesqz.github.io/post/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/</link><pubDate>Wed, 25 May 2022 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/</guid><description>&lt;h1 id="1brendan-gregg是谁">1.Brendan Gregg是谁&lt;/h1>
+&lt;p>Brendan Gregg，性能界大神，曾就职于Netflix、Sun、Oracle、Joyent(被三星收购的一家云计算公司)，从2022年5月的博客看，他目前就职于Intel。&lt;/p>
+&lt;p>Brendan Gregg在性能方面的成就数不胜数，仅列出两项就可以让我们膜拜了：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>《Systems Performance : Enterprise and the Cloud》&lt;/strong>：中文名《性能之巅》，一本风靡全球的性能工程的圣经。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526101942669.png" alt="image-20220526101942669">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&amp;ldquo;The Flame Graph&amp;rdquo;&lt;/strong>：Brendan Gregg于2013年提出的&amp;quot;火焰图&amp;rdquo;，火焰图方法也成为现在各种性能工具中必备的可视化能力。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526103724186.png" alt="image-20220526103724186">&lt;/p>
+&lt;p>Brendan Gregg在性能领域，还有一个被广为传播的骚操作——对着磁盘狂吼引发磁盘IO的性能问题。。。大神的世界我们永远不懂。。。&lt;/p>
+&lt;ul>
+&lt;li>油管：https://www.youtube.com/watch?v=tDacjrSCeq4&lt;/li>
+&lt;li>B站：https://www.bilibili.com/video/BV1gY4y1L7Px/&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526105433607.png" alt="image-20220526105433607">&lt;/p>
+&lt;h1 id="2第一章笔记">2.第一章笔记&lt;/h1>
+&lt;p>Brendan Gregg在《性能之巅》第一章主要讲了2个问题：&lt;/p>
+&lt;ul>
+&lt;li>为什么学习性能工程很难？&lt;/li>
+&lt;li>为什么实施性能工程很难？&lt;/li>
+&lt;/ul>
+&lt;h2 id="为什么学习性能工程很难">为什么学习性能工程很难？&lt;/h2>
+&lt;p>作者想表达的核心观点：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>性能工程要求工程师具备宽广的技术广度，同时也要具备深邃的技术深度。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>然而，技术深度与技术广度兼备的确是一件很困难的事情。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>作者引用了2002年美国国防部长论述国际关系时的一段话：&lt;/p>
+&lt;blockquote>
+&lt;p>国际关系中，&lt;/p>
+&lt;p>有已知的已知：有些事情我们知道自己知道。&lt;/p>
+&lt;p>也有已知的未知：我们知道有些事情我们不知道。&lt;/p>
+&lt;p>但还有未知的未知：有些事情我们知道自己不知道。&lt;/p>
+&lt;/blockquote>
+&lt;p>美国防部长这段话的本意是想论述国际关系复杂多变，任何一项决策要考虑充分，避免未知的未知引发不可估量的后果。&lt;/p>
+&lt;p>作者认为这段话也可以类比于性能工程：&lt;/p>
+&lt;blockquote>
+&lt;p>当我们开展性能优化工作时，由于未知的未知太多，会导致：&lt;/p>
+&lt;p>(1)缺乏&amp;quot;高效&amp;quot;的定位手段——而且我们还不自知操作系统早已为我们准备好了对应的方法和工具。&lt;/p>
+&lt;p>(2)缺乏&amp;quot;有效&amp;quot;的解决办法。&lt;/p>
+&lt;/blockquote>
+&lt;p>作者的观点，与庄子的《养生主》异曲同工：&lt;/p>
+&lt;blockquote>
+&lt;p>吾生也有涯，而知也无涯。以有涯随无涯，殆已！&lt;/p>
+&lt;/blockquote>
+&lt;p>人类的生命是非常有限的，而知识无边无尽，以有限的生命追求无边的知识，显然是不可能的。&lt;/p>
+&lt;p>作者有什么建议呢？可以归纳为两点：&lt;/p>
+&lt;ul>
+&lt;li>对策1：对知识进行归纳，抽象出知识的本质。&lt;/li>
+&lt;li>对策2：有选择地、有优先级地学习。
+&lt;ul>
+&lt;li>巩固已知的已知，扩大已知的未知，减少未知的未知。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>作者认为知识肯定是学不完的，但学习时可以：&lt;/p>
+&lt;ul>
+&lt;li>首先，将尽可能多的&amp;quot;未知的未知&amp;quot;转换为&amp;quot;已知的未知&amp;rdquo;。&lt;/li>
+&lt;li>然后，实战时再查资料，将&amp;quot;已知的未知&amp;quot;转换为&amp;quot;已知的已知&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526162559859.png" alt="image-20220526162559859">&lt;/p>
+&lt;p>但，工程师分三种：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>天才型工程师：知识结构大多是已知的已知，这是大神，也是少数。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>扎实型工程师：知识结构大多是已知的已知、已知的未知，这是大多数人的可能达到的状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>愚昧型工程师：知识结构大多是未知的知识，这种工程师往往觉得自己就是全世界。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>**&amp;ldquo;用到的时候再查文档&amp;rdquo;**这句话，&lt;/p>
+&lt;p>对于扎实性工程师是有效的。&lt;/p>
+&lt;p>对于愚昧性工程师是无效的——即便实战时给他充足的时间查资料，首先他都不会去查(因为他不知道)，即便去查也可能查不到、查到也看不懂。&lt;/p>
+&lt;p>作者的这个学习论，可以推广到各种知识的学习中。&lt;/p>
+&lt;h2 id="为什么实施性能工程很难">为什么实施性能工程很难？&lt;/h2>
+&lt;p>作者归纳了实战中性能工程的4个难点：&lt;/p>
+&lt;ul>
+&lt;li>性能的主观性&lt;/li>
+&lt;li>系统的复杂性&lt;/li>
+&lt;li>人员的协作性&lt;/li>
+&lt;/ul>
+&lt;h3 id="性能的主观性">性能的主观性&lt;/h3>
+&lt;p>作者认为性能是主观的，同样是&lt;code>磁盘单次IO的时间是1ms&lt;/code>，&lt;/p>
+&lt;p>在实时系统场景下是很慢的，在管理信息系统场景下却是很快的。&lt;/p>
+&lt;p>因此，性能工程要结合实际产品制定合理、合适的性能标准。&lt;/p>
+&lt;h3 id="系统的复杂性">系统的复杂性&lt;/h3>
+&lt;p>作者认为&lt;strong>被测系统是复杂的&lt;/strong>，进而&lt;strong>导致2个问题&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>寻找性能问题时，找不到分析的&lt;strong>起点&lt;/strong>。
+&lt;ul>
+&lt;li>很多性能培训案例，是假定我们已知问题起点了。&lt;/li>
+&lt;li>比如：假定我们已经知道就是进程A的线程B疑似死锁了，于是演示各种工具如何证明是死锁。&lt;/li>
+&lt;li>关键我们怎么知道就是进程A有性能问题？怎么知道就是线程B有问题？怎么知道就是死锁问题？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>解决性能问题时，往往&lt;strong>牵一发而动全身&lt;/strong>。
+&lt;ul>
+&lt;li>修改死锁问题，可能CPU的瓶颈没有了。&lt;/li>
+&lt;li>但，应用程序继续往下一个环节运行，又引发了IO的瓶颈。&lt;/li>
+&lt;li>所以才有程序猿感慨：&amp;ldquo;时间是不可能被消灭的，只可能被转移。&amp;ldquo;&lt;img src="https://jherculesqz.github.io/性能拾遗/【宏观】-0-性能之巅笔记-上/image-20220526172626038.png" alt="image-20220526172626038" style="zoom:25%;" />&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="人员的协作性">人员的协作性&lt;/h3>
+&lt;p>作者根据经验总结了3个与人相关的问题：&lt;/p>
+&lt;ul>
+&lt;li>性能工程涉及到产品研发体系的众多角色。比如：系统管理员、应用开发者、DBA、网络工程师。&lt;/li>
+&lt;li>角色间的部门墙可能导致性能工程断点。&lt;/li>
+&lt;li>即使是性能工程师，也可能专注于某个领域。比如：Java性能工程师、MySQL性能工程师等。&lt;/li>
+&lt;/ul>
+&lt;p>看来在哪儿都有部门墙，有人的地方就有江湖。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527103458466.png" alt="image-20220527103458466">&lt;/p>
+&lt;h1 id="3第二章笔记">3.第二章笔记&lt;/h1>
+&lt;p>Brendan Gregg在《性能之巅》第二章主要从6个方面讲了性能工程的方法论：&lt;/p>
+&lt;ul>
+&lt;li>开展性能工程的21种方法&lt;/li>
+&lt;li>被测系统的架构&lt;/li>
+&lt;li>被测系统的模型&lt;/li>
+&lt;li>性能工程的2种分析视角&lt;/li>
+&lt;li>性能指标&lt;/li>
+&lt;li>性能工程涉及的数学模型&lt;/li>
+&lt;/ul>
+&lt;h2 id="开展性能工程的21种方法">开展性能工程的21种方法&lt;/h2>
+&lt;p>作者在这一段讲了21种性能工程常用的方法(英文&lt;code>anti-methodologies&lt;/code>)，译者生造了个词——&lt;code>讹方法&lt;/code>。&lt;/p>
+&lt;p>&lt;code>讹方法&lt;/code>？难道是&lt;code>讹人&lt;/code>的意思？我选了两种方法说明一下：&lt;/p>
+&lt;h3 id="街灯讹方法">街灯讹方法&lt;/h3>
+&lt;p>作者讲了个故事：&lt;/p>
+&lt;blockquote>
+&lt;p>有个醉汉在路灯下找钥匙，警察帮忙找了半天也没找到。&lt;/p>
+&lt;p>警察问醉汉确不确定就在这个路灯下丢的钥匙。&lt;/p>
+&lt;p>醉汉说：我也不确定，但是这里是最亮的。&lt;/p>
+&lt;/blockquote>
+&lt;p>这。。。&lt;/p>
+&lt;p>不就是某些程序猿定位性能问题但找不到切入点时，先随便怀疑一段代码，碰碰运气吗。。。&lt;/p>
+&lt;h3 id="责怪他人讹方法">责怪他人讹方法&lt;/h3>
+&lt;p>作者说了一下操作步骤：&lt;/p>
+&lt;blockquote>
+&lt;p>第一步、找到一个不是自己负责的模块——注意，一定不是自己负责的模块！&lt;/p>
+&lt;p>第二步、假定问题就是这个模块造成的。&lt;/p>
+&lt;p>第三步、把问题扔给那个模块的负责人。&lt;/p>
+&lt;p>第四步、如果那个模块的负责人证明不是他的问题，重复步骤1。&lt;/p>
+&lt;/blockquote>
+&lt;p>这。。。&lt;/p>
+&lt;p>不就是某些程序猿最喜欢干的事儿吗——甩锅大法！！！&lt;/p>
+&lt;p>Brendan Gregg竟然给甩锅大法取了这么牛X的名字，还给出了甩锅的详细步骤。。。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527120219336.png" alt="image-20220527120219336">&lt;/p>
+&lt;h3 id="赤果果的调侃">赤果果的调侃&lt;/h3>
+&lt;p>行了，这一段儿基本可以跳过了。。。&lt;/p>
+&lt;p>这一段儿就是作者一本正经地调侃。。。&lt;/p>
+&lt;p>当然，以作者的骚气，他在这么权威的书里面写出这种段子，我们也不应该太意外。。。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527114756476.png" alt="image-20220527114756476">&lt;/p>
+&lt;h2 id="被测系统的架构">被测系统的架构&lt;/h2>
+&lt;p>作者表达了1个观点和1个常用的架构：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1个观点&lt;/strong>：性能工程是针对整个系统(包括所有硬件和软件栈)，实施性能工程前画出完整的架构图可以避免&lt;code>只见树木不见森林&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>1个常用架构&lt;/strong>：如下图。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527121255677.png" alt="image-20220527121255677">&lt;/p>
+&lt;h2 id="被测系统的模型">被测系统的模型&lt;/h2>
+&lt;ul>
+&lt;li>**SUT模型：**system under test&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527121828041.png" alt="image-20220527121828041">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>排队系统&lt;/strong>：这个模型很重要，作者贯穿全书的理念就是能将所有的性能问题都归纳为排队系统。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527122023060.png" alt="image-20220527122023060">&lt;/p>
+&lt;h2 id="性能工程的2种分析视角">性能工程的2种分析视角&lt;/h2>
+&lt;p>在梳理好被测系统的架构后，我们有两种选择：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>自下而上&lt;/strong>：resource analysis，从硬件、内核、系统调用寻找资源瓶颈，进而定位到应用程序的进程、线程。&lt;/li>
+&lt;li>&lt;strong>自上而下&lt;/strong>：workload analysis，从应用程序出发，找到资源瓶颈。&lt;/li>
+&lt;/ul>
+&lt;p>作者认为，其实两种分析视角要结合起来，才是最有效的性能工程方法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527122439419.png" alt="image-20220527122439419">&lt;/p>
+&lt;h2 id="性能指标">性能指标&lt;/h2>
+&lt;p>对于常用的性能指标就不展开了。如：延时、响应时间、时间量级、使用率、饱和度等。&lt;/p>
+&lt;p>作者重点展开了对&lt;strong>缓存的基础知识&lt;/strong>介绍：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>什么是缓存&lt;/strong>？&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>将数据不再存储在较慢的存储层，而是将数据存储到较快的存储层中。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>典型的缓存？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>CPU的L1、L2、L3缓存&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>缓存的命中率是什么？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>命中率 = 命中次数 / (命中次数+失效次数)&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>失效率是什么？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>每秒缓存失效次数&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>命中率、失效率与运行性能的关系？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>运行时间 = 命中率 * 命中延时 + 失效率 * 失效延时&lt;/p>
+&lt;p>比如：&lt;/p>
+&lt;p>任务1的命中率很高(90%)，失效率也很高(200/s)。&lt;/p>
+&lt;p>任务2的命中率略低(80%)，失效率也很低(20/s)。&lt;/p>
+&lt;p>那么，最终任务2的性能会更好。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>实现缓存的算法有哪些？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>MRU：将最近最长使用的数据保留在缓存中。&lt;/p>
+&lt;p>LRU：将最近最少使用的数据移出缓存。&lt;/p>
+&lt;p>其它算法还有NFU、MFU、LFU。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>缓存温度有哪些？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>冷：命中率无限接近于0，比如缓存是空的。&lt;/p>
+&lt;p>热：命中率无限接近于预期的高度。&lt;/p>
+&lt;p>温：命中率还没有达到预期的高度。比如：缓存中存了一定有用的数据，但不全是有用的数据。&lt;/p>
+&lt;/blockquote>
+&lt;p>大白话一点，缓存机制的本质和海王海后的鱼塘逻辑差不多：&lt;/p>
+&lt;ul>
+&lt;li>**MRU、LRU：**MRU——最近经常撩的，加到鱼塘里、LRU——最近不咋联系的，踢出鱼塘。&lt;/li>
+&lt;li>&lt;strong>命中率高、失效率低，性能好&lt;/strong>：鱼塘里都是鱼，鱼还很活跃，随便撩一下都是鱼，你说那啥效率高不高？&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527150414981.png" alt="image-20220527150414981">&lt;/p>
+&lt;h2 id="性能工程涉及的数学模型">性能工程涉及的数学模型&lt;/h2>
+&lt;h3 id="amdahl扩展定律">Amdahl扩展定律&lt;/h3>
+&lt;p>由计算机科学家阿姆达尔，在1967年AFIPS春季联合计算机会议上提出。&lt;/p>
+&lt;p>这个阿姆达尔扩展定律的目的是为了预测性能优化到什么程度。&lt;/p>
+&lt;p>阿姆达尔定律本质上用严谨的公式证明了&amp;quot;木桶原理&amp;rdquo;——无法优化的那个部件决定了性能优化的上线。&lt;/p>
+&lt;p>如果：1个单线程的程序需要20小时，其中有1个小时无法并行化处理，&lt;/p>
+&lt;p>那么：将剩余19小时并行化了，最短执行时间也不可能小于1小时。&lt;/p>
+&lt;p>因此：我们就可以预测性能优化后可以加速20倍。&lt;/p>
+&lt;p>道理很通俗，但科学家需要严谨的公式推导，详细推导过程可以看看维基百科：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">https://en.wikipedia.org/wiki/Amdahl%27s_law&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>但阿姆达尔定律有一个缺陷：以上述案例，是不是我们19个小时的任务并行化，就一定可以将性能优化到1小时呢？&lt;/p>
+&lt;p>显然不是——随着CPU增加，可能会达到一个瓶颈点，随后无论怎么增加CPU，性能也不会优化了。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527160717677.png" alt="image-20220527160717677">&lt;/p>
+&lt;h3 id="通用扩展定律">通用扩展定律&lt;/h3>
+&lt;p>通用扩展定律：Universal Scalability Law，USL。由计算机科学家Neil J. Gunther于2008年提出。&lt;/p>
+&lt;p>这个定律就是用来更加精细化地预测：当我持续增加资源，实际的性能优化与阿姆达尔定律的理想化性能优化的偏移量。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527161219066.png" alt="image-20220527161219066">&lt;/p>
+&lt;h3 id="排队论">排队论&lt;/h3>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Agner_Krarup_Erlang">Agner Krarup Erlang&lt;/a>于1909年第一次提出了排队理论。&lt;/p>
+&lt;p>排队论描述了现实世界中有形、无形的各种排队场景。比如：12306抢票、网红店取号排队、超市排队买单等。&lt;/p>
+&lt;p>顾客肯定希望排队越短越好、办事儿时间越快越好。超市安排过多的收银员就浪费了，安排太少的收银员又会被顾客投诉。&lt;/p>
+&lt;p>顾客肯定不是按顺序一个个来超市，有可能在一个热点时间一拥而上来超市。&lt;/p>
+&lt;p>超市的排队规则是先到先处理，但是车牌摇号就是随机处理了。&lt;/p>
+&lt;p>……&lt;/p>
+&lt;p>上述这些，就是排队论研究的内容：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>被服务者的到达遵循何种分布&lt;/strong>：如泊松分布。&lt;/li>
+&lt;li>&lt;strong>服务机构的服务能力遵循何种统计特征&lt;/strong>：如每个收银员的处理速度。&lt;/li>
+&lt;li>**排队的原则是什么：**如先到先处理or随机处理。&lt;/li>
+&lt;li>&lt;strong>排队的Topo结构&lt;/strong>：如超市最多放下10个收银台，那就有10条并行的排队结构。&lt;/li>
+&lt;/ul>
+&lt;p>最终排队论给出评估：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>怎么排队，收益最大&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>Brendan Gregg的核心观点是：&lt;/p>
+&lt;ul>
+&lt;li>无论应用程序，还是CPU、IO、网络、磁盘都可以用排队模型化。&lt;/li>
+&lt;li>按照排队论，多种性能优化手段，最终一定有一个从&amp;quot;运筹学&amp;quot;上性能收益最大的选择。&lt;/li>
+&lt;/ul>
+&lt;p>理解排队论的推导，对于笔者还很困难，各位读者有兴趣可以参考相关资料：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://zh.m.wikipedia.org/zh-sg/%E7%AD%89%E5%80%99%E7%90%86%E8%AB%96">https://zh.m.wikipedia.org/zh-sg/%E7%AD%89%E5%80%99%E7%90%86%E8%AB%96&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="基本统计指标">基本统计指标&lt;/h3>
+&lt;p>平均值、标准方差、百分位数、中位数、变异系数、多重模态分布、异常值，这些都是数理统计的基本概念，不赘述了。&lt;/p>
+&lt;h1 id="4第一章第二章小结">4.第一章/第二章小结&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>未知的未知&lt;/strong>：Brendan Gregg的观点很赞，知道的越多就更容易知道自己的无知。&lt;/li>
+&lt;li>&lt;strong>性能工程的视角&lt;/strong>：利用操作系统的工具链定位出CPU/内存/IO/网络的瓶颈找到性能切入点，进而定位到应用程序的进程/线程，虽然技能要求高，但能获得逻辑自洽的逻辑链，比撞大运靠谱。&lt;/li>
+&lt;li>&lt;strong>性能工程的工程方法依托于数学&lt;/strong>：阿姆达尔定律、通用扩展定律、排队论，世界的尽头果然是数学啊。&lt;/li>
+&lt;/ul>
+&lt;h1 id="5参考文献">5.参考文献&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">《性能之巅》第一章、第二章
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【宏观】-0-浅谈数据仓库</title><link>https://jherculesqz.github.io/post/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</link><pubDate>Sun, 20 Mar 2022 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</guid><description>&lt;p>国内的数据行业领域大致有&lt;strong>3个市场分水岭&lt;/strong>：&lt;/p>
 &lt;ul>
 &lt;li>2008年以前，&lt;strong>关系型数据库厂商&lt;/strong>领军，以&lt;code>MySQL、Oracle、SQLServer&lt;/code>为代表。&lt;/li>
 &lt;li>2008年~2012年，与关系型数据库竞争的各类&lt;strong>NoSQL厂商&lt;/strong>异军突起，以&lt;code>Hadoop生态、MongoDB、Neo4j&lt;/code>等为代表。&lt;/li>
@@ -5187,88 +5493,4 @@ GCT：从app启动到采样时，发生的GC的总时间(秒)
 &lt;p>3.解释器与即时编译器的配合方式——分层编译&lt;/p>
 &lt;/blockquote>
 &lt;p>结合笔者另外两篇文章《【类加载机制】从一道面试题开始》、《【运行时数据区】用仓库管理员的视角理解运行时数据区》，我们已经从宏观上看到了&lt;strong>JVM的三大构成&lt;/strong>，笔者将在后续文章中，与读者们继续深入与探索个中细节。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/9.png" alt="image-20200916175340096">&lt;/p></description></item><item><title>【类加载机制】-8-Init阶段细节-顺序，再谈赋值-下</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/</link><pubDate>Thu, 05 Aug 2021 08:08:33 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/</guid><description>&lt;h1 id="1面试题static与继承的结合">1.面试题：static与继承的结合&lt;/h1>
-&lt;p>书接上文，在上一篇案例中，我们通过识别哪些static字段&amp;quot;不生成clinit方法&amp;rdquo;，进而理解了面试题中哪些static元素不会打印。&lt;/p>
-&lt;p>本文进一步分析那些会生成clinit方法，在哪些场景下会被调用。&lt;/p>
-&lt;h1 id="2场景1创建类的实例">2.场景1：创建类的实例&lt;/h1>
-&lt;p>以下代码创建了类的实例：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/1.png" alt="image-20210319142108479">&lt;/p>
-&lt;p>运行代码后，可以发现，类Test1生成了clinit方法被调用了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/2.png" alt="image-20210319142237424">&lt;/p>
-&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>通过new方式，创建类的实例时，类中的clinit方法会被执行&lt;/p>
-&lt;/blockquote>
-&lt;p>聪明的读者，可以尝试以下方式创建类的实例，看看clinit方法是否会被执行&lt;/p>
-&lt;blockquote>
-&lt;p>反射&lt;/p>
-&lt;p>克隆&lt;/p>
-&lt;p>反序列化&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="3场景2调用类的静态方法">3.场景2：调用类的静态方法&lt;/h1>
-&lt;p>以下代码演示了调用类的静态方法：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/3.png" alt="image-20210319143319830">&lt;/p>
-&lt;p>运行代码后，可以发现字节码中出现了invokestatic指令，类Test3生成了clinit方法被调用了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/4.png" alt="image-20210319143417477">&lt;/p>
-&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>调用类的静态方法时，类中的clinit方法会被执行&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="3场景3调用类接口的静态字段">3.场景3：调用类、接口的静态字段&lt;/h1>
-&lt;p>以下代码演示了调用类的静态字段：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/5.png" alt="image-20210319143711917">&lt;/p>
-&lt;p>运行代码后，可以发现main函数中(说明：一次只放出一条打印语句)，Test4的a2、A5、A6、A7会触发clinit方法，而A3、A4、A8不会触发clinit方法。&lt;/p>
-&lt;p>为什么呢？&lt;/p>
-&lt;p>因为A3、A4、A8就是上篇提到的不会生成clinit的场景。&lt;/p>
-&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>调用类中静态字段，且静态字段会生成clinit时，类中的clinit方法会被执行&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="4场景4使用javalangreflect包中的方法反射类的方法时">4.场景4：使用java.lang.reflect包中的方法反射类的方法时&lt;/h1>
-&lt;p>以下代码演示了使用Class.forName：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/6.png" alt="image-20210319144451690">&lt;/p>
-&lt;p>运行代码，可以发现clinit方法被执行了&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/7.png" alt="image-20210319144543469">&lt;/p>
-&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>使用java.lang.reflect包中的方法反射类的方法时，类中的clinit方法会被执行&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="5场景5初始化子类">5.场景5：初始化子类&lt;/h1>
-&lt;p>以下代码演示了创建子类的实例：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/8.png" alt="image-20210319144638827">&lt;/p>
-&lt;p>运行代码，可以发现，依次执行了父类的clinit方法、子类的clinit方法&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/9.png" alt="image-20210319144834224">&lt;/p>
-&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>初始化子类时，如果父类还没有初始化，则会触发父类的初始化&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="6场景6接口中定义了default方法">6.场景6：接口中定义了default方法&lt;/h1>
-&lt;p>如下代码演示了在接口中定义default方法&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/10.png" alt="image-20210319145731549">&lt;/p>
-&lt;p>运行代码，可以发现，接口的clinit方法被执行了&lt;/p>
-&lt;p>&lt;strong>实验结论：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>如果接口中定义了default方法，clinit方法被执行&lt;/p>
-&lt;/blockquote>
-&lt;p>反过来思考，如果接口中没有定义default方法呢？读者可以删掉示例中的default方法，看看clinit方法是否会被执行。&lt;/p>
-&lt;h1 id="7总结">7.总结&lt;/h1>
-&lt;p>本文分析了Java实战中极为常用的关键词：static&lt;/p>
-&lt;ul>
-&lt;li>javac自动生成clinit的原则：被static修饰的字段和代码块都可能触发自动生成clinit。&lt;/li>
-&lt;li>不生成clinit的场景本质：被static final修饰、基础数据类型或String类型、赋值不涉及对象生成的场景，都不会触发自动生成clinit&lt;/li>
-&lt;li>能够调用clinit的场景
-&lt;ul>
-&lt;li>通过new方式创建类的实例&lt;/li>
-&lt;li>调用类的静态方法&lt;/li>
-&lt;li>调用类和接口的静态字段&lt;/li>
-&lt;li>反射类&lt;/li>
-&lt;li>初始化子类&lt;/li>
-&lt;li>接口中定义default方法&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%91-8-Init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%EF%BC%8C%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/12.png" alt="image-20210304003623960">&lt;/p>
-&lt;h1 id="8参考资料">8.参考资料&lt;/h1>
-&lt;blockquote>
-&lt;p>《深入理解Java虚拟机》的类加载章节-周志明&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%E3%80%91-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/9.png" alt="image-20200916175340096">&lt;/p></description></item></channel></rss>

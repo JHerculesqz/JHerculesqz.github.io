@@ -97,12 +97,12 @@
 &lt;p>愚昧型工程师：知识结构大多是未知的知识，这种工程师往往觉得自己就是全世界。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>**&amp;ldquo;用到的时候再查文档&amp;rdquo;**这句话，&lt;/p>
+&lt;p>&amp;ldquo;&lt;strong>用到的时候再查文档&lt;/strong>&amp;ldquo;这句话，&lt;/p>
 &lt;p>对于扎实性工程师是有效的。&lt;/p>
 &lt;p>对于愚昧性工程师是无效的——即便实战时给他充足的时间查资料，首先他都不会去查(因为他不知道)，即便去查也可能查不到、查到也看不懂。&lt;/p>
 &lt;p>作者的这个学习论，可以推广到各种知识的学习中。&lt;/p>
 &lt;h2 id="为什么实施性能工程很难">为什么实施性能工程很难？&lt;/h2>
-&lt;p>作者归纳了实战中性能工程的4个难点：&lt;/p>
+&lt;p>作者归纳了实战中性能工程的3个难点：&lt;/p>
 &lt;ul>
 &lt;li>性能的主观性&lt;/li>
 &lt;li>系统的复杂性&lt;/li>
@@ -187,7 +187,7 @@
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527121255677.png" alt="image-20220527121255677">&lt;/p>
 &lt;h2 id="被测系统的模型">被测系统的模型&lt;/h2>
 &lt;ul>
-&lt;li>**SUT模型：**system under test&lt;/li>
+&lt;li>&lt;strong>SUT模型&lt;/strong>：system under test&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527121828041.png" alt="image-20220527121828041">&lt;/p>
 &lt;ul>
@@ -212,25 +212,25 @@
 &lt;p>将数据不再存储在较慢的存储层，而是将数据存储到较快的存储层中。&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;strong>典型的缓存？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>典型的缓存&lt;/strong>？&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>CPU的L1、L2、L3缓存&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;strong>缓存的命中率是什么？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>缓存的命中率是什么&lt;/strong>？&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>命中率 = 命中次数 / (命中次数+失效次数)&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;strong>失效率是什么？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>失效率是什么&lt;/strong>？&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>每秒缓存失效次数&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;strong>命中率、失效率与运行性能的关系？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>命中率、失效率与运行性能的关系&lt;/strong>？&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>运行时间 = 命中率 * 命中延时 + 失效率 * 失效延时&lt;/p>
@@ -240,7 +240,7 @@
 &lt;p>那么，最终任务2的性能会更好。&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;strong>实现缓存的算法有哪些？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>实现缓存的算法有哪些&lt;/strong>？&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>MRU：将最近最长使用的数据保留在缓存中。&lt;/p>
@@ -248,7 +248,7 @@
 &lt;p>其它算法还有NFU、MFU、LFU。&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;strong>缓存温度有哪些？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>缓存温度有哪些&lt;/strong>？&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>冷：命中率无限接近于0，比如缓存是空的。&lt;/p>
@@ -257,7 +257,7 @@
 &lt;/blockquote>
 &lt;p>大白话一点，缓存机制的本质和海王海后的鱼塘逻辑差不多：&lt;/p>
 &lt;ul>
-&lt;li>**MRU、LRU：**MRU——最近经常撩的，加到鱼塘里、LRU——最近不咋联系的，踢出鱼塘。&lt;/li>
+&lt;li>&lt;strong>MRU、LRU&lt;/strong>：MRU——最近经常撩的，加到鱼塘里、LRU——最近不咋联系的，踢出鱼塘。&lt;/li>
 &lt;li>&lt;strong>命中率高、失效率低，性能好&lt;/strong>：鱼塘里都是鱼，鱼还很活跃，随便撩一下都是鱼，你说那啥效率高不高？&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527150414981.png" alt="image-20220527150414981">&lt;/p>
@@ -291,7 +291,7 @@
 &lt;ul>
 &lt;li>&lt;strong>被服务者的到达遵循何种分布&lt;/strong>：如泊松分布。&lt;/li>
 &lt;li>&lt;strong>服务机构的服务能力遵循何种统计特征&lt;/strong>：如每个收银员的处理速度。&lt;/li>
-&lt;li>**排队的原则是什么：**如先到先处理or随机处理。&lt;/li>
+&lt;li>&lt;strong>排队的原则是什么&lt;/strong>：如先到先处理or随机处理。&lt;/li>
 &lt;li>&lt;strong>排队的Topo结构&lt;/strong>：如超市最多放下10个收银台，那就有10条并行的排队结构。&lt;/li>
 &lt;/ul>
 &lt;p>最终排队论给出评估：&lt;/p>

@@ -1,0 +1,235 @@
+<!doctype html><html lang=zh-cn itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1 - 妙木山</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=yes"><meta name=MobileOptimized content="width"><meta name=HandheldFriendly content="true"><meta name=applicable-device content="pc,mobile"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=mobile-web-app-capable content="yes"><meta name=author content="猴王无敌"><meta name=description content="浅析协程 并发编程的核心目标之一就是&amp;rdquo;快&amp;quot;，并发编程发展史中若干特性与改进无不围绕这个目标。 笔者通过《Learning Concurrency"><meta name=keywords content="Hugo,theme,jane"><meta name=generator content="Hugo 0.74.2"><link rel=canonical href=https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/><link rel=icon href=/favicon.ico><link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous><meta property="og:title" content="【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1"><meta property="og:description" content="浅析协程 并发编程的核心目标之一就是&rdquo;快&#34;，并发编程发展史中若干特性与改进无不围绕这个目标。 笔者通过《Learning Concurrency"><meta property="og:type" content="article"><meta property="og:url" content="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/"><meta property="article:published_time" content="2022-12-01T08:07:31+08:00"><meta property="article:modified_time" content="2022-12-01T08:07:31+08:00"><meta itemprop=name content="【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1"><meta itemprop=description content="浅析协程 并发编程的核心目标之一就是&rdquo;快&#34;，并发编程发展史中若干特性与改进无不围绕这个目标。 笔者通过《Learning Concurrency"><meta itemprop=datePublished content="2022-12-01T08:07:31+08:00"><meta itemprop=dateModified content="2022-12-01T08:07:31+08:00"><meta itemprop=wordCount content="4295"><meta itemprop=keywords content="Java拾遗-JVM,"><meta name=twitter:card content="summary"><meta name=twitter:title content="【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1"><meta name=twitter:description content="浅析协程 并发编程的核心目标之一就是&rdquo;快&#34;，并发编程发展史中若干特性与改进无不围绕这个目标。 笔者通过《Learning Concurrency"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>妙木山</a></div><div class=mobile-navbar-icon><span></span><span></span><span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/>首页</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/categories/>技术专栏</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/tags/>Tags</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/post/>全部文章</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://jherculesqz.github.io/about/>关于</a></li></ul></nav><link rel=stylesheet href=/lib/photoswipe/photoswipe.min.css><link rel=stylesheet href=/lib/photoswipe/default-skin/default-skin.min.css><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header id=header class="header container"><div class=logo-wrapper><a href=/ class=logo>妙木山</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/>首页</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/categories/>技术专栏</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/post/>全部文章</a></li><li class=menu-item><a class=menu-item-link href=https://jherculesqz.github.io/about/>关于</a></li></ul></nav></header><div id=mobile-panel><main id=main class="main bg-llight"><div class=content-wrapper><div id=content class="content container"><article class="post bg-white"><header class=post-header><h1 class=post-title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1</h1><div class=post-meta><time datetime=2022-12-01 class=post-time>2022-12-01</time><div class=post-category><a href=https://jherculesqz.github.io/categories/java%E6%8B%BE%E9%81%97/>Java拾遗</a></div><span class=more-meta>约 4295 字</span>
+<span class=more-meta>预计阅读 9 分钟</span>
+<span id=busuanzi_container_page_pv>| 阅读 <span id=busuanzi_value_page_pv></span></span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class=post-toc-content><nav id=TableOfContents><ul><li><a href=#浅析协程>浅析协程</a><ul><li><a href=#进程processes>进程(Processes)</a></li><li><a href=#线程threads>线程(Threads)</a></li><li><a href=#协程coroutines>协程(Coroutines)</a></li><li><a href=#全局观>全局观</a></li></ul></li><li><a href=#协程的语言实现java版>协程的语言实现(Java版)</a></li><li><a href=#参考>参考</a></li></ul></nav></div></div><div class=post-content><h1 id=浅析协程>浅析协程</h1><p>并发编程的核心目标之一就是&rdquo;<strong>快</strong>"，并发编程发展史中若干特性与改进无不围绕这个目标。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/quick.gif alt=quick.gif></p><p>笔者通过<strong><code>《Learning Concurrency in Kotlin》</code></strong>书中的<strong><code>"Processes, threads, and coroutines"</code></strong>章节，浅析一下<strong><code>"协程"</code></strong>。</p><h2 id=进程processes>进程(Processes)</h2><ul><li>我们先看看书中对<strong><code>进程(Processes)</code></strong>的介绍：</li></ul><blockquote><p>A process is an instance of an application that is being executed. Each time an application is started, a process is started for it.</p></blockquote><p>进程是正在执行的应用程序的实例。每次启动应用程序时，都会为其启动一个进程。</p><blockquote><p>A process has a state, things such as handles to open resources, a process ID, data, network connections, and so on, are part of the state of a process and can be accessed by the threads inside that process.</p></blockquote><p>进程是有状态的，打开资源的句柄、进程 ID、数据、网络连接等都是进程状态的一部分，这些信息都可以被该进程内的线程访问。</p><blockquote><p>An application can be composed of many processes, a common practice for example for internet browsers.</p><p>&mldr;&mldr;But implementing a multi-process application brings challenges that are out of the scope of this book. For this book, we will cover the implementation of applications that run in more than one thread, but still in a single process&mldr;&mldr;.</p></blockquote><ul><li><strong>归纳一下书中内容：</strong><ul><li>1个应用可以包含N个进程。</li><li><a href=https://www.chromium.org/developers/design-documents/multi-process-architecture/>Chrome的多进程架构图</a>展示了：1个Chrome浏览器包含了浏览器进程、渲染进程等N个进程。</li></ul></li></ul><p><img src=images/arch.png alt=img></p><h2 id=线程threads>线程(Threads)</h2><ul><li>我们再看看书中对<strong><code>线程(Threads)</code></strong>的介绍：</li></ul><blockquote><p>A thread of execution encompasses a set of instructions for a processor to execute.</p><p>So a process will contain at least one thread, which is created to execute the point of entry of the application; usually this entry point is the main() function of the application. This thread is called the main thread, and the life cycle of the process will be tied to it; if this thread ends, the process will end as well, regardless of any other threads in the process.</p></blockquote><p>线程包含一组供处理器执行的指令。1个进程至少会包含1个线程，这个线程就是主线程。应用程序在入口点创建该线程，并绑定了该线程与进程的生命周期。</p><p>其中：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>(1)应用程序的入口点通常是main()函数。
+(2)主线程结束，则进程也结束，即使这个进程中还有其它未执行完的线程。
+</code></pre></td></tr></table></div></div><blockquote><p>Each thread can access and modify the resources contained in the process it&rsquo;s attached to, but it also has its own local storage, called thread-local storage.</p></blockquote><p>每个线程都可以访问和修改它所附加的进程中包含的资源，但它也有自己的本地存储，称为线程本地存储(<code>thread-local</code>)。</p><blockquote><p>Only one of the instructions in a thread can be executed at a given time. So if a thread is blocked, the execution of any other instruction in that same thread will not be possible until the blocking ends. Nevertheless, many threads can be created for the same process, and they can communicate with each other. So it is expected that an application will never block a thread that can affect negatively the experience of the user; instead, the blocking operations should be assigned to threads that are dedicated to them.</p><p>In Graphic User Interface (GUI) applications, there is a thread called a UI thread; its function is to update the User Interface and listen to user interactions with the application. Blocking this thread, obstructs the application from updating its UI and from receiving interactions from the user. Because of this, GUI applications are expected to never block the UI thread*,* in order to keep the application responsive at all times.</p><p>Android 3.0 and above, for example, will crash an application if a networking operation is made in the UI thread, in order to discourage developers from doing it, given that networking operations are thread-blocking.</p></blockquote><p>在给定的时间内，只能执行1个线程中的1条指令。如果一个线程被阻塞，则在阻塞结束前，该线程内任何其它的指令都不可能被执行。</p><p>尽管如此，我们可以在1个进程内创建N个线程，线程间可以互相通信。</p><p>因此，为了不影响用户体验，我们应该将阻塞操作分配给专门的线程，而不是阻塞主线程。</p><p>例如：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>在GUI应用程序中，存在1个UI线程，这个线程的功能是更新用户界面并监听用户与应用程序的交互，阻塞了UI线程就会阻止用户界面的更新和交互。
+因此，我们永远不会阻塞UI线程。
+</code></pre></td></tr></table></div></div><p>再例如：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>在Android 3.0+的版本中，如果在UI 线程中进行网络操作，Android会触发应用程序崩溃，因为Android认为网络操作是一种阻塞操作。
+</code></pre></td></tr></table></div></div><blockquote><p>Throughout the book, we will refer to the main thread of a GUI application both as a UI thread and as a main thread (because in Android, by default, the main thread is also the UI thread), while for command-line applications we will refer to it only as a main thread. Any thread different from those two will be called a background thread, unless a distinction between background threads is required, in which case each background thread will receive a unique identifier for clarity.</p></blockquote><p>在本书中，</p><p>我们将GUI应用程序的主线程称为<code>UI线程</code>，也称为<code>主线程</code>——比如：在 Android 中，默认情况下，主线程就是UI线程。</p><p>我们将命令行应用程序的主线程，仅称为<code>主线程</code>。</p><p>任何不同于前述两个线程的其它线程都称为<code>后台线程</code>。</p><p>Given the way that the Kotlin has implemented concurrency, you will find that it&rsquo;s not necessary for you to manually start or stop a thread. The interactions that you will have with threads will commonly be limited to tell Kotlin to create or use a specific thread or pool of threads to run a coroutine – usually with one or two lines of code. The rest of the handling of threads will be done by the framework.</p><p>鉴于Kotlin实现并发的方式，我们没有必要手动启动或停止线程。</p><p>我们与线程的交互通常仅限于告诉Kotlin创建/使用特定线程，或者告诉Kotlin使用线程池中的某个空闲的协程，线程的其余处理将由底层框架完成。</p><ul><li><strong>归纳一下书中内容：</strong><ul><li>1个进程包含N个线程，这些线程包含主线程、后台线程等。</li><li><a href=https://www.chromium.org/developers/design-documents/multi-process-architecture/>Chrome的多进程架构图</a>展示了：浏览器进程中包含了主线程、IO线程，渲染进程包含了主线程、渲染线程。</li></ul></li></ul><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/arch.png alt=img></p><h2 id=协程coroutines>协程(Coroutines)</h2><ul><li>我们还是看看书中对<strong><code>协程(Coroutines)</code></strong>的介绍：</li></ul><blockquote><p>Kotlin&rsquo;s documentation often refers to coroutines as lightweight threads. This is mostly because, like threads, coroutines define the execution of a set of instructions for a processor to execute. Also, coroutines have a similar life cycle to that of threads.</p></blockquote><p>在Kotlin中，通常将协程称为轻量级线程。这主要是因为，与线程一样，协程定义了处理器执行的一组指令的执行。此外，协程具有与线程相似的生命周期。</p><blockquote><p>A coroutine is executed inside a thread. One thread can have many coroutines inside it, but as already mentioned, only one instruction can be executed in a thread at a given time. This means that if you have ten coroutines in the same thread, only one of them will be running at a given point in time.</p></blockquote><p>协程在线程内执行。1个线程内部可以有N个协程。</p><p>但正如前文提到的：在给定时间内，1个线程中只能执行1条指令，因此1个线程中有10个协程，那么在给定的时间点只会运行其中1个协程。</p><blockquote><p>The biggest difference between threads and coroutines, though, is that coroutines are fast and cheap to create. Spawning thousands of coroutines can be easily done, it is faster and requires fewer resources than spawning thousands of threads.</p></blockquote><p>不过，线程和协程之间的最大区别在于：创建协程速度快、成本低，它比产生数千个线程更快、需要更少的资源。</p><blockquote><p>Take this code as an example. Don&rsquo;t worry about the parts of the code you don&rsquo;t understand yet:</p><p>This function creates as many coroutines as specified in the parameter amount, delays each one for a second, and waits for all of them to end before returning. This function can be called, for example, with 10,000 as the amount of coroutines:</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>suspend</span> <span class=k>fun</span> <span class=nf>createCoroutines</span><span class=p>(</span><span class=n>amount</span><span class=p>:</span> <span class=n>Int</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>val</span> <span class=py>jobs</span> <span class=p>=</span> <span class=n>ArrayList</span><span class=p>&lt;</span><span class=n>Job</span><span class=p>&gt;()</span>
+    <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=k>in</span> <span class=m>1.</span><span class=p>.</span><span class=n>amount</span><span class=p>)</span> <span class=p>{</span>
+        <span class=n>jobs</span> <span class=p>+=</span> <span class=n>launch</span> <span class=p>{</span>
+            <span class=n>delay</span><span class=p>(</span><span class=m>1000</span><span class=p>)</span>           
+        <span class=p>}</span>
+    <span class=p>}</span>
+    <span class=n>jobs</span><span class=p>.</span><span class=n>forEach</span> <span class=p>{</span>
+        <span class=n>it</span><span class=p>.</span><span class=n>join</span><span class=p>()</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=k>fun</span> <span class=nf>main</span><span class=p>(</span><span class=n>args</span><span class=p>:</span> <span class=n>Array</span><span class=p>&lt;</span><span class=n>String</span><span class=p>&gt;)</span> <span class=p>=</span> <span class=n>runBlocking</span> <span class=p>{</span>
+    <span class=k>val</span> <span class=py>time</span> <span class=p>=</span> <span class=n>measureTimeMillis</span> <span class=p>{</span>
+        <span class=n>createCoroutines</span><span class=p>(</span><span class=m>10</span><span class=n>_000</span><span class=p>)</span>
+    <span class=p>}</span>
+
+    <span class=n>println</span><span class=p>(</span><span class=s>&#34;Took $time ms&#34;</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table></div></div><p>以上述代码为例：<code>createCoroutines()</code>支持创建指定数量的协程，执行每个协程就是休眠1秒，此函数等待所有协程结束后就会返回。</p><blockquote><p>In a test environment, running it with an amount of 10,000 took around 1,160 ms, while running it with 100,000 took 1,649 ms. The increase in execution time is so small because Kotlin will use a pool of threads with a fixed size, and distribute the coroutines among those threads – so adding thousands of coroutines will have little impact. And while a coroutine is suspended – in this case because of the call to delay() – the thread it was running in will be used to execute another coroutine, one that is ready to be started or resumed.</p></blockquote><p>在测试环境中，创建1万个协程需要1160毫秒，创建10万个协程需要1649毫秒。协程增加了9万个，执行时间却没有增加太多，是因为：</p><p>Kotlin使用了固定大小的线程池，并将协程分布在线程池中的这些线程上，所以增加协程数量，并不会增加更多的资源消耗和时间消耗。</p><p>所谓的将"协程分布在线程池中的这些线程上&rdquo;，就是将1个协程放到1个线程中去执行，当这个协程被挂起时(因为调用了<code>delay()</code>函数)，它所属的这个线程就用来执行其它准备好的协程。</p><blockquote><p>How many threads are active can be determined by calling the activeCount() method of the Thread class.</p></blockquote><p><code>activeCount()</code>函数可以确定当前有多少个线程处于活动状态。</p><blockquote><p>For example, let&rsquo;s update the main() function to do so:</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>fun</span> <span class=nf>main</span><span class=p>(</span><span class=n>args</span><span class=p>:</span> <span class=n>Array</span><span class=p>&lt;</span><span class=n>String</span><span class=p>&gt;)</span> <span class=p>=</span> <span class=n>runBlocking</span> <span class=p>{</span>
+    <span class=n>println</span><span class=p>(</span><span class=s>&#34;${Thread.activeCount()} threads active at the start&#34;</span><span class=p>)</span>
+    <span class=k>val</span> <span class=py>time</span> <span class=p>=</span> <span class=n>measureTimeMillis</span> <span class=p>{</span>
+        <span class=n>createCoroutines</span><span class=p>(</span><span class=m>10</span><span class=n>_000</span><span class=p>)</span>
+    <span class=p>}</span>
+    <span class=n>println</span><span class=p>(</span><span class=s>&#34;${Thread.activeCount()} threads active at the end&#34;</span><span class=p>)</span>
+    <span class=n>println</span><span class=p>(</span><span class=s>&#34;Took $time ms&#34;</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table></div></div><p>比如：我们修改<code>main()</code>函数的实现，分别打印了<code>main()</code>函数创建协程前的线程个数、创建协程后的线程个数。</p><blockquote><p>In the same test environment as before, it was found that in order to create 10,000 coroutines, only four threads needed to be created:</p></blockquote><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/72fd74aa-f292-4680-b520-7e12a750a438.png alt=img></p><blockquote><p>But once the value of the amount being sent to createCoroutines() is lowered to one, for example, only two threads are created:</p></blockquote><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/c6df4fce-5556-4fa3-9fb8-7653c2f7972d.png alt=img></p><p>在测试环境上，创建1万个协程需要4个线程(6个线程-2个线程)，创建1个协程仅需要创建2个线程(4个线程-2个线程)。</p><blockquote><p>It&rsquo;s important to understand that even though a coroutine is executed inside a thread, it&rsquo;s not bound to it. As a matter of fact, it&rsquo;s possible to execute part of a coroutine in a thread, suspend the execution, and later continue in a different thread. In our previous example this is happening already, because Kotlin will move coroutines to threads that are available to execute them. For example, by passing 3 as the amount to createCoroutines(), and updating the content of the launch() block so that it prints the current thread, we can see this in action:</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>suspend</span> <span class=k>fun</span> <span class=nf>createCoroutines</span><span class=p>(</span><span class=n>amount</span><span class=p>:</span> <span class=n>Int</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>val</span> <span class=py>jobs</span> <span class=p>=</span> <span class=n>ArrayList</span><span class=p>&lt;</span><span class=n>Job</span><span class=p>&gt;()</span>
+    <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=k>in</span> <span class=m>1.</span><span class=p>.</span><span class=n>amount</span><span class=p>)</span> <span class=p>{</span>
+        <span class=n>jobs</span> <span class=p>+=</span> <span class=n>launch</span> <span class=p>{</span>
+            <span class=n>println</span><span class=p>(</span><span class=s>&#34;Started $i in ${Thread.currentThread().name}&#34;</span><span class=p>)</span>
+            <span class=n>delay</span><span class=p>(</span><span class=m>1000</span><span class=p>)</span>
+            <span class=n>println</span><span class=p>(</span><span class=s>&#34;Finished $i in ${Thread.currentThread().name}&#34;</span><span class=p>)</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+    <span class=n>jobs</span><span class=p>.</span><span class=n>forEach</span> <span class=p>{</span>
+         <span class=n>it</span><span class=p>.</span><span class=n>join</span><span class=p>()</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></td></tr></table></div></div><p>另一个很重要的点是：即使协程在线程内执行，它也不会受线程约束。</p><p>事实上，可以在1个线程中执行1个协程的一部分，当这个协程被挂起再恢复执行时，可以在另1个线程中继续执行这个协程的剩余部分。</p><blockquote><p>You will find that in many cases they are being resumed in a different thread:</p></blockquote><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/3d118878-25a4-4bec-8fb7-fd13335ed4cf.png alt=img></p><p>我们可以看到示例代码创建了3个协程，协程1在线程1中执行，延迟1000毫秒后，协程1在线程2中继续执行完毕。</p><ul><li><strong>归纳一下书中内容：</strong><ul><li>1个线程包含N个协程。</li><li>同1个协程可以在线程1中执行一部分，在线程2中执行剩余部分。</li></ul></li></ul><h2 id=全局观>全局观</h2><ul><li>最后我们看看书中对<strong><code>进程、线程、协程</code></strong>的总结：</li></ul><blockquote><p>So far, we have learned that an application is composed of one or more processes and that each process has one or more threads. We have also learned that blocking a thread means halting the execution of the code in that thread, and for that reason, a thread that interacts with a user is expected to never be blocked. We also know that a coroutine is basically a lightweight thread that resides in a thread but is not tied to one. The following diagram encapsulates the content of this section so far. Notice how each coroutine is started in one thread but at some point is resumed in a different one:</p></blockquote><p>至此，</p><p>我们可以知道：1个应用程序是由N个进程组成，1个进程包含N线程。</p><p>我们还知道：阻塞线程意味着停止该线程中代码的执行，因此永远不应该阻塞与用户交互的线程。</p><p>我们还知道：协程是1个轻量级线程，它驻留在1个线程中但又不绑定到具体的这个线程中。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>1个协程可以在1个线程中启动，但在某个时刻又可以在另一个线程中恢复执行。
+</code></pre></td></tr></table></div></div><p>下图概括了本节到目前为止的内容。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/4435aef0-eb0f-4a75-a6aa-ff8bf9462740.png alt=img></p><h1 id=协程的语言实现java版>协程的语言实现(Java版)</h1><p>协程在Java中的实现非常落后，直到Java8也没有在正式版本中支持协程。</p><p>OpenJDK团队后来引入了<code>quasar</code>库的大神，启动了<code>Loom</code>项目，<code>Loom</code>项目的最新进展后续另开文章介绍，本文就基于<code>quasar</code>体验一下Java版的协程性能。</p><p>在此，我们模仿前文翻译的<code>《Learning Concurrency in Kotlin》</code>中的示例代码：</p><ul><li>创建10万个线程，每个线程执行20万次加法，等待10万个线程都执行完，打印总耗时。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>public</span> <span class=kd>class</span> <span class=nc>Main1</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kd>final</span> <span class=kt>int</span> <span class=n>MAX_COUNT</span> <span class=o>=</span> <span class=n>100000</span><span class=o>;</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
+        <span class=kt>long</span> <span class=n>iStartTime</span> <span class=o>=</span> <span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>();</span>
+
+        <span class=n>Thread</span><span class=o>[]</span> <span class=n>arrThread</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Thread</span><span class=o>[</span><span class=n>MAX_COUNT</span><span class=o>];</span>
+        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>arrThread</span><span class=o>.</span><span class=na>length</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
+            <span class=n>arrThread</span><span class=o>[</span><span class=n>i</span><span class=o>]</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Thread</span><span class=o>(</span><span class=n>Main1</span><span class=o>::</span><span class=n>calc</span><span class=o>);</span>
+        <span class=o>}</span>
+
+        <span class=k>for</span> <span class=o>(</span><span class=n>Thread</span> <span class=n>thread</span> <span class=o>:</span> <span class=n>arrThread</span><span class=o>)</span> <span class=o>{</span>
+            <span class=n>thread</span><span class=o>.</span><span class=na>start</span><span class=o>();</span>
+        <span class=o>}</span>
+
+        <span class=k>for</span> <span class=o>(</span><span class=n>Thread</span> <span class=n>thread</span> <span class=o>:</span> <span class=n>arrThread</span><span class=o>)</span> <span class=o>{</span>
+            <span class=k>try</span> <span class=o>{</span>
+                <span class=n>thread</span><span class=o>.</span><span class=na>join</span><span class=o>();</span>
+            <span class=o>}</span> <span class=k>catch</span> <span class=o>(</span><span class=n>InterruptedException</span> <span class=n>e</span><span class=o>)</span> <span class=o>{</span>
+                <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
+            <span class=o>}</span>
+        <span class=o>}</span>
+
+        <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;Total: &#34;</span> <span class=o>+</span> <span class=o>(</span><span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>()</span> <span class=o>-</span> <span class=n>iStartTime</span><span class=o>));</span>
+    <span class=o>}</span>
+
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>calc</span><span class=o>()</span> <span class=o>{</span>
+        <span class=kt>int</span> <span class=n>iRes</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span>
+        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>10000</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
+            <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>20</span><span class=o>;</span> <span class=n>j</span><span class=o>++)</span> <span class=o>{</span>
+                <span class=n>iRes</span> <span class=o>+=</span> <span class=n>1</span><span class=o>;</span>
+            <span class=o>}</span>
+        <span class=o>}</span>
+        <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>iRes</span><span class=o>);</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>执行结果：消耗了8945毫秒。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221201183245050.png alt=image-20221201183245050></p><ul><li>我们再创建10万个协程，每个协程也是执行20万次加法，等待10万个协程都执行完，打印总耗时。<ul><li>这里我们用到了<code>quasar</code>来创建协程。</li></ul></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>public</span> <span class=kd>class</span> <span class=nc>Main2</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
+        <span class=kt>long</span> <span class=n>iStartTime</span> <span class=o>=</span> <span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>();</span>
+
+        <span class=n>Fiber</span><span class=o>&lt;</span><span class=n>Void</span><span class=o>&gt;[]</span> <span class=n>arrFiber</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Fiber</span><span class=o>[</span><span class=n>Main1</span><span class=o>.</span><span class=na>MAX_COUNT</span><span class=o>];</span>
+        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>arrFiber</span><span class=o>.</span><span class=na>length</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
+            <span class=n>arrFiber</span><span class=o>[</span><span class=n>i</span><span class=o>]</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Fiber</span><span class=o>&lt;&gt;(</span><span class=n>Main1</span><span class=o>::</span><span class=n>calc</span><span class=o>);</span>
+        <span class=o>}</span>
+
+        <span class=k>for</span> <span class=o>(</span><span class=n>Fiber</span><span class=o>&lt;</span><span class=n>Void</span><span class=o>&gt;</span> <span class=n>fiber</span> <span class=o>:</span> <span class=n>arrFiber</span><span class=o>)</span> <span class=o>{</span>
+            <span class=n>fiber</span><span class=o>.</span><span class=na>start</span><span class=o>();</span>
+        <span class=o>}</span>
+
+        <span class=k>for</span> <span class=o>(</span><span class=n>Fiber</span><span class=o>&lt;</span><span class=n>Void</span><span class=o>&gt;</span> <span class=n>thread</span> <span class=o>:</span> <span class=n>arrFiber</span><span class=o>)</span> <span class=o>{</span>
+            <span class=k>try</span> <span class=o>{</span>
+                <span class=n>thread</span><span class=o>.</span><span class=na>join</span><span class=o>();</span>
+            <span class=o>}</span> <span class=k>catch</span> <span class=o>(</span><span class=n>Exception</span> <span class=n>e</span><span class=o>)</span> <span class=o>{</span>
+                <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
+            <span class=o>}</span>
+        <span class=o>}</span>
+
+        <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;Total: &#34;</span> <span class=o>+</span> <span class=o>(</span><span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>()</span> <span class=o>-</span> <span class=n>iStartTime</span><span class=o>));</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>执行结果：消耗了1812毫秒。</p><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221201183730909.png alt=image-20221201183730909></p><ul><li><strong>测试结论</strong>：反复执行上述测试代码，Java协程的性能远高于比Java线程的性能。</li></ul><h1 id=参考>参考</h1><blockquote><p>《Learning Concurrency in Kotlin》：https://www.amazon.com/Learning-Concurrency-Kotlin-efficient-applications/dp/1788627164</p><p>Wiki：https://en.wikipedia.org/wiki/Coroutine</p></blockquote><p><img src=/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221121164732405.png alt=image-20221121164732405></p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>猴王无敌</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2022-12-01</span></p><p class=copyright-item><span class=item-title>许可协议</span>
+<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-nd/4.0/ target=_blank>CC BY-NC-ND 4.0</a></span></p></div><div class=post-reward><input type=checkbox name=reward id=reward hidden>
+<label class=reward-button for=reward>赞赏支持</label><div class=qr-code><label class=qr-code-image for=reward><img class=image src=/weixin.png>
+<span>微信打赏</span></label>
+<label class=qr-code-image for=reward><img class=image src=/alipay.png>
+<span>支付宝打赏</span></label></div></div><footer class=post-footer><div class=post-tags><a href=https://jherculesqz.github.io/tags/java%E6%8B%BE%E9%81%97-jvm/>Java拾遗-JVM</a></div><nav class=post-nav><a class=next href=/post/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/><span class="next-text nav-default">【宏观】-0-性能之巅笔记-上</span>
+<span class="prev-text nav-mobile">下一篇</span>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"/></svg></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=icon-links><a href=mailto:JHercules_qz@qq.com rel="me noopener" class=iconfont title=email><svg class="icon" viewBox="0 0 1451 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><path d="M664.781909 681.472759.0 97.881301C0 3.997201 71.046997.0 71.046997.0H474.477909 961.649408 1361.641813S1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759S764.482731 685.154773 753.594283 688.65053V688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858V688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759zM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633.0 212.052267.0 212.052267V942.809523L83.726336 1024H682.532949 753.579947 1348.948139L1432.688811 942.809523V212.052267S893.138176 701.759633 817.019477 767.734955C777.248 802.205449 742.347691 811.03081 718.063616 811.603883z"/></svg></a><a href=https://github.com/JHerculesqz rel="me noopener" class=iconfont title=github target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><path d="M512 12.672c-282.88.0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667.0-12.16-.426667-44.373333-.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333.0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333.0.0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667.0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72.0 68.522667-.64 123.562667-.64 140.202666.0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"/></svg></a><a href=https://jherculesqz.github.io/index.xml rel="noopener alternate" type=application/rss+xml class=iconfont title=rss target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><path d="M819.157333 1024C819.157333 574.592 449.408 204.8.0 204.8V0c561.706667.0 1024 462.293333 1024 1024H819.157333zM140.416 743.04a140.8 140.8.0 01140.501333 140.586667A140.928 140.928.0 01140.074667 1024C62.72 1024 0 961.109333.0 883.626667S62.933333 743.082667 140.416 743.04zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352.0 678.784 306.517333 678.784 678.826667z"/></svg></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme - <a class=theme-link href=https://github.com/xianmin/hugo-theme-jane>Jane</a></span>
+<span class=copyright-year>&copy;
+2021 -
+2022
+<span class=heart><i class=iconfont><svg class="icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14"><path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7.0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1.0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2.0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3.1-42.5-8-83.6-24-122.2z" fill="#8a8a8a"/></svg></i></span><span class=author>猴王无敌</span></span>
+<span id=busuanzi_container>访客数/访问量：<span id=busuanzi_value_site_uv></span>/<span id=busuanzi_value_site_pv></span></span></div></footer><div class=back-to-top id=back-to-top><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><path d="M510.866688 227.694839 95.449397 629.218702h235.761562L329.15309 958.01517h362.40389L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777h894.052392v131.813095H63.840492V63.962777zm0 0"/></svg></i></div></div><script type=text/javascript src=/lib/jquery/jquery-3.2.1.min.js></script><script type=text/javascript src=/lib/slideout/slideout-1.0.1.min.js></script><script type=text/javascript src=/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin=anonymous></script><script type=text/javascript src=/js/load-photoswipe.js></script><script type=text/javascript src=/lib/photoswipe/photoswipe.min.js></script><script type=text/javascript src=/lib/photoswipe/photoswipe-ui-default.min.js></script><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script></body></html>

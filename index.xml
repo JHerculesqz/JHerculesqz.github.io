@@ -46,7 +46,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/arch.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/arch.png" alt="img">&lt;/p>
 &lt;h2 id="线程threads">线程(Threads)&lt;/h2>
 &lt;ul>
 &lt;li>我们再看看书中对&lt;strong>&lt;code>线程(Threads)&lt;/code>&lt;/strong>的介绍：&lt;/li>

@@ -19,7 +19,7 @@
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】1.Introducing Spring Framework 6</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</link><pubDate>Sat, 28 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</guid><description>&lt;p>SpringOne 2022第1个议题《Introducing Spring Framework 6》，主要介绍了Spring Framework6的关键特性以及里程碑，演讲者：Juergen Hoeller。&lt;/p>
-&lt;p>![image-20230128153953141](/Spring拾遗/【SpringOne 2022】1.Introducing Spring Framework 6/image-20230128153953141.png)&lt;/p>
+&lt;p>![image-20230128153953141](/Spring拾遗/【SpringOne 2022】1.IntroducingSpringFramework6/image-20230128153953141.png)&lt;/p>
 &lt;h1 id="1版本里程碑">1.版本里程碑&lt;/h1>
 &lt;h2 id="2个ga版本">2个GA版本&lt;/h2>
 &lt;ul>
@@ -36,13 +36,13 @@
 &lt;li>&lt;code>Spring Framework 6.1 GA&lt;/code>配套&lt;code>Java 17/18/19/20/21&lt;/code>&lt;/li>
 &lt;li>匹配&lt;code>Spring Boot 3.2&amp;amp;3.3&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>![image-20230128165742669](/Spring拾遗/【SpringOne 2022】1.Introducing Spring Framework 6/image-20230128165742669.png)&lt;/p>
+&lt;p>![image-20230128165742669](/Spring拾遗/【SpringOne 2022】1.IntroducingSpringFramework6/image-20230128165742669.png)&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>详细日程表&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>![image-20230128170617815](/Spring拾遗/【SpringOne 2022】1.Introducing Spring Framework 6/image-20230128170617815.png)&lt;/p>
+&lt;p>![image-20230128170617815](/Spring拾遗/【SpringOne 2022】1.IntroducingSpringFramework6/image-20230128170617815.png)&lt;/p>
 &lt;h2 id="6x-vs-53x">&lt;code>6.x&lt;/code> vs &lt;code>5.3.x&lt;/code>&lt;/h2>
 &lt;table>
 &lt;thead>

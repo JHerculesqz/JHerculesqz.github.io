@@ -154,6 +154,100 @@
 &lt;li>&lt;code>Spring Framework&lt;/code>作为一个底层框架，它的输入往往来自于Java语言规范、Java EE标准。&lt;/li>
 &lt;li>Spring团队规划的新特性非常紧贴Java新版本/新特性，即便这个新特性仅仅是&lt;code>Preview Feature&lt;/code>。&lt;/li>
 &lt;li>深刻理解Java新版本/新特性，有助于理解&lt;code>Spring Framework&lt;/code>的新特性以及它的市场规划。&lt;/li>
+&lt;/ul></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Sat, 28 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
+&lt;h1 id="1测试前提">1.测试前提&lt;/h1>
+&lt;h2 id="硬件">硬件&lt;/h2>
+&lt;p>演讲者强调了测试的两款典型的CPU：&lt;code>Apple M1&lt;/code>和&lt;code>Raspberry Pi(Broadcom BCM2711)&lt;/code>。&lt;/p>
+&lt;p>本文不展开两款CPU对比的性能差异，如果您对这两种CPU的性能参数感兴趣，可以在此看到详细的参数对比：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://www.cpu-monkey.com/en/compare_cpu-raspberry_pi_4_b_broadcom_bcm2711-vs-apple_m1_max_24_gpu">https://www.cpu-monkey.com/en/compare_cpu-raspberry_pi_4_b_broadcom_bcm2711-vs-apple_m1_max_24_gpu&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160044858.png" alt="image-20230130160044858">&lt;/p>
+&lt;h2 id="被测对象">被测对象&lt;/h2>
+&lt;p>执行如下脚本，可获得被测对象：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">curl https://start.spring.io/starter.tgz &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d dependencies-web, actuator &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">javaVersion&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">17&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">bootVersion&lt;/span>&lt;span class="o">=&lt;/span>3.0.0-RC2 &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">type&lt;/span>&lt;span class="o">=&lt;/span>maven-project &lt;span class="p">|&lt;/span> tar -xzf -
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="代码归档">代码归档&lt;/h2>
+&lt;p>测试代码归档在此：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/dashaun/spring-boot-3-with-aot-processing">https://github.com/dashaun/spring-boot-3-with-aot-processing&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160316666.png" alt="image-20230130160316666">&lt;/p>
+&lt;h2 id="java版本">Java版本&lt;/h2>
+&lt;p>采用GraalVM：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160356760.png" alt="image-20230130160356760">&lt;/p>
+&lt;h1 id="2测试mvnw-vs-mvnd">2.测试：mvnw vs mvnd&lt;/h1>
+&lt;p>演讲者对比测试了&lt;code>mvnw clean package&lt;/code>和&lt;code>mvnd clean package&lt;/code>，对比了&lt;code>mvnw&lt;/code>和&lt;code>mvnd&lt;/code>的性能差异。&lt;/p>
+&lt;h2 id="mvnw-clean-package">mvnw clean package&lt;/h2>
+&lt;blockquote>
+&lt;p>测试结果：8.3s&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161233119.png" alt="image-20230130161233119">&lt;/p>
+&lt;h2 id="mvnd-clean-package">mvnd clean package&lt;/h2>
+&lt;blockquote>
+&lt;p>测试结果：5.6s&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161255058.png" alt="image-20230130161255058">&lt;/p>
+&lt;h2 id="结论mvnd构建性能优于mvnw">结论：&lt;code>mvnd&lt;/code>构建性能优于&lt;code>mvnw&lt;/code>&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161311506.png" alt="image-20230130161311506">&lt;/p>
+&lt;h2 id="对mvnd的延伸阅读">对mvnd的延伸阅读&lt;/h2>
+&lt;p>&lt;code>mvnd&lt;/code>也是一种maven wrapper，相比&lt;code>mvnw&lt;/code>性能更好。详细资料如下：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/apache/maven-mvnd">https://github.com/apache/maven-mvnd&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160948600.png" alt="image-20230130160948600">&lt;/p>
+&lt;h1 id="3测试graalvm-aot">3.测试：GraalVM AOT&lt;/h1>
+&lt;p>演讲者展示了采用&lt;code>AOT&lt;/code>技术构建Spring Boot 3.0应用，体现了性能的差异。&lt;/p>
+&lt;h2 id="mvnw--pnative-nativecompile">mvnw -Pnative native:compile&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>构建时间延长至分钟级&lt;/strong>：使用&lt;code>mvnw -Pnative native:compile&lt;/code>构建，构建时间长达6分钟。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161937854.png" alt="image-20230130161937854">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>启动时间缩短50%&lt;/strong>：未采用&lt;code>AOT&lt;/code>方式的SpringBoot进程启动时间通常在1.5s左右，采用&lt;code>AOT&lt;/code>方式缩短至0.7s。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130162028761.png" alt="image-20230130162028761">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>资源消耗下降66%&lt;/strong>：未采用&lt;code>AOT&lt;/code>方式的SpringBoot进程通常占用120m物理内存，采用&lt;code>AOT&lt;/code>方式占用38m物理内存。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130162322180.png" alt="image-20230130162322180">&lt;/p>
+&lt;h2 id="结论aot可极大缩短热启动时间和资源消耗">结论：AOT可极大缩短热启动时间和资源消耗&lt;/h2>
+&lt;p>AOT方式虽然延长了构建时间，但运行时的资源消耗会极大降低。&lt;/p>
+&lt;h1 id="4开发建议">4.开发建议&lt;/h1>
+&lt;p>演讲者给出了4点建议：&lt;/p>
+&lt;ul>
+&lt;li>The paved path to production starts at your laptop.&lt;/li>
+&lt;li>Deploy all the things on your laptop.&lt;/li>
+&lt;li>Scale to zero：Startup quickly, Chaos Happens.&lt;/li>
+&lt;li>Be a better consumer of infrastructure.&lt;/li>
+&lt;/ul>
+&lt;p>这4点建议的本质是：Spring Boot 3.0更强调单体服务的&lt;strong>小型化&lt;/strong>，进而支撑将所有的微服务部署在1台笔记本上。&lt;/p>
+&lt;p>在1台笔记本上就能把整个产品中的各种微服务都跑起来，才能提升开发效率(&lt;strong>尽快Startup，尽快暴露问题&lt;/strong>)。&lt;/p>
+&lt;p>&lt;strong>小型化&lt;/strong>一定是有微服务实战经验后才能体会的&lt;strong>重要经验&lt;/strong>。&lt;/p>
+&lt;blockquote>
+&lt;p>在微服务架构兴起之初，&lt;/p>
+&lt;p>笔者曾经所在的产品团队仅仅学会了微服务架构的形(把1个单进程盲目地拆解成了N个微服务进程)，但没有学会微服务的神(面向接口)，&lt;/p>
+&lt;p>导致开发阶段对服务器等环境资源极度依赖，最终导致开发效率极低。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;ul>
+&lt;li>在本议题，演讲者DaShaun提供了&lt;code>AOT&lt;/code>、&lt;code>mvnd&lt;/code>等手段降低单体服务的资源消耗。&lt;/li>
+&lt;li>Spring Boot 3.0的核心思想也是在强调&lt;strong>小型化&lt;/strong>(小到可以部署到1台笔记本上)有助于&lt;strong>提升开发效率&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>小型化&lt;/strong>与&lt;strong>微服务架构&lt;/strong>不仅不矛盾，而且是微服务架构&lt;strong>重要的实践经验&lt;/strong>。&lt;/li>
 &lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/</link><pubDate>Thu, 01 Dec 2022 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/</guid><description>&lt;h1 id="浅析协程">浅析协程&lt;/h1>
 &lt;p>并发编程的核心目标之一就是&amp;rdquo;&lt;strong>快&lt;/strong>&amp;quot;，并发编程发展史中若干特性与改进无不围绕这个目标。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/quick.gif" alt="quick.gif">&lt;/p>
@@ -5466,128 +5560,4 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;/blockquote>
 &lt;p>进一步理解Class字节码如何为JVM&lt;strong>构建动态全局观&lt;/strong>。&lt;/p>
 &lt;p>**高能预警：**如果您能耐心地看到这句话，恭喜您，距离&amp;rdquo;&lt;strong>看着16进制享受而诡魅的微笑&lt;/strong>&amp;ldquo;又近了一步，加油！&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/44.png" alt="image-20201203144947702">&lt;/p></description></item><item><title>【编译引擎】 1 学习阅读Class文件结构的意义</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</link><pubDate>Thu, 05 Aug 2021 14:54:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/</guid><description>&lt;h1 id="1起于累土为什么要阅读字节码">1.起于累土：为什么要阅读字节码&lt;/h1>
-&lt;p>笔者最近的一项工作是设计一套课程，用于辅导新员工如何做好性能优化。&lt;/p>
-&lt;p>这项工作很快遇到了问题：&lt;/p>
-&lt;blockquote>
-&lt;p>讲内存泄露/溢出的定位工具，就要求听众先对JVM的运行时数据区有基本理解。&lt;/p>
-&lt;p>讲运行时数据区，又要求听众先大致理解类加载子系统如何一步步地将字节码加载到内存中。&lt;/p>
-&lt;p>讲类加载子系统，又要求听众先理解字节码表示了哪些&amp;quot;静态信息&amp;rdquo;。&lt;/p>
-&lt;p>&amp;hellip;.&lt;/p>
-&lt;/blockquote>
-&lt;p>性能优化是一个复杂的系统化话题，性能优化的手段分为3个级别：&lt;/p>
-&lt;p>&lt;strong>倔强青铜级：时空转移&lt;/strong>&lt;/p>
-&lt;p>当计算效率不足时，用空间换时间。例如：将需要频繁使用的数据，提前缓存在内存中。&lt;/p>
-&lt;p>当内存空间不足时，用时间换空间。例如：将不需要的缓存数据去掉，动态计算。&lt;/p>
-&lt;p>在这个层次上解决问题，&lt;strong>优点是朴实&lt;/strong>，&lt;strong>缺点是此消彼长、绵绵无期&lt;/strong>：&lt;/p>
-&lt;p>因为&lt;strong>时间换空间&lt;/strong>与&lt;strong>空间换时间&lt;/strong>本质是互逆的手段。&lt;/p>
-&lt;p>一个软件产品可能在迭代1暴露出了计算效率不足，采用了空间换时间。&lt;/p>
-&lt;p>到了迭代2又因为迭代1的性能优化导致空间不足，又要将大量的缓存替换为实时计算。&lt;/p>
-&lt;p>……&lt;/p>
-&lt;p>笔者的一位程序猿朋友，在多次时间换空间、空间换时间的性能优化工作之后，发出了一句颇有哲理的感慨：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>时间是不可能被消灭的，只能被转移&lt;/strong>&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-1.png" alt="image-20201128154031535">&lt;/p>
-&lt;p>&lt;strong>永恒钻石级：业务裁剪&lt;/strong>&lt;/p>
-&lt;p>能用这个级别手法的，一般是老程序猿。&lt;/p>
-&lt;p>凭借多年的业务领域经验，深刻理解了业务流程中哪些步骤是冗余的。&lt;/p>
-&lt;p>无论是时间瓶颈或者空间瓶颈，删掉冗余代码，一招搞定。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-2.png" alt="image-20201128155657776">&lt;/p>
-&lt;p>在这个层次上解决问题，&lt;strong>优点还是朴实，缺点是比较依赖业务专家，无法批量复制与推广&lt;/strong>。&lt;/p>
-&lt;p>&lt;strong>最强王者级：底层优化&lt;/strong>&lt;/p>
-&lt;p>使用这种手法，就要求程序猿对于JVM、操作系统、网络有比较深刻的认识，大部分程序猿都止步此。&lt;/p>
-&lt;p>通过对静态逻辑(字节码)的理解和动态逻辑(运行时)的理解，精确找到空间瓶颈和时间瓶颈，进而采用更加具有通用性的手段开展优化工作。&lt;/p>
-&lt;p>如果说&lt;strong>性能优化是九层之塔&lt;/strong>，那么&lt;strong>阅读字节码&lt;/strong>就是累土中的重要基石之一。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/1-2-3.png" alt="image-20201128160013429">&lt;/p>
-&lt;h1 id="2编程界的通天塔字节码的宏观意义">2.编程界的通天塔：字节码的宏观意义&lt;/h1>
-&lt;p>知乎上有一个趣帖&lt;code>全世界为什么不能统一语言？&lt;/code>(&lt;a href="https://www.zhihu.com/question/22133387">https://www.zhihu.com/question/22133387&lt;/a>)&lt;/p>
-&lt;p>有一个有趣的回答：&amp;ldquo;你想造通天塔就直说&amp;rdquo;。&lt;/p>
-&lt;p>通天塔，也叫巴别塔，传说人类想建造一个通往天堂的天梯而触怒了神灵，于是神灵将人类的语言隔绝，导致人类种族语言不通。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-1.png" alt="image-20201128163114423">&lt;/p>
-&lt;p>编程界也存在多种编程语言，任何VM类型的语言(含编译、执行)都存在如下流程：&lt;/p>
-&lt;blockquote>
-&lt;p>前端编译器：将源代码转换为字节码&lt;/p>
-&lt;p>字节码加载模块：将字节码加载到运行时数据区(就是内存)&lt;/p>
-&lt;p>解释执行器：根据内存中的VM栈，执行字节码&lt;/p>
-&lt;p>后端编译器：将频繁执行的字节码直接生成为机器码缓存下来，提升执行效率&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-2.png" alt="image-20201126100836623">&lt;/p>
-&lt;p>我们会发现，字节码加载、运行时数据区似乎大同小异，于是进一步简化上述流程：&lt;/p>
-&lt;blockquote>
-&lt;p>字节码加载取决于运行时数据区&lt;/p>
-&lt;p>运行时数据区的理论主要是分代理论、回收理论等&lt;/p>
-&lt;/blockquote>
-&lt;p>从简化的流程中，我们可以看到，一种编程语言的&lt;strong>源代码语法无论多么&amp;quot;花哨&amp;rdquo;&lt;/strong>(满足不同领域的程序猿不同的编程风格)，&lt;strong>最终都要回归到朴实的字节码&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-3.png" alt="image-20201126105406046">&lt;/p>
-&lt;p>在Java这种语言中，JVM提供了&lt;strong>javac和javap&lt;/strong>两种工具实现前端编译和前端反编译的互逆操作：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-4.png" alt="image-20201126105515858">&lt;/p>
-&lt;p>试想一下，&lt;strong>如果字节码是一种规范&lt;/strong>，&amp;ldquo;类加载子系统、运行时数据区、解释执行器、后端编译器&amp;quot;就有可能做成&lt;strong>VM内置的标准件&lt;/strong>，那么开发一种新的编程语言只需要关注2点：&lt;/p>
-&lt;blockquote>
-&lt;p>1.如何设计一种新的语法，满足新编程领域的特征、风格？&lt;/p>
-&lt;p>2.如何将新的语法源代码，转换为标准的字节码？&lt;/p>
-&lt;/blockquote>
-&lt;p>设计一种新的编程语言，上述2点并不是很困难，而真正的技术门槛、技术成本是那些VM内置的标准件。&lt;/p>
-&lt;p>这将是一种可怕的效率提升革命，于是Java之父Gosling强调：&lt;/p>
-&lt;blockquote>
-&lt;p>JVM能支持各种符合字节码规范的新兴编程语言，Java只是JVM上能运行的编程语言之一。&lt;/p>
-&lt;p>Java并不牛逼，JVM才是最牛逼的。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-5.png" alt="image-20201126110532663">&lt;/p>
-&lt;p>&lt;strong>字节码就是统一的机器语言：&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>从程序猿的视角看，无论使用怎样不同的编程语言，都能被前端编译器转换为标准的JVM字节码；&lt;/p>
-&lt;p>从CPU的视角看，无论是怎样不同的CPU架构，后端编译器都能将标准的JVM字节码转换为不同的机器码；&lt;/p>
-&lt;/blockquote>
-&lt;p>目前，JVM支持了很多编程语言，其中包含了注入Kotlin这种热度很高的新型语言：&lt;/p>
-&lt;blockquote>
-&lt;p>数据来源：https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/2-6.png" alt="1.png">&lt;/p>
-&lt;h1 id="3引用地图字节码的微观逻辑">3.引用地图：字节码的微观逻辑&lt;/h1>
-&lt;p>JVM字节码的规范很复杂，在深入细节之前，最好先理解字节码的微观逻辑。&lt;/p>
-&lt;p>首先写一段简单的代码Demo4.java：&lt;/p>
-&lt;blockquote>
-&lt;p>这个类只有一个无参构造函数&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-1.png" alt="image-20201128171824843">&lt;/p>
-&lt;p>再通过前端编译器，从Demo4.java生成Demo4.class:&lt;/p>
-&lt;blockquote>
-&lt;p>用16进制编辑器打开&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-2.png" alt="image-20201128172301948">&lt;/p>
-&lt;p>Class文件分为2个部分：常量池和方法区&lt;/p>
-&lt;blockquote>
-&lt;p>红色框：常量池区域&lt;/p>
-&lt;p>橙色框：方法区区域&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-3.png" alt="image-20201128174147100">&lt;/p>
-&lt;p>这里的常量、方法，不是Java语法中的常量、方法，而是&lt;strong>站在VM的角度看到的常量和方法&lt;/strong>。&lt;/p>
-&lt;p>例如：&amp;ldquo;Demo4&amp;quot;这个字符串，在Java源代码中出现了2次：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-4.png" alt="image-20201128175010006">&lt;/p>
-&lt;p>JVM将&amp;quot;Demo4&amp;quot;这个字符串放在了常量池中：&lt;/p>
-&lt;blockquote>
-&lt;p>蓝色框：Demo4字面量&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-5.png" alt="image-20201128175430731">&lt;/p>
-&lt;p>在Java源代码中第一处表达类名时，JVM只需要用1个字节，&lt;strong>最终指向&lt;/strong>常量池中&amp;quot;Demo4&amp;quot;的位置：&lt;/p>
-&lt;blockquote>
-&lt;p>最终指向：此处简化了从ClassInfo常量逐级指向Utf8_info常量的过程&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/3-6.png" alt="image-20201128175906442">&lt;/p>
-&lt;p>从上述例子可以看到，JVM字节码的微观逻辑就是&lt;strong>引用&lt;/strong>，引用的目的就是复用，复用的目的就是用&lt;strong>最小的字节数表达信息&lt;/strong>。&lt;/p>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;p>本文主要内容：&lt;/p>
-&lt;ul>
-&lt;li>论述阅读字节码对于深入理解编程语言特性的意义&lt;/li>
-&lt;li>JVM字节码规范对于设计新的编程语言的价值&lt;/li>
-&lt;li>JVM字节码如何通过引用地图，实现最小字节数表示最大的信息量。&lt;/li>
-&lt;/ul>
-&lt;p>下一步，笔者将通过一段代码实例，深入Class文件结构的细节。&lt;/p>
-&lt;h1 id="5参考文献">5.参考文献&lt;/h1>
-&lt;blockquote>
-&lt;p>&lt;a href="https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages">https://www2.slideshare.net/RednaxelaFX/jvm-a-platform-for-multiple-languages&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm">https://www.slant.co/topics/397/~best-languages-that-run-on-the-jvm&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.zhihu.com/question/20003582">https://www.zhihu.com/question/20003582&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.imooc.com/article/296373">https://www.imooc.com/article/296373&lt;/a>&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8A/44.png" alt="image-20201203144947702">&lt;/p></description></item></channel></rss>

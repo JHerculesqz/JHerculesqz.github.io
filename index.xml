@@ -19,6 +19,7 @@
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Mon, 30 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130165407830.png" alt="image-20230130165407830">&lt;/p>
 &lt;h1 id="1测试前提">1.测试前提&lt;/h1>
 &lt;h2 id="硬件">硬件&lt;/h2>
 &lt;p>演讲者强调了测试的两款典型的CPU：&lt;code>Apple M1&lt;/code>和&lt;code>Raspberry Pi(Broadcom BCM2711)&lt;/code>。&lt;/p>

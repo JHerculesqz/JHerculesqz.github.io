@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Jan 2023 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Jan 2023 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,101 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】1.Introducing Spring Framework 6</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</link><pubDate>Sat, 28 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</guid><description>&lt;p>SpringOne 2022第1个议题《Introducing Spring Framework 6》，主要介绍了Spring Framework6的关键特性以及里程碑，演讲者：Juergen Hoeller。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Mon, 30 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
+&lt;h1 id="1测试前提">1.测试前提&lt;/h1>
+&lt;h2 id="硬件">硬件&lt;/h2>
+&lt;p>演讲者强调了测试的两款典型的CPU：&lt;code>Apple M1&lt;/code>和&lt;code>Raspberry Pi(Broadcom BCM2711)&lt;/code>。&lt;/p>
+&lt;p>本文不展开两款CPU对比的性能差异，如果您对这两种CPU的性能参数感兴趣，可以在此看到详细的参数对比：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://www.cpu-monkey.com/en/compare_cpu-raspberry_pi_4_b_broadcom_bcm2711-vs-apple_m1_max_24_gpu">https://www.cpu-monkey.com/en/compare_cpu-raspberry_pi_4_b_broadcom_bcm2711-vs-apple_m1_max_24_gpu&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160044858.png" alt="image-20230130160044858">&lt;/p>
+&lt;h2 id="被测对象">被测对象&lt;/h2>
+&lt;p>执行如下脚本，可获得被测对象：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">curl https://start.spring.io/starter.tgz &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d dependencies-web, actuator &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">javaVersion&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">17&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">bootVersion&lt;/span>&lt;span class="o">=&lt;/span>3.0.0-RC2 &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">type&lt;/span>&lt;span class="o">=&lt;/span>maven-project &lt;span class="p">|&lt;/span> tar -xzf -
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="代码归档">代码归档&lt;/h2>
+&lt;p>测试代码归档在此：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/dashaun/spring-boot-3-with-aot-processing">https://github.com/dashaun/spring-boot-3-with-aot-processing&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160316666.png" alt="image-20230130160316666">&lt;/p>
+&lt;h2 id="java版本">Java版本&lt;/h2>
+&lt;p>采用GraalVM：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160356760.png" alt="image-20230130160356760">&lt;/p>
+&lt;h1 id="2测试mvnw-vs-mvnd">2.测试：mvnw vs mvnd&lt;/h1>
+&lt;p>演讲者对比测试了&lt;code>mvnw clean package&lt;/code>和&lt;code>mvnd clean package&lt;/code>，对比了&lt;code>mvnw&lt;/code>和&lt;code>mvnd&lt;/code>的性能差异。&lt;/p>
+&lt;h2 id="mvnw-clean-package">mvnw clean package&lt;/h2>
+&lt;blockquote>
+&lt;p>测试结果：8.3s&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161233119.png" alt="image-20230130161233119">&lt;/p>
+&lt;h2 id="mvnd-clean-package">mvnd clean package&lt;/h2>
+&lt;blockquote>
+&lt;p>测试结果：5.6s&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161255058.png" alt="image-20230130161255058">&lt;/p>
+&lt;h2 id="结论mvnd构建性能优于mvnw">结论：&lt;code>mvnd&lt;/code>构建性能优于&lt;code>mvnw&lt;/code>&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161311506.png" alt="image-20230130161311506">&lt;/p>
+&lt;h2 id="对mvnd的延伸阅读">对mvnd的延伸阅读&lt;/h2>
+&lt;p>&lt;code>mvnd&lt;/code>也是一种maven wrapper，相比&lt;code>mvnw&lt;/code>性能更好。详细资料如下：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/apache/maven-mvnd">https://github.com/apache/maven-mvnd&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160948600.png" alt="image-20230130160948600">&lt;/p>
+&lt;h1 id="3测试graalvm-aot">3.测试：GraalVM AOT&lt;/h1>
+&lt;p>演讲者展示了采用&lt;code>AOT&lt;/code>技术构建Spring Boot 3.0应用，体现了性能的差异。&lt;/p>
+&lt;h2 id="mvnw--pnative-nativecompile">mvnw -Pnative native:compile&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>构建时间延长至分钟级&lt;/strong>：使用&lt;code>mvnw -Pnative native:compile&lt;/code>构建，构建时间长达6分钟。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161937854.png" alt="image-20230130161937854">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>启动时间缩短50%&lt;/strong>：未采用&lt;code>AOT&lt;/code>方式的SpringBoot进程启动时间通常在1.5s左右，采用&lt;code>AOT&lt;/code>方式缩短至0.7s。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130162028761.png" alt="image-20230130162028761">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>资源消耗下降66%&lt;/strong>：未采用&lt;code>AOT&lt;/code>方式的SpringBoot进程通常占用120m物理内存，采用&lt;code>AOT&lt;/code>方式占用38m物理内存。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130162322180.png" alt="image-20230130162322180">&lt;/p>
+&lt;h2 id="结论aot可极大缩短热启动时间和资源消耗">结论：AOT可极大缩短热启动时间和资源消耗&lt;/h2>
+&lt;p>AOT方式虽然延长了构建时间，但运行时的资源消耗会极大降低。&lt;/p>
+&lt;h1 id="4开发建议">4.开发建议&lt;/h1>
+&lt;p>演讲者给出了4点建议：&lt;/p>
+&lt;ul>
+&lt;li>The paved path to production starts at your laptop.&lt;/li>
+&lt;li>Deploy all the things on your laptop.&lt;/li>
+&lt;li>Scale to zero：Startup quickly, Chaos Happens.&lt;/li>
+&lt;li>Be a better consumer of infrastructure.&lt;/li>
+&lt;/ul>
+&lt;p>这4点建议的本质是：Spring Boot 3.0更强调单体服务的&lt;strong>小型化&lt;/strong>，进而支撑将所有的微服务部署在1台笔记本上。&lt;/p>
+&lt;p>在1台笔记本上就能把整个产品中的各种微服务都跑起来，才能提升开发效率(&lt;strong>尽快Startup，尽快暴露问题&lt;/strong>)。&lt;/p>
+&lt;p>&lt;strong>小型化&lt;/strong>一定是有微服务实战经验后才能体会的&lt;strong>重要经验&lt;/strong>。&lt;/p>
+&lt;blockquote>
+&lt;p>在微服务架构兴起之初，&lt;/p>
+&lt;p>笔者曾经所在的产品团队仅仅学会了微服务架构的形(把1个单进程盲目地拆解成了N个微服务进程)，但没有学会微服务的神(面向接口)，&lt;/p>
+&lt;p>导致开发阶段对服务器等环境资源极度依赖，最终导致开发效率极低。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;ul>
+&lt;li>在本议题，演讲者DaShaun提供了&lt;code>AOT&lt;/code>、&lt;code>mvnd&lt;/code>等手段降低单体服务的资源消耗。&lt;/li>
+&lt;li>Spring Boot 3.0的核心思想也是在强调&lt;strong>小型化&lt;/strong>(小到可以部署到1台笔记本上)有助于&lt;strong>提升开发效率&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>小型化&lt;/strong>与&lt;strong>微服务架构&lt;/strong>不仅不矛盾，而且是微服务架构&lt;strong>重要的实践经验&lt;/strong>。&lt;/li>
+&lt;/ul></description></item><item><title>【SpringOne 2022】1.Introducing Spring Framework 6</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</link><pubDate>Sat, 28 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</guid><description>&lt;p>SpringOne 2022第1个议题《Introducing Spring Framework 6》，主要介绍了Spring Framework6的关键特性以及里程碑，演讲者：Juergen Hoeller。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%911.IntroducingSpringFramework6/image-20230128153953141.png" alt="image-20230128153953141">&lt;/p>
 &lt;h1 id="1版本里程碑">1.版本里程碑&lt;/h1>
 &lt;h2 id="2个ga版本">2个GA版本&lt;/h2>
@@ -154,100 +248,6 @@
 &lt;li>&lt;code>Spring Framework&lt;/code>作为一个底层框架，它的输入往往来自于Java语言规范、Java EE标准。&lt;/li>
 &lt;li>Spring团队规划的新特性非常紧贴Java新版本/新特性，即便这个新特性仅仅是&lt;code>Preview Feature&lt;/code>。&lt;/li>
 &lt;li>深刻理解Java新版本/新特性，有助于理解&lt;code>Spring Framework&lt;/code>的新特性以及它的市场规划。&lt;/li>
-&lt;/ul></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Sat, 28 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
-&lt;h1 id="1测试前提">1.测试前提&lt;/h1>
-&lt;h2 id="硬件">硬件&lt;/h2>
-&lt;p>演讲者强调了测试的两款典型的CPU：&lt;code>Apple M1&lt;/code>和&lt;code>Raspberry Pi(Broadcom BCM2711)&lt;/code>。&lt;/p>
-&lt;p>本文不展开两款CPU对比的性能差异，如果您对这两种CPU的性能参数感兴趣，可以在此看到详细的参数对比：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://www.cpu-monkey.com/en/compare_cpu-raspberry_pi_4_b_broadcom_bcm2711-vs-apple_m1_max_24_gpu">https://www.cpu-monkey.com/en/compare_cpu-raspberry_pi_4_b_broadcom_bcm2711-vs-apple_m1_max_24_gpu&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160044858.png" alt="image-20230130160044858">&lt;/p>
-&lt;h2 id="被测对象">被测对象&lt;/h2>
-&lt;p>执行如下脚本，可获得被测对象：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">curl https://start.spring.io/starter.tgz &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>-d dependencies-web, actuator &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">javaVersion&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">17&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">bootVersion&lt;/span>&lt;span class="o">=&lt;/span>3.0.0-RC2 &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>-d &lt;span class="nv">type&lt;/span>&lt;span class="o">=&lt;/span>maven-project &lt;span class="p">|&lt;/span> tar -xzf -
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="代码归档">代码归档&lt;/h2>
-&lt;p>测试代码归档在此：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/dashaun/spring-boot-3-with-aot-processing">https://github.com/dashaun/spring-boot-3-with-aot-processing&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160316666.png" alt="image-20230130160316666">&lt;/p>
-&lt;h2 id="java版本">Java版本&lt;/h2>
-&lt;p>采用GraalVM：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160356760.png" alt="image-20230130160356760">&lt;/p>
-&lt;h1 id="2测试mvnw-vs-mvnd">2.测试：mvnw vs mvnd&lt;/h1>
-&lt;p>演讲者对比测试了&lt;code>mvnw clean package&lt;/code>和&lt;code>mvnd clean package&lt;/code>，对比了&lt;code>mvnw&lt;/code>和&lt;code>mvnd&lt;/code>的性能差异。&lt;/p>
-&lt;h2 id="mvnw-clean-package">mvnw clean package&lt;/h2>
-&lt;blockquote>
-&lt;p>测试结果：8.3s&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161233119.png" alt="image-20230130161233119">&lt;/p>
-&lt;h2 id="mvnd-clean-package">mvnd clean package&lt;/h2>
-&lt;blockquote>
-&lt;p>测试结果：5.6s&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161255058.png" alt="image-20230130161255058">&lt;/p>
-&lt;h2 id="结论mvnd构建性能优于mvnw">结论：&lt;code>mvnd&lt;/code>构建性能优于&lt;code>mvnw&lt;/code>&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161311506.png" alt="image-20230130161311506">&lt;/p>
-&lt;h2 id="对mvnd的延伸阅读">对mvnd的延伸阅读&lt;/h2>
-&lt;p>&lt;code>mvnd&lt;/code>也是一种maven wrapper，相比&lt;code>mvnw&lt;/code>性能更好。详细资料如下：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/apache/maven-mvnd">https://github.com/apache/maven-mvnd&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130160948600.png" alt="image-20230130160948600">&lt;/p>
-&lt;h1 id="3测试graalvm-aot">3.测试：GraalVM AOT&lt;/h1>
-&lt;p>演讲者展示了采用&lt;code>AOT&lt;/code>技术构建Spring Boot 3.0应用，体现了性能的差异。&lt;/p>
-&lt;h2 id="mvnw--pnative-nativecompile">mvnw -Pnative native:compile&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>构建时间延长至分钟级&lt;/strong>：使用&lt;code>mvnw -Pnative native:compile&lt;/code>构建，构建时间长达6分钟。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130161937854.png" alt="image-20230130161937854">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>启动时间缩短50%&lt;/strong>：未采用&lt;code>AOT&lt;/code>方式的SpringBoot进程启动时间通常在1.5s左右，采用&lt;code>AOT&lt;/code>方式缩短至0.7s。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130162028761.png" alt="image-20230130162028761">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>资源消耗下降66%&lt;/strong>：未采用&lt;code>AOT&lt;/code>方式的SpringBoot进程通常占用120m物理内存，采用&lt;code>AOT&lt;/code>方式占用38m物理内存。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130162322180.png" alt="image-20230130162322180">&lt;/p>
-&lt;h2 id="结论aot可极大缩短热启动时间和资源消耗">结论：AOT可极大缩短热启动时间和资源消耗&lt;/h2>
-&lt;p>AOT方式虽然延长了构建时间，但运行时的资源消耗会极大降低。&lt;/p>
-&lt;h1 id="4开发建议">4.开发建议&lt;/h1>
-&lt;p>演讲者给出了4点建议：&lt;/p>
-&lt;ul>
-&lt;li>The paved path to production starts at your laptop.&lt;/li>
-&lt;li>Deploy all the things on your laptop.&lt;/li>
-&lt;li>Scale to zero：Startup quickly, Chaos Happens.&lt;/li>
-&lt;li>Be a better consumer of infrastructure.&lt;/li>
-&lt;/ul>
-&lt;p>这4点建议的本质是：Spring Boot 3.0更强调单体服务的&lt;strong>小型化&lt;/strong>，进而支撑将所有的微服务部署在1台笔记本上。&lt;/p>
-&lt;p>在1台笔记本上就能把整个产品中的各种微服务都跑起来，才能提升开发效率(&lt;strong>尽快Startup，尽快暴露问题&lt;/strong>)。&lt;/p>
-&lt;p>&lt;strong>小型化&lt;/strong>一定是有微服务实战经验后才能体会的&lt;strong>重要经验&lt;/strong>。&lt;/p>
-&lt;blockquote>
-&lt;p>在微服务架构兴起之初，&lt;/p>
-&lt;p>笔者曾经所在的产品团队仅仅学会了微服务架构的形(把1个单进程盲目地拆解成了N个微服务进程)，但没有学会微服务的神(面向接口)，&lt;/p>
-&lt;p>导致开发阶段对服务器等环境资源极度依赖，最终导致开发效率极低。&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="5总结">5.总结&lt;/h1>
-&lt;ul>
-&lt;li>在本议题，演讲者DaShaun提供了&lt;code>AOT&lt;/code>、&lt;code>mvnd&lt;/code>等手段降低单体服务的资源消耗。&lt;/li>
-&lt;li>Spring Boot 3.0的核心思想也是在强调&lt;strong>小型化&lt;/strong>(小到可以部署到1台笔记本上)有助于&lt;strong>提升开发效率&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>小型化&lt;/strong>与&lt;strong>微服务架构&lt;/strong>不仅不矛盾，而且是微服务架构&lt;strong>重要的实践经验&lt;/strong>。&lt;/li>
 &lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/</link><pubDate>Thu, 01 Dec 2022 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/</guid><description>&lt;h1 id="浅析协程">浅析协程&lt;/h1>
 &lt;p>并发编程的核心目标之一就是&amp;rdquo;&lt;strong>快&lt;/strong>&amp;quot;，并发编程发展史中若干特性与改进无不围绕这个目标。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/quick.gif" alt="quick.gif">&lt;/p>

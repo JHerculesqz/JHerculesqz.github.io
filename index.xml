@@ -29,11 +29,11 @@
 &lt;ul>
 &lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>的架构地位&lt;/strong>：在整个架构中的位置是&lt;code>API网关&lt;/code>。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207101213825.png" alt="image-20230207101213825">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207101213825.png" alt="image-20230207101213825">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Spring Cloud Gateway的愿景&lt;/strong>：议题材料中有一段话，表明了此项目的愿景和价值，如下图：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207103316835.png" alt="image-20230207103316835">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207103316835.png" alt="image-20230207103316835">&lt;/p>
 &lt;h1 id="2基本原理">2.基本原理&lt;/h1>
 &lt;h2 id="21职责">2.1.职责&lt;/h2>
 &lt;p>Gateway的本质就是一组&lt;strong>路由转发规则集&lt;/strong>+&lt;strong>按规则进行路由转发&lt;/strong>：&lt;/p>
@@ -46,7 +46,7 @@
 &lt;li>&lt;strong>请求修改&lt;/strong>：修改请求的输入输出、路径重写等。&lt;/li>
 &lt;li>&amp;hellip;&amp;hellip;&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207105042685.png" alt="image-20230207105042685">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207105042685.png" alt="image-20230207105042685">&lt;/p>
 &lt;h2 id="22how-it-works">2.2.How it works?&lt;/h2>
 &lt;ul>
 &lt;li>Gateway提出了3个架构概念&lt;code>Route(路由)&lt;/code>、&lt;code>Predicate(断言)&lt;/code>、&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
@@ -74,40 +74,40 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207111959581.png" alt="image-20230207111959581">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207111959581.png" alt="image-20230207111959581">&lt;/p>
 &lt;p>如下是执行效果：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207114627396.png" alt="image-20230207114627396">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114627396.png" alt="image-20230207114627396">&lt;/p>
 &lt;h2 id="32host断言">3.2.Host断言&lt;/h2>
 &lt;ul>
 &lt;li>红框：在3.1的配置基础上增加了Host断言，表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>，且http的Host=example.com，则匹配成功。&lt;/li>
 &lt;li>绿框：演示了客户端请求虽然是&lt;code>http://localhost/uuid&lt;/code>但Host没有值时，无法匹配，进而转发失败。&lt;/li>
 &lt;li>蓝框：演示了客户端请求是&lt;code>http://localhost/uuid&lt;/code>且Host=example.com时，成功匹配，进而转发成功。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207114804353.png" alt="image-20230207114804353">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114804353.png" alt="image-20230207114804353">&lt;/p>
 &lt;h2 id="33转发过滤器">3.3.转发过滤器&lt;/h2>
 &lt;ul>
 &lt;li>SetPath=/uuid：表示客户端请求&lt;code>http://localhost/demo&lt;/code>，Gateway会将此请求转发为&lt;code>http://httpbin.org/uuid&lt;/code>&lt;/li>
 &lt;li>测试结果如下：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207135559062.png" alt="image-20230207135559062">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207135559062.png" alt="image-20230207135559062">&lt;/p>
 &lt;h2 id="34灰度发布">3.4.灰度发布&lt;/h2>
 &lt;ul>
 &lt;li>Gateway支持设置路由的权重，进而实现灰度发布。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207140904664.png" alt="image-20230207140904664">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207140904664.png" alt="image-20230207140904664">&lt;/p>
 &lt;ul>
 &lt;li>演讲人演示了配置了两个&lt;code>Route&lt;/code>，如果将&lt;code>route1&lt;/code>的&lt;code>Weight&lt;/code>属性改小，将会引流到&lt;code>route2&lt;/code>，进而实现灰度发布。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207141250833.png" alt="image-20230207141250833">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207141250833.png" alt="image-20230207141250833">&lt;/p>
 &lt;h2 id="35熔断">3.5.熔断&lt;/h2>
 &lt;ul>
 &lt;li>Demo中，熔断器定义5秒内接口必须返回。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207142305789.png" alt="image-20230207142305789">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142305789.png" alt="image-20230207142305789">&lt;/p>
 &lt;ul>
 &lt;li>配置文件中，使能熔断器&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207142345120.png" alt="image-20230207142345120">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142345120.png" alt="image-20230207142345120">&lt;/p>
 &lt;ul>
 &lt;li>执行效果：
 &lt;ul>
@@ -116,7 +116,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGatewayimage-20230207142641006.png" alt="image-20230207142641006">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142641006.png" alt="image-20230207142641006">&lt;/p>
 &lt;h1 id="4总结">4.总结&lt;/h1>
 &lt;ul>
 &lt;li>在本议题，演讲者Cora lberkleid展示了&lt;code>Spring Cloud Gateway&lt;/code>的原理和Demo。&lt;/li>

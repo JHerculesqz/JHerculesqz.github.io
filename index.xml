@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Feb 2023 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Feb 2023 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,145 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】3.Protect Your Microservices with Spring Cloud Gateway</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</link><pubDate>Tue, 07 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</guid><description>&lt;p>SpringOne 2022第3个议题《Protect Your Microservices with Spring Cloud Gateway》，主要展示Spring Cloud Gateway的特性，演讲者：Cora lberkleid。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】4.Running Untrusted Code in Spring Using WebAssembly</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</link><pubDate>Thu, 09 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</guid><description>&lt;p>SpringOne 2022第4个议题《Running Untrusted Code in Spring Using WebAssembly》，主要在介绍WebAssembly的Host和Guest，引申出Spring结合WebAssembly的一些展望，演讲者：Dave Syer。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209102504607.png" alt="image-20230209102504607">&lt;/p>
+&lt;h1 id="1what-is-webassembly">1.What is WebAssembly?&lt;/h1>
+&lt;ul>
+&lt;li>WebAssembly有两个概念&lt;code>Host&lt;/code>和&lt;code>Guest&lt;/code>:
+&lt;ul>
+&lt;li>&lt;code>Host&lt;/code>可以认为是能够执行WebAssembly的容器，比如：浏览器。&lt;/li>
+&lt;li>&lt;code>Guest&lt;/code>就是&lt;code>WASM&lt;/code>(WebAssembly)，我们可以直接编写&lt;code>WASM&lt;/code>，也可以用C/C#/AssemblyScript/Rust这些语言去写再编译成&lt;code>WASM&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104158257.png" alt="image-20230209104158257">&lt;/p>
+&lt;ul>
+&lt;li>WebAssembly的语言规范在此：
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/WebAssembly/spec">https://github.com/WebAssembly/spec&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104813110.png" alt="image-20230209104813110">&lt;/p>
+&lt;ul>
+&lt;li>其它说明：
+&lt;ul>
+&lt;li>由于&lt;code>WASM&lt;/code>主要的应用场景是在浏览器领域，所以&lt;code>JavaScript&lt;/code>是比较主流的&lt;code>Host&lt;/code>编程语言。&lt;/li>
+&lt;li>其它&lt;code>Host&lt;/code>编程语言还有Rust、Go、Python、C#、Java等等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2wasm与spring可以结合的应用场景">2.WASM与Spring可以结合的应用场景&lt;/h1>
+&lt;ul>
+&lt;li>Serverless(无服务器)架构是云原生领域比较受欢迎的理念，其核心目的是增效降本。如下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209111925644.png" alt="image-20230209111925644">&lt;/p>
+&lt;ul>
+&lt;li>Serverless架构提供一种更加&amp;quot;代码碎片化&amp;quot;的软件架构范式——&lt;code>FAAS(Function as a Services)&lt;/code>，以Amazon Lambda为例：
+&lt;ul>
+&lt;li>&lt;code>AWS Lambda&lt;/code>可以作为&lt;code>Host&lt;/code>执行&lt;strong>用户提交的函数&lt;/strong>——这个可以认为是&lt;code>Guest&lt;/code>侧的代码。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209112437086.png" alt="image-20230209112437086">&lt;/p>
+&lt;ul>
+&lt;li>通过对&lt;code>Serverless&lt;/code>/&lt;code>FAAS&lt;/code>的介绍，我们可以看到可以基于&lt;code>Spring&lt;/code>+&lt;code>WASM&lt;/code>快速实现&lt;code>FAAS&lt;/code>：
+&lt;ul>
+&lt;li>STEP1.用户用自己擅长的编程语言实现的&lt;code>Guest&lt;/code>代码&lt;/li>
+&lt;li>STEP2.用户提交这段&lt;code>Guest&lt;/code>代码，提交时被编译为&lt;code>WASM&lt;/code>&lt;/li>
+&lt;li>STEP3.&lt;code>Spring&lt;/code>实现的云端微服务执行STEP2的&lt;code>WASM&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3一个简单的demo">3.一个简单的Demo&lt;/h1>
+&lt;ul>
+&lt;li>演讲者编写了1个简单的&lt;code>WASM&lt;/code>，
+&lt;ul>
+&lt;li>此&lt;code>WASM&lt;/code>实现了1个名为&lt;code>add&lt;/code>的函数&lt;/li>
+&lt;li>&lt;code>add&lt;/code>函数包含2个入参，入参都是整型(&lt;code>i32&lt;/code>)&lt;/li>
+&lt;li>&lt;code>add&lt;/code>函数返回整型(&lt;code>i32&lt;/code>)&lt;/li>
+&lt;li>add函数的内部实现是将2个入参相加&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142449065.png" alt="image-20230209142449065">&lt;/p>
+&lt;ul>
+&lt;li>演讲者的使用MDN提供的测试工具作为&lt;code>Host&lt;/code>执行上述&lt;code>WASM&lt;/code>，JavaScript代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142856947.png" alt="image-20230209142856947">&lt;/p>
+&lt;h1 id="4wasm的guest端可选的编程语言">4.&lt;code>WASM&lt;/code>的&lt;code>Guest&lt;/code>端可选的编程语言&lt;/h1>
+&lt;h2 id="41c语言">4.1.C语言&lt;/h2>
+&lt;ul>
+&lt;li>使用C语言编写如下代码：
+&lt;ul>
+&lt;li>函数&lt;code>echo&lt;/code>返回整型，内部实现是调用函数&lt;code>get&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>将C语言编译成&lt;code>WASM&lt;/code>的可选工具如下：
+&lt;ul>
+&lt;li>Emscripten&lt;/li>
+&lt;li>Wasi SDK&lt;/li>
+&lt;li>Binaryen&lt;/li>
+&lt;li>LLVM/Clang&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143034320.png" alt="image-20230209143034320">&lt;/p>
+&lt;ul>
+&lt;li>编译后得到的&lt;code>WASM&lt;/code>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143359629.png" alt="image-20230209143359629">&lt;/p>
+&lt;h2 id="42assemblyscript">4.2.AssemblyScript&lt;/h2>
+&lt;ul>
+&lt;li>使用TypeScript编写如下代码：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143514050.png" alt="image-20230209143514050">&lt;/p>
+&lt;ul>
+&lt;li>编译后得到的&lt;code>WASM&lt;/code>很长，在此仅展示部分。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144136043.png" alt="image-20230209144136043">&lt;/p>
+&lt;h2 id="43rust">4.3.Rust&lt;/h2>
+&lt;ul>
+&lt;li>使用Rust编写的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144304144.png" alt="image-20230209144304144">&lt;/p>
+&lt;h2 id="44java">4.4.Java&lt;/h2>
+&lt;ul>
+&lt;li>使用Java编写的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144431808.png" alt="image-20230209144431808">&lt;/p>
+&lt;ul>
+&lt;li>可选的编译器如下：
+&lt;ul>
+&lt;li>TeamVM&lt;/li>
+&lt;li>JSweet&lt;/li>
+&lt;li>J2cl&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5wasm的host端可选的编程语言">5.&lt;code>WASM&lt;/code>的&lt;code>Host&lt;/code>端可选的编程语言&lt;/h1>
+&lt;h2 id="51javascript">5.1.JavaScript&lt;/h2>
+&lt;ul>
+&lt;li>使用JavaScript执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144643281.png" alt="image-20230209144643281">&lt;/p>
+&lt;h2 id="52java">5.2.Java&lt;/h2>
+&lt;ul>
+&lt;li>使用Java执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144755430.png" alt="image-20230209144755430">&lt;/p>
+&lt;h1 id="6小结">6.小结&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>WASM&lt;/code>还在发展阶段，有的人看好，有的人认为是伪命题，但&lt;code>WASM&lt;/code>肯定会是未来3~5年的热点。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>WASM&lt;/code>可应用的场景绝对不是在浏览器里运行对GPU有要求的游戏，云原生领域也可能应用。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Spring团队也在探索性地将某些模块使用&lt;code>WASM&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>【SpringOne 2022】3.Protect Your Microservices with Spring Cloud Gateway</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</link><pubDate>Tue, 07 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</guid><description>&lt;p>SpringOne 2022第3个议题《Protect Your Microservices with Spring Cloud Gateway》，主要展示Spring Cloud Gateway的特性，演讲者：Cora lberkleid。&lt;/p>
 &lt;h1 id="1项目简介">1.项目简介&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>不是一个新项目&lt;/strong>：它能入选&lt;code>SpringOne 2022&lt;/code>的议题，应该是它的确非常实用。&lt;/li>
@@ -5152,264 +5290,4 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
 &lt;blockquote>
 &lt;p>&lt;a href="https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F">https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F&lt;/a>&lt;/p>
 &lt;p>《深入理解Java虚拟机：JVM高级特性与最佳实践》&lt;/p>
-&lt;/blockquote></description></item><item><title>【编译引擎】-2-学习阅读Class文件结构(16进制版)-下</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/</link><pubDate>Thu, 05 Aug 2021 14:55:02 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/</guid><description>&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)-上》、《【编译引擎】学习阅读Class文件结构(16进制版)-中》两篇文章中，笔者讲解了如何以16进制的方式，解读Demo2.java对应字节码的常量池、字段表、方法表。&lt;/p>
-&lt;p>我们继续解读Demo2.class字节码的方法表的Code属性片段。&lt;/p>
-&lt;h1 id="1复杂信息的树状表达属性树">1.复杂信息的树状表达：属性树&lt;/h1>
-&lt;p>如果说前面两篇文章描述的信息相对简单，那么当我们需要用一种形式表达一个函数的实现就显得更加复杂了。&lt;/p>
-&lt;p>我们逆向思考一下，假设我们就是JVM，JVM需要完成哪些&lt;strong>重要的任务&lt;/strong>：&lt;/p>
-&lt;h2 id="11源代码转化为指令序列">1.1.源代码转化为指令序列&lt;/h2>
-&lt;p>在编译阶段，JVM能够获得的信息形式是——&lt;strong>函数实现的源代码X&lt;/strong>&lt;/p>
-&lt;p>而在运行阶段，JVM需要输出给CPU的信息形式是——&lt;strong>CPU能够理解并执行的CPU指令序列Z&lt;/strong>&lt;/p>
-&lt;p>因此，JVM需要将&lt;strong>源代码X&lt;/strong>转换为&lt;strong>指令序列Z&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>Z = G(X)&lt;/p>
-&lt;/blockquote>
-&lt;p>为了实现&lt;strong>转换函数G&lt;/strong>，首先，在编译阶段，JVM将&lt;strong>源代码X&lt;/strong>转换为&lt;strong>JVM指令序列Y&lt;/strong>，即&lt;/p>
-&lt;blockquote>
-&lt;p>Y = F1(X)&lt;/p>
-&lt;/blockquote>
-&lt;p>然后，在运行阶段，JVM动态地将&lt;strong>JVM指令序列Y&lt;/strong>转换为&lt;strong>CPU指令序列Z&lt;/strong>，即&lt;/p>
-&lt;blockquote>
-&lt;p>Z = F2(Y)&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/1.png" alt="image-20201213164014831">&lt;/p>
-&lt;p>至此，我们可以得到一个结论：&lt;strong>JVM指令序列是表示函数实现源代码的重要信息之一&lt;/strong>。&lt;/p>
-&lt;h2 id="12维护局部变量列表">1.2.维护局部变量列表&lt;/h2>
-&lt;p>我们至少知道3个经验：&lt;/p>
-&lt;blockquote>
-&lt;p>如果函数内一条语句使用了前面已经定义过的局部变量，则该语句能获得此局部变量最新的值。&lt;/p>
-&lt;p>如果函数内一条语句使用了一个局部变量，但局部变量没有定义，IDE就会出现语法错误。&lt;/p>
-&lt;p>即使是一个空的函数实现，这个函数里面，IDE至少能联想出一个变量this。&lt;/p>
-&lt;/blockquote>
-&lt;p>通过这3个经验，我们知道JVM至少具备如下能力：&lt;/p>
-&lt;blockquote>
-&lt;p>函数内定义了哪些局部变量，这些局部变量最新的值是多少。&lt;/p>
-&lt;p>这些局部变量的作用范围从哪里开始，到哪里结束。&lt;/p>
-&lt;/blockquote>
-&lt;p>JVM通过实现&lt;strong>局部变量表&lt;/strong>存储上述信息：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/2.png" alt="image-20201213165522458">&lt;/p>
-&lt;p>因此，我们可以得到另一个结论：&lt;strong>局部变量表也是表示函数实现源代码的必要信息&lt;/strong>。&lt;/p>
-&lt;h2 id="13源代码与jvm指令序列的映射关系">1.3.源代码与JVM指令序列的映射关系&lt;/h2>
-&lt;p>从1.1可知，调试程序本质是调试运行时指令序列，我们必然需要知道调试的指令序列对应于源代码中的位置。&lt;/p>
-&lt;p>JVM通过行号表存储了映射关系：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/3.png" alt="image-20201213210037072">&lt;/p>
-&lt;p>同样的，我们得到另一个结论：&lt;strong>行号表也是表示函数实现源代码的必要信息&lt;/strong>。&lt;/p>
-&lt;h2 id="14属性树">1.4.属性树&lt;/h2>
-&lt;p>综合前述的分析，JVM需要定义一个&lt;strong>表达属性的树表结构&lt;/strong>才能表示一个函数的内部实现，如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/4.png" alt="image-20201213225139342">&lt;/p>
-&lt;p>&lt;strong>Code属性自身具有一些基础信息&lt;/strong>(例如：操作数栈最大深度)，Code属性还包含&lt;strong>子属性&lt;/strong>(例如：行号表子属性、局部变量表子属性)。&lt;/p>
-&lt;p>这样，就形成了一个属性树。&lt;/p>
-&lt;h2 id="15属性">1.5.属性&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM：&lt;em>Attributes&lt;/em> are used in the &lt;code>ClassFile&lt;/code>, &lt;code>field_info&lt;/code>, &lt;code>method_info&lt;/code>, and &lt;code>Code_attribute&lt;/code> structures of the &lt;code>class&lt;/code> file format&lt;/p>
-&lt;/blockquote>
-&lt;p>JVM将Code抽象的称为&lt;strong>属性&lt;/strong>，将&lt;strong>行号表&lt;/strong>也抽象为&lt;strong>属性&lt;/strong>，将&lt;strong>局部变量表&lt;/strong>也抽象地称为&lt;strong>属性&lt;/strong>。在JVM中，还有其它更多的&lt;strong>属性&lt;/strong>。&lt;/p>
-&lt;p>但无论哪种属性，JVM都采用了如下数据结构表示&lt;strong>属性的共性&lt;/strong>：&lt;/p>
-&lt;p>2个字节是属性名在常量池中的索引。&lt;/p>
-&lt;p>4个字节表示这个属性的字节码长度N。&lt;/p>
-&lt;p>紧接着N个字节表示这个属性具体的字节码。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/5.png" alt="image-20201213230831717">&lt;/p>
-&lt;p>深一步思考，又有一个问题：不同的属性应该有不同的数据结构，&lt;strong>JVM怎么区分表达属性的特有信息&lt;/strong>呢？&lt;/p>
-&lt;p>JVM就是根据属性名来区分的不同类型的属性，&lt;strong>每种属性又有自己独有的数据结构&lt;/strong>，如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/6.png" alt="image-20201213232241686">&lt;/p>
-&lt;p>好，有了这些前置知识，我们接下来详细解读Code、LineNumberTable、LocalVariableTable属性。&lt;/p>
-&lt;h1 id="2code属性">2.Code属性&lt;/h1>
-&lt;h2 id="21code属性名">2.1.Code属性名&lt;/h2>
-&lt;p>hello方法下挂的属性名索引=&lt;strong>00 0C&lt;/strong>，如下图：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/7.png" alt="image-20201213230043475">&lt;/p>
-&lt;p>&lt;strong>00 0C=12&lt;/strong>，对应&lt;strong>第12个常量&lt;/strong>，即&lt;strong>Code属性&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/8.png" alt="image-20201214002838199">&lt;/p>
-&lt;h2 id="22code属性字节码长度">2.2.Code属性字节码长度&lt;/h2>
-&lt;p>hello方法下挂的Code属性长度=&lt;strong>00 00 00 47&lt;/strong>，如下图：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/9.png" alt="image-20201214002946890">&lt;/p>
-&lt;p>说明Code属性占据的字节码长度为&lt;strong>00 00 00 47=71&lt;/strong>，如下图红框：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/10.png" alt="image-20201214003317799">&lt;/p>
-&lt;h2 id="23code属性操作数栈最大长度">2.3.Code属性.操作数栈最大长度&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The &lt;code>Code&lt;/code> attribute is a variable-length attribute in the &lt;code>attributes&lt;/code> table of a &lt;code>method_info&lt;/code> structure . A &lt;code>Code&lt;/code> attribute contains the Java Virtual Machine instructions and auxiliary information for a method, including an instance initialization method or a class or interface initialization method&lt;/p>
-&lt;/blockquote>
-&lt;p>进一步，查阅JVM规范，Code属性的数据结构如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/11.png" alt="image-20201214090813324">&lt;/p>
-&lt;p>从max_stack开始，2个字节表示操作数栈最大深度。&lt;/p>
-&lt;p>&lt;strong>00 02 = 2&lt;/strong>，表示针对Demo2代码，&lt;strong>操作数栈的最大深度为2&lt;/strong>。&lt;/p>
-&lt;p>另外，这里涉及到对虚拟机栈的理解，笔者将会在后续文章中展开。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/12.png" alt="image-20201214071931530">&lt;/p>
-&lt;h2 id="24code属性局部变量表长度">2.4.Code属性.局部变量表长度&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The value of the &lt;code>max_locals&lt;/code> item gives the number of local variables in the local variable array allocated upon invocation of this method&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/13.png" alt="image-20201214072317654">&lt;/p>
-&lt;p>00 02 = 2，&lt;strong>局部变量表最大长度为2&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/14.png" alt="image-20201214072400159">&lt;/p>
-&lt;h2 id="25code属性指令序列长度">2.5.Code属性.指令序列长度&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The value of the &lt;code>code_length&lt;/code> item gives the number of bytes in the &lt;code>code&lt;/code> array for this method.&lt;/p>
-&lt;/blockquote>
-&lt;p>4个字节表示紧接着的有多少个字节存储JVM指令序列。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/15.png" alt="image-20201214072528544">&lt;/p>
-&lt;p>&lt;strong>00 00 00 0B=11&lt;/strong>，表示Demo2的hello方法转化的JVM指令序列，需要11个字节存储。&lt;/p>
-&lt;p>这就很神奇了，一段这样的代码，竟然被转换成了11个字节：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/16.png" alt="image-20201214073202146">&lt;/p>
-&lt;h2 id="26code属性指令序列">2.6.Code属性.指令序列&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The &lt;code>code&lt;/code> array gives the actual bytes of Java Virtual Machine code that implement the method.&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/17.png" alt="image-20201214073245663">&lt;/p>
-&lt;p>下图是Demo2的hello方法转换后的JVM指令序列：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/18.png" alt="image-20201214073409407">&lt;/p>
-&lt;p>根据JVM规范，笔者将16进制字节码人工翻译成JVM指令序列：&lt;/p>
-&lt;p>&lt;strong>04 =&amp;gt; iconst_1&lt;/strong>，表示将1加载到虚拟机栈中。&lt;/p>
-&lt;p>&lt;strong>3C =&amp;gt; istore_1&lt;/strong>，表示将上一步的数据存储到局部变量表的第1位。&lt;/p>
-&lt;p>&lt;strong>B2 00 03 =&amp;gt; getstatic 3&lt;/strong>，表示调用第3个常量映射的&lt;strong>java.io.PrintStream&lt;/strong>类。&lt;/p>
-&lt;p>&lt;strong>12 04 =&amp;gt; Idc 4&lt;/strong>，表示将第4个常量映射的**&amp;ldquo;hello world&amp;quot;字符串**加载到虚拟机栈中。&lt;/p>
-&lt;p>&lt;strong>B6 00 05=&amp;gt;invokevirtual 5&lt;/strong>，表示调用第5个常量映射的&lt;strong>println&lt;/strong>方法。&lt;/p>
-&lt;p>&lt;strong>B1=&amp;gt;return&lt;/strong>，表示此函数&lt;strong>执行完成后返回&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/19.png" alt="image-20201214095755437">&lt;/p>
-&lt;p>我们对比一下Demo2的源代码：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/20.png" alt="image-20201214100012611">&lt;/p>
-&lt;h1 id="3linenumbertable属性">3.LineNumberTable属性&lt;/h1>
-&lt;h2 id="31linenumbertable属性名">3.1.LineNumberTable属性名&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The value of the &lt;code>attribute_name_index&lt;/code> item must be a valid index into the &lt;code>constant_pool&lt;/code> table.&lt;/p>
-&lt;/blockquote>
-&lt;p>2个字节表示属性名。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/21.png" alt="image-20201214101143092">&lt;/p>
-&lt;p>&lt;strong>00 0D=13&lt;/strong>，表示第13个常量。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/22.png" alt="image-20201214103511715">&lt;/p>
-&lt;p>根据常量池映射关系，&lt;strong>第13个常量&lt;/strong>表示&lt;strong>LineNumberTable&lt;/strong>字符串&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/23.png" alt="image-20201214103741137">&lt;/p>
-&lt;h2 id="32linenumbertable属性字节码长度">3.2.LineNumberTable属性字节码长度&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The value of the &lt;code>attribute_length&lt;/code> item indicates the length of the attribute, excluding the initial six bytes.&lt;/p>
-&lt;/blockquote>
-&lt;p>4个字节表示属性占用的字节码长度。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/24.png" alt="image-20201214101226009">&lt;/p>
-&lt;p>&lt;strong>00 00 00 0E&lt;/strong>=14，表示行号表占据字节码14个字节长度。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/25.png" alt="image-20201214103837705">&lt;/p>
-&lt;p>因此，行号表的字节码如下图红框所示：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/26.png" alt="image-20201214104013281">&lt;/p>
-&lt;h2 id="33linenumbertable属性的行数据">3.3.LineNumberTable属性的行数据&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：Each entry in the &lt;code>line_number_table&lt;/code> array indicates that the line number in the original source file changes at a given point in the &lt;code>code&lt;/code> array. Each &lt;code>line_number_table&lt;/code> entry must contain the following two items:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>start_pc&lt;/p>
-&lt;p>The value of the &lt;code>start_pc&lt;/code> item must indicate the index into the &lt;code>code&lt;/code> array at which the code for a new line in the original source file begins.The value of &lt;code>start_pc&lt;/code> must be less than the value of the &lt;code>code_length&lt;/code> item of the &lt;code>Code&lt;/code> attribute of which this &lt;code>LineNumberTable&lt;/code> is an attribute.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>line_number&lt;/p>
-&lt;p>The value of the &lt;code>line_number&lt;/code> item must give the corresponding line number in the original source file.&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;p>行号表分为两列，一列是&lt;strong>在JVM指令序列的索引(start_pc)&lt;/strong>，一列是&lt;strong>源代码的行号(line_number)&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/27.png" alt="image-20201214101431970">&lt;/p>
-&lt;p>我们将前文解读的JVM指令序列、Demo2的hello方法的源代码，与行号表的字节码对比，可以看到：&lt;/p>
-&lt;p>行号表第1行数据：表示JVM指令序列第0行与源代码第7行对应。&lt;/p>
-&lt;p>行号表第2行数据：表示JVM指令序列第2行与源代码第8行对应。&lt;/p>
-&lt;p>行号表第3行数据：表示JVM指令序列第10行与源代码第9行对应。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/28.png" alt="image-20201214102952547">&lt;/p>
-&lt;h1 id="4localvariabletable属性">4.LocalVariableTable属性&lt;/h1>
-&lt;h2 id="41localvariabletable属性名">4.1.LocalVariableTable属性名&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The value of the &lt;code>attribute_name_index&lt;/code> item must be a valid index into the &lt;code>constant_pool&lt;/code> table.&lt;/p>
-&lt;/blockquote>
-&lt;p>2个字节表示属性名。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/29.png" alt="image-20201214105409665">&lt;/p>
-&lt;p>&lt;strong>00 0E=14&lt;/strong>，表示第14个常量。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/30.png" alt="image-20201214105753233">&lt;/p>
-&lt;p>根据常量池映射关系，&lt;strong>第14个常量&lt;/strong>表示&lt;strong>LocalVariableTable&lt;/strong>字符串。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/31.png" alt="image-20201214110018137">&lt;/p>
-&lt;h2 id="42localvariabletable属性字节码长度">4.2.LocalVariableTable属性字节码长度&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：The value of the &lt;code>attribute_length&lt;/code> item indicates the length of the attribute, excluding the initial six bytes.&lt;/p>
-&lt;/blockquote>
-&lt;p>4个字节表示属性占用的字节码长度。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/32.png" alt="image-20201214105443811">&lt;/p>
-&lt;p>&lt;strong>00 00 00 16&lt;/strong>=22，表示局部变量表占据字节码22个字节长度。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/33.png" alt="image-20201214110048114">&lt;/p>
-&lt;p>因此，行号表的字节码如下图红框所示：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/34.png" alt="image-20201214111222724">&lt;/p>
-&lt;h2 id="43localvariabletable属性的行数据">4.3.LocalVariableTable属性的行数据&lt;/h2>
-&lt;blockquote>
-&lt;p>JVM规范：Each entry in the &lt;code>local_variable_table&lt;/code> array indicates a range of &lt;code>code&lt;/code> array offsets within which a local variable has a value. It also indicates the index into the local variable array of the current frame at which that local variable can be found. Each entry must contain the following five items:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>start_pc, length&lt;/p>
-&lt;p>The given local variable must have a value at indices into the &lt;code>code&lt;/code> array in the interval [&lt;code>start_pc&lt;/code>, &lt;code>start_pc + length&lt;/code>), that is, between &lt;code>start_pc&lt;/code> inclusive and &lt;code>start_pc + length&lt;/code> exclusive.The value of &lt;code>start_pc&lt;/code> must be a valid index into the &lt;code>code&lt;/code> array of this &lt;code>Code&lt;/code> attribute and must be the index of the opcode of an instruction.The value of &lt;code>start_pc + length&lt;/code> must either be a valid index into the &lt;code>code&lt;/code> array of this &lt;code>Code&lt;/code> attribute and be the index of the opcode of an instruction, or it must be the first index beyond the end of that &lt;code>code&lt;/code> array.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>name_index&lt;/p>
-&lt;p>The value of the &lt;code>name_index&lt;/code> item must be a valid index into the &lt;code>constant_pool&lt;/code> table. The &lt;code>constant_pool&lt;/code> entry at that index must contain a &lt;code>CONSTANT_Utf8_info&lt;/code> structure (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.7">§4.4.7&lt;/a>) representing a valid unqualified name denoting a local variable (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.2.2">§4.2.2&lt;/a>).&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>descriptor_index&lt;/p>
-&lt;p>The value of the &lt;code>descriptor_index&lt;/code> item must be a valid index into the &lt;code>constant_pool&lt;/code> table. The &lt;code>constant_pool&lt;/code> entry at that index must contain a &lt;code>CONSTANT_Utf8_info&lt;/code> structure (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.7">§4.4.7&lt;/a>) representing a field descriptor which encodes the type of a local variable in the source program (&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3.2">§4.3.2&lt;/a>).&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>index&lt;/p>
-&lt;p>The given local variable must be at &lt;code>index&lt;/code> in the local variable array of the current frame.If the local variable at &lt;code>index&lt;/code> is of type &lt;code>double&lt;/code> or &lt;code>long&lt;/code>, it occupies both &lt;code>index&lt;/code> and &lt;code>index + 1&lt;/code>.&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;p>行号表分为X列：&lt;/p>
-&lt;p>列1是&lt;strong>局部变量在JVM指令序列的索引(start_pc)&lt;/strong>&lt;/p>
-&lt;p>列2是&lt;strong>局部变量在JVM指令序列偏移量(length)&lt;/strong>&lt;/p>
-&lt;p>列3是&lt;strong>局部变量名在常量池中的索引&lt;/strong>&lt;/p>
-&lt;p>列4是&lt;strong>局部变量类型&lt;/strong>&lt;/p>
-&lt;p>列5是&lt;strong>局部变量槽位&lt;/strong>——这里涉及到槽位重用问题，笔者将在讲解虚拟机栈的后续章节展开。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/35.png" alt="image-20201214105609730">&lt;/p>
-&lt;p>我们将前文解读的JVM指令序列、Demo2的hello方法的源代码，与行号表的字节码对比，可以看到：&lt;/p>
-&lt;p>局部变量表第1行数据：表示局部变量this，类型为Demo2，作用域hello整个函数。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/36.png" alt="image-20201214112254032">&lt;/p>
-&lt;p>局部变量表第2行数据：表示局部变量i，类型为int，作用域hello函数的**&amp;ldquo;int i =1&amp;quot;语句后**，**“return”语句前**。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/37.png" alt="image-20201214112737327">&lt;/p>
-&lt;h1 id="5总结jvm如何描述一个方法的内部实现">5.总结：JVM如何描述一个方法的内部实现?&lt;/h1>
-&lt;p>根据Demo2演练代码，JVM描述了如下信息：&lt;/p>
-&lt;h2 id="51三大重要信息的转换与存储">5.1.三大重要信息的转换与存储&lt;/h2>
-&lt;ul>
-&lt;li>在&lt;strong>虚拟机栈&lt;/strong>中，为hello方法开辟了一个&lt;strong>栈帧&lt;/strong>&lt;/li>
-&lt;li>将源代码转换为&lt;strong>JVM指令序列&lt;/strong>，存储在&lt;strong>栈帧的Code属性&lt;/strong>中&lt;/li>
-&lt;li>将局部变量存储在&lt;strong>栈帧的局部变量表&lt;/strong>中&lt;/li>
-&lt;li>将源代码和JVM指令序列&lt;strong>位置映射关系&lt;/strong>，&lt;strong>存储在栈帧的行号表&lt;/strong>中&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/38.png" alt="image-20201214120538585">&lt;/p>
-&lt;h2 id="52随着jvm指令序列执行动态刷新内存栈帧">5.2.随着JVM指令序列执行，动态刷新内存(栈帧)&lt;/h2>
-&lt;ul>
-&lt;li>当逻辑代码&lt;strong>int i =1&lt;/strong>执行时，栈帧中JVM指令序列执行到3C处，局部变量i被赋值为1；&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/39.png" alt="image-20201214121148759">&lt;/p>
-&lt;ul>
-&lt;li>当逻辑代码&lt;strong>System.out.println(&amp;ldquo;hello world&amp;rdquo;)&lt;strong>语句执行时，栈帧中JVM指令序列执行到&lt;/strong>05&lt;/strong>处，打印了常量池中&amp;quot;hello world&amp;quot;字符串；&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/40.png" alt="image-20201214121349494">&lt;/p>
-&lt;p>上述过程，引出了JVM运行时数据区中的栈区以及内存结构。读者可以参考笔者这篇文章《【运行时数据区】用仓库管理员的视角理解运行时数据区》&lt;/p>
-&lt;h1 id="6再看阅读字节码">6.再看阅读字节码&lt;/h1>
-&lt;p>笔者在文章开头写了那个&amp;quot;牛逼程序猿看着一堆16进制致敬女神&amp;quot;的段子，但是头条不让开车就删掉了O(∩_∩)O~&lt;/p>
-&lt;p>虽然我们不追求段子中的效果，但阅读字节码，的确是程序猿技术深度的重要体现。&lt;/p>
-&lt;p>如果您耐心的将笔者的4篇文章阅读完，&lt;/p>
-&lt;ul>
-&lt;li>《【编译引擎】学习阅读Class文件结构的意义》&lt;/li>
-&lt;li>《【编译引擎】学习阅读Class文件结构(16进制版)-上》&lt;/li>
-&lt;li>《【编译引擎】学习阅读Class文件结构(16进制版)-中》&lt;/li>
-&lt;li>《【编译引擎】学习阅读Class文件结构(16进制版)-下》&lt;/li>
-&lt;/ul>
-&lt;p>我们可以再来看看能够阅读字节码的Java程序猿，将具备哪些&amp;quot;一般码农&amp;quot;缺乏的能力：&lt;/p>
-&lt;h2 id="61能够从更深的深度理解java的语言语法特性">6.1.能够从更深的深度，理解Java的语言语法特性&lt;/h2>
-&lt;p>当您看到《Effective Java》、《阿里编程规范》等编程规范、高效编程实践的时候，&lt;/p>
-&lt;p>不了解Java字节码的码农，是这样的思维：&lt;/p>
-&lt;blockquote>
-&lt;p>因为规范禁止我们这样做，所以我在实战中的代码一定不会这样写。&lt;/p>
-&lt;/blockquote>
-&lt;p>而了解Java字节码的程序猿，是这样的思维：&lt;/p>
-&lt;blockquote>
-&lt;p>为什么规范要禁止我们这样做，我要看看JVM指令序列，看看JVM是如何处理的。&lt;/p>
-&lt;/blockquote>
-&lt;p>例如：规范中禁止&lt;strong>count=count++这种语句&lt;/strong>，&lt;/p>
-&lt;p>不了解Java字节码的码农，只能死记硬背；&lt;/p>
-&lt;p>而了解Java字节码的程序猿，就可以查看JVM指令序列。&lt;/p>
-&lt;h2 id="62能够提供性能优化的高维打击手段">6.2.能够提供性能优化的高维打击手段&lt;/h2>
-&lt;p>在Spring源码中，有很多细节代码，下图摘自知乎的一个帖子：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(16%E8%BF%9B%E5%88%B6%E7%89%88)-%E4%B8%8B/41.png" alt="image-20201214123137927">&lt;/p>
-&lt;p>如果不了解字节码，您肯定想不到第2行的代码，居然会对性能优化产生一定的帮助。&lt;/p>
-&lt;p>谢谢各位读者！&lt;/p></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>

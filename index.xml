@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Feb 2023 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Feb 2023 08:07:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,169 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【SpringOne 2022】4.Running Untrusted Code in Spring Using WebAssembly</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</link><pubDate>Thu, 09 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</guid><description>&lt;p>SpringOne 2022第4个议题《Running Untrusted Code in Spring Using WebAssembly》，主要在介绍WebAssembly的Host和Guest，引申出Spring结合WebAssembly的一些展望，演讲者：Dave Syer。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</guid><description>&lt;h1 id="1为什么要理解进程与线程的关系">1.为什么要理解进程与线程的关系？&lt;/h1>
+&lt;blockquote>
+&lt;p>A process will contain at least one thread, which is created to execute the point of entry of the application.&lt;/p>
+&lt;p>Usually this entry point is the main() function of the application.&lt;/p>
+&lt;/blockquote>
+&lt;p>引用《Learning Concurrency in Kotlin》书中的一段话，它阐述了进程与线程的关系。&lt;/p>
+&lt;p>为什么要理解进程与线程的关系呢？因为理解了进程与线程的关系有利于我们定位问题。&lt;/p>
+&lt;p>比如：当生产环境出现高CPU占用时，我们通常需要先找到高CPU占用的进程，再找到该进程下高CPU占用的线程。&lt;/p>
+&lt;h1 id="2一个java进程会产生几个线程">2.一个Java进程，会产生几个线程?&lt;/h1>
+&lt;p>我们回到Java本身，我们引出这样1个问题：&lt;strong>执行&amp;quot;1个Java进程，会产生几个线程呢？&amp;quot;&lt;/strong>&lt;/p>
+&lt;p>我们有2种方式观测：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从JVM层观测&lt;/strong>：通过JDK自带的工具(如：jps、jstack等)，通过IDE的调试工具(如：IDEA的debug视图)。&lt;/li>
+&lt;li>&lt;strong>从操作系统层观测&lt;/strong>：通过操作系统工具(如：ps、top等)&lt;/li>
+&lt;/ul>
+&lt;h1 id="3从jvm层观测">3.从JVM层观测&lt;/h1>
+&lt;h2 id="31测试代码">3.1.测试代码&lt;/h2>
+&lt;p>首先，我们先用一段简单的代码——这段代码只有1个main函数，main函数中打印了&lt;code>Hello world...&lt;/code>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165720496.png" alt="image-20230203165720496">&lt;/p>
+&lt;p>我们在IDEA中做个测试——在14行处打个断点，测试结果可以看到有该Java进程产生了5个线程：&lt;/p>
+&lt;ul>
+&lt;li>main线程&lt;/li>
+&lt;li>Attach Listener线程&lt;/li>
+&lt;li>Finalizer线程&lt;/li>
+&lt;li>Reference Handler线程&lt;/li>
+&lt;li>Signal Dispatcher线程&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165533977.png" alt="image-20230203165533977">&lt;/p>
+&lt;h2 id="32测试代码改进">3.2.测试代码改进&lt;/h2>
+&lt;p>为了方便观测，我们修改一下测试代码——通过&lt;code>Thread.getAllStackTraces()&lt;/code>在main函数中打印出该Java进程包含的线程：&lt;/p>
+&lt;ul>
+&lt;li>通过&lt;code>Thread.getAllStackTraces()&lt;/code>，可以让我们在命令行中，也能方便地观察测试结果。&lt;/li>
+&lt;li>&lt;code>Thread.sleep(Integer.MAX_VALUE)&lt;/code>可以持续阻塞住该进程，方便观察。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135454957.png" alt="image-20230204135454957">&lt;/p>
+&lt;p>这里补充说明一下&lt;code>Thread.getAllStackTraces()&lt;/code>方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>getAllStackTraces()&lt;/code>是&lt;code>java.lang.Thread&lt;/code>类的静态方法&lt;/li>
+&lt;li>首先，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>getThreads()&lt;/code>，获得JVM上当前进程包含的所有线程对象&lt;code>threads&lt;/code>&lt;/li>
+&lt;li>然后，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>dumpThreads()&lt;/code>，将所有线程对象&lt;code>threads&lt;/code>转换为&lt;code>StackTraceElement[][]&lt;/code>&lt;/li>
+&lt;li>最后，此方法将&lt;code>StackTraceElement[][]&lt;/code>转换为&lt;code>Map&lt;/code>，该Map的key就是该线程包含的1个线程对象&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135619621.png" alt="image-20230204135619621">&lt;/p>
+&lt;h1 id="4从操作系统层观测">4.从操作系统层观测&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>首先，我们在Linux上运行起来2.2中的测试代码，&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>然后，通过&lt;strong>&lt;code>ps -ef | grep java&lt;/code>&lt;/strong>命令查看该Java进程信息——该Java进程的进程号是6526：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142512012.png" alt="image-20230204142512012">&lt;/p>
+&lt;ul>
+&lt;li>然后，通过&lt;strong>&lt;code>top -H -p 6526&lt;/code>&lt;/strong>查看该Java进程下的线程信息——该Java进程下包含了&lt;strong>15个线程&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142900818.png" alt="image-20230204142900818">&lt;/p>
+&lt;h1 id="5不一致的观测结果说明了什么">5.不一致的观测结果，说明了什么?&lt;/h1>
+&lt;p>从JVM层观测，我们看到被测的这个Java进程包含了5个线程：&lt;/p>
+&lt;ul>
+&lt;li>main线程&lt;/li>
+&lt;li>Attach Listener线程&lt;/li>
+&lt;li>Finalizer线程&lt;/li>
+&lt;li>Reference Handler线程&lt;/li>
+&lt;li>Signal Dispatcher线程&lt;/li>
+&lt;/ul>
+&lt;p>从操作系统层观测，我们看到同1个被测的Java进程包含了15个线程：&lt;/p>
+&lt;ul>
+&lt;li>PID：6527&lt;/li>
+&lt;li>PID：6531&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;li>PID：6544&lt;/li>
+&lt;/ul>
+&lt;p>通过上述不一致的观测结果，我们可以产生两个推论：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
+&lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
+&lt;/ul>
+&lt;h1 id="6验证推论">6.验证推论&lt;/h1>
+&lt;p>在JVM层观测得到的4个线程，其中的&lt;code>main&lt;/code>线程比较单纯(就是Java测试代码中main函数所在的主线程)，相比其它线程(如：&lt;code>Finalizer&lt;/code>线程)更单纯，因此我们可以跟踪JVM源码中的main函数：&lt;/p>
+&lt;h2 id="step1通过执行测试代码进入jvm的main函数">STEP1.通过执行测试代码进入JVM的main函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144631761.png" alt="image-20230204144631761">&lt;/p>
+&lt;h2 id="step2进入jli_launch函数">STEP2.进入JLI_Launch函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144827592.png" alt="image-20230204144827592">&lt;/p>
+&lt;ul>
+&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145133920.png" alt="image-20230204145133920">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145221020.png" alt="image-20230204145221020">&lt;/p>
+&lt;h2 id="step3执行loadjavavm函数">STEP3.执行LoadJavaVM函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145333363.png" alt="image-20230204145333363">&lt;/p>
+&lt;ul>
+&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下依然只包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
+&lt;/ul>
+&lt;h2 id="step4执行jvminit函数">STEP4.执行JVMInit函数&lt;/h2>
+&lt;p>此时，可以看到1个函数名&lt;code>ContinueInNewThread&lt;/code>，疑似JVM准备创建新的系统线程。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145550135.png" alt="image-20230204145550135">&lt;/p>
+&lt;h2 id="step5执行continueinnewthread函数">STEP5.执行ContinueInNewThread函数&lt;/h2>
+&lt;p>此函数会进一步调用&lt;code>ContinueInNewThread0()&lt;/code>函数，疑似JVM在这个函数中会创建新的系统线程。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145738721.png" alt="image-20230204145738721">&lt;/p>
+&lt;h2 id="step6执行continueinnewthread0函数">STEP6.执行ContinueInNewThread0函数&lt;/h2>
+&lt;ul>
+&lt;li>在此，我们终于看到了JVM调用了Linux系统API&lt;code>pthread&lt;/code>系列函数来创建系统线程&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145917391.png" alt="image-20230204145917391">&lt;/p>
+&lt;ul>
+&lt;li>我们执行到1013行，&lt;code>pthread_create&lt;/code>函数，再来观察操作系统，此时产生了1个新的系统线程(线程ID=6840)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150109863.png" alt="image-20230204150109863">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150126981.png" alt="image-20230204150126981">&lt;/p>
+&lt;h2 id="step7在新的系统线程中会回调到javamain函数">STEP7.在新的系统线程中会回调到JavaMain函数&lt;/h2>
+&lt;ul>
+&lt;li>JVM通过pthread创建新的系统线程后，该系统线程会执行&lt;code>JavaMain函数&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150329012.png" alt="image-20230204150329012">&lt;/p>
+&lt;ul>
+&lt;li>在&lt;code>JavaMain&lt;/code>函数中，会继续执行&lt;code>InitializeJVM&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150518536.png" alt="image-20230204150518536">&lt;/p>
+&lt;h2 id="step8执行initializejvm函数">STEP8.执行&lt;code>InitializeJVM&lt;/code>函数&lt;/h2>
+&lt;ul>
+&lt;li>此函数会进一步执行&lt;code>libjvm.so&lt;/code>中的&lt;code>CreateJavaVM&lt;/code>函数&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150918046.png" alt="image-20230204150918046">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>CreateJavaVM&lt;/code>函数调用栈很深，我们直接执行这个函数，查看此时操作系统中，Java进程下的系统线程，此时JVM已经在操作系统中创建了13个新的系统线程：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
+&lt;h2 id="step9执行回到javamain函数">STEP9.执行回到JavaMain函数&lt;/h2>
+&lt;ul>
+&lt;li>JVM执行&lt;code>LoadMainClass&lt;/code>函数和&lt;code>GetStaticMethodID&lt;/code>函数，获得Java侧的main函数所在的类和main函数Id。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151238640.png" alt="image-20230204151238640">&lt;/p>
+&lt;ul>
+&lt;li>JVM通过JNI接口，调用Java代码中的main函数，Java代码打印出4个Java进程下包含的&lt;code>Java线程&lt;/code>：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明：在不同IDE下，Run模式和Debug模式打印的Java线程是有差异的。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151535458.png" alt="image-20230204151535458">&lt;/p>
+&lt;ul>
+&lt;li>此时，操作系统层，这个Java进程包含的&lt;code>系统线程&lt;/code>依然为15个：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
+&lt;h1 id="7结论">7.结论&lt;/h1>
+&lt;p>通过6中跟踪JVM的main函数执行过程，可知：&lt;/p>
+&lt;ul>
+&lt;li>JVM在执行被测Java代码的&lt;code>java xxxx&lt;/code>命令时，在操作系统层产生了&lt;code>1个java进程&lt;/code>JVM会在它的main函数中，通过系统API创建&lt;code>系统线程&lt;/code>(如：Linux下的&lt;code>pthread&lt;/code>库)&lt;/li>
+&lt;li>JVM在该java进程内，第1个创建的&lt;code>系统线程&lt;/code>是用来执行Java侧代码的main函数的。
+&lt;ul>
+&lt;li>在这个系统线程内，JVM先初始化JVM，此时会产生新的系统线程。&lt;/li>
+&lt;li>在这个系统线程内，JVM再通过JNI接口得到Java侧代码的main函数以及main函数所在的类，并执行Java侧代码的main函数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>因此，证明了我们的推论1：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
+&lt;/ul>
+&lt;h1 id="8下一步">8.下一步&lt;/h1>
+&lt;p>对于推论2，需要进一步分析JVM的main函数执行流程，本文篇幅有限，且听下回分解。&lt;/p>
+&lt;p>笔者先附上JVM的main函数执行流程，便于展开下一篇论述：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/JVM%E7%9A%84main%E5%87%BD%E6%95%B0%E6%B5%81%E7%A8%8B.png" alt="JVM的main函数流程">&lt;/p></description></item><item><title>【SpringOne 2022】4.Running Untrusted Code in Spring Using WebAssembly</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</link><pubDate>Thu, 09 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</guid><description>&lt;p>SpringOne 2022第4个议题《Running Untrusted Code in Spring Using WebAssembly》，主要在介绍WebAssembly的Host和Guest，引申出Spring结合WebAssembly的一些展望，演讲者：Dave Syer。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209102504607.png" alt="image-20230209102504607">&lt;/p>
 &lt;h1 id="1what-is-webassembly">1.What is WebAssembly?&lt;/h1>
 &lt;ul>
@@ -259,169 +421,256 @@
 &lt;ul>
 &lt;li>在本议题，演讲者Cora lberkleid展示了&lt;code>Spring Cloud Gateway&lt;/code>的原理和Demo。&lt;/li>
 &lt;li>&lt;code>Spring Cloud Gateway&lt;/code>采用&amp;rdquo;&lt;strong>断言=&amp;gt;过滤器链=&amp;gt;转发&lt;/strong>&amp;ldquo;的思想实现了API网关，开发效率不错。&lt;/li>
-&lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</link><pubDate>Sat, 04 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</guid><description>&lt;h1 id="1为什么要理解进程与线程的关系">1.为什么要理解进程与线程的关系？&lt;/h1>
-&lt;blockquote>
-&lt;p>A process will contain at least one thread, which is created to execute the point of entry of the application.&lt;/p>
-&lt;p>Usually this entry point is the main() function of the application.&lt;/p>
-&lt;/blockquote>
-&lt;p>引用《Learning Concurrency in Kotlin》书中的一段话，它阐述了进程与线程的关系。&lt;/p>
-&lt;p>为什么要理解进程与线程的关系呢？因为理解了进程与线程的关系有利于我们定位问题。&lt;/p>
-&lt;p>比如：当生产环境出现高CPU占用时，我们通常需要先找到高CPU占用的进程，再找到该进程下高CPU占用的线程。&lt;/p>
-&lt;h1 id="2一个java进程会产生几个线程">2.一个Java进程，会产生几个线程?&lt;/h1>
-&lt;p>我们回到Java本身，我们引出这样1个问题：&lt;strong>执行&amp;quot;1个Java进程，会产生几个线程呢？&amp;quot;&lt;/strong>&lt;/p>
-&lt;p>我们有2种方式观测：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从JVM层观测&lt;/strong>：通过JDK自带的工具(如：jps、jstack等)，通过IDE的调试工具(如：IDEA的debug视图)。&lt;/li>
-&lt;li>&lt;strong>从操作系统层观测&lt;/strong>：通过操作系统工具(如：ps、top等)&lt;/li>
-&lt;/ul>
-&lt;h1 id="3从jvm层观测">3.从JVM层观测&lt;/h1>
-&lt;h2 id="31测试代码">3.1.测试代码&lt;/h2>
-&lt;p>首先，我们先用一段简单的代码——这段代码只有1个main函数，main函数中打印了&lt;code>Hello world...&lt;/code>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165720496.png" alt="image-20230203165720496">&lt;/p>
-&lt;p>我们在IDEA中做个测试——在14行处打个断点，测试结果可以看到有该Java进程产生了5个线程：&lt;/p>
-&lt;ul>
-&lt;li>main线程&lt;/li>
-&lt;li>Attach Listener线程&lt;/li>
-&lt;li>Finalizer线程&lt;/li>
-&lt;li>Reference Handler线程&lt;/li>
-&lt;li>Signal Dispatcher线程&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165533977.png" alt="image-20230203165533977">&lt;/p>
-&lt;h2 id="32测试代码改进">3.2.测试代码改进&lt;/h2>
-&lt;p>为了方便观测，我们修改一下测试代码——通过&lt;code>Thread.getAllStackTraces()&lt;/code>在main函数中打印出该Java进程包含的线程：&lt;/p>
-&lt;ul>
-&lt;li>通过&lt;code>Thread.getAllStackTraces()&lt;/code>，可以让我们在命令行中，也能方便地观察测试结果。&lt;/li>
-&lt;li>&lt;code>Thread.sleep(Integer.MAX_VALUE)&lt;/code>可以持续阻塞住该进程，方便观察。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135454957.png" alt="image-20230204135454957">&lt;/p>
-&lt;p>这里补充说明一下&lt;code>Thread.getAllStackTraces()&lt;/code>方法：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>getAllStackTraces()&lt;/code>是&lt;code>java.lang.Thread&lt;/code>类的静态方法&lt;/li>
-&lt;li>首先，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>getThreads()&lt;/code>，获得JVM上当前进程包含的所有线程对象&lt;code>threads&lt;/code>&lt;/li>
-&lt;li>然后，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>dumpThreads()&lt;/code>，将所有线程对象&lt;code>threads&lt;/code>转换为&lt;code>StackTraceElement[][]&lt;/code>&lt;/li>
-&lt;li>最后，此方法将&lt;code>StackTraceElement[][]&lt;/code>转换为&lt;code>Map&lt;/code>，该Map的key就是该线程包含的1个线程对象&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135619621.png" alt="image-20230204135619621">&lt;/p>
-&lt;h1 id="4从操作系统层观测">4.从操作系统层观测&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>首先，我们在Linux上运行起来2.2中的测试代码，&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>然后，通过&lt;strong>&lt;code>ps -ef | grep java&lt;/code>&lt;/strong>命令查看该Java进程信息——该Java进程的进程号是6526：&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142512012.png" alt="image-20230204142512012">&lt;/p>
-&lt;ul>
-&lt;li>然后，通过&lt;strong>&lt;code>top -H -p 6526&lt;/code>&lt;/strong>查看该Java进程下的线程信息——该Java进程下包含了&lt;strong>15个线程&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142900818.png" alt="image-20230204142900818">&lt;/p>
-&lt;h1 id="5不一致的观测结果说明了什么">5.不一致的观测结果，说明了什么?&lt;/h1>
-&lt;p>从JVM层观测，我们看到被测的这个Java进程包含了5个线程：&lt;/p>
-&lt;ul>
-&lt;li>main线程&lt;/li>
-&lt;li>Attach Listener线程&lt;/li>
-&lt;li>Finalizer线程&lt;/li>
-&lt;li>Reference Handler线程&lt;/li>
-&lt;li>Signal Dispatcher线程&lt;/li>
-&lt;/ul>
-&lt;p>从操作系统层观测，我们看到同1个被测的Java进程包含了15个线程：&lt;/p>
-&lt;ul>
-&lt;li>PID：6527&lt;/li>
-&lt;li>PID：6531&lt;/li>
-&lt;li>&amp;hellip;&lt;/li>
-&lt;li>PID：6544&lt;/li>
-&lt;/ul>
-&lt;p>通过上述不一致的观测结果，我们可以产生两个推论：&lt;/p>
+&lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 04 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
 &lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
 &lt;/ul>
-&lt;h1 id="6验证推论">6.验证推论&lt;/h1>
-&lt;p>在JVM层观测得到的4个线程，其中的&lt;code>main&lt;/code>线程比较单纯(就是Java测试代码中main函数所在的主线程)，相比其它线程(如：&lt;code>Finalizer&lt;/code>线程)更单纯，因此我们可以跟踪JVM源码中的main函数：&lt;/p>
-&lt;h2 id="step1通过执行测试代码进入jvm的main函数">STEP1.通过执行测试代码进入JVM的main函数&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144631761.png" alt="image-20230204144631761">&lt;/p>
-&lt;h2 id="step2进入jli_launch函数">STEP2.进入JLI_Launch函数&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144827592.png" alt="image-20230204144827592">&lt;/p>
+&lt;p>本文跟踪&amp;rdquo;&lt;strong>JVM启动后，产生的JVM侧的main线程与java侧的main线程&lt;/strong>&amp;ldquo;的代码，来分析推论2。&lt;/p>
+&lt;h1 id="1jvm相关的代码">1.JVM相关的代码&lt;/h1>
+&lt;p>JVM启动后，会产生如下现象：&lt;/p>
 &lt;ul>
-&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
+&lt;li>
+&lt;p>JVM本身会产生一系列的系统线程，其中1个线程表示JVM进程的main线程，这个可以通过操作系统层的工具观测到。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JVM在产生操作系统层面的main线程时，会在Java层产生对等的main线程，这个可以通过JDK的工具观测到。&lt;/p>
+&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145133920.png" alt="image-20230204145133920">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145221020.png" alt="image-20230204145221020">&lt;/p>
-&lt;h2 id="step3执行loadjavavm函数">STEP3.执行LoadJavaVM函数&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145333363.png" alt="image-20230204145333363">&lt;/p>
+&lt;p>与上述流程相关的JVM源码，如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211163049820.png" alt="image-20230211163049820">&lt;/p>
 &lt;ul>
-&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下依然只包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
+&lt;li>&lt;strong>main.c&lt;/strong>：JVM的入口模块&lt;/li>
+&lt;li>&lt;strong>javac.c&lt;/strong>：提供了java相关的接口&lt;/li>
+&lt;li>&lt;strong>java_md_solinux.c&lt;/strong>：可以简单地认为是java.c中一系列接口在Linux操作系统的实现*(为聚焦本文关注点，简化描述但不严谨)*&lt;/li>
+&lt;li>&lt;strong>jni.cpp&lt;/strong>：JVM层(C++语言实现)与JDK层(Java语言实现)之间的接口
+&lt;ul>
+&lt;li>比如：JDK中很多native接口，可以认为是JVM层与JDK层之间的接口&lt;/li>
 &lt;/ul>
-&lt;h2 id="step4执行jvminit函数">STEP4.执行JVMInit函数&lt;/h2>
-&lt;p>此时，可以看到1个函数名&lt;code>ContinueInNewThread&lt;/code>，疑似JVM准备创建新的系统线程。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145550135.png" alt="image-20230204145550135">&lt;/p>
-&lt;h2 id="step5执行continueinnewthread函数">STEP5.执行ContinueInNewThread函数&lt;/h2>
-&lt;p>此函数会进一步调用&lt;code>ContinueInNewThread0()&lt;/code>函数，疑似JVM在这个函数中会创建新的系统线程。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145738721.png" alt="image-20230204145738721">&lt;/p>
-&lt;h2 id="step6执行continueinnewthread0函数">STEP6.执行ContinueInNewThread0函数&lt;/h2>
-&lt;ul>
-&lt;li>在此，我们终于看到了JVM调用了Linux系统API&lt;code>pthread&lt;/code>系列函数来创建系统线程&lt;/li>
+&lt;/li>
+&lt;li>&lt;strong>thread.cpp&lt;/strong>：提供了线程的CRUD相关的接口&lt;/li>
+&lt;li>&lt;strong>os_linux.cpp&lt;/strong>：可以简单地认为是thread.cpp中一系列接口在Linux操作系统的实现*(为聚焦本文关注点，简化描述但不严谨)*&lt;/li>
+&lt;li>&lt;strong>vmThread.cpp&lt;/strong>：比较杂，可以认为是辅助的线程管理模块&lt;/li>
+&lt;li>&lt;strong>java_md_common.c&lt;/strong>：比较杂，可以认为是诸如解析java.exe的命令行参数解析等的辅助功能*(为聚焦本文关注点，简化描述但不严谨)&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145917391.png" alt="image-20230204145917391">&lt;/p>
+&lt;h1 id="2jvm的开始-main函数">2.JVM的开始-main函数&lt;/h1>
 &lt;ul>
-&lt;li>我们执行到1013行，&lt;code>pthread_create&lt;/code>函数，再来观察操作系统，此时产生了1个新的系统线程(线程ID=6840)&lt;/li>
+&lt;li>&lt;strong>关键源码&lt;/strong>：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150109863.png" alt="image-20230204150109863">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150126981.png" alt="image-20230204150126981">&lt;/p>
-&lt;h2 id="step7在新的系统线程中会回调到javamain函数">STEP7.在新的系统线程中会回调到JavaMain函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211163936994.png" alt="image-20230211163936994">&lt;/p>
 &lt;ul>
-&lt;li>JVM通过pthread创建新的系统线程后，该系统线程会执行&lt;code>JavaMain函数&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>代码解读：&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>JVM的入口&lt;/strong>：main.c中有&lt;code>main&lt;/code>函数，这就是JVM的入口&lt;/li>
+&lt;li>&lt;strong>&lt;code>main&lt;/code>函数的主体代码不关键&lt;/strong>：&lt;code>main&lt;/code>函数主体代码就是适配不同操作系统的业务逻辑，这部分不关键&lt;/li>
+&lt;li>&lt;strong>&lt;code>main&lt;/code>函数最后1行代码是关键&lt;/strong>：调用了java.c的&lt;code>JLI_launch&lt;/code>函数&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150329012.png" alt="image-20230204150329012">&lt;/p>
-&lt;ul>
-&lt;li>在&lt;code>JavaMain&lt;/code>函数中，会继续执行&lt;code>InitializeJVM&lt;/code>函数。&lt;/li>
+&lt;/li>
+&lt;li>&lt;strong>小结&lt;/strong>：从这一段代码我们可以覆盖了下图红框中的流程&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150518536.png" alt="image-20230204150518536">&lt;/p>
-&lt;h2 id="step8执行initializejvm函数">STEP8.执行&lt;code>InitializeJVM&lt;/code>函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211164732122.png" alt="image-20230211164732122">&lt;/p>
+&lt;h1 id="3初现端倪-jli_launch函数">3.初现端倪-JLI_Launch函数&lt;/h1>
+&lt;h2 id="31jli_launch函数主流程">3.1.JLI_Launch函数主流程&lt;/h2>
 &lt;ul>
-&lt;li>此函数会进一步执行&lt;code>libjvm.so&lt;/code>中的&lt;code>CreateJavaVM&lt;/code>函数&lt;/li>
+&lt;li>&lt;code>JLI_Launch&lt;/code>函数的主流程如下图红色线：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150918046.png" alt="image-20230204150918046">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211165705460.png" alt="image-20230211165705460">&lt;/p>
 &lt;ul>
-&lt;li>&lt;code>CreateJavaVM&lt;/code>函数调用栈很深，我们直接执行这个函数，查看此时操作系统中，Java进程下的系统线程，此时JVM已经在操作系统中创建了13个新的系统线程：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
-&lt;h2 id="step9执行回到javamain函数">STEP9.执行回到JavaMain函数&lt;/h2>
+&lt;li>&lt;strong>流程粗读&lt;/strong>：笔者先宏观性地理解一下上述流程
 &lt;ul>
-&lt;li>JVM执行&lt;code>LoadMainClass&lt;/code>函数和&lt;code>GetStaticMethodID&lt;/code>函数，获得Java侧的main函数所在的类和main函数Id。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151238640.png" alt="image-20230204151238640">&lt;/p>
-&lt;ul>
-&lt;li>JVM通过JNI接口，调用Java代码中的main函数，Java代码打印出4个Java进程下包含的&lt;code>Java线程&lt;/code>：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明：在不同IDE下，Run模式和Debug模式打印的Java线程是有差异的。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151535458.png" alt="image-20230204151535458">&lt;/p>
-&lt;ul>
-&lt;li>此时，操作系统层，这个Java进程包含的&lt;code>系统线程&lt;/code>依然为15个：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
-&lt;h1 id="7结论">7.结论&lt;/h1>
-&lt;p>通过6中跟踪JVM的main函数执行过程，可知：&lt;/p>
-&lt;ul>
-&lt;li>JVM在执行被测Java代码的&lt;code>java xxxx&lt;/code>命令时，在操作系统层产生了&lt;code>1个java进程&lt;/code>JVM会在它的main函数中，通过系统API创建&lt;code>系统线程&lt;/code>(如：Linux下的&lt;code>pthread&lt;/code>库)&lt;/li>
-&lt;li>JVM在该java进程内，第1个创建的&lt;code>系统线程&lt;/code>是用来执行Java侧代码的main函数的。
-&lt;ul>
-&lt;li>在这个系统线程内，JVM先初始化JVM，此时会产生新的系统线程。&lt;/li>
-&lt;li>在这个系统线程内，JVM再通过JNI接口得到Java侧代码的main函数以及main函数所在的类，并执行Java侧代码的main函数。&lt;/li>
+&lt;li>&lt;strong>流程开始&lt;/strong>：JVM的&lt;code>main&lt;/code>函数初始化JVM的环境，这部分在整体流程中属于&lt;strong>辅助流程&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>流程核心1&lt;/strong>：加载真正的JVM，JVM核心代码是编译到&lt;code>libjvm.so&lt;/code>中的，这部分是整体流程的&lt;strong>重要流程&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>辅助流程&lt;/strong>：完成&lt;strong>流程核心1&lt;/strong>后，JVM做了一些辅助任务，这部分是整体流程的&lt;strong>辅助流程&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>流程核心2&lt;/strong>：创建新的线程，这部分也是整体流程的&lt;strong>重要流程&lt;/strong>。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>因此，证明了我们的推论1：&lt;/p>
+&lt;h2 id="32初始化执行环境">3.2.初始化执行环境&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>关键代码&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211165052590.png" alt="image-20230211165052590">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211171604091.png" alt="image-20230211171604091">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>代码解读&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>在&lt;code>CreateExecutionEnvironment&lt;/code>函数位于&lt;code>java_md_solinux.c&lt;/code>中。&lt;/li>
+&lt;li>此函数检索并判断jre的路径、libjvm.so路径、jvm.cfg路径。jre是大家比较熟悉的，我们来看看libjvm.so和jvm.cfg&lt;/li>
+&lt;li>jvm的核心代码被编译到libjvm.so中，以动态库的形式提供给JVM各模块调用。&lt;/li>
+&lt;li>jvm.cfg内容如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211171140542.png" alt="image-20230211171140542">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>小结&lt;/strong>：这部分流程不太关键，快速了解即可&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211171303745.png" alt="image-20230211171303745">&lt;/p>
+&lt;h2 id="33加载jvm">3.3.加载JVM&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>关键代码&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211171659120.png" alt="image-20230211171659120">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211171711846.png" alt="image-20230211171711846">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>代码解读&lt;/strong>：在java_md_solinux.c的&lt;code>LoadJavaVM&lt;/code>函数有关键的2步&lt;/p>
+&lt;ul>
+&lt;li>关键1：通过&lt;code>dlopen&lt;/code>函数加载&lt;code>libjvm.so&lt;/code>动态库。&lt;/li>
+&lt;li>关键2：通过&lt;code>dlsym&lt;/code>函数确认并获得&lt;code>libjvm.so&lt;/code>中的3个函数句柄，通过这3个函数句柄的名字大致可知是对JVM的创建和获取：
+&lt;ul>
+&lt;li>JNI_CreateJavaVM&lt;/li>
+&lt;li>JNI_GetDefaultJavaVMInitArgs&lt;/li>
+&lt;li>JNI_GetCreatedJavaVMs&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>小结：此段流程是后续流程的基础，可以跟踪一下JVM源码详细理解一下：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211172256201.png" alt="image-20230211172256201">&lt;/p>
+&lt;h2 id="34javaexe的参数配置等辅助设置">3.4.java.exe的参数/配置等辅助设置&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>关键代码&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211172956425.png" alt="image-20230211172956425">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211173009296.png" alt="image-20230211173009296">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211173022693.png" alt="image-20230211173022693">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211173033605.png" alt="image-20230211173033605">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211173046878.png" alt="image-20230211173046878">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211173056715.png" alt="image-20230211173056715">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>代码解读&lt;/strong>：这部分代码属于辅助流程，根据上述代码截图，基本可以自行理解，此处不赘述&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>小结&lt;/strong>：代码阅读理解到这里，我们当前在流程的这个地方(下图红线处)：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211173252080.png" alt="image-20230211173252080">&lt;/p>
+&lt;h2 id="34创建新线程">3.4.创建新线程&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>关键代码&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211222347685.png" alt="image-20230211222347685">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211222409464.png" alt="image-20230211222409464">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211223134192.png" alt="image-20230211223134192">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>代码解读&lt;/strong>：
+&lt;ul>
+&lt;li>当流程执行到java_md_solinux.c的&lt;code>JVMInit&lt;/code>函数时，内部会调用java.c的&lt;code>ContinueInNewThread&lt;/code>函数&lt;/li>
+&lt;li>java.c的&lt;code>ContinueInNewThread&lt;/code>函数会调用java_md_solinux.c的&lt;code>ContinueInNewThread&lt;/code>函数&lt;/li>
+&lt;li>java_md_solinux.c的&lt;code>ContinueInNewThread0&lt;/code>函数的内部实现便是创建系统线程、Java线程的关键点了
+&lt;ul>
+&lt;li>此函数调用&lt;code>pthread&lt;/code>库函数，创建Linux上的系统线程，这个就是JVM进程中的main线程&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>小结&lt;/strong>：本章节解读到下图红色线的流程，至此，我们就找到了JVM启动时与main线程创建的入口了&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211222315626.png" alt="image-20230211222315626">&lt;/p>
+&lt;h1 id="4平行世界-javamain">4.平行世界-JavaMain&lt;/h1>
+&lt;p>根据第3章节，JVM会创建系统线程&lt;code>main&lt;/code>，而&lt;code>main&lt;/code>线程的线程回调函数就是&lt;code>JavaMain&lt;/code>函数，从这个函数名我们大致可以猜测这个函数就代表在JVM层面看到的Java代码层的包含main函数的主类。&lt;/p>
+&lt;p>我们接下来详细分析一下&lt;code>JavaMain&lt;/code>函数：&lt;/p>
+&lt;h2 id="41jvm创建javathread对象">4.1.JVM创建JavaThread对象&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>关键流程&lt;/strong>：这条调用链比较复杂，也很关键，关键就在这里：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211232016635.png" alt="image-20230211232016635">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>java.c的JavaMain()函数&lt;/strong>：调用&lt;code>InitializeVM&lt;/code>函数&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211230147509.png" alt="image-20230211230147509">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>java.c的InitializeJVM()&lt;/strong>： 调用jni.cpp的JNI_CreateJavaVM函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211230950971.png" alt="image-20230211230950971">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211231011066.png" alt="image-20230211231011066">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>jni.cpp的JNI_CreateJavaVM()&lt;/strong>：调用thread.cpp的Threads::create_vm()&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211231026944.png" alt="image-20230211231026944">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>thread.cpp的Threads::create_vm()&lt;/strong>：这里JVM创建了名为&lt;code>JavaThread&lt;/code>的对象，这个对象表示站在JVM层维护的Java线程对象。
+&lt;ul>
+&lt;li>这个对象表示Java代码层的&lt;code>main&lt;/code>线程。&lt;/li>
+&lt;li>创建了这个对象后，调用了thread.cpp的&lt;code>set_as_starting_thread()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211231105900.png" alt="image-20230211231105900">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211231140633.png" alt="image-20230211231140633">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>thread.cpp的&lt;code>set_as_starting_thread()&lt;/code>&lt;/strong>：调用os_linux.cpp的&lt;code>create_main_thread()&lt;/code>，传入创建好的&lt;code>JavaThread&lt;/code>对象。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211232635496.png" alt="image-20230211232635496">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>os_linux.cpp的&lt;code>create_main_thread()&lt;/code>&lt;/strong>：调用os_linux.cpp的&lt;code>create_attached_thread()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211232726011.png" alt="image-20230211232726011">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>os_linux.cpp的&lt;code>create_attached_thread()&lt;/code>&lt;/strong>：创建&lt;code>OSThread&lt;/code>对象，记录当前所在的线程对象记录到&lt;code>OSThread&lt;/code>对象中，
+&lt;ul>
+&lt;li>当前所在的线程对象就是&lt;strong>第3章中讲到的JVM层的系统线程&lt;code>main&lt;/code>线程&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211232855155.png" alt="image-20230211232855155">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>小结&lt;/strong>：此时在JVM层，已经在操作系统层面创建了2个线程，1个线程是JVM进程自身的主线程，另1个线程就是JVM为Java代码的&lt;code>main&lt;/code>线程创建的操作系统线程。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211233412288.png" alt="image-20230211233412288">&lt;/p>
+&lt;h2 id="42jvm创建java代码侧的java线程">4.2.JVM创建Java代码侧的Java线程&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>关键流程&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211233551236.png" alt="image-20230211233551236">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>thread.cpp的&lt;code>create_initial_thread()&lt;/code>&lt;/strong>：JVM通过JNI，创建JDK的&lt;code>java.lang.Thread&lt;/code>类的&lt;code>klass&lt;/code>对象，进而创建了Java代码侧的&lt;code>java.lang.Thread&lt;/code>对象，最后将这个&lt;code>klass&lt;/code>对象设置到&lt;code>OSThread&lt;/code>对象中。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211233920369.png" alt="image-20230211233920369">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>小结&lt;/strong>：至此，站在JVM层，JVM维护了1个&lt;code>OSThread&lt;/code>对象，这个对象中维护&lt;strong>Java的&lt;code>main&lt;/code>线程对象&lt;/strong>和&lt;strong>系统线程对象&lt;/strong>
+&lt;ul>
+&lt;li>Java的&lt;code>main&lt;/code>线程对象：
+&lt;ul>
+&lt;li>在Java代码侧，Java程序猿看到的是&lt;code>java.lang.Thread&lt;/code>对象&lt;/li>
+&lt;li>在JVM侧，对应的就是&lt;code>klass&lt;/code>对象&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>回到本文一开始的2个推论：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
+&lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
 &lt;/ul>
-&lt;h1 id="8下一步">8.下一步&lt;/h1>
-&lt;p>对于推论2，需要进一步分析JVM的main函数执行流程，本文篇幅有限，且听下回分解。&lt;/p>
-&lt;p>笔者先附上JVM的main函数执行流程，便于展开下一篇论述：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/JVM%E7%9A%84main%E5%87%BD%E6%95%B0%E6%B5%81%E7%A8%8B.png" alt="JVM的main函数流程">&lt;/p></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Mon, 30 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
+&lt;p>本文跟踪了JVM创建Java进程的&lt;code>main&lt;/code>线程的全流程，可以将推论2进一步明确：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>推论2(New)&lt;/strong>：从JVM层观测到的线程是Java代码层的Java线程，从操作系统层观测到的JVM层相关的系统线程中，有1个系统线程就对应Java层的Java线程。
+&lt;ul>
+&lt;li>JVM层用1个&lt;code>OSThread&lt;/code>对象维护了&lt;code>pthread&lt;/code>创建的系统线程和对应的&lt;code>java.lang.Thread&lt;/code>的&lt;code>klass&lt;/code>对象。&lt;/li>
+&lt;li>JVM层的&lt;code>java.lang.Thread&lt;/code>的&lt;code>klass对象&lt;/code>在Java层还对应1个&lt;code>java.lang.Thread&lt;/code>对象，这两个对象在各自的层次中表示Java线程。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230211234854597.png" alt="image-20230211234854597">&lt;/p>
+&lt;h1 id="6感慨知识的尽头">6.感慨：知识的尽头&lt;/h1>
+&lt;p>玩了1个多月chatGPT，刚开始只认为它不过是AI发展史中的涟漪，谁知chatGPT可能是历史的某个里程碑：&lt;/p>
+&lt;ul>
+&lt;li>笔者在软件行业从业有18年，初次阅读并梳理本文涉及到的&amp;quot;JVM的Java线程与操作系统线程的关系&amp;quot;大约花了4天的时间&lt;/li>
+&lt;li>出于好奇，把这个问题抛给了chatGPT，愕然！&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>经常感慨计算机世界的知识浩渺无尽，自己却那般无知渺小。&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>随着文明的发展，浩渺无尽是相对的，对于我是无尽，对于AI可能是有穷。&lt;/strong>&lt;/p>
+&lt;p>附上&lt;strong>chatGPT对Java主线程与系统线程关系&lt;/strong>的答案：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230212001032910.png" alt="image-20230212001032910">&lt;/p></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Mon, 30 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130165407830.png" alt="image-20230130165407830">&lt;/p>
 &lt;h1 id="1测试前提">1.测试前提&lt;/h1>
 &lt;h2 id="硬件">硬件&lt;/h2>
@@ -4861,433 +5110,5 @@ ToStringTest.stackWalker avgt 3 20.032 ± 27.051 us/op
 &lt;h1 id="5参考资料">5.参考资料&lt;/h1>
 &lt;blockquote>
 &lt;p>&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html">https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html&lt;/a>&lt;/p>
-&lt;p>《深入理解Java虚拟机：JVM高级特性与最佳实践》&lt;/p>
-&lt;/blockquote></description></item><item><title>【编译引擎】-3-学习阅读Class文件结构(javap版)</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</link><pubDate>Thu, 05 Aug 2021 15:00:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
-&lt;p>在《【编译引擎】学习阅读Class文件结构(16进制版)》中，我们一起直接阅读了Class文件的16进制版本。&lt;/p>
-&lt;p>虽然这种方式可以帮助我们深刻理解Class文件结构，但如果您从事的是应用软件开发(而不是编译器相关工作)，这样就比较低效了。&lt;/p>
-&lt;p>今天我们就来看看JVM提供的javap，如何提升我们解读Class结构的工作效率。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210129115436313.png" alt="image-20210129115436313">&lt;/p>
-&lt;h1 id="2javap">2.javap&lt;/h1>
-&lt;h2 id="21命令行学习方法">2.1.命令行学习方法&lt;/h2>
-&lt;p>最好的学习资源就是官方文档：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F">https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>在这里，我们可以获得最全面的javap使用指导。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604135122739.png" alt="image-20210604135122739">&lt;/p>
-&lt;h2 id="22命令行详解">2.2.命令行详解&lt;/h2>
-&lt;h3 id="221javap的命令行结构">2.2.1.javap的命令行结构&lt;/h3>
-&lt;blockquote>
-&lt;p>javap [options] classfiles&amp;hellip;&lt;/p>
-&lt;/blockquote>
-&lt;p>[options]：javap的命令行选项&lt;/p>
-&lt;p>classfiles：是我们需要反汇编的一个或多个类文件。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604135556794.png" alt="image-20210604135556794">&lt;/p>
-&lt;h3 id="222最常用的options">2.2.2.最常用的options&lt;/h3>
-&lt;p>实战中，比较常用的options是输出所有显示所有类和成员、输出类的附件信息(如：堆栈大小、局部变量数量和方法的参数)&lt;/p>
-&lt;blockquote>
-&lt;p>javap -v -p Test.class&lt;/p>
-&lt;/blockquote>
-&lt;p>其中，&lt;/p>
-&lt;ul>
-&lt;li>-v：输出类的附件信息(如：堆栈大小、局部变量数量和方法的参数)&lt;/li>
-&lt;li>-p：显示所有的类和成员&lt;/li>
-&lt;/ul>
-&lt;h3 id="223梳理options">2.2.3.梳理options&lt;/h3>
-&lt;p>在官方文档中，javap的options很多，笔者做了这样的归类：&lt;/p>
-&lt;ul>
-&lt;li>与类有关的options：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>-l：打印行和局部变量表&lt;/p>
-&lt;p>-package：显示程序包/受保护的/公共类和成员 (默认)&lt;/p>
-&lt;p>-public：只显示公共类和成员&lt;/p>
-&lt;p>-protected：只显示受保护的和公共的类和成员&lt;/p>
-&lt;p>-p -private：显示所有的类和成员&lt;/p>
-&lt;p>-s：打印内部类型签名&lt;/p>
-&lt;p>-constants：显示static final常量&lt;/p>
-&lt;p>-c：打印类中每个方法的反汇编代码，例如，组成Java字节码的指令&lt;/p>
-&lt;p>-v，-verbose：打印堆栈大小、局部变量数量和方法的参数&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>与JVM有关的options：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>-classpath &lt;path>，-cp &lt;path>：指定javap命令用于查找类的路径。覆盖默认的CLASSPATH环境变量
--bootclasspath &lt;path>：指定加载引导类的路径。默认情况下，引导类是实现位于jre/lib/rt.jar和其它几个jar
--extdir dirs：覆盖扩展类的位置。扩展的默认位置是java.ext.dirs的值
-Joption：将指定的选项传递给JVM(JVM的options详见java命令文档)
-eg:
-javap -J-version
-javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName
--sysinfo：显示正在处理的类的系统信息(路径、大小、日期、MD5哈希值)&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="224javap的形和神">2.2.4.javap的形和神&lt;/h3>
-&lt;p>前面解读了javap的命令行手册，这些只能算作javap的形，也比较好掌握，我们看看官方文档的javap输出的例子：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Compiled&lt;/span> &lt;span class="n">from&lt;/span> &lt;span class="s">&amp;#34;HelloWorldFrame.java&amp;#34;&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">HelloWorldFrame&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">javax&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">swing&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">JFrame&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">String&lt;/span> &lt;span class="n">message&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="nf">HelloWorldFrame&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="c1">// Method javax/swing/JFrame.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// String Hello World!
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">putfield&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="c1">// Field message:Ljava/lang/String;
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">11&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// class HelloWorldFrame$1
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">14&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">dup&lt;/span>
-&lt;span class="n">15&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">16&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="c1">// Method HelloWorldFrame$1.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:(LHelloWorldFrame;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">19&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span> &lt;span class="c1">// Method setContentPane:(Ljava/awt/Container;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">22&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">23&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">bipush&lt;/span> &lt;span class="n">100&lt;/span>
-&lt;span class="n">25&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">bipush&lt;/span> &lt;span class="n">100&lt;/span>
-&lt;span class="n">27&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span> &lt;span class="c1">// Method setSize:(II)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">30&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">String&lt;/span>&lt;span class="o">[]);&lt;/span>
-&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span> &lt;span class="c1">// class HelloWorldFrame
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">dup&lt;/span>
-&lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="c1">// Method &amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">astore_1&lt;/span>
-&lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_1&lt;/span>
-&lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">iconst_1&lt;/span>
-&lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">10&lt;/span> &lt;span class="c1">// Method setVisible:(Z)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">13&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>不了解JVM字节码的程序猿依然看不懂，这些就是javap的神。&lt;/p>
-&lt;p>这就好像&lt;code>辟邪剑法&lt;/code>与&lt;code>辟邪剑谱&lt;/code>的关系。&lt;/p>
-&lt;p>接下来，我们就来解读一下javap的输出结果——字节码。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604142536789.png" alt="image-20210604142536789">&lt;/p>
-&lt;h1 id="3javap输出结果解读">3.javap输出结果解读&lt;/h1>
-&lt;blockquote>
-&lt;p>说明：Java虚拟机规范中很大的篇幅就是约定字节码各个Section的职责、含义、约束，以及JVM指令集，本文不可能一一详尽阐述。因此本文聚焦于解读字节码的总体结构，旨在最快速地为大家建立Class文件结构的脉络，后续案例也会进一步展开字节码技术，对试题进行更有深度的解读。&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="31字节码的基础知识">3.1.字节码的基础知识&lt;/h2>
-&lt;p>为了便于不太了解JVM字节码的程序猿更快进入下一章节，我们简单回顾和小结一下字节码的知识：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.我们通过java命令，将.java文件转化为.class文件(也就是字节码)&lt;/li>
-&lt;li>STEP2.字节码文件本身是什么呢？我们可以用16进制编辑器打开它&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>字节码文件本身就是一串字节流。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604144157084.png" alt="image-20210604144157084">&lt;/p>
-&lt;ul>
-&lt;li>STEP3.为了看的更加清楚一些，我们将有关联的字节用同一种颜色着色：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>如果您做过网络协议的开发，会发现字节码(字节流)与协议栈(如：ModBus)的逻辑很类似，几个字节为一组表达一个信息。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604144211764.png" alt="image-20210604144211764">&lt;/p>
-&lt;ul>
-&lt;li>STEP4.抽象一下上述着色字节流，我们可以将Class文件结构抽象如下&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>字节码基础属性&lt;/p>
-&lt;p>常量池：占据字节码文件最大的篇幅&lt;/p>
-&lt;p>类的基本信息：包含类名的索引、类访问标识、父类名的索引、实现了多少接口等信息&lt;/p>
-&lt;p>字段列表：包含有多少字段，每个字段名的索引、访问标识等&lt;/p>
-&lt;p>方法列表：包含多少方法，每个方法名的索引、访问标识、方法的实现等&lt;/p>
-&lt;p>附加属性&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604145305097.png" alt="image-20210604145305097">&lt;/p>
-&lt;h2 id="32通过示例代码解读javap的输出">3.2.通过示例代码，解读javap的输出&lt;/h2>
-&lt;p>我们以一段示例代码，来解读javap的输出：&lt;/p>
-&lt;ul>
-&lt;li>示例代码：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604150455456.png" alt="image-20210604150455456">&lt;/p>
-&lt;ul>
-&lt;li>javap输出&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;span class="lnt">41
-&lt;/span>&lt;span class="lnt">42
-&lt;/span>&lt;span class="lnt">43
-&lt;/span>&lt;span class="lnt">44
-&lt;/span>&lt;span class="lnt">45
-&lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
-&lt;/span>&lt;span class="lnt">49
-&lt;/span>&lt;span class="lnt">50
-&lt;/span>&lt;span class="lnt">51
-&lt;/span>&lt;span class="lnt">52
-&lt;/span>&lt;span class="lnt">53
-&lt;/span>&lt;span class="lnt">54
-&lt;/span>&lt;span class="lnt">55
-&lt;/span>&lt;span class="lnt">56
-&lt;/span>&lt;span class="lnt">57
-&lt;/span>&lt;span class="lnt">58
-&lt;/span>&lt;span class="lnt">59
-&lt;/span>&lt;span class="lnt">60
-&lt;/span>&lt;span class="lnt">61
-&lt;/span>&lt;span class="lnt">62
-&lt;/span>&lt;span class="lnt">63
-&lt;/span>&lt;span class="lnt">64
-&lt;/span>&lt;span class="lnt">65
-&lt;/span>&lt;span class="lnt">66
-&lt;/span>&lt;span class="lnt">67
-&lt;/span>&lt;span class="lnt">68
-&lt;/span>&lt;span class="lnt">69
-&lt;/span>&lt;span class="lnt">70
-&lt;/span>&lt;span class="lnt">71
-&lt;/span>&lt;span class="lnt">72
-&lt;/span>&lt;span class="lnt">73
-&lt;/span>&lt;span class="lnt">74
-&lt;/span>&lt;span class="lnt">75
-&lt;/span>&lt;span class="lnt">76
-&lt;/span>&lt;span class="lnt">77
-&lt;/span>&lt;span class="lnt">78
-&lt;/span>&lt;span class="lnt">79
-&lt;/span>&lt;span class="lnt">80
-&lt;/span>&lt;span class="lnt">81
-&lt;/span>&lt;span class="lnt">82
-&lt;/span>&lt;span class="lnt">83
-&lt;/span>&lt;span class="lnt">84
-&lt;/span>&lt;span class="lnt">85
-&lt;/span>&lt;span class="lnt">86
-&lt;/span>&lt;span class="lnt">87
-&lt;/span>&lt;span class="lnt">88
-&lt;/span>&lt;span class="lnt">89
-&lt;/span>&lt;span class="lnt">90
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">javap&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">v&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="n">Demo2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">class&lt;/span>
-&lt;span class="n">Classfile&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">C&lt;/span>&lt;span class="o">:/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">class&lt;/span>
-&lt;span class="n">Last&lt;/span> &lt;span class="n">modified&lt;/span> &lt;span class="n">2021&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">25&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">size&lt;/span> &lt;span class="n">613&lt;/span> &lt;span class="n">bytes&lt;/span>
-&lt;span class="n">MD5&lt;/span> &lt;span class="n">checksum&lt;/span> &lt;span class="n">f7c661d99330a1eefb32b6429e5a48b4&lt;/span>
-&lt;span class="n">Compiled&lt;/span> &lt;span class="n">from&lt;/span> &lt;span class="s">&amp;#34;Demo2.java&amp;#34;&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">com&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">firelord&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">zsample&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">jvm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">frontcompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">Demo2&lt;/span>
-&lt;span class="n">minor&lt;/span> &lt;span class="n">version&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">0&lt;/span>
-&lt;span class="n">major&lt;/span> &lt;span class="n">version&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">52&lt;/span>
-&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PUBLIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ACC_SUPER&lt;/span>
-&lt;span class="n">Constant&lt;/span> &lt;span class="n">pool&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Methodref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">21&lt;/span> &lt;span class="c1">// java/lang/Object.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Fieldref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">22&lt;/span> &lt;span class="c1">// com/firelord/zsample/lang/jvm/frontcompiler/Demo2.field1:I
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Fieldref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">23&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">24&lt;/span> &lt;span class="c1">// java/lang/System.out:Ljava/io/PrintStream;
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">25&lt;/span> &lt;span class="c1">// hello world
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Methodref&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">26&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">27&lt;/span> &lt;span class="c1">// java/io/PrintStream.println:(Ljava/lang/String;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">28&lt;/span> &lt;span class="c1">// com/firelord/zsample/lang/jvm/frontcompiler/Demo2
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">29&lt;/span> &lt;span class="c1">// java/lang/Object
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">field1&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">I&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">10&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">11&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="o">()&lt;/span>&lt;span class="n">V&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">12&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Code&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">13&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">LineNumberTable&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">14&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">LocalVariableTable&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">15&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="k">this&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">16&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Lcom&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">17&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">hello&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">18&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">i&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">19&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">SourceFile&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">20&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Demo2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">java&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">21&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">11&lt;/span> &lt;span class="c1">// &amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">22&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="c1">// field1:I
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">23&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">30&lt;/span> &lt;span class="c1">// java/lang/System
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">24&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">31&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">32&lt;/span> &lt;span class="c1">// out:Ljava/io/PrintStream;
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">25&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">hello&lt;/span> &lt;span class="n">world&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">26&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Class&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">33&lt;/span> &lt;span class="c1">// java/io/PrintStream
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">27&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">NameAndType&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">34&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="err">#&lt;/span>&lt;span class="n">35&lt;/span> &lt;span class="c1">// println:(Ljava/lang/String;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">28&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">29&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">java&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Object&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">30&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">java&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">System&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">31&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">out&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">32&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">Ljava&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">PrintStream&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">33&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">java&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">PrintStream&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">34&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="n">println&lt;/span>
-&lt;span class="err">#&lt;/span>&lt;span class="n">35&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Utf8&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Ljava&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">;)&lt;/span>&lt;span class="n">V&lt;/span>
-&lt;span class="o">{&lt;/span>
-&lt;span class="kd">private&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">field1&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">descriptor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">I&lt;/span>
-&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PRIVATE&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="n">com&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">firelord&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">zsample&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">jvm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">frontcompiler&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">Demo2&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">descriptor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">()&lt;/span>&lt;span class="n">V&lt;/span>
-&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PUBLIC&lt;/span>
-&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">stack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">locals&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">args_size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">1&lt;/span>
-&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="c1">// Method java/lang/Object.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:()V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">aload_0&lt;/span>
-&lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">iconst_1&lt;/span>
-&lt;span class="n">6&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">putfield&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// Field field1:I
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
-&lt;span class="n">LineNumberTable&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">line&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">0&lt;/span>
-&lt;span class="n">line&lt;/span> &lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">4&lt;/span>
-&lt;span class="n">LocalVariableTable&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">Start&lt;/span> &lt;span class="n">Length&lt;/span> &lt;span class="n">Slot&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="n">Signature&lt;/span>
-&lt;span class="n">0&lt;/span> &lt;span class="n">10&lt;/span> &lt;span class="n">0&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="n">Lcom&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">hello&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">descriptor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">()&lt;/span>&lt;span class="n">V&lt;/span>
-&lt;span class="n">flags&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ACC_PUBLIC&lt;/span>
-&lt;span class="n">Code&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">stack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">locals&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">args_size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">1&lt;/span>
-&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">iconst_1&lt;/span>
-&lt;span class="n">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">istore_1&lt;/span>
-&lt;span class="n">2&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">getstatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="c1">// Field java/lang/System.out:Ljava/io/PrintStream;
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// String hello world
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="c1">// Method java/io/PrintStream.println:(Ljava/lang/String;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">10&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
-&lt;span class="n">LineNumberTable&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">line&lt;/span> &lt;span class="n">7&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">0&lt;/span>
-&lt;span class="n">line&lt;/span> &lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">2&lt;/span>
-&lt;span class="n">line&lt;/span> &lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">10&lt;/span>
-&lt;span class="n">LocalVariableTable&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="n">Start&lt;/span> &lt;span class="n">Length&lt;/span> &lt;span class="n">Slot&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="n">Signature&lt;/span>
-&lt;span class="n">0&lt;/span> &lt;span class="n">11&lt;/span> &lt;span class="n">0&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="n">Lcom&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">firelord&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsample&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">frontcompiler&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Demo2&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">2&lt;/span> &lt;span class="n">9&lt;/span> &lt;span class="n">1&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="n">I&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="nl">SourceFile:&lt;/span> &lt;span class="s">&amp;#34;Demo2.java&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="321class文件基础信息">3.2.1.Class文件基础信息&lt;/h3>
-&lt;p>Class文件的基础信息包括：&lt;/p>
-&lt;ul>
-&lt;li>class文件的路径&lt;/li>
-&lt;li>class文件的修改时间、class文件的大小&lt;/li>
-&lt;li>class文件的MD5值&lt;/li>
-&lt;li>java文件的名称&lt;/li>
-&lt;li>jdk的大版本/小版本号&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604151205810.png" alt="image-20210604151205810">&lt;/p>
-&lt;h3 id="332常量池">3.3.2.常量池&lt;/h3>
-&lt;p>常量池的细节知识有很多，但是有3个关键点：&lt;/p>
-&lt;ul>
-&lt;li>访问权限、字符串等等，都是JVM所认为的&amp;quot;常量&amp;rdquo;&lt;/li>
-&lt;li>常量池中存储了多种类型的常量&lt;/li>
-&lt;li>常量之间以类似&amp;quot;指针&amp;quot;的形式来表达源代码&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>例如：class Demo2，那么常量池有就会有一个UTF-8类型的常量表示&amp;quot;Demo2&amp;rdquo;，还会有一个类的符号引用指向&amp;quot;Demo2&amp;quot;这个UTF-8的常量。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604151237501.png" alt="image-20210604151237501">&lt;/p>
-&lt;h3 id="333访问标识类索引">3.3.3.访问标识、类索引&lt;/h3>
-&lt;p>在常量池的基础上，JVM首先要表达源文件中的类，类的关键要素包括：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>类名：javap的输出结果中有多处呈现了类名是Demo2。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>类的访问权限：本例中，javap的输出就是表示Demo2类是public的，并且继承于Object类&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604151731952.png" alt="image-20210604151731952">&lt;/p>
-&lt;h3 id="334字段表">3.3.4.字段表&lt;/h3>
-&lt;p>进一步，字节码要表达：&lt;/p>
-&lt;ul>
-&lt;li>Demo2类中有几个字段：javap的输出告诉我们，Demo2只有1个字段field1&lt;/li>
-&lt;li>field1字段的数据类型：从输出可以看到，field1是int类型&lt;/li>
-&lt;li>field1字段的访问权限：从输出可以看出，field1是private&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604152056658.png" alt="image-20210604152056658">&lt;/p>
-&lt;h3 id="335方法表">3.3.5.方法表&lt;/h3>
-&lt;p>更进一步，字节码要表达：&lt;/p>
-&lt;ul>
-&lt;li>Demo2@类中有几个方法：本例中，有一个默认的构造函数，还有一个hello方法&lt;/li>
-&lt;li>方法的原型：从输出看，hello方法的访问权限是public，返回值是void，没有输入参数&lt;/li>
-&lt;li>方法的具体实现：从输出看，hello方法被转换为了73~88行的JVM指令序列、行号表、局部变量表。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84(javap%E7%89%88)/image-20210604152334770.png" alt="image-20210604152334770">&lt;/p>
-&lt;blockquote>
-&lt;p>说明：本文篇幅有限，无法展开讲解hello方法的指令执行过程，以及如何动态set/get局部变量表。有兴趣的读者可以尝试解读一下hello方法的指令执行过程。&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;p>本文解读了javap的使用以及javap的输出结果，具体如下：&lt;/p>
-&lt;ul>
-&lt;li>理解字节码以及JVM价值&lt;/li>
-&lt;li>javap的学习方法&lt;/li>
-&lt;li>javap命令行常用option&lt;/li>
-&lt;li>javap命令行的options解读&lt;/li>
-&lt;li>字节码的主体结构&lt;/li>
-&lt;li>通过一个示例代码，演练了javap输出结果中各个section的含义&lt;/li>
-&lt;/ul>
-&lt;h1 id="5参考资料">5.参考资料&lt;/h1>
-&lt;blockquote>
-&lt;p>&lt;a href="https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F">https://docs.oracle.com/en/java/javase/11/tools/javap.html#GUID-BE20562C-912A-4F91-85CF-24909F212D7F&lt;/a>&lt;/p>
 &lt;p>《深入理解Java虚拟机：JVM高级特性与最佳实践》&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

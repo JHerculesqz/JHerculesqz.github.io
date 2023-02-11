@@ -18,410 +18,7 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</guid><description>&lt;h1 id="1为什么要理解进程与线程的关系">1.为什么要理解进程与线程的关系？&lt;/h1>
-&lt;blockquote>
-&lt;p>A process will contain at least one thread, which is created to execute the point of entry of the application.&lt;/p>
-&lt;p>Usually this entry point is the main() function of the application.&lt;/p>
-&lt;/blockquote>
-&lt;p>引用《Learning Concurrency in Kotlin》书中的一段话，它阐述了进程与线程的关系。&lt;/p>
-&lt;p>为什么要理解进程与线程的关系呢？因为理解了进程与线程的关系有利于我们定位问题。&lt;/p>
-&lt;p>比如：当生产环境出现高CPU占用时，我们通常需要先找到高CPU占用的进程，再找到该进程下高CPU占用的线程。&lt;/p>
-&lt;h1 id="2一个java进程会产生几个线程">2.一个Java进程，会产生几个线程?&lt;/h1>
-&lt;p>我们回到Java本身，我们引出这样1个问题：&lt;strong>执行&amp;quot;1个Java进程，会产生几个线程呢？&amp;quot;&lt;/strong>&lt;/p>
-&lt;p>我们有2种方式观测：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从JVM层观测&lt;/strong>：通过JDK自带的工具(如：jps、jstack等)，通过IDE的调试工具(如：IDEA的debug视图)。&lt;/li>
-&lt;li>&lt;strong>从操作系统层观测&lt;/strong>：通过操作系统工具(如：ps、top等)&lt;/li>
-&lt;/ul>
-&lt;h1 id="3从jvm层观测">3.从JVM层观测&lt;/h1>
-&lt;h2 id="31测试代码">3.1.测试代码&lt;/h2>
-&lt;p>首先，我们先用一段简单的代码——这段代码只有1个main函数，main函数中打印了&lt;code>Hello world...&lt;/code>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165720496.png" alt="image-20230203165720496">&lt;/p>
-&lt;p>我们在IDEA中做个测试——在14行处打个断点，测试结果可以看到有该Java进程产生了5个线程：&lt;/p>
-&lt;ul>
-&lt;li>main线程&lt;/li>
-&lt;li>Attach Listener线程&lt;/li>
-&lt;li>Finalizer线程&lt;/li>
-&lt;li>Reference Handler线程&lt;/li>
-&lt;li>Signal Dispatcher线程&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165533977.png" alt="image-20230203165533977">&lt;/p>
-&lt;h2 id="32测试代码改进">3.2.测试代码改进&lt;/h2>
-&lt;p>为了方便观测，我们修改一下测试代码——通过&lt;code>Thread.getAllStackTraces()&lt;/code>在main函数中打印出该Java进程包含的线程：&lt;/p>
-&lt;ul>
-&lt;li>通过&lt;code>Thread.getAllStackTraces()&lt;/code>，可以让我们在命令行中，也能方便地观察测试结果。&lt;/li>
-&lt;li>&lt;code>Thread.sleep(Integer.MAX_VALUE)&lt;/code>可以持续阻塞住该进程，方便观察。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135454957.png" alt="image-20230204135454957">&lt;/p>
-&lt;p>这里补充说明一下&lt;code>Thread.getAllStackTraces()&lt;/code>方法：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>getAllStackTraces()&lt;/code>是&lt;code>java.lang.Thread&lt;/code>类的静态方法&lt;/li>
-&lt;li>首先，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>getThreads()&lt;/code>，获得JVM上当前进程包含的所有线程对象&lt;code>threads&lt;/code>&lt;/li>
-&lt;li>然后，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>dumpThreads()&lt;/code>，将所有线程对象&lt;code>threads&lt;/code>转换为&lt;code>StackTraceElement[][]&lt;/code>&lt;/li>
-&lt;li>最后，此方法将&lt;code>StackTraceElement[][]&lt;/code>转换为&lt;code>Map&lt;/code>，该Map的key就是该线程包含的1个线程对象&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135619621.png" alt="image-20230204135619621">&lt;/p>
-&lt;h1 id="4从操作系统层观测">4.从操作系统层观测&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>首先，我们在Linux上运行起来2.2中的测试代码，&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>然后，通过&lt;strong>&lt;code>ps -ef | grep java&lt;/code>&lt;/strong>命令查看该Java进程信息——该Java进程的进程号是6526：&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142512012.png" alt="image-20230204142512012">&lt;/p>
-&lt;ul>
-&lt;li>然后，通过&lt;strong>&lt;code>top -H -p 6526&lt;/code>&lt;/strong>查看该Java进程下的线程信息——该Java进程下包含了&lt;strong>15个线程&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142900818.png" alt="image-20230204142900818">&lt;/p>
-&lt;h1 id="5不一致的观测结果说明了什么">5.不一致的观测结果，说明了什么?&lt;/h1>
-&lt;p>从JVM层观测，我们看到被测的这个Java进程包含了5个线程：&lt;/p>
-&lt;ul>
-&lt;li>main线程&lt;/li>
-&lt;li>Attach Listener线程&lt;/li>
-&lt;li>Finalizer线程&lt;/li>
-&lt;li>Reference Handler线程&lt;/li>
-&lt;li>Signal Dispatcher线程&lt;/li>
-&lt;/ul>
-&lt;p>从操作系统层观测，我们看到同1个被测的Java进程包含了15个线程：&lt;/p>
-&lt;ul>
-&lt;li>PID：6527&lt;/li>
-&lt;li>PID：6531&lt;/li>
-&lt;li>&amp;hellip;&lt;/li>
-&lt;li>PID：6544&lt;/li>
-&lt;/ul>
-&lt;p>通过上述不一致的观测结果，我们可以产生两个推论：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
-&lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
-&lt;/ul>
-&lt;h1 id="6验证推论">6.验证推论&lt;/h1>
-&lt;p>在JVM层观测得到的4个线程，其中的&lt;code>main&lt;/code>线程比较单纯(就是Java测试代码中main函数所在的主线程)，相比其它线程(如：&lt;code>Finalizer&lt;/code>线程)更单纯，因此我们可以跟踪JVM源码中的main函数：&lt;/p>
-&lt;h2 id="step1通过执行测试代码进入jvm的main函数">STEP1.通过执行测试代码进入JVM的main函数&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144631761.png" alt="image-20230204144631761">&lt;/p>
-&lt;h2 id="step2进入jli_launch函数">STEP2.进入JLI_Launch函数&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144827592.png" alt="image-20230204144827592">&lt;/p>
-&lt;ul>
-&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145133920.png" alt="image-20230204145133920">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145221020.png" alt="image-20230204145221020">&lt;/p>
-&lt;h2 id="step3执行loadjavavm函数">STEP3.执行LoadJavaVM函数&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145333363.png" alt="image-20230204145333363">&lt;/p>
-&lt;ul>
-&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下依然只包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
-&lt;/ul>
-&lt;h2 id="step4执行jvminit函数">STEP4.执行JVMInit函数&lt;/h2>
-&lt;p>此时，可以看到1个函数名&lt;code>ContinueInNewThread&lt;/code>，疑似JVM准备创建新的系统线程。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145550135.png" alt="image-20230204145550135">&lt;/p>
-&lt;h2 id="step5执行continueinnewthread函数">STEP5.执行ContinueInNewThread函数&lt;/h2>
-&lt;p>此函数会进一步调用&lt;code>ContinueInNewThread0()&lt;/code>函数，疑似JVM在这个函数中会创建新的系统线程。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145738721.png" alt="image-20230204145738721">&lt;/p>
-&lt;h2 id="step6执行continueinnewthread0函数">STEP6.执行ContinueInNewThread0函数&lt;/h2>
-&lt;ul>
-&lt;li>在此，我们终于看到了JVM调用了Linux系统API&lt;code>pthread&lt;/code>系列函数来创建系统线程&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145917391.png" alt="image-20230204145917391">&lt;/p>
-&lt;ul>
-&lt;li>我们执行到1013行，&lt;code>pthread_create&lt;/code>函数，再来观察操作系统，此时产生了1个新的系统线程(线程ID=6840)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150109863.png" alt="image-20230204150109863">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150126981.png" alt="image-20230204150126981">&lt;/p>
-&lt;h2 id="step7在新的系统线程中会回调到javamain函数">STEP7.在新的系统线程中会回调到JavaMain函数&lt;/h2>
-&lt;ul>
-&lt;li>JVM通过pthread创建新的系统线程后，该系统线程会执行&lt;code>JavaMain函数&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150329012.png" alt="image-20230204150329012">&lt;/p>
-&lt;ul>
-&lt;li>在&lt;code>JavaMain&lt;/code>函数中，会继续执行&lt;code>InitializeJVM&lt;/code>函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150518536.png" alt="image-20230204150518536">&lt;/p>
-&lt;h2 id="step8执行initializejvm函数">STEP8.执行&lt;code>InitializeJVM&lt;/code>函数&lt;/h2>
-&lt;ul>
-&lt;li>此函数会进一步执行&lt;code>libjvm.so&lt;/code>中的&lt;code>CreateJavaVM&lt;/code>函数&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150918046.png" alt="image-20230204150918046">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>CreateJavaVM&lt;/code>函数调用栈很深，我们直接执行这个函数，查看此时操作系统中，Java进程下的系统线程，此时JVM已经在操作系统中创建了13个新的系统线程：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
-&lt;h2 id="step9执行回到javamain函数">STEP9.执行回到JavaMain函数&lt;/h2>
-&lt;ul>
-&lt;li>JVM执行&lt;code>LoadMainClass&lt;/code>函数和&lt;code>GetStaticMethodID&lt;/code>函数，获得Java侧的main函数所在的类和main函数Id。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151238640.png" alt="image-20230204151238640">&lt;/p>
-&lt;ul>
-&lt;li>JVM通过JNI接口，调用Java代码中的main函数，Java代码打印出4个Java进程下包含的&lt;code>Java线程&lt;/code>：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明：在不同IDE下，Run模式和Debug模式打印的Java线程是有差异的。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151535458.png" alt="image-20230204151535458">&lt;/p>
-&lt;ul>
-&lt;li>此时，操作系统层，这个Java进程包含的&lt;code>系统线程&lt;/code>依然为15个：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
-&lt;h1 id="7结论">7.结论&lt;/h1>
-&lt;p>通过6中跟踪JVM的main函数执行过程，可知：&lt;/p>
-&lt;ul>
-&lt;li>JVM在执行被测Java代码的&lt;code>java xxxx&lt;/code>命令时，在操作系统层产生了&lt;code>1个java进程&lt;/code>JVM会在它的main函数中，通过系统API创建&lt;code>系统线程&lt;/code>(如：Linux下的&lt;code>pthread&lt;/code>库)&lt;/li>
-&lt;li>JVM在该java进程内，第1个创建的&lt;code>系统线程&lt;/code>是用来执行Java侧代码的main函数的。
-&lt;ul>
-&lt;li>在这个系统线程内，JVM先初始化JVM，此时会产生新的系统线程。&lt;/li>
-&lt;li>在这个系统线程内，JVM再通过JNI接口得到Java侧代码的main函数以及main函数所在的类，并执行Java侧代码的main函数。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>因此，证明了我们的推论1：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
-&lt;/ul>
-&lt;h1 id="8下一步">8.下一步&lt;/h1>
-&lt;p>对于推论2，需要进一步分析JVM的main函数执行流程，本文篇幅有限，且听下回分解。&lt;/p>
-&lt;p>笔者先附上JVM的main函数执行流程，便于展开下一篇论述：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/JVM%E7%9A%84main%E5%87%BD%E6%95%B0%E6%B5%81%E7%A8%8B.png" alt="JVM的main函数流程">&lt;/p></description></item><item><title>【SpringOne 2022】4.Running Untrusted Code in Spring Using WebAssembly</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</link><pubDate>Thu, 09 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</guid><description>&lt;p>SpringOne 2022第4个议题《Running Untrusted Code in Spring Using WebAssembly》，主要在介绍WebAssembly的Host和Guest，引申出Spring结合WebAssembly的一些展望，演讲者：Dave Syer。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209102504607.png" alt="image-20230209102504607">&lt;/p>
-&lt;h1 id="1what-is-webassembly">1.What is WebAssembly?&lt;/h1>
-&lt;ul>
-&lt;li>WebAssembly有两个概念&lt;code>Host&lt;/code>和&lt;code>Guest&lt;/code>:
-&lt;ul>
-&lt;li>&lt;code>Host&lt;/code>可以认为是能够执行WebAssembly的容器，比如：浏览器。&lt;/li>
-&lt;li>&lt;code>Guest&lt;/code>就是&lt;code>WASM&lt;/code>(WebAssembly)，我们可以直接编写&lt;code>WASM&lt;/code>，也可以用C/C#/AssemblyScript/Rust这些语言去写再编译成&lt;code>WASM&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104158257.png" alt="image-20230209104158257">&lt;/p>
-&lt;ul>
-&lt;li>WebAssembly的语言规范在此：
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/WebAssembly/spec">https://github.com/WebAssembly/spec&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104813110.png" alt="image-20230209104813110">&lt;/p>
-&lt;ul>
-&lt;li>其它说明：
-&lt;ul>
-&lt;li>由于&lt;code>WASM&lt;/code>主要的应用场景是在浏览器领域，所以&lt;code>JavaScript&lt;/code>是比较主流的&lt;code>Host&lt;/code>编程语言。&lt;/li>
-&lt;li>其它&lt;code>Host&lt;/code>编程语言还有Rust、Go、Python、C#、Java等等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2wasm与spring可以结合的应用场景">2.WASM与Spring可以结合的应用场景&lt;/h1>
-&lt;ul>
-&lt;li>Serverless(无服务器)架构是云原生领域比较受欢迎的理念，其核心目的是增效降本。如下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209111925644.png" alt="image-20230209111925644">&lt;/p>
-&lt;ul>
-&lt;li>Serverless架构提供一种更加&amp;quot;代码碎片化&amp;quot;的软件架构范式——&lt;code>FAAS(Function as a Services)&lt;/code>，以Amazon Lambda为例：
-&lt;ul>
-&lt;li>&lt;code>AWS Lambda&lt;/code>可以作为&lt;code>Host&lt;/code>执行&lt;strong>用户提交的函数&lt;/strong>——这个可以认为是&lt;code>Guest&lt;/code>侧的代码。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209112437086.png" alt="image-20230209112437086">&lt;/p>
-&lt;ul>
-&lt;li>通过对&lt;code>Serverless&lt;/code>/&lt;code>FAAS&lt;/code>的介绍，我们可以看到可以基于&lt;code>Spring&lt;/code>+&lt;code>WASM&lt;/code>快速实现&lt;code>FAAS&lt;/code>：
-&lt;ul>
-&lt;li>STEP1.用户用自己擅长的编程语言实现的&lt;code>Guest&lt;/code>代码&lt;/li>
-&lt;li>STEP2.用户提交这段&lt;code>Guest&lt;/code>代码，提交时被编译为&lt;code>WASM&lt;/code>&lt;/li>
-&lt;li>STEP3.&lt;code>Spring&lt;/code>实现的云端微服务执行STEP2的&lt;code>WASM&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3一个简单的demo">3.一个简单的Demo&lt;/h1>
-&lt;ul>
-&lt;li>演讲者编写了1个简单的&lt;code>WASM&lt;/code>，
-&lt;ul>
-&lt;li>此&lt;code>WASM&lt;/code>实现了1个名为&lt;code>add&lt;/code>的函数&lt;/li>
-&lt;li>&lt;code>add&lt;/code>函数包含2个入参，入参都是整型(&lt;code>i32&lt;/code>)&lt;/li>
-&lt;li>&lt;code>add&lt;/code>函数返回整型(&lt;code>i32&lt;/code>)&lt;/li>
-&lt;li>add函数的内部实现是将2个入参相加&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142449065.png" alt="image-20230209142449065">&lt;/p>
-&lt;ul>
-&lt;li>演讲者的使用MDN提供的测试工具作为&lt;code>Host&lt;/code>执行上述&lt;code>WASM&lt;/code>，JavaScript代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142856947.png" alt="image-20230209142856947">&lt;/p>
-&lt;h1 id="4wasm的guest端可选的编程语言">4.&lt;code>WASM&lt;/code>的&lt;code>Guest&lt;/code>端可选的编程语言&lt;/h1>
-&lt;h2 id="41c语言">4.1.C语言&lt;/h2>
-&lt;ul>
-&lt;li>使用C语言编写如下代码：
-&lt;ul>
-&lt;li>函数&lt;code>echo&lt;/code>返回整型，内部实现是调用函数&lt;code>get&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>将C语言编译成&lt;code>WASM&lt;/code>的可选工具如下：
-&lt;ul>
-&lt;li>Emscripten&lt;/li>
-&lt;li>Wasi SDK&lt;/li>
-&lt;li>Binaryen&lt;/li>
-&lt;li>LLVM/Clang&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143034320.png" alt="image-20230209143034320">&lt;/p>
-&lt;ul>
-&lt;li>编译后得到的&lt;code>WASM&lt;/code>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143359629.png" alt="image-20230209143359629">&lt;/p>
-&lt;h2 id="42assemblyscript">4.2.AssemblyScript&lt;/h2>
-&lt;ul>
-&lt;li>使用TypeScript编写如下代码：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143514050.png" alt="image-20230209143514050">&lt;/p>
-&lt;ul>
-&lt;li>编译后得到的&lt;code>WASM&lt;/code>很长，在此仅展示部分。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144136043.png" alt="image-20230209144136043">&lt;/p>
-&lt;h2 id="43rust">4.3.Rust&lt;/h2>
-&lt;ul>
-&lt;li>使用Rust编写的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144304144.png" alt="image-20230209144304144">&lt;/p>
-&lt;h2 id="44java">4.4.Java&lt;/h2>
-&lt;ul>
-&lt;li>使用Java编写的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144431808.png" alt="image-20230209144431808">&lt;/p>
-&lt;ul>
-&lt;li>可选的编译器如下：
-&lt;ul>
-&lt;li>TeamVM&lt;/li>
-&lt;li>JSweet&lt;/li>
-&lt;li>J2cl&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="5wasm的host端可选的编程语言">5.&lt;code>WASM&lt;/code>的&lt;code>Host&lt;/code>端可选的编程语言&lt;/h1>
-&lt;h2 id="51javascript">5.1.JavaScript&lt;/h2>
-&lt;ul>
-&lt;li>使用JavaScript执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144643281.png" alt="image-20230209144643281">&lt;/p>
-&lt;h2 id="52java">5.2.Java&lt;/h2>
-&lt;ul>
-&lt;li>使用Java执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144755430.png" alt="image-20230209144755430">&lt;/p>
-&lt;h1 id="6小结">6.小结&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;code>WASM&lt;/code>还在发展阶段，有的人看好，有的人认为是伪命题，但&lt;code>WASM&lt;/code>肯定会是未来3~5年的热点。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>WASM&lt;/code>可应用的场景绝对不是在浏览器里运行对GPU有要求的游戏，云原生领域也可能应用。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Spring团队也在探索性地将某些模块使用&lt;code>WASM&lt;/code>。&lt;/p>
-&lt;/li>
-&lt;/ul></description></item><item><title>【SpringOne 2022】3.Protect Your Microservices with Spring Cloud Gateway</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</link><pubDate>Tue, 07 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</guid><description>&lt;p>SpringOne 2022第3个议题《Protect Your Microservices with Spring Cloud Gateway》，主要展示Spring Cloud Gateway的特性，演讲者：Cora lberkleid。&lt;/p>
-&lt;h1 id="1项目简介">1.项目简介&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>不是一个新项目&lt;/strong>：它能入选&lt;code>SpringOne 2022&lt;/code>的议题，应该是它的确非常实用。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>PS：SpringOne的每个议题不一定都是讲新技术，演讲者也很接地气(不太甩大词和抛概念)，赞！&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>的架构地位&lt;/strong>：在整个架构中的位置是&lt;code>API网关&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207101213825.png" alt="image-20230207101213825">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Spring Cloud Gateway的愿景&lt;/strong>：议题材料中有一段话，表明了此项目的愿景和价值，如下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207103316835.png" alt="image-20230207103316835">&lt;/p>
-&lt;h1 id="2基本原理">2.基本原理&lt;/h1>
-&lt;h2 id="21职责">2.1.职责&lt;/h2>
-&lt;p>Gateway的本质就是一组&lt;strong>路由转发规则集&lt;/strong>+&lt;strong>按规则进行路由转发&lt;/strong>：&lt;/p>
-&lt;p>即，当Gateway发现：&lt;strong>如果&lt;/strong>调用方的请求满足某些条件，&lt;strong>则&lt;/strong>在路由转发过程中do something。&lt;/p>
-&lt;p>其中，&lt;code>在路由转发过程中do something&lt;/code>具备如下大颗粒的能力：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>熔断&lt;/strong>：集成 Hystrix 断路器。&lt;/li>
-&lt;li>&lt;strong>动态路由&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>限流&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>请求修改&lt;/strong>：修改请求的输入输出、路径重写等。&lt;/li>
-&lt;li>&amp;hellip;&amp;hellip;&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207105042685.png" alt="image-20230207105042685">&lt;/p>
-&lt;h2 id="22how-it-works">2.2.How it works?&lt;/h2>
-&lt;ul>
-&lt;li>Gateway提出了3个架构概念&lt;code>Route(路由)&lt;/code>、&lt;code>Predicate(断言)&lt;/code>、&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
-&lt;li>这3个架构概念的关系是：1个&lt;code>Route(路由)&lt;/code>配置=N个&lt;code>Predicate(断言)&lt;/code>+N个&lt;code>Filter(过滤器)&lt;/code>+1个&lt;code>URI&lt;/code>。&lt;/li>
-&lt;li>路由匹配和路由转发的过程：
-&lt;ul>
-&lt;li>STEP1.Gateway拦截到Client侧的请求。&lt;/li>
-&lt;li>STEP2.用STEP1拦截到的请求去匹配&lt;code>Route(路由)&lt;/code>中的&lt;code>Predicate(断言)&lt;/code>。&lt;/li>
-&lt;li>STEP3.如果STEP2成功匹配到某个&lt;code>Route(路由)&lt;/code>配置，则将STEP1拦截到的请求转发到该&lt;code>Route(路由)&lt;/code>配置中的URI上。&lt;/li>
-&lt;li>STEP4.在转发到目标URI的过程中，执行该&lt;code>Route(配置)&lt;/code>中的N个&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3demo">3.Demo&lt;/h1>
-&lt;p>演讲人Cora lberkleid现场演示了如何使用&lt;code>Spring Cloud Gateway&lt;/code>快速开发1个API网关，Demo的代码地址：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/ciberkleid/spring-cloud-gateway-sample">https://github.com/ciberkleid/spring-cloud-gateway-sample&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="31一个简单的route配置">3.1.一个简单的Route配置&lt;/h2>
-&lt;ul>
-&lt;li>演讲人首先展示了一个简单的Route配置：
-&lt;ul>
-&lt;li>Path=/uuid：这个断言表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>时，则匹配成功。&lt;/li>
-&lt;li>uri=https://httpbin.org：表示断言匹配成功后，将客户端请求转发到&lt;code>https://httpbin.org&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207111959581.png" alt="image-20230207111959581">&lt;/p>
-&lt;p>如下是执行效果：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114627396.png" alt="image-20230207114627396">&lt;/p>
-&lt;h2 id="32host断言">3.2.Host断言&lt;/h2>
-&lt;ul>
-&lt;li>红框：在3.1的配置基础上增加了Host断言，表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>，且http的Host=example.com，则匹配成功。&lt;/li>
-&lt;li>绿框：演示了客户端请求虽然是&lt;code>http://localhost/uuid&lt;/code>但Host没有值时，无法匹配，进而转发失败。&lt;/li>
-&lt;li>蓝框：演示了客户端请求是&lt;code>http://localhost/uuid&lt;/code>且Host=example.com时，成功匹配，进而转发成功。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114804353.png" alt="image-20230207114804353">&lt;/p>
-&lt;h2 id="33转发过滤器">3.3.转发过滤器&lt;/h2>
-&lt;ul>
-&lt;li>SetPath=/uuid：表示客户端请求&lt;code>http://localhost/demo&lt;/code>，Gateway会将此请求转发为&lt;code>http://httpbin.org/uuid&lt;/code>&lt;/li>
-&lt;li>测试结果如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207135559062.png" alt="image-20230207135559062">&lt;/p>
-&lt;h2 id="34灰度发布">3.4.灰度发布&lt;/h2>
-&lt;ul>
-&lt;li>Gateway支持设置路由的权重，进而实现灰度发布。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207140904664.png" alt="image-20230207140904664">&lt;/p>
-&lt;ul>
-&lt;li>演讲人演示了配置了两个&lt;code>Route&lt;/code>，如果将&lt;code>route1&lt;/code>的&lt;code>Weight&lt;/code>属性改小，将会引流到&lt;code>route2&lt;/code>，进而实现灰度发布。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207141250833.png" alt="image-20230207141250833">&lt;/p>
-&lt;h2 id="35熔断">3.5.熔断&lt;/h2>
-&lt;ul>
-&lt;li>Demo中，熔断器定义5秒内接口必须返回。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142305789.png" alt="image-20230207142305789">&lt;/p>
-&lt;ul>
-&lt;li>配置文件中，使能熔断器&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142345120.png" alt="image-20230207142345120">&lt;/p>
-&lt;ul>
-&lt;li>执行效果：
-&lt;ul>
-&lt;li>红框：如果接口在4秒内返回，Gateway正常响应&lt;/li>
-&lt;li>绿框：如果接口在10秒才能返回，Gateway熔断&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142641006.png" alt="image-20230207142641006">&lt;/p>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;ul>
-&lt;li>在本议题，演讲者Cora lberkleid展示了&lt;code>Spring Cloud Gateway&lt;/code>的原理和Demo。&lt;/li>
-&lt;li>&lt;code>Spring Cloud Gateway&lt;/code>采用&amp;rdquo;&lt;strong>断言=&amp;gt;过滤器链=&amp;gt;转发&lt;/strong>&amp;ldquo;的思想实现了API网关，开发效率不错。&lt;/li>
-&lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 04 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
 &lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
@@ -670,7 +267,410 @@
 &lt;p>&lt;strong>经常感慨计算机世界的知识浩渺无尽，自己却那般无知渺小。&lt;/strong>&lt;/p>
 &lt;p>&lt;strong>随着文明的发展，浩渺无尽是相对的，对于我是无尽，对于AI可能是有穷。&lt;/strong>&lt;/p>
 &lt;p>附上&lt;strong>chatGPT对Java主线程与系统线程关系&lt;/strong>的答案：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230212001032910.png" alt="image-20230212001032910">&lt;/p></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Mon, 30 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230212001032910.png" alt="image-20230212001032910">&lt;/p></description></item><item><title>【SpringOne 2022】4.Running Untrusted Code in Spring Using WebAssembly</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</link><pubDate>Thu, 09 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</guid><description>&lt;p>SpringOne 2022第4个议题《Running Untrusted Code in Spring Using WebAssembly》，主要在介绍WebAssembly的Host和Guest，引申出Spring结合WebAssembly的一些展望，演讲者：Dave Syer。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209102504607.png" alt="image-20230209102504607">&lt;/p>
+&lt;h1 id="1what-is-webassembly">1.What is WebAssembly?&lt;/h1>
+&lt;ul>
+&lt;li>WebAssembly有两个概念&lt;code>Host&lt;/code>和&lt;code>Guest&lt;/code>:
+&lt;ul>
+&lt;li>&lt;code>Host&lt;/code>可以认为是能够执行WebAssembly的容器，比如：浏览器。&lt;/li>
+&lt;li>&lt;code>Guest&lt;/code>就是&lt;code>WASM&lt;/code>(WebAssembly)，我们可以直接编写&lt;code>WASM&lt;/code>，也可以用C/C#/AssemblyScript/Rust这些语言去写再编译成&lt;code>WASM&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104158257.png" alt="image-20230209104158257">&lt;/p>
+&lt;ul>
+&lt;li>WebAssembly的语言规范在此：
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/WebAssembly/spec">https://github.com/WebAssembly/spec&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104813110.png" alt="image-20230209104813110">&lt;/p>
+&lt;ul>
+&lt;li>其它说明：
+&lt;ul>
+&lt;li>由于&lt;code>WASM&lt;/code>主要的应用场景是在浏览器领域，所以&lt;code>JavaScript&lt;/code>是比较主流的&lt;code>Host&lt;/code>编程语言。&lt;/li>
+&lt;li>其它&lt;code>Host&lt;/code>编程语言还有Rust、Go、Python、C#、Java等等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2wasm与spring可以结合的应用场景">2.WASM与Spring可以结合的应用场景&lt;/h1>
+&lt;ul>
+&lt;li>Serverless(无服务器)架构是云原生领域比较受欢迎的理念，其核心目的是增效降本。如下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209111925644.png" alt="image-20230209111925644">&lt;/p>
+&lt;ul>
+&lt;li>Serverless架构提供一种更加&amp;quot;代码碎片化&amp;quot;的软件架构范式——&lt;code>FAAS(Function as a Services)&lt;/code>，以Amazon Lambda为例：
+&lt;ul>
+&lt;li>&lt;code>AWS Lambda&lt;/code>可以作为&lt;code>Host&lt;/code>执行&lt;strong>用户提交的函数&lt;/strong>——这个可以认为是&lt;code>Guest&lt;/code>侧的代码。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209112437086.png" alt="image-20230209112437086">&lt;/p>
+&lt;ul>
+&lt;li>通过对&lt;code>Serverless&lt;/code>/&lt;code>FAAS&lt;/code>的介绍，我们可以看到可以基于&lt;code>Spring&lt;/code>+&lt;code>WASM&lt;/code>快速实现&lt;code>FAAS&lt;/code>：
+&lt;ul>
+&lt;li>STEP1.用户用自己擅长的编程语言实现的&lt;code>Guest&lt;/code>代码&lt;/li>
+&lt;li>STEP2.用户提交这段&lt;code>Guest&lt;/code>代码，提交时被编译为&lt;code>WASM&lt;/code>&lt;/li>
+&lt;li>STEP3.&lt;code>Spring&lt;/code>实现的云端微服务执行STEP2的&lt;code>WASM&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3一个简单的demo">3.一个简单的Demo&lt;/h1>
+&lt;ul>
+&lt;li>演讲者编写了1个简单的&lt;code>WASM&lt;/code>，
+&lt;ul>
+&lt;li>此&lt;code>WASM&lt;/code>实现了1个名为&lt;code>add&lt;/code>的函数&lt;/li>
+&lt;li>&lt;code>add&lt;/code>函数包含2个入参，入参都是整型(&lt;code>i32&lt;/code>)&lt;/li>
+&lt;li>&lt;code>add&lt;/code>函数返回整型(&lt;code>i32&lt;/code>)&lt;/li>
+&lt;li>add函数的内部实现是将2个入参相加&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142449065.png" alt="image-20230209142449065">&lt;/p>
+&lt;ul>
+&lt;li>演讲者的使用MDN提供的测试工具作为&lt;code>Host&lt;/code>执行上述&lt;code>WASM&lt;/code>，JavaScript代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142856947.png" alt="image-20230209142856947">&lt;/p>
+&lt;h1 id="4wasm的guest端可选的编程语言">4.&lt;code>WASM&lt;/code>的&lt;code>Guest&lt;/code>端可选的编程语言&lt;/h1>
+&lt;h2 id="41c语言">4.1.C语言&lt;/h2>
+&lt;ul>
+&lt;li>使用C语言编写如下代码：
+&lt;ul>
+&lt;li>函数&lt;code>echo&lt;/code>返回整型，内部实现是调用函数&lt;code>get&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>将C语言编译成&lt;code>WASM&lt;/code>的可选工具如下：
+&lt;ul>
+&lt;li>Emscripten&lt;/li>
+&lt;li>Wasi SDK&lt;/li>
+&lt;li>Binaryen&lt;/li>
+&lt;li>LLVM/Clang&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143034320.png" alt="image-20230209143034320">&lt;/p>
+&lt;ul>
+&lt;li>编译后得到的&lt;code>WASM&lt;/code>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143359629.png" alt="image-20230209143359629">&lt;/p>
+&lt;h2 id="42assemblyscript">4.2.AssemblyScript&lt;/h2>
+&lt;ul>
+&lt;li>使用TypeScript编写如下代码：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143514050.png" alt="image-20230209143514050">&lt;/p>
+&lt;ul>
+&lt;li>编译后得到的&lt;code>WASM&lt;/code>很长，在此仅展示部分。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144136043.png" alt="image-20230209144136043">&lt;/p>
+&lt;h2 id="43rust">4.3.Rust&lt;/h2>
+&lt;ul>
+&lt;li>使用Rust编写的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144304144.png" alt="image-20230209144304144">&lt;/p>
+&lt;h2 id="44java">4.4.Java&lt;/h2>
+&lt;ul>
+&lt;li>使用Java编写的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144431808.png" alt="image-20230209144431808">&lt;/p>
+&lt;ul>
+&lt;li>可选的编译器如下：
+&lt;ul>
+&lt;li>TeamVM&lt;/li>
+&lt;li>JSweet&lt;/li>
+&lt;li>J2cl&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5wasm的host端可选的编程语言">5.&lt;code>WASM&lt;/code>的&lt;code>Host&lt;/code>端可选的编程语言&lt;/h1>
+&lt;h2 id="51javascript">5.1.JavaScript&lt;/h2>
+&lt;ul>
+&lt;li>使用JavaScript执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144643281.png" alt="image-20230209144643281">&lt;/p>
+&lt;h2 id="52java">5.2.Java&lt;/h2>
+&lt;ul>
+&lt;li>使用Java执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144755430.png" alt="image-20230209144755430">&lt;/p>
+&lt;h1 id="6小结">6.小结&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>WASM&lt;/code>还在发展阶段，有的人看好，有的人认为是伪命题，但&lt;code>WASM&lt;/code>肯定会是未来3~5年的热点。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>WASM&lt;/code>可应用的场景绝对不是在浏览器里运行对GPU有要求的游戏，云原生领域也可能应用。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Spring团队也在探索性地将某些模块使用&lt;code>WASM&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>【SpringOne 2022】3.Protect Your Microservices with Spring Cloud Gateway</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</link><pubDate>Tue, 07 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</guid><description>&lt;p>SpringOne 2022第3个议题《Protect Your Microservices with Spring Cloud Gateway》，主要展示Spring Cloud Gateway的特性，演讲者：Cora lberkleid。&lt;/p>
+&lt;h1 id="1项目简介">1.项目简介&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>不是一个新项目&lt;/strong>：它能入选&lt;code>SpringOne 2022&lt;/code>的议题，应该是它的确非常实用。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>PS：SpringOne的每个议题不一定都是讲新技术，演讲者也很接地气(不太甩大词和抛概念)，赞！&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>的架构地位&lt;/strong>：在整个架构中的位置是&lt;code>API网关&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207101213825.png" alt="image-20230207101213825">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Spring Cloud Gateway的愿景&lt;/strong>：议题材料中有一段话，表明了此项目的愿景和价值，如下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207103316835.png" alt="image-20230207103316835">&lt;/p>
+&lt;h1 id="2基本原理">2.基本原理&lt;/h1>
+&lt;h2 id="21职责">2.1.职责&lt;/h2>
+&lt;p>Gateway的本质就是一组&lt;strong>路由转发规则集&lt;/strong>+&lt;strong>按规则进行路由转发&lt;/strong>：&lt;/p>
+&lt;p>即，当Gateway发现：&lt;strong>如果&lt;/strong>调用方的请求满足某些条件，&lt;strong>则&lt;/strong>在路由转发过程中do something。&lt;/p>
+&lt;p>其中，&lt;code>在路由转发过程中do something&lt;/code>具备如下大颗粒的能力：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>熔断&lt;/strong>：集成 Hystrix 断路器。&lt;/li>
+&lt;li>&lt;strong>动态路由&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>限流&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>请求修改&lt;/strong>：修改请求的输入输出、路径重写等。&lt;/li>
+&lt;li>&amp;hellip;&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207105042685.png" alt="image-20230207105042685">&lt;/p>
+&lt;h2 id="22how-it-works">2.2.How it works?&lt;/h2>
+&lt;ul>
+&lt;li>Gateway提出了3个架构概念&lt;code>Route(路由)&lt;/code>、&lt;code>Predicate(断言)&lt;/code>、&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
+&lt;li>这3个架构概念的关系是：1个&lt;code>Route(路由)&lt;/code>配置=N个&lt;code>Predicate(断言)&lt;/code>+N个&lt;code>Filter(过滤器)&lt;/code>+1个&lt;code>URI&lt;/code>。&lt;/li>
+&lt;li>路由匹配和路由转发的过程：
+&lt;ul>
+&lt;li>STEP1.Gateway拦截到Client侧的请求。&lt;/li>
+&lt;li>STEP2.用STEP1拦截到的请求去匹配&lt;code>Route(路由)&lt;/code>中的&lt;code>Predicate(断言)&lt;/code>。&lt;/li>
+&lt;li>STEP3.如果STEP2成功匹配到某个&lt;code>Route(路由)&lt;/code>配置，则将STEP1拦截到的请求转发到该&lt;code>Route(路由)&lt;/code>配置中的URI上。&lt;/li>
+&lt;li>STEP4.在转发到目标URI的过程中，执行该&lt;code>Route(配置)&lt;/code>中的N个&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3demo">3.Demo&lt;/h1>
+&lt;p>演讲人Cora lberkleid现场演示了如何使用&lt;code>Spring Cloud Gateway&lt;/code>快速开发1个API网关，Demo的代码地址：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/ciberkleid/spring-cloud-gateway-sample">https://github.com/ciberkleid/spring-cloud-gateway-sample&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="31一个简单的route配置">3.1.一个简单的Route配置&lt;/h2>
+&lt;ul>
+&lt;li>演讲人首先展示了一个简单的Route配置：
+&lt;ul>
+&lt;li>Path=/uuid：这个断言表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>时，则匹配成功。&lt;/li>
+&lt;li>uri=https://httpbin.org：表示断言匹配成功后，将客户端请求转发到&lt;code>https://httpbin.org&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207111959581.png" alt="image-20230207111959581">&lt;/p>
+&lt;p>如下是执行效果：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114627396.png" alt="image-20230207114627396">&lt;/p>
+&lt;h2 id="32host断言">3.2.Host断言&lt;/h2>
+&lt;ul>
+&lt;li>红框：在3.1的配置基础上增加了Host断言，表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>，且http的Host=example.com，则匹配成功。&lt;/li>
+&lt;li>绿框：演示了客户端请求虽然是&lt;code>http://localhost/uuid&lt;/code>但Host没有值时，无法匹配，进而转发失败。&lt;/li>
+&lt;li>蓝框：演示了客户端请求是&lt;code>http://localhost/uuid&lt;/code>且Host=example.com时，成功匹配，进而转发成功。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114804353.png" alt="image-20230207114804353">&lt;/p>
+&lt;h2 id="33转发过滤器">3.3.转发过滤器&lt;/h2>
+&lt;ul>
+&lt;li>SetPath=/uuid：表示客户端请求&lt;code>http://localhost/demo&lt;/code>，Gateway会将此请求转发为&lt;code>http://httpbin.org/uuid&lt;/code>&lt;/li>
+&lt;li>测试结果如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207135559062.png" alt="image-20230207135559062">&lt;/p>
+&lt;h2 id="34灰度发布">3.4.灰度发布&lt;/h2>
+&lt;ul>
+&lt;li>Gateway支持设置路由的权重，进而实现灰度发布。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207140904664.png" alt="image-20230207140904664">&lt;/p>
+&lt;ul>
+&lt;li>演讲人演示了配置了两个&lt;code>Route&lt;/code>，如果将&lt;code>route1&lt;/code>的&lt;code>Weight&lt;/code>属性改小，将会引流到&lt;code>route2&lt;/code>，进而实现灰度发布。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207141250833.png" alt="image-20230207141250833">&lt;/p>
+&lt;h2 id="35熔断">3.5.熔断&lt;/h2>
+&lt;ul>
+&lt;li>Demo中，熔断器定义5秒内接口必须返回。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142305789.png" alt="image-20230207142305789">&lt;/p>
+&lt;ul>
+&lt;li>配置文件中，使能熔断器&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142345120.png" alt="image-20230207142345120">&lt;/p>
+&lt;ul>
+&lt;li>执行效果：
+&lt;ul>
+&lt;li>红框：如果接口在4秒内返回，Gateway正常响应&lt;/li>
+&lt;li>绿框：如果接口在10秒才能返回，Gateway熔断&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142641006.png" alt="image-20230207142641006">&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;ul>
+&lt;li>在本议题，演讲者Cora lberkleid展示了&lt;code>Spring Cloud Gateway&lt;/code>的原理和Demo。&lt;/li>
+&lt;li>&lt;code>Spring Cloud Gateway&lt;/code>采用&amp;rdquo;&lt;strong>断言=&amp;gt;过滤器链=&amp;gt;转发&lt;/strong>&amp;ldquo;的思想实现了API网关，开发效率不错。&lt;/li>
+&lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</link><pubDate>Sat, 04 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-2/</guid><description>&lt;h1 id="1为什么要理解进程与线程的关系">1.为什么要理解进程与线程的关系？&lt;/h1>
+&lt;blockquote>
+&lt;p>A process will contain at least one thread, which is created to execute the point of entry of the application.&lt;/p>
+&lt;p>Usually this entry point is the main() function of the application.&lt;/p>
+&lt;/blockquote>
+&lt;p>引用《Learning Concurrency in Kotlin》书中的一段话，它阐述了进程与线程的关系。&lt;/p>
+&lt;p>为什么要理解进程与线程的关系呢？因为理解了进程与线程的关系有利于我们定位问题。&lt;/p>
+&lt;p>比如：当生产环境出现高CPU占用时，我们通常需要先找到高CPU占用的进程，再找到该进程下高CPU占用的线程。&lt;/p>
+&lt;h1 id="2一个java进程会产生几个线程">2.一个Java进程，会产生几个线程?&lt;/h1>
+&lt;p>我们回到Java本身，我们引出这样1个问题：&lt;strong>执行&amp;quot;1个Java进程，会产生几个线程呢？&amp;quot;&lt;/strong>&lt;/p>
+&lt;p>我们有2种方式观测：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从JVM层观测&lt;/strong>：通过JDK自带的工具(如：jps、jstack等)，通过IDE的调试工具(如：IDEA的debug视图)。&lt;/li>
+&lt;li>&lt;strong>从操作系统层观测&lt;/strong>：通过操作系统工具(如：ps、top等)&lt;/li>
+&lt;/ul>
+&lt;h1 id="3从jvm层观测">3.从JVM层观测&lt;/h1>
+&lt;h2 id="31测试代码">3.1.测试代码&lt;/h2>
+&lt;p>首先，我们先用一段简单的代码——这段代码只有1个main函数，main函数中打印了&lt;code>Hello world...&lt;/code>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165720496.png" alt="image-20230203165720496">&lt;/p>
+&lt;p>我们在IDEA中做个测试——在14行处打个断点，测试结果可以看到有该Java进程产生了5个线程：&lt;/p>
+&lt;ul>
+&lt;li>main线程&lt;/li>
+&lt;li>Attach Listener线程&lt;/li>
+&lt;li>Finalizer线程&lt;/li>
+&lt;li>Reference Handler线程&lt;/li>
+&lt;li>Signal Dispatcher线程&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230203165533977.png" alt="image-20230203165533977">&lt;/p>
+&lt;h2 id="32测试代码改进">3.2.测试代码改进&lt;/h2>
+&lt;p>为了方便观测，我们修改一下测试代码——通过&lt;code>Thread.getAllStackTraces()&lt;/code>在main函数中打印出该Java进程包含的线程：&lt;/p>
+&lt;ul>
+&lt;li>通过&lt;code>Thread.getAllStackTraces()&lt;/code>，可以让我们在命令行中，也能方便地观察测试结果。&lt;/li>
+&lt;li>&lt;code>Thread.sleep(Integer.MAX_VALUE)&lt;/code>可以持续阻塞住该进程，方便观察。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135454957.png" alt="image-20230204135454957">&lt;/p>
+&lt;p>这里补充说明一下&lt;code>Thread.getAllStackTraces()&lt;/code>方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>getAllStackTraces()&lt;/code>是&lt;code>java.lang.Thread&lt;/code>类的静态方法&lt;/li>
+&lt;li>首先，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>getThreads()&lt;/code>，获得JVM上当前进程包含的所有线程对象&lt;code>threads&lt;/code>&lt;/li>
+&lt;li>然后，此方法调用&lt;code>java.lang.Thread&lt;/code>类的native方法&lt;code>dumpThreads()&lt;/code>，将所有线程对象&lt;code>threads&lt;/code>转换为&lt;code>StackTraceElement[][]&lt;/code>&lt;/li>
+&lt;li>最后，此方法将&lt;code>StackTraceElement[][]&lt;/code>转换为&lt;code>Map&lt;/code>，该Map的key就是该线程包含的1个线程对象&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204135619621.png" alt="image-20230204135619621">&lt;/p>
+&lt;h1 id="4从操作系统层观测">4.从操作系统层观测&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>首先，我们在Linux上运行起来2.2中的测试代码，&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>然后，通过&lt;strong>&lt;code>ps -ef | grep java&lt;/code>&lt;/strong>命令查看该Java进程信息——该Java进程的进程号是6526：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142512012.png" alt="image-20230204142512012">&lt;/p>
+&lt;ul>
+&lt;li>然后，通过&lt;strong>&lt;code>top -H -p 6526&lt;/code>&lt;/strong>查看该Java进程下的线程信息——该Java进程下包含了&lt;strong>15个线程&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204142900818.png" alt="image-20230204142900818">&lt;/p>
+&lt;h1 id="5不一致的观测结果说明了什么">5.不一致的观测结果，说明了什么?&lt;/h1>
+&lt;p>从JVM层观测，我们看到被测的这个Java进程包含了5个线程：&lt;/p>
+&lt;ul>
+&lt;li>main线程&lt;/li>
+&lt;li>Attach Listener线程&lt;/li>
+&lt;li>Finalizer线程&lt;/li>
+&lt;li>Reference Handler线程&lt;/li>
+&lt;li>Signal Dispatcher线程&lt;/li>
+&lt;/ul>
+&lt;p>从操作系统层观测，我们看到同1个被测的Java进程包含了15个线程：&lt;/p>
+&lt;ul>
+&lt;li>PID：6527&lt;/li>
+&lt;li>PID：6531&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;li>PID：6544&lt;/li>
+&lt;/ul>
+&lt;p>通过上述不一致的观测结果，我们可以产生两个推论：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
+&lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
+&lt;/ul>
+&lt;h1 id="6验证推论">6.验证推论&lt;/h1>
+&lt;p>在JVM层观测得到的4个线程，其中的&lt;code>main&lt;/code>线程比较单纯(就是Java测试代码中main函数所在的主线程)，相比其它线程(如：&lt;code>Finalizer&lt;/code>线程)更单纯，因此我们可以跟踪JVM源码中的main函数：&lt;/p>
+&lt;h2 id="step1通过执行测试代码进入jvm的main函数">STEP1.通过执行测试代码进入JVM的main函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144631761.png" alt="image-20230204144631761">&lt;/p>
+&lt;h2 id="step2进入jli_launch函数">STEP2.进入JLI_Launch函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204144827592.png" alt="image-20230204144827592">&lt;/p>
+&lt;ul>
+&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145133920.png" alt="image-20230204145133920">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145221020.png" alt="image-20230204145221020">&lt;/p>
+&lt;h2 id="step3执行loadjavavm函数">STEP3.执行LoadJavaVM函数&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145333363.png" alt="image-20230204145333363">&lt;/p>
+&lt;ul>
+&lt;li>此时，操作系统中的该&lt;code>Java进程&lt;/code>(&lt;code>Java进程ID=6627&lt;/code>)下依然只包含1个&lt;code>系统线程&lt;/code>(&lt;code>系统线程ID=6627&lt;/code>)：&lt;/li>
+&lt;/ul>
+&lt;h2 id="step4执行jvminit函数">STEP4.执行JVMInit函数&lt;/h2>
+&lt;p>此时，可以看到1个函数名&lt;code>ContinueInNewThread&lt;/code>，疑似JVM准备创建新的系统线程。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145550135.png" alt="image-20230204145550135">&lt;/p>
+&lt;h2 id="step5执行continueinnewthread函数">STEP5.执行ContinueInNewThread函数&lt;/h2>
+&lt;p>此函数会进一步调用&lt;code>ContinueInNewThread0()&lt;/code>函数，疑似JVM在这个函数中会创建新的系统线程。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145738721.png" alt="image-20230204145738721">&lt;/p>
+&lt;h2 id="step6执行continueinnewthread0函数">STEP6.执行ContinueInNewThread0函数&lt;/h2>
+&lt;ul>
+&lt;li>在此，我们终于看到了JVM调用了Linux系统API&lt;code>pthread&lt;/code>系列函数来创建系统线程&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204145917391.png" alt="image-20230204145917391">&lt;/p>
+&lt;ul>
+&lt;li>我们执行到1013行，&lt;code>pthread_create&lt;/code>函数，再来观察操作系统，此时产生了1个新的系统线程(线程ID=6840)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150109863.png" alt="image-20230204150109863">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150126981.png" alt="image-20230204150126981">&lt;/p>
+&lt;h2 id="step7在新的系统线程中会回调到javamain函数">STEP7.在新的系统线程中会回调到JavaMain函数&lt;/h2>
+&lt;ul>
+&lt;li>JVM通过pthread创建新的系统线程后，该系统线程会执行&lt;code>JavaMain函数&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150329012.png" alt="image-20230204150329012">&lt;/p>
+&lt;ul>
+&lt;li>在&lt;code>JavaMain&lt;/code>函数中，会继续执行&lt;code>InitializeJVM&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150518536.png" alt="image-20230204150518536">&lt;/p>
+&lt;h2 id="step8执行initializejvm函数">STEP8.执行&lt;code>InitializeJVM&lt;/code>函数&lt;/h2>
+&lt;ul>
+&lt;li>此函数会进一步执行&lt;code>libjvm.so&lt;/code>中的&lt;code>CreateJavaVM&lt;/code>函数&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204150918046.png" alt="image-20230204150918046">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>CreateJavaVM&lt;/code>函数调用栈很深，我们直接执行这个函数，查看此时操作系统中，Java进程下的系统线程，此时JVM已经在操作系统中创建了13个新的系统线程：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
+&lt;h2 id="step9执行回到javamain函数">STEP9.执行回到JavaMain函数&lt;/h2>
+&lt;ul>
+&lt;li>JVM执行&lt;code>LoadMainClass&lt;/code>函数和&lt;code>GetStaticMethodID&lt;/code>函数，获得Java侧的main函数所在的类和main函数Id。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151238640.png" alt="image-20230204151238640">&lt;/p>
+&lt;ul>
+&lt;li>JVM通过JNI接口，调用Java代码中的main函数，Java代码打印出4个Java进程下包含的&lt;code>Java线程&lt;/code>：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明：在不同IDE下，Run模式和Debug模式打印的Java线程是有差异的。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151535458.png" alt="image-20230204151535458">&lt;/p>
+&lt;ul>
+&lt;li>此时，操作系统层，这个Java进程包含的&lt;code>系统线程&lt;/code>依然为15个：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/image-20230204151107186.png" alt="image-20230204151107186">&lt;/p>
+&lt;h1 id="7结论">7.结论&lt;/h1>
+&lt;p>通过6中跟踪JVM的main函数执行过程，可知：&lt;/p>
+&lt;ul>
+&lt;li>JVM在执行被测Java代码的&lt;code>java xxxx&lt;/code>命令时，在操作系统层产生了&lt;code>1个java进程&lt;/code>JVM会在它的main函数中，通过系统API创建&lt;code>系统线程&lt;/code>(如：Linux下的&lt;code>pthread&lt;/code>库)&lt;/li>
+&lt;li>JVM在该java进程内，第1个创建的&lt;code>系统线程&lt;/code>是用来执行Java侧代码的main函数的。
+&lt;ul>
+&lt;li>在这个系统线程内，JVM先初始化JVM，此时会产生新的系统线程。&lt;/li>
+&lt;li>在这个系统线程内，JVM再通过JNI接口得到Java侧代码的main函数以及main函数所在的类，并执行Java侧代码的main函数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>因此，证明了我们的推论1：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
+&lt;/ul>
+&lt;h1 id="8下一步">8.下一步&lt;/h1>
+&lt;p>对于推论2，需要进一步分析JVM的main函数执行流程，本文篇幅有限，且听下回分解。&lt;/p>
+&lt;p>笔者先附上JVM的main函数执行流程，便于展开下一篇论述：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-2/JVM%E7%9A%84main%E5%87%BD%E6%95%B0%E6%B5%81%E7%A8%8B.png" alt="JVM的main函数流程">&lt;/p></description></item><item><title>【SpringOne 2022】2.Introducing Spring Boot 3.0</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</link><pubDate>Mon, 30 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20222.introducing-spring-boot-3.0/</guid><description>&lt;p>SpringOne 2022第2个议题《Introducing Spring Boot 3.0》，主要展示Spring Boot 3.0的性能以及要点，演讲者：DaShaun Carter。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%912.IntroducingSpringBoot3.0/image-20230130165407830.png" alt="image-20230130165407830">&lt;/p>
 &lt;h1 id="1测试前提">1.测试前提&lt;/h1>
 &lt;h2 id="硬件">硬件&lt;/h2>

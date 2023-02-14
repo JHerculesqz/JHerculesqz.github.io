@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Feb 2023 08:07:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Feb 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,240 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】和chatGPT结对编程的6小时</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</link><pubDate>Tue, 14 Feb 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</guid><description>&lt;h1 id="1我对ai的偏见">1.我对AI的偏见&lt;/h1>
+&lt;p>2013年我写了个微信聊天机器人，在新浪微博上小火了一把。我的认知局限性让我没想到若干年后网红如此赚钱，活该我现在还在搬砖送外卖。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214114334028.png" alt="image-20230214114334028">&lt;/p>
+&lt;p>那阵子心里美滋滋——这个机器人好像我小孩儿，你教它一点，它就聪明一点。当然我那帮损友最终把它教成了流氓二混子。&lt;/p>
+&lt;p>即便我很喜欢我的机器人，但还是在一年后亲手关了它的服务器，因为我对&lt;strong>2013年的AI理论基础&lt;/strong>不太看好(这也是我的偏见)：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>计算机视觉&lt;/strong>：这个算是2013年左右，AI应用最成熟的领域吧，车牌识别、人脸识别、零件识别等等。但它的理论本质还是那些天才数学家归纳出了N种&amp;quot;人类视觉&amp;quot;的模式。**你觉得人类眼睛看到的美仅仅是一堆数学公式吗？**我不觉得。&lt;/li>
+&lt;li>&lt;strong>商业BI&lt;/strong>：这也是2013年那会儿，AI另一个有广泛应用的领域吧。请注意，我说的是广泛应用，而不是成熟应用。说白了，在商业智能中，那些AI理论宣称的是通过&amp;rdquo;&lt;strong>历史数据&lt;/strong>&amp;ldquo;就能&amp;rdquo;&lt;strong>预测未来&lt;/strong>&amp;quot;——咱们不要去辩论&amp;rdquo;&lt;strong>线性回归&lt;/strong>&amp;quot;、&amp;quot;&lt;strong>聚类&lt;/strong>&amp;ldquo;的理论合理性，也不要去讨论AI书本上的&amp;rdquo;&lt;strong>波士顿房价预测&lt;/strong>&amp;ldquo;的经典案例——百度识图很牛，它能告诉我们这什么花什么草，但有个AI预测出下一把投资个啥华为就能统治全宇宙，你看华为的大佬们敢不敢一把梭哈——&lt;strong>人类历史真的能归纳成1个因变量有限的简单数学公式吗&lt;/strong>？&lt;/li>
+&lt;li>………——此处的省略号表示在2013年的我有限的认知中，我想不通AI的未来在哪里。&lt;/li>
+&lt;/ul>
+&lt;p>再后来，&lt;code>TensorFolow&lt;/code>火了、菊厂有了自己的菊厂云，我兴奋地把西瓜书翻了又翻，忽然失落了：&lt;/p>
+&lt;ul>
+&lt;li>这些新的AI资料，似乎和我那些尘封已久的前一代的AI书籍没啥质的飞跃。&lt;/li>
+&lt;li>我师傅说：&amp;quot;&lt;strong>人工智能就是喂狗&lt;/strong>&amp;quot;——模型是数学家设计好的，我们只是不断地喂数据、确认结果。&lt;/li>
+&lt;li>我说：&amp;quot;&lt;strong>此时此刻的人工智能就是更高效地喂狗&lt;/strong>&amp;quot;——喂数据的手段更高级了、算力更强了、模型测试更高效了等等。&lt;/li>
+&lt;/ul>
+&lt;p>于是，我得出了个人的判断：&lt;strong>可能又是资本割韭菜&lt;/strong>，我可不能把有限的时间投入到研究这门手艺上。&lt;/p>
+&lt;p>我怀着对AI深深的偏见，每天研究着我更感兴趣的JVM源码、Spring源码&amp;hellip;&amp;hellip;直到上周六(2023年2月11日)的下午。&lt;/p>
+&lt;h1 id="2第1个故事它不是人工智障">2.第1个故事：它不是人工智障&lt;/h1>
+&lt;p>上周六朋友要我帮他写段代码：他想要一个能算个税的Excel，便于他们公司税务筹划。&lt;/p>
+&lt;p>朋友讲了半天个税咋算，工作18年也没搞懂每个月咋扣税的我依然没听懂。&lt;/p>
+&lt;p>作为资深码农，最烦客户讲不清楚需求(软件工程中最大的魔咒)！&lt;/p>
+&lt;h2 id="第1个问题">第1个问题&lt;/h2>
+&lt;p>&lt;strong>咋办呢？我问了chatGPT第1个问题&lt;/strong>，转给朋友看，他确认回答正确：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141101548.png" alt="image-20230214141101548">&lt;/p>
+&lt;h2 id="第2个问题">第2个问题&lt;/h2>
+&lt;p>&lt;strong>接着，懒惰的我问它第2个问题&lt;/strong>：能不能把上述文字转成代码？&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141035939.png" alt="image-20230214141035939">&lt;/p>
+&lt;h2 id="代码生成效果咋样">&lt;strong>代码生成效果咋样？&lt;/strong>&lt;/h2>
+&lt;ul>
+&lt;li>首先，看完这段代码，我终于明白个税咋算了，感谢chatGPT。。。&lt;/li>
+&lt;li>然后，朋友说除了&amp;quot;个税起征点&amp;quot;要乘以期数，其它都对。。。&lt;/li>
+&lt;li>最后，我仔细检视并运行了它的代码：除了代码规范外，&lt;strong>它的代码还有个性能小亮点&lt;/strong>——寻找收入分级的速算系数时用了倒查，我自己还真不会这样写。。。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214140255700.png" alt="image-20230214140255700">&lt;/p>
+&lt;h2 id="第3个问题">第3个问题&lt;/h2>
+&lt;p>故事没完，在Excel里写公式有点难写：个税计算要分级，会有很长的IF嵌套。&lt;/p>
+&lt;p>如果Google查资料+写公式+测试，我估计要1小时吧。&lt;/p>
+&lt;p>&lt;strong>于是，我问了chatGPT第3个问题&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141004154.png" alt="image-20230214141004154">&lt;/p>
+&lt;p>这个公式有多长呢？我把代码贴出来，大家可以评估一下自己需要多久写得出来：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="o">=&lt;/span>&lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">36000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">03&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">144000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">2520&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">300000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">2&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">16920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">420000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">25&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">31920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">660000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">3&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">52920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">960000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">35&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">85920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">45&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">181920&lt;/span>&lt;span class="o">)))))))&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="第4个问题">第4个问题&lt;/h2>
+&lt;p>这个公式只是算了一个月的个税，朋友最终想要的是1月、2月&amp;hellip;.12月的个税应缴税额。&lt;/p>
+&lt;p>这样就涉及你的第2行要取第1行的单元格、第3行取第2行，依此类推。&lt;/p>
+&lt;p>这样的公式咋写呢？&lt;/p>
+&lt;p>我和朋友Google了半天也没知道答案，因为我想要公式的功能要用人类的一段话表达，而搜索引擎只能输入关键字。&lt;/p>
+&lt;p>&lt;strong>于是，我问chatGPT的第4个问题是人类能理解的一整段话&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141542915.png" alt="image-20230214141542915">&lt;/p>
+&lt;p>通过chatGPT的回答，我知道了&lt;code>INDIRECT函数&lt;/code>。&lt;/p>
+&lt;p>显然，通过搜索引擎最终也能找到&lt;code>INDIRECT函数&lt;/code>，但没chatGPT这么快。&lt;/p>
+&lt;p>因为：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>搜索引擎的底层逻辑&lt;/strong>：人类告诉它关键字，它给人类有关联的结果，人类自行分析，&lt;strong>人类得出结论&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>chatGPT的底层逻辑&lt;/strong>：人类告诉它人类语言，它自己找到有关联的结果并自行分析得出结论，&lt;strong>人类获得结论&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>这就有点意思了，&lt;strong>难怪微软赶紧让Bing接入chatGPT，谷歌瑟瑟发抖&lt;/strong>。&lt;/p>
+&lt;p>至此，朋友要的Excel做完了，耗时半小时。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214143709735.png" alt="image-20230214143709735">&lt;/p>
+&lt;h2 id="观点">观点&lt;/h2>
+&lt;p>&lt;strong>chatGPT真不是人工智障&lt;/strong>，而是真的人工智能。对于第1个故事，我有几个观点：&lt;/p>
+&lt;h3 id="1任务难度简单">(1)任务难度：简单&lt;/h3>
+&lt;p>Excel写公式是日常、简单工作，作为人类的我们，花点时间肯定能完成。&lt;/p>
+&lt;h3 id="2值得关注的突破点有可能改变软件开发模式">(2)值得关注的突破点：有可能改变软件开发模式。&lt;/h3>
+&lt;p>&lt;strong>过去，需求传递是软件研发最大的工程成本&lt;/strong>。客户是业务专家，程序员软件专家。如果表达能力弱的客户遇上不懂业务的程序员，那么这个项目铁定黄。菊花厂各种工程方法和质量流程本质上还是&lt;strong>对人与人的沟通成本&lt;/strong>的妥协。&lt;/p>
+&lt;p>&lt;strong>未来，chatGPT可能成为客户与程序员的沟通桥梁&lt;/strong>。chatGPT与任何一个人类相比，可以认为是通才——不会开船的公交车司机不是个好程序员——chatGPT大致是这么个意思吧。&lt;/p>
+&lt;p>在亲身体验chatGPT之前，身边同事不屑地说：&amp;ldquo;我就不信有描述清楚需求的客户，需求描述不清chatGPT再牛逼也写不出来&amp;rdquo;，逻辑如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214145728163.png" alt="image-20230214145728163">&lt;/p>
+&lt;p>在亲身体验chatGPT之后，不得不说这或许就是人类的局限性，难道人类不能变通一下吗：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214150532484.png" alt="image-20230214150532484">&lt;/p>
+&lt;h3 id="3值得关注的突破点一般的crud代码它写的不比人类差">(3)值得关注的突破点：一般的CRUD代码，它写的不比人类差。&lt;/h3>
+&lt;p>比如这个故事中的Java代码，不知道菊厂工作级的程序员能否在20分钟内，理解需求+编码+一次性测过。&lt;/p>
+&lt;h1 id="3第2个故事你值得收下我的膝盖">3.第2个故事：你值得收下我的膝盖&lt;/h1>
+&lt;p>完成朋友的Excel，我开始写自己的技术专栏。&lt;/p>
+&lt;p>那天写的是&lt;strong>Java线程和操作系统的对应关系&lt;/strong>。&lt;/p>
+&lt;p>这个技术问题有多深呢？&lt;/p>
+&lt;p>除了毕昇JDK团队的专家和我这种好奇宝宝，我猜菊厂大部分Java程序猿不会意识到这个问题，更不用说阅读对应的JVM源码。&lt;/p>
+&lt;p>我花了4天跟踪了JVM的相关代码，写了这篇文章《&lt;a href="https://mp.weixin.qq.com/s/O-cE6-jIYk66meYINt3gMg">【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3&lt;/a>》。&lt;/p>
+&lt;p>各位读者有兴趣可以看看，应该有点复杂，于是，我开始好奇在我的专业领域，chatGPT表现如何？&lt;/p>
+&lt;h2 id="第1个问题-1">第1个问题&lt;/h2>
+&lt;p>第1个问题我问的比较笼统，chatGPT回答的也比较含糊。&lt;/p>
+&lt;p>看起来答案没啥问题，但是语言的二义性，我不确定chatGPT是不是瞎蒙的，于是我问了第2个问题。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153034266.png" alt="image-20230214153034266">&lt;/p>
+&lt;h2 id="第2个问题-1">第2个问题&lt;/h2>
+&lt;p>第2个问题的回答有点惊艳：&lt;/p>
+&lt;ul>
+&lt;li>首先，它知道不同厂家实现的JVM可能不同，所以答案最后它在强调HotSpot是这么实现的。&lt;/li>
+&lt;li>其次，它能精确理解&lt;code>scr/share/vm/runtime/thread.cpp&lt;/code>这段&lt;strong>代码的业务含义&lt;/strong>(即，这段代码在做什么事情)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153210729.png" alt="image-20230214153210729">&lt;/p>
+&lt;p>AI能理解**&amp;ldquo;代码的业务含义&amp;rdquo;**有多牛逼呢？&lt;/p>
+&lt;p>回看一下业界历史上那么多代码质量检查工具，它们可以做到静态检查、内存检查、安全检查等，能理解这段代码在干啥吗？&lt;/p>
+&lt;p>回到&amp;quot;Java线程和JVM线程的关系&amp;quot;这个技术问题上，JVM的启动流程有多少关键步骤呢？&lt;strong>34步&lt;/strong>。&lt;/p>
+&lt;p>我花了4天时间，一边Debug、一边修正这张流程图、一边理解这段代码的业务含义，关键这还是我的专业领域：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230211233551236.png" alt="image-20230211233551236">&lt;/p>
+&lt;h2 id="第3个问题-1">第3个问题&lt;/h2>
+&lt;p>我问了chatGPT很具体的问题，如果没看过JVM源码的人类，应该无法回答。&lt;/p>
+&lt;p>再看看chatGPT的答案：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214155311824.png" alt="image-20230214155311824">&lt;/p>
+&lt;h2 id="观点-1">观点&lt;/h2>
+&lt;p>大约和chatGPT玩了1小时，这就是第2个故事。对这个故事，我的观点如下：&lt;/p>
+&lt;h3 id="1任务难度困难">(1)任务难度：困难&lt;/h3>
+&lt;p>作为人类的我，在18年每天都在敲代码积累软件知识的前提下，需要花了4天时间去分析的源代码，应该不是个简单任务。&lt;/p>
+&lt;h3 id="2值得关注的突破点学习速度惊人某些领域知识达到专业级">(2)值得关注的突破点：学习速度惊人，某些领域知识达到专业级。&lt;/h3>
+&lt;p>记得有阵子一群人吐槽菊厂考试有JVM相关的题目，属于偏题怪题。&lt;/p>
+&lt;p>暂不论这个人观点正确与否，至少证明这些吐槽的人类，对于JVM等编译器底层技术没有掌握和不愿了解的。&lt;/p>
+&lt;p>为什么呢？因为人是趋利避害和功利性的。&lt;/p>
+&lt;p>虽然理解编译器底层技术有助于写更好的代码，但这个知识难学且不影响每天搬砖，当然不会主动去学。&lt;/p>
+&lt;p>然而，chatGPT毫不费劲地做到了。&lt;/p>
+&lt;p>虽然，它做到的方式目前可能是机械式地&amp;rdquo;&lt;strong>搜索它的记忆&lt;/strong>&amp;quot;。&lt;/p>
+&lt;p>虽然，它也可能&lt;strong>在用某种AI技巧，在答案中对我进行心理暗示、情感诱导&lt;/strong>。&lt;/p>
+&lt;p>但，如果把chatGPT当做一种新的物种，从结果看：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>它的学习速度远超人类&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>我擅长的领域，它的未来却不可预期&lt;/strong>：某个领域的人类专家才能做到的高级任务，它至少能&lt;strong>装作&lt;/strong>也能完成。&lt;/li>
+&lt;/ul>
+&lt;h1 id="4第3个故事我有点笑不出来">4.第3个故事：我有点笑不出来&lt;/h1>
+&lt;p>周六夜11点，忽然想到机器人学中有个算法问题，可以抽象如下：&lt;/p>
+&lt;ul>
+&lt;li>已知机器人要走的轨迹、初始速度、最大速度、最大加速度、最大减速度。&lt;/li>
+&lt;li>希望算法进行路径规划和速度规划：汽车每时每刻的路径、速度and加速度。&lt;/li>
+&lt;li>算法的规划结果要保证汽车最快到达终点、动作丝滑。&lt;/li>
+&lt;/ul>
+&lt;p>这个算法是机器人领域的关键算法，比如波士顿机器人：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/kaimen.gif" alt="kaimen">&lt;/p>
+&lt;p>之前我对这个算法很感兴趣，断断续续也Google和图书馆查过一些论文，但仅获得了些许只言片语的信息——NURBS曲线、速度规划、路径规划。&lt;/p>
+&lt;p>说白了，这是个&lt;strong>业务领域算法&lt;/strong>——这就意味着，你不是业内人士又没有明白人指路，学习效率就不会太高。&lt;/p>
+&lt;p>我抱着试试看的心情问了chatGPT。。。然后。。。我就一发不可收拾地和它结对编程到了凌晨4点。&lt;/p>
+&lt;h2 id="第1组问题">第1组问题&lt;/h2>
+&lt;p>根据我之前的线索，我问了一下chatGPT，通过它的回答，我知道了更多知识线索，我感觉我遇到了1个不错的老师：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>NURBS算法&lt;/strong>：非均匀有理B样条。&lt;/li>
+&lt;li>&lt;strong>算法能力&lt;/strong>：生成平滑轨迹、合理的加减速。&lt;/li>
+&lt;li>&lt;strong>相关算法&lt;/strong>：S曲线速度规划&lt;/li>
+&lt;li>&lt;strong>学习的方向&lt;/strong>：在计算机图形学、数值分析、数字信号处理等学科中，都可以获取到这个算法的更深入的知识。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214162853438.png" alt="image-20230214162853438">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163155188.png" alt="image-20230214163155188">&lt;/p>
+&lt;h2 id="第2组问题">第2组问题&lt;/h2>
+&lt;p>我的第2组问题就是深入到算法的原理、依赖的数学理论，&lt;/p>
+&lt;p>在接下来的2小时，chatGPT把线性插值法到B样条插值法都给我撸了一遍：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>插值的数学含义&lt;/strong>：已知有限的坐标点，自动生成N个坐标点，保证曲线是平滑的。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171500079.png" alt="image-20230214171500079">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>插值的实际用途&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171556561.png" alt="image-20230214171556561">&lt;/p>
+&lt;ul>
+&lt;li>它的回答有点像&lt;strong>插值&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171714672.png" alt="image-20230214171714672">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>来吧，把各种插值法的数学公式都讲一遍&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171848979.png" alt="image-20230214171848979">&lt;/p>
+&lt;h2 id="第3组问题">第3组问题&lt;/h2>
+&lt;p>&lt;code>Show me the code！&lt;/code>我只列举几个代码片段供大家感受：&lt;/p>
+&lt;h3 id="代码片段1代码轮廓">代码片段1：代码轮廓&lt;/h3>
+&lt;p>通过这段代码，我看到了&lt;strong>样条插值法的代码轮廓&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163436511.png" alt="image-20230214163436511">&lt;/p>
+&lt;h3 id="代码片段2我不知道的三方件">代码片段2：我不知道的三方件&lt;/h3>
+&lt;p>代码片段2和代码片段1差不多，只不过是Java语言实现。&lt;/p>
+&lt;p>但，这段代码用到了一个我没用过的三方件&lt;code>org.apache.common.math3&lt;/code>。&lt;/p>
+&lt;p>这是一个亮点——原来有这么1个Java库，已经提供了很多基础的数学模型和算法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172256770.png" alt="image-20230214172256770">&lt;/p>
+&lt;h3 id="代码片段3增加速度规划">代码片段3：增加速度规划&lt;/h3>
+&lt;p>我让chatGPT针对同一个问题，做了3次回答，每次回答不同。&lt;/p>
+&lt;p>综合3次回答，可以得到我比较满意的答案：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第一次回答&lt;/strong>：业务流程说的很清楚，但是代码不太完整。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172856207.png" alt="image-20230214172856207">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第二次回答&lt;/strong>：我知道了Apache的那个三方件中的&lt;code>SplineInterpolator&lt;/code>可以生成B样条曲线。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172937781.png" alt="image-20230214172937781">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第三个回答&lt;/strong>：业务流程和代码都相对完整。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173043455.png" alt="image-20230214173043455">&lt;/p>
+&lt;h3 id="代码片段n我和chatgpt的n次小迭代">代码片段N：我和chatGPT的N次小迭代&lt;/h3>
+&lt;p>得到了这个我未知知识领域的业务算法的代码框架后，我试着在IDEA里运行，无法成功。&lt;/p>
+&lt;p>有的函数有数组越界，有的函数参数个数不对。&lt;/p>
+&lt;h4 id="迭代1对于明显的编译错误作为人类的我可以快速帮它修复">迭代1：对于明显的编译错误，作为人类的我可以快速帮它修复。&lt;/h4>
+&lt;p>迭代1主要是我在工作，修复后，剩下的代码问题只剩下我不太理解的算法逻辑了。&lt;/p>
+&lt;h4 id="迭代2漏写了一个算法相关的函数它补充了">迭代2：漏写了一个算法相关的函数，它补充了。&lt;/h4>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173941576.png" alt="image-20230214173941576">&lt;/p>
+&lt;h4 id="迭代3请注意我的问题并没有指出具体是什么错误它自己分析出来代码错在哪里了">迭代3：请注意我的问题并没有指出具体是什么错误，它自己分析出来代码错在哪里了。&lt;/h4>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174016136.png" alt="image-20230214174016136">&lt;/p>
+&lt;h4 id="迭代4由于chatgpt网站限制无法返回超长代码片段导致看不到完整代码于是我要求它想办法精简代码">迭代4：由于chatGPT网站限制(无法返回超长代码片段)，导致看不到完整代码，于是我要求它想办法精简代码。&lt;/h4>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174356129.png" alt="image-20230214174356129">&lt;/p>
+&lt;h4 id="迭代n经过4个小时不断的交互1个基础的机器人运动规划算法代码跑通了">迭代N：经过4个小时不断的交互，1个基础的机器人运动规划算法代码跑通了&lt;/h4>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174756076.png" alt="image-20230214174756076">&lt;/p>
+&lt;h2 id="观点-2">观点&lt;/h2>
+&lt;p>第3个故事结束的时候，是周六的凌晨4点，我对这个故事的观点：&lt;/p>
+&lt;h3 id="1工作难度超难">(1)工作难度：超难。&lt;/h3>
+&lt;p>这个任务我不会，甚至我都查不到资料找不到头绪。&lt;/p>
+&lt;h3 id="2值得关注的突破点chatgpt可能变成人类的师傅此时人类仅仅是个学徒小工辅助">(2)值得关注的突破点：chatGPT可能变成人类的师傅，此时人类仅仅是个学徒、小工、辅助。&lt;/h3>
+&lt;p>人类在某个领域是专家，在大部分领域是不擅长的。&lt;/p>
+&lt;p>而chatGPT可能变成人类的师傅，此时人类仅仅是个学徒、小工、辅助。&lt;/p>
+&lt;h1 id="5看到未来">5.看到未来&lt;/h1>
+&lt;p>三个故事经历完，已经是周日的凌晨4点，我从窗口已经能看到东湖的星星点点。&lt;/p>
+&lt;p>国内对于chatGPT，已经热闹了一两个月。&lt;/p>
+&lt;p>有的人通过卖账号已经赚了一波，有的人做套壳儿GPT也骗走了不少流量。&lt;/p>
+&lt;p>师傅说：我们的孩子还在学怎么用这些底层技术，别人的孩子已经在发明这些底层技术了。&lt;/p>
+&lt;p>当喧嚣散尽时，我们还会留下什么？&lt;/p>
+&lt;p>自媒体上对chatGPT有无数的测评，无论从商业前景、应用场景、技术原理等哪种角度，都是那两派：&lt;strong>&amp;ldquo;吹捧派&amp;rdquo;&lt;strong>和&lt;/strong>&amp;ldquo;唱衰派&amp;rdquo;&lt;/strong>。&lt;/p>
+&lt;p>我不想夸大chatGPT，也不想盲目自大地轻视它，这6个小时，我仅仅是一个观察者。&lt;/p>
+&lt;p>通过这6个小时的结对编程和观察，我有点震撼，这也可能是心理学问题：&lt;/p>
+&lt;ul>
+&lt;li>第1个故事，那不过是个简单的工作，花点时间我必定能完成——&lt;strong>AI能完成，行吧，你还不错&lt;/strong>。&lt;/li>
+&lt;li>第2个故事，那是我的专业领域，其他人类未必能比我完成的好——&lt;strong>AI竟然能完成，我感受到被冒犯、我有了危机感&lt;/strong>。&lt;/li>
+&lt;li>第3个故事，那是我的盲区，我努力过但没成功——&lt;strong>AI指导我完成了，此刻好像我知道了三体文明的存在，我没有啥反抗的机会&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>我也不知道chatGPT到底会怎样，但我感觉它和过往的AI技术不一样。&lt;/p>
+&lt;p>&lt;strong>它应该不是AI历史中的一点涟漪，而是人类历史的某个里程碑&lt;/strong>。&lt;/p>
+&lt;p>2019年12月6日，老爸脑梗进了ICU，守在ICU门口的那段时光，我很想做一个&lt;strong>数字老爸&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>把亲人的文字、资料、语音、照片录入到云端。&lt;/li>
+&lt;li>通过某种AI技术训练出能复现亲人的模型——chatGPT看起来似乎可以做到。&lt;/li>
+&lt;li>集成一些相对成熟的工程技术(如：文字转语音、VR、AR)&lt;/li>
+&lt;li>……&lt;/li>
+&lt;/ul>
+&lt;p>经历过ICU门口的人应该能感同身受，只不过我这个工科脑袋有点跳脱，但或许这就是未来。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/Future.png" alt="Future">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
 &lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>
@@ -4931,184 +5164,4 @@ ToStringTest.stackWalker avgt 3 20.032 ± 27.051 us/op
 &lt;h1 id="5参考文献">5.参考文献&lt;/h1>
 &lt;blockquote>
 &lt;p>&lt;a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/">https://docs.oracle.com/javase/8/docs/technotes/tools/windows/&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>【编译引擎】-4-学习阅读Class文件指令-概览</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/</link><pubDate>Thu, 05 Aug 2021 15:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/</guid><description>&lt;h1 id="1前言">1.前言&lt;/h1>
-&lt;p>在《【编译引擎】学习阅读Class文件结构(javap版)》中，我们看到了Code属性包含了JVM指令序列。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702135411052.png" alt="image-20210702135411052">&lt;/p>
-&lt;p>在理解了Class文件结构之后，学习JVM指令有助于我们更进一步地理解Class文件结构。&lt;/p>
-&lt;p>然而，JVM指令是JVM规范另一个大篇幅知识点，我们应该如何高效学习它呢？&lt;/p>
-&lt;p>本文将通过上述代码，阐述JVM指令的执行过程(例如：局部变量表中的数据入栈、栈上数据存储回局部变量表等)，为读者展示JVM指令的全貌以及学习方法。&lt;/p>
-&lt;h1 id="2jvm指令概览">2.JVM指令概览&lt;/h1>
-&lt;h2 id="21本质-信息压缩">2.1.本质-信息压缩&lt;/h2>
-&lt;p>在学习具体的JVM之前，我们应该先来看看JVM指令的本质以及它存在的意义。&lt;/p>
-&lt;p>不知道您是否考虑过这样一个问题：&amp;ldquo;如何表达一个方法的实现呢？&amp;rdquo;&lt;/p>
-&lt;p>您可能会说：可以用代码来描述，如下伪码所示：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kt">void&lt;/span> &lt;span class="nf">func1&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">print&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>那么，我们把问题增加一些限制：&amp;ldquo;如何用最小的信息量表达一个方法的实现？&amp;rdquo;&lt;/p>
-&lt;p>聪明的读者可能会想到&amp;quot;代号法&amp;rdquo;，即为上述伪码取个特殊的代号(假设&amp;quot;int i = 1&amp;quot;的代号是&amp;quot;帅哥&amp;rdquo;，&amp;ldquo;print(i)&amp;ldquo;的代号是&amp;quot;美女&amp;rdquo;)，那么上述伪码可以简化为：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kt">void&lt;/span> &lt;span class="nf">func1&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">帅哥&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">美女&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>我们继续把问题增加一些限制：&amp;ldquo;如何用计算机能理解的最小信息量表达一个方法的实现？&amp;rdquo;&lt;/p>
-&lt;p>什么是计算机能理解的信息？显然是字节。所以，我们可以约定&amp;quot;0A&amp;quot;就是&amp;quot;帅哥&amp;rdquo;，&amp;ldquo;0B&amp;quot;就是&amp;quot;美女&amp;rdquo;，如下：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kt">void&lt;/span> &lt;span class="nf">func1&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">0A&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">0B&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>同样的信息，在某些场景下(对于人)越大越好，在某些场景下(对于机器)越小越好。&lt;/p>
-&lt;p>更关键的是，二者能相互转换——这就好像三体中智子的高维折叠和低维展开。&lt;/p>
-&lt;p>这或许就是计算机的世界中，最令人着迷的地方。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702144922740.png" alt="image-20210702144922740">&lt;/p>
-&lt;h2 id="22jvm指令格式">2.2.JVM指令格式&lt;/h2>
-&lt;p>JVM指令的格式一般是这样的：&lt;/p>
-&lt;blockquote>
-&lt;p>操作码+操作数&lt;/p>
-&lt;/blockquote>
-&lt;p>操作码为1个字节，在JVM规范中约定了这个字节表达的具体的JVM指令含义。&lt;/p>
-&lt;p>这是一个有趣的细节：1个字节是8位，所以JVM指令的操作码最多只有255个&lt;/p>
-&lt;p>操作数可以没有，也可能有多个。&lt;/p>
-&lt;h2 id="23jvm指令分类">2.3.JVM指令分类&lt;/h2>
-&lt;p>JVM规范中的JVM指令非常多，我们可以根据指令的使用场景分类，本文仅列举实战中最常用的场景：&lt;/p>
-&lt;ul>
-&lt;li>加载与存储：比如将局部变量表的数据放到虚拟机栈中&lt;/li>
-&lt;li>算数指令：比如i++&lt;/li>
-&lt;li>类型转换指令：比如int转double&lt;/li>
-&lt;li>对象创建/字段访问：比如创建一个类的实例，并且访问该实例的某个属性&lt;/li>
-&lt;li>方法调用：比如访问一个类的静态方法&lt;/li>
-&lt;li>异常处理：比如抛出一个异常&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;h2 id="24真理都在规范中">2.4.真理都在规范中&lt;/h2>
-&lt;p>当我们具备了前面的基本知识，最高效、最准确地学习JVM指令，就要查阅JVM规范了：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702150908956.png" alt="image-20210702150908956">&lt;/p>
-&lt;h1 id="3实例解读">3.实例解读&lt;/h1>
-&lt;p>为了方便阅读，我们将javap输出的日志简化后展示如下：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">java&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">lang&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">String&lt;/span>&lt;span class="o">[]);&lt;/span>
-&lt;span class="err">……………………&lt;/span>
-&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">getstatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// Field java/lang/System.out:Ljava/io/PrintStream;
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="c1">// String start
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">5&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// Method java/io/PrintStream.println:(Ljava/lang/String;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">8&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokestatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">5&lt;/span> &lt;span class="c1">// Method test:()V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">11&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">getstatic&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">2&lt;/span> &lt;span class="c1">// Field java/lang/System.out:Ljava/io/PrintStream;
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">14&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">6&lt;/span> &lt;span class="c1">// String end
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">16&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokevirtual&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">4&lt;/span> &lt;span class="c1">// Method java/io/PrintStream.println:(Ljava/lang/String;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">19&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">return&lt;/span>
-&lt;span class="err">……………………&lt;/span>
-&lt;span class="kd">private&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">test&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="err">……………………&lt;/span>
-&lt;span class="n">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">7&lt;/span> &lt;span class="c1">// class java/lang/IllegalArgumentException
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">dup&lt;/span>
-&lt;span class="n">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">ldc&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">8&lt;/span> &lt;span class="c1">// String exception
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">6&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">invokespecial&lt;/span> &lt;span class="err">#&lt;/span>&lt;span class="n">9&lt;/span> &lt;span class="c1">// Method java/lang/IllegalArgumentException.&amp;#34;&amp;lt;init&amp;gt;&amp;#34;:(Ljava/lang/String;)V
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">9&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">athrow&lt;/span>
-&lt;span class="err">……………………&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="31对象创建指令">3.1对象创建指令&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152821188.png" alt="image-20210702152821188">&lt;/p>
-&lt;p>new是操作码，#7是操作数。&lt;/p>
-&lt;p>#7表示常量池中的常量，从javap的输出可知，#7表示IllegalArgumentException异常。&lt;/p>
-&lt;p>new表示创建了IllegalArgumentException异常对象。&lt;/p>
-&lt;p>创建了异常对象后，对象本身放到堆中，对象的内存地址会放到栈中。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152324438.png" alt="image-20210702152324438">&lt;/p>
-&lt;p>下一步就是dup，dup只有操作码，没有操作数。&lt;/p>
-&lt;p>dup就是将栈中前一个元素进行了复制。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152609221.png" alt="image-20210702152609221">&lt;/p>
-&lt;p>那么为什么要dup呢？&lt;/p>
-&lt;p>这就涉及到后面方法调用的指令了，当执行了&lt;code>invokespecial&lt;/code>指令，就会将栈中的&lt;code>#0001&lt;/code>出栈。&lt;/p>
-&lt;p>所以，一般创建了对象后，会紧跟着dup一下。&lt;/p>
-&lt;h2 id="32常量入栈指令">3.2.常量入栈指令&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702152857941.png" alt="image-20210702152857941">&lt;/p>
-&lt;p>ldc是操作码，#8是操作数。&lt;/p>
-&lt;p>根据javap的输出提示，#8表示的是字符串类型常量&amp;quot;exception&amp;rdquo;。&lt;/p>
-&lt;p>ldc负责将这个常量入栈：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153046669.png" alt="image-20210702153046669">&lt;/p>
-&lt;h2 id="33方法调用指令">3.3.方法调用指令&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153131436.png" alt="image-20210702153131436">&lt;/p>
-&lt;p>invokespecial是操作码，#9是操作数&lt;/p>
-&lt;p>#9表示&lt;code>IllegalArgumentException&lt;/code>异常的构造函数&lt;/p>
-&lt;p>invokespecial表示了调用特定的函数，在这里调用的是&lt;code>IllegalArgumentException&lt;/code>异常的构造函数，并且需要给构造函数输入一个字符串参数&amp;quot;exception&amp;rdquo;。&lt;/p>
-&lt;p>此时运行时数据区变成了这样：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153403860.png" alt="image-20210702153403860">&lt;/p>
-&lt;h2 id="34异常处理指令">3.4.异常处理指令&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153452470.png" alt="image-20210702153452470">&lt;/p>
-&lt;p>athrow只有操作码，表示抛出&lt;code>IllegalArgumentException&lt;/code>异常，并结束了test方法。&lt;/p>
-&lt;p>至此，我们通过test()方法，就覆盖了JVM指令主要的4个场景：创建对象-&amp;gt;常量入栈-&amp;gt;调用方法-&amp;gt;抛出异常。&lt;/p>
-&lt;h2 id="35main函数的jvm指令执行过程">3.5.main函数的JVM指令执行过程&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBClass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/image-20210702153713484.png" alt="image-20210702153713484">&lt;/p>
-&lt;p>有了3.1~3.4的基础，我们再看main函数的执行就很容易举一反三了：&lt;/p>
-&lt;p>&lt;code>getstatic #2&lt;/code>属于类/对象的属性获取场景，即将System.out放到栈中&lt;/p>
-&lt;p>&lt;code>invokevirtual #4&lt;/code>类似invokestatic指令，也是调用方法，即调用System.out.println&lt;/p>
-&lt;p>此时，控制台打印了&amp;quot;start&amp;rdquo;。&lt;/p>
-&lt;p>执行到invokestatic #5，即执行了test()方法，会抛出异常，导致main函数不再往下执行后面的JVM指令。&lt;/p>
-&lt;p>因此，最终控制台打印了start后抛出&lt;code>IllegalArgumentException&lt;/code>异常&lt;/p>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;p>本文接着javap案例，进一步解读了javap的JVM指令部分，具体如下：&lt;/p>
-&lt;ul>
-&lt;li>JVM指令的本质是信息压缩&lt;/li>
-&lt;li>JVM指令格式一般包含1个操作码+N个操作数&lt;/li>
-&lt;li>可以根据场景对JVM指令分类，有助于高效学习JVM指令&lt;/li>
-&lt;li>通过一个示例代码，解读了JVM指令的运行过程&lt;/li>
-&lt;/ul>
-&lt;h1 id="5参考资料">5.参考资料&lt;/h1>
-&lt;blockquote>
-&lt;p>&lt;a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html">https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html&lt;/a>&lt;/p>
-&lt;p>《深入理解Java虚拟机：JVM高级特性与最佳实践》&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

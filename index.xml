@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 05 Apr 2023 09:07:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Apr 2023 01:10:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,233 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-5</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-5/</link><pubDate>Wed, 05 Apr 2023 09:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-5/</guid><description>&lt;h1 id="1疑惑java的线程究竟有几种状态">1.疑惑：Java的线程究竟有几种状态？&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</link><pubDate>Sat, 15 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</guid><description>&lt;h1 id="1疑问java线程对应的native线程状态如何迁移">1.疑问：Java线程对应的native线程状态如何迁移？&lt;/h1>
+&lt;p>在《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-5》中，我们在JDK层面对Java线程的6种状态迁移进行了实验。&lt;/p>
+&lt;p>本文再以Java线程从NEW状态迁移到RUNNABLE状态为引子，观测一下JVM为Java线程创建的native线程的状态如何迁移：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230413160245714.png" alt="">&lt;/p>
+&lt;h1 id="2探索jvm调用链全景图">2.探索：JVM调用链全景图&lt;/h1>
+&lt;p>为了避免迷失在JVM的源码中，我们先看一下笔者整理的JVM调用链全景：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP1.JVM准备&lt;/strong>：JDK通过JNI，加载JVM侧的相关函数。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JDK：Thread.java的registerNatives()
+(2)JVM：jdk/src/share/native/java/lang/Thread.c的registerNatives()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>STEP2.启动Java线程&lt;/strong>：JDK侧启动线程，JVM侧进行初始化。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JDK：Thread.java的start()
+(2)JVM：src/share/vm/prims/jvm.cpp的JVM_StartThread()
+(3)JVM：src/share/vm/runtime/thread.cpp的JavaThread()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>STEP3.记录JDK回调&lt;/strong>：JVM侧记录JDK侧的Java线程回调函数&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JVM：src/share/vm/runtime/thread.hpp的set_entry_point()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>STEP4.创建native线程&lt;/strong>：JVM侧创建native线程，初始化后等待CPU执行这个native线程&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JVM：src/os/linux/vm/os_linux.cpp的create_thread()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>STEP5.等待&lt;/strong>：CPU执行native线程，JVM阻塞，等待native线程进入RUNNABLE状态&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JVM：src/os/linux/vm/os_linux.cpp的java_start()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>STEP6.打破循环&lt;/strong>：JVM在STEP4后，做了其它操作，最终设置native线程、Java线程为RUNNABLE状态，打破STEP5等待&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JVM：src/share/vm/prims/jvm.cpp的JVM_StartThread()
+(2)JVM：src/share/vm/runtime/thread.cpp的start()
+(3)JVM：src/share/vm/runtime/os.cpp的start_thread()
+(4)JVM：src/os/linux/vm/os_linux.cpp的pd_start_thread()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>STEP7.回调JDK&lt;/strong>：JVM通过JNI回调JDK侧的Java线程回调&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
+(1)JVM：src/share/vm/runtime/thread.cpp的run()
+(2)JVM：src/share/vm/runtime/thread.cpp的thread_main_inner()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064052581.png" alt="">&lt;/p>
+&lt;h1 id="3细节1jvm准备">3.细节1：JVM准备&lt;/h1>
+&lt;p>第一步，看JVM如何将&lt;code>java.lang.Thread&lt;/code>中用到的native方法批量注册的：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414060903544.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在JDK中，&lt;code>java.lang.Thread&lt;/code>在静态代码块中调用了&lt;code>registerNatives&lt;/code>。此方法为native方法。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061036368.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在JVM中，java/lang/Thread.c定义了JNI方法&lt;code>Java_java_lang_Thread_registerNatives&lt;/code>。此方法使用了&lt;code>methods&lt;/code>变量，此变量定义了&lt;code>java.lang.Thread&lt;/code>类中所有的native方法对应的函数指针。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061109828.png" alt="">&lt;/p>
+&lt;h1 id="4细节2启动java线程">4.细节2：启动Java线程&lt;/h1>
+&lt;p>第二步，理解&lt;code>java.lang.Thread&lt;/code>调用&lt;code>start&lt;/code>方法时，JVM对应的处理：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061547200.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>java.lang.Thread&lt;/code>的&lt;code>start&lt;/code>方法核心是调用了native方法&lt;code>start0&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061148420.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在JVM中，native的&lt;code>start0&lt;/code>方法对应的实现为&lt;code>JVM_StartThread&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061324005.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>JVM_StartThread&lt;/code>方法核心是创建了&lt;code>JavaThread&lt;/code>对象。此对象是JVM中表示Java线程对象的抽象。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061356033.png" alt="">&lt;/p>
+&lt;h1 id="5细节3记录jdk回调">5.细节3：记录JDK回调&lt;/h1>
+&lt;p>第三步，理解JVM如何记录Java线程的回调：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061824024.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在JVM中，thread.cpp中定义了&lt;code>JavaThread&lt;/code>的构造函数，第一个参数&lt;code>entry_point&lt;/code>就表示Java线程的回调函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061653606.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>thread.hpp提供了&lt;code>set_entry_point&lt;/code>函数，&lt;code>JavaThread&lt;/code>的构造函数调用此函数，将Java线程的回调记录到内存中，供后续流程调用。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061709047.png" alt="">&lt;/p>
+&lt;h1 id="6细节4创建native线程">6.细节4：创建native线程&lt;/h1>
+&lt;p>第四步，在JVM做好一切准备工作后，JVM如何在操作系统上创建native线程：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064223932.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>JVM的&lt;code>thread.cpp&lt;/code>在&lt;code>JavaThread&lt;/code>的构造函数中调用&lt;code>os_linux.cpp&lt;/code>的&lt;code>create_thread&lt;/code>函数。&lt;/li>
+&lt;li>&lt;code>create_thread&lt;/code>函数创建了&lt;code>OSThread&lt;/code>对象，此对象记录了&lt;code>JavaThread&lt;/code>和即将创建的&lt;code>native线程&lt;/code>之间的一一对应关系。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061900504.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在建立了&lt;code>JavaThread&lt;/code>对象和&lt;code>native线程对象&lt;/code>后，JVM就调用&lt;code>pthread&lt;/code>库的&lt;code>pthread_create&lt;/code>方法，在操作系统上创建了真正的&lt;code>native线程&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061913975.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>到这里，JDK中的Java线程仍然处于&lt;code>NEW&lt;/code>状态，而JVM中的&lt;code>native线程&lt;/code>在一段时间内处于&lt;code>ALLOCATED&lt;/code>状态，JVM一直会等待&lt;code>native线程&lt;/code>突破这个状态。并且，当&lt;code>pthread&lt;/code>库在操作系统层创建&lt;code>native线程&lt;/code>出现问题时，&lt;code>native线程&lt;/code>处于&lt;code>ZOMBIE&lt;/code>状态。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061932717.png" alt="">&lt;/p>
+&lt;h1 id="7细节5等待">7.细节5：等待&lt;/h1>
+&lt;p>第五步，在操作系统层面已经存在了和JDK的Java线程一一对应的&lt;code>native线程&lt;/code>，那么我们就要来理解在CPU下一个可能的时间周期中是如何执行的&lt;code>native线程&lt;/code>的回调。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064342579.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>os_linux.cpp&lt;/code>的&lt;code>java_start&lt;/code>函数是&lt;code>native线程&lt;/code>的回调函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064407101.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>这个函数的结束处，&lt;code>native线程&lt;/code>的状态一直处于&lt;code>INITIALIZED&lt;/code>状态，这个状态就对应Java线程的&lt;code>NEW&lt;/code>状态。此时，&lt;code>native线程&lt;/code>阻塞。&lt;/li>
+&lt;li>当&lt;code>native线程&lt;/code>被打破了&lt;code>INITIALIZED&lt;/code>状态，&lt;code>native线程&lt;/code>不再原地止步，而是进一步执行&lt;code>thread.cpp&lt;/code>的&lt;code>run&lt;/code>方法。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064418955.png" alt="">&lt;/p>
+&lt;h1 id="8细节6打破循环">8.细节6：打破循环&lt;/h1>
+&lt;p>第六步，我们再来理解JVM如何打破上一步&lt;code>native线程&lt;/code>止步不前的状态。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065410715.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在&lt;code>jvm.cpp&lt;/code>的JVM_StartThread方法在创建了&lt;code>JavaThread&lt;/code>对象后，调用了&lt;code>thread.cpp&lt;/code>的&lt;code>start&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065209484.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>thread.cpp&lt;/code>的&lt;code>start&lt;/code>方法将&lt;code>JavaThread&lt;/code>对象设置为&lt;code>RUNNABLE&lt;/code>状态，此时JDK对应的Java线程处于&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
+&lt;li>&lt;code>thread.cpp&lt;/code>调用&lt;code>os.cpp&lt;/code>的&lt;code>start_thread&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065229125.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>os.cpp&lt;/code>的&lt;code>start_thread&lt;/code>函数将&lt;code>native线程&lt;/code>也设置为&lt;code>RUNNABLE&lt;/code>状态，此时Java线程和&lt;code>native线程&lt;/code>都处于&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065247151.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>os.cpp&lt;/code>的&lt;code>start_thread&lt;/code>函数进一步调用&lt;code>os_linux.cpp&lt;/code>的&lt;code>pd_start_thread&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065304780.png" alt="">&lt;/p>
+&lt;h1 id="9细节7回调jdk">9.细节7：回调JDK&lt;/h1>
+&lt;p>第七步，在第六步打破了&lt;code>native线程&lt;/code>止步不前的状态后，&lt;code>native线程&lt;/code>调用&lt;code>thread.cpp&lt;/code>的&lt;code>thread_main_inner&lt;/code>函数。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064752160.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>native线程&lt;/code>调用&lt;code>thread.cpp&lt;/code>的&lt;code>thread_main_inner&lt;/code>函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064845782.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064858699.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>thread.cpp&lt;/code>的&lt;code>thread_main_inner&lt;/code>函数中，进一步调用了在第三步中保存的Java线程的回调&lt;code>entry_point&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064911172.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>在&lt;code>jvm.cpp&lt;/code>中，&lt;code>thread_entry&lt;/code>函数调用了&lt;code>JavaCalls::call_virtual&lt;/code>函数，这个函数会通过JNI反向调用JDK中的Java代码，此处就是回调了JDK中的Java线程回调函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064925823.png" alt="">&lt;/p>
+&lt;h1 id="10结论">10.结论&lt;/h1>
+&lt;p>通过前述代码流程的分析，我们可以得到如下结论：&lt;/p>
+&lt;ul>
+&lt;li>JDK中，&lt;code>new java.lang.Thread()&lt;/code>会创建Java线程，此时Java线程处于&lt;code>NEW&lt;/code>状态。&lt;/li>
+&lt;li>JDK中，调用Java线程的&lt;code>start&lt;/code>方法后，在JVM中创建&lt;code>native线程&lt;/code>&lt;/li>
+&lt;li>JVM中，&lt;code>native线程&lt;/code>先后经历&lt;code>ALLOCATED&lt;/code>状态，也可能出现&lt;code>ZOMBIE&lt;/code>状态。&lt;/li>
+&lt;li>JVM中，&lt;code>native线程&lt;/code>进化为&lt;code>INITIALIZED&lt;/code>状态，可以对标JDK中Java线程的&lt;code>NEW&lt;/code>状态。&lt;/li>
+&lt;li>JVM中，&lt;code>native线程&lt;/code>被打破等待循环后，&lt;code>native线程&lt;/code>变迁为&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
+&lt;li>JDK中，&lt;code>Java线程&lt;/code>也变迁为&lt;code>RUNNABLE&lt;/code>状态，&lt;code>Java线程&lt;/code>的回调函数也被JVM调用执行。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414070017806.png" alt="">&lt;/p>
+&lt;h1 id="11随想">11.随想&lt;/h1>
+&lt;p>每次分析JVM源码，仿佛在一个生活在三维空间的生物(Java程序猿)，窥探到四维空间(JVM、操作系统、CPU&amp;hellip;&amp;hellip;)，这种感觉令人自在、平静、喜乐。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230415010840596.png" alt="">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-5</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-5/</link><pubDate>Wed, 05 Apr 2023 09:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-5/</guid><description>&lt;h1 id="1疑惑java的线程究竟有几种状态">1.疑惑：Java的线程究竟有几种状态？&lt;/h1>
 &lt;p>在Java的并发编程技术中，经常会看到Java线程的状态迁移图。&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>有的这样画&lt;/strong>：&lt;/li>
@@ -3267,507 +3493,4 @@
 &lt;blockquote>
 &lt;p>龙书：《Compilers, Principles, Techniques, &amp;amp;Tools》Second Edition&lt;/p>
 &lt;p>虎书：《现代编译原理-C语言描述》&lt;/p>
-&lt;/blockquote></description></item><item><title>【编译引擎】-8-阅读前端编译源码的准备工作</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</link><pubDate>Thu, 14 Oct 2021 15:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</guid><description>&lt;h1 id="1理解前端编译的规格">1.理解前端编译的规格&lt;/h1>
-&lt;p>在正式阅读OpenJDK前端编译器源码之前，建议先阅读笔者的这几篇文章，可以对JVM的前端编译的规格有一定了解：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/">【编译引擎】 1 学习阅读Class文件结构的意义&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8A/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-上&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-中&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-下&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/">【编译引擎】-3-学习阅读Class文件结构(javap版)&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/">【编译引擎】-4-学习阅读Class文件指令-概览&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>当我们对前端编译器的规格、术语、概念有了一定了解后，就可以阅读如下几个基础模块的代码，建立阅读前端编译器核心代码的基础。&lt;/p>
-&lt;h1 id="2前端编译器基础模块1-javac的入口类">2.前端编译器基础模块1-javac的入口类&lt;/h1>
-&lt;p>这部分代码可以参考这篇文章中的&amp;quot;3.javac的入口解读&amp;quot;章节，此处不赘述&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/">【宏观】如何更加深入理解Java虚拟机&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="3前端编译器基础模块2-参数管理">3.前端编译器基础模块2-参数管理&lt;/h1>
-&lt;p>javac主要通过如下三个类实现了参数管理：&lt;/p>
-&lt;blockquote>
-&lt;p>com/sun/tools/javac/main/Option.java&lt;/p>
-&lt;p>com/sun/tools/javac/main/OptionHelper.java&lt;/p>
-&lt;p>com/sun/tools/javac/util/Options.java&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="31comsuntoolsjavacmainoptionjava">3.1.com/sun/tools/javac/main/Option.java&lt;/h2>
-&lt;p>Option是一个枚举类，是参数管理的核心类&lt;/p>
-&lt;h3 id="从关键属性看">从关键属性看&lt;/h3>
-&lt;p>Option的关键属性有：&lt;code>text&lt;/code>、&lt;code>kind&lt;/code>、&lt;code>group&lt;/code>、&lt;code>argsNameKey&lt;/code>、&lt;code>descrKey&lt;/code>、&lt;code>choiceKind&lt;/code>、&lt;code>choices&lt;/code>。&lt;/p>
-&lt;p>具体见如下代码标注：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;span class="lnt">41
-&lt;/span>&lt;span class="lnt">42
-&lt;/span>&lt;span class="lnt">43
-&lt;/span>&lt;span class="lnt">44
-&lt;/span>&lt;span class="lnt">45
-&lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
-&lt;/span>&lt;span class="lnt">49
-&lt;/span>&lt;span class="lnt">50
-&lt;/span>&lt;span class="lnt">51
-&lt;/span>&lt;span class="lnt">52
-&lt;/span>&lt;span class="lnt">53
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="kd">enum&lt;/span> &lt;span class="n">Option&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="err">……&lt;/span>
-&lt;span class="cm">/**
-&lt;/span>&lt;span class="cm"> * HCZ:
-&lt;/span>&lt;span class="cm"> * 命令配置的text
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">final&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/**
-&lt;/span>&lt;span class="cm"> * HCZ:
-&lt;/span>&lt;span class="cm"> * javac的命令行参数配置分类，可选值：标准的、-X这种扩展的、javac的隐藏属性
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="n">OptionKind&lt;/span> &lt;span class="n">kind&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/**
-&lt;/span>&lt;span class="cm"> * HCZ：
-&lt;/span>&lt;span class="cm"> * javac的命令行参数配置分组，可选值：Basic、javac文件系统专有、信息类参数、操作类参数
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="n">OptionGroup&lt;/span> &lt;span class="n">group&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/** Documentation key for arguments.
-&lt;/span>&lt;span class="cm"> * HCZ:
-&lt;/span>&lt;span class="cm"> * 命令配置的argsNameKey
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">argsNameKey&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/** Documentation key for description.
-&lt;/span>&lt;span class="cm"> * HCZ:
-&lt;/span>&lt;span class="cm"> * 命令配置的descrKey
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">descrKey&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/** Suffix option (-foo=bar or -foo:bar)
-&lt;/span>&lt;span class="cm"> * HCZ：
-&lt;/span>&lt;span class="cm"> * 命令配置是否具有后缀
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="n">hasSuffix&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/** The kind of choices for this option, if any.
-&lt;/span>&lt;span class="cm"> * HCZ：
-&lt;/span>&lt;span class="cm"> * javac的命令行参数配置的选择类型，可选值：其中任意1个、N个
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="n">ChoiceKind&lt;/span> &lt;span class="n">choiceKind&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="cm">/** The choices for this option, if any, and whether or not the choices
-&lt;/span>&lt;span class="cm"> * are hidden
-&lt;/span>&lt;span class="cm"> * HCZ:
-&lt;/span>&lt;span class="cm"> * 记录任1orN个选项的具体选项
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kd">final&lt;/span> &lt;span class="n">Map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">Boolean&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">choices&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="err">……&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="从枚举值看">从枚举值看&lt;/h3>
-&lt;p>javac支持的命令行参数就是与Option类的枚举值对应的。笔者将javac官方文档与Option类的枚举值进行了对应：&lt;/p>
-&lt;blockquote>
-&lt;p>javac官方文档：https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html&lt;/p>
-&lt;/blockquote>
-&lt;h4 id="javac文档中的standard-optionscross-compilation-optionscompact-profile-option">javac文档中的Standard Options、Cross-Compilation Options、Compact Profile Option&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;span class="lnt">41
-&lt;/span>&lt;span class="lnt">42
-&lt;/span>&lt;span class="lnt">43
-&lt;/span>&lt;span class="lnt">44
-&lt;/span>&lt;span class="lnt">45
-&lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
-&lt;/span>&lt;span class="lnt">49
-&lt;/span>&lt;span class="lnt">50
-&lt;/span>&lt;span class="lnt">51
-&lt;/span>&lt;span class="lnt">52
-&lt;/span>&lt;span class="lnt">53
-&lt;/span>&lt;span class="lnt">54
-&lt;/span>&lt;span class="lnt">55
-&lt;/span>&lt;span class="lnt">56
-&lt;/span>&lt;span class="lnt">57
-&lt;/span>&lt;span class="lnt">58
-&lt;/span>&lt;span class="lnt">59
-&lt;/span>&lt;span class="lnt">60
-&lt;/span>&lt;span class="lnt">61
-&lt;/span>&lt;span class="lnt">62
-&lt;/span>&lt;span class="lnt">63
-&lt;/span>&lt;span class="lnt">64
-&lt;/span>&lt;span class="lnt">65
-&lt;/span>&lt;span class="lnt">66
-&lt;/span>&lt;span class="lnt">67
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Standard&lt;/span> &lt;span class="n">Options&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Akey&lt;/span>&lt;span class="o">[=&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">A&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-A&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.key.equals.value&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.A&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">cp&lt;/span> &lt;span class="n">path&lt;/span> &lt;span class="n">or&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">classpath&lt;/span> &lt;span class="n">path&lt;/span>
-&lt;span class="nf">CLASSPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-classpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.classpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">CP&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-cp&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.classpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Djava&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ext&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">dirs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">directories&lt;/span>
-&lt;span class="nf">DJAVA_EXT_DIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Djava.ext.dirs=&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.extdirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Djava&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">endorsed&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">dirs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">directories&lt;/span>
-&lt;span class="nf">DJAVA_ENDORSED_DIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Djava.endorsed.dirs=&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.endorseddirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="n">directory&lt;/span>
-&lt;span class="nf">D&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-d&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.directory&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.d&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">deprecation&lt;/span>
-&lt;span class="nf">DEPRECATION&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-deprecation&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.deprecation&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">encoding&lt;/span> &lt;span class="n">encoding&lt;/span>
-&lt;span class="nf">ENCODING&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-encoding&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.encoding&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.encoding&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">endorseddirs&lt;/span> &lt;span class="n">directories&lt;/span>
-&lt;span class="nf">ENDORSEDDIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-endorseddirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.endorseddirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">extdirs&lt;/span> &lt;span class="n">directories&lt;/span>
-&lt;span class="nf">EXTDIRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-extdirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.dirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.extdirs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>
-&lt;span class="nf">G&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-g&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.g&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">none&lt;/span>
-&lt;span class="nf">G_NONE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-g:none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.g.none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">keyword&lt;/span> &lt;span class="n">list&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">G_CUSTOM&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-g:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.g.lines.vars.source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ANYOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;lines&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;vars&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;source&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">help&lt;/span>
-&lt;span class="nf">H&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-h&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.directory&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.headerDest&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">HELP&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-help&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.help&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">implicit&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">class&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">none&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">IMPLICIT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-implicit:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.implicit&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;class&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Joption&lt;/span>
-&lt;span class="nf">J&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-J&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.flag&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.J&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">nowarn&lt;/span>
-&lt;span class="nf">NOWARN&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-nowarn&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.nowarn&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">parameters&lt;/span>
-&lt;span class="nf">PARAMETERS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-parameters&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="s">&amp;#34;opt.parameters&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">proc&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">[&lt;/span>&lt;span class="n">none&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">only&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">PROC&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-proc:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.proc.none.only&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;none&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;only&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">processor&lt;/span> &lt;span class="n">class1&lt;/span> &lt;span class="o">[,&lt;/span>&lt;span class="n">class2&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">class3&lt;/span>&lt;span class="o">...]&lt;/span>
-&lt;span class="nf">PROCESSOR&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-processor&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.class.list&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.processor&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">processorpath&lt;/span> &lt;span class="n">path&lt;/span>
-&lt;span class="nf">PROCESSORPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-processorpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.processorpath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">s&lt;/span> &lt;span class="n">dir&lt;/span>
-&lt;span class="nf">S&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-s&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.directory&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.sourceDest&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">source&lt;/span> &lt;span class="n">release&lt;/span>
-&lt;span class="nf">SOURCE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.release&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">sourcepath&lt;/span> &lt;span class="n">sourcepath&lt;/span>
-&lt;span class="nf">SOURCEPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-sourcepath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.sourcepath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">verbose&lt;/span>
-&lt;span class="nf">VERBOSE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-verbose&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.verbose&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">version&lt;/span>
-&lt;span class="nf">VERSION&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-version&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.version&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">werror&lt;/span>
-&lt;span class="nf">WERROR&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Werror&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Werror&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">X&lt;/span>
-&lt;span class="nf">X&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-X&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.X&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">Cross&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">Compilation&lt;/span> &lt;span class="n">Options&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">target&lt;/span> &lt;span class="n">version&lt;/span>
-&lt;span class="nf">TARGET&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-target&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.release&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.target&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">bootclasspath&lt;/span> &lt;span class="n">bootclasspath&lt;/span>
-&lt;span class="nf">BOOTCLASSPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-bootclasspath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.bootclasspath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">Compact&lt;/span> &lt;span class="n">Profile&lt;/span> &lt;span class="n">Option&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">profile&lt;/span>
-&lt;span class="nf">PROFILE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-profile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.profile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.profile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="javac官方文档的nonstandard-options">javac官方文档的Nonstandard Options&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Nonstandard&lt;/span> &lt;span class="n">Options&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xbootclasspath&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">path&lt;/span>
-&lt;span class="nf">XBOOTCLASSPATH_PREPEND&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xbootclasspath/p:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xbootclasspath.p&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xbootclasspath&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">path&lt;/span>
-&lt;span class="nf">XBOOTCLASSPATH_APPEND&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xbootclasspath/a:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xbootclasspath.a&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xbootclasspath&lt;/span>&lt;span class="o">/:&lt;/span>&lt;span class="n">path&lt;/span>
-&lt;span class="nf">XBOOTCLASSPATH&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xbootclasspath:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.path&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.bootclasspath&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">FILEMANAGER&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:[-]&lt;/span>&lt;span class="n">group&lt;/span> &lt;span class="o">[/&lt;/span>&lt;span class="n">access&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="kd">protected&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="o">,-&lt;/span>&lt;span class="n">html&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="kn">package&lt;/span>
-&lt;span class="err">-&lt;/span>&lt;span class="nn">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">none&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xdoclint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="o">[/&lt;/span>&lt;span class="n">access&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">XDOCLINT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xdoclint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xdoclint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">XDOCLINT_CUSTOM&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xdoclint:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xdoclint.subopts&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xdoclint.custom&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>
-&lt;span class="nf">XLINT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xlint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xlint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">all&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">none&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">name&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xlint&lt;/span>&lt;span class="o">:-&lt;/span>&lt;span class="n">name&lt;/span>
-&lt;span class="nf">XLINT_CUSTOM&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xlint:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xlint.suboptlist&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ANYOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">getXLintChoices&lt;/span>&lt;span class="o">()),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xmaxerrs&lt;/span> &lt;span class="n">number&lt;/span>
-&lt;span class="nf">XMAXERRS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xmaxerrs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.number&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.maxerrs&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xmaxwarns&lt;/span> &lt;span class="n">number&lt;/span>
-&lt;span class="nf">XMAXWARNS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xmaxwarns&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.number&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.maxwarns&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xstdout&lt;/span> &lt;span class="n">filename&lt;/span>
-&lt;span class="nf">XSTDOUT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xstdout&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.file&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.Xstdout&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xprefer&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">newer&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">source&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">XPREFER&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xprefer:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.prefer&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;source&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;newer&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xpkginfo&lt;/span>&lt;span class="o">:[&lt;/span>&lt;span class="n">always&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">legacy&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">nonempty&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;span class="nf">XPKGINFO&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xpkginfo:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.pkginfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;always&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;legacy&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;nonempty&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">Xprint&lt;/span>
-&lt;span class="nf">XPRINT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xprint&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.print&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">XprintProcessorInfo&lt;/span>
-&lt;span class="nf">XPRINTPROCESSORINFO&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XprintProcessorInfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.printProcessorInfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="o">-&lt;/span>&lt;span class="n">XprintRounds&lt;/span>
-&lt;span class="nf">XPRINTROUNDS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XprintRounds&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.printRounds&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="javac官方文档的command-line-argument-files">javac官方文档的Command-Line Argument Files&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">Command&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">Line&lt;/span> &lt;span class="n">Argument&lt;/span> &lt;span class="n">Files&lt;/span>
-&lt;span class="nf">AT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;@&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.file&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.AT&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">STANDARD&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="javac官方文档上没有对应的枚举值的隐藏参数">javac官方文档上没有对应的枚举值的隐藏参数&lt;/h4>
-&lt;p>除了前两个被定义为EXTEND类型的参数，后面的都是被定为为HIDDEN类型的参数&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">PLUGIN&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xplugin:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.arg.plugin&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.plugin&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">XDIAGS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xdiags:&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;opt.diags&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">EXTENDED&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">ONEOF&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;compact&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;verbose&amp;#34;&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">FULLVERSION&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-fullversion&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">DIAGS&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XDdiags=&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">MOREINFO&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-moreinfo&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">PROMPT&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-prompt&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">DOE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-doe&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">PRINTSOURCE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-printsource&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">WARNUNCHECKED&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-warnunchecked&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">O&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-O&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">XJCOV&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-Xjcov&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">),&lt;/span>
-&lt;span class="n">XD&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;-XD&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">BASIC&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">SOURCEFILE&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;sourcefile&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">HIDDEN&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">INFO&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211013173627325-1634183614455.png" alt="image-20211013173627325">&lt;/p>
-&lt;h4 id="结论">结论&lt;/h4>
-&lt;p>从上述源码的分析，我们可以得到以下结论：&lt;/p>
-&lt;blockquote>
-&lt;p>javac的命令行参数被分为了STANDARD、EXTENDED、HIDDEN。其中，&lt;/p>
-&lt;p>STANDARD参数会写进javac官方文档的Standard Options、Cross-Compilation Options、Compact Profile Option章节；&lt;/p>
-&lt;p>EXTENDED会写进javac官方文档Nonstandard Options章节；&lt;/p>
-&lt;/blockquote>
-&lt;h4 id="延伸">延伸&lt;/h4>
-&lt;p>其它JDK自带的命令行工具，都有类似的Option模块处理命令行参数(如下&lt;code>java.c&lt;/code>源码中)。&lt;/p>
-&lt;p>源码中有如此机制，我们可以得到一下命令行工具学习的新思路：&lt;/p>
-&lt;blockquote>
-&lt;p>我们可以在学习JDK命令行工具的时候，不仅局限于对应的官方文档，还可以通过Options类的枚举值探索一些隐藏的命令行参数。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014154700768.png" alt="image-20211014154700768">&lt;/p>
-&lt;h3 id="从构造函数看">从构造函数看&lt;/h3>
-&lt;blockquote>
-&lt;p>如下N个构造函数，支撑了各个枚举值的定义。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014155636948.png" alt="image-20211014155636948">&lt;/p>
-&lt;h3 id="从方法看">从方法看&lt;/h3>
-&lt;p>Option的方法如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014155805308.png" alt="image-20211014155805308">&lt;/p>
-&lt;p>关键方法是process方法，它通过将待处理的Option对象加入到OptionHelper中，支撑了2.1章节涉及的&lt;code>Main#processArgs方法&lt;/code>。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="cm">/**
-&lt;/span>&lt;span class="cm">* HCZ：
-&lt;/span>&lt;span class="cm">* 将待处理的option加入到OptionHelper对象
-&lt;/span>&lt;span class="cm">*/&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kt">boolean&lt;/span> &lt;span class="nf">process&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">OptionHelper&lt;/span> &lt;span class="n">helper&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">option&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">choices&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">choiceKind&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">ChoiceKind&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ONEOF&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="c1">// some clients like to see just one of option+choice set
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">choices&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">keySet&lt;/span>&lt;span class="o">())&lt;/span>
-&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">remove&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">option&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="n">String&lt;/span> &lt;span class="n">opt&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">option&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">opt&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">opt&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="c1">// some clients like to see option (without trailing &amp;#34;:&amp;#34;)
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// set to arg
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">nm&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">option&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">substring&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">option&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">nm&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="o">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="c1">// set option+word for each word in arg
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">split&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;,+&amp;#34;&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">String&lt;/span> &lt;span class="n">opt&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">option&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">opt&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">opt&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="n">helper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">option&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">arg&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="从周边关系看">从周边关系看&lt;/h3>
-&lt;blockquote>
-&lt;p>在Main#optionHelper中，实现了OptionHelper的匿名类
-在Main#options中，维护了Options对象&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C//image-20211014160156265.png" alt="image-20211014160156265">&lt;/p>
-&lt;h2 id="32optionhelper和options">3.2.OptionHelper和Options&lt;/h2>
-&lt;blockquote>
-&lt;p>com/sun/tools/javac/util/Options.java和com/sun/tools/javac/main/OptionHelper.java两个类都是Option类的辅助类，&lt;/p>
-&lt;p>主要是一些集合的CRUD操作，读者有兴趣可以自行阅读。&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;ul>
-&lt;li>本文回顾了JVM前端编译器的规格。&lt;/li>
-&lt;li>本文分析了前端编译器的基础模块—javac的入口模块&lt;/li>
-&lt;li>本文分析了前端编译器的基础模块——参数配置模块&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>

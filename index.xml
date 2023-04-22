@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Apr 2023 01:10:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 22 Apr 2023 01:10:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,69 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</link><pubDate>Sat, 15 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</guid><description>&lt;h1 id="1疑问java线程对应的native线程状态如何迁移">1.疑问：Java线程对应的native线程状态如何迁移？&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-7</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</link><pubDate>Sat, 22 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</guid><description>&lt;h1 id="1实验模拟java线程状态迁移过程">1.实验：模拟Java线程状态迁移过程&lt;/h1>
+&lt;p>在《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6》中，我们分析了Java线程从JDK层面到JVM层面的状态迁移：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230414070017806.png" alt="image-20230414070017806">&lt;/p>
+&lt;p>本文我们来尝试自己实现Java线程的状态迁移过程，进一步加深对这个状态迁移过程的理解。&lt;/p>
+&lt;h1 id="2简化jvm调用链">2.简化：JVM调用链&lt;/h1>
+&lt;ul>
+&lt;li>如下是JVM调用链：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230414064052581.png" alt="image-20230414064052581">&lt;/p>
+&lt;ul>
+&lt;li>我们简化调用链如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422145647662.png" alt="image-20230422145647662">&lt;/p>
+&lt;h1 id="3模拟1jvm注册jni接口">3.模拟1：JVM注册JNI接口&lt;/h1>
+&lt;ul>
+&lt;li>如红框处，我们通过&lt;code>System.load&lt;/code>方法，加载提供了JNI接口的动态库&lt;code>lib.so&lt;/code>文件。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135359625.png" alt="image-20230422135359625">&lt;/p>
+&lt;h1 id="4模拟2启动java线程">4.模拟2：启动Java线程&lt;/h1>
+&lt;p>如下图：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>start()&lt;/code>方法模拟JDK的&lt;code>Thread.start()&lt;/code>方法，该方法调用了&lt;code>start0()&lt;/code>方法。&lt;/li>
+&lt;li>&lt;code>start0()&lt;/code>方法模拟JDK的&lt;code>Thread.start0()&lt;/code>方法，该方法为JNI接口。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135522197.png" alt="image-20230422135522197">&lt;/p>
+&lt;ul>
+&lt;li>通过&lt;code>javah&lt;/code>，我们生成了&lt;code>start0()&lt;/code>方法对应的C++头文件。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135555599.png" alt="image-20230422135555599">&lt;/p>
+&lt;h1 id="6模拟3创建native线程">6.模拟3：创建native线程&lt;/h1>
+&lt;ul>
+&lt;li>在&lt;code>start0()&lt;/code>方法的实现中，我们调用了&lt;code>pthread_create()&lt;/code>方法，创建native线程。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135727912.png" alt="image-20230422135727912">&lt;/p>
+&lt;h1 id="7模拟4等待">7.模拟4：等待&lt;/h1>
+&lt;ul>
+&lt;li>当CPU调度上一步我们创建的native线程，进入该线程的回调函数&lt;code>java_start()&lt;/code>。&lt;/li>
+&lt;li>我们创建了标志位&lt;code>flag&lt;/code>，它用于模拟JVM中记录native线程一系列状态的标志位，初始值为0，表示native线程处于&lt;code>INITIALIZED&lt;/code>状态。&lt;/li>
+&lt;li>while循环导致native线程一直处于等待状态。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135917734.png" alt="image-20230422135917734">&lt;/p>
+&lt;h1 id="8模拟5打破循环">8.模拟5：打破循环&lt;/h1>
+&lt;ul>
+&lt;li>回到&lt;code>start0&lt;/code>方法的实现，通过sleep了一段时间后修改&lt;code>flag&lt;/code>标志位，模拟JVM中经过一系列准备工作，将native线程设置为&lt;code>RUNNABLE状态&lt;/code>。&lt;/li>
+&lt;li>此时，native线程在&lt;code>java_start()&lt;/code>中处于循环等待的状态被打破。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135949723.png" alt="image-20230422135949723">&lt;/p>
+&lt;h1 id="9模拟6回调jdk">9.模拟6：回调JDK&lt;/h1>
+&lt;ul>
+&lt;li>当native线程在&lt;code>java_start()&lt;/code>中处于循环等待的状态被打破后，通过JNI获得Java侧的Test对象，进一步回调Java侧Test对象的&lt;code>run()&lt;/code>方法。&lt;/li>
+&lt;li>这一步，就模拟了JVM在native线程变为&lt;code>RUNNABLE&lt;/code>状态后回调JDK的&lt;code>Thread.run()&lt;/code>方法。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422140058781.png" alt="image-20230422140058781">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422140113451.png" alt="image-20230422140113451">&lt;/p>
+&lt;h1 id="10运行效果">10.运行效果&lt;/h1>
+&lt;ul>
+&lt;li>运行我们的模拟程序，打印结果如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422140522662.png" alt="image-20230422140522662">&lt;/p>
+&lt;ul>
+&lt;li>本次实验，最终模拟了JDK中创建Java线程，JVM中对应也创建native线程，native线程的状态迁移后回调Java线程的回调函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422153048716.png" alt="image-20230422153048716">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</link><pubDate>Sat, 15 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</guid><description>&lt;h1 id="1疑问java线程对应的native线程状态如何迁移">1.疑问：Java线程对应的native线程状态如何迁移？&lt;/h1>
 &lt;p>在《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-5》中，我们在JDK层面对Java线程的6种状态迁移进行了实验。&lt;/p>
 &lt;p>本文再以Java线程从NEW状态迁移到RUNNABLE状态为引子，观测一下JVM为Java线程创建的native线程的状态如何迁移：&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230413160245714.png" alt="">&lt;/p>
@@ -3204,293 +3266,4 @@
 &lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/">【Java新特性】-2-Java9新特性宏观解读&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/">【Java新特性】-3-Java9的类加载机制变化&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-4-java9-stackwalker/">【Java新特性】-4-Java9-StackWalker&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91Java%E6%8B%BE%E9%81%97/image-20211014110327766.png" alt="image-20211014110327766">&lt;/p></description></item><item><title>【编译引擎】-9-阅读前端编译源码-词法分析-1</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/</link><pubDate>Fri, 05 Nov 2021 15:05:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/</guid><description>&lt;h1 id="1编译器的宏观过程">1.编译器的宏观过程&lt;/h1>
-&lt;p>下图摘自《Compilers, Principles, Techniques, &amp;amp;Tools》(后文简称&lt;strong>龙书&lt;/strong>)，描述了编译器工作时的宏观过程，每个方块表示编译器内部的一个&amp;quot;模块&amp;rdquo;，每个箭头表示该模块的&amp;quot;输入&amp;quot;与&amp;quot;输出&amp;rdquo;：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105093625343.png" alt="image-20211105093625343">&lt;/p>
-&lt;p>下图摘自《现代编译原理-C语言描述》(后文简称&lt;strong>虎书&lt;/strong>)，进一步细化了编译器的宏观流程：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105093134007.png" alt="image-20211105093134007">&lt;/p>
-&lt;p>上述环节复杂且技术术语繁多，我们可以结合JVM的特点，以及即将剖析的javac源码，做了部分抽象与精简：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105094818994.png" alt="image-20211105094818994">&lt;/p>
-&lt;p>从上图看，笔者做了2个抽象：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>简化步骤&lt;/strong>：将涉及&lt;code>优化&lt;/code>、&lt;code>分析&lt;/code>的环节简化为&lt;code>代码优化&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>步骤分组&lt;/strong>：将6个步骤分为&lt;code>前端编译&lt;/code>和&lt;code>后端编译&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>简化步骤比较好理解，重点看看对步骤的分组——在龙书中，对&lt;code>前端编译(frontend)&lt;/code>和&lt;code>后端编译(backend)&lt;/code>做了定义：&lt;/p>
-&lt;blockquote>
-&lt;p>分析部分的环节被称作&lt;code>前端编译(frontend)&lt;/code>，综合部分的环节被称作&lt;code>后端编译(backend)&lt;/code>。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105101708866.png" alt="image-20211105101708866">&lt;/p>
-&lt;p>怎么理解&lt;code>分析部分&lt;/code>和&lt;code>综合部分&lt;/code>呢？站在JVM的角度看：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>分析部分&lt;/strong>：从java源代码生成字节码的过程就属于分析部分，即对&lt;code>源码&lt;/code>进行分析，最终分解为多个组成元素的过程。&lt;/li>
-&lt;li>&lt;strong>综合部分&lt;/strong>：对JVM正在执行的字节码进行JIT就属于综合部分，即从C1、C2等层次进行优化，最终生成CPU可以执行的机器码。&lt;/li>
-&lt;/ul>
-&lt;p>在很多现代编译器中，不仅和JVM一样将编译过程分为前后端，并且一个编译器还可能包含多个&lt;strong>前端编译器(frontend)&lt;strong>和多个&lt;/strong>后端编译器(backend)&lt;/strong>，用来应对不同的应用场景。&lt;/p>
-&lt;h1 id="2javac在宏观过程中的位置">2.javac在宏观过程中的位置&lt;/h1>
-&lt;p>回顾了编译器的宏观流程，javac本质上属于&lt;strong>前端编译器&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105100413500.png" alt="image-20211105100413500">&lt;/p>
-&lt;p>从javac的源码中，可以看到如下几个核心的package，分别覆盖了词法分析、语法分析和语义分析。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105100722357.png" alt="image-20211105100722357">&lt;/p>
-&lt;h1 id="3词法分析的概念">3.词法分析的概念&lt;/h1>
-&lt;p>我们通过解读龙书中这段话，来理解一下&lt;code>词法分析&lt;/code>中的几个关键概念：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105105314706.png" alt="image-20211105105314706">&lt;/p>
-&lt;p>&lt;code>词法分析(Lexical Analysis)&lt;/code>：将源代码字符流拆解成一个个的子元素，每个子元素叫做&lt;code>词素(lexeme)&lt;/code>，进一步将词素转换为&lt;code>词法单元(Token)&lt;/code>。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>说明1：1个源代码文件会包含N个&lt;code>词素&lt;/code>，每个词素会转换为1个&lt;code>Token&lt;/code>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>说明2：词法单元最终会存储到&lt;code>符号表(Symbol Table)&lt;/code>中。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105110450245.png" alt="image-20211105110450245">&lt;/p>
-&lt;p>举一个具体的例子(代码片段原子龙书)：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">position&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">initial&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">rate&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">60&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>在词法分析过程中：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>position被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;identifier, 1&amp;gt;&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>其中，identifier后文简写为id，1是该token在&lt;code>符号表&lt;/code>中的位置。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>=被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;assign(=)&amp;gt;&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>其中，=是一个赋值运算符，因此它对应的&lt;code>词法单元(Token)&lt;/code>没有&lt;code>attribute-value&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>initial被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;identifier, 2&amp;gt;&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>+被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;assign(+)&amp;gt;&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>rate被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;identifier, 3&amp;gt;&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>*被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;assign(*)&amp;gt;&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>60被提取为1个&lt;code>词素(lexeme)&lt;/code>，该词素被映射为1个&lt;code>词法单元(Token)&lt;/code>——&lt;strong>&amp;lt;number, 4&amp;gt;&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>最终，词法分析输出：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">assign&lt;/span>&lt;span class="o">(=)&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">assign&lt;/span>&lt;span class="o">(+)&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">3&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">assign&lt;/span>&lt;span class="o">(*)&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">number&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105113030363.png" alt="image-20211105113030363">&lt;/p>
-&lt;h1 id="4javac中对词素的具体实现-name-and-table">4.javac中对词素的具体实现-Name and Table&lt;/h1>
-&lt;p>在javac的源码中，定义了Name和Table，基本可以与&lt;code>词素(lexeme)&lt;/code>对应：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>com/sun/tools/javac/util/Name.java&lt;/code>&lt;/li>
-&lt;li>&lt;code>com/sun/tools/javac/util/SharedNameTable.java#NameImpl&lt;/code>&lt;/li>
-&lt;li>&lt;code>com/sun/tools/javac/util/Names.java&lt;/code>&lt;/li>
-&lt;li>&lt;code>com/sun/tools/javac/util/Name.java#Table&lt;/code>&lt;/li>
-&lt;li>&lt;code>com/sun/tools/javac/util/SharedNameTable.java&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="41comsuntoolsjavacutilnamejava">4.1.com/sun/tools/javac/util/Name.java&lt;/h2>
-&lt;h3 id="从属性看">从属性看&lt;/h3>
-&lt;p>Name对象的本质是将源代码中的单词、符号分词了，每个分词就是一个Name对象。&lt;/p>
-&lt;p>有2个关键点需要注意：&lt;/p>
-&lt;ul>
-&lt;li>源代码字符流在javac是中是以&lt;code>byte[]&lt;/code>存储的，所以Name对象包含了1个byteArray属性，该属性存储了当前Name对象对应的源代码子字符流。&lt;/li>
-&lt;li>相同&lt;code>内容&lt;/code>的分词是&lt;strong>同一个Name对象&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105114107760.png" alt="image-20211105114107760">&lt;/p>
-&lt;h3 id="从方法看">从方法看&lt;/h3>
-&lt;p>Name对象提供了对Name对象本身、Name对象之间的各种操作。&lt;/p>
-&lt;p>有1个关键点需要注意：&lt;/p>
-&lt;ul>
-&lt;li>Table对象将源代码字符流转换成了byte数组，为了提升性能，实现了&lt;code>输入缓冲&lt;/code>和&lt;code>哨兵标记&lt;/code>(详见龙书，后文解读&lt;code>JavaCompiler#readSource方法&lt;/code>也会展开)。因此，Name对象中提供了诸如&lt;code>getByteArray()&lt;/code>、&lt;code>getByteAt()&lt;/code>等方法，从该Name对象所属的Table对象中反查对应的源代码字符流。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105114821297.png" alt="image-20211105114821297">&lt;/p>
-&lt;h2 id="42comsuntoolsjavacutilsharednametablejavanameimpl">4.2.com/sun/tools/javac/util/SharedNameTable.java#NameImpl&lt;/h2>
-&lt;h3 id="从属性看-1">从属性看&lt;/h3>
-&lt;p>&lt;code>NameImpl&lt;/code>类是&lt;code>SharedNameTable&lt;/code>类中的内部类。&lt;/p>
-&lt;blockquote>
-&lt;p>疑惑：笔者没有理解为什么要如此设计。&lt;/p>
-&lt;/blockquote>
-&lt;p>其中，有1个关键点：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>NameImpl对象&lt;/code>中维护了&lt;code>next&lt;/code>属性，这就要说到&lt;code>Table对象&lt;/code>的实现——&lt;code>Table对象&lt;/code>按照HashTable实现，HashTable的Key是每个&lt;code>Name对象&lt;/code>的&lt;code>hashCode&lt;/code>，Value是对应的&lt;code>NameImpl对象&lt;/code>。当1个新的&lt;code>NameImpl对象&lt;/code>准备加入到HashTable时，如果Key发生hash冲突时，就会将这个新的&lt;code>NameImpl对象&lt;/code>加到这个Key对应的已经存在的&lt;code>NameImpl对象&lt;/code>的next属性中，形成一个单链表。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105115710065.png" alt="image-20211105115710065">&lt;/p>
-&lt;h3 id="从行为看">从行为看&lt;/h3>
-&lt;p>从行为上看，只是具体实现了Name基类的&lt;code>getByteXxx方法&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105141543612.png" alt="image-20211105141543612">&lt;/p>
-&lt;h2 id="43comsuntoolsjavacutilnamesjava">4.3.com/sun/tools/javac/util/Names.java&lt;/h2>
-&lt;h3 id="从属性看-2">从属性看&lt;/h3>
-&lt;p>&lt;code>Names对象&lt;/code>维护了N个&lt;code>Name对象&lt;/code>，这些&lt;code>Name对象&lt;/code>就是Java中定义的关键字、保留字。&lt;/p>
-&lt;p>&lt;code>Names对象&lt;/code>还维护了&lt;code>Table对象&lt;/code>。&lt;/p>
-&lt;p>这里也有2个关键点：&lt;/p>
-&lt;ul>
-&lt;li>这些关键字、保留字类型的&lt;code>Name对象&lt;/code>在&lt;code>JavaCompiler&lt;/code>初始化时就会被创建出来。&lt;/li>
-&lt;li>当正式开始词法分析的时，在解读源代码字符流时，会去获取已经缓存的这些关键字、保留字&lt;code>Name对象&lt;/code>，而不需要动态创建。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java拾遗/【编译引擎】-9-阅读前端编译源码-词法分析-1/image-20211105141807347.png" alt="image-20211105141807347" style="zoom:50%;" />&lt;/p>
-&lt;h3 id="从行为看-1">从行为看&lt;/h3>
-&lt;p>&lt;code>Names对象&lt;/code>提供了&lt;code>fromXxx方法&lt;/code>，这些方法的实现会去调用&lt;code>Table对象&lt;/code>的接口，这些方法更新&lt;code>Table对象&lt;/code>(如：更新Hash表，解决Hash冲突等)，并返回&lt;code>Name对象&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105142706561.png" alt="image-20211105142706561">&lt;/p>
-&lt;h2 id="44comsuntoolsjavacutilnamejavatable">4.4.com/sun/tools/javac/util/Name.java#Table&lt;/h2>
-&lt;h3 id="从属性看-3">从属性看&lt;/h3>
-&lt;p>&lt;code>Table对象&lt;/code>维护了&lt;code>Names对象&lt;/code>，前文已经描述了&lt;code>Names对象&lt;/code>中维护了多个关键字、保留字的&lt;code>Name对象&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105151027295.png" alt="image-20211105151027295">&lt;/p>
-&lt;h3 id="从行为看-2">从行为看&lt;/h3>
-&lt;p>提供了给&lt;code>Names对象&lt;/code>调用的&lt;code>fromXxx方法&lt;/code>，这些方法更新&lt;code>Table对象&lt;/code>(如：更新Hash表，解决Hash冲突等)，并返回&lt;code>Name对象&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105151037438.png" alt="image-20211105151037438">&lt;/p>
-&lt;h2 id="45comsuntoolsjavacutilsharednametablejava">4.5.com/sun/tools/javac/util/SharedNameTable.java&lt;/h2>
-&lt;h3 id="从属性看-4">从属性看&lt;/h3>
-&lt;p>&lt;code>SharedNameTable&lt;/code>是&lt;code>Table&lt;/code>的具体实现类。&lt;/p>
-&lt;p>&lt;code>SharedNameTable&lt;/code>对象维护了hashes属性，是Hash表的具体实现，其中&lt;code>NameImpl[]&lt;/code>的数组索引是每个&lt;code>NameImpl对象&lt;/code>的hashCode。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105151550397.png" alt="image-20211105151550397">&lt;/p>
-&lt;h3 id="从行为看-3">从行为看&lt;/h3>
-&lt;p>关键点还是Hash表的具体实现，具体以fromChars方法的代码注释：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="nd">@Override&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="nf">fromChars&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="kt">char&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">cs&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="c1">//HCZ：获得bytes数组中下一个可用的位置
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">nc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nc&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="c1">//HCZ：对bytes数组进行扩容(如果有必要)
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">byte&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">bytes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">bytes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ArrayUtils&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">ensureCapacity&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">len&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">3&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="c1">//HCZ：将char数组转换为byte数组，并且写入到bytes属性中，返回bytes属性中最后的index，得到byte数组的长度。
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">nbytes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Convert&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">chars2utf&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">cs&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="c1">//HCZ：根据bytes数组中下一个可用位置(也就是新写入的char数组的startIndex)、根据新写入的char数组转换后的byte数组长度，计算得到hashCode。
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">h&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hashValue&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="n">hashMask&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="c1">//HCZ：从hashes数组中(就是NameImpl对象数组)，获得与新计算出来的hashCode相同的冲突NameImpl对象。
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">NameImpl&lt;/span> &lt;span class="n">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hashes&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">h&lt;/span>&lt;span class="o">];&lt;/span>
-&lt;span class="c1">//HCZ：如果能找到冲突的NameImpl对象，说明hashCode冲突了，就将NameImpl对象的next指向新的NameImpl对象，形成单链表。
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">while&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">n&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
-&lt;span class="o">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getByteLength&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">nbytes&lt;/span> &lt;span class="o">||&lt;/span>
-&lt;span class="o">!&lt;/span>&lt;span class="n">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">index&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">bytes&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">)))&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">next&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="c1">//HCZ：如果没有找到冲突的NameImpl对象，就创建新的NameImpl对象，并记录到hashes属性。
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">n&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">NameImpl&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nc&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="n">n&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hashes&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">h&lt;/span>&lt;span class="o">];&lt;/span>
-&lt;span class="n">hashes&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">h&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nc&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">nbytes&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">nbytes&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="k">this&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">nc&lt;/span>&lt;span class="o">++;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1 id="5javac中对词法单元的具体实现-tokenkind-and-token">5.javac中对词法单元的具体实现-TokenKind and Token&lt;/h1>
-&lt;p>在javac的源码中，定义了TokenKind和Token，基本可以与&lt;code>词法单元(Token)&lt;/code>对应：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>com/sun/tools/javac/parser/Tokens.java#TokenKind&lt;/code>&lt;/li>
-&lt;li>&lt;code>com/sun/tools/javac/parser/Tokens.java#Token&lt;/code>&lt;/li>
-&lt;li>&lt;code>com/sun/tools/javac/parser/Tokens.java#Tokens&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="51comsuntoolsjavacparsertokensjavatokenkind">5.1.com/sun/tools/javac/parser/Tokens.java#TokenKind&lt;/h2>
-&lt;h3 id="从属性看-5">从属性看&lt;/h3>
-&lt;p>TokenKind是一个枚举类，定义了Java中的关键字、保留字、运算符等。&lt;/p>
-&lt;p>每个枚举值对应&lt;code>词法单元(Token)&lt;/code>的&lt;code>token-name&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java拾遗/【编译引擎】-9-阅读前端编译源码-词法分析-1/image-20211105152645860.png" alt="image-20211105152645860" style="zoom:50%;" />&lt;/p>
-&lt;h2 id="52comsuntoolsjavacparsertokensjavatoken">5.2.com/sun/tools/javac/parser/Tokens.java#Token&lt;/h2>
-&lt;h3 id="从属性看-6">从属性看&lt;/h3>
-&lt;p>从&lt;code>3.词法分析的概念&lt;/code>中可以知道，&lt;code>词法单元(Token)&lt;/code>有多种类型，如：标识符Token、运算符Token、字面量Token等。&lt;/p>
-&lt;p>因此，javac实现了如下Token继承关系：&lt;/p>
-&lt;p>其中，Token的各个子类除了有kind属性外，还有各自特有的属性。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105154224005.png" alt="image-20211105154224005">&lt;/p>
-&lt;h3 id="从行为看-4">从行为看&lt;/h3>
-&lt;p>Token对象提供了各种get方法，表达Token对象的&lt;code>&amp;lt;token-name，attribute-value&amp;gt;&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java拾遗/【编译引擎】-9-阅读前端编译源码-词法分析-1/image-20211105155258304.png" alt="image-20211105155258304" style="zoom:50%;" />&lt;/p>
-&lt;h2 id="53comsuntoolsjavacparsertokensjavatokens">5.3.com/sun/tools/javac/parser/Tokens.java#Tokens&lt;/h2>
-&lt;h3 id="从属性看-7">从属性看&lt;/h3>
-&lt;p>&lt;code>Tokens对象&lt;/code>维护了2个关键的属性：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>key&lt;/code>：数组索引是Name对象在Hash表中的index，value是TokenKind对象。&lt;/li>
-&lt;li>&lt;code>tokenName&lt;/code>：数组索引是TokenKind对应枚举值的序号，value是Name对象。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105155218544.png" alt="image-20211105155218544">&lt;/p>
-&lt;h3 id="从行为看-5">从行为看&lt;/h3>
-&lt;p>从&lt;code>Tokens对象&lt;/code>提供的方法看，有2个关键点：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>调用链1&lt;/strong>：创建&lt;code>JavaCompiler对象&lt;/code>时，会触发&lt;code>Names&lt;/code>的构造函数，
-&lt;ul>
-&lt;li>进而触发&lt;code>SharedNameTable&lt;/code>的构造函数。&lt;/li>
-&lt;li>进而触发&lt;code>NameImpl&lt;/code>的构造函数，继而触发了&lt;code>Names&lt;/code>对象的初始化。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>调用链2&lt;/strong>：创建&lt;code>ParserFactory&lt;/code>对象时，会触发&lt;code>Tokens&lt;/code>的构造函数，
-&lt;ul>
-&lt;li>进而触发了&lt;code>Tokens&lt;/code>的构造函数，继而在&lt;code>Tokens&lt;/code>对象中建立了&lt;code>Name&lt;/code>到&lt;code>Token&lt;/code>、&lt;code>Token&lt;/code>到&lt;code>Name&lt;/code>的双向映射。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E%E3%80%91-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/image-20211105155228126.png" alt="image-20211105155228126">&lt;/p>
-&lt;h1 id="6一些感慨理论产品化">6.一些感慨：理论、产品化&lt;/h1>
-&lt;p>有一次讨论LLVM的时候，一位老前辈感慨过：老美的下一代在玩编译器，我们的下一代还在捣腾CRUD。&lt;/p>
-&lt;blockquote>
-&lt;p>感兴趣的读者，可以去搜索一下LLVM的作者在研究生阶段的论文以及他的职业经历。&lt;/p>
-&lt;/blockquote>
-&lt;p>包括笔者引用的三本编译器领域圣经：&lt;code>龙书、虎书、鲸书&lt;/code>以及其中我们现在还要反复咀嚼的编译理论，距今也有几十年多年的历史。&lt;/p>
-&lt;p>能够透彻理解JVM原理的程序猿并不多，真的阅读JVM源码的更少，这或许就是我们在技术上还需要弥补的巨大差距。&lt;/p>
-&lt;p>另外，通过阅读javac在词法分析部分的源码，我们就可以发现：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>编译器理论&lt;/strong>是指导&lt;strong>产品化的灵魂&lt;/strong>(如：词素、词法单元、有限状态机等)。&lt;/li>
-&lt;li>&lt;strong>产品化&lt;/strong>却&lt;strong>在实践中&lt;/strong>会考虑更多因素(如：输入缓冲和哨兵标志、词素Hash表等)，&lt;strong>高于编译器理论&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h2 id="7下一步">7.下一步&lt;/h2>
-&lt;p>接下来，笔者会继续分析javac在词法分析环节，如何实现有限状态机。&lt;/p>
-&lt;h1 id="z参考">z.参考&lt;/h1>
-&lt;blockquote>
-&lt;p>龙书：《Compilers, Principles, Techniques, &amp;amp;Tools》Second Edition&lt;/p>
-&lt;p>虎书：《现代编译原理-C语言描述》&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91Java%E6%8B%BE%E9%81%97/image-20211014110327766.png" alt="image-20211014110327766">&lt;/p></description></item></channel></rss>

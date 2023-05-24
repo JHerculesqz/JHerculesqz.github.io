@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 22 Apr 2023 01:10:31 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 24 May 2023 01:09:00 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,234 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-7</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</link><pubDate>Sat, 22 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</guid><description>&lt;h1 id="1实验模拟java线程状态迁移过程">1.实验：模拟Java线程状态迁移过程&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-8</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-8/</link><pubDate>Wed, 24 May 2023 01:09:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-8/</guid><description>&lt;p>本文重点解读JDK中的重要概念——线程组(&lt;code>ThreadGroup&lt;/code>)的源码。&lt;/p>
+&lt;h1 id="1线程组的树状结构">1.线程组的树状结构&lt;/h1>
+&lt;p>我们先看一下&lt;code>java.lang.ThreadGroup&lt;/code>的成员变量：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230523203618607.png" alt="image-20230523203618607">&lt;/p>
+&lt;p>通过JDK源码可以看到，每个&lt;code>ThreadGroup&lt;/code>对象拥有一个父线程组&lt;code>parent&lt;/code>，同时每个&lt;code>ThreadGroup&lt;/code>对象也拥有自己的子线程组集合&lt;code>group[]&lt;/code>和子线程集合&lt;code>threads[]&lt;/code>。&lt;/p>
+&lt;p>这样，JDK的&lt;code>ThreadGroup&lt;/code>本质上形成了一个线程组和线程的树状结构。如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230523203932254.png" alt="image-20230523203932254">&lt;/p>
+&lt;h1 id="2决定线程组父子关系的时机构造函数">2.决定线程组父子关系的时机：构造函数&lt;/h1>
+&lt;p>&lt;code>ThreadGroup&lt;/code>提供了4个构造函数(其中2个是&lt;code>public&lt;/code>类型以供程序猿调用)，如下图所示：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524090234413.png" alt="image-20230524090234413">&lt;/p>
+&lt;p>这4个构造函数的调用链关系如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524094642711.png" alt="image-20230524094642711">&lt;/p>
+&lt;p>我们接下来逐一分析它们的源码。&lt;/p>
+&lt;h2 id="21threadgroup">2.1.ThreadGroup()&lt;/h2>
+&lt;p>分析第1个无参构造函数，可知：&lt;/p>
+&lt;ul>
+&lt;li>它仅被JVM调用&lt;/li>
+&lt;li>它创建名为&lt;code>system&lt;/code>的线程组&lt;/li>
+&lt;li>它的父线程组为&lt;code>null&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524090656391.png" alt="image-20230524090656391">&lt;/p>
+&lt;h2 id="22threadgroupstring-name">2.2.ThreadGroup(String name)&lt;/h2>
+&lt;p>分析第2个构造函数，可知：&lt;/p>
+&lt;ul>
+&lt;li>它调用了第3个构造函数&lt;/li>
+&lt;li>它获取了当前线程所在的线程组，作为自己的父线程组&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524091312700.png" alt="image-20230524091312700">&lt;/p>
+&lt;h2 id="23threadgroupthreadgroup-parent-string-name">2.3.ThreadGroup(ThreadGroup parent, String name)&lt;/h2>
+&lt;p>分析第3个构造函数，可知：&lt;/p>
+&lt;ul>
+&lt;li>它调用了第3个构造函数&lt;/li>
+&lt;li>它调用了&lt;code>checkParentAccess&lt;/code>方法，检查了父线程组&lt;code>parent&lt;/code>的权限&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524091449229.png" alt="image-20230524091449229">&lt;/p>
+&lt;h2 id="24threadgroupvoid-unused-threadgroup-parent-string-name">2.4.ThreadGroup(Void unused, ThreadGroup parent, String name)&lt;/h2>
+&lt;p>分析第4个构造函数，可知：&lt;/p>
+&lt;ul>
+&lt;li>在这个构造函数中，调用&lt;code>add&lt;/code>方法，将传入的线程组对象设置为父线程组。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524091708771.png" alt="image-20230524091708771">&lt;/p>
+&lt;h2 id="25addthreadgroup-g">2.5.add(ThreadGroup g)&lt;/h2>
+&lt;p>此方法就是构建线程组父子关系的关键代码：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>813行：当前线程组对象的子线程组集合为空，则创建长度为4的子线程组集合&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>815行：如果当前线程组对象的子线程组集合长度已经满了，则将子线程组集合扩容为2倍&lt;/p>
+&lt;ul>
+&lt;li>注：JDK源码中有很多扩容代码，在空间和时间上进行性能平衡，值得学习&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>817行：将传入的线程组g，加入到当前线程组对象的子线程组集合&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>821行：将子线程组集合的游标增1&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524094843439.png" alt="image-20230524094843439">&lt;/p>
+&lt;h2 id="26测试">2.6.测试&lt;/h2>
+&lt;p>我们可以写一段测试代码：&lt;/p>
+&lt;ul>
+&lt;li>我们借助&lt;code>getParent()&lt;/code>方法，获得指定线程组的父线程组&lt;/li>
+&lt;li>我们借助&lt;code>list()&lt;/code>方法，打印当前进程中的线程组的树状结构&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524093324551.png" alt="image-20230524093324551">&lt;/p>
+&lt;p>上述代码的控制台输出如下：&lt;/p>
+&lt;ul>
+&lt;li>上述代码就形成了1个线程组树：&lt;code>system线程组&lt;/code>&amp;gt;&lt;code>main线程组&lt;/code>&amp;gt;&lt;code>线程组1&lt;/code>&amp;gt;&lt;code>线程组2&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524093905263.png" alt="image-20230524093905263">&lt;/p>
+&lt;h1 id="3决定线程父子关系的时机add">3.决定线程父子关系的时机：add&lt;/h1>
+&lt;h2 id="31触发">3.1.触发&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>Thread.start()&lt;/code>方法会调用&lt;code>ThreadGroup.add(Thread t)&lt;/code>方法，目的是将该线程加入对应线程组的子线程组集合&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524100028755.png" alt="image-20230524100028755">&lt;/p>
+&lt;h2 id="32threadgroupaddthread-t">3.2.ThreadGroup.add(Thread t)&lt;/h2>
+&lt;p>此方法就是构建线程和线程组父子关系的关键代码：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>892行：当前线程组对象的子线程集合为空，则创建长度为4的子线程集合&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>894行：如果当前线程组对象的子线程集合长度已经满了，则将子线程集合扩容为2倍&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>896行：将传入的线程t，加入到当前线程组对象的子线程集合&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>900行：将子线程集合的游标增1&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>906行：将未启动的线程数减1&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524100637548.png" alt="image-20230524100637548">&lt;/p>
+&lt;h2 id="33测试">3.3.测试&lt;/h2>
+&lt;p>我们的测试代码如下：&lt;/p>
+&lt;ul>
+&lt;li>创建3个线程：线程1、线程2、线程3&lt;/li>
+&lt;li>线程1：未指定线程组，&lt;code>Thread&lt;/code>的构造函数会找当前线程对象的父线程对象所属的线程组，指定线程1要加入到该线程组
+&lt;ul>
+&lt;li>注：此处不展开，读者可通过&lt;code>Thread&lt;/code>构造函数自行分析&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>线程2：指定线程2要加入到线程组1&lt;/li>
+&lt;li>线程3：指定线程3要加入到线程组2&lt;/li>
+&lt;li>start：线程1、线程2、线程3启动，触发了3个线程真正地加入到对应的线程组&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524101258085.png" alt="image-20230524101258085">&lt;/p>
+&lt;p>上述代码的控制台输出如下：&lt;/p>
+&lt;ul>
+&lt;li>上述代码就形成了1个线程组和线程的树状结构：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524102208868.png" alt="image-20230524102208868">&lt;/p>
+&lt;h1 id="4完整测试代码">4.完整测试代码&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">Main&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">ThreadGroup&lt;/span> &lt;span class="n">threadGroup1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">ThreadGroup&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;线程组1&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">ThreadGroup&lt;/span> &lt;span class="n">threadGroup2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">ThreadGroup&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroup1&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="s">&amp;#34;线程组2&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">Thread&lt;/span> &lt;span class="n">thread1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">(()&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;...&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentThread&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">getName&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">TimeUnit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SECONDS&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">InterruptedException&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">e&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">},&lt;/span> &lt;span class="s">&amp;#34;线程1&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">Thread&lt;/span> &lt;span class="n">thread2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroup1&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">()&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;...&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentThread&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">getName&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">TimeUnit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SECONDS&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">InterruptedException&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">e&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">},&lt;/span> &lt;span class="s">&amp;#34;线程2&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">Thread&lt;/span> &lt;span class="n">thread3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroup2&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">()&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;...&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentThread&lt;/span>&lt;span class="o">().&lt;/span>&lt;span class="na">getName&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="n">TimeUnit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">SECONDS&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">InterruptedException&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">RuntimeException&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">e&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">},&lt;/span> &lt;span class="s">&amp;#34;线程3&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;span class="n">thread1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">start&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">thread2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">start&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">thread3&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">start&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="c1">// getParent/parentOf
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">ThreadGroup&lt;/span> &lt;span class="n">threadGroupMain&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">threadGroup1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getParent&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroupMain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getName&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroupMain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">parentOf&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroup1&lt;/span>&lt;span class="o">));&lt;/span>
+&lt;span class="c1">// activeCount/activeGroupCount
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroup1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">activeCount&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">threadGroup1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">activeGroupCount&lt;/span>&lt;span class="o">());&lt;/span>
+&lt;span class="c1">// list
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">ThreadGroup&lt;/span> &lt;span class="n">threadGroupSystem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">threadGroupMain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">getParent&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="n">threadGroupSystem&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">list&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="5参考">5.参考&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">java/lang/ThreadGroup.java
+java/lang/Thread.java
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-7</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</link><pubDate>Sat, 22 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</guid><description>&lt;h1 id="1实验模拟java线程状态迁移过程">1.实验：模拟Java线程状态迁移过程&lt;/h1>
 &lt;p>在《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6》中，我们分析了Java线程从JDK层面到JVM层面的状态迁移：&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230414070017806.png" alt="image-20230414070017806">&lt;/p>
 &lt;p>本文我们来尝试自己实现Java线程的状态迁移过程，进一步加深对这个状态迁移过程的理解。&lt;/p>
@@ -3231,39 +3458,4 @@
 &lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">《数据仓库(Building the Data Warehouse)-第四版》
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>【置顶】Java拾遗</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</link><pubDate>Fri, 05 Nov 2021 16:32:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BD%AE%E9%A1%B6java%E6%8B%BE%E9%81%97/</guid><description>&lt;p>Java是个庞大的体系，心中有许多想写下来的内容。&lt;/p>
-&lt;p>陆续写了一些后，自己的表达脉络也逐渐清晰起来。&lt;/p>
-&lt;p>就用此文将已经发布的、即将编写的文章汇总起来，便于读者阅读。&lt;/p>
-&lt;h1 id="宏观">宏观&lt;/h1>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E7%90%86%E8%A7%A3java%E6%A6%82%E5%BF%B5%E5%9B%BE/">【宏观】从Java概念图理解Java体系&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82%E5%A6%82%E4%BD%95%E6%9B%B4%E5%8A%A0%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3java%E8%99%9A%E6%8B%9F%E6%9C%BA/">【宏观】如何更加深入理解Java虚拟机&lt;/a>&lt;/p>
-&lt;h1 id="jvm">JVM&lt;/h1>
-&lt;h2 id="前端编译">前端编译&lt;/h2>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-1-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%84%8F%E4%B9%89/">【编译引擎】 1 学习阅读Class文件结构的意义&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8A/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-上&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%AD/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-中&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-2-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%8416%E8%BF%9B%E5%88%B6%E7%89%88-%E4%B8%8B/">【编译引擎】-2-学习阅读Class文件结构(16进制版)-下&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-3-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84javap%E7%89%88/">【编译引擎】-3-学习阅读Class文件结构(javap版)&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-4-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BBclass%E6%96%87%E4%BB%B6%E6%8C%87%E4%BB%A4-%E6%A6%82%E8%A7%88/">【编译引擎】-4-学习阅读Class文件指令-概览&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-8-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/">【编译引擎】-8-阅读前端编译源码的准备工作&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%BC%96%E8%AF%91%E5%BC%95%E6%93%8E-9-%E9%98%85%E8%AF%BB%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90-1/">【编译引擎】-9-阅读前端编译源码-词法分析-1&lt;/a>&lt;/p>
-&lt;h2 id="类加载">类加载&lt;/h2>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-0-%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B/">【类加载机制】-0-从一道面试题开始&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-1-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%89%96%E6%9E%90-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%80%9F%E8%A7%88/">【类加载机制】-1-类加载器剖析-类加载器速览&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8A/">【类加载机制】-8-Init阶段细节-顺序，再谈赋值-上&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-8-init%E9%98%B6%E6%AE%B5%E7%BB%86%E8%8A%82-%E9%A1%BA%E5%BA%8F%E5%86%8D%E8%B0%88%E8%B5%8B%E5%80%BC-%E4%B8%8B/">【类加载机制】-8-Init阶段细节-顺序，再谈赋值-下&lt;/a>&lt;/p>
-&lt;h2 id="运行时数据区">运行时数据区&lt;/h2>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-0-%E7%94%A8%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E7%9A%84%E8%A7%86%E8%A7%92%E7%90%86%E8%A7%A3%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/">【运行时数据区】-0-用仓库管理员的视角理解运行时数据区&lt;/a>&lt;/p>
-&lt;h2 id="垃圾回收">垃圾回收&lt;/h2>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%BB%E8%84%89%E7%BB%9C/">【垃圾回收】-0-垃圾回收体系的主脉络&lt;/a>&lt;/p>
-&lt;h2 id="执行引擎">执行引擎&lt;/h2>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-0-%E9%9A%8F%E6%9C%BA%E5%BA%94%E5%8F%98+%E6%9C%89%E5%A4%87%E8%80%8C%E6%9D%A5/">【执行引擎】-0-随机应变+有备而来&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E-1-%E7%90%86%E6%B8%85%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E6%8F%90%E5%89%8D%E7%BC%96%E8%AF%91/">【执行引擎】-1-理清前端编译、即时编译、提前编译&lt;/a>&lt;/p>
-&lt;h1 id="工具链">工具链&lt;/h1>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E5%B7%A5%E5%85%B7-0-%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82jdk%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/">【工具】-0-一文搞懂JDK命令行工具&lt;/a>&lt;/p>
-&lt;h1 id="java新特性">Java新特性&lt;/h1>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-0-%E5%AD%A6%E4%B9%A0java%E6%96%B0%E7%89%B9%E6%80%A7%E5%A6%82%E4%BD%95%E5%BF%AB%E4%BA%BA%E4%B8%80%E6%AD%A5/">【Java新特性】-0-学习Java新特性，如何快人一步&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-2-java9%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8F%E8%A7%82%E8%A7%A3%E8%AF%BB/">【Java新特性】-2-Java9新特性宏观解读&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-3-java9%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E5%8F%98%E5%8C%96/">【Java新特性】-3-Java9的类加载机制变化&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/java%E6%96%B0%E7%89%B9%E6%80%A7-4-java9-stackwalker/">【Java新特性】-4-Java9-StackWalker&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91Java%E6%8B%BE%E9%81%97/image-20211014110327766.png" alt="image-20211014110327766">&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>

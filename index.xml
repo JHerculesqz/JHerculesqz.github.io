@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 24 May 2023 01:09:00 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Jul 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,80 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-8</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-8/</link><pubDate>Wed, 24 May 2023 01:09:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-8/</guid><description>&lt;p>本文重点解读JDK中的重要概念——线程组(&lt;code>ThreadGroup&lt;/code>)的源码。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【ChatGPT】ChatGPT学习笔记2-不是什么?是什么?有何方向?</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 18 Jul 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</guid><description>&lt;p>最近有小伙伴提意见，希望我的专栏能用小短篇的形式，将大模型相关知识通俗阐述一下。&lt;/p>
+&lt;p>特此请ChatGPT协助我一起将近几个月阅读的资料以笔记体记录下来，与大家分享。&lt;/p>
+&lt;h1 id="1chatgpt不是什么">1.ChatGPT不是什么?&lt;/h1>
+&lt;h2 id="11古早的聊天机器人">1.1.古早的聊天机器人&lt;/h2>
+&lt;p>一些古早的聊天机器人、客服机器人，有采用如下方式进行实现：&lt;/p>
+&lt;ul>
+&lt;li>利用分词组件对用户输入的问题进行分词，获得问题中的关键词。&lt;/li>
+&lt;li>将关键词，在数据库、在互联网的上中进行搜索。
+&lt;ul>
+&lt;li>其中，数据库中预置了很多问题和答案。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>将得到的答案过滤清洗、随机返回其中1个答案。&lt;/li>
+&lt;/ul>
+&lt;h2 id="12现代的聊天机器人">1.2.现代的聊天机器人&lt;/h2>
+&lt;p>&lt;strong>ChatGPT及其更早的NLP领域技术&lt;/strong>，早已&lt;strong>不是从数据库、互联网&lt;/strong>生成答案的。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230718234119962.png" alt="image-20230718234119962">&lt;/p>
+&lt;p>ChatGPT官方也明确表达了&amp;quot;ChatGPT is not connected to the internet&amp;rdquo;。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719065005501.png" alt="image-20230719065005501">&lt;/p>
+&lt;h1 id="2chatgpt是什么">2.ChatGPT是什么？&lt;/h1>
+&lt;h2 id="21大模型的生成原理chatgpt版">2.1.大模型的生成原理(ChatGPT版)&lt;/h2>
+&lt;ul>
+&lt;li>请ChatGPT解释一下大模型的生成原理，如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719092626552.png" alt="image-20230719092626552">&lt;/p>
+&lt;h2 id="21大模型的生成原理通俗版">2.1.大模型的生成原理(通俗版)&lt;/h2>
+&lt;p>我们再来通俗理解一下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP1&lt;/strong>：问一个问题&amp;quot;什么是ChatGPT？&amp;quot;，可以将ChatGPT看成1个函数F，这个函数会输出即将回答的答案中第一个字(词)的概率。比如：根据问题，答案第一个字是&amp;quot;c&amp;quot;的概率是最大，最终就认为答案的第1个字是&amp;quot;c&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719093253167.png" alt="image-20230719093253167">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP2&lt;/strong>：将STEP1的输出追加到问题上，问题就变成了&amp;quot;什么是ChatGPT?c&amp;rdquo;，继续输入给函数F，得到新的概率，最终认为答案的第2个字是&amp;quot;h&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094213880.png" alt="image-20230719094213880">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP3、STEP4、STEP5&lt;/strong>：不断重复STEP1、STEP2的动作，就会得到完整的答案，如下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094340618.png" alt="image-20230719094340618">&lt;/p>
+&lt;h1 id="3未来的研究方向">3.未来的研究方向？&lt;/h1>
+&lt;p>大模型未来的热点研究方向很多很多：提示词工程、神经网络编辑、机器遗忘、自适应计算和自适应模型、跨模态学习、模型压缩和加速、集成多任务和元学习、强化学习和自监督学习等等。&lt;/p>
+&lt;h2 id="31提示词工程">3.1.提示词工程&lt;/h2>
+&lt;ul>
+&lt;li>Prompt Engineering，吴恩达老师的课程让这个热点更热。提示词工程的本质可以认为：大模型好像一个&lt;strong>博学的老人家&lt;/strong>(世界知识几乎都知道)，只是&lt;strong>记性不太好&lt;/strong>。你需要用一些特殊的提示词唤醒他的记忆(俗称会念咒)，他就能很好地回答你的问题。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719085754568.png" alt="image-20230719085754568">&lt;/p>
+&lt;h2 id="32神经网络编辑">3.2.神经网络编辑&lt;/h2>
+&lt;p>Neural Editing，随着模型越来越大，训练好一个模型的成本极高，重新训练几乎不可能，因此需要有一种改进神经网络生成结果的技术，可以通过对模型的生成结果进行编辑，来获得更准确、更自然的结果。该技术通常涉及到在生成结果中插入或删除一些元素，或者重新排列生成结果的顺序，以获得更好的输出结果。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719090639814.png" alt="image-20230719090639814">&lt;/p>
+&lt;h2 id="33机器遗忘">3.3.机器遗忘&lt;/h2>
+&lt;p>Machine Unlearning，机器遗忘是一种让机器学会忘记以前的知识的技术。说白了，就是&amp;quot;你知道了不该知道的事情&amp;rdquo;。这项技术可以应用于安全隐私、AI伦理领域。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719091436950.png" alt="image-20230719091436950">&lt;/p>
+&lt;h2 id="34其它方向">3.4.其它方向&lt;/h2>
+&lt;p>以下来自于ChatGPT的解释，供参考：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>自适应计算和自适应模型&lt;/strong>：在大模型上进行计算是一项巨大的挑战，因为它们需要大量的计算资源和内存。因此，未来的研究方向将包括自适应计算和自适应模型，旨在优化大模型的计算效率和资源利用率。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>跨模态学习&lt;/strong>：指使用多种类型的数据来训练一个模型。例如，将文本、图像和语音数据结合起来训练一个模型，以获得更准确、更全面的结果。未来的研究方向将探索如何在大模型上实现跨模态学习，以进一步提高模型的准确性和泛化能力。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>模型压缩和加速&lt;/strong>：由于大模型需要大量的计算资源和内存，因此未来的研究方向将包括模型压缩和加速，以减少模型的大小和计算负载，从而使模型更加可扩展和可用。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>集成多任务和元学习&lt;/strong>：指在一个模型中同时处理多个任务，例如，在自然语言处理中同时进行命名实体识别和情感分析。元学习是指在训练过程中学习如何学习的过程。未来的研究方向将集中在如何在大模型上实现多任务学习和元学习，以提高模型的泛化能力和效率。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>强化学习和自监督学习&lt;/strong>：强化学习是指使用奖励信号来训练一个模型，在自我监督学习中，模型从未标记的数据中学习。未来的研究方向将集中在如何在大型模型上实现强化学习和自我监督学习，以提高模型的效率和准确性。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明：本文部分内容由ChatGPT生成。&lt;/p>
+&lt;/blockquote></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-8</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-8/</link><pubDate>Wed, 24 May 2023 01:09:00 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-8/</guid><description>&lt;p>本文重点解读JDK中的重要概念——线程组(&lt;code>ThreadGroup&lt;/code>)的源码。&lt;/p>
 &lt;h1 id="1线程组的树状结构">1.线程组的树状结构&lt;/h1>
 &lt;p>我们先看一下&lt;code>java.lang.ThreadGroup&lt;/code>的成员变量：&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230523203618607.png" alt="image-20230523203618607">&lt;/p>
@@ -3204,258 +3277,6 @@ java/lang/Thread.java
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">《性能之巅》第一章、第二章
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>【宏观】-0-浅谈数据仓库</title><link>https://jherculesqz.github.io/post/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</link><pubDate>Sun, 20 Mar 2022 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</guid><description>&lt;p>国内的数据行业领域大致有&lt;strong>3个市场分水岭&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>2008年以前，&lt;strong>关系型数据库厂商&lt;/strong>领军，以&lt;code>MySQL、Oracle、SQLServer&lt;/code>为代表。&lt;/li>
-&lt;li>2008年~2012年，与关系型数据库竞争的各类&lt;strong>NoSQL厂商&lt;/strong>异军突起，以&lt;code>Hadoop生态、MongoDB、Neo4j&lt;/code>等为代表。&lt;/li>
-&lt;li>2012年至今，&lt;strong>云厂商&lt;/strong>巨头挥舞着&lt;code>大数据、云原生、中台、数据集市、数据湖&lt;/code>等旗帜一统江湖，以&lt;code>亚马逊、阿里云、华为云&lt;/code>为代表。&lt;/li>
-&lt;/ul>
-&lt;p>2022年的今天，如何透过这些漫天飞舞的大数据概念与术语，看清它们的技术本质、在To B的产品中落地呢？&lt;/p>
-&lt;p>笔者试图通过**《数据仓库(Building the Data Warehouse)-第四版》**这本经典著作的思想脉络进行阐述。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220320221544975.png" alt="image-20220320221544975">&lt;/p>
-&lt;h1 id="1数据江湖恩仇录">1.数据江湖恩仇录&lt;/h1>
-&lt;h2 id="11数据仓库的初创期">1.1.数据仓库的初创期&lt;/h2>
-&lt;p>**《数据仓库(Building the Data Warehouse)-第四版》**包含了有3份序言(第2版序言、第3版序言、第4版序言)。&lt;/p>
-&lt;p>从第2版序言、第3版序言看，&lt;strong>在1995年之前，刚兴起的数仓理论不太受待见&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>数据库学者&lt;/code>不太接受&lt;code>数据仓库理论&lt;/code>：
-&lt;ul>
-&lt;li>从学术看，数仓理论只是&lt;code>空洞的新概念&lt;/code>。&lt;/li>
-&lt;li>从实践看，似乎没有必要将数据从原有的数据库集群(事务型)中分出来，存入另一个数据库集群(分析型)中。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;code>商业投资人&lt;/code>也不太看好&lt;code>数据仓库&lt;/code>：
-&lt;ul>
-&lt;li>似乎那个年代的资本兴趣点在互联网。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>从第4版序言看，&lt;strong>在1996年之后，数仓开始成熟并商业落地&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>第4版序言只用了&lt;strong>一句话的盖棺定论&lt;/strong>：&lt;code>数据仓库对于那些赞同传统数据库理论的人来说是一种智力上的威胁。&lt;/code>&lt;/li>
-&lt;li>第4版序言大篇幅在阐述：
-&lt;ul>
-&lt;li>架构：设计数仓的关键架构理论。&lt;/li>
-&lt;li>需求：数据设计的关键方法论。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>详见《数据仓库(Building the Data Warehouse)-第四版》的序言章节。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220320225621296.png" alt="image-20220320225621296">&lt;/p>
-&lt;h2 id="12数据仓库的成熟期">1.2.数据仓库的成熟期&lt;/h2>
-&lt;p>随着数据仓库理论的成熟与落地，出现了数据仓库的两大宗师：Inmon和Kimball。&lt;/p>
-&lt;blockquote>
-&lt;p>Inmon就是《数据仓库(Building the Data Warehouse)-第四版》的作者。&lt;/p>
-&lt;/blockquote>
-&lt;p>这两位宗师好似&lt;strong>气宗与剑宗&lt;/strong>，代表了数仓理论的2大流派。&lt;/p>
-&lt;p>两位宗师的理论有很多&lt;strong>相似点&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>对&lt;strong>数仓的作用&lt;/strong>理解一致：产品的数据库中存储的是&lt;strong>事务型数据&lt;/strong>，而数仓中存储的是&lt;strong>分析型数据&lt;/strong>，这些分析型数据是为了商业智能做决策的。
-&lt;ul>
-&lt;li>比如：淘宝存储了每个人的下单、付款、收货等记录，这属于事务型数据。&lt;/li>
-&lt;li>比如：淘宝对进行用户画像，商品推荐等产生的数据，这属于分析型数据。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>对&lt;strong>数仓的架构&lt;/strong>理解一致：都认为&lt;strong>需要进行数仓分层&lt;/strong>，也都认同每一个数仓架构中的组件都会衍生出一个&lt;strong>垂直技术领域&lt;/strong>。
-&lt;ul>
-&lt;li>比如：数仓中的数据需要分为贴源数据层、明细数据层、主题数据层、应用数据层等——这些&lt;strong>数仓/数据湖中O表、D表、A表&lt;/strong>的理论基础。&lt;/li>
-&lt;li>比如：数据采集要有针对不同类型的数据的采集基础设施——这就是现在&lt;strong>大数据领域中的ETL&lt;/strong>的理论基础。&lt;/li>
-&lt;li>比如：数据存储、数据计算要依托于高性能/高HA的基础设施——这就是现在&lt;strong>HBase、Hive、Kafka、Kylin&lt;/strong>等中间件的理论基础。&lt;/li>
-&lt;li>比如：数仓中的数据要能识别出血缘关系、数据质量属性——这就是&lt;strong>Atlas&lt;/strong>等中间件的理论基础。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>两位宗师的理论最大的&lt;strong>分歧点&lt;/strong>：在于业务数据建模的方法论。&lt;/p>
-&lt;ul>
-&lt;li>在2022年的今天看来，Kimball的维度建模理论应该变成了主流。&lt;/li>
-&lt;/ul>
-&lt;p>为什么&lt;strong>维度建模&lt;/strong>最终胜出呢？笔者有两个粗浅的猜测：&lt;/p>
-&lt;ul>
-&lt;li>猜测1：&lt;strong>维度建模理论更接地气&lt;/strong>。
-&lt;ul>
-&lt;li>从Inmon大师的这本《数据仓库(Building the Data Warehouse)-第四版》书，真的很难看懂他的方法论如何落地。&lt;/li>
-&lt;li>而从Kimball大师的各种论文与书籍中，更容易理解维度建模的思想。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>猜测2：&lt;strong>维度建模的案例更多&lt;/strong>。
-&lt;ul>
-&lt;li>Kimball大师背后是一家商业咨询公司，出版/发布的数仓书籍与论文中，包含了很多维度建模的行业案例。&lt;/li>
-&lt;li>而Inmon大师，在《数据仓库(Building the Data Warehouse)-第四版》这本书中仅仅在第13章、第15/17/18/19章中谈到了一些High Level的建模方法。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>详见《数据仓库(Building the Data Warehouse)-第四版》的目录。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220320232816716.png" alt="image-20220320232816716">&lt;/p>
-&lt;h2 id="13数据仓库的修仙期">1.3.数据仓库的修仙期&lt;/h2>
-&lt;p>从1995年数仓理论成熟至今，数仓慢慢开始神话。&lt;/p>
-&lt;ul>
-&lt;li>微软推出商业智能的概念以及PowerBI产品，微软的PowerBI一统江湖了很多年。&lt;/li>
-&lt;li>在被微软垄断的那些年，数仓属于企业级高端玩家才会触及的高端货，因此也没啥新的突破。&lt;/li>
-&lt;li>到了2012年移动互联网的爆发，数仓借着&lt;code>大数据&lt;/code>开始神话，出现了&lt;code>Hadoop、Spark、MongoDB、Kafka&lt;/code>等一大堆IT基础中间件，也出现了&lt;code>数据中台、数据湖&lt;/code>等一大堆新的技术名词。&lt;/li>
-&lt;/ul>
-&lt;h1 id="2如何抓住大数据时代的技术主线">2.如何抓住大数据时代的技术主线?&lt;/h1>
-&lt;h2 id="21为什么数仓理论是技术主线">2.1.为什么数仓理论是技术主线？&lt;/h2>
-&lt;p>从30多年前的数据仓库，到今天的大数据时代，各种架构概念、业务概念，你方唱罢我登场。&lt;/p>
-&lt;p>从2021年开始，国家又推出了&lt;code>企业数字化转型&lt;/code>的政策，各企业随之兴起了&lt;code>企业数字化&lt;/code>的风潮。&lt;/p>
-&lt;p>作为架构师、程序猿的我们，&lt;strong>如何才能抓住大数据时代的技术主线&lt;/strong>？&lt;/p>
-&lt;p>笔者认为，&lt;strong>数仓就是这条技术主线&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>从需求看，企业用户低估计&lt;strong>数字化&lt;/strong>难度造成项目失败后，会催生对&lt;strong>掌握数仓方法论的技术人才&lt;/strong>的需求：&lt;/p>
-&lt;ul>
-&lt;li>企业用户低估&lt;strong>数字化&lt;/strong>难度的原因：
-&lt;ul>
-&lt;li>认为什么原始数据都有——比如：客户的订单数据、商品浏览数据、物流数据等。&lt;/li>
-&lt;li>认为数字化等于一个数据大屏——比如：看看什么商品利润高、该给什么客户推送什么商品等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>缺乏理论指导，大数据沦为数据大&lt;/strong>
-&lt;ul>
-&lt;li>&lt;strong>缺乏业务设计&lt;/strong>：大屏上要展示哪些报表，这些报表最终说明了什么业务问题？这些报表最终可以得出什么决策结论？&lt;/li>
-&lt;li>&lt;strong>缺乏数据分析与设计&lt;/strong>：为了获得最终展示在大屏上的报表，需要哪些中间层数据，这些中间层数据又通过哪些原始数据可以得到？&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>数仓方法论如何解决问题&lt;/strong>？
-&lt;ul>
-&lt;li>&lt;strong>聚焦业务决策&lt;/strong>：数仓理论的核心思想是要数据分析师回答依托报表，到底可以得到怎样的商业决策。&lt;/li>
-&lt;li>&lt;strong>自顶而下&lt;/strong>：数仓理论的落地过程是先确定业务过程-&amp;gt;数据维度-&amp;gt;数据粒度，得出需要哪些中间数据；再确定数据事实，最终得出需要采集哪些原始数据。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>从架构看，&lt;strong>数仓理论可以直击本质，将纷繁的大数据中间件串联&lt;/strong>起来：&lt;/p>
-&lt;ul>
-&lt;li>数仓原始数据采集相关的中间件：Flume、Kafka、Sqoop等。&lt;/li>
-&lt;li>数仓数据存储相关的中间件：MySQL、HBase、Redis、MongoDB等。&lt;/li>
-&lt;li>数仓数据计算相关的中间件：Hive，Spark，Flink，Storm等。&lt;/li>
-&lt;li>数仓的即席查询、多维分析相关的中间件：Presto，Kylin等。&lt;/li>
-&lt;li>数仓的任务调度、集群监控相关的中间件：Azkaban、Zabbix，Prometheus等。&lt;/li>
-&lt;li>数仓的数据可视化相关的中间件有：Superset、DataV、PowerBI等。&lt;/li>
-&lt;li>数仓的元数据管理相关的中间件有：Altas等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="22数仓理论的3个关键步骤">2.2.数仓理论的3个关键步骤&lt;/h2>
-&lt;p>基于《数据仓库(Building the Data Warehouse)-第四版》，笔者绘制了一幅数仓落地概念图：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.开展&lt;strong>数仓架构设计&lt;/strong>。&lt;/li>
-&lt;li>STEP2.开展&lt;strong>数仓业务数据设计&lt;/strong>。&lt;/li>
-&lt;li>STEP3.开展&lt;strong>数仓业务实现&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220321003857002.png" alt="image-20220321003857002">&lt;/p>
-&lt;h3 id="221第一步数仓架构设计">2.2.1.第一步，数仓架构设计&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220321004653607.png" alt="image-20220321004653607">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>此步骤的主要角色&lt;/strong>：软件架构师&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>软件架构师的能力模型&lt;/strong>：熟练掌握各类大数据中间件，而不必太纠结具体的业务细节：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>掌握ODS数据获取的工具：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>数据采集相关&lt;/strong>：Flume、Kafka、Sqoop等。&lt;/li>
-&lt;li>&lt;strong>数据存储相关&lt;/strong>：MySQL、HBase、Redis、MongoDB等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>掌握DW层的工具：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>数据计算相关：Hive，Spark，Flink，Storm等。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>数据查询相关：Presto，Kylin等。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>元数据管理、数据质量相关：Altas等。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>任务调度、集群监控相关：Azkaban、Zabbix，Prometheus等。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>数据可视化相关：Superset、DataV、PowerBI等。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>详见《数据仓库(Building the Data Warehouse)-第四版》的第2章、第5~11章、第14章。&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="222第二步开展数仓业务数据设计">2.2.2.第二步，开展数仓业务数据设计&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220321005338557.png" alt="image-20220321005338557">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>此步骤的主要角色&lt;/strong>：业务数据分析师&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>业务数据分析师的能力模型&lt;/strong>：熟练掌握维度建模。&lt;/p>
-&lt;ul>
-&lt;li>维度建模本质是一种&lt;strong>反模式&lt;/strong>，打破了关系型数据库的三范式(1NF、2NF、3NF)，即允许数据的冗余。&lt;/li>
-&lt;li>&lt;strong>设计维度表&lt;/strong>：维度表通常是&lt;strong>宽表&lt;/strong>，从不同维度对数据进行聚合。&lt;/li>
-&lt;li>&lt;strong>设计事实表&lt;/strong>：事实表通常是&lt;strong>窄表&lt;/strong>，记录具体的事实。&lt;/li>
-&lt;li>&lt;strong>设计贴源表&lt;/strong>：说明从哪里采集原始数据，在这一层不会对原始数据进行任何处理。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>这么讲很抽象，笔者举&lt;strong>一个通俗的例子&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>站在ADS层：可以认为企业老板&lt;strong>想吃一桌川菜&lt;/strong>。
-&lt;ul>
-&lt;li>怎么理解一桌川菜呢？可能包含水煮鱼、鱼香肉丝、宫保鸡丁、干锅花菜、四川凉糕。&lt;/li>
-&lt;li>这就是ADS层，贴近业务，是最终客户能理解的东西。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>站在DW层的维度表：可以类比是各道菜的菜谱。
-&lt;ul>
-&lt;li>比如：水煮鱼可以类比川菜中鱼这个维度的典型做法。&lt;/li>
-&lt;li>比如：鱼香肉丝可以类比川菜中猪肉这个维度的典型做法。&lt;/li>
-&lt;li>比如：四川凉糕可以类比川菜中甜品这个维度的典型做法。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>站在DW层的事实表：可以类比各道菜菜谱涉及的食材。
-&lt;ul>
-&lt;li>比如：水煮鱼需要用到1条草鱼、3个朝天椒……&lt;/li>
-&lt;li>比如：鱼香肉丝需要1斤猪肉、1个朝天椒……&lt;/li>
-&lt;li>比如：干锅花菜需要1棵花菜、1个朝天椒……&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>站在ODS层：可以类比为最后厨房小工的采购清单：
-&lt;ul>
-&lt;li>厨房小工最后看到的清单会汇总。&lt;/li>
-&lt;li>汇总的原始清单可能从不同菜市场购买(不同原始数据来源)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>详见《数据仓库(Building the Data Warehouse)-第四版》的第13章、第15章、第17~19章。&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="223第三步开展数仓业务实现">2.2.3.第三步，开展数仓业务实现&lt;/h3>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/image-20220321005242474.png" alt="image-20220321005242474">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>此步骤的主要角色&lt;/strong>：业务数据分析师、ETL开发人员&lt;/li>
-&lt;li>&lt;strong>业务数据分析师的能力模型&lt;/strong>：通常一些商业化产品都带有可视化的建模工具，业务数据分析师可以通过&lt;code>No Code，Low Code&lt;/code>的方式进行维度建模。&lt;/li>
-&lt;li>&lt;strong>开发人员的能力模型&lt;/strong>：会使用ETL工具，或自研代码，从不同数据源获取数据并存储到数据库中。&lt;/li>
-&lt;/ul>
-&lt;h1 id="3参考文献">3.参考文献&lt;/h1>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">《数据仓库(Building the Data Warehouse)-第四版》
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>

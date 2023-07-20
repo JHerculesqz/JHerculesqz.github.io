@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Jul 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Jul 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,42 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【ChatGPT】ChatGPT学习笔记2-不是什么?是什么?有何方向?</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 18 Jul 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</guid><description>&lt;p>最近有小伙伴提意见，希望我的专栏能用小短篇的形式，将大模型相关知识通俗阐述一下。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】chatGPT学习笔记3-机器学习基本原理(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</link><pubDate>Tue, 18 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</guid><description>&lt;p>现在的热点是大语言模型，为什么我们还要了解机器学习？因为从机器学习到深度学习，再到如今的大语言模型，环环相扣。天底下没有新鲜事，并不是突然出现了一个划时代的技术。从历史、从论文都能按图索骥地找到大语言模型的源头——机器学习。&lt;/p>
+&lt;h1 id="1机器学习的目标是什么">1.机器学习的目标是什么?&lt;/h1>
+&lt;p>机器学习的目标就是从数据中发现规律。&lt;/p>
+&lt;p>这个过程本质是一种统计建模的过程，是统计学方法的一种具体应用。&lt;/p>
+&lt;p>下图引用自李宏毅老师的课件：&lt;/p>
+&lt;ul>
+&lt;li>ChatGPT找到了回答问题的函数f，输入&amp;quot;什么是机器学习？&amp;quot;，函数f就能生成答案。&lt;/li>
+&lt;li>Midjourney找到了生成图片的函数f，输入&amp;quot;一只可爱的猫&amp;rdquo;，函数f就能生成小猫的图片。&lt;/li>
+&lt;li>AlphaGo找到了下棋的函数f，输入&amp;quot;对手的一步棋&amp;rdquo;，函数f就能生成下一步应该怎么走。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720150809229.png" alt="image-20230720150809229">&lt;/p>
+&lt;h1 id="2机器学习和人类学习的相似之处">2.机器学习和人类学习的相似之处&lt;/h1>
+&lt;p>人类学习和机器学习有很多相似之处，本质上：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>人类学习&lt;/strong>：从经验中总结规律——俗称经受社会的毒打。&lt;/li>
+&lt;li>&lt;strong>机器学习&lt;/strong>：从数据中总结模型——俗称经受数据的洗礼。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720152149924.png" alt="image-20230720152149924">&lt;/p>
+&lt;h1 id="3机器学习打破了早期ai范式">3.机器学习打破了早期AI范式&lt;/h1>
+&lt;p>人工智能的发展大致经历了四代，第一代AI以符号主义为主流，第二代至今以联结主义为主流(机器学习、深度学习就属于这个流派)。&lt;/p>
+&lt;p>后来还有三个法国神人，绘制了人工智能发展历史上的两个流派的竞争过程：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720153137135.png" alt="image-20230720153137135">&lt;/p>
+&lt;p>早期的人工智能到底是怎样的呢？大致如下：&lt;/p>
+&lt;ul>
+&lt;li>STEP1.人类某个领域的专家总结该领域的业务规则。&lt;/li>
+&lt;li>STEP2.人类程序员将业务规则以代码的形式实现，形成专家系统。&lt;/li>
+&lt;li>STEP3.最终用户输入问题后，专家系统匹配规则，进行答复。&lt;/li>
+&lt;/ul>
+&lt;p>早期的人工智能的本质就是&lt;strong>人类总结规则、设定规则&lt;/strong>。这种范式的最大问题就是人类总结的规则不足，甚至人类本身总结不出来过于复杂的规则，导致早期的人工智能无法推广应用。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720154059662.png" alt="image-20230720154059662">&lt;/p>
+&lt;p>而出自于联结主义的机器学习推崇的就是&lt;strong>不用人类总结规则，给我数据我来总结规律&lt;/strong>。&lt;/p>
+&lt;p>有一种言论说：神经网络的产生、海量数据的出现、算力的提升造就了机器学习的风靡。&lt;/p>
+&lt;p>这种言论应该不是机器学习风靡的根因，真正的根因应该是&lt;strong>机器学习改变了早期AI的范式&lt;/strong>。&lt;/p>
+&lt;blockquote>
+&lt;p>本文部分内容由ChatGPT生成&lt;/p>
+&lt;/blockquote></description></item><item><title>【ChatGPT】ChatGPT学习笔记2-不是什么?是什么?有何方向?</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 18 Jul 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</guid><description>&lt;p>最近有小伙伴提意见，希望我的专栏能用小短篇的形式，将大模型相关知识通俗阐述一下。&lt;/p>
 &lt;p>特此请ChatGPT协助我一起将近几个月阅读的资料以笔记体记录下来，与大家分享。&lt;/p>
 &lt;h1 id="1chatgpt不是什么">1.ChatGPT不是什么?&lt;/h1>
 &lt;h2 id="11古早的聊天机器人">1.1.古早的聊天机器人&lt;/h2>
@@ -2974,310 +3009,4 @@ java/lang/Thread.java
 &lt;p>《Learning Concurrency in Kotlin》：https://www.amazon.com/Learning-Concurrency-Kotlin-efficient-applications/dp/1788627164&lt;/p>
 &lt;p>Wiki：https://en.wikipedia.org/wiki/Coroutine&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221121164732405.png" alt="image-20221121164732405">&lt;/p></description></item><item><title>【宏观】-0-性能之巅笔记-上</title><link>https://jherculesqz.github.io/post/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/</link><pubDate>Wed, 25 May 2022 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E5%AE%8F%E8%A7%82-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/</guid><description>&lt;h1 id="1brendan-gregg是谁">1.Brendan Gregg是谁&lt;/h1>
-&lt;p>Brendan Gregg，性能界大神，曾就职于Netflix、Sun、Oracle、Joyent(被三星收购的一家云计算公司)，从2022年5月的博客看，他目前就职于Intel。&lt;/p>
-&lt;p>Brendan Gregg在性能方面的成就数不胜数，仅列出两项就可以让我们膜拜了：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>《Systems Performance : Enterprise and the Cloud》&lt;/strong>：中文名《性能之巅》，一本风靡全球的性能工程的圣经。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526101942669.png" alt="image-20220526101942669">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>&amp;ldquo;The Flame Graph&amp;rdquo;&lt;/strong>：Brendan Gregg于2013年提出的&amp;quot;火焰图&amp;rdquo;，火焰图方法也成为现在各种性能工具中必备的可视化能力。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526103724186.png" alt="image-20220526103724186">&lt;/p>
-&lt;p>Brendan Gregg在性能领域，还有一个被广为传播的骚操作——对着磁盘狂吼引发磁盘IO的性能问题。。。大神的世界我们永远不懂。。。&lt;/p>
-&lt;ul>
-&lt;li>油管：&lt;a href="https://www.youtube.com/watch?v=tDacjrSCeq4">https://www.youtube.com/watch?v=tDacjrSCeq4&lt;/a>&lt;/li>
-&lt;li>B站：&lt;a href="https://www.bilibili.com/video/BV1gY4y1L7Px/">https://www.bilibili.com/video/BV1gY4y1L7Px/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526105433607.png" alt="image-20220526105433607">&lt;/p>
-&lt;h1 id="2第一章笔记">2.第一章笔记&lt;/h1>
-&lt;p>Brendan Gregg在《性能之巅》第一章主要讲了2个问题：&lt;/p>
-&lt;ul>
-&lt;li>为什么学习性能工程很难？&lt;/li>
-&lt;li>为什么实施性能工程很难？&lt;/li>
-&lt;/ul>
-&lt;h2 id="为什么学习性能工程很难">为什么学习性能工程很难？&lt;/h2>
-&lt;p>作者想表达的核心观点：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>性能工程要求工程师具备宽广的技术广度，同时也要具备深邃的技术深度。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>然而，技术深度与技术广度兼备的确是一件很困难的事情。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>作者引用了2002年美国国防部长论述国际关系时的一段话：&lt;/p>
-&lt;blockquote>
-&lt;p>国际关系中，&lt;/p>
-&lt;p>有已知的已知：有些事情我们知道自己知道。&lt;/p>
-&lt;p>也有已知的未知：我们知道有些事情我们不知道。&lt;/p>
-&lt;p>但还有未知的未知：有些事情我们知道自己不知道。&lt;/p>
-&lt;/blockquote>
-&lt;p>美国防部长这段话的本意是想论述国际关系复杂多变，任何一项决策要考虑充分，避免未知的未知引发不可估量的后果。&lt;/p>
-&lt;p>作者认为这段话也可以类比于性能工程：&lt;/p>
-&lt;blockquote>
-&lt;p>当我们开展性能优化工作时，由于未知的未知太多，会导致：&lt;/p>
-&lt;p>(1)缺乏&amp;quot;高效&amp;quot;的定位手段——而且我们还不自知操作系统早已为我们准备好了对应的方法和工具。&lt;/p>
-&lt;p>(2)缺乏&amp;quot;有效&amp;quot;的解决办法。&lt;/p>
-&lt;/blockquote>
-&lt;p>作者的观点，与庄子的《养生主》异曲同工：&lt;/p>
-&lt;blockquote>
-&lt;p>吾生也有涯，而知也无涯。以有涯随无涯，殆已！&lt;/p>
-&lt;/blockquote>
-&lt;p>人类的生命是非常有限的，而知识无边无尽，以有限的生命追求无边的知识，显然是不可能的。&lt;/p>
-&lt;p>作者有什么建议呢？可以归纳为两点：&lt;/p>
-&lt;ul>
-&lt;li>对策1：对知识进行归纳，抽象出知识的本质。&lt;/li>
-&lt;li>对策2：有选择地、有优先级地学习。
-&lt;ul>
-&lt;li>巩固已知的已知，扩大已知的未知，减少未知的未知。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>作者认为知识肯定是学不完的，但学习时可以：&lt;/p>
-&lt;ul>
-&lt;li>首先，将尽可能多的&amp;quot;未知的未知&amp;quot;转换为&amp;quot;已知的未知&amp;rdquo;。&lt;/li>
-&lt;li>然后，实战时再查资料，将&amp;quot;已知的未知&amp;quot;转换为&amp;quot;已知的已知&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220526162559859.png" alt="image-20220526162559859">&lt;/p>
-&lt;p>但，工程师分三种：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>天才型工程师：知识结构大多是已知的已知，这是大神，也是少数。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>扎实型工程师：知识结构大多是已知的已知、已知的未知，这是大多数人的可能达到的状态。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>愚昧型工程师：知识结构大多是未知的知识，这种工程师往往觉得自己就是全世界。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&amp;ldquo;&lt;strong>用到的时候再查文档&lt;/strong>&amp;ldquo;这句话，&lt;/p>
-&lt;p>对于扎实性工程师是有效的。&lt;/p>
-&lt;p>对于愚昧性工程师是无效的——即便实战时给他充足的时间查资料，首先他都不会去查(因为他不知道)，即便去查也可能查不到、查到也看不懂。&lt;/p>
-&lt;p>作者的这个学习论，可以推广到各种知识的学习中。&lt;/p>
-&lt;h2 id="为什么实施性能工程很难">为什么实施性能工程很难？&lt;/h2>
-&lt;p>作者归纳了实战中性能工程的3个难点：&lt;/p>
-&lt;ul>
-&lt;li>性能的主观性&lt;/li>
-&lt;li>系统的复杂性&lt;/li>
-&lt;li>人员的协作性&lt;/li>
-&lt;/ul>
-&lt;h3 id="性能的主观性">性能的主观性&lt;/h3>
-&lt;p>作者认为性能是主观的，同样是&lt;code>磁盘单次IO的时间是1ms&lt;/code>，&lt;/p>
-&lt;p>在实时系统场景下是很慢的，在管理信息系统场景下却是很快的。&lt;/p>
-&lt;p>因此，性能工程要结合实际产品制定合理、合适的性能标准。&lt;/p>
-&lt;h3 id="系统的复杂性">系统的复杂性&lt;/h3>
-&lt;p>作者认为&lt;strong>被测系统是复杂的&lt;/strong>，进而&lt;strong>导致2个问题&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>寻找性能问题时，找不到分析的&lt;strong>起点&lt;/strong>。
-&lt;ul>
-&lt;li>很多性能培训案例，是假定我们已知问题起点了。&lt;/li>
-&lt;li>比如：假定我们已经知道就是进程A的线程B疑似死锁了，于是演示各种工具如何证明是死锁。&lt;/li>
-&lt;li>关键我们怎么知道就是进程A有性能问题？怎么知道就是线程B有问题？怎么知道就是死锁问题？&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>解决性能问题时，往往&lt;strong>牵一发而动全身&lt;/strong>。
-&lt;ul>
-&lt;li>修改死锁问题，可能CPU的瓶颈没有了。&lt;/li>
-&lt;li>但，应用程序继续往下一个环节运行，又引发了IO的瓶颈。&lt;/li>
-&lt;li>所以才有程序猿感慨：&amp;ldquo;时间是不可能被消灭的，只可能被转移。&amp;ldquo;&lt;img src="https://jherculesqz.github.io/性能拾遗/【宏观】-0-性能之巅笔记-上/image-20220526172626038.png" alt="image-20220526172626038" style="zoom:25%;" />&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="人员的协作性">人员的协作性&lt;/h3>
-&lt;p>作者根据经验总结了3个与人相关的问题：&lt;/p>
-&lt;ul>
-&lt;li>性能工程涉及到产品研发体系的众多角色。比如：系统管理员、应用开发者、DBA、网络工程师。&lt;/li>
-&lt;li>角色间的部门墙可能导致性能工程断点。&lt;/li>
-&lt;li>即使是性能工程师，也可能专注于某个领域。比如：Java性能工程师、MySQL性能工程师等。&lt;/li>
-&lt;/ul>
-&lt;p>看来在哪儿都有部门墙，有人的地方就有江湖。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527103458466.png" alt="image-20220527103458466">&lt;/p>
-&lt;h1 id="3第二章笔记">3.第二章笔记&lt;/h1>
-&lt;p>Brendan Gregg在《性能之巅》第二章主要从6个方面讲了性能工程的方法论：&lt;/p>
-&lt;ul>
-&lt;li>开展性能工程的21种方法&lt;/li>
-&lt;li>被测系统的架构&lt;/li>
-&lt;li>被测系统的模型&lt;/li>
-&lt;li>性能工程的2种分析视角&lt;/li>
-&lt;li>性能指标&lt;/li>
-&lt;li>性能工程涉及的数学模型&lt;/li>
-&lt;/ul>
-&lt;h2 id="开展性能工程的21种方法">开展性能工程的21种方法&lt;/h2>
-&lt;p>作者在这一段讲了21种性能工程常用的方法(英文&lt;code>anti-methodologies&lt;/code>)，译者生造了个词——&lt;code>讹方法&lt;/code>。&lt;/p>
-&lt;p>&lt;code>讹方法&lt;/code>？难道是&lt;code>讹人&lt;/code>的意思？我选了两种方法说明一下：&lt;/p>
-&lt;h3 id="街灯讹方法">街灯讹方法&lt;/h3>
-&lt;p>作者讲了个故事：&lt;/p>
-&lt;blockquote>
-&lt;p>有个醉汉在路灯下找钥匙，警察帮忙找了半天也没找到。&lt;/p>
-&lt;p>警察问醉汉确不确定就在这个路灯下丢的钥匙。&lt;/p>
-&lt;p>醉汉说：我也不确定，但是这里是最亮的。&lt;/p>
-&lt;/blockquote>
-&lt;p>这。。。&lt;/p>
-&lt;p>不就是某些程序猿定位性能问题但找不到切入点时，先随便怀疑一段代码，碰碰运气吗。。。&lt;/p>
-&lt;h3 id="责怪他人讹方法">责怪他人讹方法&lt;/h3>
-&lt;p>作者说了一下操作步骤：&lt;/p>
-&lt;blockquote>
-&lt;p>第一步、找到一个不是自己负责的模块——注意，一定不是自己负责的模块！&lt;/p>
-&lt;p>第二步、假定问题就是这个模块造成的。&lt;/p>
-&lt;p>第三步、把问题扔给那个模块的负责人。&lt;/p>
-&lt;p>第四步、如果那个模块的负责人证明不是他的问题，重复步骤1。&lt;/p>
-&lt;/blockquote>
-&lt;p>这。。。&lt;/p>
-&lt;p>不就是某些程序猿最喜欢干的事儿吗——甩锅大法！！！&lt;/p>
-&lt;p>Brendan Gregg竟然给甩锅大法取了这么牛X的名字，还给出了甩锅的详细步骤。。。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527120219336.png" alt="image-20220527120219336">&lt;/p>
-&lt;h3 id="赤果果的调侃">赤果果的调侃&lt;/h3>
-&lt;p>行了，这一段儿基本可以跳过了。。。&lt;/p>
-&lt;p>这一段儿就是作者一本正经地调侃。。。&lt;/p>
-&lt;p>当然，以作者的骚气，他在这么权威的书里面写出这种段子，我们也不应该太意外。。。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527114756476.png" alt="image-20220527114756476">&lt;/p>
-&lt;h2 id="被测系统的架构">被测系统的架构&lt;/h2>
-&lt;p>作者表达了1个观点和1个常用的架构：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>1个观点&lt;/strong>：性能工程是针对整个系统(包括所有硬件和软件栈)，实施性能工程前画出完整的架构图可以避免&lt;code>只见树木不见森林&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>1个常用架构&lt;/strong>：如下图。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527121255677.png" alt="image-20220527121255677">&lt;/p>
-&lt;h2 id="被测系统的模型">被测系统的模型&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>SUT模型&lt;/strong>：system under test&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527121828041.png" alt="image-20220527121828041">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>排队系统&lt;/strong>：这个模型很重要，作者贯穿全书的理念就是能将所有的性能问题都归纳为排队系统。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527122023060.png" alt="image-20220527122023060">&lt;/p>
-&lt;h2 id="性能工程的2种分析视角">性能工程的2种分析视角&lt;/h2>
-&lt;p>在梳理好被测系统的架构后，我们有两种选择：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>自下而上&lt;/strong>：resource analysis，从硬件、内核、系统调用寻找资源瓶颈，进而定位到应用程序的进程、线程。&lt;/li>
-&lt;li>&lt;strong>自上而下&lt;/strong>：workload analysis，从应用程序出发，找到资源瓶颈。&lt;/li>
-&lt;/ul>
-&lt;p>作者认为，其实两种分析视角要结合起来，才是最有效的性能工程方法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527122439419.png" alt="image-20220527122439419">&lt;/p>
-&lt;h2 id="性能指标">性能指标&lt;/h2>
-&lt;p>对于常用的性能指标就不展开了。如：延时、响应时间、时间量级、使用率、饱和度等。&lt;/p>
-&lt;p>作者重点展开了对&lt;strong>缓存的基础知识&lt;/strong>介绍：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>什么是缓存&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>将数据不再存储在较慢的存储层，而是将数据存储到较快的存储层中。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>典型的缓存&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>CPU的L1、L2、L3缓存&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>缓存的命中率是什么&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>命中率 = 命中次数 / (命中次数+失效次数)&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>失效率是什么&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>每秒缓存失效次数&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>命中率、失效率与运行性能的关系&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>运行时间 = 命中率 * 命中延时 + 失效率 * 失效延时&lt;/p>
-&lt;p>比如：&lt;/p>
-&lt;p>任务1的命中率很高(90%)，失效率也很高(200/s)。&lt;/p>
-&lt;p>任务2的命中率略低(80%)，失效率也很低(20/s)。&lt;/p>
-&lt;p>那么，最终任务2的性能会更好。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>实现缓存的算法有哪些&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>MRU：将最近最长使用的数据保留在缓存中。&lt;/p>
-&lt;p>LRU：将最近最少使用的数据移出缓存。&lt;/p>
-&lt;p>其它算法还有NFU、MFU、LFU。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>缓存温度有哪些&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>冷：命中率无限接近于0，比如缓存是空的。&lt;/p>
-&lt;p>热：命中率无限接近于预期的高度。&lt;/p>
-&lt;p>温：命中率还没有达到预期的高度。比如：缓存中存了一定有用的数据，但不全是有用的数据。&lt;/p>
-&lt;/blockquote>
-&lt;p>大白话一点，缓存机制的本质和海王海后的鱼塘逻辑差不多：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>MRU、LRU&lt;/strong>：MRU——最近经常撩的，加到鱼塘里、LRU——最近不咋联系的，踢出鱼塘。&lt;/li>
-&lt;li>&lt;strong>命中率高、失效率低，性能好&lt;/strong>：鱼塘里都是鱼，鱼还很活跃，随便撩一下都是鱼，你说那啥效率高不高？&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527150414981.png" alt="image-20220527150414981">&lt;/p>
-&lt;h2 id="性能工程涉及的数学模型">性能工程涉及的数学模型&lt;/h2>
-&lt;h3 id="amdahl扩展定律">Amdahl扩展定律&lt;/h3>
-&lt;p>由计算机科学家阿姆达尔，在1967年AFIPS春季联合计算机会议上提出。&lt;/p>
-&lt;p>这个阿姆达尔扩展定律的目的是为了预测性能优化到什么程度。&lt;/p>
-&lt;p>阿姆达尔定律本质上用严谨的公式证明了&amp;quot;木桶原理&amp;rdquo;——无法优化的那个部件决定了性能优化的上线。&lt;/p>
-&lt;p>如果：1个单线程的程序需要20小时，其中有1个小时无法并行化处理，&lt;/p>
-&lt;p>那么：将剩余19小时并行化了，最短执行时间也不可能小于1小时。&lt;/p>
-&lt;p>因此：我们就可以预测性能优化后可以加速20倍。&lt;/p>
-&lt;p>道理很通俗，但科学家需要严谨的公式推导，详细推导过程可以看看维基百科：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">https://en.wikipedia.org/wiki/Amdahl%27s_law&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>但阿姆达尔定律有一个缺陷：以上述案例，是不是我们19个小时的任务并行化，就一定可以将性能优化到1小时呢？&lt;/p>
-&lt;p>显然不是——随着CPU增加，可能会达到一个瓶颈点，随后无论怎么增加CPU，性能也不会优化了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527160717677.png" alt="image-20220527160717677">&lt;/p>
-&lt;h3 id="通用扩展定律">通用扩展定律&lt;/h3>
-&lt;p>通用扩展定律：Universal Scalability Law，USL。由计算机科学家Neil J. Gunther于2008年提出。&lt;/p>
-&lt;p>这个定律就是用来更加精细化地预测：当我持续增加资源，实际的性能优化与阿姆达尔定律的理想化性能优化的偏移量。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%80%A7%E8%83%BD%E6%8B%BE%E9%81%97/%E3%80%90%E5%AE%8F%E8%A7%82%E3%80%91-0-%E6%80%A7%E8%83%BD%E4%B9%8B%E5%B7%85%E7%AC%94%E8%AE%B0-%E4%B8%8A/image-20220527161219066.png" alt="image-20220527161219066">&lt;/p>
-&lt;h3 id="排队论">排队论&lt;/h3>
-&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Agner_Krarup_Erlang">Agner Krarup Erlang&lt;/a>于1909年第一次提出了排队理论。&lt;/p>
-&lt;p>排队论描述了现实世界中有形、无形的各种排队场景。比如：12306抢票、网红店取号排队、超市排队买单等。&lt;/p>
-&lt;p>顾客肯定希望排队越短越好、办事儿时间越快越好。超市安排过多的收银员就浪费了，安排太少的收银员又会被顾客投诉。&lt;/p>
-&lt;p>顾客肯定不是按顺序一个个来超市，有可能在一个热点时间一拥而上来超市。&lt;/p>
-&lt;p>超市的排队规则是先到先处理，但是车牌摇号就是随机处理了。&lt;/p>
-&lt;p>……&lt;/p>
-&lt;p>上述这些，就是排队论研究的内容：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>被服务者的到达遵循何种分布&lt;/strong>：如泊松分布。&lt;/li>
-&lt;li>&lt;strong>服务机构的服务能力遵循何种统计特征&lt;/strong>：如每个收银员的处理速度。&lt;/li>
-&lt;li>&lt;strong>排队的原则是什么&lt;/strong>：如先到先处理or随机处理。&lt;/li>
-&lt;li>&lt;strong>排队的Topo结构&lt;/strong>：如超市最多放下10个收银台，那就有10条并行的排队结构。&lt;/li>
-&lt;/ul>
-&lt;p>最终排队论给出评估：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>怎么排队，收益最大&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>Brendan Gregg的核心观点是：&lt;/p>
-&lt;ul>
-&lt;li>无论应用程序，还是CPU、IO、网络、磁盘都可以用排队模型化。&lt;/li>
-&lt;li>按照排队论，多种性能优化手段，最终一定有一个从&amp;quot;运筹学&amp;quot;上性能收益最大的选择。&lt;/li>
-&lt;/ul>
-&lt;p>理解排队论的推导，对于笔者还很困难，各位读者有兴趣可以参考相关资料：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://zh.m.wikipedia.org/zh-sg/%E7%AD%89%E5%80%99%E7%90%86%E8%AB%96">https://zh.m.wikipedia.org/zh-sg/%E7%AD%89%E5%80%99%E7%90%86%E8%AB%96&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="基本统计指标">基本统计指标&lt;/h3>
-&lt;p>平均值、标准方差、百分位数、中位数、变异系数、多重模态分布、异常值，这些都是数理统计的基本概念，不赘述了。&lt;/p>
-&lt;h1 id="4第一章第二章小结">4.第一章/第二章小结&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>未知的未知&lt;/strong>：Brendan Gregg的观点很赞，知道的越多就更容易知道自己的无知。&lt;/li>
-&lt;li>&lt;strong>性能工程的视角&lt;/strong>：利用操作系统的工具链定位出CPU/内存/IO/网络的瓶颈找到性能切入点，进而定位到应用程序的进程/线程，虽然技能要求高，但能获得逻辑自洽的逻辑链，比撞大运靠谱。&lt;/li>
-&lt;li>&lt;strong>性能工程的工程方法依托于数学&lt;/strong>：阿姆达尔定律、通用扩展定律、排队论，世界的尽头果然是数学啊。&lt;/li>
-&lt;/ul>
-&lt;h1 id="5参考文献">5.参考文献&lt;/h1>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">《性能之巅》第一章、第二章
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221121164732405.png" alt="image-20221121164732405">&lt;/p></description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Jul 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 22 Jul 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,156 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】chatGPT学习笔记3-机器学习基本原理(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</link><pubDate>Tue, 18 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</guid><description>&lt;p>现在的热点是大语言模型，为什么我们还要了解机器学习？因为从机器学习到深度学习，再到如今的大语言模型，环环相扣。天底下没有新鲜事，并不是突然出现了一个划时代的技术。从历史、从论文都能按图索骥地找到大语言模型的源头——机器学习。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】chatGPT学习笔记3-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>【chatGPT】chatGPT学习笔记3-机器学习基本原理(下)&lt;/p>
+&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
+&lt;h1 id="1机器学习任务介绍">1.机器学习任务介绍&lt;/h1>
+&lt;p>前段时间，同事上班路上骑车摔泥坑里骨折了，我就萌生了让人工智能自动识别路面泥坑的想法。&lt;/p>
+&lt;p>毕竟，同事要互相关怀、相亲相爱。另外，我们也可以通过这个机器学习的任务理解一下机器学习的基本原理。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722092656554.png" alt="image-20230722092656554">&lt;/p>
+&lt;h1 id="2机器学习中的常用术语一览">2.机器学习中的常用术语一览&lt;/h1>
+&lt;p>开始机器学习的训练任务之前，我们快速浏览一下机器学习领域中的常用术语。假设AI识别路面泥坑是一个函数：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093341203.png" alt="image-20230722093341203">&lt;/p>
+&lt;h2 id="21模型是什么">2.1.模型是什么?&lt;/h2>
+&lt;p>函数f的输入是路面的视频，输出是路面上是否有泥坑。输入称为&lt;strong>自变量&lt;/strong>，在机器学习中也称为&lt;strong>特征&lt;/strong>。输出称为&lt;strong>因变量&lt;/strong>，在机器学习中也称为&lt;strong>标签&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093803701.png" alt="image-20230722093803701">&lt;/p>
+&lt;p>这个函数f称为&lt;strong>模型&lt;/strong>，复杂的模型可能有数量庞大的自变量。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722094251783.png" alt="image-20230722094251783">&lt;/p>
+&lt;h2 id="22怎样才算找到了函数f">2.2.怎样才算找到了函数f？&lt;/h2>
+&lt;p>怎么才算找到了函数f呢？假设这个函数是个简单的函数：&lt;code>y=ax+b&lt;/code>，那么找到a和b，就算找到了这个函数f。a、b也被称为&lt;strong>模型的参数&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722095702788.png" alt="image-20230722095702788">&lt;/p>
+&lt;p>除了模型的参数，还有一种参数叫做&lt;strong>超参数(hyperparameter)&lt;/strong>，这些模型的外部参数，属于训练和调试的过程参数。&lt;/p>
+&lt;h2 id="23如何找到函数f">2.3.如何找到函数f？&lt;/h2>
+&lt;p>那么，我们又如何找到函数f呢？机器学习的&lt;strong>核心思想&lt;/strong>就是&amp;rdquo;&lt;strong>给机器一堆数据，让机器自己从数据中提取特征、寻找规律&lt;/strong>&amp;quot;。这个过程，也称为&lt;strong>炼丹&lt;/strong>。&lt;/p>
+&lt;p>这些数据称为&lt;strong>数据集&lt;/strong>，这些数据通常被分为三波，一波用于训练、一波用于验证、一波用于最终的测试。&lt;/p>
+&lt;p>用于训练的称为&lt;strong>训练集&lt;/strong>，用于验证的称为&lt;strong>验证集&lt;/strong>，用于测试的称为&lt;strong>测试集&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722100415709.png" alt="image-20230722100415709">&lt;/p>
+&lt;h2 id="24找函数f的流派">2.4.找函数f的流派&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>从数据的角度看，人类对全部训练数据做了标注称为&lt;strong>自监督学习&lt;/strong>，对部分训练数据做了标注称为&lt;strong>半监督学习&lt;/strong>、对训练数据没有任何标注称为&lt;strong>无监督学习&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>从数学工具的角度看，使用神经网络开展学习称为&lt;strong>机器学习&lt;/strong>，将神经网络做深称为&lt;strong>深度学习&lt;/strong>(不严谨，通俗点儿就这么理解吧)，因此深度学习是机器学习中的一种。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>除了机器学习流派，&lt;strong>强化学习&lt;/strong>(目前也很热门的流派)、&lt;strong>生成式学习&lt;/strong>、&lt;strong>迁移学习&lt;/strong>等等。这些流派的边界没有太清晰，彼此会有交集和互相引用。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>这里想到两个有趣的小点：&lt;/p>
+&lt;ul>
+&lt;li>神经网络很早就发明了，但后续却要换个机器学习、深度学习的名字，可能是联结主义之前被符号主义学派打的太惨了，需要换个响亮的名号吧。&lt;/li>
+&lt;li>GPT火了以后，有很多名词术语，听到有人把&amp;quot;用提示词的引导行为&amp;quot;称为&amp;quot;zero shot、few shot&amp;rdquo;，乱抛名词、概念搞混，根因就是没理解前述这些机器学习的基本概念。&lt;/li>
+&lt;/ul>
+&lt;h1 id="3从1个例子看机器学习过程">3.从1个例子看机器学习过程&lt;/h1>
+&lt;h2 id="31数据的收集和预处理">3.1.数据的收集和预处理&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>我们要识别路面泥坑，首先要获得路面视频数据。这个过程称为&lt;strong>原始数据收集&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>我们需要通过一些数据标注的工具，在视频上标注出路面泥坑，这个过程称为&lt;strong>数据标注&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>数据标注完后，需要将&lt;strong>数据向量化&lt;/strong>：data vectorization，就是把原始数据格式化，使机器可以读取(如：将原始图片转换为机器可以读取的矩阵)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>处理坏数据和缺失值：数据不是全都用的，要利用数据处理工具把&amp;rdquo;&lt;strong>捣乱数据&lt;/strong>&amp;ldquo;处理掉(冗余数据、离群数据、错误数据)，把&amp;rdquo;&lt;strong>缺失值&lt;/strong>&amp;ldquo;补上。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>数据预处理有很多技术和技巧：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>特征缩放&lt;/strong>：feature scaling，包括&lt;strong>数据标准化&lt;/strong>(standardization)和&lt;strong>数据规范化&lt;/strong>(normalization)等：&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>数据标准化&lt;/strong>：对数据特征分布的转换，目标是使数据特征符合正态分布(均值为0，标准差为1)。如果数据特征不符合正态分布，会影响机器学习效率。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>数据规范化&lt;/strong>：它是数据标准化的一种变体，将数据特征压缩到给定的最小值和最大值之间(通常为0~1)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>特征提取&lt;/strong>：feature extraction，通过子特征的选择，减少冗余特征，使初始测量数据更简洁，同时保留最有用的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>特征工程&lt;/strong>：使用数据的领域知识，来创建使得机器学习算法起作用的特征过程。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>通俗地理解：&lt;/p>
+&lt;ul>
+&lt;li>数据预处理的本质：就是&lt;strong>准备好机器看得懂、看得清的教材&lt;/strong>，方便机器进行学习。&lt;/li>
+&lt;/ul>
+&lt;p>我们再来看看实战中我们具体怎么做的：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>原始数据收集&lt;/strong>：通过行车记录仪，我收集了上班路上的路面情况。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000930967.png" alt="image-20230723000930967">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>数据标注&lt;/strong>：通过标注工具，对视频中的泥坑进行标注。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001158467.png" alt="image-20230723001158467">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>数据集划分&lt;/strong>：我们通常会将标注好的数据划分为训练集、验证集、测试集。划分有一些方法论，如：K-fold validation。我将数据集划分编写成了一段脚本，执行后就自动划分好了训练集、验证集、测试集。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001237851.png" alt="image-20230723001237851">&lt;/p>
+&lt;blockquote>
+&lt;p>实战中，特征工程、数据向量化等，大多都被封装到了相应的AI训练框架中，本文不赘述。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="32设定范围">3.2.设定范围&lt;/h2>
+&lt;p>设定范围指的是设定选择模型的范围，这要根据训练任务选择合适的数学模型。常见的模型如下：&lt;/p>
+&lt;ul>
+&lt;li>线性模型：线性回归、逻辑回归&lt;/li>
+&lt;li>非线性模型：支持向量机、k最邻近分类&lt;/li>
+&lt;li>基于树和集成的模型：决策树、随机森林、梯度提升树等&lt;/li>
+&lt;li>神经网络：人工神经网络、卷积神经网络、长短期记忆网络等&lt;/li>
+&lt;/ul>
+&lt;p>模型选择是最为关键的环节，实战中，训练资料越少，模型就要圈定在很小很严格的范围内。&lt;/p>
+&lt;p>否则，会产生一种现象：选择的这种模型在训练中表现很好，但换一波数据就不行了，说白了就是这个模型把数据死记硬背下来了。&lt;/p>
+&lt;h2 id="33设定标准">3.3.设定标准&lt;/h2>
+&lt;p>在确定了模型之后，就需要设定损失函数，损失函数用来表示机器&lt;strong>学到位&lt;/strong>了。&lt;/p>
+&lt;p>以监督学习为例：&lt;/p>
+&lt;ul>
+&lt;li>人类老师标定了猪用103表示(如右图)&lt;/li>
+&lt;li>人类老师标定了蓝精灵用17表示(如右图)&lt;/li>
+&lt;li>当机器学习到了一个函数f1时，
+&lt;ul>
+&lt;li>输入一个猪头，函数f1输出100，那么距离正确答案103的差值为3。&lt;/li>
+&lt;li>输入一个蓝精灵，函数f1输出18，那么距离正确答案17的差值为1。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>因此，函数f1整体距离正确答案为4，这就表示函数f1的损失函数Loss(f1)=4。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722221402457.png" alt="image-20230722221402457">&lt;/p>
+&lt;h2 id="34达成目标">3.4.达成目标&lt;/h2>
+&lt;p>当机器开始学习后，可能学到了N个不同的函数，那么就要从里面选择一个最优的函数，这个过程叫&lt;strong>最佳化(Optimization)&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722222441299.png" alt="image-20230722222441299">&lt;/p>
+&lt;p>整个过程，可以归纳为如下公式：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722223058532.png" alt="image-20230722223058532">&lt;/p>
+&lt;h2 id="35炼丹师超参数调优">3.5.炼丹师：超参数调优&lt;/h2>
+&lt;p>从&amp;quot;设定范围&amp;quot;到&amp;quot;达成目标&amp;rdquo;，整个过程不是一帆风顺的，在训练过程中、在超参数调优过程中，都会出现&lt;strong>过拟合&lt;/strong>(过拟合就是当前这批数据表现不错，换一批数据就不灵了)。因此需要反复迭代。人工智能工程师此时就很像一个古代的炼丹师，不断地通过调参，对模型进行优化和泛化。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>优化&lt;/strong>：optimazation，就是让模型更好地拟合现有的数据。&lt;/li>
+&lt;li>&lt;strong>泛化&lt;/strong>：generalization，就是将当前的模型泛化到其他数据集上。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000619543-16900419818941.png" alt="image-20230723000619543">&lt;/p>
+&lt;p>实战中需要考虑算法工程化，比如本训练任务，我们只需要简单的命令行，就能把训练过程跑起来。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001453414.png" alt="image-20230723001453414">&lt;/p>
+&lt;h2 id="36模型测试">3.6.模型测试&lt;/h2>
+&lt;p>当模型训练好后，就要用测试数据集进行测试了，我们可以通过：&lt;/p>
+&lt;ul>
+&lt;li>各类训练指标进行判断。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001817880.png" alt="image-20230723001817880">&lt;/p>
+&lt;ul>
+&lt;li>当然，也可以用直观的方法观看(PS：本次训练任务有点出乎意料，除了能识别泥坑，路面的裂缝也被识别出来了。)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002107388.png" alt="image-20230723002107388">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002143084.png" alt="image-20230723002143084">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002208208.png" alt="image-20230723002208208">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002237309.png" alt="image-20230723002237309">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002257695.png" alt="image-20230723002257695">&lt;/p>
+&lt;blockquote>
+&lt;p>本文部分内容由ChatGPT生成&lt;/p>
+&lt;/blockquote></description></item><item><title>【chatGPT】chatGPT学习笔记3-机器学习基本原理(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</link><pubDate>Tue, 18 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</guid><description>&lt;p>现在的热点是大语言模型，为什么我们还要了解机器学习？因为从机器学习到深度学习，再到如今的大语言模型，环环相扣。天底下没有新鲜事，并不是突然出现了一个划时代的技术。从历史、从论文都能按图索骥地找到大语言模型的源头——机器学习。&lt;/p>
 &lt;h1 id="1机器学习的目标是什么">1.机器学习的目标是什么?&lt;/h1>
 &lt;p>机器学习的目标就是从数据中发现规律。&lt;/p>
 &lt;p>这个过程本质是一种统计建模的过程，是统计学方法的一种具体应用。&lt;/p>
@@ -2581,432 +2730,4 @@ java/lang/Thread.java
 &lt;li>&lt;code>Spring Framework&lt;/code>作为一个底层框架，它的输入往往来自于Java语言规范、Java EE标准。&lt;/li>
 &lt;li>Spring团队规划的新特性非常紧贴Java新版本/新特性，即便这个新特性仅仅是&lt;code>Preview Feature&lt;/code>。&lt;/li>
 &lt;li>深刻理解Java新版本/新特性，有助于理解&lt;code>Spring Framework&lt;/code>的新特性以及它的市场规划。&lt;/li>
-&lt;/ul></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-1</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/</link><pubDate>Thu, 01 Dec 2022 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-1/</guid><description>&lt;h1 id="浅析协程">浅析协程&lt;/h1>
-&lt;p>并发编程的核心目标之一就是&amp;rdquo;&lt;strong>快&lt;/strong>&amp;quot;，并发编程发展史中若干特性与改进无不围绕这个目标。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/quick.gif" alt="quick.gif">&lt;/p>
-&lt;p>笔者通过&lt;strong>&lt;code>《Learning Concurrency in Kotlin》&lt;/code>&lt;/strong>书中的&lt;strong>&lt;code>&amp;quot;Processes, threads, and coroutines&amp;quot;&lt;/code>&lt;/strong>章节，浅析一下&lt;strong>&lt;code>&amp;quot;协程&amp;quot;&lt;/code>&lt;/strong>。&lt;/p>
-&lt;h2 id="进程processes">进程(Processes)&lt;/h2>
-&lt;ul>
-&lt;li>我们先看看书中对&lt;strong>&lt;code>进程(Processes)&lt;/code>&lt;/strong>的介绍：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>A process is an instance of an application that is being executed. Each time an application is started, a process is started for it.&lt;/p>
-&lt;/blockquote>
-&lt;p>进程是正在执行的应用程序的实例。每次启动应用程序时，都会为其启动一个进程。&lt;/p>
-&lt;blockquote>
-&lt;p>A process has a state, things such as handles to open resources, a process ID, data, network connections, and so on, are part of the state of a process and can be accessed by the threads inside that process.&lt;/p>
-&lt;/blockquote>
-&lt;p>进程是有状态的，打开资源的句柄、进程 ID、数据、网络连接等都是进程状态的一部分，这些信息都可以被该进程内的线程访问。&lt;/p>
-&lt;blockquote>
-&lt;p>An application can be composed of many processes, a common practice for example for internet browsers.&lt;/p>
-&lt;p>&amp;hellip;&amp;hellip;But implementing a multi-process application brings challenges that are out of the scope of this book. For this book, we will cover the implementation of applications that run in more than one thread, but still in a single process&amp;hellip;&amp;hellip;.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>归纳一下书中内容：&lt;/strong>
-&lt;ul>
-&lt;li>1个应用可以包含N个进程。&lt;/li>
-&lt;li>&lt;a href="https://www.chromium.org/developers/design-documents/multi-process-architecture/">Chrome的多进程架构图&lt;/a>展示了：1个Chrome浏览器包含了浏览器进程、渲染进程等N个进程。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/arch.png" alt="img">&lt;/p>
-&lt;h2 id="线程threads">线程(Threads)&lt;/h2>
-&lt;ul>
-&lt;li>我们再看看书中对&lt;strong>&lt;code>线程(Threads)&lt;/code>&lt;/strong>的介绍：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>A thread of execution encompasses a set of instructions for a processor to execute.&lt;/p>
-&lt;p>So a process will contain at least one thread, which is created to execute the point of entry of the application; usually this entry point is the main() function of the application. This thread is called the main thread, and the life cycle of the process will be tied to it; if this thread ends, the process will end as well, regardless of any other threads in the process.&lt;/p>
-&lt;/blockquote>
-&lt;p>线程包含一组供处理器执行的指令。1个进程至少会包含1个线程，这个线程就是主线程。应用程序在入口点创建该线程，并绑定了该线程与进程的生命周期。&lt;/p>
-&lt;p>其中：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">(1)应用程序的入口点通常是main()函数。
-(2)主线程结束，则进程也结束，即使这个进程中还有其它未执行完的线程。
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>Each thread can access and modify the resources contained in the process it&amp;rsquo;s attached to, but it also has its own local storage, called thread-local storage.&lt;/p>
-&lt;/blockquote>
-&lt;p>每个线程都可以访问和修改它所附加的进程中包含的资源，但它也有自己的本地存储，称为线程本地存储(&lt;code>thread-local&lt;/code>)。&lt;/p>
-&lt;blockquote>
-&lt;p>Only one of the instructions in a thread can be executed at a given time. So if a thread is blocked, the execution of any other instruction in that same thread will not be possible until the blocking ends. Nevertheless, many threads can be created for the same process, and they can communicate with each other. So it is expected that an application will never block a thread that can affect negatively the experience of the user; instead, the blocking operations should be assigned to threads that are dedicated to them.&lt;/p>
-&lt;p>In Graphic User Interface (GUI) applications, there is a thread called a UI thread; its function is to update the User Interface and listen to user interactions with the application. Blocking this thread, obstructs the application from updating its UI and from receiving interactions from the user. Because of this, GUI applications are expected to never block the UI thread*,* in order to keep the application responsive at all times.&lt;/p>
-&lt;p>Android 3.0 and above, for example, will crash an application if a networking operation is made in the UI thread, in order to discourage developers from doing it, given that networking operations are thread-blocking.&lt;/p>
-&lt;/blockquote>
-&lt;p>在给定的时间内，只能执行1个线程中的1条指令。如果一个线程被阻塞，则在阻塞结束前，该线程内任何其它的指令都不可能被执行。&lt;/p>
-&lt;p>尽管如此，我们可以在1个进程内创建N个线程，线程间可以互相通信。&lt;/p>
-&lt;p>因此，为了不影响用户体验，我们应该将阻塞操作分配给专门的线程，而不是阻塞主线程。&lt;/p>
-&lt;p>例如：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">在GUI应用程序中，存在1个UI线程，这个线程的功能是更新用户界面并监听用户与应用程序的交互，阻塞了UI线程就会阻止用户界面的更新和交互。
-因此，我们永远不会阻塞UI线程。
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>再例如：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">在Android 3.0+的版本中，如果在UI 线程中进行网络操作，Android会触发应用程序崩溃，因为Android认为网络操作是一种阻塞操作。
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>Throughout the book, we will refer to the main thread of a GUI application both as a UI thread and as a main thread (because in Android, by default, the main thread is also the UI thread), while for command-line applications we will refer to it only as a main thread. Any thread different from those two will be called a background thread, unless a distinction between background threads is required, in which case each background thread will receive a unique identifier for clarity.&lt;/p>
-&lt;/blockquote>
-&lt;p>在本书中，&lt;/p>
-&lt;p>我们将GUI应用程序的主线程称为&lt;code>UI线程&lt;/code>，也称为&lt;code>主线程&lt;/code>——比如：在 Android 中，默认情况下，主线程就是UI线程。&lt;/p>
-&lt;p>我们将命令行应用程序的主线程，仅称为&lt;code>主线程&lt;/code>。&lt;/p>
-&lt;p>任何不同于前述两个线程的其它线程都称为&lt;code>后台线程&lt;/code>。&lt;/p>
-&lt;p>Given the way that the Kotlin has implemented concurrency, you will find that it&amp;rsquo;s not necessary for you to manually start or stop a thread. The interactions that you will have with threads will commonly be limited to tell Kotlin to create or use a specific thread or pool of threads to run a coroutine – usually with one or two lines of code. The rest of the handling of threads will be done by the framework.&lt;/p>
-&lt;p>鉴于Kotlin实现并发的方式，我们没有必要手动启动或停止线程。&lt;/p>
-&lt;p>我们与线程的交互通常仅限于告诉Kotlin创建/使用特定线程，或者告诉Kotlin使用线程池中的某个空闲的协程，线程的其余处理将由底层框架完成。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>归纳一下书中内容：&lt;/strong>
-&lt;ul>
-&lt;li>1个进程包含N个线程，这些线程包含主线程、后台线程等。&lt;/li>
-&lt;li>&lt;a href="https://www.chromium.org/developers/design-documents/multi-process-architecture/">Chrome的多进程架构图&lt;/a>展示了：浏览器进程中包含了主线程、IO线程，渲染进程包含了主线程、渲染线程。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/arch.png" alt="img">&lt;/p>
-&lt;h2 id="协程coroutines">协程(Coroutines)&lt;/h2>
-&lt;ul>
-&lt;li>我们还是看看书中对&lt;strong>&lt;code>协程(Coroutines)&lt;/code>&lt;/strong>的介绍：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>Kotlin&amp;rsquo;s documentation often refers to coroutines as lightweight threads. This is mostly because, like threads, coroutines define the execution of a set of instructions for a processor to execute. Also, coroutines have a similar life cycle to that of threads.&lt;/p>
-&lt;/blockquote>
-&lt;p>在Kotlin中，通常将协程称为轻量级线程。这主要是因为，与线程一样，协程定义了处理器执行的一组指令的执行。此外，协程具有与线程相似的生命周期。&lt;/p>
-&lt;blockquote>
-&lt;p>A coroutine is executed inside a thread. One thread can have many coroutines inside it, but as already mentioned, only one instruction can be executed in a thread at a given time. This means that if you have ten coroutines in the same thread, only one of them will be running at a given point in time.&lt;/p>
-&lt;/blockquote>
-&lt;p>协程在线程内执行。1个线程内部可以有N个协程。&lt;/p>
-&lt;p>但正如前文提到的：在给定时间内，1个线程中只能执行1条指令，因此1个线程中有10个协程，那么在给定的时间点只会运行其中1个协程。&lt;/p>
-&lt;blockquote>
-&lt;p>The biggest difference between threads and coroutines, though, is that coroutines are fast and cheap to create. Spawning thousands of coroutines can be easily done, it is faster and requires fewer resources than spawning thousands of threads.&lt;/p>
-&lt;/blockquote>
-&lt;p>不过，线程和协程之间的最大区别在于：创建协程速度快、成本低，它比产生数千个线程更快、需要更少的资源。&lt;/p>
-&lt;blockquote>
-&lt;p>Take this code as an example. Don&amp;rsquo;t worry about the parts of the code you don&amp;rsquo;t understand yet:&lt;/p>
-&lt;p>This function creates as many coroutines as specified in the parameter amount, delays each one for a second, and waits for all of them to end before returning. This function can be called, for example, with 10,000 as the amount of coroutines:&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="k">suspend&lt;/span> &lt;span class="k">fun&lt;/span> &lt;span class="nf">createCoroutines&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">val&lt;/span> &lt;span class="py">jobs&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">ArrayList&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">Job&lt;/span>&lt;span class="p">&amp;gt;()&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="m">1.&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">jobs&lt;/span> &lt;span class="p">+=&lt;/span> &lt;span class="n">launch&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">delay&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">1000&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="n">jobs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">forEach&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">it&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="k">fun&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Array&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">&amp;gt;)&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">runBlocking&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">val&lt;/span> &lt;span class="py">time&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">measureTimeMillis&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">createCoroutines&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">10&lt;/span>&lt;span class="n">_000&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Took $time ms&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>以上述代码为例：&lt;code>createCoroutines()&lt;/code>支持创建指定数量的协程，执行每个协程就是休眠1秒，此函数等待所有协程结束后就会返回。&lt;/p>
-&lt;blockquote>
-&lt;p>In a test environment, running it with an amount of 10,000 took around 1,160 ms, while running it with 100,000 took 1,649 ms. The increase in execution time is so small because Kotlin will use a pool of threads with a fixed size, and distribute the coroutines among those threads – so adding thousands of coroutines will have little impact. And while a coroutine is suspended – in this case because of the call to delay() – the thread it was running in will be used to execute another coroutine, one that is ready to be started or resumed.&lt;/p>
-&lt;/blockquote>
-&lt;p>在测试环境中，创建1万个协程需要1160毫秒，创建10万个协程需要1649毫秒。协程增加了9万个，执行时间却没有增加太多，是因为：&lt;/p>
-&lt;p>Kotlin使用了固定大小的线程池，并将协程分布在线程池中的这些线程上，所以增加协程数量，并不会增加更多的资源消耗和时间消耗。&lt;/p>
-&lt;p>所谓的将&amp;quot;协程分布在线程池中的这些线程上&amp;rdquo;，就是将1个协程放到1个线程中去执行，当这个协程被挂起时(因为调用了&lt;code>delay()&lt;/code>函数)，它所属的这个线程就用来执行其它准备好的协程。&lt;/p>
-&lt;blockquote>
-&lt;p>How many threads are active can be determined by calling the activeCount() method of the Thread class.&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;code>activeCount()&lt;/code>函数可以确定当前有多少个线程处于活动状态。&lt;/p>
-&lt;blockquote>
-&lt;p>For example, let&amp;rsquo;s update the main() function to do so:&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="k">fun&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Array&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">&amp;gt;)&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">runBlocking&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;${Thread.activeCount()} threads active at the start&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">val&lt;/span> &lt;span class="py">time&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">measureTimeMillis&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">createCoroutines&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">10&lt;/span>&lt;span class="n">_000&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;${Thread.activeCount()} threads active at the end&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Took $time ms&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>比如：我们修改&lt;code>main()&lt;/code>函数的实现，分别打印了&lt;code>main()&lt;/code>函数创建协程前的线程个数、创建协程后的线程个数。&lt;/p>
-&lt;blockquote>
-&lt;p>In the same test environment as before, it was found that in order to create 10,000 coroutines, only four threads needed to be created:&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/72fd74aa-f292-4680-b520-7e12a750a438.png" alt="img">&lt;/p>
-&lt;blockquote>
-&lt;p>But once the value of the amount being sent to createCoroutines() is lowered to one, for example, only two threads are created:&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/c6df4fce-5556-4fa3-9fb8-7653c2f7972d.png" alt="img">&lt;/p>
-&lt;p>在测试环境上，创建1万个协程需要4个线程(6个线程-2个线程)，创建1个协程仅需要创建2个线程(4个线程-2个线程)。&lt;/p>
-&lt;blockquote>
-&lt;p>It&amp;rsquo;s important to understand that even though a coroutine is executed inside a thread, it&amp;rsquo;s not bound to it. As a matter of fact, it&amp;rsquo;s possible to execute part of a coroutine in a thread, suspend the execution, and later continue in a different thread. In our previous example this is happening already, because Kotlin will move coroutines to threads that are available to execute them. For example, by passing 3 as the amount to createCoroutines(), and updating the content of the launch() block so that it prints the current thread, we can see this in action:&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="k">suspend&lt;/span> &lt;span class="k">fun&lt;/span> &lt;span class="nf">createCoroutines&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">val&lt;/span> &lt;span class="py">jobs&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">ArrayList&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">Job&lt;/span>&lt;span class="p">&amp;gt;()&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="m">1.&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">jobs&lt;/span> &lt;span class="p">+=&lt;/span> &lt;span class="n">launch&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Started $i in ${Thread.currentThread().name}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">delay&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">1000&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Finished $i in ${Thread.currentThread().name}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="n">jobs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">forEach&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="n">it&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>另一个很重要的点是：即使协程在线程内执行，它也不会受线程约束。&lt;/p>
-&lt;p>事实上，可以在1个线程中执行1个协程的一部分，当这个协程被挂起再恢复执行时，可以在另1个线程中继续执行这个协程的剩余部分。&lt;/p>
-&lt;blockquote>
-&lt;p>You will find that in many cases they are being resumed in a different thread:&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/3d118878-25a4-4bec-8fb7-fd13335ed4cf.png" alt="img">&lt;/p>
-&lt;p>我们可以看到示例代码创建了3个协程，协程1在线程1中执行，延迟1000毫秒后，协程1在线程2中继续执行完毕。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>归纳一下书中内容：&lt;/strong>
-&lt;ul>
-&lt;li>1个线程包含N个协程。&lt;/li>
-&lt;li>同1个协程可以在线程1中执行一部分，在线程2中执行剩余部分。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="全局观">全局观&lt;/h2>
-&lt;ul>
-&lt;li>最后我们看看书中对&lt;strong>&lt;code>进程、线程、协程&lt;/code>&lt;/strong>的总结：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>So far, we have learned that an application is composed of one or more processes and that each process has one or more threads. We have also learned that blocking a thread means halting the execution of the code in that thread, and for that reason, a thread that interacts with a user is expected to never be blocked. We also know that a coroutine is basically a lightweight thread that resides in a thread but is not tied to one. The following diagram encapsulates the content of this section so far. Notice how each coroutine is started in one thread but at some point is resumed in a different one:&lt;/p>
-&lt;/blockquote>
-&lt;p>至此，&lt;/p>
-&lt;p>我们可以知道：1个应用程序是由N个进程组成，1个进程包含N线程。&lt;/p>
-&lt;p>我们还知道：阻塞线程意味着停止该线程中代码的执行，因此永远不应该阻塞与用户交互的线程。&lt;/p>
-&lt;p>我们还知道：协程是1个轻量级线程，它驻留在1个线程中但又不绑定到具体的这个线程中。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">1个协程可以在1个线程中启动，但在某个时刻又可以在另一个线程中恢复执行。
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>下图概括了本节到目前为止的内容。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/4435aef0-eb0f-4a75-a6aa-ff8bf9462740.png" alt="img">&lt;/p>
-&lt;h1 id="协程的语言实现java版">协程的语言实现(Java版)&lt;/h1>
-&lt;p>协程在Java中的实现非常落后，直到Java8也没有在正式版本中支持协程。&lt;/p>
-&lt;p>OpenJDK团队后来引入了&lt;code>quasar&lt;/code>库的大神，启动了&lt;code>Loom&lt;/code>项目，&lt;code>Loom&lt;/code>项目的最新进展后续另开文章介绍，本文就基于&lt;code>quasar&lt;/code>体验一下Java版的协程性能。&lt;/p>
-&lt;p>在此，我们模仿前文翻译的&lt;code>《Learning Concurrency in Kotlin》&lt;/code>中的示例代码：&lt;/p>
-&lt;ul>
-&lt;li>创建10万个线程，每个线程执行20万次加法，等待10万个线程都执行完，打印总耗时。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">Main1&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kd">final&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">MAX_COUNT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">100000&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="kt">long&lt;/span> &lt;span class="n">iStartTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentTimeMillis&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">Thread&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">arrThread&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">MAX_COUNT&lt;/span>&lt;span class="o">];&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">arrThread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">arrThread&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Thread&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">Main1&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">calc&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Thread&lt;/span> &lt;span class="n">thread&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">arrThread&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">thread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">start&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Thread&lt;/span> &lt;span class="n">thread&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">arrThread&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">thread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">join&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">InterruptedException&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">e&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">printStackTrace&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;Total: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentTimeMillis&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">iStartTime&lt;/span>&lt;span class="o">));&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">calc&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="kt">int&lt;/span> &lt;span class="n">iRes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">10000&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">20&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">++)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">iRes&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="o">;&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">iRes&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>执行结果：消耗了8945毫秒。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221201183245050.png" alt="image-20221201183245050">&lt;/p>
-&lt;ul>
-&lt;li>我们再创建10万个协程，每个协程也是执行20万次加法，等待10万个协程都执行完，打印总耗时。
-&lt;ul>
-&lt;li>这里我们用到了&lt;code>quasar&lt;/code>来创建协程。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">Main2&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="kt">long&lt;/span> &lt;span class="n">iStartTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentTimeMillis&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="n">Fiber&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Void&lt;/span>&lt;span class="o">&amp;gt;[]&lt;/span> &lt;span class="n">arrFiber&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Fiber&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">Main1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">MAX_COUNT&lt;/span>&lt;span class="o">];&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">arrFiber&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">length&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">arrFiber&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Fiber&lt;/span>&lt;span class="o">&amp;lt;&amp;gt;(&lt;/span>&lt;span class="n">Main1&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">calc&lt;/span>&lt;span class="o">);&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Fiber&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Void&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fiber&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">arrFiber&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">fiber&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">start&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Fiber&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Void&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">thread&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="n">arrFiber&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="k">try&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">thread&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">join&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="o">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">Exception&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
-&lt;span class="n">e&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">printStackTrace&lt;/span>&lt;span class="o">();&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;Total: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">currentTimeMillis&lt;/span>&lt;span class="o">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">iStartTime&lt;/span>&lt;span class="o">));&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>执行结果：消耗了1812毫秒。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221201183730909.png" alt="image-20221201183730909">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>测试结论&lt;/strong>：反复执行上述测试代码，Java协程的性能远高于比Java线程的性能。&lt;/li>
-&lt;/ul>
-&lt;h1 id="参考">参考&lt;/h1>
-&lt;blockquote>
-&lt;p>《Learning Concurrency in Kotlin》：https://www.amazon.com/Learning-Concurrency-Kotlin-efficient-applications/dp/1788627164&lt;/p>
-&lt;p>Wiki：https://en.wikipedia.org/wiki/Coroutine&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-1/image-20221121164732405.png" alt="image-20221121164732405">&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

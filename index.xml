@@ -18,29 +18,28 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】chatGPT学习笔记3-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>【chatGPT】chatGPT学习笔记3-机器学习基本原理(下)&lt;/p>
-&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记4-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
 &lt;h1 id="1机器学习任务介绍">1.机器学习任务介绍&lt;/h1>
 &lt;p>前段时间，同事上班路上骑车摔泥坑里骨折了，我就萌生了让人工智能自动识别路面泥坑的想法。&lt;/p>
 &lt;p>毕竟，同事要互相关怀、相亲相爱。另外，我们也可以通过这个机器学习的任务理解一下机器学习的基本原理。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722092656554.png" alt="image-20230722092656554">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722092656554.png" alt="image-20230722092656554">&lt;/p>
 &lt;h1 id="2机器学习中的常用术语一览">2.机器学习中的常用术语一览&lt;/h1>
 &lt;p>开始机器学习的训练任务之前，我们快速浏览一下机器学习领域中的常用术语。假设AI识别路面泥坑是一个函数：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093341203.png" alt="image-20230722093341203">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093341203.png" alt="image-20230722093341203">&lt;/p>
 &lt;h2 id="21模型是什么">2.1.模型是什么?&lt;/h2>
 &lt;p>函数f的输入是路面的视频，输出是路面上是否有泥坑。输入称为&lt;strong>自变量&lt;/strong>，在机器学习中也称为&lt;strong>特征&lt;/strong>。输出称为&lt;strong>因变量&lt;/strong>，在机器学习中也称为&lt;strong>标签&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093803701.png" alt="image-20230722093803701">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093803701.png" alt="image-20230722093803701">&lt;/p>
 &lt;p>这个函数f称为&lt;strong>模型&lt;/strong>，复杂的模型可能有数量庞大的自变量。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722094251783.png" alt="image-20230722094251783">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722094251783.png" alt="image-20230722094251783">&lt;/p>
 &lt;h2 id="22怎样才算找到了函数f">2.2.怎样才算找到了函数f？&lt;/h2>
 &lt;p>怎么才算找到了函数f呢？假设这个函数是个简单的函数：&lt;code>y=ax+b&lt;/code>，那么找到a和b，就算找到了这个函数f。a、b也被称为&lt;strong>模型的参数&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722095702788.png" alt="image-20230722095702788">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722095702788.png" alt="image-20230722095702788">&lt;/p>
 &lt;p>除了模型的参数，还有一种参数叫做&lt;strong>超参数(hyperparameter)&lt;/strong>，这些模型的外部参数，属于训练和调试的过程参数。&lt;/p>
 &lt;h2 id="23如何找到函数f">2.3.如何找到函数f？&lt;/h2>
 &lt;p>那么，我们又如何找到函数f呢？机器学习的&lt;strong>核心思想&lt;/strong>就是&amp;rdquo;&lt;strong>给机器一堆数据，让机器自己从数据中提取特征、寻找规律&lt;/strong>&amp;quot;。这个过程，也称为&lt;strong>炼丹&lt;/strong>。&lt;/p>
 &lt;p>这些数据称为&lt;strong>数据集&lt;/strong>，这些数据通常被分为三波，一波用于训练、一波用于验证、一波用于最终的测试。&lt;/p>
 &lt;p>用于训练的称为&lt;strong>训练集&lt;/strong>，用于验证的称为&lt;strong>验证集&lt;/strong>，用于测试的称为&lt;strong>测试集&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722100415709.png" alt="image-20230722100415709">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722100415709.png" alt="image-20230722100415709">&lt;/p>
 &lt;h2 id="24找函数f的流派">2.4.找函数f的流派&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -100,15 +99,15 @@
 &lt;ul>
 &lt;li>&lt;strong>原始数据收集&lt;/strong>：通过行车记录仪，我收集了上班路上的路面情况。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000930967.png" alt="image-20230723000930967">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000930967.png" alt="image-20230723000930967">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>数据标注&lt;/strong>：通过标注工具，对视频中的泥坑进行标注。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001158467.png" alt="image-20230723001158467">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001158467.png" alt="image-20230723001158467">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>数据集划分&lt;/strong>：我们通常会将标注好的数据划分为训练集、验证集、测试集。划分有一些方法论，如：K-fold validation。我将数据集划分编写成了一段脚本，执行后就自动划分好了训练集、验证集、测试集。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001237851.png" alt="image-20230723001237851">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001237851.png" alt="image-20230723001237851">&lt;/p>
 &lt;blockquote>
 &lt;p>实战中，特征工程、数据向量化等，大多都被封装到了相应的AI训练框架中，本文不赘述。&lt;/p>
 &lt;/blockquote>
@@ -136,38 +135,38 @@
 &lt;/li>
 &lt;li>因此，函数f1整体距离正确答案为4，这就表示函数f1的损失函数Loss(f1)=4。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722221402457.png" alt="image-20230722221402457">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722221402457.png" alt="image-20230722221402457">&lt;/p>
 &lt;h2 id="34达成目标">3.4.达成目标&lt;/h2>
 &lt;p>当机器开始学习后，可能学到了N个不同的函数，那么就要从里面选择一个最优的函数，这个过程叫&lt;strong>最佳化(Optimization)&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722222441299.png" alt="image-20230722222441299">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722222441299.png" alt="image-20230722222441299">&lt;/p>
 &lt;p>整个过程，可以归纳为如下公式：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722223058532.png" alt="image-20230722223058532">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722223058532.png" alt="image-20230722223058532">&lt;/p>
 &lt;h2 id="35炼丹师超参数调优">3.5.炼丹师：超参数调优&lt;/h2>
 &lt;p>从&amp;quot;设定范围&amp;quot;到&amp;quot;达成目标&amp;rdquo;，整个过程不是一帆风顺的，在训练过程中、在超参数调优过程中，都会出现&lt;strong>过拟合&lt;/strong>(过拟合就是当前这批数据表现不错，换一批数据就不灵了)。因此需要反复迭代。人工智能工程师此时就很像一个古代的炼丹师，不断地通过调参，对模型进行优化和泛化。&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>优化&lt;/strong>：optimazation，就是让模型更好地拟合现有的数据。&lt;/li>
 &lt;li>&lt;strong>泛化&lt;/strong>：generalization，就是将当前的模型泛化到其他数据集上。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000619543-16900419818941.png" alt="image-20230723000619543">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000619543-16900419818941.png" alt="image-20230723000619543">&lt;/p>
 &lt;p>实战中需要考虑算法工程化，比如本训练任务，我们只需要简单的命令行，就能把训练过程跑起来。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001453414.png" alt="image-20230723001453414">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001453414.png" alt="image-20230723001453414">&lt;/p>
 &lt;h2 id="36模型测试">3.6.模型测试&lt;/h2>
 &lt;p>当模型训练好后，就要用测试数据集进行测试了，我们可以通过：&lt;/p>
 &lt;ul>
 &lt;li>各类训练指标进行判断。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001817880.png" alt="image-20230723001817880">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001817880.png" alt="image-20230723001817880">&lt;/p>
 &lt;ul>
 &lt;li>当然，也可以用直观的方法观看(PS：本次训练任务有点出乎意料，除了能识别泥坑，路面的裂缝也被识别出来了。)&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002107388.png" alt="image-20230723002107388">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002143084.png" alt="image-20230723002143084">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002208208.png" alt="image-20230723002208208">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002237309.png" alt="image-20230723002237309">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002257695.png" alt="image-20230723002257695">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002107388.png" alt="image-20230723002107388">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002143084.png" alt="image-20230723002143084">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002208208.png" alt="image-20230723002208208">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002237309.png" alt="image-20230723002237309">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002257695.png" alt="image-20230723002257695">&lt;/p>
 &lt;blockquote>
 &lt;p>本文部分内容由ChatGPT生成&lt;/p>
-&lt;/blockquote></description></item><item><title>【chatGPT】chatGPT学习笔记3-机器学习基本原理(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</link><pubDate>Tue, 18 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</guid><description>&lt;p>现在的热点是大语言模型，为什么我们还要了解机器学习？因为从机器学习到深度学习，再到如今的大语言模型，环环相扣。天底下没有新鲜事，并不是突然出现了一个划时代的技术。从历史、从论文都能按图索骥地找到大语言模型的源头——机器学习。&lt;/p>
+&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记3-机器学习基本原理(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</link><pubDate>Tue, 18 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</guid><description>&lt;p>现在的热点是大语言模型，为什么我们还要了解机器学习？因为从机器学习到深度学习，再到如今的大语言模型，环环相扣。天底下没有新鲜事，并不是突然出现了一个划时代的技术。从历史、从论文都能按图索骥地找到大语言模型的源头——机器学习。&lt;/p>
 &lt;h1 id="1机器学习的目标是什么">1.机器学习的目标是什么?&lt;/h1>
 &lt;p>机器学习的目标就是从数据中发现规律。&lt;/p>
 &lt;p>这个过程本质是一种统计建模的过程，是统计学方法的一种具体应用。&lt;/p>
@@ -177,18 +176,18 @@
 &lt;li>Midjourney找到了生成图片的函数f，输入&amp;quot;一只可爱的猫&amp;rdquo;，函数f就能生成小猫的图片。&lt;/li>
 &lt;li>AlphaGo找到了下棋的函数f，输入&amp;quot;对手的一步棋&amp;rdquo;，函数f就能生成下一步应该怎么走。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720150809229.png" alt="image-20230720150809229">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720150809229.png" alt="image-20230720150809229">&lt;/p>
 &lt;h1 id="2机器学习和人类学习的相似之处">2.机器学习和人类学习的相似之处&lt;/h1>
 &lt;p>人类学习和机器学习有很多相似之处，本质上：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>人类学习&lt;/strong>：从经验中总结规律——俗称经受社会的毒打。&lt;/li>
 &lt;li>&lt;strong>机器学习&lt;/strong>：从数据中总结模型——俗称经受数据的洗礼。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720152149924.png" alt="image-20230720152149924">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720152149924.png" alt="image-20230720152149924">&lt;/p>
 &lt;h1 id="3机器学习打破了早期ai范式">3.机器学习打破了早期AI范式&lt;/h1>
 &lt;p>人工智能的发展大致经历了四代，第一代AI以符号主义为主流，第二代至今以联结主义为主流(机器学习、深度学习就属于这个流派)。&lt;/p>
 &lt;p>后来还有三个法国神人，绘制了人工智能发展历史上的两个流派的竞争过程：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720153137135.png" alt="image-20230720153137135">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720153137135.png" alt="image-20230720153137135">&lt;/p>
 &lt;p>早期的人工智能到底是怎样的呢？大致如下：&lt;/p>
 &lt;ul>
 &lt;li>STEP1.人类某个领域的专家总结该领域的业务规则。&lt;/li>
@@ -196,13 +195,13 @@
 &lt;li>STEP3.最终用户输入问题后，专家系统匹配规则，进行答复。&lt;/li>
 &lt;/ul>
 &lt;p>早期的人工智能的本质就是&lt;strong>人类总结规则、设定规则&lt;/strong>。这种范式的最大问题就是人类总结的规则不足，甚至人类本身总结不出来过于复杂的规则，导致早期的人工智能无法推广应用。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720154059662.png" alt="image-20230720154059662">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720154059662.png" alt="image-20230720154059662">&lt;/p>
 &lt;p>而出自于联结主义的机器学习推崇的就是&lt;strong>不用人类总结规则，给我数据我来总结规律&lt;/strong>。&lt;/p>
 &lt;p>有一种言论说：神经网络的产生、海量数据的出现、算力的提升造就了机器学习的风靡。&lt;/p>
 &lt;p>这种言论应该不是机器学习风靡的根因，真正的根因应该是&lt;strong>机器学习改变了早期AI的范式&lt;/strong>。&lt;/p>
 &lt;blockquote>
 &lt;p>本文部分内容由ChatGPT生成&lt;/p>
-&lt;/blockquote></description></item><item><title>【ChatGPT】ChatGPT学习笔记2-不是什么?是什么?有何方向?</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 18 Jul 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</guid><description>&lt;p>最近有小伙伴提意见，希望我的专栏能用小短篇的形式，将大模型相关知识通俗阐述一下。&lt;/p>
+&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记2-不是什么?是什么?有何方向?</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 18 Jul 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</guid><description>&lt;p>最近有小伙伴提意见，希望我的专栏能用小短篇的形式，将大模型相关知识通俗阐述一下。&lt;/p>
 &lt;p>特此请ChatGPT协助我一起将近几个月阅读的资料以笔记体记录下来，与大家分享。&lt;/p>
 &lt;h1 id="1chatgpt不是什么">1.ChatGPT不是什么?&lt;/h1>
 &lt;h2 id="11古早的聊天机器人">1.1.古早的聊天机器人&lt;/h2>
@@ -218,29 +217,29 @@
 &lt;/ul>
 &lt;h2 id="12现代的聊天机器人">1.2.现代的聊天机器人&lt;/h2>
 &lt;p>&lt;strong>ChatGPT及其更早的NLP领域技术&lt;/strong>，早已&lt;strong>不是从数据库、互联网&lt;/strong>生成答案的。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230718234119962.png" alt="image-20230718234119962">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230718234119962.png" alt="image-20230718234119962">&lt;/p>
 &lt;p>ChatGPT官方也明确表达了&amp;quot;ChatGPT is not connected to the internet&amp;rdquo;。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719065005501.png" alt="image-20230719065005501">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719065005501.png" alt="image-20230719065005501">&lt;/p>
 &lt;h1 id="2chatgpt是什么">2.ChatGPT是什么？&lt;/h1>
 &lt;h2 id="21大模型的生成原理chatgpt版">2.1.大模型的生成原理(ChatGPT版)&lt;/h2>
 &lt;ul>
 &lt;li>请ChatGPT解释一下大模型的生成原理，如下：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719092626552.png" alt="image-20230719092626552">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719092626552.png" alt="image-20230719092626552">&lt;/p>
 &lt;h2 id="22大模型的生成原理通俗版">2.2.大模型的生成原理(通俗版)&lt;/h2>
 &lt;p>我们再来通俗理解一下：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>STEP1&lt;/strong>：问一个问题&amp;quot;什么是ChatGPT？&amp;quot;，可以将ChatGPT看成1个函数F，这个函数会输出即将回答的答案中第一个字(词)的概率。比如：根据问题，答案第一个字是&amp;quot;c&amp;quot;的概率是最大，最终就认为答案的第1个字是&amp;quot;c&amp;rdquo;。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719093253167.png" alt="image-20230719093253167">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719093253167.png" alt="image-20230719093253167">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>STEP2&lt;/strong>：将STEP1的输出追加到问题上，问题就变成了&amp;quot;什么是ChatGPT?c&amp;rdquo;，继续输入给函数F，得到新的概率，最终认为答案的第2个字是&amp;quot;h&amp;rdquo;。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094213880.png" alt="image-20230719094213880">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094213880.png" alt="image-20230719094213880">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>STEP3、STEP4、STEP5&lt;/strong>：不断重复STEP1、STEP2的动作，就会得到完整的答案，如下图：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094340618.png" alt="image-20230719094340618">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094340618.png" alt="image-20230719094340618">&lt;/p>
 &lt;h1 id="3未来的研究方向">3.未来的研究方向？&lt;/h1>
 &lt;p>大模型未来的热点研究方向很多很多：提示词工程、神经网络编辑、机器遗忘、自适应计算和自适应模型、跨模态学习、模型压缩和加速、集成多任务和元学习、强化学习和自监督学习等等。&lt;/p>
 &lt;p>笔者认为&amp;rdquo;&lt;strong>提示词工程、神经网络编辑、机器遗忘&lt;/strong>&amp;ldquo;最为有趣，因为它们和脑科学有点相近之处，都是在&amp;quot;激发神经网络&amp;rdquo;、&amp;ldquo;修改神经网络&amp;rdquo;、&amp;ldquo;抹除神经网络&amp;rdquo;。&lt;/p>
@@ -248,13 +247,13 @@
 &lt;ul>
 &lt;li>Prompt Engineering，吴恩达老师的课程让这个热点更热。提示词工程的本质可以认为：大模型好像一个&lt;strong>博学的老人家&lt;/strong>(世界知识几乎都知道)，只是&lt;strong>记性不太好&lt;/strong>。你需要用一些特殊的提示词唤醒他的记忆(俗称会念咒)，他就能很好地回答你的问题。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719085754568.png" alt="image-20230719085754568">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719085754568.png" alt="image-20230719085754568">&lt;/p>
 &lt;h2 id="32神经网络编辑">3.2.神经网络编辑&lt;/h2>
 &lt;p>Neural Editing，随着模型越来越大，训练好一个模型的成本极高，重新训练几乎不可能，因此需要有一种改进神经网络生成结果的技术，可以通过对模型的生成结果进行编辑，来获得更准确、更自然的结果。该技术通常涉及到在生成结果中插入或删除一些元素，或者重新排列生成结果的顺序，以获得更好的输出结果。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719090639814.png" alt="image-20230719090639814">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719090639814.png" alt="image-20230719090639814">&lt;/p>
 &lt;h2 id="33机器遗忘">3.3.机器遗忘&lt;/h2>
 &lt;p>Machine Unlearning，机器遗忘是一种让机器学会忘记以前的知识的技术。说白了，就是&amp;quot;你知道了不该知道的事情&amp;rdquo;。这项技术可以应用于安全隐私、AI伦理领域。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719091436950.png" alt="image-20230719091436950">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719091436950.png" alt="image-20230719091436950">&lt;/p>
 &lt;h2 id="34其它方向">3.4.其它方向&lt;/h2>
 &lt;p>以下来自于ChatGPT的解释，供参考：&lt;/p>
 &lt;ul>
@@ -1021,7 +1020,7 @@ java/lang/Thread.java
 &lt;center>Ohoh，有點孤單卻又不認輸&lt;/center>
 &lt;center>誒&lt;/center>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E5%85%AD%E6%9C%88/image-20230225143210137.png" alt="image-20230225143210137">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/X832EGf3i84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item><item><title>【chatGPT】chatGPT学习笔记1-机器还需要多久才能像人一样思考？</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/</link><pubDate>Fri, 24 Feb 2023 16:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgptchatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/</guid><description>&lt;p>从深圳返程的路上，开始阅读chatGPT的论文，努力理解其中精妙的理论与公式。&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/X832EGf3i84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item><item><title>【chatGPT】学习笔记1-机器还需要多久才能像人一样思考</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/</link><pubDate>Fri, 24 Feb 2023 16:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/</guid><description>&lt;p>从深圳返程的路上，开始阅读chatGPT的论文，努力理解其中精妙的理论与公式。&lt;/p>
 &lt;p>渴望真正理解chatGPT，所以写下我在学习过程中的思考，希望前辈高手指教。&lt;/p>
 &lt;h1 id="1从宏观看">1.从宏观看&lt;/h1>
 &lt;h2 id="11软件内驱力制约了目前的ai能力">1.1.软件内驱力，制约了目前的AI能力&lt;/h2>
@@ -1035,9 +1034,9 @@ java/lang/Thread.java
 &lt;li>STEP1.归纳出函数f的&lt;strong>规则、规律&lt;/strong>&lt;/li>
 &lt;li>STEP2.交给人类程序员用某种编程语言实现出来&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221083651904.png" alt="image-20230221083651904">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221083651904.png" alt="image-20230221083651904">&lt;/p>
 &lt;p>因此，产品研发过程中，某1个人类传递了错误的**&amp;ldquo;需求&amp;rdquo;、&amp;ldquo;规格&amp;rdquo;**，就会造成软件工程中经典的问题：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230220171408523.png" alt="image-20230220171408523">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230220171408523.png" alt="image-20230220171408523">&lt;/p>
 &lt;h3 id="2ai程序的特点">(2)AI程序的特点&lt;/h3>
 &lt;blockquote>
 &lt;p>当&lt;strong>人类无法归纳&lt;/strong>出某种人类知识的&lt;strong>规则、规律&lt;/strong>时，程序员实现某种数学工具的程序，该数学工具可以从已知的输入输出，自动归纳出规则、规律。&lt;/p>
@@ -1046,22 +1045,22 @@ java/lang/Thread.java
 &lt;p>人类如何归纳出&amp;quot;照片里具备怎样的特征就表示有一只狗&amp;quot;的&lt;strong>规则、规律&lt;/strong>呢？&lt;/p>
 &lt;p>暂且把看图识狗的问题放一边，我们换1个更简单的例子：已知历史上每天的白菜价格(假定白菜价格满足某种线性规律)，能否预测出明天的白菜价格？&lt;/p>
 &lt;p>我们可以把问题抽象为如下数学问题：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI拾遗/【chatGPT】chatGPT学习笔记1-机器还需要多久才能像人一样思考/image-20230221092617276.png" alt="image-20230221092617276" style="zoom:50%;" />&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI拾遗/【chatGPT】学习笔记1-机器还需要多久才能像人一样思考/image-20230221092617276.png" alt="image-20230221092617276" style="zoom:50%;" />&lt;/p>
 &lt;p>我们可以用最朴实的方法求解：&lt;/p>
 &lt;ul>
 &lt;li>STEP1.将p1、p2&amp;hellip;.pn在坐标系上描点&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221093207025.png" alt="image-20230221093207025">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221093207025.png" alt="image-20230221093207025">&lt;/p>
 &lt;ul>
 &lt;li>STEP2.用蓝色线贯穿p1、p2&amp;hellip;.pn&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221093633696.png" alt="image-20230221093633696">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221093633696.png" alt="image-20230221093633696">&lt;/p>
 &lt;ul>
 &lt;li>STEP3.这根蓝色线即可确定a、b，即确定了函数f是什么&lt;/li>
 &lt;/ul>
 &lt;p>这个函数f就是从历史上众多白菜价格中&lt;strong>归纳出来的规律、规则&lt;/strong>。&lt;/p>
 &lt;p>将AI的程序抽象如下，&lt;strong>人类的工作重心在数学工具M上，而函数f由数学工具M自动/半自动产生&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221094206072.png" alt="image-20230221094206072">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221094206072.png" alt="image-20230221094206072">&lt;/p>
 &lt;h3 id="3观点">(3)观点&lt;/h3>
 &lt;ul>
 &lt;li>观点1：软件的内驱力是&lt;strong>具备归纳能力&lt;/strong>的&lt;strong>人脑&lt;/strong>或者&lt;strong>数学工具&lt;/strong>。
@@ -1082,7 +1081,7 @@ java/lang/Thread.java
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221151409891.png" alt="image-20230221151409891">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221151409891.png" alt="image-20230221151409891">&lt;/p>
 &lt;h2 id="12计算理论制约了ai解决问题的范围">1.2.计算理论，制约了AI解决问题的范围&lt;/h2>
 &lt;h3 id="1观点">(1)观点&lt;/h3>
 &lt;p>面对人类和AI，我的观点是：&lt;/p>
@@ -1144,13 +1143,13 @@ java/lang/Thread.java
 &lt;p>&lt;strong>人类文明的跳跃总是这样：在浩渺的历史场合中，微醺中、睡梦中，灵光一现。&lt;/strong>&lt;/p>
 &lt;p>&lt;strong>然而，人类的灵感、灵性、灵魂，似乎还没有数学公式可以表达。&lt;/strong>&lt;/p>
 &lt;p>这个话题不能再深聊下去了，再聊就哲学(身心二元论)和神学了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221152255695.png" alt="image-20230221152255695">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221152255695.png" alt="image-20230221152255695">&lt;/p>
 &lt;h2 id="13小结通用人工智能依然没有到来">1.3.小结：通用人工智能依然没有到来&lt;/h2>
 &lt;p>通用人工智能，&lt;strong>Artificial general intelligence&lt;/strong>，简称&lt;strong>AGI&lt;/strong>。与之相反的就是弱人工智能(&lt;strong>Weak AI&lt;/strong>)，也叫做窄人工智能(&lt;strong>Narrow AI&lt;/strong>)。通用人工智能与弱人工智能最大的区别就是是否具备认知能力。弱人工智能有点像绿野仙踪里没有心的铁皮人，他的梦想就是有一颗真正的心。&lt;/p>
 &lt;blockquote>
 &lt;p>认知能力：详见https://en.wikipedia.org/wiki/Cognition&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230222160053172-16771388478091.png" alt="image-20230222160053172">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230222160053172-16771388478091.png" alt="image-20230222160053172">&lt;/p>
 &lt;p>从前述的软件内驱力(驱动力)、计算理论(解决问题能力)看，除非发生了一种&lt;strong>技术突变&lt;/strong>，否则机器要像人一样思考依然很困难。&lt;/p>
 &lt;p>但，&lt;strong>AI技术在弱人工智能方向的确越来越强&lt;/strong>。我们接下来再从微观上做进一步分析。&lt;/p>
 &lt;h1 id="2从微观看">2.从微观看&lt;/h1>
@@ -1171,34 +1170,34 @@ java/lang/Thread.java
 &lt;p>输入第2张照片(是布偶，一种猫)，布偶的数学表示为(x=1, y=-2)，则AI的数学工具输出-1，进而推理出第2张照片是猫。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223162906437.png" alt="image-20230223162906437">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223162906437.png" alt="image-20230223162906437">&lt;/p>
 &lt;p>&lt;strong>第二波学习&lt;/strong>：&lt;/p>
 &lt;ul>
 &lt;li>输入第3张照片(是泰迪，一种狗)，泰迪的数学表达是(x=-1, y=-1)，则AI的数学工具输出-2，进而推理出第3张照片是猫。&lt;/li>
 &lt;li>此时就错了，泰迪怎么可能是一种猫。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223164621150.png" alt="image-20230223164621150">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223164621150.png" alt="image-20230223164621150">&lt;/p>
 &lt;p>&lt;strong>第三波学习&lt;/strong>：&lt;/p>
 &lt;ul>
 &lt;li>此时，就要调整w₁和w₂，我掐指一算，调整为w₁=-1，w₂=1。&lt;/li>
 &lt;li>输入第1张、第2张、第3张照片，AI的数学工具输出为0、-3、0，进而可知二哈是狗、布偶是猫、泰迪是狗。&lt;/li>
 &lt;li>显然，w₁和w₂设计的合适，能够应对更多的照片，而不是每次输入一个新照片就要重新调整，这就是人工智能的黑话——&lt;strong>泛化&lt;/strong>。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223165156039.png" alt="image-20230223165156039">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223165156039.png" alt="image-20230223165156039">&lt;/p>
 &lt;p>于是，不断地喂进去新的图片，不断地调整w₁和w₂……&lt;/p>
 &lt;p>于是，我师傅把上述过程叫做&lt;strong>喂狗&lt;/strong>，这些图片就是&lt;strong>狗粮&lt;/strong>。&lt;/p>
 &lt;h3 id="2监督学习狗粮的成本很高">(2)监督学习：狗粮的成本很高&lt;/h3>
 &lt;p>根据前面的例子，首先需要人类准备好非常非常多的照片，并且人要标识出来每张照片是猫还是狗，这种学习方式就是&lt;strong>监督学习&lt;/strong>。&lt;/p>
 &lt;p>这就好像有个人类小孩儿不太聪明，他爸爸要把世界上所有的习题册都买回来，爸爸还要把每一道题自己先做一遍，再来一道一道教这孩子。&lt;/p>
 &lt;p>在这种高昂的教学成本下，我们就可以看到父慈子孝的场面了：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E8%BE%85%E5%AF%BC%E5%8A%9F%E8%AF%BE.gif" alt="辅导功课">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E8%BE%85%E5%AF%BC%E5%8A%9F%E8%AF%BE.gif" alt="辅导功课">&lt;/p>
 &lt;h3 id="3无监督学习从狗粮中吸收的营养有限">(3)无监督学习：从狗粮中吸收的营养有限&lt;/h3>
 &lt;p>与监督学习相对的，是&lt;strong>无监督学习&lt;/strong>。无监督学习还是需要人类准备好非常多的照片，只是不需要人类把每一张照片都标注出是猫还是狗。&lt;/p>
 &lt;p>人工智能在学习过程中，也能学会猫和狗两类照片的差别，但是它并没有&lt;strong>猫&lt;/strong>、&lt;strong>狗&lt;/strong>的概念。&lt;/p>
 &lt;p>相当于，狗粮吃了，吸收的营养有限。&lt;/p>
 &lt;h3 id="4感知机lenet神经网络喂狗工具在进化">(4)感知机、LeNet、神经网络，喂狗工具在进化&lt;/h3>
 &lt;p>除了考虑狗粮问题，从Perceptron感知机，到LeNet，再到神经网络，喂狗工具也在进化，这里给出动图，我们感受一下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%BC%94%E7%A4%BA1.gif" alt="神经网络演示1">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%BC%94%E7%A4%BA1.gif" alt="神经网络演示1">&lt;/p>
 &lt;h3 id="5观点">(5)观点&lt;/h3>
 &lt;p>前面介绍了监督学习、无监督学习的方法论，可以看到：&lt;/p>
 &lt;ul>
@@ -1212,7 +1211,7 @@ java/lang/Thread.java
 &lt;li>机器人看到面前的架子，一次次地把盘子放到架子里，盘子碎了减分，盘子放好了加分。&lt;/li>
 &lt;li>机器人看到面前随机出现的杯子，一次一次地把水倒进杯子里，倒进去的水越多加分，反之减分。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%A4%BA%E4%BE%8B.gif" alt="强化学习示例">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%A4%BA%E4%BE%8B.gif" alt="强化学习示例">&lt;/p>
 &lt;p>强化学习中，有几个概念：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Agent&lt;/strong>：智能体，可以简单地认为就是人工智能本身。&lt;/li>
@@ -1221,40 +1220,40 @@ java/lang/Thread.java
 &lt;li>&lt;strong>State&lt;/strong>：智能体观测环境发生此刻的状态。&lt;/li>
 &lt;li>&lt;strong>Reward&lt;/strong>：当智能体做出一个行为以后，环境会对智能体产生奖励，也可能产生惩罚。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223221457273.png" alt="image-20230223221457273">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223221457273.png" alt="image-20230223221457273">&lt;/p>
 &lt;p>再看看强化学习的流程：&lt;/p>
 &lt;ul>
 &lt;li>STEP1.观察到**Environment(环境)&lt;strong>中的&lt;/strong>State(状态)**有一杯水。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231206199.png" alt="image-20230223231206199">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231206199.png" alt="image-20230223231206199">&lt;/p>
 &lt;ul>
 &lt;li>STEP2.**Agent(智能体)&lt;strong>做出了一个&lt;/strong>Action(行为)**打翻水。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231405476.png" alt="image-20230223231405476">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231405476.png" alt="image-20230223231405476">&lt;/p>
 &lt;ul>
 &lt;li>STEP3.&lt;strong>Environment(环境)&lt;strong>产生了一个&lt;/strong>Reward(奖赏)&lt;/strong>——此时是个负向的奖赏——别那么做！&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231328920.png" alt="image-20230223231328920">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231328920.png" alt="image-20230223231328920">&lt;/p>
 &lt;ul>
 &lt;li>STEP4.**Agent(智能体)&lt;strong>再次看到的&lt;/strong>Environment(环境)&lt;strong>的&lt;/strong>State(状态)**是水杯打翻了。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231651496.png" alt="image-20230223231651496">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231651496.png" alt="image-20230223231651496">&lt;/p>
 &lt;ul>
 &lt;li>STEP5.**Agent(智能体)&lt;strong>做出了新的&lt;/strong>Action(行为)**把水擦干。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231852875.png" alt="image-20230223231852875">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231852875.png" alt="image-20230223231852875">&lt;/p>
 &lt;ul>
 &lt;li>STEP6.此时&lt;strong>Environment(环境)&lt;strong>发出的&lt;/strong>Reward(奖赏)&lt;/strong>——真棒&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232148105.png" alt="image-20230223232148105">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232148105.png" alt="image-20230223232148105">&lt;/p>
 &lt;ul>
 &lt;li>最终，人工智能学会了正确的选择。&lt;/li>
 &lt;/ul>
 &lt;h3 id="2强化学习的核心思想一次次的救赎">(2)强化学习的核心思想：一次次的救赎&lt;/h3>
 &lt;p>这有点像电影《Source Code》的剧情，男主不断地经历同一次循环，他在循环里的每一步都在寻找突破，最终突破循环。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232746654.png" alt="image-20230223232746654">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232746654.png" alt="image-20230223232746654">&lt;/p>
 &lt;p>作为人类的我，多么嫉妒人工智能具备的这种能力——&lt;strong>后悔药&lt;/strong>——曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候才后悔莫及，人世间最疼苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对那个女孩说三个字：我爱你。如果非要在这份爱上加一个期限，我希望是……一万年。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232959205.png" alt="image-20230223232959205">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232959205.png" alt="image-20230223232959205">&lt;/p>
 &lt;h3 id="3强化学习的难点延迟奖励探索突破灵性的灵犀一指">(3)强化学习的难点：延迟奖励&amp;amp;探索，突破灵性的灵犀一指&lt;/h3>
 &lt;p>强化学习有两个难点：&lt;/p>
 &lt;ul>
@@ -1262,7 +1261,7 @@ java/lang/Thread.java
 &lt;li>&lt;strong>探索&lt;/strong>：再就是不走寻常路，某一步忽然走了以前没做过的动作，意外地得到奖励，也可能失败，&lt;strong>一把梭哈，撞个大运&lt;/strong>。&lt;/li>
 &lt;/ul>
 &lt;p>强化学习的这两个难点，就好像《天龙八部》中的珍珑棋局，那么多青年才俊都无法攻克，虚竹却胡乱下了一步(&lt;strong>探索&lt;/strong>)，死了一大片子却开拓了新的天地(&lt;strong>延迟奖励&lt;/strong>)。如果再来从宏观层面谈，根据计算理论，虚竹这灵犀一指就是将&lt;strong>不可判定问题&lt;/strong>变为了&lt;strong>可判定问题&lt;/strong>，而这一指就是&lt;strong>人类的灵性&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223234346605.png" alt="image-20230223234346605">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223234346605.png" alt="image-20230223234346605">&lt;/p>
 &lt;h3 id="4观点">(4)观点&lt;/h3>
 &lt;ul>
 &lt;li>观点1：强化学习一定程度地解决了有监督、无监督中的&lt;strong>狗粮问题&lt;/strong>。&lt;/li>
@@ -1286,20 +1285,20 @@ java/lang/Thread.java
 &lt;/ul>
 &lt;h2 id="23看chatgpt原理图">2.3.看chatGPT原理图&lt;/h2>
 &lt;p>有了前文宏观层面建立的世界观，有了前文微观层面讲述的AI算法，我们可以来理解一下chatGPT的原理图了：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223234441157.png" alt="image-20230223234441157">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223234441157.png" alt="image-20230223234441157">&lt;/p>
 &lt;h3 id="1拥有一个基础版本的聊天机器人">(1)拥有一个基础版本的聊天机器人&lt;/h3>
 &lt;p>chatGPT第一阶段本质是监督+无监督，人类标注了一定数量的问题数据集，这里和大多数AI领域工程师现在的工作差不多。&lt;/p>
 &lt;p>在chatGPT，把训练的结果叫做&lt;strong>SFT模型&lt;/strong>，本质就是获得了一个初级版本的聊天机器人。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224141822069.png" alt="image-20230224141822069">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224141822069.png" alt="image-20230224141822069">&lt;/p>
 &lt;h3 id="2关键步骤我知道人类喜欢什么">(2)关键步骤，我知道人类喜欢什么&lt;/h3>
 &lt;p>第二步是关键步骤，用1个问题驱动&lt;strong>SFT&lt;/strong>，机器人返回4个答案，人类只需要对这4个答案进行排序。&lt;/p>
 &lt;p>这太有创意了：&lt;strong>一个人类回答问题是困难的&lt;/strong>(需要这个人类是这个问题的领域专家)，但&lt;strong>让人类判断哪个回答更好是简单的&lt;/strong>(这个人类只需要有一定的领域知识)。&lt;/p>
 &lt;p>排序也是一种&lt;strong>标注&lt;/strong>，这个标注不再只是&lt;strong>是猫是狗&lt;/strong>的简单标注，而是&lt;strong>&lt;font color=red>人类喜好&lt;/font>&lt;/strong>！&lt;/p>
 &lt;p>chatGPT将这种人类喜欢叫做RM模型。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224143243772.png" alt="image-20230224143243772">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224143243772.png" alt="image-20230224143243772">&lt;/p>
 &lt;h3 id="3学的快我懂你">(3)学的快，我懂你&lt;/h3>
 &lt;p>chatGPT到了第三步，似乎就水到渠成了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224150150372.png" alt="image-20230224150150372">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224150150372.png" alt="image-20230224150150372">&lt;/p>
 &lt;p>关于&lt;strong>学的快&lt;/strong>，和人类学习一项新技能本质是一样的，抽象为两点：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>学习有效信息&lt;/strong>：谷歌发明的注意力模型就是解决机器学习信息时，尽量像人一样关注到核心信息。
@@ -1308,7 +1307,7 @@ java/lang/Thread.java
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91chatGPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224151038341.png" alt="image-20230224151038341">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224151038341.png" alt="image-20230224151038341">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>学的过程快&lt;/strong>：PPO算法是强化学习中的一个单点算法，优化梯度问题，本质还是解决学的过程要快。&lt;/li>
 &lt;/ul>
@@ -1614,9 +1613,9 @@ java/lang/Thread.java
 &lt;li>
 &lt;p>通过TestContainers提供的丰富的&lt;code>Module&lt;/code>，极大地降低了集成测试时，依赖组件的部署和维护成本&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】和chatGPT结对编程的6小时</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</link><pubDate>Tue, 14 Feb 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</guid><description>&lt;h1 id="1我对ai的偏见">1.我对AI的偏见&lt;/h1>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记0-和chatGPT结对编程的6小时</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</link><pubDate>Tue, 14 Feb 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</guid><description>&lt;h1 id="1我对ai的偏见">1.我对AI的偏见&lt;/h1>
 &lt;p>2013年我写了个微信聊天机器人，在新浪微博上小火了一把。我的认知局限性让我没想到若干年后网红如此赚钱，活该我现在还在搬砖送外卖。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214114334028.png" alt="image-20230214114334028">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214114334028.png" alt="image-20230214114334028">&lt;/p>
 &lt;p>那阵子心里美滋滋——这个机器人好像我小孩儿，你教它一点，它就聪明一点。当然我那帮损友最终把它教成了流氓二混子。&lt;/p>
 &lt;p>即便我很喜欢我的机器人，但还是在一年后亲手关了它的服务器，因为我对&lt;strong>2013年的AI理论基础&lt;/strong>不太看好(这也是我的偏见)：&lt;/p>
 &lt;ul>
@@ -1638,22 +1637,22 @@ java/lang/Thread.java
 &lt;p>作为资深码农，最烦客户讲不清楚需求(软件工程中最大的魔咒)！&lt;/p>
 &lt;h2 id="第1个问题">第1个问题&lt;/h2>
 &lt;p>&lt;strong>咋办呢？我问了chatGPT第1个问题&lt;/strong>，转给朋友看，他确认回答正确：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141101548.png" alt="image-20230214141101548">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141101548.png" alt="image-20230214141101548">&lt;/p>
 &lt;h2 id="第2个问题">第2个问题&lt;/h2>
 &lt;p>&lt;strong>接着，懒惰的我问它第2个问题&lt;/strong>：能不能把上述文字转成代码？&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141035939.png" alt="image-20230214141035939">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141035939.png" alt="image-20230214141035939">&lt;/p>
 &lt;h2 id="代码生成效果咋样">&lt;strong>代码生成效果咋样？&lt;/strong>&lt;/h2>
 &lt;ul>
 &lt;li>首先，看完这段代码，我终于明白个税咋算了，感谢chatGPT。。。&lt;/li>
 &lt;li>然后，朋友说除了&amp;quot;个税起征点&amp;quot;要乘以期数，其它都对。。。&lt;/li>
 &lt;li>最后，我仔细检视并运行了它的代码：除了代码规范外，&lt;strong>它的代码还有个性能小亮点&lt;/strong>——寻找收入分级的速算系数时用了倒查，我自己还真不会这样写。。。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214140255700.png" alt="image-20230214140255700">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214140255700.png" alt="image-20230214140255700">&lt;/p>
 &lt;h2 id="第3个问题">第3个问题&lt;/h2>
 &lt;p>故事没完，在Excel里写公式有点难写：个税计算要分级，会有很长的IF嵌套。&lt;/p>
 &lt;p>如果Google查资料+写公式+测试，我估计要1小时吧。&lt;/p>
 &lt;p>&lt;strong>于是，我问了chatGPT第3个问题&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141004154.png" alt="image-20230214141004154">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141004154.png" alt="image-20230214141004154">&lt;/p>
 &lt;p>这个公式有多长呢？我把代码贴出来，大家可以评估一下自己需要多久写得出来：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1669,7 +1668,7 @@ java/lang/Thread.java
 &lt;p>这样的公式咋写呢？&lt;/p>
 &lt;p>我和朋友Google了半天也没知道答案，因为我想要公式的功能要用人类的一段话表达，而搜索引擎只能输入关键字。&lt;/p>
 &lt;p>&lt;strong>于是，我问chatGPT的第4个问题是人类能理解的一整段话&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141542915.png" alt="image-20230214141542915">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141542915.png" alt="image-20230214141542915">&lt;/p>
 &lt;p>通过chatGPT的回答，我知道了&lt;code>INDIRECT函数&lt;/code>。&lt;/p>
 &lt;p>显然，通过搜索引擎最终也能找到&lt;code>INDIRECT函数&lt;/code>，但没chatGPT这么快。&lt;/p>
 &lt;p>因为：&lt;/p>
@@ -1679,7 +1678,7 @@ java/lang/Thread.java
 &lt;/ul>
 &lt;p>这就有点意思了，&lt;strong>难怪微软赶紧让Bing接入chatGPT，谷歌瑟瑟发抖&lt;/strong>。&lt;/p>
 &lt;p>至此，朋友要的Excel做完了，耗时半小时。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214143709735.png" alt="image-20230214143709735">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214143709735.png" alt="image-20230214143709735">&lt;/p>
 &lt;h2 id="观点">观点&lt;/h2>
 &lt;p>&lt;strong>chatGPT真不是人工智障&lt;/strong>，而是真的人工智能。对于第1个故事，我有几个观点：&lt;/p>
 &lt;h3 id="1任务难度简单">(1)任务难度：简单&lt;/h3>
@@ -1688,9 +1687,9 @@ java/lang/Thread.java
 &lt;p>&lt;strong>过去，需求传递是软件研发最大的工程成本&lt;/strong>。客户是业务专家，程序员软件专家。如果表达能力弱的客户遇上不懂业务的程序员，那么这个项目铁定黄。菊花厂各种工程方法和质量流程本质上还是&lt;strong>对人与人的沟通成本&lt;/strong>的妥协。&lt;/p>
 &lt;p>&lt;strong>未来，chatGPT可能成为客户与程序员的沟通桥梁&lt;/strong>。chatGPT与任何一个人类相比，可以认为是通才——不会开船的公交车司机不是个好程序员——chatGPT大致是这么个意思吧。&lt;/p>
 &lt;p>在亲身体验chatGPT之前，身边同事不屑地说：&amp;ldquo;我就不信有描述清楚需求的客户，需求描述不清chatGPT再牛逼也写不出来&amp;rdquo;，逻辑如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214145728163.png" alt="image-20230214145728163">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214145728163.png" alt="image-20230214145728163">&lt;/p>
 &lt;p>在亲身体验chatGPT之后，不得不说这或许就是人类的局限性，难道人类不能变通一下吗：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214150532484.png" alt="image-20230214150532484">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214150532484.png" alt="image-20230214150532484">&lt;/p>
 &lt;h3 id="3值得关注的突破点一般的crud代码它写的不比人类差">(3)值得关注的突破点：一般的CRUD代码，它写的不比人类差。&lt;/h3>
 &lt;p>比如这个故事中的Java代码，不知道菊厂工作级的程序员能否在20分钟内，理解需求+编码+一次性测过。&lt;/p>
 &lt;h1 id="3第2个故事你值得收下我的膝盖">3.第2个故事：你值得收下我的膝盖&lt;/h1>
@@ -1703,23 +1702,23 @@ java/lang/Thread.java
 &lt;h2 id="第1个问题-1">第1个问题&lt;/h2>
 &lt;p>第1个问题我问的比较笼统，chatGPT回答的也比较含糊。&lt;/p>
 &lt;p>看起来答案没啥问题，但是语言的二义性，我不确定chatGPT是不是瞎蒙的，于是我问了第2个问题。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153034266.png" alt="image-20230214153034266">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153034266.png" alt="image-20230214153034266">&lt;/p>
 &lt;h2 id="第2个问题-1">第2个问题&lt;/h2>
 &lt;p>第2个问题的回答有点惊艳：&lt;/p>
 &lt;ul>
 &lt;li>首先，它知道不同厂家实现的JVM可能不同，所以答案最后它在强调HotSpot是这么实现的。&lt;/li>
 &lt;li>其次，它能精确理解&lt;code>scr/share/vm/runtime/thread.cpp&lt;/code>这段&lt;strong>代码的业务含义&lt;/strong>(即，这段代码在做什么事情)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153210729.png" alt="image-20230214153210729">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153210729.png" alt="image-20230214153210729">&lt;/p>
 &lt;p>AI能理解**&amp;ldquo;代码的业务含义&amp;rdquo;**有多牛逼呢？&lt;/p>
 &lt;p>回看一下业界历史上那么多代码质量检查工具，它们可以做到静态检查、内存检查、安全检查等，能理解这段代码在干啥吗？&lt;/p>
 &lt;p>回到&amp;quot;Java线程和JVM线程的关系&amp;quot;这个技术问题上，JVM的启动流程有多少关键步骤呢？&lt;strong>34步&lt;/strong>。&lt;/p>
 &lt;p>我花了4天时间，一边Debug、一边修正这张流程图、一边理解这段代码的业务含义，关键这还是我的专业领域：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230211233551236.png" alt="image-20230211233551236">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230211233551236.png" alt="image-20230211233551236">&lt;/p>
 &lt;h2 id="第3个问题-1">第3个问题&lt;/h2>
 &lt;p>我问了chatGPT很具体的问题，如果没看过JVM源码的人类，应该无法回答。&lt;/p>
 &lt;p>再看看chatGPT的答案：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214155311824.png" alt="image-20230214155311824">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214155311824.png" alt="image-20230214155311824">&lt;/p>
 &lt;h2 id="观点-1">观点&lt;/h2>
 &lt;p>大约和chatGPT玩了1小时，这就是第2个故事。对这个故事，我的观点如下：&lt;/p>
 &lt;h3 id="1任务难度困难">(1)任务难度：困难&lt;/h3>
@@ -1745,7 +1744,7 @@ java/lang/Thread.java
 &lt;li>算法的规划结果要保证汽车最快到达终点、动作丝滑。&lt;/li>
 &lt;/ul>
 &lt;p>这个算法是机器人领域的关键算法，比如波士顿机器人：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/kaimen.gif" alt="kaimen">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/kaimen.gif" alt="kaimen">&lt;/p>
 &lt;p>之前我对这个算法很感兴趣，断断续续也Google和图书馆查过一些论文，但仅获得了些许只言片语的信息——NURBS曲线、速度规划、路径规划。&lt;/p>
 &lt;p>说白了，这是个&lt;strong>业务领域算法&lt;/strong>——这就意味着，你不是业内人士又没有明白人指路，学习效率就不会太高。&lt;/p>
 &lt;p>我抱着试试看的心情问了chatGPT。。。然后。。。我就一发不可收拾地和它结对编程到了凌晨4点。&lt;/p>
@@ -1757,65 +1756,65 @@ java/lang/Thread.java
 &lt;li>&lt;strong>相关算法&lt;/strong>：S曲线速度规划&lt;/li>
 &lt;li>&lt;strong>学习的方向&lt;/strong>：在计算机图形学、数值分析、数字信号处理等学科中，都可以获取到这个算法的更深入的知识。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214162853438.png" alt="image-20230214162853438">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163155188.png" alt="image-20230214163155188">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214162853438.png" alt="image-20230214162853438">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163155188.png" alt="image-20230214163155188">&lt;/p>
 &lt;h2 id="第2组问题">第2组问题&lt;/h2>
 &lt;p>我的第2组问题就是深入到算法的原理、依赖的数学理论，&lt;/p>
 &lt;p>在接下来的2小时，chatGPT把线性插值法到B样条插值法都给我撸了一遍：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>插值的数学含义&lt;/strong>：已知有限的坐标点，自动生成N个坐标点，保证曲线是平滑的。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171500079.png" alt="image-20230214171500079">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171500079.png" alt="image-20230214171500079">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>插值的实际用途&lt;/strong>：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171556561.png" alt="image-20230214171556561">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171556561.png" alt="image-20230214171556561">&lt;/p>
 &lt;ul>
 &lt;li>它的回答有点像&lt;strong>插值&lt;/strong>：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171714672.png" alt="image-20230214171714672">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171714672.png" alt="image-20230214171714672">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>来吧，把各种插值法的数学公式都讲一遍&lt;/strong>：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171848979.png" alt="image-20230214171848979">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171848979.png" alt="image-20230214171848979">&lt;/p>
 &lt;h2 id="第3组问题">第3组问题&lt;/h2>
 &lt;p>&lt;code>Show me the code！&lt;/code>我只列举几个代码片段供大家感受：&lt;/p>
 &lt;h3 id="代码片段1代码轮廓">代码片段1：代码轮廓&lt;/h3>
 &lt;p>通过这段代码，我看到了&lt;strong>样条插值法的代码轮廓&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163436511.png" alt="image-20230214163436511">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163436511.png" alt="image-20230214163436511">&lt;/p>
 &lt;h3 id="代码片段2我不知道的三方件">代码片段2：我不知道的三方件&lt;/h3>
 &lt;p>代码片段2和代码片段1差不多，只不过是Java语言实现。&lt;/p>
 &lt;p>但，这段代码用到了一个我没用过的三方件&lt;code>org.apache.common.math3&lt;/code>。&lt;/p>
 &lt;p>这是一个亮点——原来有这么1个Java库，已经提供了很多基础的数学模型和算法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172256770.png" alt="image-20230214172256770">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172256770.png" alt="image-20230214172256770">&lt;/p>
 &lt;h3 id="代码片段3增加速度规划">代码片段3：增加速度规划&lt;/h3>
 &lt;p>我让chatGPT针对同一个问题，做了3次回答，每次回答不同。&lt;/p>
 &lt;p>综合3次回答，可以得到我比较满意的答案：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>第一次回答&lt;/strong>：业务流程说的很清楚，但是代码不太完整。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172856207.png" alt="image-20230214172856207">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172856207.png" alt="image-20230214172856207">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>第二次回答&lt;/strong>：我知道了Apache的那个三方件中的&lt;code>SplineInterpolator&lt;/code>可以生成B样条曲线。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172937781.png" alt="image-20230214172937781">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172937781.png" alt="image-20230214172937781">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>第三个回答&lt;/strong>：业务流程和代码都相对完整。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173043455.png" alt="image-20230214173043455">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173043455.png" alt="image-20230214173043455">&lt;/p>
 &lt;h3 id="代码片段n我和chatgpt的n次小迭代">代码片段N：我和chatGPT的N次小迭代&lt;/h3>
 &lt;p>得到了这个我未知知识领域的业务算法的代码框架后，我试着在IDEA里运行，无法成功。&lt;/p>
 &lt;p>有的函数有数组越界，有的函数参数个数不对。&lt;/p>
 &lt;h4 id="迭代1对于明显的编译错误作为人类的我可以快速帮它修复">迭代1：对于明显的编译错误，作为人类的我可以快速帮它修复。&lt;/h4>
 &lt;p>迭代1主要是我在工作，修复后，剩下的代码问题只剩下我不太理解的算法逻辑了。&lt;/p>
 &lt;h4 id="迭代2漏写了一个算法相关的函数它补充了">迭代2：漏写了一个算法相关的函数，它补充了。&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173941576.png" alt="image-20230214173941576">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173941576.png" alt="image-20230214173941576">&lt;/p>
 &lt;h4 id="迭代3请注意我的问题并没有指出具体是什么错误它自己分析出来代码错在哪里了">迭代3：请注意我的问题并没有指出具体是什么错误，它自己分析出来代码错在哪里了。&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174016136.png" alt="image-20230214174016136">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174016136.png" alt="image-20230214174016136">&lt;/p>
 &lt;h4 id="迭代4由于chatgpt网站限制无法返回超长代码片段导致看不到完整代码于是我要求它想办法精简代码">迭代4：由于chatGPT网站限制(无法返回超长代码片段)，导致看不到完整代码，于是我要求它想办法精简代码。&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174356129.png" alt="image-20230214174356129">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174356129.png" alt="image-20230214174356129">&lt;/p>
 &lt;h4 id="迭代n经过4个小时不断的交互1个基础的机器人运动规划算法代码跑通了">迭代N：经过4个小时不断的交互，1个基础的机器人运动规划算法代码跑通了&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174756076.png" alt="image-20230214174756076">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174756076.png" alt="image-20230214174756076">&lt;/p>
 &lt;h2 id="观点-2">观点&lt;/h2>
 &lt;p>第3个故事结束的时候，是周六的凌晨4点，我对这个故事的观点：&lt;/p>
 &lt;h3 id="1工作难度超难">(1)工作难度：超难。&lt;/h3>
@@ -1847,7 +1846,7 @@ java/lang/Thread.java
 &lt;li>……&lt;/li>
 &lt;/ul>
 &lt;p>经历过ICU门口的人应该能感同身受，只不过我这个工科脑袋有点跳脱，但或许这就是未来。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/Future.png" alt="Future">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/Future.png" alt="Future">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</link><pubDate>Sat, 11 Feb 2023 08:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-3/</guid><description>&lt;p>接上文《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-2》，我们得到了2个推论，并且证明了推论1：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>推论1&lt;/strong>：&lt;strong>此线程非彼线程&lt;/strong>——JVM层的线程应该是Java线程，操作系统层的线程是真正的系统线程。&lt;/li>
 &lt;li>&lt;strong>推论2&lt;/strong>：&lt;strong>此线程与彼线程之间应该存在某种映射关系&lt;/strong>——JVM层的线程，与操作系统层的系统线程之间，应该存在某种映射关系。&lt;/li>

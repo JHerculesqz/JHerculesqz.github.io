@@ -20,7 +20,7 @@
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记5-四次发展&amp;三个世界</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/</link><pubDate>Tue, 25 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/</guid><description>&lt;p>红杉资本在2022年7月，发布了大语言模型洞察报告。一年后的今天回看这篇洞察报告，洞察地很准。&lt;/p>
 &lt;p>我们详细解读一下这份报告，从中提炼一些观点和知识，以提升我们对生成式AI的宏观洞见。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230726094029267.png" alt="image-20230726094029267">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230726094029267.png" alt="image-20230726094029267">&lt;/p>
 &lt;h1 id="1ai的四次大发展">1.AI的四次大发展&lt;/h1>
 &lt;p>AI历史上经历了四次大发展：&lt;/p>
 &lt;ul>
@@ -31,7 +31,7 @@
 &lt;/ul>
 &lt;p>报告洞察的时间段就是从后深度学习时代，到大语言模型时代，阐述了大语言模型时代的四次浪潮。&lt;/p>
 &lt;p>另外，我们还可以发现一个有趣的现象：&lt;font color="red">&lt;strong>AI历次大发展的时间间隔逐步变小&lt;/strong>&lt;/font>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230726102141799.png" alt="image-20230726102141799">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230726102141799.png" alt="image-20230726102141799">&lt;/p>
 &lt;h1 id="2生成式ai的四次浪潮">2.生成式AI的四次浪潮&lt;/h1>
 &lt;blockquote>
 &lt;p>Sure enough, as the models get bigger and bigger, they begin to deliver human-level, and then superhuman results.&lt;/p>
@@ -52,7 +52,7 @@
 &lt;p>这个时期的大语言模型由于极其庞大、强依赖GPU等原因，大部分都没有公开可商用版本，或者都是内测版本，更没有可以落地的应用。&lt;/p>
 &lt;p>但，随着大语言模型越来越大，也出现了很多神奇的现象(如：涌现能力)，在某些方面开始超越人类水平。&lt;/p>
 &lt;p>在《Compute Trends Across Three Eras of Machine Learning》论文中，详细展示了人工智能在手写识别、语音识别、图像识别、阅读、语言理解的领域中，超越人类基准水平的测试结果。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727090714788.png" alt="image-20230727090714788">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727090714788.png" alt="image-20230727090714788">&lt;/p>
 &lt;h2 id="24agi第三波浪潮">2.4.AGI第三波浪潮&lt;/h2>
 &lt;p>在2022年之后，大语言模型开始进入&lt;strong>更好、更快、更便宜&lt;/strong>的阶段。计算成本开始下降、新的技术出现(如：diffusion models、CoT、ToT等)，都降低了训练和推理的成本。最大的进展不是大语言模型本身的进步，而是开源，很多学术界机构能够基于基础大语言模型去进一步训练和研究。&lt;/p>
 &lt;p>笔者认为特别是训练技术方面，成本下降很快，成本的下降带来了门槛的下降。几个月前我去搭建自己的本地GPT环境花了很长时间和费用，但上周LLama2发布后，搭建自己的本地大模型就非常便宜和容易。&lt;/p>
@@ -72,7 +72,7 @@
 &lt;li>&lt;strong>图像方向&lt;/strong>：模型以DallE、Stable Diffusion为代表，应用领域机会点在设计领域。&lt;/li>
 &lt;li>&lt;strong>语音/视频/3D方向&lt;/strong>：目前这些方向不明。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/genai-landscape-8.webp" alt="genai-landscape-8">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/genai-landscape-8.webp" alt="genai-landscape-8">&lt;/p>
 &lt;h2 id="32市场机会窗">3.2.市场机会窗&lt;/h2>
 &lt;ul>
 &lt;li>&lt;strong>文本方向&lt;/strong>：关窗时间大约在2025年。&lt;/li>
@@ -80,7 +80,7 @@
 &lt;li>&lt;strong>图像方向&lt;/strong>：关窗时间大约在2030年。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;font color="red" size=bold>**看到这个时间窗，是不是有一种时不我待的危机感？**&lt;/font>&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/genai-timeline-7.webp" alt="genai-timeline-7">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/genai-timeline-7.webp" alt="genai-timeline-7">&lt;/p>
 &lt;h1 id="4对杀手级应用的预测">4.对杀手级应用的预测&lt;/h1>
 &lt;blockquote>
 &lt;p>The best Generative AI companies can generate a sustainable competitive advantage by executing relentlessly on the flywheel between user engagement/data and model performance.&lt;/p>
@@ -129,7 +129,7 @@
 &lt;li>世界2：心理的世界(主观世界)，如：感觉、意识、心里状态的过程&lt;/li>
 &lt;li>世界3：思想的世界，或者叫知识的世界。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727113454114.png" alt="image-20230727113454114">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727113454114.png" alt="image-20230727113454114">&lt;/p>
 &lt;p>那么，三个世界理论的内在逻辑是什么呢？&lt;/p>
 &lt;ul>
 &lt;li>宇宙的发展是从世界1，到世界2，到世界3的连续过程。&lt;/li>
@@ -138,7 +138,7 @@
 &lt;li>再通俗一点，现有知识(世界3)不足以解决客观问题(世界1)，会抛出&lt;strong>问题&lt;/strong>，驱动人的意识(世界2)发现、总结出新的知识(世界3)，同时解决问题(世界1)。&lt;/li>
 &lt;li>再通俗一点，人工智能可以看作一个知识大合集，人工智能存在于(世界3)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727114108607.png" alt="image-20230727114108607">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727114108607.png" alt="image-20230727114108607">&lt;/p>
 &lt;p>最后，提出三个世界的哲学价值是什么？&lt;/p>
 &lt;ul>
 &lt;li>正因为知识(世界3)能够&lt;strong>抛出问题&lt;/strong>，直接影响世界2，间接影响世界3，所以世界3的知识是可以自我发展的。&lt;/li>
@@ -146,7 +146,7 @@
 &lt;li>通俗一点说，世界3知识的起点可能是人类，但世界3知识的发展、终点不是人类可以决定的。&lt;/li>
 &lt;li>这就是三个世界的哲学价值！这就是哲学意义上的&lt;font color=red>&lt;strong>人工智能科学发展观&lt;/strong>&lt;/font>！是不是可以自洽地解释通用人工智能是什么、通用人工智能会如何发展？&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727115506988.png" alt="image-20230727115506988">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727115506988.png" alt="image-20230727115506988">&lt;/p>
 &lt;p>写到这里，有两点感慨：&lt;/p>
 &lt;ul>
 &lt;li>很多时候，&lt;strong>人类没有&lt;/strong>自己的&lt;strong>独立思想和观点&lt;/strong>：可能没有(比如：他什么都不说)、可能只是重复(比如：他常常将图灵测试挂在嘴边，却不理解其中深意)、可能混乱(比如：他把图灵测试这种结果当做本质的起因)。&lt;/li>

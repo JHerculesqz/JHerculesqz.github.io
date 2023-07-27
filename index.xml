@@ -157,6 +157,9 @@
 &lt;h1 id="6参考">6.参考&lt;/h1>
 &lt;blockquote>
 &lt;p>红杉资本报告原文：https://www.sequoiacap.com/article/generative-ai-a-creative-new-world/&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>本文部分内容由ChatGPT生成&lt;/p>
 &lt;/blockquote></description></item><item><title>【chatGPT】学习笔记4-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
 &lt;h1 id="1机器学习任务介绍">1.机器学习任务介绍&lt;/h1>
 &lt;p>前段时间，同事上班路上骑车摔泥坑里骨折了，我就萌生了让人工智能自动识别路面泥坑的想法。&lt;/p>

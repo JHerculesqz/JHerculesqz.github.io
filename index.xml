@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 22 Jul 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,146 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记4-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记5-四次发展&amp;三个世界</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/</link><pubDate>Tue, 25 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/</guid><description>&lt;p>红杉资本在2022年7月，发布了大语言模型洞察报告。一年后的今天回看这篇洞察报告，洞察地很准。&lt;/p>
+&lt;p>我们详细解读一下这份报告，从中提炼一些观点和知识，以提升我们对生成式AI的宏观洞见。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230726094029267.png" alt="image-20230726094029267">&lt;/p>
+&lt;h1 id="1ai的四次大发展">1.AI的四次大发展&lt;/h1>
+&lt;p>AI历史上经历了四次大发展：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>早期人工智能时代&lt;/strong>：AI的第一次大发展，1950年早期人工智能出现。&lt;/li>
+&lt;li>&lt;strong>机器学习时代&lt;/strong>：AI的第二次大发展，1980年，机器学习逐步兴起，并蓬勃发展。&lt;/li>
+&lt;li>&lt;strong>深度学习时代&lt;/strong>：AI的第三次大发展，2010年，深度学习的突破，驱动了AI的进一步发展。&lt;/li>
+&lt;li>&lt;strong>大语言模型时代&lt;/strong>：AI的第四次大发展，2020年，大语言模型在&lt;strong>生成式学习&lt;/strong>路线上大放异彩。&lt;/li>
+&lt;/ul>
+&lt;p>报告洞察的时间段就是从后深度学习时代，到大语言模型时代，阐述了大语言模型时代的四次浪潮。&lt;/p>
+&lt;p>另外，我们还可以发现一个有趣的现象：&lt;font color="red">&lt;strong>AI历次大发展的时间间隔逐步变小&lt;/strong>&lt;/font>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230726102141799.png" alt="image-20230726102141799">&lt;/p>
+&lt;h1 id="2生成式ai的四次浪潮">2.生成式AI的四次浪潮&lt;/h1>
+&lt;blockquote>
+&lt;p>Sure enough, as the models get bigger and bigger, they begin to deliver human-level, and then superhuman results.&lt;/p>
+&lt;p>果然，随着模型变得越来越大，它们开始提供人类的水平，然后是超人的结果。&lt;/p>
+&lt;/blockquote>
+&lt;p>上述是报告的第一个核心观点是：生成式AI越来越强大，在某些领域开始超越人类的水平。&lt;/p>
+&lt;h2 id="21生成式ai与分析式ai的边界">2.1.生成式AI与分析式AI的边界&lt;/h2>
+&lt;p>报告首先划定了&lt;strong>生成式AI&lt;/strong>与&lt;strong>分析式AI&lt;/strong>的边界：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分析式AI&lt;/strong>：&lt;strong>Analytical AI&lt;/strong>，从早期人工智能时代到深度学习时代，人工智能更多地应用领域覆盖的是&lt;strong>人类的分析能力&lt;/strong>。如：识别车牌、识别垃圾邮件、用户画像与智能推荐等等。人工智能在这个时代，主要是在&lt;strong>分析已有的数据&lt;/strong>，进行&lt;strong>回归&lt;/strong>与&lt;strong>分类&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>生成式AI&lt;/strong>：&lt;strong>Generative AI&lt;/strong>，人工智能的应用领域开始覆盖&lt;strong>人类的创造能力&lt;/strong>。如：GPT写诗、Midjourney绘画等。以前人工智能在这些方面无法与人类抗衡，但现在人工智能已经开始可以创造有意义并具备美感的作品了。在这个时代，人工智能&lt;strong>不仅仅是分析已有的数据&lt;/strong>，而是在&lt;strong>生成新的内容&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h2 id="22agi第一波浪潮">2.2.AGI第一波浪潮&lt;/h2>
+&lt;p>在前深度学习时代(2015年之前)，&lt;strong>小模型&lt;/strong>是主流模型，是某个领域的&lt;strong>专才&lt;/strong>，这些一个个的小模型都擅长做特定领域的&lt;strong>人类分析工作&lt;/strong>。&lt;/p>
+&lt;p>但，对于生成内容的任务，小模型普遍都不擅长。&lt;/p>
+&lt;h2 id="23agi第二波浪潮">2.3.AGI第二波浪潮&lt;/h2>
+&lt;p>2019年，谷歌发表的《Attention is All You Need》，向我们描述了一种用于NLP的新型神经网络架构Transformer，随后各大厂在这条赛道上展开了激烈竞争。&lt;/p>
+&lt;p>这个时期的大语言模型由于极其庞大、强依赖GPU等原因，大部分都没有公开可商用版本，或者都是内测版本，更没有可以落地的应用。&lt;/p>
+&lt;p>但，随着大语言模型越来越大，也出现了很多神奇的现象(如：涌现能力)，在某些方面开始超越人类水平。&lt;/p>
+&lt;p>在《Compute Trends Across Three Eras of Machine Learning》论文中，详细展示了人工智能在手写识别、语音识别、图像识别、阅读、语言理解的领域中，超越人类基准水平的测试结果。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727090714788.png" alt="image-20230727090714788">&lt;/p>
+&lt;h2 id="24agi第三波浪潮">2.4.AGI第三波浪潮&lt;/h2>
+&lt;p>在2022年之后，大语言模型开始进入&lt;strong>更好、更快、更便宜&lt;/strong>的阶段。计算成本开始下降、新的技术出现(如：diffusion models、CoT、ToT等)，都降低了训练和推理的成本。最大的进展不是大语言模型本身的进步，而是开源，很多学术界机构能够基于基础大语言模型去进一步训练和研究。&lt;/p>
+&lt;p>笔者认为特别是训练技术方面，成本下降很快，成本的下降带来了门槛的下降。几个月前我去搭建自己的本地GPT环境花了很长时间和费用，但上周LLama2发布后，搭建自己的本地大模型就非常便宜和容易。&lt;/p>
+&lt;p>此时，随之而来的应用开始出现(比如：chatGPT)。很多国人是这个时候才听说了大语言模型的概念，甚至很多人的知识结构还停留在机器学习时代。&lt;/p>
+&lt;h2 id="24agi第四波浪潮">2.4.AGI第四波浪潮&lt;/h2>
+&lt;p>这是红杉资本对眼前和未来的预期：杀手级应用涌现。随着大语言模型继续变得更好、更快、更便宜，会出现越来越多的免费、开源的模型。应用层也会出现大爆发。红杉资本在本文中多次强调：&amp;quot;&lt;strong>我们预计杀手级应用也将出现在生成式AI领域中，大家争相发力，前景让人期待&lt;/strong>&amp;quot;。&lt;/p>
+&lt;h1 id="3生成式ai的市场格局">3.生成式AI的市场格局&lt;/h1>
+&lt;blockquote>
+&lt;p>The best Generative AI companies can generate a sustainable competitive advantage by executing relentlessly on the flywheel between user engagement/data and model performance.&lt;/p>
+&lt;p>最好的生成式人工智能公司可以通过在用户参与度、数据、模型能力之间不断地迭代，进而产生可持续的竞争优势。&lt;/p>
+&lt;/blockquote>
+&lt;p>上述是报告的第二个核心观点是：根据生成式AI的市场格局，在文本、代码、图像、语音、视频、3D等领域，需要应用、模型、数据的相互配合、共同成熟。&lt;/p>
+&lt;h2 id="31市场格局">3.1.市场格局&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>文本方向&lt;/strong>：模型以GPT-3为代表，应用领域的机会点会出现在行销、销售、服务、写作、笔记等垂直领域。&lt;/li>
+&lt;li>&lt;strong>代码方向&lt;/strong>：模型以GPT-3为代表，应用领域的机会点会出现在代码生成、文档生成、自然语言转代码、Web/App快速构建。&lt;/li>
+&lt;li>&lt;strong>图像方向&lt;/strong>：模型以DallE、Stable Diffusion为代表，应用领域机会点在设计领域。&lt;/li>
+&lt;li>&lt;strong>语音/视频/3D方向&lt;/strong>：目前这些方向不明。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/genai-landscape-8.webp" alt="genai-landscape-8">&lt;/p>
+&lt;h2 id="32市场机会窗">3.2.市场机会窗&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>文本方向&lt;/strong>：关窗时间大约在2025年。&lt;/li>
+&lt;li>&lt;strong>代码方向&lt;/strong>：关窗时间大约在2025年。&lt;/li>
+&lt;li>&lt;strong>图像方向&lt;/strong>：关窗时间大约在2030年。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;font color="red" size=bold>**看到这个时间窗，是不是有一种时不我待的危机感？**&lt;/font>&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/genai-timeline-7.webp" alt="genai-timeline-7">&lt;/p>
+&lt;h1 id="4对杀手级应用的预测">4.对杀手级应用的预测&lt;/h1>
+&lt;blockquote>
+&lt;p>The best Generative AI companies can generate a sustainable competitive advantage by executing relentlessly on the flywheel between user engagement/data and model performance.&lt;/p>
+&lt;p>最好的生成式人工智能公司可以通过在用户参与度/数据和模型性能之间不断地执行飞轮来产生可持续的竞争优势。&lt;/p>
+&lt;/blockquote>
+&lt;p>上述是报告的第三个核心观点是：强调数据和模型的良性循环是杀手级应用的成功关键。&lt;/p>
+&lt;h2 id="41杀手级应用的形态">4.1.杀手级应用的形态&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>强大底座&lt;/strong>：杀手级应用一定依托一个强大的大模型。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>插件化&lt;/strong>：这些杀手级应用会以插件的形式寄生于现有的软件中，比如：VSCode中集成Code Copilot、PhotoShop中集成某种自动生成图片的插件。&lt;/p>
+&lt;ul>
+&lt;li>PS：笔者刚开始不太认同这一点，难道就不能是一个新的应用软件吗？&lt;strong>看到4.2才理解红杉资本的思路&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>交互式体验&lt;/strong>：目前的GPT都是&lt;strong>一次交互&lt;/strong>——比如：用户问一次，AI就生成一张图片。未来应该会出现&lt;strong>多次交互&lt;/strong>——用户问一次，AI生成一个图片。用户再要求AI根据这个图片继续修正，直到做出用户满意的图片。&lt;/p>
+&lt;ul>
+&lt;li>PS：这一点很有道理。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="42如何成为杀手级应用">4.2.如何成为杀手级应用？&lt;/h2>
+&lt;p>红杉资本强调**用户参与度/数据(user engagement/data)&lt;strong>与&lt;/strong>模型能力(model performance)**要形成良性循环：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>良性循环&lt;/strong>：①获得极高的用户参与度→②获得更多用户数据以训练出更好的模型(如：提示词工程、Fine-tuning，将用户行为作为标记的训练数据等)→③优秀的模型吸引更多的用户并提升参与度。&lt;/li>
+&lt;li>&lt;strong>聚焦垂直领域&lt;/strong>：杀手级应用不必做的大而全，而是聚焦某个垂直领域。&lt;/li>
+&lt;li>&lt;strong>植入客户工作流程&lt;/strong>：第一步先将AI以插件的形式整合到用户的生产流程中，进而实现用户增长和产品分发。第二步再做出新的软件系统替代用户的老软件系统。
+&lt;ul>
+&lt;li>PS：红杉资本给大伙儿指明了赚钱方法了，还不快去。。。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5你我只知道图灵测试它却知道三个世界">5.你我只知道图灵测试，它却知道三个世界&lt;/h1>
+&lt;blockquote>
+&lt;p>Generative AI is still very early. The platform layer is just getting good, and the application space has barely gotten going.&lt;/p>
+&lt;p>生成式人工智能仍处于早期阶段。平台层刚刚变得越来越好，而应用程序空间几乎没有发展起来。&lt;/p>
+&lt;/blockquote>
+&lt;p>这是红杉资本的最后一个观点，报告中的这一部分不太有更多干货了。笔者阅读这一部分的时候，思路情不自禁地跳跃到那个一直没有想通的&lt;strong>哲学问题&lt;/strong>：&lt;font color=red>**人类智能到底是什么？通用人工智能到底是什么？是什么驱动了人类智能和通用人工智能的发展？**&lt;/font>&lt;/p>
+&lt;p>其实很多人只听说过图灵测试，并且误解了图灵测试。图灵测试是一种思想测试，这个测试的理论基础是什么？如果理论基础是错的，通过了图灵测试又能证明什么？笔者在《【chatGPT】学习笔记1-机器还需要多久才能像人一样思考》文中，试图用&lt;strong>计算理论&lt;/strong>来解释人类智能、通用人工智能的关系与差异，但&lt;strong>计算理论&lt;/strong>作为图灵测试的理论基础也不太充分。&lt;/p>
+&lt;p>最近阅读&lt;strong>中文房间(Chinese Room)思想实验&lt;/strong>时，找到了&lt;strong>Karl Raimund Popper&lt;/strong>的&lt;strong>三个世界理论&lt;/strong>，这个理论似乎可以支撑图灵测试：&lt;/p>
+&lt;ul>
+&lt;li>世界1：物质的世界(客观世界)，如：物质、能量、有机物质or无机物质&lt;/li>
+&lt;li>世界2：心理的世界(主观世界)，如：感觉、意识、心里状态的过程&lt;/li>
+&lt;li>世界3：思想的世界，或者叫知识的世界。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727113454114.png" alt="image-20230727113454114">&lt;/p>
+&lt;p>那么，三个世界理论的内在逻辑是什么呢？&lt;/p>
+&lt;ul>
+&lt;li>宇宙的发展是从世界1，到世界2，到世界3的连续过程。&lt;/li>
+&lt;li>世界1和世界2存在直接相互作用，世界2和世界3存在直接相互作用，世界1和世界3的相互作用需要通过世界2为中介。&lt;/li>
+&lt;li>再通俗一点，人的意识(世界2)可以通过知识(世界3)创造新的物质(世界1)。&lt;/li>
+&lt;li>再通俗一点，现有知识(世界3)不足以解决客观问题(世界1)，会抛出&lt;strong>问题&lt;/strong>，驱动人的意识(世界2)发现、总结出新的知识(世界3)，同时解决问题(世界1)。&lt;/li>
+&lt;li>再通俗一点，人工智能可以看作一个知识大合集，人工智能存在于(世界3)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727114108607.png" alt="image-20230727114108607">&lt;/p>
+&lt;p>最后，提出三个世界的哲学价值是什么？&lt;/p>
+&lt;ul>
+&lt;li>正因为知识(世界3)能够&lt;strong>抛出问题&lt;/strong>，直接影响世界2，间接影响世界3，所以世界3的知识是可以自我发展的。&lt;/li>
+&lt;li>比如：是人类发现了&lt;strong>数列&lt;/strong>这种知识，于是世界3就增加了&lt;strong>数列&lt;/strong>这个新知识，因为世界3中有了数列，世界3还会增加新知识&lt;strong>奇偶数&lt;/strong>。奇偶数并不是人类意识(世界2)的新发现，而是由于&lt;strong>人类在世界3创造了数列这种新知识&lt;/strong>而产生的&lt;strong>结果&lt;/strong>。&lt;/li>
+&lt;li>通俗一点说，世界3知识的起点可能是人类，但世界3知识的发展、终点不是人类可以决定的。&lt;/li>
+&lt;li>这就是三个世界的哲学价值！这就是哲学意义上的&lt;font color=red>&lt;strong>人工智能科学发展观&lt;/strong>&lt;/font>！是不是可以自洽地解释通用人工智能是什么、通用人工智能会如何发展？&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97%5C%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%9B%9B%E6%AC%A1%E5%8F%91%E5%B1%95&amp;amp;%E4%B8%89%E4%B8%AA%E4%B8%96%E7%95%8C/image-20230727115506988.png" alt="image-20230727115506988">&lt;/p>
+&lt;p>写到这里，有两点感慨：&lt;/p>
+&lt;ul>
+&lt;li>很多时候，&lt;strong>人类没有&lt;/strong>自己的&lt;strong>独立思想和观点&lt;/strong>：可能没有(比如：他什么都不说)、可能只是重复(比如：他常常将图灵测试挂在嘴边，却不理解其中深意)、可能混乱(比如：他把图灵测试这种结果当做本质的起因)。&lt;/li>
+&lt;li>&lt;strong>AI是独立思想和观点本身&lt;/strong>：AI存在于世界3，AI是知识的合集，那么可不可以说AI就是知识、思想、观点本身呢？&lt;/li>
+&lt;/ul>
+&lt;p>所以，&lt;strong>你我只知道图灵测试，它却知道三个世界&lt;/strong>。&lt;/p>
+&lt;p>所以，&lt;strong>我们应该拥抱它，还是恐惧它，还是服从它。。。&lt;/strong>？&lt;/p>
+&lt;h1 id="6参考">6.参考&lt;/h1>
+&lt;blockquote>
+&lt;p>红杉资本报告原文：https://www.sequoiacap.com/article/generative-ai-a-creative-new-world/&lt;/p>
+&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记4-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
 &lt;h1 id="1机器学习任务介绍">1.机器学习任务介绍&lt;/h1>
 &lt;p>前段时间，同事上班路上骑车摔泥坑里骨折了，我就萌生了让人工智能自动识别路面泥坑的想法。&lt;/p>
 &lt;p>毕竟，同事要互相关怀、相亲相爱。另外，我们也可以通过这个机器学习的任务理解一下机器学习的基本原理。&lt;/p>
@@ -2593,140 +2732,4 @@ java/lang/Thread.java
 &lt;li>在本议题，演讲者DaShaun提供了&lt;code>AOT&lt;/code>、&lt;code>mvnd&lt;/code>等手段降低单体服务的资源消耗。&lt;/li>
 &lt;li>Spring Boot 3.0的核心思想也是在强调&lt;strong>小型化&lt;/strong>(小到可以部署到1台笔记本上)有助于&lt;strong>提升开发效率&lt;/strong>。&lt;/li>
 &lt;li>&lt;strong>小型化&lt;/strong>与&lt;strong>微服务架构&lt;/strong>不仅不矛盾，而且是微服务架构&lt;strong>重要的实践经验&lt;/strong>。&lt;/li>
-&lt;/ul></description></item><item><title>【SpringOne 2022】1.Introducing Spring Framework 6</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</link><pubDate>Sat, 28 Jan 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20221.introducing-spring-framework-6/</guid><description>&lt;p>SpringOne 2022第1个议题《Introducing Spring Framework 6》，主要介绍了Spring Framework6的关键特性以及里程碑，演讲者：Juergen Hoeller。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%911.IntroducingSpringFramework6/image-20230128153953141.png" alt="image-20230128153953141">&lt;/p>
-&lt;h1 id="1版本里程碑">1.版本里程碑&lt;/h1>
-&lt;h2 id="2个ga版本">2个GA版本&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>2022-11，发布&lt;code>Spring Framework 6.0 GA&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>Spring Framework 6.0 GA&lt;/code>配套&lt;code>Java 17/18/19&lt;/code>&lt;/li>
-&lt;li>匹配&lt;code>Spring Boot 3.0&amp;amp;3.1&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>2023-07，发布&lt;code>Spring Framework 6.1 GA&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>Spring Framework 6.1 GA&lt;/code>配套&lt;code>Java 17/18/19/20/21&lt;/code>&lt;/li>
-&lt;li>匹配&lt;code>Spring Boot 3.2&amp;amp;3.3&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%911.IntroducingSpringFramework6/image-20230128165742669.png" alt="image-20230128165742669">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>详细日程表&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%911.IntroducingSpringFramework6/image-20230128170617815.png" alt="image-20230128170617815">&lt;/p>
-&lt;h2 id="6x-vs-53x">&lt;code>6.x&lt;/code> vs &lt;code>5.3.x&lt;/code>&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>&lt;/th>
-&lt;th>Spring Framework 5.3.x&lt;/th>
-&lt;th>Spring Framework 6.x&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Java版本&lt;/td>
-&lt;td>&lt;code>Java 8/11/17&lt;/code>&lt;/td>
-&lt;td>&lt;code>Java 17+&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Java EE版本&lt;/td>
-&lt;td>&lt;code>Java EE 7/8&lt;/code>(javax namespace)&lt;/td>
-&lt;td>&lt;code>Jakarta EE 9/10&lt;/code>(jakarta namespace)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>命令式编程模型&lt;/code>和&lt;code>响应式编程模型&lt;/code>&lt;/td>
-&lt;td>新增&lt;/td>
-&lt;td>继承&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>配套&lt;code>Spring Boot&lt;/code>&lt;/td>
-&lt;td>&lt;code>Spring Boot 2.7.x&lt;/code>&lt;/td>
-&lt;td>&lt;code>Spring Boot 3.x&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>AOT&lt;/code>(Ahead-Of-Time)&lt;/td>
-&lt;td>-&lt;/td>
-&lt;td>新增&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>虚拟线程&lt;/code>&lt;/td>
-&lt;td>-&lt;/td>
-&lt;td>新增(基于Loom)&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h1 id="2java对spring-framework的影响">2.Java对Spring Framework的影响&lt;/h1>
-&lt;p>如下列举了对&lt;code>Spring Framework&lt;/code>产生影响的&lt;code>Java 17新特性&lt;/code>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>语言层&lt;/strong>：text blocks、switch改进
-&lt;ul>
-&lt;li>&lt;strong>类型系统&lt;/strong>：records、sealed classes&lt;/li>
-&lt;li>&lt;strong>代码组织形式&lt;/strong>：module introspection、module path scanning&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>标准库&lt;/strong>：集合的工厂方法(&lt;code>collection factory methods&lt;/code>)
-&lt;ul>
-&lt;li>如：&lt;code>List&amp;lt;Integer&amp;gt; list = List.of();&lt;/code>&lt;/li>
-&lt;li>参考：https://stackoverflow.com/questions/43533835/java-9-what-are-collection-factory-methods&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3java-ee对spring-framework的影响">3.Java EE对Spring Framework的影响&lt;/h1>
-&lt;p>从&lt;code>Java EE 8&lt;/code>到&lt;code>Jakarta EE 9&lt;/code>的升级，也会对&lt;code>Spring Framework&lt;/code>产生影响：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>Servlet API 5.0&lt;/code>&lt;/strong>：&lt;code>javax.servlet&lt;/code>变为&lt;code>jakarta.servlet&lt;/code>
-&lt;ul>
-&lt;li>基于&lt;code>Servlet API 5.0/6.0&lt;/code>的Web容器：
-&lt;ul>
-&lt;li>&lt;code>Tomcat 10.0/10.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>Jetty 11/12&lt;/code>&lt;/li>
-&lt;li>&lt;code>Undertow 2.3&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>&lt;code>JPA 3.0&lt;/code>&lt;/strong>：&lt;code>javax.persistence&lt;/code>变为&lt;code>jakarta.persistence&lt;/code>
-&lt;ul>
-&lt;li>基于&lt;code>JPA 3.0/3.1&lt;/code>的&lt;code>ORM&lt;/code>及&lt;code>Validator&lt;/code>：
-&lt;ul>
-&lt;li>&lt;code>Hibernate ORM 6.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>Hibernate Validator 7.0/8.0&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="4aot对spring-framework的影响">4.AOT对Spring Framework的影响&lt;/h1>
-&lt;p>伴随&lt;code>Java17&lt;/code>对&lt;code>AOT&lt;/code>的关注和支持，Spring Framework也增加了对&lt;code>AOT&lt;/code>的支持。&lt;/p>
-&lt;p>Java对&lt;code>AOT&lt;/code>的支持有两种技术路线：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>GraalVM&lt;/code>&lt;/strong>：编译期直接将Java源码变成可执行二进制(&lt;code>native executables&lt;/code>)&lt;/li>
-&lt;li>&lt;strong>&lt;code>CRaC&lt;/code>&lt;/strong>：保存JVM的Checkpoint，进而支持针对Checkpoint的还原(&lt;code>Coordinated Restore at Checkpoint&lt;/code>)
-&lt;ul>
-&lt;li>&lt;code>OpenJDK&lt;/code>启动了名为&lt;code>CRaC&lt;/code>的项目&lt;/li>
-&lt;li>参考：https://wiki.openjdk.org/display/crac&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="5虚拟线程对spring-framework的影响">5.虚拟线程对Spring Framework的影响&lt;/h1>
-&lt;p>随着&lt;code>虚拟线程&lt;/code>作为&lt;code>Java19&lt;/code>的预览特性，Spring Framework也进行了支持，但&lt;code>Juergen Hoeller&lt;/code>对&lt;code>虚拟线程&lt;/code>的阐述比较辩证：&lt;/p>
-&lt;ul>
-&lt;li>不要盲目迷信&lt;code>虚拟线程&lt;/code>，需要在合适的场景下使用，演讲中举了两类适用的场景：
-&lt;ul>
-&lt;li>如：基于IO流的Servlet&lt;/li>
-&lt;li>如：@Scheduler管理的消息型系统&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>不适用的场景：纯CPU计算型的业务逻辑(&lt;code>purely CPU-bound handlers&lt;/code>)&lt;/li>
-&lt;/ul>
-&lt;h1 id="6总结">6.总结&lt;/h1>
-&lt;ul>
-&lt;li>&lt;code>Spring Framework&lt;/code>作为一个底层框架，它的输入往往来自于Java语言规范、Java EE标准。&lt;/li>
-&lt;li>Spring团队规划的新特性非常紧贴Java新版本/新特性，即便这个新特性仅仅是&lt;code>Preview Feature&lt;/code>。&lt;/li>
-&lt;li>深刻理解Java新版本/新特性，有助于理解&lt;code>Spring Framework&lt;/code>的新特性以及它的市场规划。&lt;/li>
 &lt;/ul></description></item></channel></rss>

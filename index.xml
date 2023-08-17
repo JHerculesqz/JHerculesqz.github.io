@@ -93,7 +93,7 @@
 &lt;li>这就是信息向量化，词的向量化就是信息向量化的一种。&lt;/li>
 &lt;/ul>
 &lt;p>上述例子，来自于一段腾讯云介绍向量数据库的视频，各位小伙伴可以通过视频，看到更多形象化理解向量的例子：&lt;/p>
-&lt;iframe src="//player.bilibili.com/player.html?aid=489914023&amp;bvid=BV13N41167Q9&amp;cid=1237875667&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> &lt;/iframe>
+&lt;iframe src="//player.bilibili.com/player.html?aid=489914023&amp;bvid=BV13N41167Q9&amp;cid=1237875667&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
 &lt;h2 id="2嵌入">(2)嵌入&lt;/h2>
 &lt;p>先看一下嵌入的学术概念：&lt;/p>
 &lt;ul>

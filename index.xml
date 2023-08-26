@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 17 Aug 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 19 Aug 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,116 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/</link><pubDate>Thu, 17 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/</guid><description>&lt;p>人类的科学发展就是这样：每个十年百年就有一个天才振臂一呼，用一个理论解决那个时代的一个问题，同时成为下一个十年百年的天才理论的基石。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记8-神经概率语言模型，大语言模型的关键部件2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</link><pubDate>Sat, 19 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</guid><description>&lt;h1 id="1问题词嵌入的局限性">1.问题：词嵌入的局限性&lt;/h1>
+&lt;p>在《【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件》中，我们了解了词嵌入。&lt;/p>
+&lt;p>获取词向量后，在向量空间中可以获得每个词的向量表示，也可以通过向量了解词和词之间的语义关联性。&lt;/p>
+&lt;p>似乎，仅通过词嵌入就能解决很多NLP问题了，但词嵌入存在如下局限性：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>词向量的静态性&lt;/strong>：Word2Vec，以及后续的GloVe，在训练完成后，学习到的词向量是不会再被更新的。&lt;/li>
+&lt;li>&lt;strong>词向量的静态性&lt;/strong>决定了：
+&lt;ul>
+&lt;li>&lt;strong>词嵌入无法应对多义词&lt;/strong>：1个词只有1个向量，无法表示多义词。&lt;/li>
+&lt;li>&lt;strong>词嵌入无法应对未知词&lt;/strong>：没见过的词，显然Word2Vec不可能在向量空间中无中生有它对应的向量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>于是，神经概率语言模型NPLM横空出世。&lt;/p>
+&lt;h1 id="2对策神经概率语言模型nplm">2.对策：神经概率语言模型NPLM&lt;/h1>
+&lt;h2 id="1什么是神经概率语言模型">(1)什么是神经概率语言模型？&lt;/h2>
+&lt;p>科学家和大神们，很早就有了引入具有强大表示力和学习力的神经网络的想法。大致思想是：&lt;/p>
+&lt;ul>
+&lt;li>输入海量语料，神经网络学习词语在不同上下文中的概率分布。&lt;/li>
+&lt;li>词最终还是会被向量化，只是这些词向量的学习过程成为神经网络的一部分，词向量表达的人类语言规律(词语、语义等)最终被记录到神经网络的参数中。&lt;/li>
+&lt;/ul>
+&lt;p>接下来，深度学习三巨头之一Bengio，在2003年推出了神作《A Neural Probabilistic Language Model》：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>NPLM&lt;/strong>：Neural Probabilistic Language Model，神经概率语言模型。NPLM包含输入层、隐藏层、输出层。&lt;/li>
+&lt;li>&lt;strong>输入层&lt;/strong>：将单词映射到连续的词向量空间。&lt;/li>
+&lt;li>&lt;strong>隐藏层&lt;/strong>：通过非线性激活函数学习单词间的复杂关系。&lt;/li>
+&lt;li>&lt;strong>输出层&lt;/strong>：通过Softmax层产生下一个单词的概率分布。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>论文链接：https://dl.acm.org/doi/pdf/10.5555/944919.944966&lt;/p>
+&lt;/blockquote>
+&lt;p>下图是Bengio论文中的阐述的神经概率语言模型的架构，后续NLP方向上的各种技术都是围绕这个架构进行各层的优化！&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230818065825957.png" alt="image-20230818065825957">&lt;/p>
+&lt;p>对上图进行细化，笔者标出了输入层、隐藏层、输出层：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825094252544.png" alt="image-20230825094252544">&lt;/p>
+&lt;h2 id="2输入层">(2)输入层&lt;/h2>
+&lt;ul>
+&lt;li>输入层的&lt;strong>职责&lt;/strong>：将输入的词，开展词嵌入，学习到词向量后存储在输入层。因此，输入层也可以叫嵌入层。&lt;/li>
+&lt;li>输入层的&lt;strong>输入&lt;/strong>：词本身&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095132476.png" alt="image-20230825095132476">&lt;/li>
+&lt;li>输入层的&lt;strong>输出&lt;/strong>：词向量&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095205472.png" alt="image-20230825095205472">&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095238666.png" alt="image-20230825095238666">&lt;/p>
+&lt;h2 id="3隐藏层">(3)隐藏层&lt;/h2>
+&lt;ul>
+&lt;li>隐藏层的&lt;strong>职责&lt;/strong>：学习词与词之间的关系&lt;/li>
+&lt;li>隐藏层采用了&lt;strong>非线性激活函数&lt;/strong>：采用非线性激活函数的本质是让神经网络的**&amp;ldquo;脑回路&amp;rdquo;**复杂起来(如：使用激活函数可以将线性层提升为非线性层)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095635192.png" alt="image-20230825095635192">&lt;/p>
+&lt;h2 id="4输出层">(4)输出层&lt;/h2>
+&lt;ul>
+&lt;li>输出层的&lt;strong>职责&lt;/strong>：通过Softmax层，输出下个单词的概率分布&lt;/li>
+&lt;li>&lt;strong>Softmax&lt;/strong>：归一化，Softmax层的输入是各个词得到的分数，输出是将这些分数归一化到0~1的值域内。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825102215771.png" alt="image-20230825102215771">&lt;/p>
+&lt;h2 id="4隐藏层的优化">(4)隐藏层的优化&lt;/h2>
+&lt;ul>
+&lt;li>神经网络似乎天生不擅长长序列问题，所以后续很多NLP发展的技术，都是在&lt;strong>优化NPLM在长序列上的表现&lt;/strong>。
+&lt;ul>
+&lt;li>浅层网络无法捕捉文本中复杂的信息规律。&lt;/li>
+&lt;li>普通的深层神经网络也不能很好处理长距离的依赖关系。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>NPLM的巧妙之处在于：&lt;strong>隐藏层可以使用任意的神经网络去替换&lt;/strong>。&lt;/li>
+&lt;li>RNN、LSTM横空出世，在NLPM中长期霸榜：
+&lt;ul>
+&lt;li>RNN，循环神经网络，这种特殊的神经网络结构，可以将网络的输出作为网络的输入，使得神经网络能够处理数据的同时保留了&lt;strong>前世的记忆&lt;/strong>。&lt;/li>
+&lt;li>LSTM，是RNN的经典代表作，很长一段时间作为NLP问题的SOTA(state of the art)模型
+&lt;ul>
+&lt;li>注意：被评为SOTA，而不是benchmark，或者baseline，是一种极高的荣誉。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3代码nplm">3.代码：NPLM&lt;/h1>
+&lt;p>接下来，进入代码环节。&lt;/p>
+&lt;h2 id="step11构建数据集">STEP1.1.构建数据集&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093203843.png" alt="image-20230826093203843">&lt;/p>
+&lt;h2 id="step12格式化训练数据">STEP1.2.格式化训练数据&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093227289.png" alt="image-20230826093227289">&lt;/p>
+&lt;h2 id="step2构建nplm网络">STEP2.构建NPLM网络&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093351356.png" alt="image-20230826093351356">&lt;/p>
+&lt;h2 id="step3训练nplm网络">STEP3.训练NPLM网络&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093407105.png" alt="image-20230826093407105">&lt;/p>
+&lt;h2 id="step6测试nplm">STEP6.测试NPLM&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093420906.png" alt="image-20230826093420906">&lt;/p>
+&lt;h1 id="4代码nplm优化">4.代码：NPLM优化&lt;/h1>
+&lt;p>再使用RNN、LSTM优化NPLM架构。&lt;/p>
+&lt;h2 id="step11构建数据集-1">STEP1.1.构建数据集&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093203843.png" alt="image-20230826093203843">&lt;/p>
+&lt;h2 id="step12格式化训练数据-1">STEP1.2.格式化训练数据&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093227289.png" alt="image-20230826093227289">&lt;/p>
+&lt;h2 id="step2构建nplm网络-1">STEP2.构建NPLM网络&lt;/h2>
+&lt;ul>
+&lt;li>核心就是在此替换隐藏层和输出层&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093621577.png" alt="image-20230826093621577">&lt;/p>
+&lt;h2 id="step3训练nplm网络-1">STEP3.训练NPLM网络&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093643273.png" alt="image-20230826093643273">&lt;/p>
+&lt;h2 id="step6测试nplm-1">STEP6.测试NPLM&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093701798.png" alt="image-20230826093701798">&lt;/p>
+&lt;h1 id="5小结">5.小结&lt;/h1>
+&lt;p>最后，我们来做一些对比和小结：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从目标看&lt;/strong>：NPLM是解决词汇出现概率的问题，Word2Vec是解决如何将词转换为向量的问题。&lt;/li>
+&lt;li>&lt;strong>从实现看&lt;/strong>：NPLM和Word2Vec都是基于神经网络的模型，但Word2Vec没有激活函数，属于利用了浅层神经网络。&lt;/li>
+&lt;li>&lt;strong>从词向量看&lt;/strong>：NPLM中的词向量是神经网络的一部分，基于NPLM的目标，人类对它的训练是不会停止的，训练一次，词向量就会变化一次。而基于Word2Vec的目标，人类只会对它训练一次，训练好，词向量就固化不变了。&lt;/li>
+&lt;/ul>
+&lt;p>NPLM可以算作如今大语言模型的祖师爷了，在学界存在极高的地位和价值，后续很多年的RNN、LSTM都只能算作对NPLM的架构优化。&lt;/p>
+&lt;p>但，NPLM也存在历史局限性，于是才有了后来的大模型的关键部件Transformer，且听下回分解。&lt;/p></description></item><item><title>【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/</link><pubDate>Thu, 17 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/</guid><description>&lt;p>人类的科学发展就是这样：每个十年百年就有一个天才振臂一呼，用一个理论解决那个时代的一个问题，同时成为下一个十年百年的天才理论的基石。&lt;/p>
 &lt;p>目前炙手可热的Transformer既是如此，LSTM、Word2Vec等是它的基石，共同构筑了现在的大语言模型的关键部件和理论基础。&lt;/p>
 &lt;p>之前发了一个朋友圈，将对大语言模型影响深远的论文，梳理了三条脉络：&lt;/p>
 &lt;ul>
@@ -2786,107 +2895,4 @@ java/lang/Thread.java
 &lt;li>
 &lt;p>Spring团队也在探索性地将某些模块使用&lt;code>WASM&lt;/code>。&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>【SpringOne 2022】3.Protect Your Microservices with Spring Cloud Gateway</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</link><pubDate>Tue, 07 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20223.protect-your-microservices-with-spring-cloud-gateway/</guid><description>&lt;p>SpringOne 2022第3个议题《Protect Your Microservices with Spring Cloud Gateway》，主要展示Spring Cloud Gateway的特性，演讲者：Cora lberkleid。&lt;/p>
-&lt;h1 id="1项目简介">1.项目简介&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>不是一个新项目&lt;/strong>：它能入选&lt;code>SpringOne 2022&lt;/code>的议题，应该是它的确非常实用。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>PS：SpringOne的每个议题不一定都是讲新技术，演讲者也很接地气(不太甩大词和抛概念)，赞！&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>Spring Cloud Gateway&lt;/code>的架构地位&lt;/strong>：在整个架构中的位置是&lt;code>API网关&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207101213825.png" alt="image-20230207101213825">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Spring Cloud Gateway的愿景&lt;/strong>：议题材料中有一段话，表明了此项目的愿景和价值，如下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207103316835.png" alt="image-20230207103316835">&lt;/p>
-&lt;h1 id="2基本原理">2.基本原理&lt;/h1>
-&lt;h2 id="21职责">2.1.职责&lt;/h2>
-&lt;p>Gateway的本质就是一组&lt;strong>路由转发规则集&lt;/strong>+&lt;strong>按规则进行路由转发&lt;/strong>：&lt;/p>
-&lt;p>即，当Gateway发现：&lt;strong>如果&lt;/strong>调用方的请求满足某些条件，&lt;strong>则&lt;/strong>在路由转发过程中do something。&lt;/p>
-&lt;p>其中，&lt;code>在路由转发过程中do something&lt;/code>具备如下大颗粒的能力：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>熔断&lt;/strong>：集成 Hystrix 断路器。&lt;/li>
-&lt;li>&lt;strong>动态路由&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>限流&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>请求修改&lt;/strong>：修改请求的输入输出、路径重写等。&lt;/li>
-&lt;li>&amp;hellip;&amp;hellip;&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207105042685.png" alt="image-20230207105042685">&lt;/p>
-&lt;h2 id="22how-it-works">2.2.How it works?&lt;/h2>
-&lt;ul>
-&lt;li>Gateway提出了3个架构概念&lt;code>Route(路由)&lt;/code>、&lt;code>Predicate(断言)&lt;/code>、&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
-&lt;li>这3个架构概念的关系是：1个&lt;code>Route(路由)&lt;/code>配置=N个&lt;code>Predicate(断言)&lt;/code>+N个&lt;code>Filter(过滤器)&lt;/code>+1个&lt;code>URI&lt;/code>。&lt;/li>
-&lt;li>路由匹配和路由转发的过程：
-&lt;ul>
-&lt;li>STEP1.Gateway拦截到Client侧的请求。&lt;/li>
-&lt;li>STEP2.用STEP1拦截到的请求去匹配&lt;code>Route(路由)&lt;/code>中的&lt;code>Predicate(断言)&lt;/code>。&lt;/li>
-&lt;li>STEP3.如果STEP2成功匹配到某个&lt;code>Route(路由)&lt;/code>配置，则将STEP1拦截到的请求转发到该&lt;code>Route(路由)&lt;/code>配置中的URI上。&lt;/li>
-&lt;li>STEP4.在转发到目标URI的过程中，执行该&lt;code>Route(配置)&lt;/code>中的N个&lt;code>Filter(过滤器)&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3demo">3.Demo&lt;/h1>
-&lt;p>演讲人Cora lberkleid现场演示了如何使用&lt;code>Spring Cloud Gateway&lt;/code>快速开发1个API网关，Demo的代码地址：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/ciberkleid/spring-cloud-gateway-sample">https://github.com/ciberkleid/spring-cloud-gateway-sample&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="31一个简单的route配置">3.1.一个简单的Route配置&lt;/h2>
-&lt;ul>
-&lt;li>演讲人首先展示了一个简单的Route配置：
-&lt;ul>
-&lt;li>Path=/uuid：这个断言表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>时，则匹配成功。&lt;/li>
-&lt;li>uri=https://httpbin.org：表示断言匹配成功后，将客户端请求转发到&lt;code>https://httpbin.org&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207111959581.png" alt="image-20230207111959581">&lt;/p>
-&lt;p>如下是执行效果：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114627396.png" alt="image-20230207114627396">&lt;/p>
-&lt;h2 id="32host断言">3.2.Host断言&lt;/h2>
-&lt;ul>
-&lt;li>红框：在3.1的配置基础上增加了Host断言，表示客户端请求为&lt;code>http://localhost/uuid&lt;/code>，且http的Host=example.com，则匹配成功。&lt;/li>
-&lt;li>绿框：演示了客户端请求虽然是&lt;code>http://localhost/uuid&lt;/code>但Host没有值时，无法匹配，进而转发失败。&lt;/li>
-&lt;li>蓝框：演示了客户端请求是&lt;code>http://localhost/uuid&lt;/code>且Host=example.com时，成功匹配，进而转发成功。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207114804353.png" alt="image-20230207114804353">&lt;/p>
-&lt;h2 id="33转发过滤器">3.3.转发过滤器&lt;/h2>
-&lt;ul>
-&lt;li>SetPath=/uuid：表示客户端请求&lt;code>http://localhost/demo&lt;/code>，Gateway会将此请求转发为&lt;code>http://httpbin.org/uuid&lt;/code>&lt;/li>
-&lt;li>测试结果如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207135559062.png" alt="image-20230207135559062">&lt;/p>
-&lt;h2 id="34灰度发布">3.4.灰度发布&lt;/h2>
-&lt;ul>
-&lt;li>Gateway支持设置路由的权重，进而实现灰度发布。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207140904664.png" alt="image-20230207140904664">&lt;/p>
-&lt;ul>
-&lt;li>演讲人演示了配置了两个&lt;code>Route&lt;/code>，如果将&lt;code>route1&lt;/code>的&lt;code>Weight&lt;/code>属性改小，将会引流到&lt;code>route2&lt;/code>，进而实现灰度发布。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207141250833.png" alt="image-20230207141250833">&lt;/p>
-&lt;h2 id="35熔断">3.5.熔断&lt;/h2>
-&lt;ul>
-&lt;li>Demo中，熔断器定义5秒内接口必须返回。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142305789.png" alt="image-20230207142305789">&lt;/p>
-&lt;ul>
-&lt;li>配置文件中，使能熔断器&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142345120.png" alt="image-20230207142345120">&lt;/p>
-&lt;ul>
-&lt;li>执行效果：
-&lt;ul>
-&lt;li>红框：如果接口在4秒内返回，Gateway正常响应&lt;/li>
-&lt;li>绿框：如果接口在10秒才能返回，Gateway熔断&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%913.ProtectYourMicroserviceswithSpringCloudGateway/image-20230207142641006.png" alt="image-20230207142641006">&lt;/p>
-&lt;h1 id="4总结">4.总结&lt;/h1>
-&lt;ul>
-&lt;li>在本议题，演讲者Cora lberkleid展示了&lt;code>Spring Cloud Gateway&lt;/code>的原理和Demo。&lt;/li>
-&lt;li>&lt;code>Spring Cloud Gateway&lt;/code>采用&amp;rdquo;&lt;strong>断言=&amp;gt;过滤器链=&amp;gt;转发&lt;/strong>&amp;ldquo;的思想实现了API网关，开发效率不错。&lt;/li>
 &lt;/ul></description></item></channel></rss>

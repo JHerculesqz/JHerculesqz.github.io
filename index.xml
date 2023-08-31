@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 19 Aug 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Aug 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,125 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记8-神经概率语言模型，大语言模型的关键部件2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</link><pubDate>Sat, 19 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</guid><description>&lt;h1 id="1问题词嵌入的局限性">1.问题：词嵌入的局限性&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-transformer%E4%B9%8Bseq2seq%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/</link><pubDate>Mon, 21 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-transformer%E4%B9%8Bseq2seq%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/</guid><description>&lt;h1 id="1seq2seqtransformer的雏形">1.Seq2Seq，Transformer的雏形&lt;/h1>
+&lt;h2 id="11为什么会出现seq2seq">1.1.为什么会出现Seq2Seq？&lt;/h2>
+&lt;p>在神经概率语言模型NPLM出现后的很长一段时间，都是在这种网络架构下进行优化。但，依然面临很多难题(主要是循环神经网络RNNs的局限)：&lt;/p>
+&lt;ul>
+&lt;li>如：输入序列长度增加时性能下降&lt;/li>
+&lt;li>如：顺讯处理导致计算效率低&lt;/li>
+&lt;li>……&lt;/li>
+&lt;/ul>
+&lt;p>在2014年，Seq2Seq的提出，给人类一个不错的启发。&lt;/p>
+&lt;p>随后在自注意力机制的加持下，Transformer就诞生了。&lt;/p>
+&lt;h2 id="12seq2seq架构概览">1.2.Seq2Seq架构概览&lt;/h2>
+&lt;p>大神&lt;code>Ilya Sutskever&lt;/code>在2014年，以第一作者的身份，发表了论文《Sequence to Sequence Learning with Neural Networks》。&lt;/p>
+&lt;blockquote>
+&lt;p>论文地址：https://papers.nips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162206474.png" alt="image-20230831162206474">&lt;/p>
+&lt;p>顺便说一嘴，大神&lt;code>Ilya Sutskever&lt;/code>就是这位大哥，OpenAI联合创始人和首席科学家，各大自媒体都在播放他老人家的演讲视频：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162529973.png" alt="image-20230831162529973">&lt;/p>
+&lt;p>这篇论文的核心就是这张图，阐述了Seq2Seq的&lt;strong>编码器-解码器架构&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162726199.png" alt="image-20230831162726199">&lt;/p>
+&lt;p>初次理解这张图，&lt;strong>需要费点儿脑细胞&lt;/strong>，我们接下来详细拆解。&lt;/p>
+&lt;h2 id="13seq2seq架构详解">1.3.Seq2Seq架构详解&lt;/h2>
+&lt;h3 id="1整体模型架构">(1)&amp;ldquo;整体模型&amp;quot;架构&lt;/h3>
+&lt;p>Seq2Seq会将变长的&lt;strong>输入序列&lt;/strong>，转换为变长的&lt;strong>输出序列&lt;/strong>。如下图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831170025140.png" alt="image-20230831170025140">&lt;/p>
+&lt;p>这里举一个例子——将&amp;quot;你是谁&amp;quot;翻译为英文&amp;quot;Who are u&amp;rdquo;：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>t1时刻&lt;/strong>：用户输入序列&amp;quot;你是谁&amp;quot;三个字。&lt;/li>
+&lt;li>&lt;strong>t2时刻&lt;/strong>：&amp;ldquo;你&amp;quot;字输入给Seq2Seq。&lt;/li>
+&lt;li>&lt;strong>t3时刻&lt;/strong>：&amp;ldquo;是&amp;quot;字输入给Seq2Seq。&lt;/li>
+&lt;li>&lt;strong>t4时刻&lt;/strong>：&amp;ldquo;谁&amp;quot;字输入给Seq2Seq。&lt;/li>
+&lt;li>&lt;strong>t5时刻&lt;/strong>：Seq2Seq输出&amp;quot;Who&amp;rdquo;。&lt;/li>
+&lt;li>&lt;strong>t6时刻&lt;/strong>：Seq2Seq输出&amp;quot;are&amp;rdquo;。&lt;/li>
+&lt;li>&lt;strong>t7时刻&lt;/strong>：Seq2Seq输出&amp;quot;u&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831170404160.png" alt="image-20230831170404160">&lt;/p>
+&lt;h3 id="2编码器-解码器架构">(2)&amp;ldquo;编码器-解码器&amp;quot;架构&lt;/h3>
+&lt;p>进一步拆解整体模型架构，Seq2Seq由编码器+解码器组成：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831171003578.png" alt="image-20230831171003578">&lt;/p>
+&lt;p>这里还是以将&amp;quot;你是谁&amp;quot;翻译为英文&amp;quot;Who are u&amp;quot;例子来解析：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>t1时刻&lt;/strong>：用户输入序列&amp;quot;你是谁&amp;quot;三个字。&lt;/li>
+&lt;li>&lt;strong>t2时刻&lt;/strong>：&amp;ldquo;你&amp;quot;字输入给编码器。&lt;/li>
+&lt;li>&lt;strong>t3时刻&lt;/strong>：&amp;ldquo;是&amp;quot;字输入给编码器。&lt;/li>
+&lt;li>&lt;strong>t4时刻&lt;/strong>：&amp;ldquo;谁&amp;quot;字输入给编码器。&lt;/li>
+&lt;li>&lt;strong>t5时刻&lt;/strong>：编码器将学习到上下文向量，传递给解码器&lt;/li>
+&lt;li>&lt;strong>t6时刻&lt;/strong>：解码器输出&amp;quot;Who&amp;rdquo;。&lt;/li>
+&lt;li>&lt;strong>t7时刻&lt;/strong>：解码器输出&amp;quot;are&amp;rdquo;。&lt;/li>
+&lt;li>&lt;strong>t8时刻&lt;/strong>：解码器输出&amp;quot;u&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831171625206.png" alt="image-20230831171625206">&lt;/p>
+&lt;h3 id="3编码器解码器微观逻辑">(3)&amp;ldquo;编码器、解码器&amp;quot;微观逻辑&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>编码器、解码器的具体实现&lt;/strong>：在论文中，它们都是采用RNN实现。如下图所示：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>编码器的输入&lt;/strong>：0号隐藏层状态向量 + 1号输入词向量&lt;/li>
+&lt;li>&lt;strong>编码器的输出&lt;/strong>：1号隐藏层状态向量 + 1号词输出向量&lt;/li>
+&lt;li>&lt;strong>编码器的下一次输入&lt;/strong>：1号隐藏层状态向量 + 2号输入词向量&lt;/li>
+&lt;li>&lt;strong>编码器的下一次输出&lt;/strong>：2号隐藏层状态向量 + 2号输出词向量&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831222457684.png" alt="image-20230831222457684">&lt;/li>
+&lt;li>&lt;strong>解码器的输入&lt;/strong>：0号隐藏层状态向量 + 1号Teach Forcing输入词向量&lt;/li>
+&lt;li>&lt;strong>解码器的输出&lt;/strong>：1号词输出向量&lt;/li>
+&lt;li>&lt;strong>解码器的下一次输入&lt;/strong>：0号隐藏层状态向量 + 1号词输出向量 + 2号Teach Forcing输入词向量&lt;/li>
+&lt;li>&lt;strong>解码器的下一次输出&lt;/strong>：2号输出词向量&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831225007834.png" alt="image-20230831225007834">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>这还是不太直观，我们再把编码器、解码器&lt;strong>按时序进一步展开&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>t1时刻&lt;/strong>：用户输入序列&amp;quot;你是谁&amp;quot;三个字。&lt;/li>
+&lt;li>&lt;strong>t2时刻&lt;/strong>：&amp;ldquo;你&amp;quot;字输入给编码器，编码器输出&lt;code>1号隐藏层状态&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>t3时刻&lt;/strong>：&amp;ldquo;是&amp;quot;字 + &lt;code>1号隐藏层状态&lt;/code>，输入给编码器，编码器输出&lt;code>2号隐藏层状态&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>t4时刻&lt;/strong>：&amp;ldquo;谁&amp;quot;字 + &lt;code>2号隐藏层状态&lt;/code>，输入给编码器，编码器输出&lt;code>3号隐藏层状态&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>t5时刻&lt;/strong>：&lt;code>3号隐藏层状态&lt;/code> + TeachForcing的&amp;quot;Who&amp;quot;字，输入给解码器，解码器输出&lt;code>Who&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>t6时刻&lt;/strong>：&lt;code>3号隐藏层状态&lt;/code> + TeachForcing的&amp;quot;are&amp;quot;字 + 解码器输出&lt;code>who&lt;/code>，输入给解码器，解码器输出&lt;code>are&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>t7时刻&lt;/strong>：&lt;code>3号隐藏层状态&lt;/code> + TeachForcing的&amp;quot;u&amp;quot;字 + 解码器输出&lt;code>are&lt;/code>，输入给解码器，解码器输出&lt;code>u&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831225749199.png" alt="image-20230831225749199">&lt;/p>
+&lt;ul>
+&lt;li>这里有一个细节，什么是&lt;strong>Teach Forcing&lt;/strong>？
+&lt;ul>
+&lt;li>我们可以想象，如果1号解码器的预测错了，那么2号、3号解码器都会错，进而导致学习效率非常低。&lt;/li>
+&lt;li>Teach Forcing好像&lt;strong>开卷考试&lt;/strong>，如果1号解码器预测错了，Teach Forcing会纠正预测结果，进而加速学习效率。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="3优点">(3)优点&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>变长序列&lt;/strong>：由于编码器、解码器采用RNN实现，所以输入序列可以是变长、输出序列也可以是变长。而CNN、DNN都不支持变长序列。&lt;/li>
+&lt;li>&lt;strong>信息压缩&lt;/strong>：隐藏层状态，或者叫上下文向量，本质上将输入序列进行了信息压缩，转变为含有上下文语义的向量。&lt;/li>
+&lt;/ul>
+&lt;h3 id="4劣势">(4)劣势&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>长序列信息损失&lt;/strong>：由于上下文向量为定长，所以当输入序列过长时编码器会出现信息损失。&lt;font color=red>&lt;strong>这就是注意力机制的发力点，先埋个伏笔&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>&lt;strong>效率&lt;/strong>：采用RNN(如：LSTM、GRU)实现编码器、解码器，RNN会面临梯度消失、梯度爆炸等问题。&lt;/li>
+&lt;/ul>
+&lt;h1 id="2代码">2.代码&lt;/h1>
+&lt;h2 id="step11构建数据集">STEP1.1.构建数据集&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231557775.png" alt="image-20230831231557775">&lt;/p>
+&lt;h2 id="step12结构化训练数据">STEP1.2.结构化训练数据&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231753952.png" alt="image-20230831231753952">&lt;/p>
+&lt;h2 id="step21定义编码器和解码器类">STEP2.1.定义编码器和解码器类&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231855888.png" alt="image-20230831231855888">&lt;/p>
+&lt;h2 id="step22定义seq2seq模型">STEP2.2.定义Seq2Seq模型&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231925444.png" alt="image-20230831231925444">&lt;/p>
+&lt;h2 id="step3训练seq2seq模型">STEP3.训练Seq2Seq模型&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831232035429.png" alt="image-20230831232035429">&lt;/p>
+&lt;h2 id="step4测试seq2seq模型">STEP4.测试Seq2Seq模型&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831232116723.png" alt="image-20230831232116723">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;ul>
+&lt;li>本文解析了Seq2Seq的内部实现，理解下图的关键是——&lt;strong>按照时序&lt;/strong>，分析清楚每个编码器or解码器&lt;strong>有几个输入、几个输出&lt;/strong>。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162726199.png" alt="image-20230831162726199">&lt;/li>
+&lt;li>理解了Seq2Seq，我们接下来就可以逐步实现完整的Transformer了，且听下回分解。&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记8-神经概率语言模型，大语言模型的关键部件2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</link><pubDate>Sat, 19 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</guid><description>&lt;h1 id="1问题词嵌入的局限性">1.问题：词嵌入的局限性&lt;/h1>
 &lt;p>在《【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件》中，我们了解了词嵌入。&lt;/p>
 &lt;p>获取词向量后，在向量空间中可以获得每个词的向量表示，也可以通过向量了解词和词之间的语义关联性。&lt;/p>
 &lt;p>似乎，仅通过词嵌入就能解决很多NLP问题了，但词嵌入存在如下局限性：&lt;/p>
@@ -2757,142 +2875,4 @@ java/lang/Thread.java
 &lt;p>&lt;strong>经常感慨计算机世界的知识浩渺无尽，自己却那般无知渺小。&lt;/strong>&lt;/p>
 &lt;p>&lt;strong>随着文明的发展，浩渺无尽是相对的，对于我是无尽，对于AI可能是有穷。&lt;/strong>&lt;/p>
 &lt;p>附上&lt;strong>chatGPT对Java主线程与系统线程关系&lt;/strong>的答案：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230212001032910.png" alt="image-20230212001032910">&lt;/p></description></item><item><title>【SpringOne 2022】4.Running Untrusted Code in Spring Using WebAssembly</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</link><pubDate>Thu, 09 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20224.running-untrusted-code-in-spring-using-webassembly/</guid><description>&lt;p>SpringOne 2022第4个议题《Running Untrusted Code in Spring Using WebAssembly》，主要在介绍WebAssembly的Host和Guest，引申出Spring结合WebAssembly的一些展望，演讲者：Dave Syer。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209102504607.png" alt="image-20230209102504607">&lt;/p>
-&lt;h1 id="1what-is-webassembly">1.What is WebAssembly?&lt;/h1>
-&lt;ul>
-&lt;li>WebAssembly有两个概念&lt;code>Host&lt;/code>和&lt;code>Guest&lt;/code>:
-&lt;ul>
-&lt;li>&lt;code>Host&lt;/code>可以认为是能够执行WebAssembly的容器，比如：浏览器。&lt;/li>
-&lt;li>&lt;code>Guest&lt;/code>就是&lt;code>WASM&lt;/code>(WebAssembly)，我们可以直接编写&lt;code>WASM&lt;/code>，也可以用C/C#/AssemblyScript/Rust这些语言去写再编译成&lt;code>WASM&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104158257.png" alt="image-20230209104158257">&lt;/p>
-&lt;ul>
-&lt;li>WebAssembly的语言规范在此：
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/WebAssembly/spec">https://github.com/WebAssembly/spec&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209104813110.png" alt="image-20230209104813110">&lt;/p>
-&lt;ul>
-&lt;li>其它说明：
-&lt;ul>
-&lt;li>由于&lt;code>WASM&lt;/code>主要的应用场景是在浏览器领域，所以&lt;code>JavaScript&lt;/code>是比较主流的&lt;code>Host&lt;/code>编程语言。&lt;/li>
-&lt;li>其它&lt;code>Host&lt;/code>编程语言还有Rust、Go、Python、C#、Java等等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2wasm与spring可以结合的应用场景">2.WASM与Spring可以结合的应用场景&lt;/h1>
-&lt;ul>
-&lt;li>Serverless(无服务器)架构是云原生领域比较受欢迎的理念，其核心目的是增效降本。如下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209111925644.png" alt="image-20230209111925644">&lt;/p>
-&lt;ul>
-&lt;li>Serverless架构提供一种更加&amp;quot;代码碎片化&amp;quot;的软件架构范式——&lt;code>FAAS(Function as a Services)&lt;/code>，以Amazon Lambda为例：
-&lt;ul>
-&lt;li>&lt;code>AWS Lambda&lt;/code>可以作为&lt;code>Host&lt;/code>执行&lt;strong>用户提交的函数&lt;/strong>——这个可以认为是&lt;code>Guest&lt;/code>侧的代码。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209112437086.png" alt="image-20230209112437086">&lt;/p>
-&lt;ul>
-&lt;li>通过对&lt;code>Serverless&lt;/code>/&lt;code>FAAS&lt;/code>的介绍，我们可以看到可以基于&lt;code>Spring&lt;/code>+&lt;code>WASM&lt;/code>快速实现&lt;code>FAAS&lt;/code>：
-&lt;ul>
-&lt;li>STEP1.用户用自己擅长的编程语言实现的&lt;code>Guest&lt;/code>代码&lt;/li>
-&lt;li>STEP2.用户提交这段&lt;code>Guest&lt;/code>代码，提交时被编译为&lt;code>WASM&lt;/code>&lt;/li>
-&lt;li>STEP3.&lt;code>Spring&lt;/code>实现的云端微服务执行STEP2的&lt;code>WASM&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3一个简单的demo">3.一个简单的Demo&lt;/h1>
-&lt;ul>
-&lt;li>演讲者编写了1个简单的&lt;code>WASM&lt;/code>，
-&lt;ul>
-&lt;li>此&lt;code>WASM&lt;/code>实现了1个名为&lt;code>add&lt;/code>的函数&lt;/li>
-&lt;li>&lt;code>add&lt;/code>函数包含2个入参，入参都是整型(&lt;code>i32&lt;/code>)&lt;/li>
-&lt;li>&lt;code>add&lt;/code>函数返回整型(&lt;code>i32&lt;/code>)&lt;/li>
-&lt;li>add函数的内部实现是将2个入参相加&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142449065.png" alt="image-20230209142449065">&lt;/p>
-&lt;ul>
-&lt;li>演讲者的使用MDN提供的测试工具作为&lt;code>Host&lt;/code>执行上述&lt;code>WASM&lt;/code>，JavaScript代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209142856947.png" alt="image-20230209142856947">&lt;/p>
-&lt;h1 id="4wasm的guest端可选的编程语言">4.&lt;code>WASM&lt;/code>的&lt;code>Guest&lt;/code>端可选的编程语言&lt;/h1>
-&lt;h2 id="41c语言">4.1.C语言&lt;/h2>
-&lt;ul>
-&lt;li>使用C语言编写如下代码：
-&lt;ul>
-&lt;li>函数&lt;code>echo&lt;/code>返回整型，内部实现是调用函数&lt;code>get&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>将C语言编译成&lt;code>WASM&lt;/code>的可选工具如下：
-&lt;ul>
-&lt;li>Emscripten&lt;/li>
-&lt;li>Wasi SDK&lt;/li>
-&lt;li>Binaryen&lt;/li>
-&lt;li>LLVM/Clang&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143034320.png" alt="image-20230209143034320">&lt;/p>
-&lt;ul>
-&lt;li>编译后得到的&lt;code>WASM&lt;/code>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143359629.png" alt="image-20230209143359629">&lt;/p>
-&lt;h2 id="42assemblyscript">4.2.AssemblyScript&lt;/h2>
-&lt;ul>
-&lt;li>使用TypeScript编写如下代码：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209143514050.png" alt="image-20230209143514050">&lt;/p>
-&lt;ul>
-&lt;li>编译后得到的&lt;code>WASM&lt;/code>很长，在此仅展示部分。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144136043.png" alt="image-20230209144136043">&lt;/p>
-&lt;h2 id="43rust">4.3.Rust&lt;/h2>
-&lt;ul>
-&lt;li>使用Rust编写的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144304144.png" alt="image-20230209144304144">&lt;/p>
-&lt;h2 id="44java">4.4.Java&lt;/h2>
-&lt;ul>
-&lt;li>使用Java编写的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144431808.png" alt="image-20230209144431808">&lt;/p>
-&lt;ul>
-&lt;li>可选的编译器如下：
-&lt;ul>
-&lt;li>TeamVM&lt;/li>
-&lt;li>JSweet&lt;/li>
-&lt;li>J2cl&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="5wasm的host端可选的编程语言">5.&lt;code>WASM&lt;/code>的&lt;code>Host&lt;/code>端可选的编程语言&lt;/h1>
-&lt;h2 id="51javascript">5.1.JavaScript&lt;/h2>
-&lt;ul>
-&lt;li>使用JavaScript执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144643281.png" alt="image-20230209144643281">&lt;/p>
-&lt;h2 id="52java">5.2.Java&lt;/h2>
-&lt;ul>
-&lt;li>使用Java执行&lt;code>WASM&lt;/code>的代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%914.RunningUntrustedCodeinSpringUsingWebAssembly/image-20230209144755430.png" alt="image-20230209144755430">&lt;/p>
-&lt;h1 id="6小结">6.小结&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;code>WASM&lt;/code>还在发展阶段，有的人看好，有的人认为是伪命题，但&lt;code>WASM&lt;/code>肯定会是未来3~5年的热点。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>WASM&lt;/code>可应用的场景绝对不是在浏览器里运行对GPU有要求的游戏，云原生领域也可能应用。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Spring团队也在探索性地将某些模块使用&lt;code>WASM&lt;/code>。&lt;/p>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-3/image-20230212001032910.png" alt="image-20230212001032910">&lt;/p></description></item></channel></rss>

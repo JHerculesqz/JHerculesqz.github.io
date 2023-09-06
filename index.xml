@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 28 Aug 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,279 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记10-LangChain之Model IO，对LLM的抽象1</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-langchain%E4%B9%8Bmodelio%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A11/</link><pubDate>Mon, 28 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-langchain%E4%B9%8Bmodelio%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A11/</guid><description>&lt;p>最近的专栏都是在拆解大语言模型的内部实现及论文，我们再来写点儿偏工程实践的内容——LangChain。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记11-LLM应用-垂直领域知识问答系统(基于ChatGLM2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</link><pubDate>Tue, 05 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</guid><description>&lt;p>今天我们再来写一篇关于大语言模型的实战应用——如何开发一个垂直领域的知识问答系统？&lt;/p>
+&lt;h1 id="1原理">1.原理&lt;/h1>
+&lt;h2 id="1基于传统技术的实现方案">(1)基于传统技术的实现方案&lt;/h2>
+&lt;p>在没有大语言模型之前，有如下传统技术实现知识问答系统：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键词匹配&lt;/strong>：在系统内预设一些关键词，系统根据用户提出的问题进行关键词匹配，从中提取出匹配的答案。
+&lt;ul>
+&lt;li>&lt;strong>局限性&lt;/strong>：仅适用于简单、明确的问题，但复杂问题、多义词等，效果就不好。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>规则匹配&lt;/strong>：在系统内预设一些规则模板，系统根据用户提出的问题结构进行匹配，这些规则模板包括：语法规则、语义规则、业务领域规则。
+&lt;ul>
+&lt;li>&lt;strong>局限性&lt;/strong>：需要人类专家编写规则模板，对领域知识的抽象和表达能力有一定要求。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>统计方法&lt;/strong>：系统基于统计学模型构建，如：条件随机场(CRF，Conditional Random Field)，进行问题分类、命名实体识别等。
+&lt;ul>
+&lt;li>&lt;strong>局限性&lt;/strong>：强依赖数据，数据采集、数据清洗、数据标注，都要消耗人类巨大的工作量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>知识图谱&lt;/strong>：系统基于领域相关的知识图谱或实体构建，可以通过图谱中的实体、关系和属性实现问题解析和答案生成。
+&lt;ul>
+&lt;li>&lt;strong>局限性&lt;/strong>：需要人类专家对业务领域的知识进行建模、抽象，好不容易构建好，知识刷新了。。。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="2基于大语言模型的实现方案">(2)基于大语言模型的实现方案&lt;/h2>
+&lt;p>和老李师傅聊大语言模型，他说：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>大语言模型，是从&lt;strong>word&lt;/strong>到&lt;strong>world&lt;/strong>的过程——AI学习一堆word的关系，然后就具备了概括、抽象、推理的能力去描述世界。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>人类程序员，是从&lt;strong>world&lt;/strong>到&lt;strong>word&lt;/strong>的过程——人类学习这个世界，然后用代码描述世界(代码就是一堆word的组合)。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>最后，他老人家感叹道：&amp;ldquo;N年后，别人看我们，就像我们看伏尔加河上的纤夫。纤夫光着腚，我们光着头。&amp;rdquo;&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230905163751495.png" alt="image-20230905163751495">&lt;/p>
+&lt;p>的确如此，相较于前述传统技术，基于大语言模型实现知识问答系统，有很多天然优势：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>学习效率高&lt;/strong>：大语言模型学习速度极快。后文实践章节中，有这么一个例子：我找公路军团的同学要了1000多份交通专业的文档和书籍，大语言模型&lt;strong>1分钟学习10个文档，2小时学完1000份&lt;/strong>，而&lt;strong>每小时只消耗了1.39元&lt;/strong>。这位交通领域的专家无比惊讶地告诉我——这1000多个文档，他也只详细看完了其中200个。&lt;/li>
+&lt;li>&lt;strong>无需人工干预&lt;/strong>：传统技术需要大量的人工干预，特别强依赖人类专家那些&lt;strong>只可意会、不可言传&lt;/strong>的经验。而大语言模型可以自动学习和更新知识，无需人工干预。这意味着问答应用可以及时获取最新的知识，随着时间的推移变得更加智能和准确。&lt;/li>
+&lt;li>&lt;strong>多轮对话&lt;/strong>：大语言模型还可以处理复杂的问题和多轮对话。它能够理解问题的语义和上下文，并根据用户的追问进行适当的回答。这使得问答应用更加交互式和人性化，提供更好的用户体验。&lt;/li>
+&lt;li>……好处太多，省略千言万语……&lt;/li>
+&lt;/ul>
+&lt;h2 id="3大语言模型选型">(3)大语言模型选型&lt;/h2>
+&lt;p>大语言模型的选型需要根据LLM App的应用场景，并且也不是只选1个，而是选择N个，形成大语言模型矩阵。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906090930061.png" alt="image-20230906090930061">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>世界知识&lt;/strong>：从世界知识看，目前主流的LLM如下：
+&lt;ul>
+&lt;li>&lt;strong>GPT系&lt;/strong>：当红炸子鸡的它，提供的接口包括&lt;code>Model&lt;/code>、&lt;code>Completions&lt;/code>、&lt;code>Chat&lt;/code>、&lt;code>Edits&lt;/code>、&lt;code>Images&lt;/code>、&lt;code>Embeddings&lt;/code>、&lt;code>Audio&lt;/code>、&lt;code>Files&lt;/code>、&lt;code>Fine-tunes&lt;/code>、&lt;code>Others&lt;/code>等10大类，完整地覆盖了&lt;strong>训练&lt;/strong>、&lt;strong>推理&lt;/strong>场景。针对&lt;strong>微调场景&lt;/strong>，覆盖了词嵌入、微调，在&lt;strong>推理&lt;/strong>场景，覆盖了预测、聊天、修正、多模态。&lt;strong>知识文档不涉密且不差钱&lt;/strong>的公司，可直接使用。笔者为了测试GPT4的API，&lt;font color=green>&lt;strong>半小时就花光了40大洋&lt;/strong>&lt;/font>，求赞助！&lt;/li>
+&lt;li>&lt;strong>LLama系&lt;/strong>：卷王Meta的开源大戏，LLama一出，瞬间抢走了chatGPT的焦点。随后各顶流大学就开始了基于LLama的训练微调，推出了以Vicuna、Alpaca为代表的一系列模型。LLama2发布后更是好评无数，没几天又推出了最会写代码的CodeLLama。。。大语言模型界的卷王实至名归！&lt;/li>
+&lt;li>&lt;strong>Claude系&lt;/strong>：谷歌前员工的大神们拉旗单干的产品，也是GPT系的强劲对手。&lt;/li>
+&lt;li>&lt;strong>GLM系&lt;/strong>：清华大学出品，公司化商业运作。chatGLM的中文能力非常不错，GLM-130B成为2022年亚洲唯一入选全球30个主流大模型全方位测评报告的候选对象。国货之光，本文的知识问答系统就是演示的它。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>模型系列&lt;/th>
+&lt;th>版本&lt;/th>
+&lt;th>厂商/机构&lt;/th>
+&lt;th>开源or闭源&lt;/th>
+&lt;th>调用形式&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>GPT系&lt;/td>
+&lt;td>GPT3.5Turbo、GPT4&lt;/td>
+&lt;td>OpenAI&lt;/td>
+&lt;td>闭源&lt;/td>
+&lt;td>远程调用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LLama系&lt;/td>
+&lt;td>LLama、LLama2、CodeLLama&lt;/td>
+&lt;td>Meta&lt;/td>
+&lt;td>开源&lt;/td>
+&lt;td>本地调用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Claude系&lt;/td>
+&lt;td>Claude-instant、Claude-2-100k&lt;/td>
+&lt;td>Anthropic&lt;/td>
+&lt;td>闭源&lt;/td>
+&lt;td>远程调用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GLM系&lt;/td>
+&lt;td>chatGLM2、GLM-130B、VisualGLM-6B&lt;/td>
+&lt;td>清华大学&lt;/td>
+&lt;td>开源&lt;/td>
+&lt;td>本地调用&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>&lt;strong>领域知识&lt;/strong>：以编程辅助领域为例，目前表现不错的LLM如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>模型系列&lt;/th>
+&lt;th>版本&lt;/th>
+&lt;th>厂商/机构&lt;/th>
+&lt;th>开源or闭源&lt;/th>
+&lt;th>调用形式&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>BigCode系&lt;/td>
+&lt;td>StarCoder、OctoPack、SantaCoder&lt;/td>
+&lt;td>Hugging Face&lt;/td>
+&lt;td>开源&lt;/td>
+&lt;td>本地调用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LLama系&lt;/td>
+&lt;td>CodeLLama&lt;/td>
+&lt;td>Meta&lt;/td>
+&lt;td>开源&lt;/td>
+&lt;td>本地调用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GLM系&lt;/td>
+&lt;td>CodeGeeX2&lt;/td>
+&lt;td>清华大学&lt;/td>
+&lt;td>开源&lt;/td>
+&lt;td>本地调用&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>综上分析：&lt;/p>
+&lt;ul>
+&lt;li>对世界知识的表现体现的是大语言模型的&lt;strong>通才&lt;/strong>，对领域知识的表现体现的是大语言模型的&lt;strong>专才&lt;/strong>。&lt;/li>
+&lt;li>在没有一个大语言模型即是通才又是专才的限制下，垂直领域知识问答系统需要的是&lt;strong>大语言模型矩阵&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h2 id="4大语言模型之外的关键技术">(4)大语言模型之外的关键技术&lt;/h2>
+&lt;p>是不是选择好了大语言模型，LLM APP就信手拈来呢？很不幸，不是！&lt;/p>
+&lt;p>在最近的一次行业交流中，有两个议题值得思考：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>量变引起质变&lt;/strong>：百度智能云/技术委员会主席王耀，针对大语言模型的训练推理场景，阐述了通用云计算、分布式云、智能计算的计算范式的变化。其中，最心酸的一个故事是：以前硬件上某个万分之一的故障是可以接受的，现在不可以了，因为大语言模型训练的计算量级无比巨大！&lt;/li>
+&lt;li>&lt;strong>淘金时代的卖铲人&lt;/strong>：LangChain CEO Harrision Chase分享的议题是《Why LangChain，What I Saw When Building AI Application with LLM》，在各大厂商逐鹿中原的时候，LangChain忽然火了，按照这个趋势，它应该会成为LLM APP的开发框架了。&lt;/li>
+&lt;/ul>
+&lt;p>因为，&lt;strong>训练&lt;/strong>大语言模型的计算量剧增，对原有的云计算有新的诉求。&lt;/p>
+&lt;p>因为，&lt;strong>粘合&lt;/strong>大语言模型需要有很多工作，需要有LLM APP的开发框架。&lt;/p>
+&lt;p>通过LangChain的特性介绍和架构，我们可以知道大语言模型之外，我们还需要做如下事情：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>文本处理&lt;/strong>：对各类型文档的加载，对文本的切分等。&lt;/li>
+&lt;li>&lt;strong>向量存储&lt;/strong>：适配不同向量数据库，将文档内容向量化并存储。&lt;/li>
+&lt;li>&lt;strong>提示词管理&lt;/strong>：创建提示词模板，最大化重用提示词。&lt;/li>
+&lt;li>&lt;strong>模型适配&lt;/strong>：针对不同厂商，适配各类大语言模型的接口。&lt;/li>
+&lt;li>&lt;strong>输出解析&lt;/strong>：对大语言模型输出的文本进行结构化解析。&lt;/li>
+&lt;/ul>
+&lt;p>具体可以看笔者这篇文章：《【chatGPT】学习笔记10-LangChain之ModelIO，对LLM的抽象1》&lt;/p>
+&lt;h2 id="5架构示例langchain-chatchat">(5)架构示例：LangChain-ChatChat&lt;/h2>
+&lt;p>垂直领域问答系统的开源项目已经有很多了，以LangChain-ChatChat为例，可以看到这类LLM APP的软件架构：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906095324183.png" alt="image-20230906095324183">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>训练环节&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Unstructured Loader&lt;/strong>：负责将知识文档加载并解析。&lt;/li>
+&lt;li>&lt;strong>Text Splitter&lt;/strong>：将文档按照标点符号，拆分断句。&lt;/li>
+&lt;li>&lt;strong>Text Chunks&lt;/strong>：将断句分词分组，分词分组间存在一定的上下文关联。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906095608282.png" alt="image-20230906095608282">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Embedding&lt;/strong>：词嵌入，并将词向量存储于向量数据库中。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>应用环节&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Query Embedding&lt;/strong>：将用户提问转换了词向量。&lt;/li>
+&lt;li>&lt;strong>Vector Similarity&lt;/strong>：在向量数据库中，用问题词向量，去搜索相关的知识文本向量。&lt;/li>
+&lt;li>&lt;strong>Related Text Chunks&lt;/strong>：根据相关的知识文本向量，反查出对应的知识文本分词分组。这里有个细节，还会将文本分词分组的前后分词分组一并返回(因为这些文字可能有上下文关联关系)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906100110319.png" alt="image-20230906100110319">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prompt Template&lt;/strong>：提示词模板，这个模块是知识问答系统的关键！最简单的提示词模板就是：
+&lt;ul>
+&lt;li>&lt;strong>已知&lt;/strong>：[Related Text Chunks获得的知识文本分词分组]，&lt;strong>请问&lt;/strong>[用户的问题]如何答复？&lt;/li>
+&lt;li>这，不就是开卷考试吗？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906100510639.png" alt="image-20230906100510639">&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>从上述架构可以看出来，曾经很复杂的知识问答系统，大部分核心难点，都被大语言模型搞定了。&lt;/p>
+&lt;p>接下来，我们来动手实践一下，构建一个我们自己的知识问答系统。&lt;/p>
+&lt;h1 id="2实践">2.实践&lt;/h1>
+&lt;h2 id="21推理环境搭建">2.1.推理环境搭建&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>STEP1.基于MiniCoda，创建虚拟环境&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906101650577.png" alt="image-20230906101650577">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP2.激活虚拟环境，安装运行时环境&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906101852342.png" alt="image-20230906101852342">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP3.下载依赖。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102057137.png" alt="image-20230906102057137">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP5.初始化向量数据库。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102553686.png" alt="image-20230906102553686">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP6.配置model_config.py、server_config.py、llm_api.py。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102733935.png" alt="image-20230906102733935">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102716203.png" alt="image-20230906102716203">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102703074.png" alt="image-20230906102703074">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102652268.png" alt="image-20230906102652268">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP7.启动应用&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906103336869.png" alt="image-20230906103336869">&lt;/p>
+&lt;h2 id="22模型部署">2.2.模型部署&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>STEP1.下载大语言模型和词嵌入模型&lt;/strong>——chatGLM2-6B、m3e-base&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102213647.png" alt="image-20230906102213647">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102246753.png" alt="image-20230906102246753">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP2.部署大语言模型和词嵌入模型。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906103747404.png" alt="image-20230906103747404">&lt;/p>
+&lt;h2 id="23模型微调">2.3.模型微调&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>STEP1.通过WebUI，上传知识文档。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906103254463.png" alt="image-20230906103254463">&lt;/p>
+&lt;ul>
+&lt;li>&lt;font color=red>&lt;strong>STEP2.编写提示词模板&lt;/strong>&lt;/font>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906104642146.png" alt="image-20230906104642146">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906104709680.png" alt="image-20230906104709680">&lt;/p>
+&lt;ul>
+&lt;li>经过2小时的学习，LLM修炼完了1000多份智慧交通的资料，这学习效率杠杠滴！
+&lt;ul>
+&lt;li>PS：感谢公路军团的专家，提供珍藏多年的资料，改天请您吃饭！&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906105032126.png" alt="image-20230906105032126">&lt;/p>
+&lt;h2 id="24模型测试">2.4.模型测试&lt;/h2>
+&lt;p>直接上视频，咨询了一下交通行业的这位专家，回答挺靠谱：&lt;/p>
+&lt;h1 id="3总结">3.总结&lt;/h1>
+&lt;p>本文阐述了基于大语言模型的知识问答系统的实现原理及原型实践过程，原型距离可商用还有很多细节需打磨，但我们可以得到如下观点：&lt;/p>
+&lt;ul>
+&lt;li>从实现原理看：
+&lt;ul>
+&lt;li>&lt;strong>技术关键点1&lt;/strong>：要&lt;font color=red>&lt;strong>选择合适的多种大语言模型，形成大语言模型的矩阵&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>&lt;strong>技术关键点2&lt;/strong>：除大语言模型选型，还需&lt;strong>借助LangChain处理好诸多环节&lt;/strong>(文档结构化、分段分词、词嵌入、上下文、向量搜索、提示词等)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>从实践看：
+&lt;ul>
+&lt;li>&lt;strong>数据&lt;/strong>：数据收集、数据清洗、词嵌入等，极为重要。&lt;/li>
+&lt;li>&lt;strong>大语言模型&lt;/strong>：需跟踪各大厂商大语言模型的最新能力，快速替换到应用软件中，&lt;font color=red>&lt;strong>保持大语言模型的先进性&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>&lt;strong>提示词&lt;/strong>：提示词模板的设计，决定了能否&lt;font color=red>&lt;strong>充分发挥大语言模型的潜力&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>&lt;strong>工具链&lt;/strong>：熟练运用LangChain、向量数据库等工具，有助于设计并实现适应业务场景的问答业务流。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>今天就写到这里，后续专栏会继续展示基于大语言模型的LLM应用，欢迎共同探索(上述环境已做成镜像，需要的同学可后台联系作者)。&lt;/p></description></item><item><title>【chatGPT】学习笔记10-LangChain之Model IO，对LLM的抽象1</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-langchain%E4%B9%8Bmodelio%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A11/</link><pubDate>Mon, 28 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-langchain%E4%B9%8Bmodelio%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A11/</guid><description>&lt;p>最近的专栏都是在拆解大语言模型的内部实现及论文，我们再来写点儿偏工程实践的内容——LangChain。&lt;/p>
 &lt;h1 id="1langchain简介">1.LangChain简介&lt;/h1>
 &lt;h2 id="1如何实现基于ai的app">(1)如何实现基于AI的App？&lt;/h2>
 &lt;p>如果我们想开发一个基于大语言模型的AI知识库，怎么做呢？这个App的架构如下图：&lt;/p>
@@ -2602,237 +2874,4 @@ java/lang/Thread.java
 &lt;li>
 &lt;p>通过TestContainers提供的丰富的&lt;code>Module&lt;/code>，极大地降低了集成测试时，依赖组件的部署和维护成本&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记0-和chatGPT结对编程的6小时</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</link><pubDate>Tue, 14 Feb 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8Cchatgpt%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/</guid><description>&lt;h1 id="1我对ai的偏见">1.我对AI的偏见&lt;/h1>
-&lt;p>2013年我写了个微信聊天机器人，在新浪微博上小火了一把。我的认知局限性让我没想到若干年后网红如此赚钱，活该我现在还在搬砖送外卖。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214114334028.png" alt="image-20230214114334028">&lt;/p>
-&lt;p>那阵子心里美滋滋——这个机器人好像我小孩儿，你教它一点，它就聪明一点。当然我那帮损友最终把它教成了流氓二混子。&lt;/p>
-&lt;p>即便我很喜欢我的机器人，但还是在一年后亲手关了它的服务器，因为我对&lt;strong>2013年的AI理论基础&lt;/strong>不太看好(这也是我的偏见)：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>计算机视觉&lt;/strong>：这个算是2013年左右，AI应用最成熟的领域吧，车牌识别、人脸识别、零件识别等等。但它的理论本质还是那些天才数学家归纳出了N种&amp;quot;人类视觉&amp;quot;的模式。**你觉得人类眼睛看到的美仅仅是一堆数学公式吗？**我不觉得。&lt;/li>
-&lt;li>&lt;strong>商业BI&lt;/strong>：这也是2013年那会儿，AI另一个有广泛应用的领域吧。请注意，我说的是广泛应用，而不是成熟应用。说白了，在商业智能中，那些AI理论宣称的是通过&amp;rdquo;&lt;strong>历史数据&lt;/strong>&amp;ldquo;就能&amp;rdquo;&lt;strong>预测未来&lt;/strong>&amp;quot;——咱们不要去辩论&amp;rdquo;&lt;strong>线性回归&lt;/strong>&amp;quot;、&amp;quot;&lt;strong>聚类&lt;/strong>&amp;ldquo;的理论合理性，也不要去讨论AI书本上的&amp;rdquo;&lt;strong>波士顿房价预测&lt;/strong>&amp;ldquo;的经典案例——百度识图很牛，它能告诉我们这什么花什么草，但有个AI预测出下一把投资个啥华为就能统治全宇宙，你看华为的大佬们敢不敢一把梭哈——&lt;strong>人类历史真的能归纳成1个因变量有限的简单数学公式吗&lt;/strong>？&lt;/li>
-&lt;li>………——此处的省略号表示在2013年的我有限的认知中，我想不通AI的未来在哪里。&lt;/li>
-&lt;/ul>
-&lt;p>再后来，&lt;code>TensorFolow&lt;/code>火了、菊厂有了自己的菊厂云，我兴奋地把西瓜书翻了又翻，忽然失落了：&lt;/p>
-&lt;ul>
-&lt;li>这些新的AI资料，似乎和我那些尘封已久的前一代的AI书籍没啥质的飞跃。&lt;/li>
-&lt;li>我师傅说：&amp;quot;&lt;strong>人工智能就是喂狗&lt;/strong>&amp;quot;——模型是数学家设计好的，我们只是不断地喂数据、确认结果。&lt;/li>
-&lt;li>我说：&amp;quot;&lt;strong>此时此刻的人工智能就是更高效地喂狗&lt;/strong>&amp;quot;——喂数据的手段更高级了、算力更强了、模型测试更高效了等等。&lt;/li>
-&lt;/ul>
-&lt;p>于是，我得出了个人的判断：&lt;strong>可能又是资本割韭菜&lt;/strong>，我可不能把有限的时间投入到研究这门手艺上。&lt;/p>
-&lt;p>我怀着对AI深深的偏见，每天研究着我更感兴趣的JVM源码、Spring源码&amp;hellip;&amp;hellip;直到上周六(2023年2月11日)的下午。&lt;/p>
-&lt;h1 id="2第1个故事它不是人工智障">2.第1个故事：它不是人工智障&lt;/h1>
-&lt;p>上周六朋友要我帮他写段代码：他想要一个能算个税的Excel，便于他们公司税务筹划。&lt;/p>
-&lt;p>朋友讲了半天个税咋算，工作18年也没搞懂每个月咋扣税的我依然没听懂。&lt;/p>
-&lt;p>作为资深码农，最烦客户讲不清楚需求(软件工程中最大的魔咒)！&lt;/p>
-&lt;h2 id="第1个问题">第1个问题&lt;/h2>
-&lt;p>&lt;strong>咋办呢？我问了chatGPT第1个问题&lt;/strong>，转给朋友看，他确认回答正确：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141101548.png" alt="image-20230214141101548">&lt;/p>
-&lt;h2 id="第2个问题">第2个问题&lt;/h2>
-&lt;p>&lt;strong>接着，懒惰的我问它第2个问题&lt;/strong>：能不能把上述文字转成代码？&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141035939.png" alt="image-20230214141035939">&lt;/p>
-&lt;h2 id="代码生成效果咋样">&lt;strong>代码生成效果咋样？&lt;/strong>&lt;/h2>
-&lt;ul>
-&lt;li>首先，看完这段代码，我终于明白个税咋算了，感谢chatGPT。。。&lt;/li>
-&lt;li>然后，朋友说除了&amp;quot;个税起征点&amp;quot;要乘以期数，其它都对。。。&lt;/li>
-&lt;li>最后，我仔细检视并运行了它的代码：除了代码规范外，&lt;strong>它的代码还有个性能小亮点&lt;/strong>——寻找收入分级的速算系数时用了倒查，我自己还真不会这样写。。。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214140255700.png" alt="image-20230214140255700">&lt;/p>
-&lt;h2 id="第3个问题">第3个问题&lt;/h2>
-&lt;p>故事没完，在Excel里写公式有点难写：个税计算要分级，会有很长的IF嵌套。&lt;/p>
-&lt;p>如果Google查资料+写公式+测试，我估计要1小时吧。&lt;/p>
-&lt;p>&lt;strong>于是，我问了chatGPT第3个问题&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141004154.png" alt="image-20230214141004154">&lt;/p>
-&lt;p>这个公式有多长呢？我把代码贴出来，大家可以评估一下自己需要多久写得出来：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="o">=&lt;/span>&lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">0&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">36000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">03&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">144000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">2520&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">300000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">2&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">16920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">420000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">25&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">31920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">660000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">3&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">52920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="n">IF&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">960000&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">35&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">85920&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">A1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">B1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="o">)*&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">45&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">181920&lt;/span>&lt;span class="o">)))))))&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="第4个问题">第4个问题&lt;/h2>
-&lt;p>这个公式只是算了一个月的个税，朋友最终想要的是1月、2月&amp;hellip;.12月的个税应缴税额。&lt;/p>
-&lt;p>这样就涉及你的第2行要取第1行的单元格、第3行取第2行，依此类推。&lt;/p>
-&lt;p>这样的公式咋写呢？&lt;/p>
-&lt;p>我和朋友Google了半天也没知道答案，因为我想要公式的功能要用人类的一段话表达，而搜索引擎只能输入关键字。&lt;/p>
-&lt;p>&lt;strong>于是，我问chatGPT的第4个问题是人类能理解的一整段话&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214141542915.png" alt="image-20230214141542915">&lt;/p>
-&lt;p>通过chatGPT的回答，我知道了&lt;code>INDIRECT函数&lt;/code>。&lt;/p>
-&lt;p>显然，通过搜索引擎最终也能找到&lt;code>INDIRECT函数&lt;/code>，但没chatGPT这么快。&lt;/p>
-&lt;p>因为：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>搜索引擎的底层逻辑&lt;/strong>：人类告诉它关键字，它给人类有关联的结果，人类自行分析，&lt;strong>人类得出结论&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>chatGPT的底层逻辑&lt;/strong>：人类告诉它人类语言，它自己找到有关联的结果并自行分析得出结论，&lt;strong>人类获得结论&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>这就有点意思了，&lt;strong>难怪微软赶紧让Bing接入chatGPT，谷歌瑟瑟发抖&lt;/strong>。&lt;/p>
-&lt;p>至此，朋友要的Excel做完了，耗时半小时。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214143709735.png" alt="image-20230214143709735">&lt;/p>
-&lt;h2 id="观点">观点&lt;/h2>
-&lt;p>&lt;strong>chatGPT真不是人工智障&lt;/strong>，而是真的人工智能。对于第1个故事，我有几个观点：&lt;/p>
-&lt;h3 id="1任务难度简单">(1)任务难度：简单&lt;/h3>
-&lt;p>Excel写公式是日常、简单工作，作为人类的我们，花点时间肯定能完成。&lt;/p>
-&lt;h3 id="2值得关注的突破点有可能改变软件开发模式">(2)值得关注的突破点：有可能改变软件开发模式。&lt;/h3>
-&lt;p>&lt;strong>过去，需求传递是软件研发最大的工程成本&lt;/strong>。客户是业务专家，程序员软件专家。如果表达能力弱的客户遇上不懂业务的程序员，那么这个项目铁定黄。菊花厂各种工程方法和质量流程本质上还是&lt;strong>对人与人的沟通成本&lt;/strong>的妥协。&lt;/p>
-&lt;p>&lt;strong>未来，chatGPT可能成为客户与程序员的沟通桥梁&lt;/strong>。chatGPT与任何一个人类相比，可以认为是通才——不会开船的公交车司机不是个好程序员——chatGPT大致是这么个意思吧。&lt;/p>
-&lt;p>在亲身体验chatGPT之前，身边同事不屑地说：&amp;ldquo;我就不信有描述清楚需求的客户，需求描述不清chatGPT再牛逼也写不出来&amp;rdquo;，逻辑如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214145728163.png" alt="image-20230214145728163">&lt;/p>
-&lt;p>在亲身体验chatGPT之后，不得不说这或许就是人类的局限性，难道人类不能变通一下吗：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214150532484.png" alt="image-20230214150532484">&lt;/p>
-&lt;h3 id="3值得关注的突破点一般的crud代码它写的不比人类差">(3)值得关注的突破点：一般的CRUD代码，它写的不比人类差。&lt;/h3>
-&lt;p>比如这个故事中的Java代码，不知道菊厂工作级的程序员能否在20分钟内，理解需求+编码+一次性测过。&lt;/p>
-&lt;h1 id="3第2个故事你值得收下我的膝盖">3.第2个故事：你值得收下我的膝盖&lt;/h1>
-&lt;p>完成朋友的Excel，我开始写自己的技术专栏。&lt;/p>
-&lt;p>那天写的是&lt;strong>Java线程和操作系统的对应关系&lt;/strong>。&lt;/p>
-&lt;p>这个技术问题有多深呢？&lt;/p>
-&lt;p>除了毕昇JDK团队的专家和我这种好奇宝宝，我猜菊厂大部分Java程序猿不会意识到这个问题，更不用说阅读对应的JVM源码。&lt;/p>
-&lt;p>我花了4天跟踪了JVM的相关代码，写了这篇文章《&lt;a href="https://mp.weixin.qq.com/s/O-cE6-jIYk66meYINt3gMg">【运行时数据区】-并发编程-前置知识(4.并发编程基础)-3&lt;/a>》。&lt;/p>
-&lt;p>各位读者有兴趣可以看看，应该有点复杂，于是，我开始好奇在我的专业领域，chatGPT表现如何？&lt;/p>
-&lt;h2 id="第1个问题-1">第1个问题&lt;/h2>
-&lt;p>第1个问题我问的比较笼统，chatGPT回答的也比较含糊。&lt;/p>
-&lt;p>看起来答案没啥问题，但是语言的二义性，我不确定chatGPT是不是瞎蒙的，于是我问了第2个问题。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153034266.png" alt="image-20230214153034266">&lt;/p>
-&lt;h2 id="第2个问题-1">第2个问题&lt;/h2>
-&lt;p>第2个问题的回答有点惊艳：&lt;/p>
-&lt;ul>
-&lt;li>首先，它知道不同厂家实现的JVM可能不同，所以答案最后它在强调HotSpot是这么实现的。&lt;/li>
-&lt;li>其次，它能精确理解&lt;code>scr/share/vm/runtime/thread.cpp&lt;/code>这段&lt;strong>代码的业务含义&lt;/strong>(即，这段代码在做什么事情)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214153210729.png" alt="image-20230214153210729">&lt;/p>
-&lt;p>AI能理解**&amp;ldquo;代码的业务含义&amp;rdquo;**有多牛逼呢？&lt;/p>
-&lt;p>回看一下业界历史上那么多代码质量检查工具，它们可以做到静态检查、内存检查、安全检查等，能理解这段代码在干啥吗？&lt;/p>
-&lt;p>回到&amp;quot;Java线程和JVM线程的关系&amp;quot;这个技术问题上，JVM的启动流程有多少关键步骤呢？&lt;strong>34步&lt;/strong>。&lt;/p>
-&lt;p>我花了4天时间，一边Debug、一边修正这张流程图、一边理解这段代码的业务含义，关键这还是我的专业领域：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230211233551236.png" alt="image-20230211233551236">&lt;/p>
-&lt;h2 id="第3个问题-1">第3个问题&lt;/h2>
-&lt;p>我问了chatGPT很具体的问题，如果没看过JVM源码的人类，应该无法回答。&lt;/p>
-&lt;p>再看看chatGPT的答案：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214155311824.png" alt="image-20230214155311824">&lt;/p>
-&lt;h2 id="观点-1">观点&lt;/h2>
-&lt;p>大约和chatGPT玩了1小时，这就是第2个故事。对这个故事，我的观点如下：&lt;/p>
-&lt;h3 id="1任务难度困难">(1)任务难度：困难&lt;/h3>
-&lt;p>作为人类的我，在18年每天都在敲代码积累软件知识的前提下，需要花了4天时间去分析的源代码，应该不是个简单任务。&lt;/p>
-&lt;h3 id="2值得关注的突破点学习速度惊人某些领域知识达到专业级">(2)值得关注的突破点：学习速度惊人，某些领域知识达到专业级。&lt;/h3>
-&lt;p>记得有阵子一群人吐槽菊厂考试有JVM相关的题目，属于偏题怪题。&lt;/p>
-&lt;p>暂不论这个人观点正确与否，至少证明这些吐槽的人类，对于JVM等编译器底层技术没有掌握和不愿了解的。&lt;/p>
-&lt;p>为什么呢？因为人是趋利避害和功利性的。&lt;/p>
-&lt;p>虽然理解编译器底层技术有助于写更好的代码，但这个知识难学且不影响每天搬砖，当然不会主动去学。&lt;/p>
-&lt;p>然而，chatGPT毫不费劲地做到了。&lt;/p>
-&lt;p>虽然，它做到的方式目前可能是机械式地&amp;rdquo;&lt;strong>搜索它的记忆&lt;/strong>&amp;quot;。&lt;/p>
-&lt;p>虽然，它也可能&lt;strong>在用某种AI技巧，在答案中对我进行心理暗示、情感诱导&lt;/strong>。&lt;/p>
-&lt;p>但，如果把chatGPT当做一种新的物种，从结果看：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>它的学习速度远超人类&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>我擅长的领域，它的未来却不可预期&lt;/strong>：某个领域的人类专家才能做到的高级任务，它至少能&lt;strong>装作&lt;/strong>也能完成。&lt;/li>
-&lt;/ul>
-&lt;h1 id="4第3个故事我有点笑不出来">4.第3个故事：我有点笑不出来&lt;/h1>
-&lt;p>周六夜11点，忽然想到机器人学中有个算法问题，可以抽象如下：&lt;/p>
-&lt;ul>
-&lt;li>已知机器人要走的轨迹、初始速度、最大速度、最大加速度、最大减速度。&lt;/li>
-&lt;li>希望算法进行路径规划和速度规划：汽车每时每刻的路径、速度and加速度。&lt;/li>
-&lt;li>算法的规划结果要保证汽车最快到达终点、动作丝滑。&lt;/li>
-&lt;/ul>
-&lt;p>这个算法是机器人领域的关键算法，比如波士顿机器人：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/kaimen.gif" alt="kaimen">&lt;/p>
-&lt;p>之前我对这个算法很感兴趣，断断续续也Google和图书馆查过一些论文，但仅获得了些许只言片语的信息——NURBS曲线、速度规划、路径规划。&lt;/p>
-&lt;p>说白了，这是个&lt;strong>业务领域算法&lt;/strong>——这就意味着，你不是业内人士又没有明白人指路，学习效率就不会太高。&lt;/p>
-&lt;p>我抱着试试看的心情问了chatGPT。。。然后。。。我就一发不可收拾地和它结对编程到了凌晨4点。&lt;/p>
-&lt;h2 id="第1组问题">第1组问题&lt;/h2>
-&lt;p>根据我之前的线索，我问了一下chatGPT，通过它的回答，我知道了更多知识线索，我感觉我遇到了1个不错的老师：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>NURBS算法&lt;/strong>：非均匀有理B样条。&lt;/li>
-&lt;li>&lt;strong>算法能力&lt;/strong>：生成平滑轨迹、合理的加减速。&lt;/li>
-&lt;li>&lt;strong>相关算法&lt;/strong>：S曲线速度规划&lt;/li>
-&lt;li>&lt;strong>学习的方向&lt;/strong>：在计算机图形学、数值分析、数字信号处理等学科中，都可以获取到这个算法的更深入的知识。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214162853438.png" alt="image-20230214162853438">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163155188.png" alt="image-20230214163155188">&lt;/p>
-&lt;h2 id="第2组问题">第2组问题&lt;/h2>
-&lt;p>我的第2组问题就是深入到算法的原理、依赖的数学理论，&lt;/p>
-&lt;p>在接下来的2小时，chatGPT把线性插值法到B样条插值法都给我撸了一遍：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>插值的数学含义&lt;/strong>：已知有限的坐标点，自动生成N个坐标点，保证曲线是平滑的。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171500079.png" alt="image-20230214171500079">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>插值的实际用途&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171556561.png" alt="image-20230214171556561">&lt;/p>
-&lt;ul>
-&lt;li>它的回答有点像&lt;strong>插值&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171714672.png" alt="image-20230214171714672">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>来吧，把各种插值法的数学公式都讲一遍&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214171848979.png" alt="image-20230214171848979">&lt;/p>
-&lt;h2 id="第3组问题">第3组问题&lt;/h2>
-&lt;p>&lt;code>Show me the code！&lt;/code>我只列举几个代码片段供大家感受：&lt;/p>
-&lt;h3 id="代码片段1代码轮廓">代码片段1：代码轮廓&lt;/h3>
-&lt;p>通过这段代码，我看到了&lt;strong>样条插值法的代码轮廓&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214163436511.png" alt="image-20230214163436511">&lt;/p>
-&lt;h3 id="代码片段2我不知道的三方件">代码片段2：我不知道的三方件&lt;/h3>
-&lt;p>代码片段2和代码片段1差不多，只不过是Java语言实现。&lt;/p>
-&lt;p>但，这段代码用到了一个我没用过的三方件&lt;code>org.apache.common.math3&lt;/code>。&lt;/p>
-&lt;p>这是一个亮点——原来有这么1个Java库，已经提供了很多基础的数学模型和算法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172256770.png" alt="image-20230214172256770">&lt;/p>
-&lt;h3 id="代码片段3增加速度规划">代码片段3：增加速度规划&lt;/h3>
-&lt;p>我让chatGPT针对同一个问题，做了3次回答，每次回答不同。&lt;/p>
-&lt;p>综合3次回答，可以得到我比较满意的答案：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第一次回答&lt;/strong>：业务流程说的很清楚，但是代码不太完整。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172856207.png" alt="image-20230214172856207">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第二次回答&lt;/strong>：我知道了Apache的那个三方件中的&lt;code>SplineInterpolator&lt;/code>可以生成B样条曲线。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214172937781.png" alt="image-20230214172937781">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第三个回答&lt;/strong>：业务流程和代码都相对完整。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173043455.png" alt="image-20230214173043455">&lt;/p>
-&lt;h3 id="代码片段n我和chatgpt的n次小迭代">代码片段N：我和chatGPT的N次小迭代&lt;/h3>
-&lt;p>得到了这个我未知知识领域的业务算法的代码框架后，我试着在IDEA里运行，无法成功。&lt;/p>
-&lt;p>有的函数有数组越界，有的函数参数个数不对。&lt;/p>
-&lt;h4 id="迭代1对于明显的编译错误作为人类的我可以快速帮它修复">迭代1：对于明显的编译错误，作为人类的我可以快速帮它修复。&lt;/h4>
-&lt;p>迭代1主要是我在工作，修复后，剩下的代码问题只剩下我不太理解的算法逻辑了。&lt;/p>
-&lt;h4 id="迭代2漏写了一个算法相关的函数它补充了">迭代2：漏写了一个算法相关的函数，它补充了。&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214173941576.png" alt="image-20230214173941576">&lt;/p>
-&lt;h4 id="迭代3请注意我的问题并没有指出具体是什么错误它自己分析出来代码错在哪里了">迭代3：请注意我的问题并没有指出具体是什么错误，它自己分析出来代码错在哪里了。&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174016136.png" alt="image-20230214174016136">&lt;/p>
-&lt;h4 id="迭代4由于chatgpt网站限制无法返回超长代码片段导致看不到完整代码于是我要求它想办法精简代码">迭代4：由于chatGPT网站限制(无法返回超长代码片段)，导致看不到完整代码，于是我要求它想办法精简代码。&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174356129.png" alt="image-20230214174356129">&lt;/p>
-&lt;h4 id="迭代n经过4个小时不断的交互1个基础的机器人运动规划算法代码跑通了">迭代N：经过4个小时不断的交互，1个基础的机器人运动规划算法代码跑通了&lt;/h4>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/image-20230214174756076.png" alt="image-20230214174756076">&lt;/p>
-&lt;h2 id="观点-2">观点&lt;/h2>
-&lt;p>第3个故事结束的时候，是周六的凌晨4点，我对这个故事的观点：&lt;/p>
-&lt;h3 id="1工作难度超难">(1)工作难度：超难。&lt;/h3>
-&lt;p>这个任务我不会，甚至我都查不到资料找不到头绪。&lt;/p>
-&lt;h3 id="2值得关注的突破点chatgpt可能变成人类的师傅此时人类仅仅是个学徒小工辅助">(2)值得关注的突破点：chatGPT可能变成人类的师傅，此时人类仅仅是个学徒、小工、辅助。&lt;/h3>
-&lt;p>人类在某个领域是专家，在大部分领域是不擅长的。&lt;/p>
-&lt;p>而chatGPT可能变成人类的师傅，此时人类仅仅是个学徒、小工、辅助。&lt;/p>
-&lt;h1 id="5看到未来">5.看到未来&lt;/h1>
-&lt;p>三个故事经历完，已经是周日的凌晨4点，我从窗口已经能看到东湖的星星点点。&lt;/p>
-&lt;p>国内对于chatGPT，已经热闹了一两个月。&lt;/p>
-&lt;p>有的人通过卖账号已经赚了一波，有的人做套壳儿GPT也骗走了不少流量。&lt;/p>
-&lt;p>师傅说：我们的孩子还在学怎么用这些底层技术，别人的孩子已经在发明这些底层技术了。&lt;/p>
-&lt;p>当喧嚣散尽时，我们还会留下什么？&lt;/p>
-&lt;p>自媒体上对chatGPT有无数的测评，无论从商业前景、应用场景、技术原理等哪种角度，都是那两派：&lt;strong>&amp;ldquo;吹捧派&amp;rdquo;&lt;strong>和&lt;/strong>&amp;ldquo;唱衰派&amp;rdquo;&lt;/strong>。&lt;/p>
-&lt;p>我不想夸大chatGPT，也不想盲目自大地轻视它，这6个小时，我仅仅是一个观察者。&lt;/p>
-&lt;p>通过这6个小时的结对编程和观察，我有点震撼，这也可能是心理学问题：&lt;/p>
-&lt;ul>
-&lt;li>第1个故事，那不过是个简单的工作，花点时间我必定能完成——&lt;strong>AI能完成，行吧，你还不错&lt;/strong>。&lt;/li>
-&lt;li>第2个故事，那是我的专业领域，其他人类未必能比我完成的好——&lt;strong>AI竟然能完成，我感受到被冒犯、我有了危机感&lt;/strong>。&lt;/li>
-&lt;li>第3个故事，那是我的盲区，我努力过但没成功——&lt;strong>AI指导我完成了，此刻好像我知道了三体文明的存在，我没有啥反抗的机会&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>我也不知道chatGPT到底会怎样，但我感觉它和过往的AI技术不一样。&lt;/p>
-&lt;p>&lt;strong>它应该不是AI历史中的一点涟漪，而是人类历史的某个里程碑&lt;/strong>。&lt;/p>
-&lt;p>2019年12月6日，老爸脑梗进了ICU，守在ICU门口的那段时光，我很想做一个&lt;strong>数字老爸&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>把亲人的文字、资料、语音、照片录入到云端。&lt;/li>
-&lt;li>通过某种AI技术训练出能复现亲人的模型——chatGPT看起来似乎可以做到。&lt;/li>
-&lt;li>集成一些相对成熟的工程技术(如：文字转语音、VR、AR)&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;p>经历过ICU门口的人应该能感同身受，只不过我这个工科脑袋有点跳脱，但或许这就是未来。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00-%E5%92%8CchatGPT%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%846%E5%B0%8F%E6%97%B6/Future.png" alt="Future">&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

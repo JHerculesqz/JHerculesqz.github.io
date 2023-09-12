@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,223 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记11-LLM应用-垂直领域知识问答系统(基于ChatGLM2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</link><pubDate>Tue, 05 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</guid><description>&lt;p>今天我们再来写一篇关于大语言模型的实战应用——如何开发一个垂直领域的知识问答系统？&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记12-昇腾计算产业发展白皮书解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 12 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>本文来解读华为的《昇腾计算产业发展白皮书》，跟踪一下国内AI行业的宏观动态。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912224057905.png" alt="image-20230912224057905">&lt;/p>
+&lt;h2 id="1ai发展趋势和挑战">1.AI发展趋势和挑战&lt;/h2>
+&lt;h3 id="11ai发展趋势">1.1.AI发展趋势&lt;/h3>
+&lt;p>白皮书首先阐述了AI发展趋势：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>AI已成为推动社会发展的关键引擎&lt;/strong>：
+&lt;ul>
+&lt;li>AI在诸多特定领域超过人类能力。如：计算机视觉、语音识别、自然语言处理领域。&lt;/li>
+&lt;li>AI将助力各产业实现智能化转型升级。根据弗若斯特沙利文数据，2019年中国AI市场规模为598.6亿元，2020~2024年复合增长率达34.8%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>AI处于爆发式创新的前夜&lt;/strong>：
+&lt;ul>
+&lt;li>联接、AI、云、计算、行业应用等多种先进技术和机会将会互相催化、有机融合。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="12ai产业挑战">1.2.AI产业挑战&lt;/h3>
+&lt;p>白皮书再阐述了AI产业的挑战：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>计算系统&lt;/strong>要满足AI场景的&lt;strong>复杂巨大、多样性的计算需求&lt;/strong>。
+&lt;ul>
+&lt;li>&lt;strong>算力增速快&lt;/strong>：2012~2018年，算力需求增加30万倍，远超摩尔定律。大语言模型时代，算力需求从TFLOPS级别，增至PFLOPS级别，甚至EFLOPS级别。&lt;/li>
+&lt;li>&lt;strong>计算架构设计面临挑战&lt;/strong>：大规模算力需求，对计算系统的&lt;strong>计算性能、通信性能、可扩展性&lt;/strong>是巨大的挑战。&lt;/li>
+&lt;li>&lt;strong>全方位面临挑战&lt;/strong>：基础软件、编程模型、编程语言、编译器、工具链、大规模运行时、调度系统、平台软件、通信组件、加速组件、加速引擎、AI框架、行业软件，都需要适配大规模算力需求。&lt;/li>
+&lt;li>参考：https://openai.com/research/ai-and-compute&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/ai-and-compute-all.png" alt="ai-and-compute-all">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从算法到产品化落地&lt;/strong>面临8大鸿沟：
+&lt;ul>
+&lt;li>&lt;strong>模型获取&lt;/strong>鸿沟：针对行业数据，选择、测试合适地模型，需要巨大的时间成本和算力成本。&lt;/li>
+&lt;li>&lt;strong>数据准备&lt;/strong>鸿沟：构建能够真实反映实际业务数据分布的数据集，面临较大挑战。&lt;/li>
+&lt;li>&lt;strong>模型训练&lt;/strong>鸿沟：超参数调优等模型训练环节，对大量传统行业开发者挡在AI门外。&lt;/li>
+&lt;li>&lt;strong>准确度验证&lt;/strong>鸿沟：模型泛化能力的验证，是阻碍算法快速落地的因素之一。&lt;/li>
+&lt;li>&lt;strong>应用开发&lt;/strong>鸿沟：AI需要接受包含行业知识的各种输入数据，对AI应用开发系统产生整合要求，开发效率是重要影响因素之一。&lt;/li>
+&lt;li>&lt;strong>NPU性能&lt;/strong>鸿沟：AI算力真正转化为行业生产率，实际的运行性能将决定系统最终的性价比和业务执行能力。&lt;/li>
+&lt;li>&lt;strong>业务流程监控&lt;/strong>鸿沟：确保AI系统在业务环境的持续准确运行，是行业应用的重中之重。&lt;strong>AI算法需要具备持续更新、增量学习的能力&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>适配开发&lt;/strong>鸿沟：面对不同业务场景，需要以服务化和API形式封装AI算法，封装AI服务、部署AI服务于复杂的计算系统上，都将面临挑战。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912232100695.png" alt="image-20230912232100695">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>可信AI&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>AI具有自我演化潜力&lt;/strong>：人类对于AI核心运行机制、AI隐式编程、学习能力，依然没有彻底研究清楚。&lt;/li>
+&lt;li>&lt;strong>可信AI是大规模商用的基础&lt;/strong>：保护隐私、避免偏见、防止滥用、可靠边界、可解释、鲁棒性、防攻击等方面，都是AI能够真正大规模应用的挑战。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>人才需求&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>AI人才缺口巨大&lt;/strong>：中国AI人才缺口500万，供求比1:10。&lt;/li>
+&lt;li>&lt;strong>与美国差距巨大&lt;/strong>：中国的AI人才数量仅为美国四分之一。&lt;/li>
+&lt;li>&lt;strong>新一代AI发展规划&lt;/strong>：国务院《新一代AI发展规划》发布，明确指出建立AI高端人才队伍是AI发展重中之重。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="2昇腾计算产业">2.昇腾计算产业&lt;/h2>
+&lt;h3 id="21昇腾计算产业体系和定位">2.1.昇腾计算产业体系和定位&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>昇腾计算产业覆盖全产业链，全生态链&lt;/strong>，包括：昇腾处理器、硬件、CANN(Compute Architecture for Neural Networks，异构计算架构)、AI计算框架、应用使能、开发工具链、运维工具、行业应用及服务。&lt;/li>
+&lt;li>&lt;strong>昇腾计算硬件体系&lt;/strong>包括：
+&lt;ul>
+&lt;li>基于达芬奇内核的昇腾系列芯片，提供多样化AI算力。&lt;/li>
+&lt;li>基于昇腾系列芯片的硬件产品，如嵌入式模组、板卡、小站、服务器、集群等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>昇腾计算软件体系&lt;/strong>包括：
+&lt;ul>
+&lt;li>异构计算架构CANN，对标CUDA。&lt;/li>
+&lt;li>AI计算框架MindSpore，对标Pytorch。&lt;/li>
+&lt;li>工具链：运行时、加速库、编译器、调试调优工具、开发工具链MindStudio及运维工具。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>昇腾应用使能&lt;/strong>：基于MindX支撑的ModelArts、HiAI等。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912234104109.png" alt="image-20230912234104109">&lt;/p>
+&lt;h3 id="22昇腾计算产业价值">2.2.昇腾计算产业价值&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>硬件开放、软件开元、使能合作伙伴&lt;/strong>是华为构建昇腾生态的方式。&lt;/li>
+&lt;li>华为&lt;strong>聚焦AI芯片、基础软件&lt;/strong>的创新与研发。&lt;/li>
+&lt;li>&lt;strong>自有硬件+伙伴硬件&lt;/strong>，为客户提供多样化算力选择。&lt;/li>
+&lt;li>昇腾通过模组、板卡、小站、服务器、集群等产品形态，&lt;strong>打造&amp;quot;端、边、云&amp;quot;的全场景AI基础设施解决方案&lt;/strong>。&lt;/li>
+&lt;li>昇腾计算产业的三个愿景：
+&lt;ul>
+&lt;li>&lt;strong>用得起&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>用得好&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>用得放心&lt;/strong>：特指某国的芯片封锁吧。。。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="3昇腾计算技术体系">3.昇腾计算技术体系&lt;/h2>
+&lt;h3 id="31昇腾计算架构">3.1.昇腾计算架构&lt;/h3>
+&lt;p>下图展开了昇腾计算架构细节，从架构中可以看出：&lt;/p>
+&lt;ul>
+&lt;li>昇腾计算架构支持端边云全场景。&lt;/li>
+&lt;li>超强算力：Atlas训练卡提供320 TFLOPS FP16高算力，Atlas集群提供1024P FLOPS算力。&lt;/li>
+&lt;li>全站开放，模块间具备相互协同能力、各层之间支持独立演进。&lt;/li>
+&lt;li>MindX将设备资源、算力资源抽象并管理，应用软件无需了解底层硬件的复杂配置和调度。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912235737889.png" alt="image-20230912235737889">&lt;/p>
+&lt;h3 id="32硬件体系">3.2.硬件体系&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>昇腾系列处理器&lt;/strong>：NPU针对矩阵运算进行专门优化设计，华为达芬奇架构面向AI计算设计的架构，独创16&lt;em>16&lt;/em>16的3D Cube设计。&lt;/li>
+&lt;li>&lt;strong>模组和板卡&lt;/strong>：Atlas 200加速模块、Atlas 300推理卡、Atlas 900。&lt;/li>
+&lt;li>&lt;strong>小站&lt;/strong>：基于昇腾系列处理器的边缘计算盒子。&lt;/li>
+&lt;li>&lt;strong>服务器&lt;/strong>：Atlas 800、Atlas500。&lt;/li>
+&lt;li>&lt;strong>集群&lt;/strong>：Atlas 900。&lt;/li>
+&lt;/ul>
+&lt;h3 id="33基础软件">3.3.基础软件&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>异构计算架构&lt;/strong>：
+&lt;ul>
+&lt;li>CANN支持10种设备形态、EMUI、Android、openEuler、UOS、Ubuntu、Debian、Suse等14种操作系统和AI计算框架。&lt;/li>
+&lt;li>CANN是一个开发体系，包含了编程语言、编译器等编程模型。&lt;/li>
+&lt;li>CANN包含4层：
+&lt;ul>
+&lt;li>Driver实现硬件和操作系统的适配。&lt;/li>
+&lt;li>Runtime、DVPP、HCCL提供内存管理、算力分配、资源调度。其中，HCCL，Huawei Collective Communication Library，华为集合通信库，提供板间和框间通信能力。&lt;/li>
+&lt;li>图引擎实现了大计算图拆分、图融合，最大化芯片算力利用率。&lt;/li>
+&lt;li>AscendCL提供插件适配、开放图融合接口、支持自定义算子融合、提供Ascend IR中间表达接口、支持自定义模型、开放预置算子库。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>CANN提供两种算子开发方式，
+&lt;ul>
+&lt;li>一种是TBE-DSL(Tensor Boost Engine-Domain Specific Language)，实现数据切分和调度。&lt;/li>
+&lt;li>一种是TBE-TIK(Tensor Iterator Kernel)，通过指令级编程，实现数据编排、计算表达。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913000935774.png" alt="image-20230913000935774">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>开发工具链MindStudio，提供工程管理、编译、调试、运行、性能分析等全流程开发。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>AI计算框架MindSpore，提供动静态图转换、自动并行、端边云协同能力。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>应用使能的核心是MindX DL和MindX Edge，封装了底层硬件、算子的协同调度能力。&lt;/p>
+&lt;ul>
+&lt;li>MindX DL架构图：&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913001119293.png" alt="image-20230913001119293">&lt;/li>
+&lt;li>MindX Edge架构图：&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913001132605.png" alt="image-20230913001132605">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="4行业实践">4.行业实践&lt;/h2>
+&lt;p>白皮书在本章节阐述了基于昇腾计算，构建的各行各业的解决方案：&lt;/p>
+&lt;ul>
+&lt;li>AI计算中心&lt;/li>
+&lt;li>互联网&lt;/li>
+&lt;li>制造&lt;/li>
+&lt;li>机器人&lt;/li>
+&lt;li>能源&lt;/li>
+&lt;li>金融&lt;/li>
+&lt;li>平安城市&lt;/li>
+&lt;li>电信&lt;/li>
+&lt;li>交通&lt;/li>
+&lt;li>医疗&lt;/li>
+&lt;/ul>
+&lt;p>这里展开3个行业解决方案：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>计算中心&lt;/strong>解决方案：从解决方案看，昇腾计算覆盖了AI芯片、AI驱动，是AI最核心的基础设施，完全国产化，很牛。
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913004001231.png" alt="image-20230913004001231">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>工业&lt;/strong>解决方案：针对半导体晶圆质检，基于昇腾强大算力，实现工业领域的目标定位、测量、质检等能力。这一点真正突破了AI在工业领域落地的，很牛。
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913004208756.png" alt="image-20230913004208756">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>交通&lt;/strong>解决方案：
+&lt;ul>
+&lt;li>高速自由流收费稽核&lt;/li>
+&lt;li>交通视频云&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="5产业生态">5.产业生态&lt;/h2>
+&lt;p>在产业政策方面：&lt;/p>
+&lt;ul>
+&lt;li>昇腾与各地政府共建昇腾生态创新中心&lt;/li>
+&lt;li>通过行业联盟聚拢厂家、ISV、用户，建立各行业标杆。&lt;/li>
+&lt;/ul>
+&lt;p>在开发者方面：&lt;/p>
+&lt;ul>
+&lt;li>90%的开发者聚焦于基于AI算法的应用软件开发。&lt;/li>
+&lt;li>10%的开发者聚焦AI算法、AI驱动的开发。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913004825461.png" alt="image-20230913004825461">&lt;/p>
+&lt;p>在高校培养方面：&lt;/p>
+&lt;ul>
+&lt;li>昇腾与高校共建AI人才培养基地，与各高校推出昇腾计算体系课程与教材。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913005027655.png" alt="image-20230913005027655">&lt;/p>
+&lt;p>在合作伙伴方面：&lt;/p>
+&lt;ul>
+&lt;li>昇腾推出覆盖软件开发商、硬件开发商、云服务供应商、设备制造商等各类合作伙伴计划，华为为合作伙伴提供了资金+市场。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913005123533.png" alt="image-20230913005123533">&lt;/p>
+&lt;h2 id="6未来展望昇腾推动ai成为通用目的技术">6.未来展望：昇腾推动AI成为通用目的技术&lt;/h2>
+&lt;p>引用白皮书中的一段话：&lt;strong>把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界&lt;/strong>。&lt;/p>
+&lt;p>昇腾计算产业的愿景是作为中国的AI基石，AI的基础设施，成为通用目的技术。&lt;/p>
+&lt;h2 id="7总结">7.总结&lt;/h2>
+&lt;p>当我第一次看到昇腾的AI芯片层，CANN对标CUDA，无比惊讶、激动、自豪，这可是对标英伟达的大事，技术难度、商业难度都不可想象。&lt;/p>
+&lt;p>昇腾计算已雏形初见，这可不是短期突击出来的。不得不说，华为在AI领域的持续投资令人钦佩！&lt;/p></description></item><item><title>【chatGPT】学习笔记11-LLM应用-垂直领域知识问答系统(基于ChatGLM2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</link><pubDate>Tue, 05 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</guid><description>&lt;p>今天我们再来写一篇关于大语言模型的实战应用——如何开发一个垂直领域的知识问答系统？&lt;/p>
 &lt;h1 id="1原理">1.原理&lt;/h1>
 &lt;h2 id="1基于传统技术的实现方案">(1)基于传统技术的实现方案&lt;/h2>
 &lt;p>在没有大语言模型之前，有如下传统技术实现知识问答系统：&lt;/p>
@@ -2625,254 +2841,4 @@ java/lang/Thread.java
 &lt;center>於是我叫我自己恨情歌，假裝我不在乎&lt;/center>
 &lt;center>也許你從來都沒說過，是我想的太多&lt;/center>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E6%81%A8%E6%83%85%E6%AD%8C/image-20230224000529962.png" alt="image-20230224000529962">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/s2xcIjcH_u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item><item><title>【SpringOne 2022】5.Introduction to Testcontainers</title><link>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20225.introduction-to-testcontainers/</link><pubDate>Sat, 18 Feb 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/spring%E6%8B%BE%E9%81%97/springone-20225.introduction-to-testcontainers/</guid><description>&lt;p>SpringOne 2022第6个议题《Introduction to Testcontainers》，用3个Demo展示了TestContainers for Java的重要特性，主讲人：Oleg Selajev，辅助人：Cora lberkleid。PS：Oleg Selajev的演讲风格非常有激情。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230217074026357.png" alt="image-20230217074026357">&lt;/p>
-&lt;h1 id="1概述">1.概述&lt;/h1>
-&lt;h2 id="11集成测试对微服务架构的影响深远">1.1.集成测试对微服务架构的影响深远&lt;/h2>
-&lt;p>演讲者核心观点是：&lt;/p>
-&lt;ul>
-&lt;li>在传统架构下，测试成本的投入情况是**&amp;ldquo;单元测试&amp;quot;&amp;gt;&amp;quot;集成测试&amp;quot;&amp;gt;&amp;quot;E2E测试&amp;rdquo;**(如下图左半部分)。&lt;/li>
-&lt;li>在微服务架构下，存在数量巨大的微服务进程，不太可能全量测试和发布。
-&lt;ul>
-&lt;li>更合理的做法：仅对本轮迭代有关的微服务进行集成测试，局部发布。&lt;/li>
-&lt;li>如下图右半部分：如果集成测试投入更多，那么与本次发布相关的微服务影响范围是相对可控的，进而E2E测试可能会更简单。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>总之，&lt;strong>集成测试在微服务架构下越来越重要&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230217091453992.png" alt="image-20230217091453992">&lt;/p>
-&lt;h2 id="12集成测试的新方法">1.2.集成测试的新方法&lt;/h2>
-&lt;p>主讲人在这部分展示了&lt;strong>没有TestContainers之前&lt;/strong>、&lt;strong>使用TestContainers之后&lt;/strong>的集成测试手段的差异：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>之前&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>在服务器上部署被测微服务、依赖的组件(如：数据库、Redis、Kafka等)&lt;/li>
-&lt;li>在服务器上以Docker的形式部署被测微服务、依赖的组件&lt;/li>
-&lt;li>在本地电脑上部署被测微服务、依赖的组件&lt;/li>
-&lt;li>&lt;/li>
-&lt;li>对部署成本高的依赖组件，采用&lt;strong>模拟&lt;/strong>的方式
-&lt;ul>
-&lt;li>如：Wiremock这类Mock Server&lt;/li>
-&lt;li>如：采用h2数据库进行测试，规避安装PostgreSQL这种更重型的数据库&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218065338566.png" alt="image-20230218065338566">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>之后&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.TestContainers提供了丰富的&lt;code>Module&lt;/code>(这些&lt;code>Module&lt;/code>对应各类流行的中间件、数据库等)
-&lt;ul>
-&lt;li>比如：&lt;code>Redis Module&lt;/code>对应&lt;code>Redis&lt;/code>&lt;/li>
-&lt;li>比如：&lt;code>Kafka Module&lt;/code>对应&lt;code>Kafka&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>STEP2.这些&lt;code>Module&lt;/code>，各自都提供了API(这些API封装了Docker API)
-&lt;ul>
-&lt;li>这就意味着我们可以通过某个&lt;code>Module&lt;/code>的API，操纵对应的Docker容器&lt;/li>
-&lt;li>比如：&lt;code>Redis Module&lt;/code>提供1个&lt;code>启动redis容器&lt;/code>的API，调用以后，就会在服务器上真的运行起来1个&lt;code>Redis&lt;/code>的镜像&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>STEP3.TestContainers再和各类流行的测试框架集成，管理&lt;code>Module&lt;/code>对应的被依赖组件的容器的生命周期
-&lt;ul>
-&lt;li>比如：TestContainers在JUnit的&lt;code>setUp&lt;/code>方法中创建了&lt;code>Redis&lt;/code>容器，在&lt;code>TearDown&lt;/code>方法中销毁&lt;code>Redis&lt;/code>容器&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218102321877.png" alt="image-20230218102321877">&lt;/p>
-&lt;h2 id="13testcontainers发展历史">1.3.TestContainers发展历史&lt;/h2>
-&lt;p>演讲者在这一部分讲述了TestContainers创建时的小故事：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>2014年，一位名叫Moshe Eshel的大神在GitHub上写了&lt;code>DockerContainerRule.java&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>这段代码Override了JUnit的&lt;code>@Before&lt;/code>和&lt;code>@After&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>在JUnit执行before方法时，会启动指定的Docker容器&lt;/li>
-&lt;li>在JUnit执行after方法时，会关闭指定的Docker容器&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>2017年，TestContainers完全替代了&lt;code>DcokerContainerRule.java&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218101112791.png" alt="image-20230218101112791">&lt;/p>
-&lt;p>听演讲的时候，没太跟上演讲者的语速，和chatGPT印证了一下：&lt;/p>
-&lt;ul>
-&lt;li>的确可以认为：&lt;code>DcokerContainerRule.java&lt;/code>是TestContainers的灵感来源&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218101251008.png" alt="image-20230218101251008">&lt;/p>
-&lt;h2 id="14testcontainers成熟度">1.4.TestContainers成熟度&lt;/h2>
-&lt;p>从主讲人表述的信息，TestContainers的确很成熟：&lt;/p>
-&lt;ul>
-&lt;li>TestContainers项目在GitHub上是6.6k星&lt;/li>
-&lt;li>Docker项目发布的第2年就创建了，是这类测试框架的&lt;strong>老前辈&lt;/strong>&lt;/li>
-&lt;li>TestContainers宣称&lt;strong>&lt;code>Works with anything that runs in a Docker container&lt;/code>&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218103001722.png" alt="image-20230218103001722">&lt;/p>
-&lt;ul>
-&lt;li>在2022年被ThoughtWorks的咨询报告中，TestContainers&lt;strong>被评为&lt;code>Adopt采纳级&lt;/code>&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218103330486.png" alt="image-20230218103330486">&lt;/p>
-&lt;h1 id="2demo0">2.Demo0&lt;/h1>
-&lt;h2 id="21testcontainers的测试流程">2.1.TestContainers的测试流程&lt;/h2>
-&lt;p>这是演讲者的第1个Demo：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：
-&lt;ul>
-&lt;li>在测试类上，增加了&lt;code>@Testcontainers&lt;/code>注解&lt;/li>
-&lt;li>为测试类创建了&lt;code>GenericContainer&lt;/code>对象，此对象表示1个Docker容器&lt;/li>
-&lt;li>在&lt;code>@Before&lt;/code>方法中，调用&lt;code>GenericContainer&lt;/code>对象，打印它的Docker容器Id&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>**日志解读：**从日志看，&lt;strong>TestContainers完整地管理了1个容器的生命周期&lt;/strong>。
-&lt;ul>
-&lt;li>JUnit先执行&lt;code>@BeforeEach&lt;/code>方法&lt;/li>
-&lt;li>JUnit会连接Docker服务器&lt;/li>
-&lt;li>Ryuk被启动(Ryuk是啥呢？稍后解释)&lt;/li>
-&lt;li>进行系统检查&lt;/li>
-&lt;li>启动容器镜像&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218103524464.png" alt="image-20230218103524464">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Ryuk是什么？&lt;/strong>
-&lt;ul>
-&lt;li>Ruyk是Moby项目中的1个工具&lt;/li>
-&lt;li>这个工具支持对Docker镜像的管理&lt;/li>
-&lt;li>chatGPT回答如下：&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218104759166.png" alt="image-20230218104759166">&lt;/p>
-&lt;h2 id="22如何重用1个容器">2.2.如何重用1个容器&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：仅需要在测试类创建&lt;code>GenericContainer&lt;/code>对象时，将该对象设置为&lt;code>static&lt;/code>&lt;/li>
-&lt;li>&lt;strong>日志解读&lt;/strong>：
-&lt;ul>
-&lt;li>执行测试用例1时，TestContainers创建的Docker容器ID尾号&lt;code>bc739b5a&lt;/code>&lt;/li>
-&lt;li>执行测试用例2时，TestContainers创建的Docker容器ID尾号也是&lt;code>bc739b5a&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218104923764.png" alt="image-20230218104923764">&lt;/p>
-&lt;h1 id="3demo1">3.Demo1&lt;/h1>
-&lt;h2 id="31端口配置">3.1.端口配置&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：
-&lt;ul>
-&lt;li>在创建&lt;code>GenericContainer&lt;/code>对象时，通过&lt;code>withExposedPorts&lt;/code>方法&lt;strong>开放了80端口&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218111638548.png" alt="image-20230218111638548">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ul>
-&lt;li>在测试用例2中，通过&lt;code>GenericContainer&lt;/code>对象的&lt;code>getHost&lt;/code>和&lt;code>getFirstMappedPort&lt;/code>方法，获得Docker容器的IP和端口&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218111714728.png" alt="image-20230218111714728">&lt;/p>
-&lt;h2 id="32日志操作">3.2.日志操作&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：&lt;/li>
-&lt;li>获得日志的方式1：调用&lt;code>GenericContainer&lt;/code>对象的&lt;code>getLogs&lt;/code>方法&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218112057805.png" alt="image-20230218112057805">&lt;/p>
-&lt;ul>
-&lt;li>&lt;/li>
-&lt;/ul>
-&lt;ul>
-&lt;li>获得日志的方式2：使用&lt;code>Slf4jLogConsumer&lt;/code>对象&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218112301488.png" alt="image-20230218112301488">&lt;/p>
-&lt;h2 id="33使用dockfile">3.3.使用Dockfile&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：
-&lt;ul>
-&lt;li>创建&lt;code>GenericContainer&lt;/code>对象时，指定DockFile文件路径&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218112544145.png" alt="image-20230218112544145">&lt;/p>
-&lt;h1 id="4demo2">4.Demo2&lt;/h1>
-&lt;h2 id="41rediskafkapostgresql">4.1.redis+kafka+PostgreSQL&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：
-&lt;ul>
-&lt;li>创建&lt;code>RedisContainer&lt;/code>对象和&lt;code>KafkaContainer&lt;/code>对象&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218113102821.png" alt="image-20230218113102821">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ul>
-&lt;li>创建&lt;code>PostgreSQLContainer&lt;/code>对象&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218113215484.png" alt="image-20230218113215484">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ul>
-&lt;li>设置&lt;code>Redis&lt;/code>容器、&lt;code>PostgreSQL&lt;/code>容器的参数：&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218113306162.png" alt="image-20230218113306162">&lt;/p>
-&lt;h2 id="42混沌测试">4.2.混沌测试&lt;/h2>
-&lt;p>&lt;strong>Chaos Test&lt;/strong>是主讲人最出彩的一段，通过&lt;strong>Toxiproxy&lt;/strong>，可以很方便地模拟高负载、网络故障等，&lt;strong>实战中非常实用&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>代码解读&lt;/strong>：
-&lt;ul>
-&lt;li>创建&lt;code>Network&lt;/code>对象&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218115356716.png" alt="image-20230218115356716">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ul>
-&lt;li>创建&lt;code>Toxiproxy&lt;/code>容器对象&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218115429306.png" alt="image-20230218115429306">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ul>
-&lt;li>通过&lt;code>Toxiproxy&lt;/code>容器对象，创建&lt;code>redis&lt;/code>容器的网络连接代理对象&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218115553720.png" alt="image-20230218115553720">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ul>
-&lt;li>设置&lt;code>redis&lt;/code>容器的网络延时为2s，这样，我们就可以模拟生产环境上redis存在2s延时的网络环境了。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218115652712.png" alt="image-20230218115652712">&lt;/p>
-&lt;ul>
-&lt;li>chatGPT对&lt;strong>Toxiproxy&lt;/strong>的介绍：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Spring%E6%8B%BE%E9%81%97/%E3%80%90SpringOne2022%E3%80%915.IntroductiontoTestcontainers/image-20230218114014618.png" alt="image-20230218114014618">&lt;/p>
-&lt;h1 id="5小结">5.小结&lt;/h1>
-&lt;p>通过演讲者的3个Demo，可以得到如下的判断：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>TestContainers已经是相当成熟的集成测试组件了&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>通过TestContainers提供的丰富的&lt;code>Module&lt;/code>，极大地降低了集成测试时，依赖组件的部署和维护成本&lt;/p>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/s2xcIjcH_u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item></channel></rss>

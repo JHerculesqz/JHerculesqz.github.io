@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,182 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记12-昇腾计算产业发展白皮书解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 12 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>本文来解读华为的《昇腾计算产业发展白皮书》，跟踪一下国内AI行业的宏观动态。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/</link><pubDate>Mon, 18 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/</guid><description>&lt;h1 id="1问题">1.问题&lt;/h1>
+&lt;p>在《【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3》中，我们实现了Seq2Seq，看到了编码器-解码器架构的诸多优势。&lt;/p>
+&lt;p>但，Seq2Seq也有不完美的地方：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>长距离依赖问题&lt;/strong>：读了后面，忘了前面。&lt;/li>
+&lt;li>&lt;strong>信息压缩问题&lt;/strong>：Seq2Seq的上下文向量是固定长度的，很难将无限的信息压缩到有限长度的向量中。&lt;/li>
+&lt;/ul>
+&lt;p>这个视频，体现了长距离依赖问题和信息压缩问题：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>长距离依赖问题&lt;/strong>：沈腾的几个问题，对于老大爷，都是听了后面忘了前面。&lt;/li>
+&lt;li>&lt;strong>信息压缩问题&lt;/strong>：沈腾的每个问题，对于老大爷，字数都太多。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=961160816&amp;bvid=BV1tH4y1S7Uu&amp;cid=1271780225&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px autoplay=0> &lt;/iframe>
+&lt;p>&lt;font color=red>&lt;strong>长距离问题、信息压缩问题的本质，都是信息损失的问题&lt;/strong>。&lt;/font>&lt;/p>
+&lt;h1 id="2注意力机制的核心思想">2.注意力机制的核心思想&lt;/h1>
+&lt;p>理解了Seq2Seq的问题，我们会很自然地产生一种思路：如果将原始信息化繁为简，喂给LLM的是有效信息，而不是全量信息，是否可以解决长距离问题、信息压缩问题？&lt;/p>
+&lt;p>我们再来看一段视频：&lt;/p>
+&lt;ul>
+&lt;li>从全量信息看，&amp;ldquo;关键问题&amp;quot;四个字高频出现。&lt;/li>
+&lt;li>从有效信息看，这么长一段话也就是一句有效信息——&amp;ldquo;关键问题很重要&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>在人类世界，这些没用的废话叫艺术。在AI的世界，这些没用的废话叫干扰。&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919082648294.png" alt="image-20230919082648294">&lt;/p>
+&lt;iframe src="//player.bilibili.com/player.html?aid=661221372&amp;bvid=BV1Vh4y1a7uD&amp;cid=1271806425&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px autoplay=0> &lt;/iframe>
+&lt;p>从直觉上理解，人类接收信息时，会做两件事：&lt;/p>
+&lt;ul>
+&lt;li>关注&lt;strong>关键信息&lt;/strong>。&lt;/li>
+&lt;li>关注&lt;strong>不同维度的关键信息&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>比如：《八佰》这张海报，你看到了什么？&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>四行仓库&lt;/strong>：它是海报的背景，为什么会吸引观众的注意？&lt;/li>
+&lt;li>&lt;strong>残垣断壁&lt;/strong>：正常的第一眼感觉是这里应该经历过多轮惨烈战斗，为什么我们不会关注断壁、废楼、电线杆的破坏程度？为什么我们不会关注零落的士兵？&lt;/li>
+&lt;li>&lt;strong>对比鲜明&lt;/strong>：四行仓库和残垣断壁对比鲜明，我们应该可以感受到导演想表达的一种情绪。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919083211415.png" alt="image-20230919083211415">&lt;/p>
+&lt;p>上述这些，就是&lt;font color=red>&lt;strong>注意力&lt;/strong>&lt;/font>，而且是&lt;font color=red>&lt;strong>不同维度的注意力&lt;/strong>&lt;/font>：&lt;/p>
+&lt;ul>
+&lt;li>当有人问&amp;rdquo;《八佰》这部电影发生的地点在哪里？&amp;quot;，我们的注意力在&amp;rdquo;&lt;strong>四行仓库&lt;/strong>&amp;quot;。&lt;/li>
+&lt;li>当游人问&amp;rdquo;《八佰》这部电影想表达什么主题？&amp;quot;，我们的注意力在&amp;quot;四行仓库与残垣断壁&amp;quot;的&lt;strong>对比鲜明&lt;/strong>——表现&amp;quot;八佰&amp;quot;勇士保卫上海最后一寸土地的英勇决绝。&lt;/li>
+&lt;/ul>
+&lt;p>论文《Attention Mechanisms in Computer Vision: A Survey》，更加形象化地展示了注意力在计算机视觉领域的实验效果：&lt;/p>
+&lt;ul>
+&lt;li>我们可以发现，加入了注意力机制的AI，会更加关注原始图像中的关键要素。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919084959023.png" alt="image-20230919084959023">&lt;/p>
+&lt;h1 id="3注意力原理解读">3.注意力原理解读&lt;/h1>
+&lt;p>接下来，我们尝试一下用代码实现一下直觉上理解的注意力机制。&lt;/p>
+&lt;h2 id="31点积注意力">3.1.点积注意力&lt;/h2>
+&lt;p>首先，回顾一下点积的定义，特别关注一下点积的代数表达：&lt;/p>
+&lt;blockquote>
+&lt;p>在数学中，&lt;strong>点积&lt;/strong>又称&lt;strong>数量积&lt;/strong>或&lt;strong>标量积&lt;/strong>，是一种接受两串等长的数字序列（通常是坐标向量）、返回单一数字的代数运算)。在欧几里得几何，两条笛卡尔坐标向量的点积常称为&lt;strong>内积&lt;/strong>。&lt;/p>
+&lt;p>从代数角度看，先求两数字序列中每组对应元素的积，再求所有积之和，结果即为点积。&lt;/p>
+&lt;p>从几何角度看，点积则是两向量的长度与它们夹角余弦的积。这两种定义在笛卡尔坐标系中等价。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919085940309.png" alt="image-20230919085940309">&lt;/p>
+&lt;p>然后，我们再来看看&lt;strong>点积注意力&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>假设&lt;/strong>：向量X1表示帅哥，假设向量X2表示美女。&lt;/li>
+&lt;li>&lt;strong>STEP1&lt;/strong>：计算X1和X2的点积&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919090930858.png" alt="image-20230919090930858">，这个叫&lt;strong>原始权重&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>：对原始权重进行softmax&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919091338872.png" alt="image-20230919091338872">，得到&lt;strong>归一化注意力&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP3&lt;/strong>：计算归一化注意力与X2的加权和&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919092013095.png" alt="image-20230919092013095">，得到X1对X2的&lt;strong>最终注意力&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>结果&lt;/strong>：经过上述代数计算，最终注意力的信息主体肯定是X1，最终注意力还包含了X2的信息。因此可以这么理解：
+&lt;ul>
+&lt;li>向量X1表示：没有坠入爱河的帅哥。&lt;/li>
+&lt;li>最终向量表示：心中有美女的，坠入爱河的帅哥。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>具体代码如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919092053498.png" alt="image-20230919092053498">&lt;/p>
+&lt;p>运行结果：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919092401876.png" alt="image-20230919092401876">&lt;/p>
+&lt;h2 id="32缩放点积注意力">3.2.缩放点积注意力&lt;/h2>
+&lt;p>在&amp;quot;3.1.点积注意力&amp;quot;的STEP2中，对原始权重进行softmax，可能由于原始权重过大导致梯度过小甚至梯度消失。&lt;/p>
+&lt;p>因此，缩放点积注意力的本质是对原始权重除以一个系数后，再进行softmax，具体如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>假设&lt;/strong>：向量X1表示帅哥，假设向量X2表示美女。&lt;/li>
+&lt;li>&lt;strong>STEP1&lt;/strong>：计算X1和X2的点积&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919090930858.png" alt="image-20230919090930858">，这个叫&lt;strong>原始权重&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>：对原始权重缩放&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919105751443.png" alt="image-20230919105751443">，得到&lt;strong>缩放权重&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>：对&lt;strong>缩放权重&lt;/strong>进行softmax&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919105527069.png" alt="image-20230919105527069">，得到&lt;strong>归一化注意力&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP3&lt;/strong>：计算归一化注意力与X2的加权和&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919105715585.png" alt="image-20230919105715585">，得到X1对X2的&lt;strong>最终注意力&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>结果&lt;/strong>：经过上述代数计算，最终注意力的信息主体肯定是X1，最终注意力还包含了X2的信息。因此可以这么理解：
+&lt;ul>
+&lt;li>向量X1表示：没有坠入爱河的帅哥。&lt;/li>
+&lt;li>最终向量表示：心中有美女的，坠入爱河的帅哥。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>具体代码如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919105832012.png" alt="image-20230919105832012">&lt;/p>
+&lt;p>运行结果：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919105847714.png" alt="image-20230919105847714">&lt;/p>
+&lt;h2 id="33解码器-编码器注意力">3.3.解码器-编码器注意力&lt;/h2>
+&lt;p>有了&lt;strong>缩放点积注意力&lt;/strong>，我们就可以尝试一下：&lt;strong>对编码器-解码器架构&lt;/strong>增加&lt;strong>注意力机制&lt;/strong>了。&lt;/p>
+&lt;p>回顾一下《【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3》，我们详细分析了各个时间点上编码器、解码器的处理流程。截取t5和t6时刻：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>t5时刻&lt;/strong>：第一个解码器的输入是&lt;strong>编码器输出的上下文向量&lt;/strong>+&lt;strong>TeachForcing的第一个单词&lt;/strong>Who，第一个解码器的输出是最终答案的首词Who+&lt;strong>隐藏状态&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>t6时刻&lt;/strong>：第二个解码器的输入是&lt;strong>第一个解码器的隐藏状态&lt;/strong>+&lt;strong>TeachForcing的第二个单词&lt;/strong>are+第一个解码器预测的最终答案的首词Who。&lt;/li>
+&lt;/ul>
+&lt;p>我们可以看出，每一个解码器的输入本质包含了三要素：&lt;/p>
+&lt;ul>
+&lt;li>&lt;font color=red>&lt;strong>问题是什么&lt;/strong>&lt;/font>：每个编码器输出的隐藏状态，但隐藏状态无法记忆太长的问题序列，所以&lt;strong>每个解码器只知道问题的只言片语&lt;/strong>。&lt;/li>
+&lt;li>&lt;font color=red>&lt;strong>参考答案是什么&lt;/strong>&lt;/font>：TeachForcing会告诉每个解码器，参考答案是什么。&lt;/li>
+&lt;li>&lt;font color=red>&lt;strong>上一个解码器的答案是什么&lt;/strong>&lt;/font>：每个解码器都能知道上一个解码器预测的答案的一部分是什么。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919110424183.png" alt="image-20230919110424183">&lt;/p>
+&lt;p>思考一下：注意力机制，可以&lt;strong>如何优化编码器-解码器架构&lt;/strong>？&lt;/p>
+&lt;p>显然，只有优化&amp;quot;问题是什么&amp;quot;这个要素——如果我们将第一个解码器增加注意力层，就可以让输出的隐藏状态注意编码器输出的上下文向量——这样每个解码器就&lt;font color=red>&lt;strong>能用有限长度的向量&lt;/strong>&lt;/font>了解&lt;font color=red>&lt;strong>原始问题中最关键的部分&lt;/strong>&lt;/font>。&lt;/p>
+&lt;p>具体代码如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919161621858.png" alt="image-20230919161621858">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919161638084.png" alt="image-20230919161638084">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919161652216.png" alt="image-20230919161652216">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919161724555.png" alt="image-20230919161724555">&lt;/p>
+&lt;p>运行结果如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919161901056.png" alt="image-20230919161901056">&lt;/p>
+&lt;p>写到这里，我们要稍微小结一下(避免陷入术语、概念、数学公式的细节中)：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>神经网络架构&lt;/strong>：实现Seq2Seq的&lt;strong>编码器-解码器&lt;/strong>架构，是神经网络架构中的一种。&lt;/li>
+&lt;li>&lt;strong>注意力机制&lt;/strong>：注意力机制是一种专项技术，也有很多种实现，无论是哪一种，都是在&lt;strong>解决神经网络架构的长距离问题、信息压缩问题&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>如果您对&lt;strong>编码器-解码器&lt;/strong>这种&lt;strong>神经网络架构&lt;/strong>的细节记不太清，可以回看这篇《【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3》。&lt;/p>
+&lt;p>如果您对&lt;strong>注意力机制&lt;/strong>这种专项技术的细节记不太清，可以回看本文的&lt;strong>点积注意力、缩放点积注意力、编码器-解码器注意力&lt;/strong>章节。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919174642861.png" alt="image-20230919174642861">&lt;/p>
+&lt;p>当我们对上述概念有了基本认识后，我们也就可以理解，自1990年注意力机制提出后，有很多科学家在思考：&lt;/p>
+&lt;ul>
+&lt;li>&lt;font color=red>有没有一种&lt;strong>更好的神经网络架构&lt;/strong>，充分发挥这种&lt;strong>仿人类的注意力机制&lt;/strong>的独特优势&lt;/font>？&lt;/li>
+&lt;/ul>
+&lt;p>于是如雷贯耳的Transformer架构诞生了，于是如雷贯耳的论文《Attention Is All Your Need》诞生了。&lt;/p>
+&lt;p>笔者不在本文展开描述Transformer的实现原理，但我们可以在本文接下来的部分解读一下QKV、自注意力、多头注意力等Transformer架构中与注意力机制强相关的技术点，为后续解读Transformer做知识铺垫。&lt;/p>
+&lt;h2 id="34qkv">3.4.QKV&lt;/h2>
+&lt;p>QKV注意力(query-key-value attention)是注意力机制中的一种变体。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919165526267.png" alt="image-20230919165526267">&lt;/p>
+&lt;p>上图来自于维基百科，但维基百科对于QKV的介绍非常详细，但笔者试图给出这些过于理论化的QKV理论的通俗解释：&lt;/p>
+&lt;ul>
+&lt;li>注意力机制的本质是&lt;strong>让向量X1关注向量X2&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>Q&lt;/strong>uery，就是&lt;strong>向量X1&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>K&lt;/strong>ey、&lt;strong>V&lt;/strong>alue，就是&lt;strong>向量X2&lt;/strong>。Key和Value的区别，仅仅是数学公式的差异(注意力权重、注意力权重加权和)。&lt;/li>
+&lt;li>&lt;strong>向量X1&lt;/strong>，也就是&lt;strong>Q&lt;/strong>uery，在编码器-解码器架构中，就是&lt;strong>解码器输出的隐藏状态&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>向量X2&lt;/strong>，也就是&lt;strong>K&lt;/strong>ey或者&lt;strong>V&lt;/strong>alue，在编码器-解码器架构中，就是&lt;strong>编码器输出的上下文向量&lt;/strong>。&lt;/li>
+&lt;li>说白了，就是让&lt;strong>每个解码器的输出&lt;/strong>都关注&lt;strong>编码器输出的上下文向量&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>我们来看一下代码：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919171621721.png" alt="image-20230919171621721">&lt;/p>
+&lt;h2 id="35自注意力">3.5.自注意力&lt;/h2>
+&lt;p>自注意力的理论也非常抽象，笔者试图给出这些理论的通俗解释：&lt;/p>
+&lt;ul>
+&lt;li>注意力机制的本质是&lt;strong>让向量X1关注向量X2&lt;/strong>。自注意力的本质是&lt;strong>自己对自己&lt;/strong>的注意。&lt;/li>
+&lt;li>&lt;strong>Q&lt;/strong>uery，就是&lt;strong>向量X1&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>K&lt;/strong>ey、&lt;strong>V&lt;/strong>alue，也是&lt;strong>向量X2&lt;/strong>。而向量X2的信息本质还是向量X1，只是线性变换的公式不同而已。&lt;/li>
+&lt;/ul>
+&lt;p>我们来看看实现自注意力的代码：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919172737253.png" alt="image-20230919172737253">&lt;/p>
+&lt;h2 id="36多头注意力">3.6.多头注意力&lt;/h2>
+&lt;ul>
+&lt;li>理解了QKV注意力，那么多头注意力仅仅是从更多维度对信息进行点积、缩放、Softmax、加权和而已。&lt;/li>
+&lt;/ul>
+&lt;p>具体代码如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919173225726.png" alt="image-20230919173225726">&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;ul>
+&lt;li>本文通过介绍点积注意力、缩放点积注意力，进而解读了如何在编码器-解码器神经网络架构中，增加注意力机制。
+&lt;ul>
+&lt;li>本文的依据源于论文《An Attentive Survey of Attention Models》(&lt;a href="https://arxiv.org/abs/1904.02874">https://arxiv.org/abs/1904.02874&lt;/a>)&lt;/li>
+&lt;li>本文试图通过通俗的比喻、实际的代码，解读论文中复杂、抽象的算法流程。如下图：&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919174833717.png" alt="image-20230919174833717">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>本文进一步解读了QKV注意力、自注意力、多头注意力，为后续解读Transformer神经网络架构(如下图)奠定基础知识。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-Transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/image-20230919174725878.png" alt="image-20230919174725878">&lt;/p>
+&lt;p>解读GPT背后的论文及实现技术实属不易，&lt;/p>
+&lt;p>从N-Gram到词嵌入，再到神经概率语言模型，再到Seq2Seq，直到本文的注意力机制，&lt;/p>
+&lt;p>我们距离自行实现一个简化版大语言模型越来越近了，同时笔者也受益匪浅。&lt;/p>
+&lt;p>欢迎各位小伙伴探讨交流，我们继续探索这个有趣的技术领域！&lt;/p></description></item><item><title>【chatGPT】学习笔记12-昇腾计算产业发展白皮书解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 12 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>本文来解读华为的《昇腾计算产业发展白皮书》，跟踪一下国内AI行业的宏观动态。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912224057905.png" alt="image-20230912224057905">&lt;/p>
 &lt;h2 id="1ai发展趋势和挑战">1.AI发展趋势和挑战&lt;/h2>
 &lt;h3 id="11ai发展趋势">1.1.AI发展趋势&lt;/h3>
@@ -2820,25 +2995,4 @@ java/lang/Thread.java
 &lt;p>&lt;strong>我们的世界底层逻辑还是数学和哲学&lt;/strong>，可惜功利的我不允许自己去探索这种没有既得利益的知识。&lt;/p>
 &lt;p>或许，我偶尔应该&lt;strong>充满好奇&lt;/strong>，而不那么功利。&lt;/p>
 &lt;p>最后，面对国内对chatGPT的一片喧嚣，在努力弄懂chatGPT的原理之后，大致能分辨出哪些仅仅是停留在商业数据的分析伪洞察，哪些是没搞清How就乱给Do建议的伪分析。&lt;/p>
-&lt;p>&lt;strong>虚心求索&lt;/strong>，欢迎小伙伴们共同研究这些&lt;strong>有趣的技术&lt;/strong>、&lt;strong>有趣的未来&lt;/strong>。&lt;/p></description></item><item><title>【音乐】陈升-恨情歌</title><link>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E9%9F%B3%E4%B9%90%E9%99%88%E5%8D%87-%E6%81%A8%E6%83%85%E6%AD%8C/</link><pubDate>Fri, 24 Feb 2023 00:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E9%9F%B3%E4%B9%90%E9%99%88%E5%8D%87-%E6%81%A8%E6%83%85%E6%AD%8C/</guid><description>&lt;center>&lt;font size=20>恨情歌&lt;/font>&lt;/center>
-&lt;p align="right">陈升&lt;/p>
-&lt;center>為了要討好你的歡心，我經常忘記我自己&lt;/center>
-&lt;center>感情是件瘋狂的事， 多了並不見得好&lt;/center>
-&lt;center>我不能隨便我自己， 快樂輕聲地歌唱&lt;/center>
-&lt;center>都說你愛聽情歌， 來分擔你心中的苦&lt;/center>
-&lt;center>不要像頑皮的孩子， 老說為我唱情歌&lt;/center>
-&lt;center>常常我一個人在夜裡， 擔心迷失我自己&lt;/center>
-&lt;center>而原來我是一個， 愛四處遊蕩的人&lt;/center>
-&lt;center>如果有那麼一天我停住了，你是否就離開我&lt;/center>
-&lt;center>於是我叫我自己恨情歌，假裝我不在乎&lt;/center>
-&lt;center>或者我不再去討你歡心，我喜歡這樣的自己&lt;/center>
-&lt;center>於是我叫我自己恨情歌，假裝我不在乎&lt;/center>
-&lt;center>也許你從來都沒說過，是我想的太多&lt;/center>
-&lt;center>而原來我是一個，愛四處遊蕩的人&lt;/center>
-&lt;center>都說你愛聽情歌，來分擔你心中的苦&lt;/center>
-&lt;center>於是我叫我自己恨情歌，假裝我不在乎&lt;/center>
-&lt;center>或者我不再去討你歡心，我喜歡這樣的自己&lt;/center>
-&lt;center>於是我叫我自己恨情歌，假裝我不在乎&lt;/center>
-&lt;center>也許你從來都沒說過，是我想的太多&lt;/center>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E6%81%A8%E6%83%85%E6%AD%8C/image-20230224000529962.png" alt="image-20230224000529962">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/s2xcIjcH_u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item></channel></rss>
+&lt;p>&lt;strong>虚心求索&lt;/strong>，欢迎小伙伴们共同研究这些&lt;strong>有趣的技术&lt;/strong>、&lt;strong>有趣的未来&lt;/strong>。&lt;/p></description></item></channel></rss>

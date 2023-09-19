@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,518 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/</link><pubDate>Mon, 18 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/</guid><description>&lt;h1 id="1问题">1.问题&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记14-LangChain之Memory，对LLM的抽象2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</link><pubDate>Tue, 19 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块2——Chain。&lt;/p>
+&lt;h1 id="1核心模块2memory">1.核心模块2：Memory&lt;/h1>
+&lt;p>实现一个问答系统，通常需要将历史上的问题和答案，作为本次问题的上下文。&lt;/p>
+&lt;p>因此，LangChain提供了Memory模块，这个模块对记忆进行了抽象：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP1&lt;/strong>.当用户提出问题时，LangChain会去读&lt;strong>Memory&lt;/strong>，获得过去的消息&lt;strong>past_messages&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>.LangChain构造提示词，格式为&amp;rdquo;&lt;strong>{past_messages}{question}&lt;/strong>&amp;quot;。&lt;/li>
+&lt;li>&lt;strong>STEP3&lt;/strong>.LLM进行回答后，得到答案**{answer:&amp;hellip;}**。&lt;/li>
+&lt;li>STEP4.LangChain将本次的答案**{answer:&amp;hellip;}**，**写入Memory**。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920062809577.png" alt="image-20230920062809577">&lt;/p>
+&lt;p>LangChain提供了多种ChatMessageHistory、ChatMemory，我们接下来详细解读。&lt;/p>
+&lt;h2 id="11chatmessagehistory">1.1.ChatMessageHistory&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>类的继承关系&lt;/strong>：BaseChatMessageHistory &amp;ndash;&amp;gt; &lt;name>ChatMessageHistory # Example: ZepChatMessageHistory&lt;/li>
+&lt;li>&lt;strong>BaseChatMessageHistory&lt;/strong>：聊天消息历史记录的基类，定义了一系列方法，由子类实现&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/schema/chat_history.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920064148308.png" alt="image-20230920064148308">&lt;/p>
+&lt;h2 id="12basememory">1.2.BaseMemory&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>类的继承关系&lt;/strong>：BaseMemory &amp;ndash;&amp;gt; BaseChatMemory &amp;ndash;&amp;gt; &lt;name>Memory # Examples: ZepMemory, MotorheadMemory&lt;/li>
+&lt;li>&lt;strong>BaseMemory&lt;/strong>：Memory基类，定义了一系列方法，由子类实现&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/schema/memory.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">BaseMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Serializable&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Abstract base class for memory in Chains.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Memory refers to state in Chains. Memory can be used to store information about
+&lt;/span>&lt;span class="s2"> past executions of a Chain and inject that information into the inputs of
+&lt;/span>&lt;span class="s2"> future executions of the Chain. For example, for conversational Chains Memory
+&lt;/span>&lt;span class="s2"> can be used to store conversations and automatically add them to future model
+&lt;/span>&lt;span class="s2"> prompts so that the model has the necessary context to respond coherently to
+&lt;/span>&lt;span class="s2"> the latest input.
+&lt;/span>&lt;span class="s2">这里的内存指的是Chains中的状态。内存可以用来存储Chain过去执行的信息，并将信息注入到Chain的未来执行的输入中。
+&lt;/span>&lt;span class="s2">例如：对于会话型Chains，内存可以用来存储会话，并自动将它们添加到未来的模型提示词中，以便模型具有必要的上下文来连贯地响应最新的输入。
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> class Config:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Configuration&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">this&lt;/span> &lt;span class="n">pydantic&lt;/span> &lt;span class="nb">object&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;span class="s2"> 使用pydantic库，并在本类中定义抽象方法，待子类实现
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> arbitrary_types_allowed = True
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> @property
+&lt;/span>&lt;span class="s2"> @abstractmethod
+&lt;/span>&lt;span class="s2"> def memory_variables(self) -&amp;gt; List[str]:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">The&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="n">keys&lt;/span> &lt;span class="n">this&lt;/span> &lt;span class="n">memory&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">will&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">chain&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> @abstractmethod
+&lt;/span>&lt;span class="s2"> def load_memory_variables(self, inputs: Dict[str, Any]) -&amp;gt; Dict[str, Any]:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Return&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="n">pairs&lt;/span> &lt;span class="n">given&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">text&lt;/span> &lt;span class="nb">input&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">chain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> @abstractmethod
+&lt;/span>&lt;span class="s2"> def save_context(self, inputs: Dict[str, Any], outputs: Dict[str, str]) -&amp;gt; None:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Save&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">context&lt;/span> &lt;span class="n">of&lt;/span> &lt;span class="n">this&lt;/span> &lt;span class="n">chain&lt;/span> &lt;span class="n">run&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> @abstractmethod
+&lt;/span>&lt;span class="s2"> def clear(self) -&amp;gt; None:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Clear&lt;/span> &lt;span class="n">memory&lt;/span> &lt;span class="n">contents&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="13basechatmemory">1.3.BaseChatMemory&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>BaseChatMemory&lt;/strong>：BaseMemoryd的子类，实现了一部分通用方法，剩余由子类扩展&lt;/li>
+&lt;li>BaseChatMemory维护了ChatMessageHistory&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/memory/chat_memory.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">BaseChatMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseMemory&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Abstract base class for chat memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">chat_memory&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">BaseChatMessageHistory&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Field&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">default_factory&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">ChatMessageHistory&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">output_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
+&lt;span class="n">input_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
+&lt;span class="n">return_messages&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">_get_input_output&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">prompt_input_key&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">output_key&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">save_context&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Save context from this conversation to buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">input_str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">output_str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_get_input_output&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_user_message&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_str&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_ai_message&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">output_str&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">clear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Clear memory contents.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">clear&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来就可以看一下常用的几种Memory了。&lt;/p>
+&lt;h2 id="14conversationbuffermemory">1.4.ConversationBufferMemory&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>ConversationBufferMemory&lt;/strong>：一种Memory的具体实现。提供了记录历史聊天记录的能力。&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/memory/buffer.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ConversationBufferMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseChatMemory&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Buffer for storing conversation memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Human&amp;#34;&lt;/span>
+&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;AI&amp;#34;&lt;/span>
+&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;history&amp;#34;&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;String buffer of memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_messages&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">return_messages&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_str&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a string in case return_messages is True.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">get_buffer_string&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">human_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">ai_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a list of messages in case return_messages is False.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Will always return list of memory variables.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> :meta private:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load_memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return history buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们再来看一个例子：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920072953322.png" alt="image-20230920072953322">&lt;/p>
+&lt;ul>
+&lt;li>针对第一个问题，LangChain发送给LLM真实的问题如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920073630423.png" alt="image-20230920073630423">&lt;/p>
+&lt;ul>
+&lt;li>针对第二个问题，LangChain会把&lt;strong>第一次发给LLM的问题和答案&lt;/strong>+&lt;strong>第二次的问题&lt;/strong>发送给LLM：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920073804453.png" alt="image-20230920073804453">&lt;/p>
+&lt;h2 id="15conversationbufferwindowmemory">1.5.ConversationBufferWindowMemory&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>ConversationBufferWindowMemory&lt;/strong>：一种Memory的具体实现。提供了带有滑动窗口的记录历史聊天记录的能力。&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/memory/buffer_window.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ConversationBufferWindowMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseChatMemory&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Buffer for storing conversation memory inside a limited size window.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Human&amp;#34;&lt;/span>
+&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;AI&amp;#34;&lt;/span>
+&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;history&amp;#34;&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
+&lt;span class="n">k&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">5&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Number of messages to store in buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Union&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;String buffer of memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_messages&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">return_messages&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_str&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a string in case return_messages is True.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">messages&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">get_buffer_string&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">messages&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">human_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">ai_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a list of messages in case return_messages is False.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Will always return list of memory variables.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> :meta private:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load_memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return history buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们看一个例子：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074018406.png" alt="image-20230920074018406">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第一次问答&lt;/strong>：LangChain真实发送的问题只有&amp;quot;你好&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074115794.png" alt="image-20230920074115794">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第二次问答&lt;/strong>：LangChain真实发送的问题是&lt;strong>第一次问题答案&lt;/strong>+&lt;strong>第二次问题&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074225759.png" alt="image-20230920074225759">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第三次问答&lt;/strong>：LangChain真实发送的问题是&lt;strong>第一次问题答案&lt;/strong>+&lt;strong>第二次问题答案&lt;/strong>+&lt;strong>第三次问题&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074328411.png" alt="image-20230920074328411">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>第四次问答&lt;/strong>：LangChain真实发送的问题是&lt;strong>第二次问题答案&lt;/strong>+&lt;strong>第三次问题答案&lt;/strong>+&lt;strong>第四次问题&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074412212.png" alt="image-20230920074412212">&lt;/p>
+&lt;p>为什么会有近3次问答内容的限制呢？因为初始化ConversationBufferWindowMemory时，设置了&lt;code>k=2&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074524136.png" alt="image-20230920074524136">&lt;/p>
+&lt;h2 id="16conversationsummarybuffermemory">1.6.ConversationSummaryBufferMemory&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>ConversationSummaryBufferMemory&lt;/strong>：一种Memory的具体实现。提供了记录历史聊天记录，并对历史聊天记录进行归纳总结的能力。&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/memory/summary_buffer.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ConversationSummaryBufferMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseChatMemory&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">SummarizerMixin&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Buffer with summarizer for storing conversation memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">max_token_limit&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2000&lt;/span>
+&lt;span class="n">moving_summary_buffer&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;history&amp;#34;&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Will always return list of memory variables.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> :meta private:
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load_memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return history buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nb">buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">first_messages&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">summary_message_cls&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="nb">buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">first_messages&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nb">buffer&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">return_messages&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">final_buffer&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Any&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">buffer&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">final_buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">get_buffer_string&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nb">buffer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">human_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ai_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ai_prefix&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">final_buffer&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nd">@root_validator&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">validate_prompt_input_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">cls&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">values&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Validate that prompt input variables are consistent.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">prompt_variables&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">values&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;prompt&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">input_variables&lt;/span>
+&lt;span class="n">expected_keys&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;summary&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;new_lines&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">expected_keys&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prompt_variables&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">ValueError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;Got unexpected prompt input variables. The prompt expects &amp;#34;&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;{prompt_variables}, but it should have {expected_keys}.&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">values&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">save_context&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Save context from this conversation to buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nb">super&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">save_context&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">prune&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">prune&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Prune buffer if it exceeds max token limit&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nb">buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>
+&lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">llm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_num_tokens_from_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">buffer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">max_token_limit&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">pruned_memory&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">max_token_limit&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">pruned_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">buffer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pop&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">llm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_num_tokens_from_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">buffer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">predict_new_summary&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">pruned_memory&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">clear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Clear memory contents.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nb">super&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">clear&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们看一个例子：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074831714.png" alt="image-20230920074831714">&lt;/p>
+&lt;ul>
+&lt;li>从这段代码的输出，可以看到LangChain对历史问题和答案进行了概括总结：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>&lt;span class="err">&amp;#39;history&amp;#39;:&lt;/span> &lt;span class="err">[&lt;/span>
+&lt;span class="err">SystemMessage(content=&amp;#39;\nThe&lt;/span> &lt;span class="err">human&lt;/span> &lt;span class="err">asks&lt;/span> &lt;span class="err">what&lt;/span> &lt;span class="err">the&lt;/span> &lt;span class="err">AI&lt;/span> &lt;span class="err">thinks&lt;/span> &lt;span class="err">of&lt;/span> &lt;span class="err">artificial&lt;/span> &lt;span class="err">intelligence.&lt;/span> &lt;span class="err">The&lt;/span> &lt;span class="err">AI&lt;/span> &lt;span class="err">thinks&lt;/span> &lt;span class="err">artificial&lt;/span> &lt;span class="err">intelligence&lt;/span> &lt;span class="err">is&lt;/span> &lt;span class="err">a&lt;/span> &lt;span class="err">force&lt;/span> &lt;span class="err">for&lt;/span> &lt;span class="err">good&lt;/span> &lt;span class="err">because&lt;/span> &lt;span class="err">it&lt;/span> &lt;span class="err">will&lt;/span> &lt;span class="err">help&lt;/span> &lt;span class="err">humans&lt;/span> &lt;span class="err">reach&lt;/span> &lt;span class="err">their&lt;/span> &lt;span class="err">full&lt;/span> &lt;span class="err">potential.&lt;/span> &lt;span class="err">The&lt;/span> &lt;span class="err">human&lt;/span> &lt;span class="err">then&lt;/span> &lt;span class="err">asks&lt;/span> &lt;span class="err">what&lt;/span> &lt;span class="err">LLM&lt;/span> &lt;span class="err">is,&lt;/span> &lt;span class="err">to&lt;/span> &lt;span class="err">which&lt;/span> &lt;span class="err">the&lt;/span> &lt;span class="err">AI&lt;/span> &lt;span class="err">responds&lt;/span> &lt;span class="err">that&lt;/span> &lt;span class="err">it&lt;/span> &lt;span class="err">stands&lt;/span> &lt;span class="err">for&lt;/span> &lt;span class="err">Large&lt;/span> &lt;span class="err">Language&lt;/span> &lt;span class="err">Model,&lt;/span> &lt;span class="err">and&lt;/span> &lt;span class="err">provides&lt;/span> &lt;span class="err">a&lt;/span> &lt;span class="err">list&lt;/span> &lt;span class="err">of&lt;/span> &lt;span class="err">LLM&lt;/span> &lt;span class="err">models,&lt;/span> &lt;span class="err">including&lt;/span> &lt;span class="err">GPT-3,&lt;/span> &lt;span class="err">GPT-J-6B,&lt;/span> &lt;span class="err">CLIP,&lt;/span> &lt;span class="err">BERT,&lt;/span> &lt;span class="err">and&lt;/span> &lt;span class="err">T5.&amp;#39;,&lt;/span>
+&lt;span class="err">additional_kwargs={&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="err">)&lt;/span>
+&lt;span class="err">]}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="2小结">2.小结&lt;/h1>
+&lt;p>本文阐述了Memory模块的内部实现：&lt;/p>
+&lt;ul>
+&lt;li>ChatMessageHistory：提供记录历史聊天记录的对象&lt;/li>
+&lt;li>BaseChatMemory：维护1个ChatMessageHistory对象，并对外提供CRUD历史聊天记录的接口&lt;/li>
+&lt;li>ConversationBufferMemory：BaseChatMemory的1种子类，对外提供最终的CRUD历史聊天记录的接口&lt;/li>
+&lt;li>ConversationBufferWindowMemory：在ConversationBufferMemory的基础上，提供了滑动窗口能力&lt;/li>
+&lt;li>ConversationSummaryBufferMemory：在ConversationBufferMemory的基础上，提供了历史聊天记录的摘要能力&lt;/li>
+&lt;/ul>
+&lt;p>后续文章，我们继续解读LangChain的核心模块，感谢阅读。&lt;/p></description></item><item><title>【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/</link><pubDate>Mon, 18 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B013-transformer%E4%B9%8B%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B64/</guid><description>&lt;h1 id="1问题">1.问题&lt;/h1>
 &lt;p>在《【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3》中，我们实现了Seq2Seq，看到了编码器-解码器架构的诸多优势。&lt;/p>
 &lt;p>但，Seq2Seq也有不完美的地方：&lt;/p>
 &lt;ul>
@@ -2673,326 +3184,4 @@ java/lang/Thread.java
 &lt;center>Ohoh，有點孤單卻又不認輸&lt;/center>
 &lt;center>誒&lt;/center>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E5%85%AD%E6%9C%88/image-20230225143210137.png" alt="image-20230225143210137">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/X832EGf3i84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item><item><title>【chatGPT】学习笔记1-机器还需要多久才能像人一样思考</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/</link><pubDate>Fri, 24 Feb 2023 16:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/</guid><description>&lt;p>从深圳返程的路上，开始阅读chatGPT的论文，努力理解其中精妙的理论与公式。&lt;/p>
-&lt;p>渴望真正理解chatGPT，所以写下我在学习过程中的思考，希望前辈高手指教。&lt;/p>
-&lt;h1 id="1从宏观看">1.从宏观看&lt;/h1>
-&lt;h2 id="11软件内驱力制约了目前的ai能力">1.1.软件内驱力，制约了目前的AI能力&lt;/h2>
-&lt;h3 id="1非ai程序的特点">(1)非AI程序的特点&lt;/h3>
-&lt;blockquote>
-&lt;p>当&lt;strong>人类可以归纳&lt;/strong>出某种人类知识的&lt;strong>规则、规律&lt;/strong>时，程序员就可以把它做成软件。&lt;/p>
-&lt;/blockquote>
-&lt;p>比如：客户需要开发1个路由器产品，路由器遵循的TCP/IP协议就是人类对网络通信的归纳总结。在软件行业的黑话称之为**&amp;ldquo;需求&amp;rdquo;、&amp;ldquo;规格&amp;rdquo;**。&lt;/p>
-&lt;p>将非AI的程序抽象成如下公式，&lt;strong>人类的工作重心就在函数f上&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.归纳出函数f的&lt;strong>规则、规律&lt;/strong>&lt;/li>
-&lt;li>STEP2.交给人类程序员用某种编程语言实现出来&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221083651904.png" alt="image-20230221083651904">&lt;/p>
-&lt;p>因此，产品研发过程中，某1个人类传递了错误的**&amp;ldquo;需求&amp;rdquo;、&amp;ldquo;规格&amp;rdquo;**，就会造成软件工程中经典的问题：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230220171408523.png" alt="image-20230220171408523">&lt;/p>
-&lt;h3 id="2ai程序的特点">(2)AI程序的特点&lt;/h3>
-&lt;blockquote>
-&lt;p>当&lt;strong>人类无法归纳&lt;/strong>出某种人类知识的&lt;strong>规则、规律&lt;/strong>时，程序员实现某种数学工具的程序，该数学工具可以从已知的输入输出，自动归纳出规则、规律。&lt;/p>
-&lt;/blockquote>
-&lt;p>比如：我们需要实现计算机看一张照片，就知道这张照片里有一只狗。&lt;/p>
-&lt;p>人类如何归纳出&amp;quot;照片里具备怎样的特征就表示有一只狗&amp;quot;的&lt;strong>规则、规律&lt;/strong>呢？&lt;/p>
-&lt;p>暂且把看图识狗的问题放一边，我们换1个更简单的例子：已知历史上每天的白菜价格(假定白菜价格满足某种线性规律)，能否预测出明天的白菜价格？&lt;/p>
-&lt;p>我们可以把问题抽象为如下数学问题：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI拾遗/【chatGPT】学习笔记1-机器还需要多久才能像人一样思考/image-20230221092617276.png" alt="image-20230221092617276" style="zoom:50%;" />&lt;/p>
-&lt;p>我们可以用最朴实的方法求解：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.将p1、p2&amp;hellip;.pn在坐标系上描点&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221093207025.png" alt="image-20230221093207025">&lt;/p>
-&lt;ul>
-&lt;li>STEP2.用蓝色线贯穿p1、p2&amp;hellip;.pn&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221093633696.png" alt="image-20230221093633696">&lt;/p>
-&lt;ul>
-&lt;li>STEP3.这根蓝色线即可确定a、b，即确定了函数f是什么&lt;/li>
-&lt;/ul>
-&lt;p>这个函数f就是从历史上众多白菜价格中&lt;strong>归纳出来的规律、规则&lt;/strong>。&lt;/p>
-&lt;p>将AI的程序抽象如下，&lt;strong>人类的工作重心在数学工具M上，而函数f由数学工具M自动/半自动产生&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221094206072.png" alt="image-20230221094206072">&lt;/p>
-&lt;h3 id="3观点">(3)观点&lt;/h3>
-&lt;ul>
-&lt;li>观点1：软件的内驱力是&lt;strong>具备归纳能力&lt;/strong>的&lt;strong>人脑&lt;/strong>或者&lt;strong>数学工具&lt;/strong>。
-&lt;ul>
-&lt;li>对比两种程序，非AI程序的归纳来源于人脑，AI程序的归纳来源于数学工具。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>观点2：如果期望&lt;strong>机器像人一样思考&lt;/strong>，则必须满足&lt;strong>数学工具的能力==人脑的能力&lt;/strong>。
-&lt;ul>
-&lt;li>非AI程序只能说是机器像人一样工作，而不是思考。&lt;/li>
-&lt;li>AI程序中的数学工具的归纳能力和人脑持平，机器就真的像人一样思考了。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>观点3：人脑作为创造了数学工具的&lt;strong>造物主&lt;/strong>，&lt;strong>有可能创造出等于甚至强于自身的数学工具&lt;/strong>吗？
-&lt;ul>
-&lt;li>这个问题和&amp;quot;万能的上帝能否造出自己举不动的石头？&amp;ldquo;是一样的，但未知的领域太大，未来或许可能。&lt;/li>
-&lt;li>无论未来是否可能，目前看起来很难。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221151409891.png" alt="image-20230221151409891">&lt;/p>
-&lt;h2 id="12计算理论制约了ai解决问题的范围">1.2.计算理论，制约了AI解决问题的范围&lt;/h2>
-&lt;h3 id="1观点">(1)观点&lt;/h3>
-&lt;p>面对人类和AI，我的观点是：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>观点1：无论非AI程序，还是AI程序，最终&lt;strong>都是用来解决世间万物问题的&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>观点2：世间&lt;strong>有一类问题是不可解决的&lt;/strong>，这种问题&lt;strong>无论人类还是AI都无法解决&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>观点3：世间&lt;strong>还有一类问题是可解决的&lt;/strong>，其中一部分可以&amp;quot;彻底解决&amp;rdquo;，另一部分可以&amp;quot;委婉解决&amp;rdquo;，无论哪种，&lt;strong>AI终将比人类做的好&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>观点4：人类具有通过灵性&lt;strong>突破不可解决的问题&lt;/strong>，和&lt;strong>将&amp;quot;委婉解决&amp;quot;的问题降维成&amp;quot;彻底解决&amp;rdquo;&lt;/strong>，目前&lt;strong>AI很难做到&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="2不可判定问题">(2)不可判定问题&lt;/h3>
-&lt;p>在计算理论中，不可解决的问题被称为&lt;strong>不可判定问题&lt;/strong>，人类解决不了的问题，AI也解决不了。&lt;/p>
-&lt;ul>
-&lt;li>比如：理发师宣称给全村所有不给自己刮胡子的人刮胡子就无法解决。&lt;/li>
-&lt;li>类似的问题还有&amp;quot;停机问题&amp;rdquo;、&amp;ldquo;上帝造石问题&amp;quot;等等。&lt;/li>
-&lt;li>但人类未知的领域太多了，可能在未知的领域，理发师可以做到他宣称的任务。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明：计算理论用数学工具对世间所有问题进行了分类，可简单认为不可解决的问题是不可判定的问题，可解决的问题是可判定问题。&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="3判定问题">(3)判定问题&lt;/h3>
-&lt;p>在计算理论中，对于可解决的问题被称为&lt;strong>可判定问题&lt;/strong>，这些可解决的问题有分两类：&lt;/p>
-&lt;ul>
-&lt;li>此类问题中的一部分可以&lt;strong>直奔主题、彻底解决&lt;/strong>，在计算理论中叫&lt;strong>P问题&lt;/strong>。
-&lt;ul>
-&lt;li>比如：计算一个圆的面积，知道了圆心和半径，就能彻底求解。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>此类问题中剩余部分只能&lt;strong>曲线救国，间接解决&lt;/strong>，在计算理论中叫&lt;strong>NP问题&lt;/strong>。
-&lt;ul>
-&lt;li>比如：要给一张照片中的狗描边需要很高的计算成本，但要回答一张照片有没有狗，计算成本就会变得很低。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>无论是P问题，还是NP问题，AI终将强于人类&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明：计算理论针对可解决的问题，用数学工具进行了量化，通过计算时间表现解决这个问题的困难程度。&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="4灵感灵性灵魂">(4)灵感、灵性、灵魂&lt;/h3>
-&lt;p>从解决问题的角度看，人类在如下两方面强于AI：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>将不可判定问题转变为可判定问题，人类强于AI&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>1935年，奥地利物理学家薛定谔提出了&lt;strong>薛定谔的猫&lt;/strong>，直至今日众多科学家还在感叹自己从未懂得量子力学。&lt;/p>
-&lt;p>1851年，德国数学家黎曼分享了《论几何学作为基础的假设》，而在相隔近百年后爱因斯坦的《广义相对论的基础》中的空间几何采用了黎曼几何。&lt;/p>
-&lt;p>这些例子，就是人脑有机会将&lt;strong>不可判定的问题&lt;/strong>转换为&lt;strong>可判定问题&lt;/strong>，将&lt;strong>未知&lt;/strong>变为&lt;strong>已知&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>将NP问题降维为P问题，人类强于AI&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>和王志兄探讨的时候，他讲到了《模拟游戏》，以当时的算力无论如何都很难破解德军密码，山穷水尽时几个科学家在酒吧中灵感乍现，利用一个常用词，巧妙地简化了破解密码的过程。从计算理论看，破解密码是个&lt;strong>NP问题&lt;/strong>，但因为其中反复出现的关键词，此问题降维成了&lt;strong>P问题&lt;/strong>，也就是可求解的问题了。&lt;/p>
-&lt;p>再比如当今世界未解数学难题之一就是证明&lt;strong>NP问题是否等于P问题&lt;/strong>，一旦证明了，世间众多难解问题都可以变为可求解问题了。比如：癌症这个NP问题，就变成可治疗的P问题了。&lt;/p>
-&lt;p>&lt;strong>人类文明的跳跃总是这样：在浩渺的历史场合中，微醺中、睡梦中，灵光一现。&lt;/strong>&lt;/p>
-&lt;p>&lt;strong>然而，人类的灵感、灵性、灵魂，似乎还没有数学公式可以表达。&lt;/strong>&lt;/p>
-&lt;p>这个话题不能再深聊下去了，再聊就哲学(身心二元论)和神学了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230221152255695.png" alt="image-20230221152255695">&lt;/p>
-&lt;h2 id="13小结通用人工智能依然没有到来">1.3.小结：通用人工智能依然没有到来&lt;/h2>
-&lt;p>通用人工智能，&lt;strong>Artificial general intelligence&lt;/strong>，简称&lt;strong>AGI&lt;/strong>。与之相反的就是弱人工智能(&lt;strong>Weak AI&lt;/strong>)，也叫做窄人工智能(&lt;strong>Narrow AI&lt;/strong>)。通用人工智能与弱人工智能最大的区别就是是否具备认知能力。弱人工智能有点像绿野仙踪里没有心的铁皮人，他的梦想就是有一颗真正的心。&lt;/p>
-&lt;blockquote>
-&lt;p>认知能力：详见https://en.wikipedia.org/wiki/Cognition&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230222160053172-16771388478091.png" alt="image-20230222160053172">&lt;/p>
-&lt;p>从前述的软件内驱力(驱动力)、计算理论(解决问题能力)看，除非发生了一种&lt;strong>技术突变&lt;/strong>，否则机器要像人一样思考依然很困难。&lt;/p>
-&lt;p>但，&lt;strong>AI技术在弱人工智能方向的确越来越强&lt;/strong>。我们接下来再从微观上做进一步分析。&lt;/p>
-&lt;h1 id="2从微观看">2.从微观看&lt;/h1>
-&lt;h2 id="21监督无监督只要狗粮撒的多人工智能勉强行">2.1.监督&amp;amp;无监督：只要狗粮撒的多，人工智能勉强行&lt;/h2>
-&lt;h3 id="1一个例子是猫还是狗">(1)一个例子：是猫还是狗？&lt;/h3>
-&lt;p>假设AI的数学工具为w₁x+w₂y(其中w₁初始值1，w₂初始化1)，&lt;/p>
-&lt;p>并且，AI的数学工具输出表示：&lt;/p>
-&lt;ul>
-&lt;li>如果数学工具输出&amp;gt;=0，则表示照片中是1只狗。&lt;/li>
-&lt;li>如果数学工具输出&amp;lt;0，则表示照片中是1只猫。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>第一波学习&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>输入第1张照片(是二哈，一种狗)，二哈的数学表示为(x=1, y=1)，则AI的数学工具输出2，进而推理出第1张照片是狗。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>输入第2张照片(是布偶，一种猫)，布偶的数学表示为(x=1, y=-2)，则AI的数学工具输出-1，进而推理出第2张照片是猫。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223162906437.png" alt="image-20230223162906437">&lt;/p>
-&lt;p>&lt;strong>第二波学习&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>输入第3张照片(是泰迪，一种狗)，泰迪的数学表达是(x=-1, y=-1)，则AI的数学工具输出-2，进而推理出第3张照片是猫。&lt;/li>
-&lt;li>此时就错了，泰迪怎么可能是一种猫。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223164621150.png" alt="image-20230223164621150">&lt;/p>
-&lt;p>&lt;strong>第三波学习&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>此时，就要调整w₁和w₂，我掐指一算，调整为w₁=-1，w₂=1。&lt;/li>
-&lt;li>输入第1张、第2张、第3张照片，AI的数学工具输出为0、-3、0，进而可知二哈是狗、布偶是猫、泰迪是狗。&lt;/li>
-&lt;li>显然，w₁和w₂设计的合适，能够应对更多的照片，而不是每次输入一个新照片就要重新调整，这就是人工智能的黑话——&lt;strong>泛化&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223165156039.png" alt="image-20230223165156039">&lt;/p>
-&lt;p>于是，不断地喂进去新的图片，不断地调整w₁和w₂……&lt;/p>
-&lt;p>于是，我师傅把上述过程叫做&lt;strong>喂狗&lt;/strong>，这些图片就是&lt;strong>狗粮&lt;/strong>。&lt;/p>
-&lt;h3 id="2监督学习狗粮的成本很高">(2)监督学习：狗粮的成本很高&lt;/h3>
-&lt;p>根据前面的例子，首先需要人类准备好非常非常多的照片，并且人要标识出来每张照片是猫还是狗，这种学习方式就是&lt;strong>监督学习&lt;/strong>。&lt;/p>
-&lt;p>这就好像有个人类小孩儿不太聪明，他爸爸要把世界上所有的习题册都买回来，爸爸还要把每一道题自己先做一遍，再来一道一道教这孩子。&lt;/p>
-&lt;p>在这种高昂的教学成本下，我们就可以看到父慈子孝的场面了：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E8%BE%85%E5%AF%BC%E5%8A%9F%E8%AF%BE.gif" alt="辅导功课">&lt;/p>
-&lt;h3 id="3无监督学习从狗粮中吸收的营养有限">(3)无监督学习：从狗粮中吸收的营养有限&lt;/h3>
-&lt;p>与监督学习相对的，是&lt;strong>无监督学习&lt;/strong>。无监督学习还是需要人类准备好非常多的照片，只是不需要人类把每一张照片都标注出是猫还是狗。&lt;/p>
-&lt;p>人工智能在学习过程中，也能学会猫和狗两类照片的差别，但是它并没有&lt;strong>猫&lt;/strong>、&lt;strong>狗&lt;/strong>的概念。&lt;/p>
-&lt;p>相当于，狗粮吃了，吸收的营养有限。&lt;/p>
-&lt;h3 id="4感知机lenet神经网络喂狗工具在进化">(4)感知机、LeNet、神经网络，喂狗工具在进化&lt;/h3>
-&lt;p>除了考虑狗粮问题，从Perceptron感知机，到LeNet，再到神经网络，喂狗工具也在进化，这里给出动图，我们感受一下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%BC%94%E7%A4%BA1.gif" alt="神经网络演示1">&lt;/p>
-&lt;h3 id="5观点">(5)观点&lt;/h3>
-&lt;p>前面介绍了监督学习、无监督学习的方法论，可以看到：&lt;/p>
-&lt;ul>
-&lt;li>观点1：&lt;strong>对数据要求高，成本高&lt;/strong>。无论是数据清洗，还是数据标注，人工成本都很高。&lt;/li>
-&lt;li>观点2：方法论决定了AI的能力&lt;strong>只能解决某些特定领域下的问题&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h2 id="22强化学习没有狗粮去喂狗人工智能还能行">2.2.强化学习：没有狗粮去喂狗，人工智能还能行&lt;/h2>
-&lt;h3 id="1什么是强化学习">(1)什么是强化学习&lt;/h3>
-&lt;p>先看一个实验，对强化学习有一个直观感受：&lt;/p>
-&lt;ul>
-&lt;li>机器人看到面前的架子，一次次地把盘子放到架子里，盘子碎了减分，盘子放好了加分。&lt;/li>
-&lt;li>机器人看到面前随机出现的杯子，一次一次地把水倒进杯子里，倒进去的水越多加分，反之减分。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%A4%BA%E4%BE%8B.gif" alt="强化学习示例">&lt;/p>
-&lt;p>强化学习中，有几个概念：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Agent&lt;/strong>：智能体，可以简单地认为就是人工智能本身。&lt;/li>
-&lt;li>&lt;strong>Environment&lt;/strong>：环境，就是智能体所处的外在环境。&lt;/li>
-&lt;li>&lt;strong>Action&lt;/strong>：行为，智能体会不断尝试做出1个行为，触发环境发生变化。&lt;/li>
-&lt;li>&lt;strong>State&lt;/strong>：智能体观测环境发生此刻的状态。&lt;/li>
-&lt;li>&lt;strong>Reward&lt;/strong>：当智能体做出一个行为以后，环境会对智能体产生奖励，也可能产生惩罚。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223221457273.png" alt="image-20230223221457273">&lt;/p>
-&lt;p>再看看强化学习的流程：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.观察到**Environment(环境)&lt;strong>中的&lt;/strong>State(状态)**有一杯水。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231206199.png" alt="image-20230223231206199">&lt;/p>
-&lt;ul>
-&lt;li>STEP2.**Agent(智能体)&lt;strong>做出了一个&lt;/strong>Action(行为)**打翻水。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231405476.png" alt="image-20230223231405476">&lt;/p>
-&lt;ul>
-&lt;li>STEP3.&lt;strong>Environment(环境)&lt;strong>产生了一个&lt;/strong>Reward(奖赏)&lt;/strong>——此时是个负向的奖赏——别那么做！&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231328920.png" alt="image-20230223231328920">&lt;/p>
-&lt;ul>
-&lt;li>STEP4.**Agent(智能体)&lt;strong>再次看到的&lt;/strong>Environment(环境)&lt;strong>的&lt;/strong>State(状态)**是水杯打翻了。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231651496.png" alt="image-20230223231651496">&lt;/p>
-&lt;ul>
-&lt;li>STEP5.**Agent(智能体)&lt;strong>做出了新的&lt;/strong>Action(行为)**把水擦干。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223231852875.png" alt="image-20230223231852875">&lt;/p>
-&lt;ul>
-&lt;li>STEP6.此时&lt;strong>Environment(环境)&lt;strong>发出的&lt;/strong>Reward(奖赏)&lt;/strong>——真棒&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232148105.png" alt="image-20230223232148105">&lt;/p>
-&lt;ul>
-&lt;li>最终，人工智能学会了正确的选择。&lt;/li>
-&lt;/ul>
-&lt;h3 id="2强化学习的核心思想一次次的救赎">(2)强化学习的核心思想：一次次的救赎&lt;/h3>
-&lt;p>这有点像电影《Source Code》的剧情，男主不断地经历同一次循环，他在循环里的每一步都在寻找突破，最终突破循环。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232746654.png" alt="image-20230223232746654">&lt;/p>
-&lt;p>作为人类的我，多么嫉妒人工智能具备的这种能力——&lt;strong>后悔药&lt;/strong>——曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候才后悔莫及，人世间最疼苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对那个女孩说三个字：我爱你。如果非要在这份爱上加一个期限，我希望是……一万年。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223232959205.png" alt="image-20230223232959205">&lt;/p>
-&lt;h3 id="3强化学习的难点延迟奖励探索突破灵性的灵犀一指">(3)强化学习的难点：延迟奖励&amp;amp;探索，突破灵性的灵犀一指&lt;/h3>
-&lt;p>强化学习有两个难点：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>延迟奖励&lt;/strong>：有一种可能——每一步都看起来得到最高的奖赏，但很可能最终还是输了整个游戏。这就是延迟奖励，&lt;strong>前面几步不仅不要赢，反而要输&lt;/strong>，赢得最终的比赛才是关键——色即是空，空即是色。&lt;/li>
-&lt;li>&lt;strong>探索&lt;/strong>：再就是不走寻常路，某一步忽然走了以前没做过的动作，意外地得到奖励，也可能失败，&lt;strong>一把梭哈，撞个大运&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>强化学习的这两个难点，就好像《天龙八部》中的珍珑棋局，那么多青年才俊都无法攻克，虚竹却胡乱下了一步(&lt;strong>探索&lt;/strong>)，死了一大片子却开拓了新的天地(&lt;strong>延迟奖励&lt;/strong>)。如果再来从宏观层面谈，根据计算理论，虚竹这灵犀一指就是将&lt;strong>不可判定问题&lt;/strong>变为了&lt;strong>可判定问题&lt;/strong>，而这一指就是&lt;strong>人类的灵性&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223234346605.png" alt="image-20230223234346605">&lt;/p>
-&lt;h3 id="4观点">(4)观点&lt;/h3>
-&lt;ul>
-&lt;li>观点1：强化学习一定程度地解决了有监督、无监督中的&lt;strong>狗粮问题&lt;/strong>。&lt;/li>
-&lt;li>观点2：由于没有直接告知答案，因此需要&lt;strong>等待漫长的时间&lt;/strong>让机器去探索真理。所以强化学习的科学家们就是在不断优化其内部的数学工具，提升训练速度。
-&lt;ul>
-&lt;li>在强化学习中，有&lt;strong>Policy-Based&lt;/strong>和&lt;strong>Valued-Based&lt;/strong>两种策略，科学家为了解决策略梯度不好的问题，提出了&lt;strong>TROP&lt;/strong>算法，chatGPT进一步改进了这个算法，就是&lt;strong>PPO&lt;/strong>算法。&lt;/li>
-&lt;li>我们在本文中不必深入这些术语的公式、原理、细节，只需要大致有个印象，知道chatGPT用这个算法到底要解决什么问题。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>观点3：强化学习的底层逻辑，其实就是&lt;strong>主动学习、反复试错&lt;/strong>，&lt;strong>你只需要给我时间，我并不需要你的狗粮&lt;/strong>。
-&lt;ul>
-&lt;li>这不仅仅是解决训练成本的问题，主动学习是人类的重要特质，&lt;strong>主动学习能力或许是机器具备人类灵性的突破口之一&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>观点4：强化学习的奖励机制，不一定是一个单纯的奖励模型，也可以是一个&lt;strong>人类偏好模型&lt;/strong>。
-&lt;ul>
-&lt;li>&lt;strong>感受自我、感知他人&lt;/strong>，这也是人类另一种重要特质，这&lt;strong>也可能是机器具备人类灵性的突破口&lt;/strong>。&lt;/li>
-&lt;li>chatGPT用了人类偏好模型，这就是为什么它会惊艳到很多人的原因之一，后文会讲到。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="23看chatgpt原理图">2.3.看chatGPT原理图&lt;/h2>
-&lt;p>有了前文宏观层面建立的世界观，有了前文微观层面讲述的AI算法，我们可以来理解一下chatGPT的原理图了：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230223234441157.png" alt="image-20230223234441157">&lt;/p>
-&lt;h3 id="1拥有一个基础版本的聊天机器人">(1)拥有一个基础版本的聊天机器人&lt;/h3>
-&lt;p>chatGPT第一阶段本质是监督+无监督，人类标注了一定数量的问题数据集，这里和大多数AI领域工程师现在的工作差不多。&lt;/p>
-&lt;p>在chatGPT，把训练的结果叫做&lt;strong>SFT模型&lt;/strong>，本质就是获得了一个初级版本的聊天机器人。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224141822069.png" alt="image-20230224141822069">&lt;/p>
-&lt;h3 id="2关键步骤我知道人类喜欢什么">(2)关键步骤，我知道人类喜欢什么&lt;/h3>
-&lt;p>第二步是关键步骤，用1个问题驱动&lt;strong>SFT&lt;/strong>，机器人返回4个答案，人类只需要对这4个答案进行排序。&lt;/p>
-&lt;p>这太有创意了：&lt;strong>一个人类回答问题是困难的&lt;/strong>(需要这个人类是这个问题的领域专家)，但&lt;strong>让人类判断哪个回答更好是简单的&lt;/strong>(这个人类只需要有一定的领域知识)。&lt;/p>
-&lt;p>排序也是一种&lt;strong>标注&lt;/strong>，这个标注不再只是&lt;strong>是猫是狗&lt;/strong>的简单标注，而是&lt;strong>&lt;font color=red>人类喜好&lt;/font>&lt;/strong>！&lt;/p>
-&lt;p>chatGPT将这种人类喜欢叫做RM模型。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224143243772.png" alt="image-20230224143243772">&lt;/p>
-&lt;h3 id="3学的快我懂你">(3)学的快，我懂你&lt;/h3>
-&lt;p>chatGPT到了第三步，似乎就水到渠成了。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224150150372.png" alt="image-20230224150150372">&lt;/p>
-&lt;p>关于&lt;strong>学的快&lt;/strong>，和人类学习一项新技能本质是一样的，抽象为两点：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>学习有效信息&lt;/strong>：谷歌发明的注意力模型就是解决机器学习信息时，尽量像人一样关注到核心信息。
-&lt;ul>
-&lt;li>比如：下面这张图，我觉得大部分人类第一反应是注意到照片里有两匹马，而不是背后的风景吧(不过这里的风景真的很美)？&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E6%9C%BA%E5%99%A8%E8%BF%98%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%89%8D%E8%83%BD%E5%83%8F%E4%BA%BA%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83/image-20230224151038341.png" alt="image-20230224151038341">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>学的过程快&lt;/strong>：PPO算法是强化学习中的一个单点算法，优化梯度问题，本质还是解决学的过程要快。&lt;/li>
-&lt;/ul>
-&lt;p>关于&lt;strong>我懂你&lt;/strong>，就是第二步的&lt;strong>人类喜好模型RM&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>将人类喜好模型作为&lt;strong>奖赏&lt;/strong>，让机器人的回答不断解决人类喜好的那种回答。
-&lt;ul>
-&lt;li>这里面还有一个细节，回答类似输入法的自动联想，回答一个词就联想下一个词，下一个词的选择会遵循人类喜好模型。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>一个人类的小孩，能从课本中提取到关键知识、理解关键知识很快、并且学习的目标一直围绕着正确的方向，这孩子一定是学霸。&lt;/p>
-&lt;p>这就是在&lt;strong>正确的方向上强执行力地做事&lt;/strong>。&lt;/p>
-&lt;h3 id="4观点-1">(4)观点&lt;/h3>
-&lt;ul>
-&lt;li>观点1：chatGPT并不是一个技术突变的产品，AI发展史上所有的技术都是被它使用的，&lt;strong>能灵活运用已有的AI技术是值得我们学习的可贵之处&lt;/strong>。&lt;/li>
-&lt;li>观点2：宏观层面人类的灵性是强人工智能最大的挑战，但微观层面&lt;strong>强化学习可能存在突破人类灵性的可能性&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h2 id="24小结微观层面的术在不断进步">2.4.小结：微观层面的术在不断进步&lt;/h2>
-&lt;ul>
-&lt;li>监督&amp;amp;无监督学习最大的问题是训练数据的成本，强化学习一定程度上解决了这个成本问题。&lt;/li>
-&lt;li>chatGPT对强化学习的贡献在于：&lt;strong>获得有效的知识&lt;/strong>(注意力模型)、&lt;strong>高效的学习速度&lt;/strong>(PPO算法)、&lt;strong>正确的努力方向&lt;/strong>(人类喜好模型RM)&lt;/li>
-&lt;/ul>
-&lt;h1 id="3理性思考充满好奇虚心求索">3.理性思考、充满好奇、虚心求索&lt;/h1>
-&lt;p>如果我的小伙伴们能看到这里，很感谢你们。这篇文章从提笔到写完，占用了我一周所有的业余时间。&lt;/p>
-&lt;p>chatGPT的论文涉及到的知识面太广，远超我的认知，同时由于给我的极大震撼，我又有太多想表达的内容。&lt;/p>
-&lt;p>在我的学习笔记第一篇，我选择表述我最感兴趣的话题——&lt;strong>机器像人一样思考还有多远？&lt;/strong>&lt;/p>
-&lt;p>人类很多工作可能或正在被人工智能替代，这只能叫&lt;strong>岗位转换&lt;/strong>，&lt;strong>只是物理层面的替代&lt;/strong>。&lt;/p>
-&lt;p>拖拉机发明了，这个岗位的人类去做了别的岗位，但至今没看到人类被拖拉机统治。&lt;/p>
-&lt;p>很感谢学习过程中，身边有那些宏观、微观层面帮助我&lt;strong>理性思考&lt;/strong>的小伙伴。&lt;/p>
-&lt;p>写这篇文章时，我被迫看了很多哲学和数学资料，比如：身心二元论、计算理论等等。&lt;/p>
-&lt;p>&lt;strong>我们的世界底层逻辑还是数学和哲学&lt;/strong>，可惜功利的我不允许自己去探索这种没有既得利益的知识。&lt;/p>
-&lt;p>或许，我偶尔应该&lt;strong>充满好奇&lt;/strong>，而不那么功利。&lt;/p>
-&lt;p>最后，面对国内对chatGPT的一片喧嚣，在努力弄懂chatGPT的原理之后，大致能分辨出哪些仅仅是停留在商业数据的分析伪洞察，哪些是没搞清How就乱给Do建议的伪分析。&lt;/p>
-&lt;p>&lt;strong>虚心求索&lt;/strong>，欢迎小伙伴们共同研究这些&lt;strong>有趣的技术&lt;/strong>、&lt;strong>有趣的未来&lt;/strong>。&lt;/p></description></item></channel></rss>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/X832EGf3i84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item></channel></rss>

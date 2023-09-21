@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,299 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记14-LangChain之Memory，对LLM的抽象2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</link><pubDate>Tue, 19 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块2——Chain。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记15-LangChain之Chain，对LLM的抽象3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-langchain%E4%B9%8Bchain%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A13/</link><pubDate>Wed, 20 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-langchain%E4%B9%8Bchain%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A13/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块3——Chain。&lt;/p>
+&lt;h1 id="1核心模块3chain">1.核心模块3：Chain&lt;/h1>
+&lt;p>在《【chatGPT】学习笔记11-LLM应用-垂直领域知识问答系统(基于ChatGLM2)》中，我们知道LangChain-ChatChat有如下工作流程：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921092837843.png" alt="image-20230921092837843">&lt;/p>
+&lt;p>如何实现呢？其实，LangChain抽象了&lt;strong>Chain&lt;/strong>的概念。&lt;/p>
+&lt;h2 id="11chain-class">1.1.Chain Class&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>类的继承关系&lt;/strong>：Chain &amp;ndash;&amp;gt; &lt;name>Chain # Examples: LLMChain, MapReduceChain, RouterChain&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/chains/base.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">Chain&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Serializable&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Runnable&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]],&lt;/span> &lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Abstract base class for creating structured sequences of calls to components.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Chains should be used to encode a sequence of calls to components like
+&lt;/span>&lt;span class="s2"> models, document retrievers, other chains, etc., and provide a simple interface
+&lt;/span>&lt;span class="s2"> to this sequence.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> The Chain interface makes it easy to create apps that are:
+&lt;/span>&lt;span class="s2"> - Stateful: add Memory to any Chain to give it state,
+&lt;/span>&lt;span class="s2"> 有状态的：给Chain添加Memory，使其具有状态
+&lt;/span>&lt;span class="s2"> - Observable: pass Callbacks to a Chain to execute additional functionality,
+&lt;/span>&lt;span class="s2"> like logging, outside the main sequence of component calls,
+&lt;/span>&lt;span class="s2"> 可观察的：向Chain传递Callback来执行额外的功能。
+&lt;/span>&lt;span class="s2"> - Composable: the Chain API is flexible enough that it is easy to combine
+&lt;/span>&lt;span class="s2"> Chains with other components, including other Chains.
+&lt;/span>&lt;span class="s2"> 可组合的：Chain API足够灵活，可以轻松地将Chains与其他组件组合在一起，包括组合其他的Chain。
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> The main methods exposed by chains are:
+&lt;/span>&lt;span class="s2"> - `__call__`: Chains are callable. The `__call__` method is the primary way to
+&lt;/span>&lt;span class="s2"> execute a Chain. This takes inputs as a dictionary and returns a
+&lt;/span>&lt;span class="s2"> dictionary output.
+&lt;/span>&lt;span class="s2"> 执行Chain的主要方式，输入是一个字典，输出也是一个字典。
+&lt;/span>&lt;span class="s2"> - `run`: A convenience method that takes inputs as args/kwargs and returns the
+&lt;/span>&lt;span class="s2"> output as a string or object. This method can only be used for a subset of
+&lt;/span>&lt;span class="s2"> chains and cannot return as rich of an output as `__call__`.
+&lt;/span>&lt;span class="s2"> 输入是args/kwargs，输出是字符串or对象。仅用于部分链，没有__call__方法通用。
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="o">............&lt;/span>
+&lt;span class="n">memory&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMemory&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Optional memory object. Defaults to None.
+&lt;/span>&lt;span class="s2"> Memory is a class that gets called at the start
+&lt;/span>&lt;span class="s2"> and at the end of every chain. At the start, memory loads variables and passes
+&lt;/span>&lt;span class="s2"> them along in the chain. At the end, it saves any returned variables.
+&lt;/span>&lt;span class="s2"> There are many different types of memory - please see memory docs
+&lt;/span>&lt;span class="s2"> for the full catalog.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="err">每个链开始和结束时调用。存储&lt;/span>&lt;span class="n">Memory&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;span class="n">callbacks&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Callbacks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Field&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">default&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">exclude&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Optional list of callback handlers (or callback manager). Defaults to None.
+&lt;/span>&lt;span class="s2"> Callback handlers are called throughout the lifecycle of a call to a chain,
+&lt;/span>&lt;span class="s2"> starting with on_chain_start, ending with on_chain_end or on_chain_error.
+&lt;/span>&lt;span class="s2"> Each custom chain can optionally call additional callback methods, see Callback docs
+&lt;/span>&lt;span class="s2"> for full details.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">callback_manager&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseCallbackManager&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Field&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">default&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">exclude&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Deprecated, use `callbacks` instead.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">verbose&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Field&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">default_factory&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">_get_verbosity&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Whether or not run in verbose mode. In verbose mode, some intermediate logs
+&lt;/span>&lt;span class="s2"> will be printed to the console. Defaults to `langchain.verbose` value.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="err">开启后，输出更纤细的日志。&lt;/span>
+&lt;span class="o">............&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们看一个例子：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>LLMChain&lt;/strong>：创建了一个&lt;strong>步骤&lt;/strong>，该步骤可执行&lt;code>prompt&lt;/code>提示词。&lt;/li>
+&lt;li>&lt;strong>run方法&lt;/strong>：调用LLMChain的&lt;code>run&lt;/code>方法，可以和LLM进行问答。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921094132633.png" alt="image-20230921094132633">&lt;/p>
+&lt;h2 id="12顺序链">1.2.顺序链&lt;/h2>
+&lt;h3 id="1源码解读">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>SequentialChain&lt;/strong>：继承于Chain，顺序链，允许将多个Chain链接起来，形成&lt;strong>Pipeline(流水线)&lt;/strong>。&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/chains/sequential.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">SequentialChain&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Chain&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Chain where the outputs of one chain feed directly into next.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">chains&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Chain&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">input_variables&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">output_variables&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
+&lt;span class="n">return_all&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>
+&lt;span class="err">……………………&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>SimpleSequentialChain&lt;/strong>：继承于SequentialChain，一种简化版的顺序链，允许将多个Chain链接起来，形成&lt;strong>Pipeline(流水线)&lt;/strong>。&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/chains/sequential.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">SimpleSequentialChain&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Chain&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Simple chain where the outputs of one step feed directly into next.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">chains&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Chain&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">strip_outputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>
+&lt;span class="n">input_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;input&amp;#34;&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
+&lt;span class="n">output_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;output&amp;#34;&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2simplesequentialchain的代码示例">(2)SimpleSequentialChain的代码示例&lt;/h3>
+&lt;p>我们来看如下的代码，实现了LLM模仿医生对病情进行介绍，并给出治疗方案。&lt;/p>
+&lt;ul>
+&lt;li>通过&lt;strong>SimpleSequentialChain&lt;/strong>，连接了病情摘要Chain和病情评论Chain。&lt;/li>
+&lt;li>病情摘要Chain的&lt;strong>输出&lt;/strong>，作为了病情评论Chain的&lt;strong>输入&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921095733390.png" alt="image-20230921095733390">&lt;/p>
+&lt;h3 id="3sequentialchain的代码示例">(3)SequentialChain的代码示例&lt;/h3>
+&lt;p>我们来看如下的代码，实现了LLM模仿医生对病情进行介绍，并给出治疗方案。&lt;/p>
+&lt;p>不同的是，要支持多输入、多输出。&lt;/p>
+&lt;ul>
+&lt;li>通过&lt;strong>SequentialChain&lt;/strong>，连接了病情摘要Chain和病情评论Chain。&lt;/li>
+&lt;li>病情摘要Chain的&lt;strong>输入有多个&lt;/strong>，病情摘要Chain的&lt;strong>输出&lt;/strong>作为了病情评论Chain的&lt;strong>输入&lt;/strong>，病情评论Chain的&lt;strong>输出有多个&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921100917222.png" alt="image-20230921100917222">&lt;/p>
+&lt;h2 id="13决策链">1.3.决策链&lt;/h2>
+&lt;h3 id="1源码解读-1">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>RouterChain&lt;/strong>：继承于Chain，决策链，允许将多个Chain链接起来，可以实现条件判断的&lt;strong>分支Pipeline(分支流水线)&lt;/strong>。&lt;/li>
+&lt;li>代码路径/libs/langchain/langchain/chains/router/base.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">RouterChain&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Chain&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Chain that outputs the name of a destination chain and the inputs to it.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nd">@property&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">output_keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;destination&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;next_inputs&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">route&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">callbacks&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Callbacks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Route&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;span class="s2"> Route inputs to a destination chain.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Args:
+&lt;/span>&lt;span class="s2"> inputs: inputs to the chain
+&lt;/span>&lt;span class="s2"> callbacks: callbacks to use for the chain
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Returns:
+&lt;/span>&lt;span class="s2"> a Route object
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">callbacks&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">callbacks&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Route&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;destination&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;next_inputs&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">async&lt;/span> &lt;span class="k">def&lt;/span> &lt;span class="nf">aroute&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">callbacks&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Callbacks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Route&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">await&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">acall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">callbacks&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">callbacks&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">Route&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;destination&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;next_inputs&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2routerchain的代码示例">(2)RouterChain的代码示例&lt;/h3>
+&lt;p>我们来看如下的代码，实现了根据问题内容，选择程序员角色的AI或测试工程师AI出来回答问题。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>创建两个决策分支&lt;/strong>：能回答软件开发问题的程序员、能回答软件测试问题的程序员。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921102913545.png" alt="image-20230921102913545">&lt;/p>
+&lt;ul>
+&lt;li>创建根据问题内容进行决策的&lt;strong>RouterChain&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921102959963.png" alt="image-20230921102959963">&lt;/p>
+&lt;p>这个决策链是如何实现的决策功能呢？进一步看一下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>destinations_str&lt;/strong>：描述了根据问题内容，期望选择哪个AI来回答问题。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921103109653.png" alt="image-20230921103109653">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>MULTI_PROMPT_ROUTER_TEMPLATE&lt;/strong>：LangChain提供了决策链的提示词模板。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921103154608.png" alt="image-20230921103154608">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>router_template&lt;/strong>：最终的决策链提示词为：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921103225927.png" alt="image-20230921103225927">&lt;/p>
+&lt;ul>
+&lt;li>将决策链和两个回答问题的链进行连接。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921103257969.png" alt="image-20230921103257969">&lt;/p>
+&lt;ul>
+&lt;li>测试一下关于软件开发的问题：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921103327682.png" alt="image-20230921103327682">&lt;/p>
+&lt;ul>
+&lt;li>测试一下关于软件测试的问题：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921103359806.png" alt="image-20230921103359806">&lt;/p>
+&lt;h1 id="2小结">2.小结&lt;/h1>
+&lt;p>本文阐述了Chain模块的内部实现：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Chain类&lt;/strong>：抽象了&lt;strong>PipeLine流水线&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>顺序链&lt;/strong>：SequentialChain，实现了多输入多输出的串行执行的工作流。&lt;/li>
+&lt;li>&lt;strong>决策链&lt;/strong>：RouterChain，实现了根据问题内容，选择工作流走向的能力。&lt;/li>
+&lt;li>Chain类拥有很多子类，实现不同的业务流程，可以根据实战需要继续阅读源码和实践。&lt;/li>
+&lt;/ul>
+&lt;p>后续文章，我们继续解读LangChain的核心模块，感谢阅读。&lt;/p></description></item><item><title>【chatGPT】学习笔记14-LangChain之Memory，对LLM的抽象2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</link><pubDate>Tue, 19 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块2——Chain。&lt;/p>
 &lt;h1 id="1核心模块2memory">1.核心模块2：Memory&lt;/h1>
 &lt;p>实现一个问答系统，通常需要将历史上的问题和答案，作为本次问题的上下文。&lt;/p>
 &lt;p>因此，LangChain提供了Memory模块，这个模块对记忆进行了抽象：&lt;/p>
@@ -3145,43 +3437,4 @@ java/lang/Thread.java
 &lt;center>為救李郎離家園，誰料皇榜中狀元&lt;/center>
 &lt;center>中狀元，著紅袍，帽插宮花好啊，好新鮮&lt;/center>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E7%89%A1%E4%B8%B9%E4%BA%AD%E5%A4%96/image-20230227125824349.png" alt="image-20230227125824349">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8msqXs6BuBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item><item><title>【音乐】陈升-六月</title><link>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E9%9F%B3%E4%B9%90%E9%99%88%E5%8D%87-%E5%85%AD%E6%9C%88/</link><pubDate>Sat, 25 Feb 2023 00:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E9%9F%B3%E4%B9%90%E9%99%88%E5%8D%87-%E5%85%AD%E6%9C%88/</guid><description>&lt;center>&lt;font size=20>六月&lt;/font>&lt;/center>
-&lt;p align="right">陈升&lt;/p>
-&lt;center>六月在夏天之前的心情，總是偶爾晴朗有點雨&lt;/center>
-&lt;center>少女憂愁的情懷，自己跌倒就不許哭&lt;/center>
-&lt;center>你猜猜六月單純的心中，藏著什麼樣的故事&lt;/center>
-&lt;center>忘不了那個男孩，和他滿腮的鬍渣&lt;/center>
-&lt;center>Ohoh，有些悲傷卻又不許哭&lt;/center>
-&lt;center>Ohoh，有點孤單卻又不認輸&lt;/center>
-&lt;center>雙魚座的女生，從來都不怪別人的錯&lt;/center>
-&lt;center>六月在春天之後的心情，總是偶而悲傷有點苦&lt;/center>
-&lt;center>往日的戀情，自己跌倒就不許哭&lt;/center>
-&lt;center>她帶著甜甜的笑容，她說我是快樂的魚&lt;/center>
-&lt;center>游在茫茫的人海，男孩你怎會明白&lt;/center>
-&lt;center>Ohoh，有些悲傷卻又不許哭&lt;/center>
-&lt;center>Ohoh，有點孤單卻又不認輸&lt;/center>
-&lt;center>幻想型的女孩，從來都不怪別人的錯&lt;/center>
-&lt;center>因為要記得你的模樣，六月在夏天又去了海邊&lt;/center>
-&lt;center>只要你知道，愛上你有些難過&lt;/center>
-&lt;center>是晴天，是雨天&lt;/center>
-&lt;center>走不出愛情的人是呆子，不應該留著一樣的髮型&lt;/center>
-&lt;center>只要你知道，離開後別來無恙&lt;/center>
-&lt;center>捨不得，忘了他，誒&lt;/center>
-&lt;center>Ohoh，想要躲在他的懷裡哭&lt;/center>
-&lt;center>Ohoh，沒有他也真的不在乎&lt;/center>
-&lt;center>幻想型的女孩，從來都不怪別人的錯&lt;/center>
-&lt;center>因為要記得你的模樣，六月在夏天又去了海邊&lt;/center>
-&lt;center>只要你知道，愛上你有些難過&lt;/center>
-&lt;center>是晴天，是雨天&lt;/center>
-&lt;center>走不出愛情的人是呆子，不應該留著一樣的髮型&lt;/center>
-&lt;center>只要你知道，離開後別來無恙&lt;/center>
-&lt;center>決定要，忘了他&lt;/center>
-&lt;center>Ohoh，有些悲傷卻又不許哭&lt;/center>
-&lt;center>Ohoh，有點孤單卻又不認輸&lt;/center>
-&lt;center>Ohoh，想要躲在他的懷裡哭&lt;/center>
-&lt;center>Ohoh，沒有他也真的不在乎&lt;/center>
-&lt;center>Ohoh，有些悲傷卻又不許哭&lt;/center>
-&lt;center>Ohoh，有點孤單卻又不認輸&lt;/center>
-&lt;center>誒&lt;/center>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E5%85%AD%E6%9C%88/image-20230225143210137.png" alt="image-20230225143210137">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/X832EGf3i84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item></channel></rss>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8msqXs6BuBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item></channel></rss>

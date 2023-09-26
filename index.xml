@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Sep 2023 19:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 26 Sep 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,201 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记15-LangChain之Chain，对LLM的抽象3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-langchain%E4%B9%8Bchain%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A13/</link><pubDate>Wed, 20 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-langchain%E4%B9%8Bchain%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A13/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块3——Chain。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-transformer%E6%9E%B6%E6%9E%84%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/</link><pubDate>Tue, 26 Sep 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-transformer%E6%9E%B6%E6%9E%84%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/</guid><description>&lt;p>在《AI拾遗》这个专栏中，我们建立了从&lt;strong>N-Gram&lt;/strong>到&lt;strong>词嵌入&lt;/strong>再到&lt;strong>神经概率语言模型&lt;/strong>，从&lt;strong>Seq2Seq&lt;/strong>到&lt;strong>注意力机制&lt;/strong>的知识脉络。&lt;/p>
+&lt;p>这条脉络本质就是NLP发展的路线图，有了这些知识储备，我们终于可以来理解论文**《Attention Is All You Need》**中大名鼎鼎的**Transformer架构**了！&lt;/p>
+&lt;h1 id="1问题">1.问题&lt;/h1>
+&lt;p>在《【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4》中，笔者为&lt;strong>编码器-解码器架构&lt;/strong>增加了&lt;strong>注意力机制&lt;/strong>，进而实现了&lt;strong>增强版的Seq2Seq模型&lt;/strong>，模型能力的确有所增强，但并不是彻底解决了&lt;strong>长距离依赖&lt;/strong>问题和&lt;strong>信息压缩&lt;/strong>问题。&lt;/p>
+&lt;p>在《Attention Is All You Need》的第一章阐述了这个观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>howerver, remains&lt;/strong>(第二段最后一句)：历史上很多论文和技术都在增强&lt;strong>编码器-解码器架构&lt;/strong>，注意力机制也成为序列建模必备的技术，但&lt;strong>长距离依赖&lt;/strong>问题依然存在。&lt;/li>
+&lt;li>&lt;strong>parallelization&lt;/strong>(第三段)：这里提到了并行化，这是前面没有提到的问题——RNN网络决定了Seq2Seq只能一个词一个词的处理。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926072417665.png" alt="image-20230926072417665">&lt;/p>
+&lt;h1 id="2transformer逐步拆解">2.Transformer逐步拆解&lt;/h1>
+&lt;p>这是论文中第三段绘制的Transformer整体架构，我们将对它进行拆解：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926074022967.png" alt="image-20230926074022967">&lt;/p>
+&lt;h2 id="1整体transformer">(1)整体：Transformer&lt;/h2>
+&lt;p>将上图抽象化，我们可以看到：&lt;/p>
+&lt;ul>
+&lt;li>Transformer依然可以遵循Encoder-Decoder架构&lt;/li>
+&lt;li>Decoder的输出交给一个线性层，将解码器的输出转换为目标词汇表大小的概率分布——这属于常规操作，与Transformer核心思想关系不大。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926082223230.png" alt="image-20230926082223230">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1&lt;/strong>：对应上图将&lt;strong>Inputs&lt;/strong>输入给&lt;strong>Encoder&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>2&lt;/strong>：对应上图将&lt;strong>Outputs+Encoder的输出&lt;/strong>，传入给&lt;strong>Decoder&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>3&lt;/strong>：对应上图将&lt;strong>Decoder的输出&lt;/strong>，传入给线性层。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926083838772.png" alt="image-20230926083838772">&lt;/p>
+&lt;p>PS：这里的&lt;code>corpus&lt;/code>是一个封装了&lt;code>Inputs&lt;/code>和&lt;code>Outputs&lt;/code>的工具类，代码如下(比较简单，不赘述)：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926083336984.png" alt="image-20230926083336984">&lt;/p>
+&lt;h2 id="2局部1正弦位置编码表">(2)局部1：正弦位置编码表&lt;/h2>
+&lt;p>首先，我们来细化&lt;strong>Inputs&lt;/strong>和&lt;strong>Encoder&lt;/strong>之间的流程：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP1&lt;/strong>.对&lt;strong>Inputs&lt;/strong>实施词嵌入，得到词向量。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>.在&lt;strong>词向量&lt;/strong>和&lt;strong>Encoder&lt;/strong>之间增加了&lt;strong>位置编码表&lt;/strong>(也是一个向量)，这个位置编码表体现了&lt;strong>词和词序的关系&lt;/strong>。
+&lt;ul>
+&lt;li>由于Transformer取消了RNN，也就不再逐个词串行处理，所以必须建立&lt;strong>词和词序的关系&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>STEP3&lt;/strong>.将STEP2的&lt;strong>位置表码表&lt;/strong>向量和&lt;strong>词向量&lt;/strong>相加，输入给&lt;strong>Encoder&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Outputs&lt;/strong>和&lt;strong>Decoder&lt;/strong>之间的流程和上述流程一样。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926092023205.png" alt="image-20230926092023205">&lt;/p>
+&lt;p>那么位置编码表如何计算呢？论文3.5章节详细阐述如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>d&lt;/strong>：词向量的维度。&lt;/li>
+&lt;li>&lt;strong>pos&lt;/strong>：单词在句子中的位置。&lt;/li>
+&lt;li>&lt;strong>i&lt;/strong>：词向量的维度的奇数维。&lt;/li>
+&lt;li>&lt;strong>PE&lt;/strong>：指定位置的单词，在词向量的某一个维度上的数值。&lt;/li>
+&lt;li>通俗地理解，&lt;strong>d个PE值构成了指定单词在整个句子中的位置向量&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926093855305.png" alt="image-20230926093855305">&lt;/p>
+&lt;p>我们不必纠结于论文中这两个公式的证明，笔者绘制一个例子，可视化地理解正弦位置编码表的作用：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>假设&lt;/strong>：输入序列为&amp;rdquo;&lt;strong>想去新疆&lt;/strong>&amp;ldquo;四个字，词向量的维度为4维，即&lt;strong>d=4&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP1&lt;/strong>：通过正弦位置编码公式，&lt;strong>想&lt;/strong>字的&lt;strong>位置0&lt;/strong>，求得位置0的&lt;strong>位置向量[0, 1, 0, 1]&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>：通过正弦位置编码公式，&lt;strong>去&lt;/strong>字的&lt;strong>位置1&lt;/strong>，求得位置1的&lt;strong>位置向量[0.84, 0.54, 0.01, 1.0]&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP3&lt;/strong>：通过正弦位置编码公式，&lt;strong>新&lt;/strong>字的&lt;strong>位置2&lt;/strong>，求得位置2的&lt;strong>位置向量[0.91, -0.42, 0.02, 1.0]&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>STEP4&lt;/strong>：通过正弦位置编码公式，&lt;strong>疆&lt;/strong>字的&lt;strong>位置3&lt;/strong>，求得位置3的&lt;strong>位置向量[0.14, -0.99, 0.03, 1.0]&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926111712233.png" alt="image-20230926111712233">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926110113612.png" alt="image-20230926110113612">&lt;/p>
+&lt;h2 id="3局部2编码器堆栈">(3)局部2：编码器堆栈&lt;/h2>
+&lt;p>我们再来细化&lt;strong>编码器&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>编码器本质上由&lt;strong>N个编码器&lt;/strong>串联而成的&lt;strong>编码器堆栈&lt;/strong>。&lt;/li>
+&lt;li>论文中，&lt;strong>N=6&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926112341735.png" alt="image-20230926112341735">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>论文原文&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926113124754.png" alt="image-20230926113124754">&lt;/p>
+&lt;h2 id="4局部3编码器">(4)局部3：编码器&lt;/h2>
+&lt;p>我们再进一步细化&lt;strong>编码器Encoder&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>编码器Encoder&lt;/strong>由&lt;strong>多头注意力&lt;/strong>和&lt;strong>前向传播网络&lt;/strong>组成。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926114259743.png" alt="image-20230926114259743">&lt;/p>
+&lt;p>&lt;strong>编码器堆栈&lt;/strong>的代码实现如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>①&lt;/strong>：这就是调用&lt;strong>正弦位置编码表&lt;/strong>，创建的&lt;strong>位置编码层&lt;/strong>，再将&lt;strong>词向量和位置编码向量相加&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>②&lt;/strong>：这就是将多个&lt;strong>编码器&lt;/strong>叠加成&lt;strong>编码器堆栈&lt;/strong>，每个&lt;strong>编码器的输入&lt;/strong>是&lt;strong>上个编码器的输出&lt;/strong>和&lt;strong>上个编码器输出的注意力权重&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>③&lt;/strong>：这就是表示&lt;strong>编码器堆栈&lt;/strong>输出的&lt;strong>编码器输出&lt;/strong>、&lt;strong>编码器输出的注意力权重&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926115605435.png" alt="image-20230926115605435">&lt;/p>
+&lt;p>&lt;strong>编码器&lt;/strong>的代码实现如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>①&lt;/strong>：就是&lt;strong>多头注意力层&lt;/strong>，&lt;strong>第一个编码器&lt;/strong>的&lt;strong>多头注意力层&lt;/strong>的输入是&lt;strong>词嵌入+位置编码向量之和&lt;/strong>以及&lt;strong>自注意力掩码&lt;/strong>，&lt;strong>后续编码器&lt;/strong>的&lt;strong>多头注意力层&lt;/strong>的输入是&lt;strong>上一个编码器的输出&lt;/strong>和&lt;strong>自注意力掩码&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>②&lt;/strong>：就是&lt;strong>前向传播网络&lt;/strong>，它的输入是&lt;strong>多头注意力层的输出&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926122832935.png" alt="image-20230926122832935">&lt;/p>
+&lt;p>这里又埋下了几个问题：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>多头注意力层&lt;/strong>如何实现？&lt;/li>
+&lt;li>&lt;strong>前向传播网络&lt;/strong>如何实现？&lt;/li>
+&lt;li>&lt;strong>自注意力位置掩码&lt;/strong>如何实现？&lt;/li>
+&lt;/ul>
+&lt;h2 id="5局部4多头注意力">(5)局部4：多头注意力&lt;/h2>
+&lt;p>我们再来细化多头注意力：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>不赘述&lt;/strong>：关于&lt;strong>点积注意力&lt;/strong>、&lt;strong>缩放点积注意力&lt;/strong>、&lt;strong>编码器-解码器注意力&lt;/strong>、&lt;strong>QKV&lt;/strong>、&lt;strong>自注意力&lt;/strong>、&lt;strong>多头注意力&lt;/strong>，本文就不再赘述了。如果理解不太清晰，可以回看《【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4》。&lt;/li>
+&lt;li>&lt;strong>多头注意力&lt;/strong>的结构：&lt;strong>多头注意力的输入&lt;/strong>是&lt;strong>词向量与位置编码向量之和&lt;/strong>，每一个注意力头都是对&lt;strong>多头注意力的输入&lt;/strong>进行矩阵乘法得到&lt;strong>QKV&lt;/strong>，再输入给&lt;strong>缩放点积注意力组件&lt;/strong>，这个组件输出的是&lt;strong>注意力权重&lt;/strong>。最后，将每个注意力头输出的注意力权重求和，输入给一个线性层。&lt;/li>
+&lt;li>&lt;strong>缩放点积注意力&lt;/strong>的结构：就是典型的缩放点积注意力的计算公式，即：Q、K求点积=&amp;gt;缩放=&amp;gt;注意力掩码=&amp;gt;Softmax=&amp;gt;和V点积。&lt;/li>
+&lt;li>&lt;strong>细节&lt;/strong>：这里增加了Add &amp;amp; Norm，就是深度学习里面的残差连接、层归一化，为了解决梯度爆炸问题，这不是Transformer特有的新知识。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926162228532.png" alt="image-20230926162228532">&lt;/p>
+&lt;p>论文原文：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>缩放点积注意力&lt;/strong>计算公式：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926161049010.png" alt="image-20230926161049010">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>多头注意力&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926161136259.png" alt="image-20230926161136259">&lt;/p>
+&lt;p>&lt;strong>缩放点积注意力&lt;/strong>的代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926161300468.png" alt="image-20230926161300468">&lt;/p>
+&lt;p>&lt;strong>多头注意力&lt;/strong>的代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926161409926.png" alt="image-20230926161409926">&lt;/p>
+&lt;h2 id="6局部5前向传播网络">(6)局部5：前向传播网络&lt;/h2>
+&lt;p>我们再来细化前向神经网络：&lt;/p>
+&lt;ul>
+&lt;li>前向神经网络的全称是&lt;strong>Position-wise Feed-Forward Network&lt;/strong>，即&lt;strong>基于位置的前馈神经网络&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>two linear transformations with a ReLU activation&lt;/strong>：首先使用第一个线性层做升维，接着使用ReLU激活函数，再使用第二个线性层做降维。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926163125569.png" alt="image-20230926163125569">&lt;/p>
+&lt;p>这个基于位置的前馈神经网络到底有啥用呢？&lt;/p>
+&lt;ul>
+&lt;li>就是论文中，多头注意力结构中的最后一步&lt;strong>Linear&lt;/strong>！&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926163933555.png" alt="image-20230926163933555">&lt;/p>
+&lt;p>论文原文：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926163424383.png" alt="image-20230926163424383">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926164434302.png" alt="image-20230926164434302">&lt;/p>
+&lt;h2 id="7局部6填充位置掩码">(7)局部6：填充位置掩码&lt;/h2>
+&lt;p>我们再来细化填充位置掩码：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>填充位置掩码&lt;/strong>用在&lt;strong>词嵌入&lt;/strong>之后，&lt;strong>编码器&lt;/strong>输入之前。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926170827083.png" alt="image-20230926170827083">&lt;/p>
+&lt;ul>
+&lt;li>填充位置掩码有什么作用呢？
+&lt;ul>
+&lt;li>&lt;strong>t1时刻&lt;/strong>：给编码器输入了一句话——&amp;ldquo;我想去新疆滑雪&amp;rdquo;。&lt;/li>
+&lt;li>&lt;strong>t2时刻&lt;/strong>：给编码器输入第二句话——&amp;ldquo;想去就去啊&amp;rdquo;。为了和上一句话保持长度统一，我们就会在在第二句话末尾增加两个占位符。&lt;/li>
+&lt;li>&lt;strong>t3时刻&lt;/strong>：生成填充位置掩码[1, 1, 1, 1, 1, 0, 0]。&lt;/li>
+&lt;li>&lt;strong>t4时刻&lt;/strong>：编码器会将第二句话和填充位置掩码求与，这样编码器实施多头注意力的时候，就不会注意毫无意义的两个占位符。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926171245346.png" alt="image-20230926171245346">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926171345069.png" alt="image-20230926171345069">&lt;/p>
+&lt;p>至此，我们就把Transformer架构中编码器部分细化完成了，我们继续细化解码器部分：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926170827083.png" alt="image-20230926170827083">&lt;/p>
+&lt;h2 id="8局部7解码器堆栈">(8)局部7：解码器堆栈&lt;/h2>
+&lt;p>解码器堆栈的思想到实现，和编码器堆栈完全一样，这里不再赘述，直接上图和代码：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926174658980.png" alt="image-20230926174658980">&lt;/p>
+&lt;h2 id="9局部8解码器">(9)局部8：解码器&lt;/h2>
+&lt;p>解码器的思想到实现，和编码器堆栈大致一样，这里不再赘述，直接上图和代码：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926174249742.png" alt="image-20230926174249742">&lt;/p>
+&lt;p>&lt;strong>解码器堆栈&lt;/strong>代码如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926174857116.png" alt="image-20230926174857116">&lt;/p>
+&lt;p>&lt;strong>解码器&lt;/strong>代码如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926174916494.png" alt="image-20230926174916494">&lt;/p>
+&lt;h2 id="10局部9后续位置掩码">(10)局部9：后续位置掩码&lt;/h2>
+&lt;p>在解码器中，还有最后一个遗留问题——后续位置掩码。&lt;/p>
+&lt;p>后续位置掩码只是因为解码器实施多头注意力的时候，是不能注意到&lt;strong>未来&lt;/strong>的，也就是它还没有预测的后续词，所以要屏蔽掉。&lt;/p>
+&lt;p>后续位置掩码和填充位置掩码的思想是一致的，不赘述。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926175344740.png" alt="image-20230926175344740">&lt;/p>
+&lt;p>&lt;strong>后续位置掩码&lt;/strong>的代码实现：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926175131684.png" alt="image-20230926175131684">&lt;/p>
+&lt;h2 id="11模型训练">(11)模型训练&lt;/h2>
+&lt;p>至此，我们已经完整地实现了Transformer架构，我们开始对其进行训练：&lt;/p>
+&lt;ul>
+&lt;li>数据集如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926180145967.png" alt="image-20230926180145967">&lt;/p>
+&lt;ul>
+&lt;li>模型训练：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926180246638.png" alt="image-20230926180246638">&lt;/p>
+&lt;h2 id="12模型测试">(12)模型测试&lt;/h2>
+&lt;ul>
+&lt;li>测试用例采用贪婪编码，比较简单，具体代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-Transformer%E6%9E%B6%E6%9E%84%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/image-20230926180356687.png" alt="image-20230926180356687">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>笔者在今年2月份第一次阅读论文《Attention Is All You Need》，读了好几遍，不得要领，只觉得非常抽象。&lt;/p>
+&lt;p>随着在网上阅读各类资料、逐步摸索复现论文中Transformer架构的源码，逐渐理解这篇论文中所说的——&lt;strong>Attention Is All You Need&lt;/strong>的含义。&lt;/p>
+&lt;p>本以为理解了论文含义，提笔准备写出这篇文章时，又卡了壳——因为理解了，又很难表达出来Transformer的精妙原理！&lt;/p>
+&lt;p>此时，笔者才真正领悟之前听过一位大神所说的：&lt;font color=red>”LLM涉及的每一篇经典论文，不仅值得&lt;strong>反复阅读&lt;/strong>，甚至应该&lt;strong>背诵下来&lt;/strong>。“&lt;/font>的含义。&lt;/p>
+&lt;p>这篇文章写完，我们下一步就可以实现并训练我们平民版的ChatGPT了，且听下回分解了。&lt;/p></description></item><item><title>【chatGPT】学习笔记15-LangChain之Chain，对LLM的抽象3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-langchain%E4%B9%8Bchain%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A13/</link><pubDate>Wed, 20 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-langchain%E4%B9%8Bchain%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A13/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块3——Chain。&lt;/p>
 &lt;h1 id="1核心模块3chain">1.核心模块3：Chain&lt;/h1>
 &lt;p>在《【chatGPT】学习笔记11-LLM应用-垂直领域知识问答系统(基于ChatGLM2)》中，我们知道LangChain-ChatChat有如下工作流程：&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B015-LangChain%E4%B9%8BChain%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A13/image-20230921092837843.png" alt="image-20230921092837843">&lt;/p>
@@ -3415,26 +3609,4 @@ java/lang/Thread.java
 &lt;li>本文通过Java官方文档和JDK源码，解读了Java线程有6种状态&lt;/li>
 &lt;li>本文又通过两段示例代码，验证了Java线程6种状态的迁移路径&lt;/li>
 &lt;li>本文遗留了一个模糊的问题：Java线程在重入&lt;code>synchronized&lt;/code>时如何迁移到&lt;code>BLOCKED&lt;/code>态？此问题需要分析JVM源码得到进一步验证结论&lt;/li>
-&lt;/ul></description></item><item><title>【音乐】陈升-牡丹亭外</title><link>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E9%9F%B3%E4%B9%90%E9%99%88%E5%8D%87-%E7%89%A1%E4%B8%B9%E4%BA%AD%E5%A4%96/</link><pubDate>Mon, 27 Feb 2023 00:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E9%9F%B3%E4%B9%90%E9%99%88%E5%8D%87-%E7%89%A1%E4%B8%B9%E4%BA%AD%E5%A4%96/</guid><description>&lt;center>&lt;font size=20>牡丹亭外&lt;/font>&lt;/center>
-&lt;p align="right">陈升&lt;/p>
-&lt;center>為救李郎離家園，誰料皇榜中狀元&lt;/center>
-&lt;center>中狀元，著紅袍，帽插宮花好啊，好新鮮&lt;/center>
-&lt;center>李郎一夢已過往，風流人兒如今在何方&lt;/center>
-&lt;center>從古到今呀說來慌，不過是情而已&lt;/center>
-&lt;center>這人間苦什麼，怕不能遇見你&lt;/center>
-&lt;center>是否你走過了我身邊，恍恍惑惑一瞬間&lt;/center>
-&lt;center>黃粱一夢二十年，依舊是不懂愛也不懂情&lt;/center>
-&lt;center>寫歌的人假正經，聽歌的人最無情&lt;/center>
-&lt;center>牡丹亭外雨紛紛，誰是歸人說不準&lt;/center>
-&lt;center>是歸人啊，你說分明，你把我心放哪兒&lt;/center>
-&lt;center>黃粱一夢二十年啊，依舊是不懂愛也不懂情&lt;/center>
-&lt;center>寫歌的人假正經，聽歌的人最無情&lt;/center>
-&lt;center>牡丹亭外雨紛紛，誰是歸人說不準&lt;/center>
-&lt;center>這人間苦什麼，怕不能遇見你&lt;/center>
-&lt;center>是否你走過了我身邊，恍恍惑惑一瞬間&lt;/center>
-&lt;center>黃粱一夢二十年，依舊是不懂愛也不懂情&lt;/center>
-&lt;center>寫歌的人斷了魂，聽歌的人最無情&lt;/center>
-&lt;center>為救李郎離家園，誰料皇榜中狀元&lt;/center>
-&lt;center>中狀元，著紅袍，帽插宮花好啊，好新鮮&lt;/center>
-&lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E9%9F%B3%E4%B9%90%E3%80%91%E9%99%88%E5%8D%87-%E7%89%A1%E4%B8%B9%E4%BA%AD%E5%A4%96/image-20230227125824349.png" alt="image-20230227125824349">&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8msqXs6BuBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 26 Sep 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,137 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-transformer%E6%9E%B6%E6%9E%84%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/</link><pubDate>Tue, 26 Sep 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-transformer%E6%9E%B6%E6%9E%84%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/</guid><description>&lt;p>在《AI拾遗》这个专栏中，我们建立了从&lt;strong>N-Gram&lt;/strong>到&lt;strong>词嵌入&lt;/strong>再到&lt;strong>神经概率语言模型&lt;/strong>，从&lt;strong>Seq2Seq&lt;/strong>到&lt;strong>注意力机制&lt;/strong>的知识脉络。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记17-自己实现一个简版ChatGPT(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</link><pubDate>Mon, 16 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</guid><description>&lt;p>【chatGPT】学习笔记17-自己实现一个简版ChatGPT(上)&lt;/p>
+&lt;p>接下来，我们用三篇文章阐述&lt;font color=red>**如何实现一个简版ChatGPT。**&lt;/font>&lt;/p>
+&lt;h1 id="1回顾">1.回顾&lt;/h1>
+&lt;p>想实现一个简版ChatGPT，依赖于如下前置知识：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>机器学习基本原理&lt;/strong>，可参考笔者这几篇文章：
+&lt;ul>
+&lt;li>《【chatGPT】学习笔记3-机器学习基本原理(上)》&lt;/li>
+&lt;li>《【chatGPT】学习笔记4-机器学习基本原理(下)》&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>经典NLP相关技术&lt;/strong>，可参考笔者这几篇文章：
+&lt;ul>
+&lt;li>&lt;strong>N-Gram&lt;/strong>：《【chatGPT】学习笔记6-手撸一个上古GPT》&lt;/li>
+&lt;li>&lt;strong>Embedding&lt;/strong>：《【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件》&lt;/li>
+&lt;li>&lt;strong>神经概率语言模型&lt;/strong>：《【chatGPT】学习笔记8-神经概率语言模型，大语言模型的关键部件2》&lt;/li>
+&lt;li>&lt;strong>Seq2Seq&lt;/strong>：《【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3》&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>现代NLP相关技术&lt;/strong>，可参考笔者这几篇文章：
+&lt;ul>
+&lt;li>&lt;strong>注意力机制&lt;/strong>：《【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4》&lt;/li>
+&lt;li>&lt;strong>Transformer&lt;/strong>：《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2实现简版gpt">2.实现简版GPT&lt;/h1>
+&lt;p>这是参考Transformer架构绘制的简版ChatGPT整体架构，我们将对它进行拆解：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017113929233.png" alt="image-20231017113929233">&lt;/p>
+&lt;h2 id="1整体">(1)整体&lt;/h2>
+&lt;p>将上图抽象化，我们可以看到：&lt;/p>
+&lt;ul>
+&lt;li>简版GPT遵循Transfomer架构，但是没有实现编码器&lt;/li>
+&lt;li>Decoder的输出交给一个线性层，将解码器的输出转换为目标词汇表大小的概率分布——这属于常规操作，与Transformer核心思想关系不大。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017134713086.png" alt="image-20231017134713086">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1&lt;/strong>：对应上图将&lt;strong>Outputs&lt;/strong>输入给&lt;strong>Decoder&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>2&lt;/strong>：对应上图将&lt;strong>Decoder的输出&lt;/strong>，传入给线性层。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017135734066.png" alt="image-20231017135734066">&lt;/p>
+&lt;h2 id="2局部1正弦位置编码表">(2)局部1：正弦位置编码表&lt;/h2>
+&lt;p>首先，我们来细化&lt;strong>Outputs&lt;/strong>和&lt;strong>Decoder&lt;/strong>之间的流程：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>STEP1&lt;/strong>.对&lt;strong>Outputs&lt;/strong>实施词嵌入，得到词向量。&lt;/li>
+&lt;li>&lt;strong>STEP2&lt;/strong>.在&lt;strong>词向量&lt;/strong>和&lt;strong>Decoder&lt;/strong>之间增加了&lt;strong>位置编码表&lt;/strong>(也是一个向量)，这个位置编码表体现了&lt;strong>词和词序的关系&lt;/strong>。
+&lt;ul>
+&lt;li>由于Transformer取消了RNN，也就不再逐个词串行处理，所以必须建立&lt;strong>词和词序的关系&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>STEP3&lt;/strong>.将STEP2的&lt;strong>位置表码表&lt;/strong>向量和&lt;strong>词向量&lt;/strong>相加，输入给&lt;strong>Decoder&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017140335543.png" alt="image-20231017140335543">&lt;/p>
+&lt;p>正弦位置编码表的计算原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(2)局部1：正弦位置编码表&amp;quot;章节，本文不再赘述。&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017140636308.png" alt="image-20231017140636308">&lt;/p>
+&lt;h2 id="3局部2解码器堆栈">(3)局部2：解码器堆栈&lt;/h2>
+&lt;p>我们再来细化&lt;strong>解码器&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>编码器本质上由&lt;strong>N个解码器&lt;/strong>串联而成的&lt;strong>解码器堆栈&lt;/strong>。&lt;/li>
+&lt;li>我们的实现，也按照论文的设定层数，&lt;strong>N=6&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150909585.png" alt="image-20231017150909585">&lt;/p>
+&lt;h2 id="4局部3解码器">(4)局部3：解码器&lt;/h2>
+&lt;p>我们再进一步细化&lt;strong>解码器Decoder&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>解码器Decoder&lt;/strong>由&lt;strong>多头注意力&lt;/strong>和&lt;strong>前向传播网络&lt;/strong>组成。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150925061.png" alt="image-20231017150925061">&lt;/p>
+&lt;p>&lt;strong>解码器堆栈&lt;/strong>的代码实现如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>①&lt;/strong>：这就是创建的&lt;strong>位置编码层&lt;/strong>，再将&lt;strong>词向量和位置编码向量相加&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>②&lt;/strong>：这就是将多个&lt;strong>解码器&lt;/strong>叠加成&lt;strong>解码器堆栈&lt;/strong>，每个&lt;strong>解码器的输入&lt;/strong>是&lt;strong>上个解码器的输出&lt;/strong>和&lt;strong>上个解码器输出的注意力权重&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>③&lt;/strong>：这就是表示&lt;strong>解码器堆栈&lt;/strong>输出的&lt;strong>解码器输出&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017142049236.png" alt="image-20231017142049236">&lt;/p>
+&lt;p>&lt;strong>解码器&lt;/strong>的代码实现如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>①&lt;/strong>：就是&lt;strong>多头注意力层&lt;/strong>，&lt;strong>第一个解码器&lt;/strong>的&lt;strong>多头注意力层&lt;/strong>的输入是&lt;strong>词嵌入+位置编码向量之和&lt;/strong>以及&lt;strong>自注意力掩码&lt;/strong>，&lt;strong>后续解码器&lt;/strong>的&lt;strong>多头注意力层&lt;/strong>的输入是&lt;strong>上一个解码器的输出&lt;/strong>和&lt;strong>自注意力掩码&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>②&lt;/strong>：就是&lt;strong>前向传播网络&lt;/strong>，它的输入是&lt;strong>多头注意力层的输出&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017145220345.png" alt="image-20231017145220345">&lt;/p>
+&lt;p>我们接下来看&lt;strong>多头注意力层、前向传播网络、自注意力位置掩码&lt;/strong>如何实现？&lt;/p>
+&lt;h2 id="5局部4多头注意力">(5)局部4：多头注意力&lt;/h2>
+&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(5)局部4：多头注意力&amp;quot;章节，本文不再赘述。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150943298.png" alt="image-20231017150943298">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017145622219.png" alt="image-20231017145622219">&lt;/p>
+&lt;h2 id="6局部5前向传播网络">(6)局部5：前向传播网络&lt;/h2>
+&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(6)局部5：前向传播网络&amp;quot;章节，本文不再赘述。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151000709.png" alt="image-20231017151000709">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150114991.png" alt="image-20231017150114991">&lt;/p>
+&lt;h2 id="7局部6填充位置掩码">(7)局部6：填充位置掩码&lt;/h2>
+&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(7)局部6：填充位置掩码&amp;quot;章节，本文不再赘述。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151014381.png" alt="image-20231017151014381">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150413819.png" alt="image-20231017150413819">&lt;/p>
+&lt;h2 id="8局部7后续位置掩码">(8)局部7：后续位置掩码&lt;/h2>
+&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(10)局部9：后续位置掩码&amp;quot;章节，本文不再赘述。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151026419.png" alt="image-20231017151026419">&lt;/p>
+&lt;p>代码实现如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150515799.png" alt="image-20231017150515799">&lt;/p>
+&lt;h2 id="9模型训练">(9)模型训练&lt;/h2>
+&lt;p>至此，我们已经完整地实现了Transformer架构，我们开始对其进行训练：&lt;/p>
+&lt;ul>
+&lt;li>数据集如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151515137.png" alt="image-20231017151515137">&lt;/p>
+&lt;ul>
+&lt;li>模型训练：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151651529.png" alt="image-20231017151651529">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151717714.png" alt="image-20231017151717714">&lt;/p>
+&lt;ul>
+&lt;li>训练好后，会生成简版GPT的pth模型文件：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151835127.png" alt="image-20231017151835127">&lt;/p>
+&lt;h2 id="10模型测试">(10)模型测试&lt;/h2>
+&lt;ul>
+&lt;li>测试用例采用贪婪编码和集束编码，比较简单，具体代码如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151956136.png" alt="image-20231017151956136">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;ul>
+&lt;li>本文基于Transformer架构，复现了简版ChatGPT，其关键在于只有解码器。&lt;/li>
+&lt;li>理论上，如果有足够算力、足够训练数据，可以将此简版ChatGPT训练到GPT3的水平。&lt;/li>
+&lt;li>那么，GPT3到ChatGPT还有一定的距离，我们知道ChatGPT公开的信息中，还对GPT3进行了&lt;strong>监督学习微调SFT&lt;/strong>、&lt;strong>基于人类反馈的强化学习RLHF&lt;/strong>等，得到了InstructGPT，进而得到了ChatGPT。&lt;/li>
+&lt;/ul>
+&lt;p>我们下一步继续针对简版ChatGPT开展SFT和RLHF，且听下回分解。&lt;/p></description></item><item><title>【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-transformer%E6%9E%B6%E6%9E%84%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/</link><pubDate>Tue, 26 Sep 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B016-transformer%E6%9E%B6%E6%9E%84%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B65/</guid><description>&lt;p>在《AI拾遗》这个专栏中，我们建立了从&lt;strong>N-Gram&lt;/strong>到&lt;strong>词嵌入&lt;/strong>再到&lt;strong>神经概率语言模型&lt;/strong>，从&lt;strong>Seq2Seq&lt;/strong>到&lt;strong>注意力机制&lt;/strong>的知识脉络。&lt;/p>
 &lt;p>这条脉络本质就是NLP发展的路线图，有了这些知识储备，我们终于可以来理解论文**《Attention Is All You Need》**中大名鼎鼎的**Transformer架构**了！&lt;/p>
 &lt;h1 id="1问题">1.问题&lt;/h1>
 &lt;p>在《【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4》中，笔者为&lt;strong>编码器-解码器架构&lt;/strong>增加了&lt;strong>注意力机制&lt;/strong>，进而实现了&lt;strong>增强版的Seq2Seq模型&lt;/strong>，模型能力的确有所增强，但并不是彻底解决了&lt;strong>长距离依赖&lt;/strong>问题和&lt;strong>信息压缩&lt;/strong>问题。&lt;/p>
@@ -3440,173 +3570,4 @@ java/lang/Thread.java
 &lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414070017806.png" alt="">&lt;/p>
 &lt;h1 id="11随想">11.随想&lt;/h1>
 &lt;p>每次分析JVM源码，仿佛在一个生活在三维空间的生物(Java程序猿)，窥探到四维空间(JVM、操作系统、CPU&amp;hellip;&amp;hellip;)，这种感觉令人自在、平静、喜乐。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230415010840596.png" alt="">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-5</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-5/</link><pubDate>Wed, 05 Apr 2023 09:07:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-5/</guid><description>&lt;h1 id="1疑惑java的线程究竟有几种状态">1.疑惑：Java的线程究竟有几种状态？&lt;/h1>
-&lt;p>在Java的并发编程技术中，经常会看到Java线程的状态迁移图。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>有的这样画&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230330130053911.png" alt="image-20230330130053911">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>有的这样画&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230330130208531.png" alt="image-20230330130208531">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>有的这样画：&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230330130240613.png" alt="image-20230330130240613">&lt;/p>
-&lt;p>笔者刚接触Java时，看到形形色色的文章和图例，比较大的困扰是&lt;strong>Java的线程究竟有几种状态&lt;/strong>？&lt;/p>
-&lt;h1 id="2探索1官方文档">2.探索1：官方文档&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>在Java8，Thread的状态定义在&lt;code>java.lang.Thread.State&lt;/code>中。&lt;strong>Java线程的状态有6种&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>NEW&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>RUNNABLE&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>BLOCKED&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>WATING&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>TIMED_WAITING&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>TERMINATED&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>详见：https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.State.html&lt;/p>
-&lt;/blockquote>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230330130905543.png" alt="image-20230330130905543">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>在Java20&lt;/strong>(Java最新版本)，Thread的状态定义在&lt;code>java.lang.Thread.State&lt;/code>中**。Java线程的状态依然是6种**。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>详见：https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Thread.State.html&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>结论：从官方文档中看，Java线程的状态为6种&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>NEW&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>RUNNABLE&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>BLOCKED&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>WATING&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>TIMED_WAITING&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>TERMINATED&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3探索2jdk源码">3.探索2：JDK源码&lt;/h1>
-&lt;ul>
-&lt;li>在Java8中，Java线程状态位于&lt;code>java/lang/Thread.java&lt;/code>的&lt;code>State&lt;/code>枚举类：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="C:%5CUsers%5CJHercules2%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230331111439960.png" alt="image-20230331111439960">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>NEW&lt;/strong>：当Java线程处于此状态时，创建线程那一刻，线程的状态。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405132055300.png" alt="image-20230405132055300">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>RUNNABLE&lt;/strong>：当Java线程处于此状态时，JVM&lt;strong>有可能&lt;/strong>去执行它(此处埋有伏笔)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405132344766.png" alt="image-20230405132344766">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>BLOCKED&lt;/strong>：此状态，与&lt;code>synchronized&lt;/code>、&lt;code>Object.wait&lt;/code>强相关(后文代码演示)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405133442702.png" alt="image-20230405133442702">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>WAITING&lt;/strong>：此状态与&lt;code>BLOCKED&lt;/code>一样，与&lt;code>Object.wait&lt;/code>、&lt;code>Thread.join&lt;/code>等相关(后文代码演示)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405133702393.png" alt="image-20230405133702393">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>TIMED_WAITING&lt;/strong>：与&lt;code>WAITING&lt;/code>类似的一种状态，与&lt;code>Thread.sleep&lt;/code>、&lt;code>Object.wait&lt;/code>、&lt;code>Thread.join&lt;/code>等有关(后文代码演示)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405134328837.png" alt="image-20230405134328837">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>TERMINATED&lt;/strong>：终结态，没啥好说的。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405134725161.png" alt="image-20230405134725161">&lt;/p>
-&lt;h1 id="4思考为什么对java线程的状态描述不同">4.思考：为什么对Java线程的状态描述不同?&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>无论从官方文档，还是JDK源码，都很容易看到Java线程只有6种状态。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>那么，为什么各种资料中对Java线程的状态描述不同呢？&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>我认为，可能是视角不同：&lt;/p>
-&lt;ul>
-&lt;li>笔者在之前的文章中，分析过JVM启动时会产生多少线程，即我们到底在操作系统层面看线程，还是在JVM层面看线程。&lt;/li>
-&lt;li>站在JVM层面，Java给Java程序猿看到&lt;code>创建Java线程&lt;/code>、&lt;code>Java线程有6种状态&lt;/code>等等概念。&lt;/li>
-&lt;li>站在OS层面，JVM为了实现Java程序猿看到的&lt;code>Java线程&lt;/code>，调用了&lt;code>pthread&lt;/code>这类库，创建了OS层面的线程，OS层面的线程有一系列状态，此状态与&lt;code>Java线程的6种状态&lt;/code>存在映射关系(本文不展开，下一篇笔者对照JVM源码详述)。&lt;/li>
-&lt;li>因此，有的资料中试图同时表达JVM层面和OS层面的线程状态，就造成了描述不同。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>结论：我们应该从JVM层面和OS层面分别理解&lt;code>Java线程状态&lt;/code>，以及透彻理解两个层面的&lt;code>线程&lt;/code>的对应关系&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405140832691.png" alt="image-20230405140832691">&lt;/p>
-&lt;h1 id="5深入java线程的状态如何迁移">5.深入：Java线程的状态如何迁移?&lt;/h1>
-&lt;p>JDK源码中，对Java线程的状态迁移有明确地描述。但为了深入理解，我们有必要写一些示例代码，强化理解。&lt;/p>
-&lt;blockquote>
-&lt;p>PS：实战中，很多问题就源于我们并不是真的理解这些状态迁移条件。&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="51newrunnabletime_waiting三态迁移">5.1.NEW、RUNNABLE、TIME_WAITING三态迁移&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>结论&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;code>new Thread&lt;/code>时，Java线程进入&lt;code>NEW&lt;/code>状态&lt;/li>
-&lt;li>调用&lt;code>start&lt;/code>方法时，Java线程进入&lt;code>RUNNABLE&lt;/code>状态&lt;/li>
-&lt;li>Java线程运行&lt;code>run&lt;/code>方法体内一旦运行&lt;code>Thread.sleep&lt;/code>方法，Java线程进入&lt;code>TIME_WAITING&lt;/code>状态&lt;/li>
-&lt;li>当&lt;code>Thread.sleep&lt;/code>时间到，Java线程回到&lt;code>RUNNABLE&lt;/code>状态&lt;/li>
-&lt;li>其它说明：&lt;code>Object.wait&lt;/code>、&lt;code>Thread.join&lt;/code>等方法也可以触发&lt;code>RUNNABLE&lt;/code>态迁移到&lt;code>TIME_WAITING&lt;/code>态，读者可自行实验。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405142942728.png" alt="image-20230405142942728">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>示例代码&lt;/strong>：
-&lt;ul>
-&lt;li>第21行在&lt;code>MyThread&lt;/code>构造函数中打印了线程状态、第9行在&lt;code>new MyThread&lt;/code>后也打印了线程状态，目的是从这两处打印证明&lt;code>new Thread&lt;/code>那一刻，Java线程处于&lt;code>NEW&lt;/code>状态。&lt;/li>
-&lt;li>第26行打印线程状态，为了证明第11行调用&lt;code>start&lt;/code>方法后，Java线程进入&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
-&lt;li>第27~第31行调用&lt;code>Thread.sleep&lt;/code>方法后，在第13~15行连续打印3次线程状态，为了证明调用&lt;code>Thread.sleep&lt;/code>方法后，Java线程进入&lt;code>TIME_WAITING&lt;/code>状态。&lt;/li>
-&lt;li>第32行打印线程状态，为了证明&lt;code>Thread.sleep&lt;/code>方法时间到后，Java线程回到&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405144125704.png" alt="image-20230405144125704">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>示例代码运行结果&lt;/strong>：与预期一致。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405144303047.png" alt="image-20230405144303047">&lt;/p>
-&lt;h2 id="52newrunnablewaitingblockedterminated五态迁移">5.2.NEW、RUNNABLE、WAITING、BLOCKED、TERMINATED五态迁移&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>结论&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;code>new Thread&lt;/code>时，Java线程进入&lt;code>NEW&lt;/code>状态&lt;/li>
-&lt;li>调用&lt;code>start&lt;/code>方法时，Java线程进入&lt;code>RUNNABLE&lt;/code>状态&lt;/li>
-&lt;li>Java线程运行&lt;code>run&lt;/code>方法体内一旦运行&lt;code>Object.wait&lt;/code>方法，Java线程进入&lt;code>WAITING&lt;/code>状态&lt;/li>
-&lt;li>当另一个Java线程执行了&lt;code>Object.notify&lt;/code>方法，Java线程进入&lt;code>RUNNABLE&lt;/code>状态&lt;/li>
-&lt;li>在Java线程从占有对象锁到失去对象锁到再次获得对象锁，即等待&lt;code>synchronized&lt;/code>到重入&lt;code>synchronized&lt;/code>块，Java线程还会经历&lt;code>BLOCKED&lt;/code>态到&lt;code>RUNNABLE&lt;/code>态的迁移(此处也有一处伏笔，需要解读JVM源码才能清晰，下篇文章详述)&lt;/li>
-&lt;li>当Java线程执行完，Java线程进入&lt;code>TERMINATED&lt;/code>状态&lt;/li>
-&lt;li>其它说明：&lt;code>Object.wait&lt;/code>、&lt;code>Thread.join&lt;/code>等方法五态迁移，读者可自行实验。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405151245195.png" alt="image-20230405151245195">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>示例代码&lt;/strong>：
-&lt;ul>
-&lt;li>第15行为了证明&lt;code>Object.wait&lt;/code>后，Java线程进入&lt;code>WAITING&lt;/code>态&lt;/li>
-&lt;li>第17行为了证明&lt;code>Object.notify&lt;/code>后，Java线程进入&lt;code>BLOCKED&lt;/code>态，再重入&lt;code>synchronized&lt;/code>后进入&lt;code>RUNNABLE&lt;/code>态&lt;/li>
-&lt;li>第20行为了证明Java线程工作完成后，进入&lt;code>TERMINATED&lt;/code>态&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405152223300.png" alt="image-20230405152223300">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>示例代码运行结果&lt;/strong>：与预期一致。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-5/image-20230405152517526.png" alt="image-20230405152517526">&lt;/p>
-&lt;h1 id="6总结">6.总结&lt;/h1>
-&lt;ul>
-&lt;li>本文通过Java官方文档和JDK源码，解读了Java线程有6种状态&lt;/li>
-&lt;li>本文又通过两段示例代码，验证了Java线程6种状态的迁移路径&lt;/li>
-&lt;li>本文遗留了一个模糊的问题：Java线程在重入&lt;code>synchronized&lt;/code>时如何迁移到&lt;code>BLOCKED&lt;/code>态？此问题需要分析JVM源码得到进一步验证结论&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230415010840596.png" alt="">&lt;/p></description></item></channel></rss>

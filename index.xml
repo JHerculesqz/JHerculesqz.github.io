@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 18 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,8 +18,174 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记17-自己实现一个简版ChatGPT(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</link><pubDate>Mon, 16 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</guid><description>&lt;p>【chatGPT】学习笔记17-自己实现一个简版ChatGPT(上)&lt;/p>
-&lt;p>接下来，我们用三篇文章阐述&lt;font color=red>**如何实现一个简版ChatGPT。**&lt;/font>&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记18-自己实现一个简版ChatGPT(中)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</link><pubDate>Wed, 18 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</guid><description>&lt;p>根据上文我们实现的简版GPT，在足够数据、足够算力的前提下，理论上是可以训练出类GPT3的大语言模型的。&lt;/p>
+&lt;p>但GPT3距离ChatGPT还有很远的距离，这一段距离涉及OpenAI未公开论文、源码的关键技术。&lt;/p>
+&lt;p>我们接下来从OpenAPI已公开的信息来看看&lt;font color=red>&lt;strong>ChatGPT是如何炼成的&lt;/strong>&lt;/font>。&lt;/p>
+&lt;h1 id="1chatgpt的历史版本">1.ChatGPT的历史版本&lt;/h1>
+&lt;p>下图摘自Yule Wang的技术专栏，阐述了基于Transformer的大语言模型不同版本的脉络：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>BERT&lt;/strong>是编码器Only架构，&lt;strong>BART&lt;/strong>是编码器-解码器架构，它们延伸出去大语言模型下载后&lt;font color=red>&lt;strong>不能直接使用，需要垂域微调&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>&lt;strong>T5&lt;/strong>是编码器-解码器架构，&lt;strong>GPT-2&lt;/strong>是解码器Only架构，它们下载后&lt;font color=red>&lt;strong>不做垂域微调，也能完成一些AI任务&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>&lt;strong>GPT-3、GPT-4&lt;/strong>是解码器Only架构，它们下载后&lt;font color=red>&lt;strong>不做垂域微调，能完成大部分AI任务&lt;/strong>&lt;/font>。&lt;/li>
+&lt;li>针对&lt;strong>GPT-3&lt;/strong>进行&lt;font color=red>&lt;strong>SFT(有监督微调)+RLHF(基于人类反馈的强化学习)&lt;strong>&lt;/font>，最终得到了&lt;/strong>ChatGPT&lt;/strong>，&lt;strong>GPT-3.5、InstructGPT&lt;/strong>算是过渡产品。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019083053465.png" alt="image-20231019083053465">&lt;/p>
+&lt;h1 id="2chatgpt的整体训练流程">2.ChatGPT的整体训练流程&lt;/h1>
+&lt;p>在《Introducing ChatGPT》(详见https://openai.com/blog/chatgpt)中，给出了从GPT3演进到ChatGPT的整体训练流程图：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/ChatGPT_Diagram.svg" alt="ChatGPT_Diagram">&lt;/p>
+&lt;p>以前看这张图很模糊，通过前面复现Transformer架构、简版GPT的代码，才逐渐变得清晰。&lt;/p>
+&lt;p>接下来，我们来逐一拆解。&lt;/p>
+&lt;h1 id="3chatgpt的三大训练方法">3.ChatGPT的三大训练方法&lt;/h1>
+&lt;p>下图比较形象地归纳了ChatGPT整体训练流程：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019094239673.png" alt="image-20231019094239673">&lt;/p>
+&lt;h2 id="1方法1预训练pre-traning">(1)方法1：预训练(Pre-Traning)&lt;/h2>
+&lt;ul>
+&lt;li>构建好大语言模型的神经网络架构后，&lt;strong>通过大数据、大算力进行训练&lt;/strong>，得到预训练模型。如：GPT3就属于这类预训练模型。&lt;/li>
+&lt;li>大语言模型的本质是生成内容，构建训练数据基本都是自动化的，所以&lt;strong>预训练的过程属于无监督学习&lt;/strong>。&lt;/li>
+&lt;li>预训练模型非常庞大，&lt;strong>算是通才&lt;/strong>，具备&lt;strong>基本的自然语言处理能力、世界知识&lt;/strong>，甚至还有了&lt;strong>顿悟能力(涌现能力)&lt;/strong>。&lt;/li>
+&lt;li>就好像下图红框内庞大的AI大脑(&lt;strong>画的有点恶心&lt;/strong>)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019150044511.png" alt="image-20231019150044511">&lt;/p>
+&lt;h2 id="2方法2指令调优instruction-tuning">(2)方法2：指令调优(Instruction Tuning)&lt;/h2>
+&lt;ul>
+&lt;li>虽然花了巨大的时间成本和空间成本获得了预训练模型，但是它的水平，依然无法像一个真人，与人类对话。&lt;/li>
+&lt;li>接下来还要进行微调——人工&lt;strong>准备少量的数据&lt;/strong>，对&lt;strong>预训练模型进行增量训练&lt;/strong>——因此也称为&lt;strong>有监督微调(SFT，Supervised Fine-tunning)&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>指令微调&lt;/strong>本质是站在巨人的肩膀上&lt;strong>对预训练模型进行增量训练&lt;/strong>。它可以针对世界知识进行增强，也可以针对某个垂直领域进行增强。&lt;/li>
+&lt;li>指令微调后得到的大语言训练模型，将会接近于一个真人。&lt;/li>
+&lt;li>就好像下图红框内的红色人脸(&lt;strong>画的也挺恶心&lt;/strong>)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019150129023.png" alt="image-20231019150129023">&lt;/p>
+&lt;h2 id="3方法3对齐alignment">(3)方法3：对齐(Alignment)&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>在指令调优后，大语言模型虽然接近于真人，但生成的内容依然会很生硬。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>为什么呢？这就是人类的主观感受——人类对某些问题的答案，会有情绪、语气、风格等主观的特征。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>那么，又如何&lt;strong>让AI学会人类的主观感受&lt;/strong>呢？这&lt;strong>就是对齐Alignment&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>RLHF(基于人类反馈的强化学习)就是对齐的具体实现之一，利用这种强化学习手段，让大语言模型学会人类的主观感受，GPT3就演进成为了ChatGPT。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>就好像下图右侧红框内小黄球(&lt;strong>画的依然挺恶心&lt;/strong>)。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019151032099.png" alt="image-20231019151032099">&lt;/p>
+&lt;p>接下来，我们逐一分析这三大方法。&lt;/p>
+&lt;h1 id="4方法1预训练pre-training">4.方法1：预训练(Pre-Training)&lt;/h1>
+&lt;h2 id="1与chatgpt整体训练流程图的对应关系">(1)与ChatGPT整体训练流程图的对应关系&lt;/h2>
+&lt;p>我们对比两张图：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>预训练&lt;/strong>得到的大语言模型，就&lt;strong>是ChatGPT整体训练流程STEP1的输入&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019151849173.png" alt="image-20231019151849173">&lt;/p>
+&lt;h2 id="2辩证看待预训练模型涌现能力神经网络">(2)辩证看待预训练模型、涌现能力、神经网络&lt;/h2>
+&lt;p>前段时间，师父问了我3个终极问题，让我一时语塞：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>为什么ChatGPT大力能出奇迹，小力就不行？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>为什么这样的神经网络模型就可以大力出奇迹，换个神经网络模型行不行？&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>如果无论什么神经网络模型只要能做到大力就能出奇迹，那么这些神经网络的本质是什么？&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>前面半年一直在复现Transformer论文的细节中，的确缺少了对宏观本质的思考，结合预训练这个章节的写作，正好梳理一下我的宏观思考：&lt;/p>
+&lt;h3 id="思考1神经网络的本质是什么">思考1：神经网络的本质是什么？&lt;/h3>
+&lt;ul>
+&lt;li>观点1：客观世界中，&lt;strong>一切问题都能用函数表达&lt;/strong>。
+&lt;ul>
+&lt;li>只不过有的函数极其复杂，只有上帝才知道这个函数是什么。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>观点2：&lt;strong>神经网络的本质进行函数近似(Function Approximation)的工具&lt;/strong>。
+&lt;ul>
+&lt;li>&lt;strong>神经网络的输入&lt;/strong>：是大量的数据，数据中隐藏了某个问题背后的函数的数学规律。&lt;/li>
+&lt;li>&lt;strong>神经网络的输出&lt;/strong>：找到无限逼近于某个问题背后的函数的近似函数。&lt;/li>
+&lt;li>数学上，已经证明&lt;strong>神经网络能够近似出任意一个问题背后的函数&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>神经网络的结构&lt;/strong>，&lt;strong>决定了找到这个近似函数的成本&lt;/strong>(时间成本、空间成本……)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="思考2假设思考1正确如何解释神经网络的5种现象">思考2：假设思考1正确，如何解释神经网络的5种现象？&lt;/h3>
+&lt;ul>
+&lt;li>现象1：&lt;strong>过于简单的神经网络&lt;/strong>，需要很大力才能出奇迹。
+&lt;ul>
+&lt;li>任务是&amp;quot;让AI对红点和蓝点进行分类&amp;rdquo;，由于神经网络过于简单，所以迭代了2000多次才找出答案。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=364782652&amp;bvid=BV1F94y1b7MW&amp;cid=1304339810&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>现象2：&lt;strong>过于简单的任务&lt;/strong>，不需要大力也能出奇迹。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=874844018&amp;bvid=BV1EN4y1C7v2&amp;cid=1304340008&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>现象3：恒定难度的任务，&lt;strong>加宽神经网络&lt;/strong>，大力能出奇迹。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=234774107&amp;bvid=BV1N8411r78C&amp;cid=1304339757&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>现象4：恒定难度的任务，&lt;strong>加深神经网络&lt;/strong>，大力能出奇迹。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=789763364&amp;bvid=BV1Ry4y1N7CU&amp;cid=1304340937&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>现象5：恒定难度的任务，&lt;strong>增强神经元&lt;/strong>，大力能出奇迹。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=277344904&amp;bvid=BV14w411w7Nx&amp;cid=1304343623&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;p>从上述5种现象，应该可以得到2个结论：&lt;/p>
+&lt;ul>
+&lt;li>在神经网络结构恒定的前提下，&lt;strong>待执行的任务难度&lt;/strong>，决定了&lt;strong>能否大力出奇迹、是否需要大力&lt;/strong>。&lt;/li>
+&lt;li>在待执行的任务难度恒定的前提下，&lt;strong>神经网络结构&lt;/strong>，决定了&lt;strong>能否大力出奇迹、是否需要大力&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h3 id="思考3辩证地看待预训练模型涌现能力transformer">思考3：辩证地看待预训练模型、涌现能力、Transformer&lt;/h3>
+&lt;p>当GPT3.5出现&lt;strong>涌现能力(emergent capabilities)&lt;strong>后，它似乎被神话成了&lt;/strong>人类尚无办法解释的神迹&lt;/strong>。&lt;/p>
+&lt;p>我们应该如此这般辩证地看待预训练模型、涌现、Transformer&lt;/p>
+&lt;ul>
+&lt;li>预训练模型不是ChatGPT首创，在深度学习时代就有了，有很多神经网络都是预训练好，节省后来人的训练成本。&lt;/li>
+&lt;li>Transformer只是GPT3这种预训练模型遵循的神经网络结构，&lt;strong>Transformer这种神经网络结构本质是换了一种姿势寻找近似函数&lt;/strong>。&lt;/li>
+&lt;li>如果问题P1、问题P2、……问题Pn背后的函数都极为相近，当神经网络结构找到了问题P1的近似函数，那么这个近似函数也能用来解决问题P2、……问题Pn——这就是经过训练，神经网络能自我学习到一些额外的能力的原因，即涌现能力。
+&lt;ul>
+&lt;li>进一步思考：深度学习时代有没有涌现呢？可能有，只是n这个值比较小，不太明显吧。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5方法2指令调优instruction-tuning">5.方法2：指令调优(Instruction Tuning)&lt;/h1>
+&lt;h2 id="1与chatgpt整体训练流程图的对应关系-1">(1)与ChatGPT整体训练流程图的对应关系&lt;/h2>
+&lt;ul>
+&lt;li>指令调优对应于ChatGPT整体训练流程的STEP1。&lt;/li>
+&lt;li>&lt;strong>SFT&lt;/strong>：有监督微调，属于有监督学习。包括In-context Tuning(上下文调优)和Instruction Tuning(指令调优)。
+&lt;ul>
+&lt;li>&lt;strong>In-context Tuning&lt;/strong>：上下文调优，这种调优方式的本质是将多轮对话的聊天记录一起发送给大语言模型，有了上下文，大语言模型就能更好地回答问题。&lt;/li>
+&lt;li>&lt;strong>Instruction Tuning&lt;/strong>：指令调优，这种调优方式的本质就是问题中带有明确的指令、明确的要求。Instruction Tuning是OpenAI在GPT-3.5-turbo模型中引入的一种新方法，是在传统的微调过程上的一种变体。&lt;/li>
+&lt;li>对于上述两种调优方式，在提示词工程中都体现了它们的思想——&lt;strong>&amp;ldquo;上下文&amp;rdquo;、&amp;ldquo;指令&amp;rdquo;&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019170641604.png" alt="image-20231019170641604">&lt;/p>
+&lt;h2 id="2训练sft模型的伪码">(2)训练SFT模型的伪码&lt;/h2>
+&lt;p>前文讲了很多理论，还是需要撸一下代码比较便于理解。&lt;/p>
+&lt;blockquote>
+&lt;p>由于OpenAI对于SFT、RLHF并未公开源码，所以在这里只编写伪码，在后续实例中展示真实代码。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019181420212.png" alt="image-20231019181420212">&lt;/p>
+&lt;h2 id="3sft实例">(3)SFT实例&lt;/h2>
+&lt;p>针对简版GPT，只需要增加如下代码：&lt;/p>
+&lt;ul>
+&lt;li>首先，通过&lt;code>torch.load方法&lt;/code>加载上一篇已经预训练好的简版GPT模型，这个模型的训练数据仅包含了维基百科的基本数据。&lt;/li>
+&lt;li>然后，将新增的医学知识数据集，对简版GPT模型进行增量训练。&lt;/li>
+&lt;li>最后，通过&lt;code>torch.save方法&lt;/code>保存增量训练的简版GPT模型，此时，这个模型就包含了医学知识了。&lt;/li>
+&lt;li>具体代码详见下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019182641050.png" alt="image-20231019182641050">&lt;/p>
+&lt;h1 id="6小结">6.小结&lt;/h1>
+&lt;p>讲到这里，内容已经比较饱和了，我们将在最后一篇阐述&lt;strong>方法3：对齐训练&lt;/strong>以及&lt;strong>RLHF的实例&lt;/strong>。&lt;/p>
+&lt;p>我们接下来对本文进行一下小结：&lt;/p>
+&lt;ul>
+&lt;li>ChatGPT的历史版本：&lt;strong>GPT3、InstructGPT、ChatGPT&lt;/strong>。&lt;/li>
+&lt;li>ChatGPT&lt;strong>整体训练流程&lt;/strong>，支撑了&lt;strong>GPT3到ChatGPT的演进&lt;/strong>。&lt;/li>
+&lt;li>预训练模型是什么？如何&lt;strong>辩证地&lt;/strong>看待&lt;strong>预训练模型、涌现能力、神经网络的学习能力&lt;/strong>？&lt;/li>
+&lt;li>SFT(有监督微调)的概念、原理，最后展示了&lt;strong>如何针对简版GPT进行SFT&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>我们下一步继续针对简版ChatGPT开展RLHF，且听下回分解。&lt;/p></description></item><item><title>【chatGPT】学习笔记17-自己实现一个简版ChatGPT(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</link><pubDate>Mon, 16 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</guid><description>&lt;p>接下来，我们用三篇文章阐述&lt;font color=red>**如何实现一个简版ChatGPT。**&lt;/font>&lt;/p>
 &lt;h1 id="1回顾">1.回顾&lt;/h1>
 &lt;p>想实现一个简版ChatGPT，依赖于如下前置知识：&lt;/p>
 &lt;ul>
@@ -3344,230 +3510,4 @@ java/lang/Thread.java
 &lt;ul>
 &lt;li>本次实验，最终模拟了JDK中创建Java线程，JVM中对应也创建native线程，native线程的状态迁移后回调Java线程的回调函数。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422153048716.png" alt="image-20230422153048716">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</link><pubDate>Sat, 15 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-6/</guid><description>&lt;h1 id="1疑问java线程对应的native线程状态如何迁移">1.疑问：Java线程对应的native线程状态如何迁移？&lt;/h1>
-&lt;p>在《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-5》中，我们在JDK层面对Java线程的6种状态迁移进行了实验。&lt;/p>
-&lt;p>本文再以Java线程从NEW状态迁移到RUNNABLE状态为引子，观测一下JVM为Java线程创建的native线程的状态如何迁移：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230413160245714.png" alt="">&lt;/p>
-&lt;h1 id="2探索jvm调用链全景图">2.探索：JVM调用链全景图&lt;/h1>
-&lt;p>为了避免迷失在JVM的源码中，我们先看一下笔者整理的JVM调用链全景：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP1.JVM准备&lt;/strong>：JDK通过JNI，加载JVM侧的相关函数。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JDK：Thread.java的registerNatives()
-(2)JVM：jdk/src/share/native/java/lang/Thread.c的registerNatives()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>&lt;strong>STEP2.启动Java线程&lt;/strong>：JDK侧启动线程，JVM侧进行初始化。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JDK：Thread.java的start()
-(2)JVM：src/share/vm/prims/jvm.cpp的JVM_StartThread()
-(3)JVM：src/share/vm/runtime/thread.cpp的JavaThread()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>&lt;strong>STEP3.记录JDK回调&lt;/strong>：JVM侧记录JDK侧的Java线程回调函数&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JVM：src/share/vm/runtime/thread.hpp的set_entry_point()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>&lt;strong>STEP4.创建native线程&lt;/strong>：JVM侧创建native线程，初始化后等待CPU执行这个native线程&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JVM：src/os/linux/vm/os_linux.cpp的create_thread()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>&lt;strong>STEP5.等待&lt;/strong>：CPU执行native线程，JVM阻塞，等待native线程进入RUNNABLE状态&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JVM：src/os/linux/vm/os_linux.cpp的java_start()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>&lt;strong>STEP6.打破循环&lt;/strong>：JVM在STEP4后，做了其它操作，最终设置native线程、Java线程为RUNNABLE状态，打破STEP5等待&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JVM：src/share/vm/prims/jvm.cpp的JVM_StartThread()
-(2)JVM：src/share/vm/runtime/thread.cpp的start()
-(3)JVM：src/share/vm/runtime/os.cpp的start_thread()
-(4)JVM：src/os/linux/vm/os_linux.cpp的pd_start_thread()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>&lt;strong>STEP7.回调JDK&lt;/strong>：JVM通过JNI回调JDK侧的Java线程回调&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">涉及代码：
-(1)JVM：src/share/vm/runtime/thread.cpp的run()
-(2)JVM：src/share/vm/runtime/thread.cpp的thread_main_inner()
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064052581.png" alt="">&lt;/p>
-&lt;h1 id="3细节1jvm准备">3.细节1：JVM准备&lt;/h1>
-&lt;p>第一步，看JVM如何将&lt;code>java.lang.Thread&lt;/code>中用到的native方法批量注册的：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414060903544.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在JDK中，&lt;code>java.lang.Thread&lt;/code>在静态代码块中调用了&lt;code>registerNatives&lt;/code>。此方法为native方法。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061036368.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在JVM中，java/lang/Thread.c定义了JNI方法&lt;code>Java_java_lang_Thread_registerNatives&lt;/code>。此方法使用了&lt;code>methods&lt;/code>变量，此变量定义了&lt;code>java.lang.Thread&lt;/code>类中所有的native方法对应的函数指针。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061109828.png" alt="">&lt;/p>
-&lt;h1 id="4细节2启动java线程">4.细节2：启动Java线程&lt;/h1>
-&lt;p>第二步，理解&lt;code>java.lang.Thread&lt;/code>调用&lt;code>start&lt;/code>方法时，JVM对应的处理：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061547200.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>java.lang.Thread&lt;/code>的&lt;code>start&lt;/code>方法核心是调用了native方法&lt;code>start0&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061148420.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在JVM中，native的&lt;code>start0&lt;/code>方法对应的实现为&lt;code>JVM_StartThread&lt;/code>函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061324005.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>JVM_StartThread&lt;/code>方法核心是创建了&lt;code>JavaThread&lt;/code>对象。此对象是JVM中表示Java线程对象的抽象。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061356033.png" alt="">&lt;/p>
-&lt;h1 id="5细节3记录jdk回调">5.细节3：记录JDK回调&lt;/h1>
-&lt;p>第三步，理解JVM如何记录Java线程的回调：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061824024.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在JVM中，thread.cpp中定义了&lt;code>JavaThread&lt;/code>的构造函数，第一个参数&lt;code>entry_point&lt;/code>就表示Java线程的回调函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061653606.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>thread.hpp提供了&lt;code>set_entry_point&lt;/code>函数，&lt;code>JavaThread&lt;/code>的构造函数调用此函数，将Java线程的回调记录到内存中，供后续流程调用。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061709047.png" alt="">&lt;/p>
-&lt;h1 id="6细节4创建native线程">6.细节4：创建native线程&lt;/h1>
-&lt;p>第四步，在JVM做好一切准备工作后，JVM如何在操作系统上创建native线程：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064223932.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>JVM的&lt;code>thread.cpp&lt;/code>在&lt;code>JavaThread&lt;/code>的构造函数中调用&lt;code>os_linux.cpp&lt;/code>的&lt;code>create_thread&lt;/code>函数。&lt;/li>
-&lt;li>&lt;code>create_thread&lt;/code>函数创建了&lt;code>OSThread&lt;/code>对象，此对象记录了&lt;code>JavaThread&lt;/code>和即将创建的&lt;code>native线程&lt;/code>之间的一一对应关系。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061900504.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在建立了&lt;code>JavaThread&lt;/code>对象和&lt;code>native线程对象&lt;/code>后，JVM就调用&lt;code>pthread&lt;/code>库的&lt;code>pthread_create&lt;/code>方法，在操作系统上创建了真正的&lt;code>native线程&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061913975.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>到这里，JDK中的Java线程仍然处于&lt;code>NEW&lt;/code>状态，而JVM中的&lt;code>native线程&lt;/code>在一段时间内处于&lt;code>ALLOCATED&lt;/code>状态，JVM一直会等待&lt;code>native线程&lt;/code>突破这个状态。并且，当&lt;code>pthread&lt;/code>库在操作系统层创建&lt;code>native线程&lt;/code>出现问题时，&lt;code>native线程&lt;/code>处于&lt;code>ZOMBIE&lt;/code>状态。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414061932717.png" alt="">&lt;/p>
-&lt;h1 id="7细节5等待">7.细节5：等待&lt;/h1>
-&lt;p>第五步，在操作系统层面已经存在了和JDK的Java线程一一对应的&lt;code>native线程&lt;/code>，那么我们就要来理解在CPU下一个可能的时间周期中是如何执行的&lt;code>native线程&lt;/code>的回调。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064342579.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>os_linux.cpp&lt;/code>的&lt;code>java_start&lt;/code>函数是&lt;code>native线程&lt;/code>的回调函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064407101.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>这个函数的结束处，&lt;code>native线程&lt;/code>的状态一直处于&lt;code>INITIALIZED&lt;/code>状态，这个状态就对应Java线程的&lt;code>NEW&lt;/code>状态。此时，&lt;code>native线程&lt;/code>阻塞。&lt;/li>
-&lt;li>当&lt;code>native线程&lt;/code>被打破了&lt;code>INITIALIZED&lt;/code>状态，&lt;code>native线程&lt;/code>不再原地止步，而是进一步执行&lt;code>thread.cpp&lt;/code>的&lt;code>run&lt;/code>方法。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064418955.png" alt="">&lt;/p>
-&lt;h1 id="8细节6打破循环">8.细节6：打破循环&lt;/h1>
-&lt;p>第六步，我们再来理解JVM如何打破上一步&lt;code>native线程&lt;/code>止步不前的状态。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065410715.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在&lt;code>jvm.cpp&lt;/code>的JVM_StartThread方法在创建了&lt;code>JavaThread&lt;/code>对象后，调用了&lt;code>thread.cpp&lt;/code>的&lt;code>start&lt;/code>函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065209484.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>thread.cpp&lt;/code>的&lt;code>start&lt;/code>方法将&lt;code>JavaThread&lt;/code>对象设置为&lt;code>RUNNABLE&lt;/code>状态，此时JDK对应的Java线程处于&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
-&lt;li>&lt;code>thread.cpp&lt;/code>调用&lt;code>os.cpp&lt;/code>的&lt;code>start_thread&lt;/code>函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065229125.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>os.cpp&lt;/code>的&lt;code>start_thread&lt;/code>函数将&lt;code>native线程&lt;/code>也设置为&lt;code>RUNNABLE&lt;/code>状态，此时Java线程和&lt;code>native线程&lt;/code>都处于&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065247151.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>os.cpp&lt;/code>的&lt;code>start_thread&lt;/code>函数进一步调用&lt;code>os_linux.cpp&lt;/code>的&lt;code>pd_start_thread&lt;/code>函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414065304780.png" alt="">&lt;/p>
-&lt;h1 id="9细节7回调jdk">9.细节7：回调JDK&lt;/h1>
-&lt;p>第七步，在第六步打破了&lt;code>native线程&lt;/code>止步不前的状态后，&lt;code>native线程&lt;/code>调用&lt;code>thread.cpp&lt;/code>的&lt;code>thread_main_inner&lt;/code>函数。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064752160.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>native线程&lt;/code>调用&lt;code>thread.cpp&lt;/code>的&lt;code>thread_main_inner&lt;/code>函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064845782.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064858699.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>thread.cpp&lt;/code>的&lt;code>thread_main_inner&lt;/code>函数中，进一步调用了在第三步中保存的Java线程的回调&lt;code>entry_point&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064911172.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>在&lt;code>jvm.cpp&lt;/code>中，&lt;code>thread_entry&lt;/code>函数调用了&lt;code>JavaCalls::call_virtual&lt;/code>函数，这个函数会通过JNI反向调用JDK中的Java代码，此处就是回调了JDK中的Java线程回调函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414064925823.png" alt="">&lt;/p>
-&lt;h1 id="10结论">10.结论&lt;/h1>
-&lt;p>通过前述代码流程的分析，我们可以得到如下结论：&lt;/p>
-&lt;ul>
-&lt;li>JDK中，&lt;code>new java.lang.Thread()&lt;/code>会创建Java线程，此时Java线程处于&lt;code>NEW&lt;/code>状态。&lt;/li>
-&lt;li>JDK中，调用Java线程的&lt;code>start&lt;/code>方法后，在JVM中创建&lt;code>native线程&lt;/code>&lt;/li>
-&lt;li>JVM中，&lt;code>native线程&lt;/code>先后经历&lt;code>ALLOCATED&lt;/code>状态，也可能出现&lt;code>ZOMBIE&lt;/code>状态。&lt;/li>
-&lt;li>JVM中，&lt;code>native线程&lt;/code>进化为&lt;code>INITIALIZED&lt;/code>状态，可以对标JDK中Java线程的&lt;code>NEW&lt;/code>状态。&lt;/li>
-&lt;li>JVM中，&lt;code>native线程&lt;/code>被打破等待循环后，&lt;code>native线程&lt;/code>变迁为&lt;code>RUNNABLE&lt;/code>状态。&lt;/li>
-&lt;li>JDK中，&lt;code>Java线程&lt;/code>也变迁为&lt;code>RUNNABLE&lt;/code>状态，&lt;code>Java线程&lt;/code>的回调函数也被JVM调用执行。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230414070017806.png" alt="">&lt;/p>
-&lt;h1 id="11随想">11.随想&lt;/h1>
-&lt;p>每次分析JVM源码，仿佛在一个生活在三维空间的生物(Java程序猿)，窥探到四维空间(JVM、操作系统、CPU&amp;hellip;&amp;hellip;)，这种感觉令人自在、平静、喜乐。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-6/image-20230415010840596.png" alt="">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422153048716.png" alt="image-20230422153048716">&lt;/p></description></item></channel></rss>

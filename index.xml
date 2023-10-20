@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 18 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,156 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记18-自己实现一个简版ChatGPT(中)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</link><pubDate>Wed, 18 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</guid><description>&lt;p>根据上文我们实现的简版GPT，在足够数据、足够算力的前提下，理论上是可以训练出类GPT3的大语言模型的。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记19-自己实现一个简版ChatGPT(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8B/</link><pubDate>Fri, 20 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8B/</guid><description>&lt;p>前两篇实现了简版GPT，并对其进行了SFT，我们接下来看ChatGPT整体训练流程的最后一个环节——&lt;strong>对齐训练(Alignment Training)&lt;/strong>。&lt;/p>
+&lt;h1 id="1方法3对齐训练alignment-training">1.方法3：对齐训练(Alignment Training)&lt;/h1>
+&lt;h2 id="1与chatgpt整体训练流程图的对应关系">(1)与ChatGPT整体训练流程图的对应关系&lt;/h2>
+&lt;ul>
+&lt;li>方法3对应于&lt;strong>ChatGPT整体训练流程的STEP2、STEP3&lt;/strong>。&lt;/li>
+&lt;li>方法3的核心思想是利用了强化学习，最终将GPT3演进为了&lt;strong>更通人性的ChatGPT&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020062050959.png" alt="image-20231020062050959">&lt;/p>
+&lt;ul>
+&lt;li>ChatGPT整体训练流程中的&lt;strong>STEP2、STEP3&lt;/strong>，就是大名鼎鼎的&lt;strong>RLHF&lt;/strong>——&lt;strong>基于人类反馈的强化学习&lt;/strong>。
+&lt;ul>
+&lt;li>&lt;strong>RL：Reinforcement Learning&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>HF：Human Feedback&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ChatGPT整体训练流程中的&lt;strong>STEP2&lt;/strong>，&lt;strong>对应于&lt;/strong>强化学习模型的&lt;strong>Interpreter模型&lt;/strong>。&lt;/li>
+&lt;li>ChatGPT整体训练流程中的&lt;strong>STEP3&lt;/strong>，&lt;strong>对应于&lt;/strong>强化学习模型的&lt;strong>Action模型&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020085551189.png" alt="image-20231020085551189">&lt;/p>
+&lt;h2 id="2什么是对齐训练">(2)什么是对齐训练&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>对齐训练&lt;/strong>：Alignment Training，它就是一种机器学习的模型训练方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>核心思想&lt;/strong>：训练出人类主观感受的模型，这个模型具备预测人类的决策的能力。&lt;/p>
+&lt;ul>
+&lt;li>这样，训练好的模型，就可以在未见过的场景下，按照类似人的行为模式做出选择。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>对齐训练与强化学习的关系&lt;/strong>：OpenAI在对齐训练中，结合了强化学习。&lt;/p>
+&lt;ul>
+&lt;li>ChatGPT整体训练流程的STEP2就是对齐训练，学习出预测人类回答问题的偏好模型。&lt;/li>
+&lt;li>ChatGPT整体训练流程的STEP3就是强化学习，STEP2输出的这个模型，作为强化学习的Interpreter模型。STEP3不断迭代，最终学习到Action模型。
+&lt;ul>
+&lt;li>通过SFT训练之后GPT3，本质就是一个能机械式地回答问题的机器人。&lt;/li>
+&lt;li>通过RLHF学习的Action模型，才是帮助SFT之后的GPT3，类似人类回答问题的关键机关。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>细节&lt;/strong>：ChatGPT整体训练流程图中，出现了PPO算法，PPO算法是近端策略梯度优化，增加一个限制Action模型在训练过程中梯度上升速度，本质就是避免Action模型产生一个离谱的Action。&lt;/p>
+&lt;ul>
+&lt;li>PPO算法展开说内容太多，本文不赘述，详见论文：https://arxiv.org/abs/1707.06347&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="3step2的reward-model模型训练伪码">(3)STEP2的Reward Model模型训练伪码&lt;/h2>
+&lt;ul>
+&lt;li>我们再来看看STEP2的伪码，如下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020093407332.png" alt="image-20231020093407332">&lt;/p>
+&lt;h2 id="4step3的rlhf训练伪码">(4)STEP3的RLHF训练伪码&lt;/h2>
+&lt;ul>
+&lt;li>我们再来看看STEP3的伪码，如下图：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020095154134.png" alt="image-20231020095154134">&lt;/p>
+&lt;h1 id="2deepspeed">2.DeepSpeed&lt;/h1>
+&lt;p>RLHF，是ChatGPT最核心的技术机密，除了在《Introducing ChatGPT》(&lt;a href="https://openai.com/blog/chatgpt">https://openai.com/blog/chatgpt&lt;/a>)中提到了，并未公开过源码。&lt;/p>
+&lt;p>在前文的伪码实现部分，虽然通过伪码描述了RLHF的核心逻辑，但距离商用还欠缺很多东西(如：分布式训练等)。&lt;/p>
+&lt;p>幸好微软开源了类似的框架，DeepSpeed，我们可以通过阅读它的源码、使用它，开展RLHF。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020100752488.png" alt="image-20231020100752488">&lt;/p>
+&lt;h1 id="3实例-开展rlhf训练">3.实例-开展RLHF训练&lt;/h1>
+&lt;h2 id="step0前置准备">STEP0.前置准备&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>硬件&lt;/strong>：V100一块，32G显存&lt;/li>
+&lt;li>&lt;strong>基础软件&lt;/strong>：Ubuntun20.04，Minicoda3，Pytorch3.8，CUDA11.6，Python3.10&lt;/li>
+&lt;li>&lt;strong>预训练模型&lt;/strong>：选择Facebook的opt1.3B，即&lt;strong>13亿参数&lt;/strong>的预训练模型。&lt;/li>
+&lt;li>&lt;strong>环境初始配置&lt;/strong>：创建虚拟环境，&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020102932305.png" alt="image-20231020102932305">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>安装依赖&lt;/strong>：进入DeepSpeed-Chat目录，安装相关依赖&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020103116451.png" alt="image-20231020103116451">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>环境测试&lt;/strong>：确认相关基础软件版本号。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020103548543.png" alt="image-20231020103548543">&lt;/p>
+&lt;h2 id="step1sft">STEP1.SFT&lt;/h2>
+&lt;ul>
+&lt;li>开展SFT训练时，由于服务器资源不足(省钱)，需要避免OOM异常，因此需要修改一下训练脚本。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>路径：training/step1_supervised_finetuning/training_scripts/opt/single_gpu/run_1.3b.sh&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020104103388.png" alt="image-20231020104103388">&lt;/p>
+&lt;ul>
+&lt;li>设置待微调的预训练模型，以及输出路径。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>路径：training/step1_supervised_finetuning/evaluation_scripts/run_prompt.sh&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020110616405.png" alt="image-20231020110616405">&lt;/p>
+&lt;ul>
+&lt;li>执行训练脚本run_1.3b.sh，触发DeepSpeed开始SFT训练。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=959965022&amp;bvid=BV1Hp4y1M7Ly&amp;cid=1305868791&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;h2 id="step2rm">STEP2.RM&lt;/h2>
+&lt;ul>
+&lt;li>开展RM训练时，由于服务器资源不足(省钱)，需要避免OOM异常，因此需要修改一下训练脚本。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>路径：training_scripts/opt/single_gpu/run_350m.sh&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020145149415.png" alt="image-20231020145149415">&lt;/p>
+&lt;ul>
+&lt;li>指定Reward Model的输出路径。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>路径：evaluation_scripts/run_eval.sh&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020145843742.png" alt="image-20231020145843742">&lt;/p>
+&lt;ul>
+&lt;li>执行训练脚本run_350m.sh，触发DeepSpeed开始RW训练。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=534943541&amp;bvid=BV1gM411R7Z5&amp;cid=1305868897&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;h2 id="step3rlhf">STEP3.RLHF&lt;/h2>
+&lt;ul>
+&lt;li>开展RLHF训练时，由于服务器资源不足(省钱)，需要避免OOM异常，因此需要修改一下训练脚本。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>training_scripts/opt/single_gpu/run_1.3b.sh&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B019-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8B)/image-20231020155704428.png" alt="image-20231020155704428">&lt;/p>
+&lt;ul>
+&lt;li>执行训练脚本run_1.3b.sh，触发DeepSpeed开始RLHF训练。&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?aid=277474259&amp;bvid=BV1Ww411F7xw&amp;cid=1305868938&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;h2 id="step4模型测试">STEP4.模型测试&lt;/h2>
+&lt;ul>
+&lt;li>执行测试脚本&lt;code>python chat.py --path training/step3_rlhf_finetuning/output/actor&lt;/code>，不赘述。&lt;/li>
+&lt;/ul>
+&lt;h1 id="4小结">4.小结&lt;/h1>
+&lt;p>本文是实现简版GPT的三篇中的最后一篇，也是最难理解的一部分内容：&lt;/p>
+&lt;ul>
+&lt;li>对齐训练是什么？&lt;/li>
+&lt;li>对齐训练和强化学习的关系是什么？&lt;/li>
+&lt;li>ChatGPT整体训练流程的STEP2、STEP3与强化学习的Interpreter和Action模型如何对应？&lt;/li>
+&lt;li>DeepSpeed的实际操作？&lt;/li>
+&lt;/ul>
+&lt;p>本文也有没有展开探讨的内容，待本专栏后续继续展开：&lt;/p>
+&lt;ul>
+&lt;li>RLHF的策略梯度优化算法&lt;/li>
+&lt;li>PPO算法&lt;/li>
+&lt;li>……&lt;/li>
+&lt;/ul>
+&lt;p>编写本专栏受益匪浅，也非常感恩因为编写本专栏认识的大神们，期待与各位小伙伴持续的讨论和思辨！&lt;/p></description></item><item><title>【chatGPT】学习笔记18-自己实现一个简版ChatGPT(中)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</link><pubDate>Wed, 18 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</guid><description>&lt;p>根据上文我们实现的简版GPT，在足够数据、足够算力的前提下，理论上是可以训练出类GPT3的大语言模型的。&lt;/p>
 &lt;p>但GPT3距离ChatGPT还有很远的距离，这一段距离涉及OpenAI未公开论文、源码的关键技术。&lt;/p>
 &lt;p>我们接下来从OpenAPI已公开的信息来看看&lt;font color=red>&lt;strong>ChatGPT是如何炼成的&lt;/strong>&lt;/font>。&lt;/p>
 &lt;h1 id="1chatgpt的历史版本">1.ChatGPT的历史版本&lt;/h1>
@@ -3448,66 +3597,4 @@
 java/lang/Thread.java
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524104931008.png" alt="image-20230524104931008">&lt;/p></description></item><item><title>【运行时数据区】-并发编程-前置知识(4.并发编程基础)-7</title><link>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</link><pubDate>Sat, 22 Apr 2023 01:10:31 +0800</pubDate><guid>https://jherculesqz.github.io/post/java%E6%8B%BE%E9%81%97/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%864.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-7/</guid><description>&lt;h1 id="1实验模拟java线程状态迁移过程">1.实验：模拟Java线程状态迁移过程&lt;/h1>
-&lt;p>在《【运行时数据区】-并发编程-前置知识(4.并发编程基础)-6》中，我们分析了Java线程从JDK层面到JVM层面的状态迁移：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230414070017806.png" alt="image-20230414070017806">&lt;/p>
-&lt;p>本文我们来尝试自己实现Java线程的状态迁移过程，进一步加深对这个状态迁移过程的理解。&lt;/p>
-&lt;h1 id="2简化jvm调用链">2.简化：JVM调用链&lt;/h1>
-&lt;ul>
-&lt;li>如下是JVM调用链：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230414064052581.png" alt="image-20230414064052581">&lt;/p>
-&lt;ul>
-&lt;li>我们简化调用链如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422145647662.png" alt="image-20230422145647662">&lt;/p>
-&lt;h1 id="3模拟1jvm注册jni接口">3.模拟1：JVM注册JNI接口&lt;/h1>
-&lt;ul>
-&lt;li>如红框处，我们通过&lt;code>System.load&lt;/code>方法，加载提供了JNI接口的动态库&lt;code>lib.so&lt;/code>文件。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135359625.png" alt="image-20230422135359625">&lt;/p>
-&lt;h1 id="4模拟2启动java线程">4.模拟2：启动Java线程&lt;/h1>
-&lt;p>如下图：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>start()&lt;/code>方法模拟JDK的&lt;code>Thread.start()&lt;/code>方法，该方法调用了&lt;code>start0()&lt;/code>方法。&lt;/li>
-&lt;li>&lt;code>start0()&lt;/code>方法模拟JDK的&lt;code>Thread.start0()&lt;/code>方法，该方法为JNI接口。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135522197.png" alt="image-20230422135522197">&lt;/p>
-&lt;ul>
-&lt;li>通过&lt;code>javah&lt;/code>，我们生成了&lt;code>start0()&lt;/code>方法对应的C++头文件。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135555599.png" alt="image-20230422135555599">&lt;/p>
-&lt;h1 id="6模拟3创建native线程">6.模拟3：创建native线程&lt;/h1>
-&lt;ul>
-&lt;li>在&lt;code>start0()&lt;/code>方法的实现中，我们调用了&lt;code>pthread_create()&lt;/code>方法，创建native线程。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135727912.png" alt="image-20230422135727912">&lt;/p>
-&lt;h1 id="7模拟4等待">7.模拟4：等待&lt;/h1>
-&lt;ul>
-&lt;li>当CPU调度上一步我们创建的native线程，进入该线程的回调函数&lt;code>java_start()&lt;/code>。&lt;/li>
-&lt;li>我们创建了标志位&lt;code>flag&lt;/code>，它用于模拟JVM中记录native线程一系列状态的标志位，初始值为0，表示native线程处于&lt;code>INITIALIZED&lt;/code>状态。&lt;/li>
-&lt;li>while循环导致native线程一直处于等待状态。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135917734.png" alt="image-20230422135917734">&lt;/p>
-&lt;h1 id="8模拟5打破循环">8.模拟5：打破循环&lt;/h1>
-&lt;ul>
-&lt;li>回到&lt;code>start0&lt;/code>方法的实现，通过sleep了一段时间后修改&lt;code>flag&lt;/code>标志位，模拟JVM中经过一系列准备工作，将native线程设置为&lt;code>RUNNABLE状态&lt;/code>。&lt;/li>
-&lt;li>此时，native线程在&lt;code>java_start()&lt;/code>中处于循环等待的状态被打破。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422135949723.png" alt="image-20230422135949723">&lt;/p>
-&lt;h1 id="9模拟6回调jdk">9.模拟6：回调JDK&lt;/h1>
-&lt;ul>
-&lt;li>当native线程在&lt;code>java_start()&lt;/code>中处于循环等待的状态被打破后，通过JNI获得Java侧的Test对象，进一步回调Java侧Test对象的&lt;code>run()&lt;/code>方法。&lt;/li>
-&lt;li>这一步，就模拟了JVM在native线程变为&lt;code>RUNNABLE&lt;/code>状态后回调JDK的&lt;code>Thread.run()&lt;/code>方法。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422140058781.png" alt="image-20230422140058781">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422140113451.png" alt="image-20230422140113451">&lt;/p>
-&lt;h1 id="10运行效果">10.运行效果&lt;/h1>
-&lt;ul>
-&lt;li>运行我们的模拟程序，打印结果如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422140522662.png" alt="image-20230422140522662">&lt;/p>
-&lt;ul>
-&lt;li>本次实验，最终模拟了JDK中创建Java线程，JVM中对应也创建native线程，native线程的状态迁移后回调Java线程的回调函数。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-7/image-20230422153048716.png" alt="image-20230422153048716">&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>&lt;img src="https://jherculesqz.github.io/Java%E6%8B%BE%E9%81%97/%E3%80%90%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E3%80%91-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86(4.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80)-8/image-20230524104931008.png" alt="image-20230524104931008">&lt;/p></description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 31 Oct 2023 15:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,134 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记21-LangChain之Retrieval，对LLM的抽象4</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-langchain%E4%B9%8Bretrieval%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A14/</link><pubDate>Mon, 30 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-langchain%E4%B9%8Bretrieval%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A14/</guid><description>&lt;p>本专栏通过解读了Transformer模型，实现简版GPT后，帮大家建立了对NLP原理、关键技术的理解。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记22-LangChain之Agent，对LLM的抽象5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</link><pubDate>Tue, 31 Oct 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</guid><description>&lt;p>业界目前的AI助手应用集中于两大功能：&lt;/p>
+&lt;ul>
+&lt;li>基于垂直领域知识的&lt;strong>智能问答&lt;/strong>&lt;/li>
+&lt;li>基于垂直领域知识的&lt;strong>智能行动&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>在《【chatGPT】学习笔记21-LangChain之Retrieval，对LLM的抽象4》中，着重介绍了&lt;strong>智能问答&lt;/strong>依赖的技术点。&lt;/p>
+&lt;p>本文重点介绍与&lt;strong>智能行动&lt;/strong>依赖的技术点。&lt;/p>
+&lt;h1 id="1什么是react">1.什么是ReAct&lt;/h1>
+&lt;h2 id="1基本概念">(1)基本概念&lt;/h2>
+&lt;p>常见的LLM推理模式有两种：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Reason Only&lt;/strong>：比如CoT，利用提示词诱导LLM进行逻辑推理，进而回答偏数理逻辑类的问题。&lt;/li>
+&lt;li>&lt;strong>Act Only&lt;/strong>：比如指令微调提到的，明确在问题中带有指令。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>ReAct&lt;/strong>提出了一种新的推理模式——&lt;strong>Reason + Act&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>LLM推理出&amp;rdquo;&lt;strong>把大象装进冰箱需要几步&lt;/strong>&amp;quot;，&lt;/li>
+&lt;li>再针对待执行的每一步&lt;strong>选择合适的工具&lt;/strong>，&lt;/li>
+&lt;li>在执行当前步骤后，通过环境的反馈，&lt;strong>决策下一步是什么&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031152602671.png" alt="image-20231031152602671">&lt;/p>
+&lt;h2 id="2react优势">(2)ReAct优势&lt;/h2>
+&lt;p>在论文《ReAct: Synergizing Reasoning and Acting in Language Models》中，阐述了ReAct的训练效果比&lt;code>Reson Only&lt;/code>和&lt;code>Act Only&lt;/code>都好：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031153243968.png" alt="image-20231031153243968">&lt;/p>
+&lt;h2 id="3agents内部结构">(3)Agents内部结构&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>数据结构&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>AgentAction&lt;/code>：表示Agent应采取的行为。包含1个&lt;code>tool&lt;/code>属性和一个&lt;code>tool_input&lt;/code>属性，表示这个行为可采用的工具及工具输入。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>AgentFinish&lt;/code>：表示Agent完成后的返回结果。包含1个&lt;code>return_values&lt;/code>属性，字典类型。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>intermediate_steps&lt;/code>：表示之前的Agent行为和返回结果。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Agent&lt;/strong>：智能体，可以分析出&amp;rdquo;&lt;strong>将大象放进冰箱里需要几步&lt;/strong>&amp;quot;，内部实现&lt;strong>依赖LLM的逻辑推理能力&lt;/strong>。它的输入包括：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>工具列表&lt;/strong>：&lt;code>List of available tools&lt;/code>，Agent可以用的工具集合。&lt;/li>
+&lt;li>&lt;strong>用户输入&lt;/strong>：User input。&lt;/li>
+&lt;li>&lt;strong>之前的Agent行为和返回结果&lt;/strong>：Any previously executed steps，就是&lt;code>intermediate_steps&lt;/code>对象。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Tools&lt;/strong>：它是Agent某个行为可以使用的工具。每个工具需要有两个明确信息：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>工具的可用性&lt;/strong>：如&amp;quot;使用Google搜索&amp;quot;是一个工具，这个工具本身要真的可用、可靠。&lt;/li>
+&lt;li>&lt;strong>工具的准确描述&lt;/strong>：对工具的作用有准确的描述，这段描述最终会变成提示词，帮助Agent知道要执行什么行为的时候，应该选择哪个工具更合适。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>AgentExecutor&lt;/strong>：Agent执行器。能够调用&lt;code>Agent&lt;/code>，不断获得下一步&lt;code>action(行为)&lt;/code>并执行。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>除了&lt;code>AgentExecutor&lt;/code>，LangChain还提供了实验性质的其它Agent执行器：&lt;/p>
+&lt;ul>
+&lt;li>Plan-and-execute Agent&lt;/li>
+&lt;li>Baby AGI&lt;/li>
+&lt;li>Auto GPT&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>AgentExecutor&lt;/code>核心代码如下：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">next_action&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_action&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">...&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="n">next_action&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">AgentFinish&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">observation&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">next_action&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">next_action&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_action&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">...&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">next_action&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">observation&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">next_action&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="4langchain已经支持的agent和tool列表">(4)LangChain已经支持的Agent和Tool列表&lt;/h2>
+&lt;ul>
+&lt;li>LangChain已经提供了很多&lt;code>Agent&lt;/code>和&lt;code>Tools&lt;/code>，具体如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031151549996.png" alt="image-20231031151549996">&lt;/p>
+&lt;h1 id="2代码示例">2.代码示例&lt;/h1>
+&lt;p>&lt;code>Agent&lt;/code>是当前LLM App的一个热点方向，展开阐述会有很多的内容。本文仅通过1个经典问题代码示例，为各位小伙伴建立&lt;code>Agent&lt;/code>的宏观认识。后续本专栏再详细阐述&lt;code>Agent&lt;/code>开发的内容。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：周杰伦的老婆是谁？她现在的年龄的0.43次方等于多少？&lt;/li>
+&lt;li>&lt;strong>代码&lt;/strong>：
+&lt;ul>
+&lt;li>创建了&lt;code>tools&lt;/code>工具集对象&lt;/li>
+&lt;li>初始化了&lt;code>agent&lt;/code>对象，&lt;code>agent&lt;/code>对象包含1个&lt;code>LLM&lt;/code>和1个&lt;code>tools&lt;/code>对象&lt;/li>
+&lt;li>执行&lt;code>agent&lt;/code>对象的&lt;code>run&lt;/code>方法，由&lt;code>LLM&lt;/code>自行开展行动，直到获得最终答案。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>运行结果分析&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>LLM&lt;/code>首先明确任务目标&lt;/strong>：背后应该是由一个复杂的提示词驱动的。&lt;/li>
+&lt;li>&lt;strong>&lt;code>LLM&lt;/code>再分解出三个步骤&lt;/strong>：每个步骤的输出，都会作为下一个步骤的输入。&lt;/li>
+&lt;li>&lt;strong>&lt;code>LLM&lt;/code>最后汇总结果&lt;/strong>：&lt;code>LLM&lt;/code>判断如果达成目标，则给出最终答案，并终止执行。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031154927730.png" alt="image-20231031154927730">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031160426352.png" alt="image-20231031160426352">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文关键要点如下：&lt;/p>
+&lt;ul>
+&lt;li>简述了&lt;code>Agent&lt;/code>理论基础&lt;code>ReAct&lt;/code>&lt;/li>
+&lt;li>描述了论文&lt;code>ReAct: Synergizing Reasoning and Acting in Language Models&lt;/code>中的实验现象、&lt;code>ReAct&lt;/code>的优势。&lt;/li>
+&lt;li>给出了一个有关&lt;strong>大语言模型不知道的有时效性的知识&lt;/strong>的问题，&lt;code>Agent&lt;/code>如何&lt;strong>利用大语言模型的推理能力&lt;/strong>解决此类问题的代码示例。&lt;/li>
+&lt;/ul>
+&lt;p>如果说上篇文章的&lt;code>Retrieval&lt;/code>帮助AI助手具备了&lt;strong>智能问答&lt;/strong>能力，这篇文章的&lt;code>Agent&lt;/code>则帮助AI助手实现了&lt;strong>智能行动&lt;/strong>。&lt;/p>
+&lt;p>所以，&lt;code>Agent&lt;/code>这个方向是目前开发LLM应用的诸多厂商的关注热点，这里还有一些未及展开讨论的内容：&lt;/p>
+&lt;ul>
+&lt;li>如何自定义1个满足垂直领域的&lt;strong>自定义Agent&lt;/strong>？&lt;/li>
+&lt;li>如何自定义1组满足垂直领域的&lt;strong>自定义Tool&lt;/strong>？&lt;/li>
+&lt;/ul>
+&lt;p>这些高级话题，留待本专栏后续分解，敬请期待。&lt;/p></description></item><item><title>【chatGPT】学习笔记21-LangChain之Retrieval，对LLM的抽象4</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-langchain%E4%B9%8Bretrieval%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A14/</link><pubDate>Mon, 30 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-langchain%E4%B9%8Bretrieval%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A14/</guid><description>&lt;p>本专栏通过解读了Transformer模型，实现简版GPT后，帮大家建立了对NLP原理、关键技术的理解。&lt;/p>
 &lt;p>接下来，我们再关注一下应用层面的技术——如何开发LLM App。&lt;/p>
 &lt;p>前面我们了解了LangChain的三大重要模块**&amp;ldquo;Model I/O、Memory、Chain&amp;rdquo;**，具体如下：&lt;/p>
 &lt;ul>
@@ -5239,41 +5366,6 @@
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002208208.png" alt="image-20230723002208208">&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002237309.png" alt="image-20230723002237309">&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002257695.png" alt="image-20230723002257695">&lt;/p>
-&lt;blockquote>
-&lt;p>本文部分内容由ChatGPT生成&lt;/p>
-&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记3-机器学习基本原理(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</link><pubDate>Tue, 18 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8A/</guid><description>&lt;p>现在的热点是大语言模型，为什么我们还要了解机器学习？因为从机器学习到深度学习，再到如今的大语言模型，环环相扣。天底下没有新鲜事，并不是突然出现了一个划时代的技术。从历史、从论文都能按图索骥地找到大语言模型的源头——机器学习。&lt;/p>
-&lt;h1 id="1机器学习的目标是什么">1.机器学习的目标是什么?&lt;/h1>
-&lt;p>机器学习的目标就是从数据中发现规律。&lt;/p>
-&lt;p>这个过程本质是一种统计建模的过程，是统计学方法的一种具体应用。&lt;/p>
-&lt;p>下图引用自李宏毅老师的课件：&lt;/p>
-&lt;ul>
-&lt;li>ChatGPT找到了回答问题的函数f，输入&amp;quot;什么是机器学习？&amp;quot;，函数f就能生成答案。&lt;/li>
-&lt;li>Midjourney找到了生成图片的函数f，输入&amp;quot;一只可爱的猫&amp;rdquo;，函数f就能生成小猫的图片。&lt;/li>
-&lt;li>AlphaGo找到了下棋的函数f，输入&amp;quot;对手的一步棋&amp;rdquo;，函数f就能生成下一步应该怎么走。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720150809229.png" alt="image-20230720150809229">&lt;/p>
-&lt;h1 id="2机器学习和人类学习的相似之处">2.机器学习和人类学习的相似之处&lt;/h1>
-&lt;p>人类学习和机器学习有很多相似之处，本质上：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>人类学习&lt;/strong>：从经验中总结规律——俗称经受社会的毒打。&lt;/li>
-&lt;li>&lt;strong>机器学习&lt;/strong>：从数据中总结模型——俗称经受数据的洗礼。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720152149924.png" alt="image-20230720152149924">&lt;/p>
-&lt;h1 id="3机器学习打破了早期ai范式">3.机器学习打破了早期AI范式&lt;/h1>
-&lt;p>人工智能的发展大致经历了四代，第一代AI以符号主义为主流，第二代至今以联结主义为主流(机器学习、深度学习就属于这个流派)。&lt;/p>
-&lt;p>后来还有三个法国神人，绘制了人工智能发展历史上的两个流派的竞争过程：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720153137135.png" alt="image-20230720153137135">&lt;/p>
-&lt;p>早期的人工智能到底是怎样的呢？大致如下：&lt;/p>
-&lt;ul>
-&lt;li>STEP1.人类某个领域的专家总结该领域的业务规则。&lt;/li>
-&lt;li>STEP2.人类程序员将业务规则以代码的形式实现，形成专家系统。&lt;/li>
-&lt;li>STEP3.最终用户输入问题后，专家系统匹配规则，进行答复。&lt;/li>
-&lt;/ul>
-&lt;p>早期的人工智能的本质就是&lt;strong>人类总结规则、设定规则&lt;/strong>。这种范式的最大问题就是人类总结的规则不足，甚至人类本身总结不出来过于复杂的规则，导致早期的人工智能无法推广应用。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8A)/image-20230720154059662.png" alt="image-20230720154059662">&lt;/p>
-&lt;p>而出自于联结主义的机器学习推崇的就是&lt;strong>不用人类总结规则，给我数据我来总结规律&lt;/strong>。&lt;/p>
-&lt;p>有一种言论说：神经网络的产生、海量数据的出现、算力的提升造就了机器学习的风靡。&lt;/p>
-&lt;p>这种言论应该不是机器学习风靡的根因，真正的根因应该是&lt;strong>机器学习改变了早期AI的范式&lt;/strong>。&lt;/p>
 &lt;blockquote>
 &lt;p>本文部分内容由ChatGPT生成&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

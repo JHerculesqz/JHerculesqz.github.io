@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 29 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Oct 2023 18:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,1794 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记20-如何搭建ChatGLM3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAchatglm3/</link><pubDate>Sun, 29 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAchatglm3/</guid><description>&lt;h1 id="1chatglm3更新了什么">1.ChatGLM3更新了什么&lt;/h1>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记21-LangChain之Retrieval，对LLM的抽象4</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-langchain%E4%B9%8Bretrieval%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A14/</link><pubDate>Mon, 30 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-langchain%E4%B9%8Bretrieval%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A14/</guid><description>&lt;p>本专栏通过解读了Transformer模型，实现简版GPT后，帮大家建立了对NLP原理、关键技术的理解。&lt;/p>
+&lt;p>接下来，我们再关注一下应用层面的技术——如何开发LLM App。&lt;/p>
+&lt;p>前面我们了解了LangChain的三大重要模块**&amp;ldquo;Model I/O、Memory、Chain&amp;rdquo;**，具体如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>LangChain的Model I/O&lt;/strong>：详见《【chatGPT】学习笔记10-LangChain之Model I/O，对LLM的抽象1》&lt;/li>
+&lt;li>&lt;strong>LangChain的Memory&lt;/strong>：详见《【chatGPT】学习笔记14-LangChain之Memory，对LLM的抽象2》&lt;/li>
+&lt;li>&lt;strong>LangChain的Chain&lt;/strong>：详见《【chatGPT】学习笔记15-LangChain之Chain，对LLM的抽象3》&lt;/li>
+&lt;/ul>
+&lt;p>本文继续展示LangChain的第四大模块&amp;rdquo;&lt;strong>Retrieval&lt;/strong>&amp;quot;。&lt;/p>
+&lt;blockquote>
+&lt;p>LangChain曾经把此模块称为Data Connection，其实更为贴切。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="1整体流程">1.整体流程&lt;/h1>
+&lt;p>如果我们要开发一个基于LLM的AI问答系统，整体流程如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>文档加载&lt;/strong>：加载各类文档。&lt;/li>
+&lt;li>&lt;strong>文档转换&lt;/strong>：将文档分割为一段段的文本。&lt;/li>
+&lt;li>&lt;strong>文档向量化&lt;/strong>：将文本进行词嵌入，并存储于向量数据库。&lt;/li>
+&lt;li>&lt;strong>文档检索&lt;/strong>：针对用户的问题进行向量检索。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231030140913593.png" alt="image-20231030140913593">&lt;/p>
+&lt;p>我们接下来看看，LangChain如何支撑上述整体流程。&lt;/p>
+&lt;h1 id="2文档加载器">2.文档加载器&lt;/h1>
+&lt;h2 id="21基本概念">2.1.基本概念&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>LangChain提供的文档加载器(&lt;code>Document loaders&lt;/code>)，支持从不同数据源加载数据，最终输出为&lt;code>Document&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LangChain的厉害之处在于：它支持了100+的数据源，丰富程度基本覆盖了所有的数据源。具体支持的Loader如下：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231030143143187.png" alt="image-20231030143143187">&lt;/p>
+&lt;p>接下来，我们通过阅读LangChain的源码，深入理解文档加载器。&lt;/p>
+&lt;h2 id="22document">2.2.Document&lt;/h2>
+&lt;h3 id="1源码解读">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Document&lt;/code>类是文档加载器的输出。&lt;/li>
+&lt;li>&lt;code>Document&lt;/code>类的代码路径：https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/schema/document.py&lt;/li>
+&lt;li>&lt;code>Document&lt;/code>类的关键代码如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">Document&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Serializable&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Class for storing a piece of text and associated metadata.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">page_content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;String text.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="err">文档内容&lt;/span>
+&lt;span class="n">metadata&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">dict&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Field&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">default_factory&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">dict&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Arbitrary metadata about the page content (e.g., source, relationships to other
+&lt;/span>&lt;span class="s2"> documents, etc.).
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nb">type&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Literal&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;Document&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Document&amp;#34;&lt;/span>
+&lt;span class="nd">@classmethod&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">is_lc_serializable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">cls&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">bool&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return whether this class is serializable.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">True&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="23baseloader">2.3.BaseLoader&lt;/h2>
+&lt;h3 id="1源码解读-1">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>BaseLoader&lt;/code>类是各种不同&lt;code>Loader&lt;/code>的基类。&lt;/li>
+&lt;li>&lt;code>BaseLoader&lt;/code>类的代码路径：https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/document_loaders/base.py&lt;/li>
+&lt;li>&lt;code>BaseLoader&lt;/code>类的关键代码如下：关键方法是&lt;code>load&lt;/code>、&lt;code>load_and_split&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">BaseLoader&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Interface for Document Loader.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Implementations should implement the lazy-loading method using generators
+&lt;/span>&lt;span class="s2"> to avoid loading all Documents into memory at once.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> The `load` method will remain as is for backwards compatibility, but its
+&lt;/span>&lt;span class="s2"> implementation should be just `list(self.lazy_load())`.
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="c1"># Sub-classes should implement this method&lt;/span>
+&lt;span class="c1"># as return list(self.lazy_load()).&lt;/span>
+&lt;span class="c1"># This method returns a List which is materialized in memory.&lt;/span>
+&lt;span class="nd">@abstractmethod&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load data into Document objects.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="err">加载数据并将其转换为文档对象&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load_and_split&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">text_splitter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">TextSplitter&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load Documents and split into chunks. Chunks are returned as Documents.
+&lt;/span>&lt;span class="s2"> 加载文档并分割成块
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Args:
+&lt;/span>&lt;span class="s2"> text_splitter: TextSplitter instance to use for splitting documents.
+&lt;/span>&lt;span class="s2"> Defaults to RecursiveCharacterTextSplitter.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Returns:
+&lt;/span>&lt;span class="s2"> List of Documents.
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">text_splitter&lt;/span> &lt;span class="ow">is&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_text_splitter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">TextSplitter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">RecursiveCharacterTextSplitter&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_text_splitter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">text_splitter&lt;/span>
+&lt;span class="n">docs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">_text_splitter&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split_documents&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">docs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1"># Attention: This method will be upgraded into an abstractmethod once it&amp;#39;s&lt;/span>
+&lt;span class="c1"># implemented in all the existing subclasses.&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">lazy_load&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Iterator&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;A lazy loader for Documents.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">NotImplementedError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;{self.__class__.__name__} does not implement lazy_load()&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="24textloader">2.4.TextLoader&lt;/h2>
+&lt;h3 id="1源码解读-2">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>TextLoader&lt;/code>类是用于加载文本的Loader，继承于&lt;code>BaseLoader&lt;/code>。&lt;/li>
+&lt;li>&lt;code>TextLoader&lt;/code>类的代码路径：https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/document_loaders/text.py&lt;/li>
+&lt;li>&lt;code>TextLoader&lt;/code>类的关键代码如下：关键方法是实现了自己的&lt;code>load&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">TextLoader&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseLoader&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load text file.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Args:
+&lt;/span>&lt;span class="s2"> file_path: Path to the file to load.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> encoding: File encoding to use. If `None`, the file will be loaded
+&lt;/span>&lt;span class="s2"> with the default system encoding.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> autodetect_encoding: Whether to try to autodetect the file encoding
+&lt;/span>&lt;span class="s2"> if the specified encoding fails.
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">file_path&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">encoding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">autodetect_encoding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Initialize with file path.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">file_path&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">file_path&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encoding&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">encoding&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">autodetect_encoding&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">autodetect_encoding&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load from file path.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">file_path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">encoding&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encoding&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">UnicodeDecodeError&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">autodetect_encoding&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">detected_encodings&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">detect_file_encodings&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">file_path&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">encoding&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">detected_encodings&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">logger&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">debug&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Trying encoding: {encoding.encoding}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">file_path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">encoding&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">encoding&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encoding&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">break&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">UnicodeDecodeError&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">continue&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">RuntimeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Error loading {self.file_path}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kn">from&lt;/span> &lt;span class="nn">e&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">Exception&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">RuntimeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Error loading {self.file_path}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kn">from&lt;/span> &lt;span class="nn">e&lt;/span>
+&lt;span class="n">metadata&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;source&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">file_path&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">page_content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">metadata&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">metadata&lt;/span>&lt;span class="p">)]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2代码示例">(2)代码示例&lt;/h3>
+&lt;ul>
+&lt;li>构造TextLoader，读取txt文件，返回docs对象。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031071416742.png" alt="image-20231031071416742">&lt;/p>
+&lt;ul>
+&lt;li>观测docs对象&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031071531911.png" alt="image-20231031071531911">&lt;/p>
+&lt;h2 id="25arxivloader">2.5.ArxivLoader&lt;/h2>
+&lt;h3 id="1源码解读-3">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>ArxivLoader&lt;/code>类是用于加载Arxiv的Loader，继承于&lt;code>BaseLoader&lt;/code>。&lt;/li>
+&lt;li>&lt;code>ArxivLoader&lt;/code>类的代码路径：https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/document_loaders/arxiv.py&lt;/li>
+&lt;li>&lt;code>ArxivLoader&lt;/code>类的关键代码如下：关键方法是实现了自己的&lt;code>load&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ArxivLoader&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseLoader&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load a query result from `Arxiv`.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> The loader converts the original PDF format into the text.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Args:
+&lt;/span>&lt;span class="s2"> Supports all arguments of `ArxivAPIWrapper`.
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">query&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">doc_content_chars_max&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="n">kwargs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Any&lt;/span>
+&lt;span class="p">):&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">query&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">client&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ArxivAPIWrapper&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">doc_content_chars_max&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">doc_content_chars_max&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="n">kwargs&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">query&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2代码示例-1">(2)代码示例&lt;/h3>
+&lt;ul>
+&lt;li>读取指定版本号的论文，得到docs对象，docs对象包含了指定版本号的相关论文信息。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031071610543.png" alt="image-20231031071610543">&lt;/p>
+&lt;h2 id="26unstructuredurlloader">2.6.UnstructuredURLLoader&lt;/h2>
+&lt;h3 id="1源码解读-4">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>UnstructuredURLLoader&lt;/code>类是用于加载指定URL的Loader，继承于&lt;code>BaseLoader&lt;/code>。&lt;/li>
+&lt;li>&lt;code>UnstructuredURLLoader&lt;/code>类的代码路径：https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/document_loaders/url.py&lt;/li>
+&lt;li>&lt;code>UnstructuredURLLoader&lt;/code>类的关键代码如下：关键方法是实现了自己的&lt;code>load&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;span class="lnt">109
+&lt;/span>&lt;span class="lnt">110
+&lt;/span>&lt;span class="lnt">111
+&lt;/span>&lt;span class="lnt">112
+&lt;/span>&lt;span class="lnt">113
+&lt;/span>&lt;span class="lnt">114
+&lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
+&lt;/span>&lt;span class="lnt">118
+&lt;/span>&lt;span class="lnt">119
+&lt;/span>&lt;span class="lnt">120
+&lt;/span>&lt;span class="lnt">121
+&lt;/span>&lt;span class="lnt">122
+&lt;/span>&lt;span class="lnt">123
+&lt;/span>&lt;span class="lnt">124
+&lt;/span>&lt;span class="lnt">125
+&lt;/span>&lt;span class="lnt">126
+&lt;/span>&lt;span class="lnt">127
+&lt;/span>&lt;span class="lnt">128
+&lt;/span>&lt;span class="lnt">129
+&lt;/span>&lt;span class="lnt">130
+&lt;/span>&lt;span class="lnt">131
+&lt;/span>&lt;span class="lnt">132
+&lt;/span>&lt;span class="lnt">133
+&lt;/span>&lt;span class="lnt">134
+&lt;/span>&lt;span class="lnt">135
+&lt;/span>&lt;span class="lnt">136
+&lt;/span>&lt;span class="lnt">137
+&lt;/span>&lt;span class="lnt">138
+&lt;/span>&lt;span class="lnt">139
+&lt;/span>&lt;span class="lnt">140
+&lt;/span>&lt;span class="lnt">141
+&lt;/span>&lt;span class="lnt">142
+&lt;/span>&lt;span class="lnt">143
+&lt;/span>&lt;span class="lnt">144
+&lt;/span>&lt;span class="lnt">145
+&lt;/span>&lt;span class="lnt">146
+&lt;/span>&lt;span class="lnt">147
+&lt;/span>&lt;span class="lnt">148
+&lt;/span>&lt;span class="lnt">149
+&lt;/span>&lt;span class="lnt">150
+&lt;/span>&lt;span class="lnt">151
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">UnstructuredURLLoader&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseLoader&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load files from remote URLs using `Unstructured`.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Use the unstructured partition function to detect the MIME type
+&lt;/span>&lt;span class="s2"> and route the file to the appropriate partitioner.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> You can run the loader in one of two modes: &amp;#34;single&amp;#34; and &amp;#34;elements&amp;#34;.
+&lt;/span>&lt;span class="s2"> If you use &amp;#34;single&amp;#34; mode, the document will be returned as a single
+&lt;/span>&lt;span class="s2"> langchain Document object. If you use &amp;#34;elements&amp;#34; mode, the unstructured
+&lt;/span>&lt;span class="s2"> library will split the document into elements such as Title and NarrativeText.
+&lt;/span>&lt;span class="s2"> You can pass in additional unstructured kwargs after mode to apply
+&lt;/span>&lt;span class="s2"> different unstructured settings.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Examples
+&lt;/span>&lt;span class="s2"> --------
+&lt;/span>&lt;span class="s2"> from langchain.document_loaders import UnstructuredURLLoader
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> loader = UnstructuredURLLoader(
+&lt;/span>&lt;span class="s2"> ursl=[&amp;#34;&amp;lt;url-1&amp;gt;&amp;#34;, &amp;#34;&amp;lt;url-2&amp;gt;&amp;#34;], mode=&amp;#34;elements&amp;#34;, strategy=&amp;#34;fast&amp;#34;,
+&lt;/span>&lt;span class="s2"> )
+&lt;/span>&lt;span class="s2"> docs = loader.load()
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> References
+&lt;/span>&lt;span class="s2"> ----------
+&lt;/span>&lt;span class="s2"> https://unstructured-io.github.io/unstructured/bricks.html#partition
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">urls&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="n">continue_on_failure&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">True&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">mode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;single&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">show_progress_bar&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="o">**&lt;/span>&lt;span class="n">unstructured_kwargs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Initialize with file path.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="kn">import&lt;/span> &lt;span class="nn">unstructured&lt;/span> &lt;span class="c1"># noqa:F401&lt;/span>
+&lt;span class="kn">from&lt;/span> &lt;span class="nn">unstructured.__version__&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">__version__&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">__unstructured_version__&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">__unstructured_version__&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">ImportError&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">ImportError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;unstructured package not found, please install it with &amp;#34;&lt;/span>
+&lt;span class="s2">&amp;#34;`pip install unstructured`&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_validate_mode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">mode&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mode&lt;/span>
+&lt;span class="n">headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">unstructured_kwargs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pop&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;headers&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{})&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">keys&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">warn_about_headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__is_non_html_available&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;span class="n">warn_about_headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ow">not&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__is_headers_available_for_non_html&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">warn_about_headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ow">not&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__is_headers_available_for_html&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">warn_about_headers&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">logger&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">warning&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;You are using an old version of unstructured. &amp;#34;&lt;/span>
+&lt;span class="s2">&amp;#34;The headers parameter is ignored&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">urls&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">urls&lt;/span>
+&lt;span class="err">待加载网页&lt;/span> &lt;span class="n">URL&lt;/span> &lt;span class="err">列表&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">continue_on_failure&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">continue_on_failure&lt;/span>
+&lt;span class="err">默认&lt;/span>&lt;span class="bp">True&lt;/span>&lt;span class="err">，某个&lt;/span>&lt;span class="n">URL加载失败后&lt;/span>&lt;span class="err">，是否继续&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">headers&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unstructured_kwargs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">unstructured_kwargs&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">show_progress_bar&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">show_progress_bar&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">_validate_mode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">mode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_valid_modes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;single&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;elements&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">mode&lt;/span> &lt;span class="ow">not&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">_valid_modes&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">ValueError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Got {mode} for `mode`, but should be one of `{_valid_modes}`&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">__is_headers_available_for_html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">bool&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_unstructured_version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__version&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;-&amp;#34;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">unstructured_version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">tuple&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">_unstructured_version&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.&amp;#34;&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">unstructured_version&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">__is_headers_available_for_non_html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">bool&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_unstructured_version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__version&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;-&amp;#34;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">unstructured_version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">tuple&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">_unstructured_version&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.&amp;#34;&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">unstructured_version&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">__is_non_html_available&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">bool&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_unstructured_version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__version&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;-&amp;#34;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">unstructured_version&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">tuple&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">_unstructured_version&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.&amp;#34;&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">unstructured_version&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Load file.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="kn">from&lt;/span> &lt;span class="nn">unstructured.partition.auto&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">partition&lt;/span>
+&lt;span class="kn">from&lt;/span> &lt;span class="nn">unstructured.partition.html&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">partition_html&lt;/span>
+&lt;span class="n">docs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">list&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">show_progress_bar&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="kn">from&lt;/span> &lt;span class="nn">tqdm&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">tqdm&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">ImportError&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">ImportError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;Package tqdm must be installed if show_progress_bar=True. &amp;#34;&lt;/span>
+&lt;span class="s2">&amp;#34;Please install with &amp;#39;pip install tqdm&amp;#39; or set &amp;#34;&lt;/span>
+&lt;span class="s2">&amp;#34;show_progress_bar=False.&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="kn">from&lt;/span> &lt;span class="nn">e&lt;/span>
+&lt;span class="n">urls&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">tqdm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">urls&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">urls&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">urls&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">url&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">urls&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__is_non_html_available&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__is_headers_available_for_non_html&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;span class="n">elements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">partition&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">headers&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unstructured_kwargs&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">elements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">partition&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unstructured_kwargs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">__is_headers_available_for_html&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;span class="n">elements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">partition_html&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">headers&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unstructured_kwargs&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">elements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">partition_html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unstructured_kwargs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">Exception&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">continue_on_failure&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">logger&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Error fetching or processing {url}, exception: {e}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">continue&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="n">e&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mode&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;single&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">el&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">el&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">elements&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">metadata&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;source&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">url&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="n">docs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">page_content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">metadata&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">metadata&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mode&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;elements&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">element&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">elements&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">metadata&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">element&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">metadata&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to_dict&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">metadata&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;category&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">element&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">category&lt;/span>
+&lt;span class="n">docs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Document&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">page_content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">element&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="n">metadata&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">metadata&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">docs&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2代码示例-2">(2)代码示例&lt;/h3>
+&lt;ul>
+&lt;li>读取指定URL网页，返回data对象&lt;/li>
+&lt;li>data对象包含了网页中各类元素信息&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031071807666.png" alt="image-20231031071807666">&lt;/p>
+&lt;h1 id="3文档转换器">3.文档转换器&lt;/h1>
+&lt;h2 id="31基本概念">3.1.基本概念&lt;/h2>
+&lt;ul>
+&lt;li>LangChain提供的文档转器(&lt;code>Document transformers&lt;/code>)，支持用不同的分割方法，将&lt;code>Loader&lt;/code>获取的文档进行分割。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031072618565.png" alt="image-20231031072618565">&lt;/p>
+&lt;p>这些文档转换器并不复杂，需要实操熟练掌握，本文不赘述，重点演示一下最常用的&lt;code>RecursiveCharacterTextSplitter&lt;/code>。&lt;/p>
+&lt;h2 id="32recursivecharactertextsplitter">3.2.RecursiveCharacterTextSplitter&lt;/h2>
+&lt;h3 id="1源码解读-5">(1)源码解读&lt;/h3>
+&lt;ul>
+&lt;li>作用：可输入字符列表作为切块分隔符，并根据第一个字符进行切块。如果切块太大，则使用下一个字符切块，以此类推。&lt;/li>
+&lt;li>源码路径：https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/text_splitter.py&lt;/li>
+&lt;li>核心源码如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;span class="lnt">109
+&lt;/span>&lt;span class="lnt">110
+&lt;/span>&lt;span class="lnt">111
+&lt;/span>&lt;span class="lnt">112
+&lt;/span>&lt;span class="lnt">113
+&lt;/span>&lt;span class="lnt">114
+&lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
+&lt;/span>&lt;span class="lnt">118
+&lt;/span>&lt;span class="lnt">119
+&lt;/span>&lt;span class="lnt">120
+&lt;/span>&lt;span class="lnt">121
+&lt;/span>&lt;span class="lnt">122
+&lt;/span>&lt;span class="lnt">123
+&lt;/span>&lt;span class="lnt">124
+&lt;/span>&lt;span class="lnt">125
+&lt;/span>&lt;span class="lnt">126
+&lt;/span>&lt;span class="lnt">127
+&lt;/span>&lt;span class="lnt">128
+&lt;/span>&lt;span class="lnt">129
+&lt;/span>&lt;span class="lnt">130
+&lt;/span>&lt;span class="lnt">131
+&lt;/span>&lt;span class="lnt">132
+&lt;/span>&lt;span class="lnt">133
+&lt;/span>&lt;span class="lnt">134
+&lt;/span>&lt;span class="lnt">135
+&lt;/span>&lt;span class="lnt">136
+&lt;/span>&lt;span class="lnt">137
+&lt;/span>&lt;span class="lnt">138
+&lt;/span>&lt;span class="lnt">139
+&lt;/span>&lt;span class="lnt">140
+&lt;/span>&lt;span class="lnt">141
+&lt;/span>&lt;span class="lnt">142
+&lt;/span>&lt;span class="lnt">143
+&lt;/span>&lt;span class="lnt">144
+&lt;/span>&lt;span class="lnt">145
+&lt;/span>&lt;span class="lnt">146
+&lt;/span>&lt;span class="lnt">147
+&lt;/span>&lt;span class="lnt">148
+&lt;/span>&lt;span class="lnt">149
+&lt;/span>&lt;span class="lnt">150
+&lt;/span>&lt;span class="lnt">151
+&lt;/span>&lt;span class="lnt">152
+&lt;/span>&lt;span class="lnt">153
+&lt;/span>&lt;span class="lnt">154
+&lt;/span>&lt;span class="lnt">155
+&lt;/span>&lt;span class="lnt">156
+&lt;/span>&lt;span class="lnt">157
+&lt;/span>&lt;span class="lnt">158
+&lt;/span>&lt;span class="lnt">159
+&lt;/span>&lt;span class="lnt">160
+&lt;/span>&lt;span class="lnt">161
+&lt;/span>&lt;span class="lnt">162
+&lt;/span>&lt;span class="lnt">163
+&lt;/span>&lt;span class="lnt">164
+&lt;/span>&lt;span class="lnt">165
+&lt;/span>&lt;span class="lnt">166
+&lt;/span>&lt;span class="lnt">167
+&lt;/span>&lt;span class="lnt">168
+&lt;/span>&lt;span class="lnt">169
+&lt;/span>&lt;span class="lnt">170
+&lt;/span>&lt;span class="lnt">171
+&lt;/span>&lt;span class="lnt">172
+&lt;/span>&lt;span class="lnt">173
+&lt;/span>&lt;span class="lnt">174
+&lt;/span>&lt;span class="lnt">175
+&lt;/span>&lt;span class="lnt">176
+&lt;/span>&lt;span class="lnt">177
+&lt;/span>&lt;span class="lnt">178
+&lt;/span>&lt;span class="lnt">179
+&lt;/span>&lt;span class="lnt">180
+&lt;/span>&lt;span class="lnt">181
+&lt;/span>&lt;span class="lnt">182
+&lt;/span>&lt;span class="lnt">183
+&lt;/span>&lt;span class="lnt">184
+&lt;/span>&lt;span class="lnt">185
+&lt;/span>&lt;span class="lnt">186
+&lt;/span>&lt;span class="lnt">187
+&lt;/span>&lt;span class="lnt">188
+&lt;/span>&lt;span class="lnt">189
+&lt;/span>&lt;span class="lnt">190
+&lt;/span>&lt;span class="lnt">191
+&lt;/span>&lt;span class="lnt">192
+&lt;/span>&lt;span class="lnt">193
+&lt;/span>&lt;span class="lnt">194
+&lt;/span>&lt;span class="lnt">195
+&lt;/span>&lt;span class="lnt">196
+&lt;/span>&lt;span class="lnt">197
+&lt;/span>&lt;span class="lnt">198
+&lt;/span>&lt;span class="lnt">199
+&lt;/span>&lt;span class="lnt">200
+&lt;/span>&lt;span class="lnt">201
+&lt;/span>&lt;span class="lnt">202
+&lt;/span>&lt;span class="lnt">203
+&lt;/span>&lt;span class="lnt">204
+&lt;/span>&lt;span class="lnt">205
+&lt;/span>&lt;span class="lnt">206
+&lt;/span>&lt;span class="lnt">207
+&lt;/span>&lt;span class="lnt">208
+&lt;/span>&lt;span class="lnt">209
+&lt;/span>&lt;span class="lnt">210
+&lt;/span>&lt;span class="lnt">211
+&lt;/span>&lt;span class="lnt">212
+&lt;/span>&lt;span class="lnt">213
+&lt;/span>&lt;span class="lnt">214
+&lt;/span>&lt;span class="lnt">215
+&lt;/span>&lt;span class="lnt">216
+&lt;/span>&lt;span class="lnt">217
+&lt;/span>&lt;span class="lnt">218
+&lt;/span>&lt;span class="lnt">219
+&lt;/span>&lt;span class="lnt">220
+&lt;/span>&lt;span class="lnt">221
+&lt;/span>&lt;span class="lnt">222
+&lt;/span>&lt;span class="lnt">223
+&lt;/span>&lt;span class="lnt">224
+&lt;/span>&lt;span class="lnt">225
+&lt;/span>&lt;span class="lnt">226
+&lt;/span>&lt;span class="lnt">227
+&lt;/span>&lt;span class="lnt">228
+&lt;/span>&lt;span class="lnt">229
+&lt;/span>&lt;span class="lnt">230
+&lt;/span>&lt;span class="lnt">231
+&lt;/span>&lt;span class="lnt">232
+&lt;/span>&lt;span class="lnt">233
+&lt;/span>&lt;span class="lnt">234
+&lt;/span>&lt;span class="lnt">235
+&lt;/span>&lt;span class="lnt">236
+&lt;/span>&lt;span class="lnt">237
+&lt;/span>&lt;span class="lnt">238
+&lt;/span>&lt;span class="lnt">239
+&lt;/span>&lt;span class="lnt">240
+&lt;/span>&lt;span class="lnt">241
+&lt;/span>&lt;span class="lnt">242
+&lt;/span>&lt;span class="lnt">243
+&lt;/span>&lt;span class="lnt">244
+&lt;/span>&lt;span class="lnt">245
+&lt;/span>&lt;span class="lnt">246
+&lt;/span>&lt;span class="lnt">247
+&lt;/span>&lt;span class="lnt">248
+&lt;/span>&lt;span class="lnt">249
+&lt;/span>&lt;span class="lnt">250
+&lt;/span>&lt;span class="lnt">251
+&lt;/span>&lt;span class="lnt">252
+&lt;/span>&lt;span class="lnt">253
+&lt;/span>&lt;span class="lnt">254
+&lt;/span>&lt;span class="lnt">255
+&lt;/span>&lt;span class="lnt">256
+&lt;/span>&lt;span class="lnt">257
+&lt;/span>&lt;span class="lnt">258
+&lt;/span>&lt;span class="lnt">259
+&lt;/span>&lt;span class="lnt">260
+&lt;/span>&lt;span class="lnt">261
+&lt;/span>&lt;span class="lnt">262
+&lt;/span>&lt;span class="lnt">263
+&lt;/span>&lt;span class="lnt">264
+&lt;/span>&lt;span class="lnt">265
+&lt;/span>&lt;span class="lnt">266
+&lt;/span>&lt;span class="lnt">267
+&lt;/span>&lt;span class="lnt">268
+&lt;/span>&lt;span class="lnt">269
+&lt;/span>&lt;span class="lnt">270
+&lt;/span>&lt;span class="lnt">271
+&lt;/span>&lt;span class="lnt">272
+&lt;/span>&lt;span class="lnt">273
+&lt;/span>&lt;span class="lnt">274
+&lt;/span>&lt;span class="lnt">275
+&lt;/span>&lt;span class="lnt">276
+&lt;/span>&lt;span class="lnt">277
+&lt;/span>&lt;span class="lnt">278
+&lt;/span>&lt;span class="lnt">279
+&lt;/span>&lt;span class="lnt">280
+&lt;/span>&lt;span class="lnt">281
+&lt;/span>&lt;span class="lnt">282
+&lt;/span>&lt;span class="lnt">283
+&lt;/span>&lt;span class="lnt">284
+&lt;/span>&lt;span class="lnt">285
+&lt;/span>&lt;span class="lnt">286
+&lt;/span>&lt;span class="lnt">287
+&lt;/span>&lt;span class="lnt">288
+&lt;/span>&lt;span class="lnt">289
+&lt;/span>&lt;span class="lnt">290
+&lt;/span>&lt;span class="lnt">291
+&lt;/span>&lt;span class="lnt">292
+&lt;/span>&lt;span class="lnt">293
+&lt;/span>&lt;span class="lnt">294
+&lt;/span>&lt;span class="lnt">295
+&lt;/span>&lt;span class="lnt">296
+&lt;/span>&lt;span class="lnt">297
+&lt;/span>&lt;span class="lnt">298
+&lt;/span>&lt;span class="lnt">299
+&lt;/span>&lt;span class="lnt">300
+&lt;/span>&lt;span class="lnt">301
+&lt;/span>&lt;span class="lnt">302
+&lt;/span>&lt;span class="lnt">303
+&lt;/span>&lt;span class="lnt">304
+&lt;/span>&lt;span class="lnt">305
+&lt;/span>&lt;span class="lnt">306
+&lt;/span>&lt;span class="lnt">307
+&lt;/span>&lt;span class="lnt">308
+&lt;/span>&lt;span class="lnt">309
+&lt;/span>&lt;span class="lnt">310
+&lt;/span>&lt;span class="lnt">311
+&lt;/span>&lt;span class="lnt">312
+&lt;/span>&lt;span class="lnt">313
+&lt;/span>&lt;span class="lnt">314
+&lt;/span>&lt;span class="lnt">315
+&lt;/span>&lt;span class="lnt">316
+&lt;/span>&lt;span class="lnt">317
+&lt;/span>&lt;span class="lnt">318
+&lt;/span>&lt;span class="lnt">319
+&lt;/span>&lt;span class="lnt">320
+&lt;/span>&lt;span class="lnt">321
+&lt;/span>&lt;span class="lnt">322
+&lt;/span>&lt;span class="lnt">323
+&lt;/span>&lt;span class="lnt">324
+&lt;/span>&lt;span class="lnt">325
+&lt;/span>&lt;span class="lnt">326
+&lt;/span>&lt;span class="lnt">327
+&lt;/span>&lt;span class="lnt">328
+&lt;/span>&lt;span class="lnt">329
+&lt;/span>&lt;span class="lnt">330
+&lt;/span>&lt;span class="lnt">331
+&lt;/span>&lt;span class="lnt">332
+&lt;/span>&lt;span class="lnt">333
+&lt;/span>&lt;span class="lnt">334
+&lt;/span>&lt;span class="lnt">335
+&lt;/span>&lt;span class="lnt">336
+&lt;/span>&lt;span class="lnt">337
+&lt;/span>&lt;span class="lnt">338
+&lt;/span>&lt;span class="lnt">339
+&lt;/span>&lt;span class="lnt">340
+&lt;/span>&lt;span class="lnt">341
+&lt;/span>&lt;span class="lnt">342
+&lt;/span>&lt;span class="lnt">343
+&lt;/span>&lt;span class="lnt">344
+&lt;/span>&lt;span class="lnt">345
+&lt;/span>&lt;span class="lnt">346
+&lt;/span>&lt;span class="lnt">347
+&lt;/span>&lt;span class="lnt">348
+&lt;/span>&lt;span class="lnt">349
+&lt;/span>&lt;span class="lnt">350
+&lt;/span>&lt;span class="lnt">351
+&lt;/span>&lt;span class="lnt">352
+&lt;/span>&lt;span class="lnt">353
+&lt;/span>&lt;span class="lnt">354
+&lt;/span>&lt;span class="lnt">355
+&lt;/span>&lt;span class="lnt">356
+&lt;/span>&lt;span class="lnt">357
+&lt;/span>&lt;span class="lnt">358
+&lt;/span>&lt;span class="lnt">359
+&lt;/span>&lt;span class="lnt">360
+&lt;/span>&lt;span class="lnt">361
+&lt;/span>&lt;span class="lnt">362
+&lt;/span>&lt;span class="lnt">363
+&lt;/span>&lt;span class="lnt">364
+&lt;/span>&lt;span class="lnt">365
+&lt;/span>&lt;span class="lnt">366
+&lt;/span>&lt;span class="lnt">367
+&lt;/span>&lt;span class="lnt">368
+&lt;/span>&lt;span class="lnt">369
+&lt;/span>&lt;span class="lnt">370
+&lt;/span>&lt;span class="lnt">371
+&lt;/span>&lt;span class="lnt">372
+&lt;/span>&lt;span class="lnt">373
+&lt;/span>&lt;span class="lnt">374
+&lt;/span>&lt;span class="lnt">375
+&lt;/span>&lt;span class="lnt">376
+&lt;/span>&lt;span class="lnt">377
+&lt;/span>&lt;span class="lnt">378
+&lt;/span>&lt;span class="lnt">379
+&lt;/span>&lt;span class="lnt">380
+&lt;/span>&lt;span class="lnt">381
+&lt;/span>&lt;span class="lnt">382
+&lt;/span>&lt;span class="lnt">383
+&lt;/span>&lt;span class="lnt">384
+&lt;/span>&lt;span class="lnt">385
+&lt;/span>&lt;span class="lnt">386
+&lt;/span>&lt;span class="lnt">387
+&lt;/span>&lt;span class="lnt">388
+&lt;/span>&lt;span class="lnt">389
+&lt;/span>&lt;span class="lnt">390
+&lt;/span>&lt;span class="lnt">391
+&lt;/span>&lt;span class="lnt">392
+&lt;/span>&lt;span class="lnt">393
+&lt;/span>&lt;span class="lnt">394
+&lt;/span>&lt;span class="lnt">395
+&lt;/span>&lt;span class="lnt">396
+&lt;/span>&lt;span class="lnt">397
+&lt;/span>&lt;span class="lnt">398
+&lt;/span>&lt;span class="lnt">399
+&lt;/span>&lt;span class="lnt">400
+&lt;/span>&lt;span class="lnt">401
+&lt;/span>&lt;span class="lnt">402
+&lt;/span>&lt;span class="lnt">403
+&lt;/span>&lt;span class="lnt">404
+&lt;/span>&lt;span class="lnt">405
+&lt;/span>&lt;span class="lnt">406
+&lt;/span>&lt;span class="lnt">407
+&lt;/span>&lt;span class="lnt">408
+&lt;/span>&lt;span class="lnt">409
+&lt;/span>&lt;span class="lnt">410
+&lt;/span>&lt;span class="lnt">411
+&lt;/span>&lt;span class="lnt">412
+&lt;/span>&lt;span class="lnt">413
+&lt;/span>&lt;span class="lnt">414
+&lt;/span>&lt;span class="lnt">415
+&lt;/span>&lt;span class="lnt">416
+&lt;/span>&lt;span class="lnt">417
+&lt;/span>&lt;span class="lnt">418
+&lt;/span>&lt;span class="lnt">419
+&lt;/span>&lt;span class="lnt">420
+&lt;/span>&lt;span class="lnt">421
+&lt;/span>&lt;span class="lnt">422
+&lt;/span>&lt;span class="lnt">423
+&lt;/span>&lt;span class="lnt">424
+&lt;/span>&lt;span class="lnt">425
+&lt;/span>&lt;span class="lnt">426
+&lt;/span>&lt;span class="lnt">427
+&lt;/span>&lt;span class="lnt">428
+&lt;/span>&lt;span class="lnt">429
+&lt;/span>&lt;span class="lnt">430
+&lt;/span>&lt;span class="lnt">431
+&lt;/span>&lt;span class="lnt">432
+&lt;/span>&lt;span class="lnt">433
+&lt;/span>&lt;span class="lnt">434
+&lt;/span>&lt;span class="lnt">435
+&lt;/span>&lt;span class="lnt">436
+&lt;/span>&lt;span class="lnt">437
+&lt;/span>&lt;span class="lnt">438
+&lt;/span>&lt;span class="lnt">439
+&lt;/span>&lt;span class="lnt">440
+&lt;/span>&lt;span class="lnt">441
+&lt;/span>&lt;span class="lnt">442
+&lt;/span>&lt;span class="lnt">443
+&lt;/span>&lt;span class="lnt">444
+&lt;/span>&lt;span class="lnt">445
+&lt;/span>&lt;span class="lnt">446
+&lt;/span>&lt;span class="lnt">447
+&lt;/span>&lt;span class="lnt">448
+&lt;/span>&lt;span class="lnt">449
+&lt;/span>&lt;span class="lnt">450
+&lt;/span>&lt;span class="lnt">451
+&lt;/span>&lt;span class="lnt">452
+&lt;/span>&lt;span class="lnt">453
+&lt;/span>&lt;span class="lnt">454
+&lt;/span>&lt;span class="lnt">455
+&lt;/span>&lt;span class="lnt">456
+&lt;/span>&lt;span class="lnt">457
+&lt;/span>&lt;span class="lnt">458
+&lt;/span>&lt;span class="lnt">459
+&lt;/span>&lt;span class="lnt">460
+&lt;/span>&lt;span class="lnt">461
+&lt;/span>&lt;span class="lnt">462
+&lt;/span>&lt;span class="lnt">463
+&lt;/span>&lt;span class="lnt">464
+&lt;/span>&lt;span class="lnt">465
+&lt;/span>&lt;span class="lnt">466
+&lt;/span>&lt;span class="lnt">467
+&lt;/span>&lt;span class="lnt">468
+&lt;/span>&lt;span class="lnt">469
+&lt;/span>&lt;span class="lnt">470
+&lt;/span>&lt;span class="lnt">471
+&lt;/span>&lt;span class="lnt">472
+&lt;/span>&lt;span class="lnt">473
+&lt;/span>&lt;span class="lnt">474
+&lt;/span>&lt;span class="lnt">475
+&lt;/span>&lt;span class="lnt">476
+&lt;/span>&lt;span class="lnt">477
+&lt;/span>&lt;span class="lnt">478
+&lt;/span>&lt;span class="lnt">479
+&lt;/span>&lt;span class="lnt">480
+&lt;/span>&lt;span class="lnt">481
+&lt;/span>&lt;span class="lnt">482
+&lt;/span>&lt;span class="lnt">483
+&lt;/span>&lt;span class="lnt">484
+&lt;/span>&lt;span class="lnt">485
+&lt;/span>&lt;span class="lnt">486
+&lt;/span>&lt;span class="lnt">487
+&lt;/span>&lt;span class="lnt">488
+&lt;/span>&lt;span class="lnt">489
+&lt;/span>&lt;span class="lnt">490
+&lt;/span>&lt;span class="lnt">491
+&lt;/span>&lt;span class="lnt">492
+&lt;/span>&lt;span class="lnt">493
+&lt;/span>&lt;span class="lnt">494
+&lt;/span>&lt;span class="lnt">495
+&lt;/span>&lt;span class="lnt">496
+&lt;/span>&lt;span class="lnt">497
+&lt;/span>&lt;span class="lnt">498
+&lt;/span>&lt;span class="lnt">499
+&lt;/span>&lt;span class="lnt">500
+&lt;/span>&lt;span class="lnt">501
+&lt;/span>&lt;span class="lnt">502
+&lt;/span>&lt;span class="lnt">503
+&lt;/span>&lt;span class="lnt">504
+&lt;/span>&lt;span class="lnt">505
+&lt;/span>&lt;span class="lnt">506
+&lt;/span>&lt;span class="lnt">507
+&lt;/span>&lt;span class="lnt">508
+&lt;/span>&lt;span class="lnt">509
+&lt;/span>&lt;span class="lnt">510
+&lt;/span>&lt;span class="lnt">511
+&lt;/span>&lt;span class="lnt">512
+&lt;/span>&lt;span class="lnt">513
+&lt;/span>&lt;span class="lnt">514
+&lt;/span>&lt;span class="lnt">515
+&lt;/span>&lt;span class="lnt">516
+&lt;/span>&lt;span class="lnt">517
+&lt;/span>&lt;span class="lnt">518
+&lt;/span>&lt;span class="lnt">519
+&lt;/span>&lt;span class="lnt">520
+&lt;/span>&lt;span class="lnt">521
+&lt;/span>&lt;span class="lnt">522
+&lt;/span>&lt;span class="lnt">523
+&lt;/span>&lt;span class="lnt">524
+&lt;/span>&lt;span class="lnt">525
+&lt;/span>&lt;span class="lnt">526
+&lt;/span>&lt;span class="lnt">527
+&lt;/span>&lt;span class="lnt">528
+&lt;/span>&lt;span class="lnt">529
+&lt;/span>&lt;span class="lnt">530
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">RecursiveCharacterTextSplitter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">TextSplitter&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Splitting text by recursively look at characters.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2"> Recursively tries to split by different characters to find one
+&lt;/span>&lt;span class="s2"> that works.
+&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">separators&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">keep_separator&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">True&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">is_separator_regex&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="o">**&lt;/span>&lt;span class="n">kwargs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Create a new TextSplitter.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nb">super&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">keep_separator&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">keep_separator&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="n">kwargs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_separators&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">separators&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_is_separator_regex&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">is_separator_regex&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">_split_text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">separators&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Split incoming text and return chunks.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="n">final_chunks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="c1"># Get appropriate separator to use&lt;/span>
+&lt;span class="n">separator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">separators&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="n">new_separators&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_s&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">enumerate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">separators&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="n">_separator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">_s&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_is_separator_regex&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="n">re&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">escape&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">_s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">_s&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">separator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">_s&lt;/span>
+&lt;span class="k">break&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">re&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">_separator&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="n">separator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">_s&lt;/span>
+&lt;span class="n">new_separators&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">separators&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">:]&lt;/span>
+&lt;span class="k">break&lt;/span>
+&lt;span class="n">_separator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">separator&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_is_separator_regex&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="n">re&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">escape&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">separator&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">splits&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">_split_text_with_regex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_separator&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_keep_separator&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1"># Now go merging things, recursively splitting longer texts.&lt;/span>
+&lt;span class="n">_good_splits&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="n">_separator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_keep_separator&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="n">separator&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">s&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">splits&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_length_function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_chunk_size&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">_good_splits&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">_good_splits&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">merged_text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_merge_splits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">_good_splits&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_separator&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">final_chunks&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">extend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">merged_text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">_good_splits&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="ow">not&lt;/span> &lt;span class="n">new_separators&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">final_chunks&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">other_info&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_split_text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">new_separators&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">final_chunks&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">extend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">other_info&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">_good_splits&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">merged_text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_merge_splits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">_good_splits&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_separator&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">final_chunks&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">extend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">merged_text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">final_chunks&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">split_text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_split_text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_separators&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nd">@classmethod&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">from_language&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">cls&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">language&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="n">kwargs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Any&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">RecursiveCharacterTextSplitter&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">separators&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">cls&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_separators_for_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">language&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="bp">cls&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">separators&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">separators&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">is_separator_regex&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">True&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">**&lt;/span>&lt;span class="n">kwargs&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nd">@staticmethod&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">get_separators_for_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">language&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">CPP&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">void &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">int &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">float &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">double &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">GO&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">func &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">var &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">const &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">type &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">JAVA&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along method definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">public &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">protected &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">private &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">static &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">KOTLIN&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along method definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">public &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">protected &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">private &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">internal &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">companion &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">fun &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">val &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">var &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">when &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">else &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">JS&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">function &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">const &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">let &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">var &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">default &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">TS&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">enum &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">interface &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">namespace &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">type &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">function &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">const &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">let &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">var &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">default &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">PHP&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">function &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">foreach &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">do &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">PROTO&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along message definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">message &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along service definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">service &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along enum definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">enum &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along option definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">option &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along import statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">import &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along syntax declarations&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">syntax &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">PYTHON&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># First, try to split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">def &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\t&lt;/span>&lt;span class="s2">def &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Now split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">RST&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along section titles&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">=+&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">-+&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\&lt;/span>&lt;span class="s2">*+&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along directive markers&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">.. *&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">RUBY&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along method definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">def &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">unless &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">do &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">begin &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">rescue &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">RUST&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">fn &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">const &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">let &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">loop &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">match &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">const &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">SCALA&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">object &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along method definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">def &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">val &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">var &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">match &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">SWIFT&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along function definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">func &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">struct &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">enum &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">do &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">MARKDOWN&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># First, try to split along Markdown headings (starting with level 2)&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">#{1,6} &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Note the alternative syntax for headings (below) is not handled here&lt;/span>
+&lt;span class="c1"># Heading level 2&lt;/span>
+&lt;span class="c1"># ---------------&lt;/span>
+&lt;span class="c1"># End of code block&lt;/span>
+&lt;span class="s2">&amp;#34;```&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Horizontal lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\&lt;/span>&lt;span class="s2">*&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">*&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">*+&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">---+&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">___+&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Note that this splitter doesn&amp;#39;t handle horizontal lines defined&lt;/span>
+&lt;span class="c1"># by *three or more* of ***, ---, or ___, but this is not handled&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">LATEX&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># First, try to split along Latex sections&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">chapter{&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">section{&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">subsection{&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">subsubsection{&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Now split by environments&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{enumerate}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{itemize}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{description}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{list}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{quote}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{quotation}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{verse}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\\&lt;/span>&lt;span class="s2">begin{verbatim}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Now split by math environments&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\\\b&lt;/span>&lt;span class="s2">egin{align}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;$$&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;$&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Now split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">HTML&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># First, try to split along HTML tags&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;body&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;div&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;p&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;br&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;li&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;h1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;h2&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;h3&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;h4&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;h5&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;h6&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;span&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;table&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;tr&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;td&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;th&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;ul&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;ol&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;header&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;footer&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;nav&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Head&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;head&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;style&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;script&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;meta&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;lt;title&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">CSHARP&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">interface &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">enum &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">implements &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">delegate &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">event &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along class definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">class &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">abstract &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along method definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">public &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">protected &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">private &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">static &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">return &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">continue &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">foreach &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">switch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">break &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">case &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">else &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by exceptions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">try &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">throw &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">finally &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">catch &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">SOL&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along compiler information definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">pragma &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">using &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along contract definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">contract &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">interface &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">library &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along method definitions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">constructor &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">type &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">function &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">event &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">modifier &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">error &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">struct &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">enum &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along control flow statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">if &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">for &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">do while &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">assembly &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Language&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">COBOL&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1"># Split along divisions&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">IDENTIFICATION DIVISION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">ENVIRONMENT DIVISION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">DATA DIVISION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">PROCEDURE DIVISION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along sections within DATA DIVISION&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">WORKING-STORAGE SECTION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">LINKAGE SECTION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">FILE SECTION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along sections within PROCEDURE DIVISION&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">INPUT-OUTPUT SECTION.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split along paragraphs and common statements&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">OPEN &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">CLOSE &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">READ &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">WRITE &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">IF &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">ELSE &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">MOVE &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">PERFORM &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">UNTIL &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">VARYING &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">ACCEPT &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">DISPLAY &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">STOP RUN.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># Split by the normal type of lines&lt;/span>
+&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">ValueError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Language {language} is not supported! &amp;#34;&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Please choose from {list(Language)}&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2代码示例-3">(2)代码示例&lt;/h3>
+&lt;ul>
+&lt;li>使用&lt;code>RecursiveCharacterTextSplitter&lt;/code>，定义好块的大小、切割重合度等参数，得到切分后的texts对象。&lt;/li>
+&lt;li>texts对象就是将文档切分后的文本块集合。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231023063036651.png" alt="image-20231023063036651">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231023063047761.png" alt="image-20231023063047761">&lt;/p>
+&lt;h1 id="4文档向量化">4.文档向量化&lt;/h1>
+&lt;h2 id="41基本概念">4.1.基本概念&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>当我们获得了文本块以后，就需要将其向量化并持久化下来。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LangChain提供的词嵌入模型(&lt;code>Text Embedding Models&lt;/code>)，支持丰富的词嵌入模型。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LangChain提供的向量存储器(&lt;code>Vector Stores&lt;/code>)，支持丰富的向量数据库。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这部分也是LangChain很强大的特性之一，几乎覆盖了世界上所有&lt;strong>主流的词嵌入模型&lt;/strong>和&lt;strong>主流的向量数据库&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>词嵌入模型列表：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031082141950.png" alt="image-20231031082141950">&lt;/p>
+&lt;ul>
+&lt;li>向量数据库列表：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031073927426.png" alt="image-20231031073927426">&lt;/p>
+&lt;h2 id="42代码示例">4.2.代码示例&lt;/h2>
+&lt;ul>
+&lt;li>以OpenAI的词嵌入模型为例，展示了如何使用LangChain的词嵌入模型。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231023065210069.png" alt="image-20231023065210069">&lt;/p>
+&lt;h1 id="5检索器">5.检索器&lt;/h1>
+&lt;h2 id="1基本概念">(1)基本概念&lt;/h2>
+&lt;ul>
+&lt;li>LangChain提供的检索器(&lt;code>Retrieves&lt;/code>)，支持丰富的检索能力。&lt;/li>
+&lt;li>基础的，基于向量数据库的检索器如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031082838616.png" alt="image-20231031082838616">&lt;/p>
+&lt;ul>
+&lt;li>高级的(如：云原生)，基于云原生的检索器如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231031083352096.png" alt="image-20231031083352096">&lt;/p>
+&lt;h2 id="2代码示例-4">(2)代码示例&lt;/h2>
+&lt;ul>
+&lt;li>如下代码演示了&lt;code>similarity_search&lt;/code>方法的使用：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021-LangChain%E4%B9%8BRetrieval%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A14/image-20231023065351312.png" alt="image-20231023065351312">&lt;/p>
+&lt;h1 id="6小结">6.小结&lt;/h1>
+&lt;ul>
+&lt;li>LangChain的&lt;code>Retrieval&lt;/code>特性的整体流程是：文档加载-&amp;gt;文档转换-&amp;gt;文档向量化-&amp;gt;数据检索&lt;/li>
+&lt;li>文档加载器支持各类数据格式，各类数据源，实战时需熟悉各类文档加载器。&lt;/li>
+&lt;li>文档转换器支持各类文本分割策略，实战时需熟悉各类文档分割策略。&lt;/li>
+&lt;li>文档向量化时，有多种词嵌入模型，有多种向量数据库，实战时也需要熟练掌握。&lt;/li>
+&lt;li>文档检索时，支持多种文档检索策略，实战时需熟练掌握。&lt;/li>
+&lt;/ul>
+&lt;p>下一篇，我们对LangChain最火的模块Agents进行探索，下篇见！&lt;/p></description></item><item><title>【chatGPT】学习笔记20-如何搭建ChatGLM3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAchatglm3/</link><pubDate>Sun, 29 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAchatglm3/</guid><description>&lt;h1 id="1chatglm3更新了什么">1.ChatGLM3更新了什么&lt;/h1>
 &lt;h2 id="1模型列表">(1)模型列表&lt;/h2>
 &lt;p>智谱AI刚刚发布了ChatGLM3，其中&lt;strong>ChatGLM3-6B&lt;/strong>的能力提升如下：&lt;/p>
 &lt;ul>
@@ -3489,78 +5276,4 @@
 &lt;p>这种言论应该不是机器学习风靡的根因，真正的根因应该是&lt;strong>机器学习改变了早期AI的范式&lt;/strong>。&lt;/p>
 &lt;blockquote>
 &lt;p>本文部分内容由ChatGPT生成&lt;/p>
-&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记2-不是什么?是什么?有何方向?</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 18 Jul 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/</guid><description>&lt;p>最近有小伙伴提意见，希望我的专栏能用小短篇的形式，将大模型相关知识通俗阐述一下。&lt;/p>
-&lt;p>特此请ChatGPT协助我一起将近几个月阅读的资料以笔记体记录下来，与大家分享。&lt;/p>
-&lt;h1 id="1chatgpt不是什么">1.ChatGPT不是什么?&lt;/h1>
-&lt;h2 id="11古早的聊天机器人">1.1.古早的聊天机器人&lt;/h2>
-&lt;p>一些古早的聊天机器人、客服机器人，有采用如下方式进行实现：&lt;/p>
-&lt;ul>
-&lt;li>利用分词组件对用户输入的问题进行分词，获得问题中的关键词。&lt;/li>
-&lt;li>将关键词，在数据库、在互联网的上中进行搜索。
-&lt;ul>
-&lt;li>其中，数据库中预置了很多问题和答案。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>将得到的答案过滤清洗、随机返回其中1个答案。&lt;/li>
-&lt;/ul>
-&lt;h2 id="12现代的聊天机器人">1.2.现代的聊天机器人&lt;/h2>
-&lt;p>&lt;strong>ChatGPT及其更早的NLP领域技术&lt;/strong>，早已&lt;strong>不是从数据库、互联网&lt;/strong>生成答案的。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230718234119962.png" alt="image-20230718234119962">&lt;/p>
-&lt;p>ChatGPT官方也明确表达了&amp;quot;ChatGPT is not connected to the internet&amp;rdquo;。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719065005501.png" alt="image-20230719065005501">&lt;/p>
-&lt;h1 id="2chatgpt是什么">2.ChatGPT是什么？&lt;/h1>
-&lt;h2 id="21大模型的生成原理chatgpt版">2.1.大模型的生成原理(ChatGPT版)&lt;/h2>
-&lt;ul>
-&lt;li>请ChatGPT解释一下大模型的生成原理，如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719092626552.png" alt="image-20230719092626552">&lt;/p>
-&lt;h2 id="22大模型的生成原理通俗版">2.2.大模型的生成原理(通俗版)&lt;/h2>
-&lt;p>我们再来通俗理解一下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP1&lt;/strong>：问一个问题&amp;quot;什么是ChatGPT？&amp;quot;，可以将ChatGPT看成1个函数F，这个函数会输出即将回答的答案中第一个字(词)的概率。比如：根据问题，答案第一个字是&amp;quot;c&amp;quot;的概率是最大，最终就认为答案的第1个字是&amp;quot;c&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719093253167.png" alt="image-20230719093253167">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP2&lt;/strong>：将STEP1的输出追加到问题上，问题就变成了&amp;quot;什么是ChatGPT?c&amp;rdquo;，继续输入给函数F，得到新的概率，最终认为答案的第2个字是&amp;quot;h&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094213880.png" alt="image-20230719094213880">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP3、STEP4、STEP5&lt;/strong>：不断重复STEP1、STEP2的动作，就会得到完整的答案，如下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719094340618.png" alt="image-20230719094340618">&lt;/p>
-&lt;h1 id="3未来的研究方向">3.未来的研究方向？&lt;/h1>
-&lt;p>大模型未来的热点研究方向很多很多：提示词工程、神经网络编辑、机器遗忘、自适应计算和自适应模型、跨模态学习、模型压缩和加速、集成多任务和元学习、强化学习和自监督学习等等。&lt;/p>
-&lt;p>笔者认为&amp;rdquo;&lt;strong>提示词工程、神经网络编辑、机器遗忘&lt;/strong>&amp;ldquo;最为有趣，因为它们和脑科学有点相近之处，都是在&amp;quot;激发神经网络&amp;rdquo;、&amp;ldquo;修改神经网络&amp;rdquo;、&amp;ldquo;抹除神经网络&amp;rdquo;。&lt;/p>
-&lt;h2 id="31提示词工程">3.1.提示词工程&lt;/h2>
-&lt;ul>
-&lt;li>Prompt Engineering，吴恩达老师的课程让这个热点更热。提示词工程的本质可以认为：大模型好像一个&lt;strong>博学的老人家&lt;/strong>(世界知识几乎都知道)，只是&lt;strong>记性不太好&lt;/strong>。你需要用一些特殊的提示词唤醒他的记忆(俗称会念咒)，他就能很好地回答你的问题。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719085754568.png" alt="image-20230719085754568">&lt;/p>
-&lt;h2 id="32神经网络编辑">3.2.神经网络编辑&lt;/h2>
-&lt;p>Neural Editing，随着模型越来越大，训练好一个模型的成本极高，重新训练几乎不可能，因此需要有一种改进神经网络生成结果的技术，可以通过对模型的生成结果进行编辑，来获得更准确、更自然的结果。该技术通常涉及到在生成结果中插入或删除一些元素，或者重新排列生成结果的顺序，以获得更好的输出结果。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719090639814.png" alt="image-20230719090639814">&lt;/p>
-&lt;h2 id="33机器遗忘">3.3.机器遗忘&lt;/h2>
-&lt;p>Machine Unlearning，机器遗忘是一种让机器学会忘记以前的知识的技术。说白了，就是&amp;quot;你知道了不该知道的事情&amp;rdquo;。这项技术可以应用于安全隐私、AI伦理领域。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88_%E6%98%AF%E4%BB%80%E4%B9%88_%E6%9C%89%E4%BD%95%E6%96%B9%E5%90%91/image-20230719091436950.png" alt="image-20230719091436950">&lt;/p>
-&lt;h2 id="34其它方向">3.4.其它方向&lt;/h2>
-&lt;p>以下来自于ChatGPT的解释，供参考：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>自适应计算和自适应模型&lt;/strong>：在大模型上进行计算是一项巨大的挑战，因为它们需要大量的计算资源和内存。因此，未来的研究方向将包括自适应计算和自适应模型，旨在优化大模型的计算效率和资源利用率。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>跨模态学习&lt;/strong>：指使用多种类型的数据来训练一个模型。例如，将文本、图像和语音数据结合起来训练一个模型，以获得更准确、更全面的结果。未来的研究方向将探索如何在大模型上实现跨模态学习，以进一步提高模型的准确性和泛化能力。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>模型压缩和加速&lt;/strong>：由于大模型需要大量的计算资源和内存，因此未来的研究方向将包括模型压缩和加速，以减少模型的大小和计算负载，从而使模型更加可扩展和可用。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>集成多任务和元学习&lt;/strong>：指在一个模型中同时处理多个任务，例如，在自然语言处理中同时进行命名实体识别和情感分析。元学习是指在训练过程中学习如何学习的过程。未来的研究方向将集中在如何在大模型上实现多任务学习和元学习，以提高模型的泛化能力和效率。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>强化学习和自监督学习&lt;/strong>：强化学习是指使用奖励信号来训练一个模型，在自我监督学习中，模型从未标记的数据中学习。未来的研究方向将集中在如何在大型模型上实现强化学习和自我监督学习，以提高模型的效率和准确性。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>说明：本文部分内容由ChatGPT生成。&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

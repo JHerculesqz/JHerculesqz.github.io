@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 31 Oct 2023 15:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 02 Nov 2023 15:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,46 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记22-LangChain之Agent，对LLM的抽象5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</link><pubDate>Tue, 31 Oct 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</guid><description>&lt;p>业界目前的AI助手应用集中于两大功能：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记23-让我们一起来翻译吴恩达LLM课程</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BEllm%E8%AF%BE%E7%A8%8B/</link><pubDate>Thu, 02 Nov 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BEllm%E8%AF%BE%E7%A8%8B/</guid><description>&lt;p>哈喽小伙伴，我是小牛，初次见面，请多关照。&lt;/p>
+&lt;p>最近跟着猴哥的学习笔记各种手撸GPT，理解了LLM原理。&lt;/p>
+&lt;p>但我跟GPT的交情好像只停留在say hello的程度，说好的能替代“表哥”、“码农”、“ppt经理”的能力呢？&lt;/p>
+&lt;p>然后chatGPT跟我说，有个叫吴恩达的大咖，有好几门神课，理论+实践，易学易懂，学会了就可以在职场上大放异彩。那还犹豫什么，卷！&lt;/p>
+&lt;p>这些课程都是英文视频，为了方便学习，我们准备把它们翻译成中文。&lt;/p>
+&lt;p>欢迎感兴趣的小伙伴们一起来翻译。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BELLM%E8%AF%BE%E7%A8%8B/image-20231102181630937.png" alt="image-20231102181630937">&lt;/p>
+&lt;h1 id="1已翻译的课程">1.已翻译的课程&lt;/h1>
+&lt;ul>
+&lt;li>《提示词工程 by 吴恩达》：https://jherculesqz.gitbook.io/chatgpt-prompt-engineering-for-developers-1&lt;/li>
+&lt;li>《LangChain by 吴恩达》：https://jherculesqz.gitbook.io/langchain-by-wu-en-da&lt;/li>
+&lt;/ul>
+&lt;h2 id="11提示词工程-by-吴恩达简介">1.1.《提示词工程 by 吴恩达》简介&lt;/h2>
+&lt;p>GPT神器虽好，但要会用。本课程将介绍：&lt;/p>
+&lt;ul>
+&lt;li>如何构建清晰、明确的提示词，有哪些技巧&lt;/li>
+&lt;li>如何通过提示词发掘大语言模型总结、推理、转换以及生成文本的能力&lt;/li>
+&lt;li>动手做一个自己的聊天机器人&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BELLM%E8%AF%BE%E7%A8%8B/image-20231102181807030.png" alt="image-20231102181807030">&lt;/p>
+&lt;h2 id="12langchain-by-吴恩达简介">1.2.《LangChain by 吴恩达》简介&lt;/h2>
+&lt;p>LangChain是开发LLM应用的开发框架，是当红炸子鸡。本课程将介绍：&lt;/p>
+&lt;ul>
+&lt;li>什么是LangChain&lt;/li>
+&lt;li>LangChain有哪些Chain&lt;/li>
+&lt;li>如何用LangChain做聊天模型、QA问答系统&lt;/li>
+&lt;li>如何用LangChain的agent功能使能大模型的推理能力&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BELLM%E8%AF%BE%E7%A8%8B/image-20231102181929184.png" alt="image-20231102181929184">&lt;/p>
+&lt;h1 id="2待翻译的课程">2.待翻译的课程&lt;/h1>
+&lt;p>我们已经计划翻译的课程、论文有：&lt;/p>
+&lt;ul>
+&lt;li>《Finetuning Large Language Models》&lt;/li>
+&lt;li>《Attention Is All You Need》&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>如果小伙伴们对其它LLM相关的文献、课程感兴趣，欢迎后台联系我们。&lt;/p>
+&lt;blockquote>
+&lt;p>免责声明：我们的翻译出于对技术的执着和个人兴趣，开源免费，仅供个人学习，不得商用。&lt;/p>
+&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记22-LangChain之Agent，对LLM的抽象5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</link><pubDate>Tue, 31 Oct 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</guid><description>&lt;p>业界目前的AI助手应用集中于两大功能：&lt;/p>
 &lt;ul>
 &lt;li>基于垂直领域知识的&lt;strong>智能问答&lt;/strong>&lt;/li>
 &lt;li>基于垂直领域知识的&lt;strong>智能行动&lt;/strong>&lt;/li>
@@ -5218,154 +5257,6 @@
 &lt;blockquote>
 &lt;p>红杉资本报告原文：https://www.sequoiacap.com/article/generative-ai-a-creative-new-world/&lt;/p>
 &lt;/blockquote>
-&lt;blockquote>
-&lt;p>本文部分内容由ChatGPT生成&lt;/p>
-&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记4-机器学习基本原理(下)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</link><pubDate>Sat, 22 Jul 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8B/</guid><description>&lt;p>上篇为大家建立了宏观的机器学习概念，下篇我们通过一个真实的机器学习任务来理解一下机器学习的微观逻辑。&lt;/p>
-&lt;h1 id="1机器学习任务介绍">1.机器学习任务介绍&lt;/h1>
-&lt;p>前段时间，同事上班路上骑车摔泥坑里骨折了，我就萌生了让人工智能自动识别路面泥坑的想法。&lt;/p>
-&lt;p>毕竟，同事要互相关怀、相亲相爱。另外，我们也可以通过这个机器学习的任务理解一下机器学习的基本原理。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722092656554.png" alt="image-20230722092656554">&lt;/p>
-&lt;h1 id="2机器学习中的常用术语一览">2.机器学习中的常用术语一览&lt;/h1>
-&lt;p>开始机器学习的训练任务之前，我们快速浏览一下机器学习领域中的常用术语。假设AI识别路面泥坑是一个函数：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093341203.png" alt="image-20230722093341203">&lt;/p>
-&lt;h2 id="21模型是什么">2.1.模型是什么?&lt;/h2>
-&lt;p>函数f的输入是路面的视频，输出是路面上是否有泥坑。输入称为&lt;strong>自变量&lt;/strong>，在机器学习中也称为&lt;strong>特征&lt;/strong>。输出称为&lt;strong>因变量&lt;/strong>，在机器学习中也称为&lt;strong>标签&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722093803701.png" alt="image-20230722093803701">&lt;/p>
-&lt;p>这个函数f称为&lt;strong>模型&lt;/strong>，复杂的模型可能有数量庞大的自变量。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722094251783.png" alt="image-20230722094251783">&lt;/p>
-&lt;h2 id="22怎样才算找到了函数f">2.2.怎样才算找到了函数f？&lt;/h2>
-&lt;p>怎么才算找到了函数f呢？假设这个函数是个简单的函数：&lt;code>y=ax+b&lt;/code>，那么找到a和b，就算找到了这个函数f。a、b也被称为&lt;strong>模型的参数&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722095702788.png" alt="image-20230722095702788">&lt;/p>
-&lt;p>除了模型的参数，还有一种参数叫做&lt;strong>超参数(hyperparameter)&lt;/strong>，这些模型的外部参数，属于训练和调试的过程参数。&lt;/p>
-&lt;h2 id="23如何找到函数f">2.3.如何找到函数f？&lt;/h2>
-&lt;p>那么，我们又如何找到函数f呢？机器学习的&lt;strong>核心思想&lt;/strong>就是&amp;rdquo;&lt;strong>给机器一堆数据，让机器自己从数据中提取特征、寻找规律&lt;/strong>&amp;quot;。这个过程，也称为&lt;strong>炼丹&lt;/strong>。&lt;/p>
-&lt;p>这些数据称为&lt;strong>数据集&lt;/strong>，这些数据通常被分为三波，一波用于训练、一波用于验证、一波用于最终的测试。&lt;/p>
-&lt;p>用于训练的称为&lt;strong>训练集&lt;/strong>，用于验证的称为&lt;strong>验证集&lt;/strong>，用于测试的称为&lt;strong>测试集&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722100415709.png" alt="image-20230722100415709">&lt;/p>
-&lt;h2 id="24找函数f的流派">2.4.找函数f的流派&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>从数据的角度看，人类对全部训练数据做了标注称为&lt;strong>自监督学习&lt;/strong>，对部分训练数据做了标注称为&lt;strong>半监督学习&lt;/strong>、对训练数据没有任何标注称为&lt;strong>无监督学习&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>从数学工具的角度看，使用神经网络开展学习称为&lt;strong>机器学习&lt;/strong>，将神经网络做深称为&lt;strong>深度学习&lt;/strong>(不严谨，通俗点儿就这么理解吧)，因此深度学习是机器学习中的一种。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>除了机器学习流派，&lt;strong>强化学习&lt;/strong>(目前也很热门的流派)、&lt;strong>生成式学习&lt;/strong>、&lt;strong>迁移学习&lt;/strong>等等。这些流派的边界没有太清晰，彼此会有交集和互相引用。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>这里想到两个有趣的小点：&lt;/p>
-&lt;ul>
-&lt;li>神经网络很早就发明了，但后续却要换个机器学习、深度学习的名字，可能是联结主义之前被符号主义学派打的太惨了，需要换个响亮的名号吧。&lt;/li>
-&lt;li>GPT火了以后，有很多名词术语，听到有人把&amp;quot;用提示词的引导行为&amp;quot;称为&amp;quot;zero shot、few shot&amp;rdquo;，乱抛名词、概念搞混，根因就是没理解前述这些机器学习的基本概念。&lt;/li>
-&lt;/ul>
-&lt;h1 id="3从1个例子看机器学习过程">3.从1个例子看机器学习过程&lt;/h1>
-&lt;h2 id="31数据的收集和预处理">3.1.数据的收集和预处理&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>我们要识别路面泥坑，首先要获得路面视频数据。这个过程称为&lt;strong>原始数据收集&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>我们需要通过一些数据标注的工具，在视频上标注出路面泥坑，这个过程称为&lt;strong>数据标注&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>数据标注完后，需要将&lt;strong>数据向量化&lt;/strong>：data vectorization，就是把原始数据格式化，使机器可以读取(如：将原始图片转换为机器可以读取的矩阵)。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>处理坏数据和缺失值：数据不是全都用的，要利用数据处理工具把&amp;rdquo;&lt;strong>捣乱数据&lt;/strong>&amp;ldquo;处理掉(冗余数据、离群数据、错误数据)，把&amp;rdquo;&lt;strong>缺失值&lt;/strong>&amp;ldquo;补上。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>数据预处理有很多技术和技巧：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>特征缩放&lt;/strong>：feature scaling，包括&lt;strong>数据标准化&lt;/strong>(standardization)和&lt;strong>数据规范化&lt;/strong>(normalization)等：&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>数据标准化&lt;/strong>：对数据特征分布的转换，目标是使数据特征符合正态分布(均值为0，标准差为1)。如果数据特征不符合正态分布，会影响机器学习效率。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>数据规范化&lt;/strong>：它是数据标准化的一种变体，将数据特征压缩到给定的最小值和最大值之间(通常为0~1)。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>特征提取&lt;/strong>：feature extraction，通过子特征的选择，减少冗余特征，使初始测量数据更简洁，同时保留最有用的信息。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>特征工程&lt;/strong>：使用数据的领域知识，来创建使得机器学习算法起作用的特征过程。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>通俗地理解：&lt;/p>
-&lt;ul>
-&lt;li>数据预处理的本质：就是&lt;strong>准备好机器看得懂、看得清的教材&lt;/strong>，方便机器进行学习。&lt;/li>
-&lt;/ul>
-&lt;p>我们再来看看实战中我们具体怎么做的：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>原始数据收集&lt;/strong>：通过行车记录仪，我收集了上班路上的路面情况。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000930967.png" alt="image-20230723000930967">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>数据标注&lt;/strong>：通过标注工具，对视频中的泥坑进行标注。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001158467.png" alt="image-20230723001158467">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>数据集划分&lt;/strong>：我们通常会将标注好的数据划分为训练集、验证集、测试集。划分有一些方法论，如：K-fold validation。我将数据集划分编写成了一段脚本，执行后就自动划分好了训练集、验证集、测试集。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001237851.png" alt="image-20230723001237851">&lt;/p>
-&lt;blockquote>
-&lt;p>实战中，特征工程、数据向量化等，大多都被封装到了相应的AI训练框架中，本文不赘述。&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="32设定范围">3.2.设定范围&lt;/h2>
-&lt;p>设定范围指的是设定选择模型的范围，这要根据训练任务选择合适的数学模型。常见的模型如下：&lt;/p>
-&lt;ul>
-&lt;li>线性模型：线性回归、逻辑回归&lt;/li>
-&lt;li>非线性模型：支持向量机、k最邻近分类&lt;/li>
-&lt;li>基于树和集成的模型：决策树、随机森林、梯度提升树等&lt;/li>
-&lt;li>神经网络：人工神经网络、卷积神经网络、长短期记忆网络等&lt;/li>
-&lt;/ul>
-&lt;p>模型选择是最为关键的环节，实战中，训练资料越少，模型就要圈定在很小很严格的范围内。&lt;/p>
-&lt;p>否则，会产生一种现象：选择的这种模型在训练中表现很好，但换一波数据就不行了，说白了就是这个模型把数据死记硬背下来了。&lt;/p>
-&lt;h2 id="33设定标准">3.3.设定标准&lt;/h2>
-&lt;p>在确定了模型之后，就需要设定损失函数，损失函数用来表示机器&lt;strong>学到位&lt;/strong>了。&lt;/p>
-&lt;p>以监督学习为例：&lt;/p>
-&lt;ul>
-&lt;li>人类老师标定了猪用103表示(如右图)&lt;/li>
-&lt;li>人类老师标定了蓝精灵用17表示(如右图)&lt;/li>
-&lt;li>当机器学习到了一个函数f1时，
-&lt;ul>
-&lt;li>输入一个猪头，函数f1输出100，那么距离正确答案103的差值为3。&lt;/li>
-&lt;li>输入一个蓝精灵，函数f1输出18，那么距离正确答案17的差值为1。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>因此，函数f1整体距离正确答案为4，这就表示函数f1的损失函数Loss(f1)=4。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722221402457.png" alt="image-20230722221402457">&lt;/p>
-&lt;h2 id="34达成目标">3.4.达成目标&lt;/h2>
-&lt;p>当机器开始学习后，可能学到了N个不同的函数，那么就要从里面选择一个最优的函数，这个过程叫&lt;strong>最佳化(Optimization)&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722222441299.png" alt="image-20230722222441299">&lt;/p>
-&lt;p>整个过程，可以归纳为如下公式：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230722223058532.png" alt="image-20230722223058532">&lt;/p>
-&lt;h2 id="35炼丹师超参数调优">3.5.炼丹师：超参数调优&lt;/h2>
-&lt;p>从&amp;quot;设定范围&amp;quot;到&amp;quot;达成目标&amp;rdquo;，整个过程不是一帆风顺的，在训练过程中、在超参数调优过程中，都会出现&lt;strong>过拟合&lt;/strong>(过拟合就是当前这批数据表现不错，换一批数据就不灵了)。因此需要反复迭代。人工智能工程师此时就很像一个古代的炼丹师，不断地通过调参，对模型进行优化和泛化。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>优化&lt;/strong>：optimazation，就是让模型更好地拟合现有的数据。&lt;/li>
-&lt;li>&lt;strong>泛化&lt;/strong>：generalization，就是将当前的模型泛化到其他数据集上。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723000619543-16900419818941.png" alt="image-20230723000619543">&lt;/p>
-&lt;p>实战中需要考虑算法工程化，比如本训练任务，我们只需要简单的命令行，就能把训练过程跑起来。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001453414.png" alt="image-20230723001453414">&lt;/p>
-&lt;h2 id="36模型测试">3.6.模型测试&lt;/h2>
-&lt;p>当模型训练好后，就要用测试数据集进行测试了，我们可以通过：&lt;/p>
-&lt;ul>
-&lt;li>各类训练指标进行判断。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723001817880.png" alt="image-20230723001817880">&lt;/p>
-&lt;ul>
-&lt;li>当然，也可以用直观的方法观看(PS：本次训练任务有点出乎意料，除了能识别泥坑，路面的裂缝也被识别出来了。)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002107388.png" alt="image-20230723002107388">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002143084.png" alt="image-20230723002143084">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002208208.png" alt="image-20230723002208208">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002237309.png" alt="image-20230723002237309">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86(%E4%B8%8B)/image-20230723002257695.png" alt="image-20230723002257695">&lt;/p>
 &lt;blockquote>
 &lt;p>本文部分内容由ChatGPT生成&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

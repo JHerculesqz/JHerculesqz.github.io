@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Nov 2023 12:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Nov 2023 13:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,642 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记25-提示词解读2-通用技巧</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/</link><pubDate>Fri, 10 Nov 2023 12:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/</guid><description>&lt;p>上一篇，我们了解了提示词基本概念，本篇我们继续解读吴恩达老师的《ChatGPT Prompt Engineering for Developers》课程，看一下提示词常用技巧。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记26-CNCC 2023参会纪要</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</link><pubDate>Fri, 10 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</guid><description>&lt;p>本文记录笔者参加CNCC 2023 AI相关的议题，方便各位小伙伴快速了解学界在AI的理论研究和行业应用情况。&lt;/p>
+&lt;h1 id="1cncc-2023概览">1.CNCC 2023概览&lt;/h1>
+&lt;h2 id="1会议简介">(1)会议简介&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>本届大会以“&lt;strong>发展数字基础设施，支撑数字中国建设&lt;/strong>”为主题，探讨计算及信息科学技术领域的最新进展和宏观发展趋势，为数字中国建设提供支持。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>大会特邀了国际知名学者、两院院士、产学研各界代表在内的&lt;strong>700余位报告嘉宾&lt;/strong>，覆盖了&lt;strong>人工智能&lt;/strong>、安全、计算+、&lt;strong>软件工程&lt;/strong>、教育、网络、&lt;strong>芯片&lt;/strong>、&lt;strong>云计算&lt;/strong>等30余个领域，推动不同领域的交叉融合，为各界专业人士提供了广泛的专业内容。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20231109151407115](/AI拾遗/【chatGPT】学习笔记26-CNCC 2023参会纪要/image-20231109151407115.png)&lt;/p>
+&lt;h2 id="2议题分布">(2)议题分布&lt;/h2>
+&lt;p>CNCC 2023的众多议题中，LLM相关分会场73个。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>基础设施&lt;/strong>：18个分会场&lt;/li>
+&lt;li>&lt;strong>LLM理论研究&amp;amp;工程化实践&lt;/strong>：15个分会场&lt;/li>
+&lt;li>&lt;strong>LLM应用&lt;/strong>：38个分会场&lt;/li>
+&lt;/ul>
+&lt;p>![image-20231109195425387](/AI拾遗/【chatGPT】学习笔记26-CNCC 2023参会纪要/image-20231109195425387.png)&lt;/p>
+&lt;h1 id="2方向1基础设施">2.方向1：基础设施&lt;/h1>
+&lt;h2 id="21dpu相关">2.1.DPU相关&lt;/h2>
+&lt;h3 id="议题1dpu标准化工作实践">议题1：DPU标准化工作实践&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>： 钟伟军，中国电子技术标准化研究院技术总监。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：DPU标准化工作，是DPU大规模落地应用中重要环节。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：DPU标准工作实践的成果和现状。如：《数据处理器(DPU)第1部分：参考框架》、《数据处理器(DPU)测试方法》等。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：DPU标准化工作的挑战及下一阶段的计划。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2面向ai时代的dpu云计算融合底座设计与实践">议题2：面向AI时代的DPU云计算融合底座设计与实践&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：曹辉，中科驭数产品运营部副总经理&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>趋势&lt;/strong>：越来越多的云计算基础设施组件正在计划融合或支持DPU方案，是下一代云计算架构演进的主流方向。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：在云原生领域，随着智算中心架构的发展，高吞吐、低时延是智算中心架构发展的挑战。&lt;/li>
+&lt;li>&lt;strong>案例&lt;/strong>：中科驭数的解决方案是&lt;strong>IaaS on DPU&lt;/strong>，将IaaS平台下沉至DPU，提供高性能的容器、虚拟机、裸金属服务。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3网络域场景dpu应用探索">议题3：网络域场景DPU应用探索&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：曹畅，中国联通研究院未来网络研究部总监&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：DPU具有高效、灵活的可编程网络数据处理加速能力，可支撑网络、存储、安全、管理等数据中心基础设施层可定制的业务加速能力。&lt;/li>
+&lt;li>&lt;strong>枢纽&lt;/strong>：DPU衔接了算力和网络两大领域的重要枢纽，推动了计算和网络融合，助力传统算力基础设施向&lt;strong>算网一体的算力网络&lt;/strong>演进。&lt;/li>
+&lt;li>&lt;strong>案例&lt;/strong>：在算力网络、5/6G、数据中心网络等网络域场景中，中国联通如果对DPU进行的探索及创新方案。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4dpu--如何使能高性能ai网络">议题4：DPU , 如何使能高性能AI网络&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：王瑞雪，中国移动通信有限公司研究院基础网络技术研究所技术经理&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>NICC&lt;/strong>：New Intelligent Computing Center，以高性能GPU、AI加速卡为中心，以高速互联智算集群为目标，形成E级超大规模算力基础设施。&lt;/li>
+&lt;li>&lt;strong>价值&lt;/strong>：强化互联技术、深化算力协同、定义新型存储、新增算力原生、升级绿色节能。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：AI大模型以GPU集群分布式训练为基础，集群节点间频繁参数同步带来大通信开销，因此网络是提升AI大模型训练效率的关键之一。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="22芯粒相关">2.2.芯粒相关&lt;/h2>
+&lt;h3 id="议题1智能计算时代下的chiplet生态建设">议题1：智能计算时代下的Chiplet生态建设&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：谭展宏，北极雄芯信息科技有限公司CTO。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>趋势&lt;/strong>：海内外多家公司也陆续推出了基于Chiplet技术的产品。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：很多公司标榜着Chiplet这个关键词，但Chiplet的定义、使用方式和技术路线都有各自说法。&lt;/li>
+&lt;li>&lt;strong>探索&lt;/strong>：本议题探讨Chiplet如何助力面向计算资源与智能计算，分享Chiplet的生态发展的思考。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2面向百芯万核的芯粒仿真初探">议题2：面向百芯万核的芯粒仿真初探&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：王小航，浙江大学教授。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：软件仿真器是探索集成芯片设计空间的重要工具&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：在大芯片和大模型的时代芯片规模提高，仿真性能无法支撑百芯万核规模的芯片仿真，仿真精度校准难，仿真配置多等。&lt;/li>
+&lt;li>&lt;strong>方案&lt;/strong>：分析了上述问题的形成原因，通过并行仿真、精度调节、自动化设计空间探索等技术解决上述问题。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3芯粒测试关键技术研究">议题3：芯粒测试关键技术研究&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：蔡志匡，南京邮电大学教授。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：Chiplet是延续摩尔定律的关键技术，通过先进封装将芯粒集成在一个中介层上，解决芯片研制的规模大、成本高、周期长等问题。&lt;/li>
+&lt;li>&lt;strong>关键点1&lt;/strong>：基本DFT技术、单芯粒测试技术、多芯粒测试技术。&lt;/li>
+&lt;li>&lt;strong>关键点2&lt;/strong>：覆盖芯粒测试各个环节的芯粒系统级可测试设计方案(测试技术、测试EDA、测试装备)，实现高可靠性、全流程的系统级测试。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4从aigc到百模大战异构计算和chiplet-协同以致胜">议题4：从AIGC到百模大战，异构计算和Chiplet 协同以致胜&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：祝俊东，奇异摩尔产品及解决方案副总裁。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：随着LLM发展及百模大战，异构计算与Chiplet协同扮演关键角色。&lt;/li>
+&lt;li>&lt;strong>趋势&lt;/strong>：百模大战引导出的关键挑战之一是&lt;strong>高性能芯片、更大规模的智算平台&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题5面向25d集成的先进封装工艺与设计协同方案">议题5：面向2.5D集成的先进封装工艺与设计协同方案&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：樊嘉祺，华进半导体封装设计经理&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：摩尔定律趋缓，封装技术成为电子产品小型化、多功能化、降低功耗、提高带宽的重要手段。&lt;/li>
+&lt;li>&lt;strong>趋势&lt;/strong>：芯片封装从传统的平面封装向系统集成、高速、高频、三维方向发展。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：芯片-封装协同设计、满足可靠性要求，材料和工艺方面，存在诸多挑战。&lt;/li>
+&lt;li>&lt;strong>案例&lt;/strong>：华进半导体致力于系统封装设计、2.5D/3D 集成关键核心技术研发，提供设计仿真、晶圆制造、系统集成、模组测试等全方位解决方案。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="23信息器件与智能计算相关">2.3.信息器件与智能计算相关&lt;/h2>
+&lt;h3 id="议题1存算一体异构计算芯片">议题1：存算一体异构计算芯片&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：高滨，清华大学长聘副教授/博导，清华大学教务处副处长&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>背景&lt;/strong>：存算一体技术聚焦在单片三维集成的新型存储器技术。&lt;/li>
+&lt;li>&lt;strong>技术点&lt;/strong>：忆阻器相关的制造工艺和设计技术，包括28nm集成、EDA工具开发、IP单元电路设计、异构计算架构设计、编译器等。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：基于忆阻器的&lt;strong>超近存计算+存内计算&lt;/strong>的异构计算系统，在算力、灵活性、可扩展性、效率、精度等方面展现出巨大的优势，在多个场景已得到初步的应用验证。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2基于忆阻器的储池计算">议题2：基于忆阻器的储池计算&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：王中锐，香港大学电气与电子工程系助理教授&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：由于内存的物理上分离、处理单元以及晶体管工艺节点限制，传统数字硬件面临巨大挑战，忆阻器是高效和高集成度的深度学习解决方案。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：忆阻器的非理想特性使其难以在边缘侧AI实现原位学习。&lt;/li>
+&lt;li>&lt;strong>技术点&lt;/strong>：利用新颖的硬件-软件协同设计，利用忆阻器的高度并行和高效的存内计算，将忆阻器的随机性转化为优势。&lt;/li>
+&lt;li>&lt;strong>技术点&lt;/strong>：基于忆阻器的回声状态储池网络用于时空信号学习、利用随机忆阻器阵列进行图结构数据学习、图嵌入方法与忆阻器联想记忆相结合以满足少样本图学习的需求、基于忆阻器液态机的零样本学习用于多模态事件数据。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3新型神经元器件电路及其类脑系统应用">议题3：新型神经元器件、电路及其类脑系统应用&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：张续猛，复旦大学青年副研究员，2023年度CCF-之江实验室联合创新基金获得者，全国智能计算标准化工作组委员&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：忆阻器基神经元器件，具有丰富动力学、低功耗、以及高集成度等特点，被认为是构建紧凑神经元电路的理想单元之一。&lt;/li>
+&lt;li>&lt;strong>技术&lt;/strong>：利用神经元不同放电模式实现高效计算方面的研究工作，神经元器件的本征温度响应和它在多模态感知方面的应用。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4模拟矩阵计算求解ax--b">议题4：模拟矩阵计算求解Ax = b&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：高滨，清华大学长聘副教授/博导，清华大学教务处副处长&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：求解矩阵方程&lt;strong>Ax = b&lt;/strong>是历史上计算机技术发展的重要驱动力，也构成了现代计算任务的核心。如：科学计算、机器学习、信号处理等。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：传统数字计算机通过执行串行算法(直接法/迭代法)求解该方程，具有高的计算复杂度。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：传统计算机采用冯·诺伊曼架构，求解速度与能效受存储器、处理器之间的通信瓶颈限制。&lt;/li>
+&lt;li>&lt;strong>方案&lt;/strong>：模拟矩阵计算，基于存储器阵列架构与全局反馈实现，具有极高的计算并行度；设计存储器阵列的反馈连接方式，模拟矩阵计算电路能够以O(1)的时间求解矩阵求逆、广义逆(如最小二乘)，以及稀疏近似(如压缩感知还原、稀疏编码)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题5基于rram硬件的高效小样本学习和图处理">议题5：基于RRAM硬件的高效小样本学习和图处理&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：李灿，香港大学电机与电子工程系的助理教授&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：RRAM，抗变存储器，一种新兴的非易失性模拟存储技术，在存算一体应用方面展示了巨大的潜力。&lt;/li>
+&lt;li>&lt;strong>技术点&lt;/strong>：使用RRAM进行哈希运算和相似度搜索。通过在交叉阵列中进行特殊编码以及在注意力机制中用于相似度搜索。结合这些操作能够使用基于记忆增强的神经网络(MANN)进行少样本学习，以及使用图注意力(Graph Attention Network)网络进行图数据处理。这可能相较于传统计算平台如CPU和GPU，能耗显著降低，准确度损失最小。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="25云计算相关">2.5.云计算相关&lt;/h2>
+&lt;h3 id="议题1大模型与国产算力">议题1：大模型与国产算力&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：翟季冬，清华大学计算机系长聘教授。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：在新一代国产超级计算机上，从底层算子库、并行加速库、负载均衡和混合精度等多方面对大模型进行了性能优化，最终实现了百万亿级参数量的预训练模型训练加速，达到了 EFLOPS级别的训练性能。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="26国内厂商的基础设施情况">2.6.国内厂商的基础设施情况&lt;/h2>
+&lt;h3 id="议题1构建泛化普惠的智能算力中科曙光">议题1：构建泛化普惠的智能算力(中科曙光)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：杜夏威，中科曙光智能计算产品事业部总经理。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>趋势&lt;/strong>：通用超算中心-&amp;gt;专用智算中心-&amp;gt;通用智能计算中心。&lt;/li>
+&lt;li>&lt;strong>技术点&lt;/strong>：成熟兼容的DTK，&lt;strong>兼容CUDA和ROCm&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：适配百度飞桨，上限飞桨官网。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2算力为基共筑数智未来华为昇腾">议题2：算力为基，共筑数智未来(华为昇腾)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：刘鑫，华为昇腾计算业务副总裁。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>介绍华为在AI领域通过昇腾计算构筑坚实算力底座，聚焦根技术创新，打造好用、易用、可信的人工智能平台，发展普惠算力，降低大模型开发门槛，加速大模型模型创新落地，与各产业界共同构筑AI生态未来。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3昇腾大模型基础设施解决方案华为昇腾">议题3：昇腾大模型基础设施解决方案(华为昇腾)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：周斌，华为昇腾计算业务研发总裁&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>挑战&lt;/strong>：大模型是复杂系统工程，每个环节都存在大量工程技术挑战。&lt;/li>
+&lt;li>&lt;strong>关键技术&lt;/strong>：高密度计算、复杂通信、内存优化等，打造大模型超级流水线，全流程使能大模型创新落地。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4华为计算领域技术挑战难题解读华为昇腾">议题4：华为计算领域技术挑战难题解读(华为昇腾)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：石晓钟，华为计算产品线技术合作总监&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>难题1&lt;/strong>：计算系统的高可靠计算容错技术。&lt;/li>
+&lt;li>&lt;strong>难题2&lt;/strong>：片上和系统相结合的内存纠错技术。&lt;/li>
+&lt;li>&lt;strong>难题3&lt;/strong>：多言行算力下的高鲁棒性混合精度求解。&lt;/li>
+&lt;li>&lt;strong>难题4&lt;/strong>：基于原生硬件的高性能算子/算法(Matmul、Self-Attention)。&lt;/li>
+&lt;li>&lt;strong>难题5&lt;/strong>：基于原生硬件的高性能算子/算法(FFT、Conv2D)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题5壁仞科技">议题5：壁仞科技&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：丁云帆，壁仞科技系统架构副总裁&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>服务于百度飞桨、文心一言。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：GPT的大规模分布式训练在模型的参数规模、算力规模和训练性能等维度都存在巨大的挑战，大模型的应用落地也存在成本高、延时大的难题。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：本报告介绍GPT大模型的分布式并行训练策略、如何基于国产大算力通用GPU打造大模型训练系统及低延时高性能的大模型推理引擎。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题6飞腾">议题6：飞腾&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：窦强，中国电子信息产业集团科技委副主任，飞腾信息技术有限公司首席科学家&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>归属&lt;/strong>：隶属于中国电子信息产业集团。&lt;/li>
+&lt;li>&lt;strong>关键路径&lt;/strong>：体系结构优化、设计工艺协同优化DTCO、先进封装推动Chiplet、系统垂直优化。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3方向2llm基础理论工程化实践">3.方向2：LLM基础理论&amp;amp;工程化实践&lt;/h1>
+&lt;h2 id="31预训练微调">3.1.预训练&amp;amp;微调&lt;/h2>
+&lt;h3 id="议题1大模型技术研究及应用">议题1：大模型技术研究及应用&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：宗成庆，中国科学院自动化研究所研究员、博士生导师&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>PS：宗老师这个议题讲的非常通透，NLP造诣很深厚。&lt;/li>
+&lt;li>&lt;strong>对大模型改进1&lt;/strong>：丰富生成文本的信息。预训练模型过于关注提示词中给出的实体or事件，难以包含更丰富的实体和信息。&lt;/li>
+&lt;li>&lt;strong>对大模型改进2&lt;/strong>：无梯度计算的大模型参数调试。即，仅微调模型参数的一小部分就可以达到不错的微调性能。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="32端云协同下分布式训练">3.2.端云协同下，分布式训练&lt;/h2>
+&lt;h3 id="议题1端云协同下分布式模型训练">议题1：端云协同下分布式模型训练&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：吴飞，浙江大学求是特聘教授，博士生导师&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：在&lt;strong>泛在互联、端云协同、AI赋能&lt;/strong>背景下，形成端云协同机器学习计算范式，是人工智能成为&lt;strong>普惠化能力&lt;/strong>的关键问题之一。&lt;/li>
+&lt;li>&lt;strong>技术点&lt;/strong>：将&lt;strong>云侧的泛化能力&lt;/strong>与&lt;strong>端侧的个性化能力&lt;/strong>结合起来，体现&lt;strong>须弥纳于芥子&lt;/strong>的哲学思想。云端or端侧学习能力提升、端云协同模型化、端云系统开放平台是研究重点。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="33神经符号计算">3.3.神经符号计算&lt;/h2>
+&lt;h3 id="议题1神经符号双轮驱动的信息检索与知识获取">议题1：神经符号双轮驱动的信息检索与知识获取&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：程学旗，中国科学院计算技术研究所副所长&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>挑战&lt;/strong>：反绎学习面临弱标注数据和弱逻辑规则情形时，可能导致性能下降、不稳定。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：反绎学习是融合机器学习与逻辑推理并使它们能够比较均衡地协同发挥作用的新范式，提升反绎学习鲁棒性是研究重点。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2细粒度多模态协同感知认知与生成">议题2：细粒度多模态协同感知、认知与生成&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：彭宇新，北京大学博雅特聘教授、国家杰青、国家万人。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：细粒度多模态协同感知、认知与生成对于刻画真实世界和人类生产生活方式具有重要意义。&lt;/li>
+&lt;li>&lt;strong>研究目标&lt;/strong>：借鉴人脑的跨模态特性，通过挖掘并协同多源、互补、关联的细粒度和多模态信息，实现对真实世界概念、规则及其演化的深层感知、认知与综合归纳。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：细粒度图像分类、行人再识别、细粒度视频检索、细粒度跨媒体检索、跨媒体推理、细粒度视觉生成。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3从语言大模型到神经符号ai">议题3：从语言大模型到神经符号AI&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：杨博，吉林大学计算机学院教授/博导，计算机学院、软件学院院长。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>趋势&lt;/strong>：神经符号AI期望将符号主义和链接注意融合起来，取长补短，建立具有高效、鲁棒、可解释的智能系统，是当前人工智能研究的一个热点。&lt;/li>
+&lt;li>&lt;strong>本质&lt;/strong>：符号主义和链接主义是人工智能的两大方法论，分别模拟演绎推理和归纳学习两种认知过程。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4鲁棒反绎学习迈向安全利用弱标注与弱规则">议题4：鲁棒反绎学习：迈向安全利用弱标注与弱规则&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：李宇峰，南京大学人工智能学院教授&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>**关键：**提升反绎学习鲁棒性方面的近期研究进展。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="34知识图谱">3.4.知识图谱&lt;/h2>
+&lt;h3 id="议题1大模型时代的知识图谱">议题1：大模型时代的知识图谱&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：白硕，CCF上海分部主席，CCF理事，恒生电子有限公司首席科学家。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：报告人从逻辑学出发，阐述命题逻辑、描述逻辑、一阶逻辑、高阶逻辑等，深入剖析NLP领域的远距关联、隐形资产以及大语言模型的短板。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：从描述逻辑到知识图谱，事理图谱，阐述知识图谱的四大特点，进一步阐述了知识图谱融合大模型的应用场景分类和应用深度分类。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2大模型应用体会澜舟科技">议题2：大模型应用体会(澜舟科技)&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：周明，澜舟科技创始人兼CEO。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>定位&lt;/strong>：在大语言模型时代，各公司应如何选择产品定位？澜舟科技介绍了自身在大模型时代的定位。&lt;/li>
+&lt;li>&lt;strong>模型选择&lt;/strong>：报告人提出了&lt;strong>周明曲线&lt;/strong>，阐述了如何为客户选择合适的大模型规模，量体裁衣，打造专业赛道的垂域大模型。&lt;/li>
+&lt;li>&lt;strong>趋势&lt;/strong>：&lt;strong>AI Agents&lt;/strong>是大模型落地的必然趋势，以解决复杂问题求解、实时信息获取和分析、领域专业知识补充、外部系统交互等问题。&lt;/li>
+&lt;li>&lt;strong>案例&lt;/strong>：报告人分享了&lt;strong>垂域知识库搜索问答、企业用户智能搜索+AI问答、对话生成式BI分析、智能客服、会议内容智能分析&lt;/strong>领域的案例。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3类chatgpt语言大模型与知识图谱新进展">议题3：类ChatGPT语言大模型与知识图谱新进展&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：王鑫，天津大学智能与计算学部教授、博导，人工智能学院副院长&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：以ChatGPT为代表的语言大模型是“联结主义”的最新成果，而知识图谱是“符号主义”的集大成者，如何充分发挥知识图谱的积累的能力，补齐大语言模型的短板，是重要的研究方向。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：探究类ChatGPT语言大模型与知识图谱相互作用而实现“神经+符号”结合的可能途径。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="35安全治理价值观对齐联邦学习">3.5.安全治理&amp;amp;价值观对齐&amp;amp;联邦学习&lt;/h2>
+&lt;h3 id="议题1大语言模型之价值观对齐">议题1：大语言模型之价值观对齐&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：秦兵，哈尔滨工业大学计算学部教授，博士生导师。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>挑战&lt;/strong>：大模型智能时代革命到来，生成式人工智能存在的安全隐患等价值观伦理问题。&lt;/li>
+&lt;li>&lt;strong>研究方向&lt;/strong>：探索大模型安全性内容生成方法，包括研究大模型辨别是非能力，以及人类普世价值观，社会文化价值观及立场对齐上的内容检测与生成方法，探索AI社会协作式的价值观对齐机制。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2面向异构计算环境的去中心化联邦学习框架">议题2：面向异构计算环境的去中心化联邦学习框架&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：吕建成，四川大学教授/博导、计算机学院(软件学院、智能科学与技术学院)院长&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：联邦学习可以突破数据孤岛和隐私保护瓶颈，是助力人工智能落地的新兴技术。&lt;/li>
+&lt;li>&lt;strong>挑战&lt;/strong>：联邦学习应用于实际场景时，面临异构的计算环境：设备计算性能异构、通信网络和训练数据异构。现有基于中心化参数服务器的主流优化范式存在计算和通信瓶颈，面临扩展性差、通信开销大、模型性能低等现实问题。&lt;/li>
+&lt;li>&lt;strong>方案&lt;/strong>：以去中心基础架构、通信优化、个性化模型优化为代表的去中心化架构及其衍生算法 。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="36机器语音机器听觉">3.6.机器语音/机器听觉&lt;/h2>
+&lt;h3 id="议题1听觉注意力的理论与算法">议题1：听觉注意力的理论与算法&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：李海洲，新加坡工程院院士，新加坡国立大学终身教授、德国不来梅大学卓越讲座教授&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>技术点&lt;/strong>：听觉注意力是面对复杂的声学场景，人的眼睛和耳朵紧密配合、由大脑协调而实现对目标声源的选择。报告人阐述了听觉注意力算法在语音增强、说话人提取、语言提取等应用课题中的实践。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2说话人声音模仿与鉴别技术">议题2：说话人声音模仿与鉴别技术&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：陶建华，CCF语音对话与听觉专委会副主任，清华大学自动化系教授，博导&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：迁移学习&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：高度拟人化和个性化的人物声音模仿技术，对通信、教育、金融、社交、娱乐等领域有重要作用。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：阐述了通过迁移学习、生成式网络模型，声音模仿技术的多项成果。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：系统性地介绍伪造声音鉴别技术，伪造溯源分析方法、面向复杂场景的声音生成与鉴别对抗博弈机制。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3speechgpt让大语言模型具有内生的语音对话能力">议题3：SpeechGPT：让大语言模型具有内生的语音对话能力&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：邱锡鹏，复旦大学计算机学院教授，博导&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>案例&lt;/strong>：介绍SpeechGPT的跨模态能力，SpeechGPT突破了传统语音到语音对话流水线方式 (ASR+LLM+TTS) 的束缚，实现了模态之间的知识传递，不需要额外的ASR和TTS系统也能和LLM直接进行语音对话。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="37全脑神经联接与类脑智能">3.7.全脑神经联接与类脑智能&lt;/h2>
+&lt;h3 id="议题1破解脊椎动物全脑神经联接--脑与类脑研究的基石">议题1：破解脊椎动物全脑神经联接 – 脑与类脑研究的基石&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：杜久林，中国科学院脑科学与智能技术卓越创新中心副主任&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：大脑是在跨时空尺度上具有高度非线性作用的复杂动力学系统，心智的奥秘就蕴藏在这精巧的组织结构中。揭示大脑组织规律及其基础上产生的神经功能的机制，不仅是理解大脑奥秘的必由之路，也将为发展类脑智能构架与算法、突破冯•偌依曼构架提供新策略。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：斑马鱼具有脊椎动物保守的神经系统结构，可以从全脑尺度上解读其大脑工作的基本原理。报告人讲述本研究团队运用自创的“既见森林(全脑)、又见树木(神经元)甚或树叶(突触)”的研究范式，实现了对脊椎动物全脑所有神经元形态结构与神经活动的在体观测与调控、以及动物行为的同时记录。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2文曲星基于开源芯片与敏捷开发的开源类脑芯片">议题2：文曲星：基于“开源芯片与敏捷开发”的开源类脑芯片&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：赵地，中科院计算所副研究员&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：在神经形态计算中，脉冲神经网络(Spiking Neural Network，SNN)是硬件实现的最佳选择。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：大多数加速器解决方案都基于CPU 加速器架构，这种结构因为复杂的控制流程而能源效率低下。报告人基于脉冲卷积神经网络的开源芯片构架：开发脉冲卷积单元，对现有的卷积神经网络单元进行特征提取和事件驱动设置，进一步提高单元工作工作的效率，并降低功耗的开销。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3全脑尺度的信息维持和行为策略调整">议题3：全脑尺度的信息维持和行为策略调整&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：穆宇，中国科学院脑科学与智能技术卓越创新中心研究员&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：空间上，大脑的每个部分都接收来自其他区域的输入并对其产生作用。时间上，每一刻的大脑都携带着前一刻的信息并影响着下一刻。对&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：报告人阐述如何开发一种系统，支持在单个细胞的分辨率监测整个斑马鱼大脑，并实时处理所获得的神经元或行为信息以生成闭环干扰从感觉到运动的完整转导过程，在全脑尺度上进行剖析，助力理解复杂的脑功能并总结其完整的计算原理。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4类脑器件与系统">议题4：类脑器件与系统&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：缪峰，南京大学物理学院教授、博导、副院长&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：报告人阐述了二维材料与“原子乐高”电子学如何在发展未来的类脑智能技术中发挥重要作用，包括神经形态计算与类视网膜形态计算等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="4方向3llm应用落地">4.方向3：LLM应用落地&lt;/h1>
+&lt;h2 id="41软件工程">4.1.软件工程&lt;/h2>
+&lt;h3 id="议题1大模型时代的软件研发华为">议题1：大模型时代的软件研发(华为)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：王千祥，华为云智能化软件研发首席专家&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>引导&lt;/strong>：从软件研发角度，大模型将带来哪些变化？报告人结合华为在基于LLM的代码生成等软件研发领域开展的系列探索，分享软件研发大模型的进展。&lt;/li>
+&lt;li>&lt;strong>问题&lt;/strong>：开发者如何与大模型协同研发？程序如何与大模型协同运行？人类如何与大模型协同存在？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2大模型催生ai原生研发新范式百度">议题2：大模型催生AI原生研发新范式(百度)&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：臧志，百度工程效能部总监&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：探讨在大模型技术影响下，&lt;strong>产品思维-应用框架-研发过程&lt;/strong>将发生哪些变化。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：如何适配大模型时代的新要素构建新的研发生产力，以及新型的研发智能体如何在企业场景中落地应用。&lt;/li>
+&lt;li>&lt;strong>核心要点&lt;/strong>：&lt;strong>SE 4 AI，AI 4 SE&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题3代码大模型赋能软件研发的探索与实践科大讯飞">议题3：代码大模型赋能软件研发的探索与实践(科大讯飞)&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：薛增奎，科大讯飞效能平台首席技术专家&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：介绍科大讯飞的iFlyCode(基于自研代码大模型的智能编程助手产品)，以及在内外部应用的典型场景和成效。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题4基于代码大模型的代码智能体字节跳动">议题4：基于代码大模型的代码智能体(字节跳动)&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：许晶晶，字节跳动研究员&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：讨论基于代码大模型的自主代理的构建和具体的应用场景。在智能体构建方面，如何结合代码规划、代码执行等能力？在应用场景方面，以数据分析场景为例，探讨智能体在其中的应用和实践。&lt;/li>
+&lt;li>PS：这个小姐姐功力深厚。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题5大模型对软件开发模式的影响北大">议题5：大模型对软件开发模式的影响(北大)&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：李戈，北京大学长聘教授&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：软件自动化理论认为AI辅助研发的瓶颈是模型大小。大语言模型为软件自动化打开了一扇窗。反之，模型不够大就是多少人工多少智能。&lt;/li>
+&lt;li>**PS：**李老师很诙谐，净说大实话。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题6大模型时代软件测试技术方向与趋势同济大学">议题6：大模型时代软件测试技术方向与趋势(同济大学)&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：朱少民，同济大学特聘教授&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：阐述了早期采用遗传算法、粒子群优化算法等生成测试数据，AI覆盖了测试建模、测试用例集优化、GUI白动化测试、测试结果分析等方面。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：报告人着重讨论如何应用大模型为软件测试赋能、如何借助LLM相关技术更高效地完成测试工作，以及未来技术发展方向。阐述了大模型时代软件测试的新范式、大模型时代软件测试的技术方向。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="42智慧交通">4.2.智慧交通&lt;/h2>
+&lt;h3 id="议题1视频物联网中云端协同智能计算">议题1：视频物联网中云端协同智能计算&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：马华东，北京邮电大学计算机学院教授&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：视频物联是物联网的一种重要形态，也是支撑智慧城市、智能安防等应用的关键基础设施。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：报告人以人、车、事件为典型目标，阐述了面向多任务多场景的深度神经网络智能视频算法体系&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：针对端设备资源受限、云端协同计算难、单一视觉模型能力弱等挑战，介绍了模型轻量化、云端模型互动、视觉大模型等相关技术&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="43智慧医疗">4.3.智慧医疗&lt;/h2>
+&lt;h3 id="议题1exploring-different-modalities-for-healthcare-applications">议题1：Exploring Different Modalities for Healthcare Applications&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：邱锂力，微软亚洲研究院副院长&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：报告人介绍如何利用无线传感和机器学习技术利用不同模式进行疾病诊断的探索，从语言、运动、呼吸、心跳、脑电波、医学图像等方面衡量一个人的健康状况。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="议题2生命科学基础模型">议题2：生命科学基础模型&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：宋乐，BioMap CTO和首席人工智能科学家&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>挑战&lt;/strong>：能否利用大量无监督数据来加速生命科学发现和药物设计？&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：介绍xTrimo系列跨多尺度生物过程的大规模预训练模型，整合来自蛋白质序列、结构、蛋白质-蛋白质相互作用和单细胞转录组数据的大量数据。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="44智慧农业">4.4.智慧农业&lt;/h2>
+&lt;h3 id="议题1智慧农业领域的大模型初探">议题1：智慧农业领域的大模型初探&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：刘劼，哈尔滨工业大学（深圳）国际人工智能研究院院长，IEEE Fellow&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键点&lt;/strong>：介绍大模型在遥感图像处理、作物数据生成等方面的尝试，并展望建立作物生长等大模型的前景。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="45aiot">4.5.AIoT&lt;/h2>
+&lt;h3 id="议题1aiiot-human-centric-smart-sensing-design">议题1：AI+IoT: Human-Centric Smart Sensing Design&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：张黔，香港科技大学腾讯工程学教授、计算机科学与工程系讲座教授、IEEE Fellow、香港工程科学院院士&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>趋势&lt;/strong>：AI与IoT的融合，为以人为中心的应用创造了赋能的机会，也产生了相关的挑战。&lt;/li>
+&lt;li>&lt;strong>关键点&lt;/strong>：如何处理数据的异构特性、不同终端用户数据的不完整性、以及终端设备资源受限造成的低质量数据等问题？感知模态的多样性为感知能力的突破带来的新机会点？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记25-提示词解读2-通用技巧</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/</link><pubDate>Fri, 10 Nov 2023 12:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/</guid><description>&lt;p>上一篇，我们了解了提示词基本概念，本篇我们继续解读吴恩达老师的《ChatGPT Prompt Engineering for Developers》课程，看一下提示词常用技巧。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231108115607959.png" alt="image-20231108115607959">&lt;/p>
 &lt;h1 id="1技巧构建合理的提示词结构">1.技巧：构建合理的提示词结构&lt;/h1>
 &lt;p>完整的提示词包含以下四个要素：&lt;/p>
@@ -4952,274 +5587,4 @@
 &lt;li>&lt;strong>从词向量看&lt;/strong>：NPLM中的词向量是神经网络的一部分，基于NPLM的目标，人类对它的训练是不会停止的，训练一次，词向量就会变化一次。而基于Word2Vec的目标，人类只会对它训练一次，训练好，词向量就固化不变了。&lt;/li>
 &lt;/ul>
 &lt;p>NPLM可以算作如今大语言模型的祖师爷了，在学界存在极高的地位和价值，后续很多年的RNN、LSTM都只能算作对NPLM的架构优化。&lt;/p>
-&lt;p>但，NPLM也存在历史局限性，于是才有了后来的大模型的关键部件Transformer，且听下回分解。&lt;/p></description></item><item><title>【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/</link><pubDate>Thu, 17 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/</guid><description>&lt;p>人类的科学发展就是这样：每个十年百年就有一个天才振臂一呼，用一个理论解决那个时代的一个问题，同时成为下一个十年百年的天才理论的基石。&lt;/p>
-&lt;p>目前炙手可热的Transformer既是如此，LSTM、Word2Vec等是它的基石，共同构筑了现在的大语言模型的关键部件和理论基础。&lt;/p>
-&lt;p>之前发了一个朋友圈，将对大语言模型影响深远的论文，梳理了三条脉络：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>LSTM&lt;/strong>：在1997年那会儿解决了AI的记忆问题。&lt;/li>
-&lt;li>&lt;strong>Word2Vec&lt;/strong>：在2013~2014年解决了将词转换为向量，将&amp;quot;文字游戏&amp;quot;转换为了高维向量空间中的&amp;quot;数学游戏&amp;rdquo;。&lt;/li>
-&lt;li>&lt;strong>Transformer&lt;/strong>：2014年出现了注意力机制雏形，2017年那篇著名的《Attention is All you Need》引出的Transformer，随后是OpenAI2018年的GPT-1、Google2019的BERT。&lt;/li>
-&lt;/ul>
-&lt;p>本文重点阐述第2条技术线：&lt;strong>Word2Vec&lt;/strong>涉及的技术——词的向量化，这也是大语言模型的关键部件之一。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230817105511.jpg" alt="微信图片_20230817105511">&lt;/p>
-&lt;h1 id="1什么是表示学习">1.什么是表示学习？&lt;/h1>
-&lt;p>我们先看一下表示学习的定义：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>表示学习&lt;/strong>：Representation Learning，通过学习算法&lt;strong>自动&lt;/strong>地从原始数据中&lt;strong>学习到一种数据表达形式&lt;/strong>。
-&lt;ul>
-&lt;li>表示学习的目标是将输入的数据转换到具有良好表现能力的特征空间中。&lt;/li>
-&lt;li>特征空间中的数据有&lt;strong>可分性&lt;/strong>、&lt;strong>可解释性&lt;/strong>、&lt;strong>可推理性&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>我们来解读一下上述这段话：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>数据的可表示性，是连接主义的哲学基础&lt;/strong>：
-&lt;ul>
-&lt;li>我们知道，人类彼此的沟通介质是：文字、图像、视频、语音等。这些介质的本质是数据。&lt;/li>
-&lt;li>我们还知道，从数据中寻找规律，是连接主义的哲学基础。&lt;/li>
-&lt;li>我们还知道，可以被人类大脑理解的文字、图像、视频等数据，人工智能能理解吗？不能。&lt;/li>
-&lt;li>人工智能无法理解这些数据，人工智能就无法从数据中寻找规律——因此，&lt;strong>数据的可表示性，是连接主义的哲学基础&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>向量化是数据可表示的一种实现&lt;/strong>：
-&lt;ul>
-&lt;li>向量化，可以让人工智能理解人类才能理解的数据。&lt;/li>
-&lt;li>向量化，只是数据可表示的&lt;strong>一种&lt;/strong>实现，当然可以有其它的实现方式。
-&lt;ul>
-&lt;li>如：笔者前一篇《【chatGPT】学习笔记6-手撸一个上古GPT》中实现的N-Gram算法，并未对人类语言向量化，也让人工智能具备理解人类语言以及语言概率的能力。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>向量化，依然是目前数据可表示的若干种实现中最好的一种。
-&lt;ul>
-&lt;li>基于N-Gram的人工智能，能力很弱。它的智能停留在人类语言的&lt;strong>表面&lt;/strong>，它并不理解&lt;strong>语义&lt;/strong>。&lt;/li>
-&lt;li>比如：&amp;ldquo;我去！&amp;ldquo;这个句子，基于N-Gram的人工智能无法识别，这句话到底想表达&amp;quot;我艹&amp;rdquo;，还是想表达&amp;quot;我要去某个地方&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>上述对表示学习的解读还是挺抽象。没关系，后文有形象的例子，各位小伙伴可以先看完后文，再回头看这一段，加深对表示学习的理论理解。&lt;/p>
-&lt;h1 id="2什么是向量什么是嵌入">2.什么是向量？什么是嵌入？&lt;/h1>
-&lt;h2 id="1向量">(1)向量&lt;/h2>
-&lt;p>在NLP领域，无论语言模型的大小，都必须将词先表达为向量，词向量就是语言模型的输入。&lt;/p>
-&lt;p>在CV领域，无论视觉模型的大小，也必须将图像先表达为向量。&lt;/p>
-&lt;p>将文字、图像、视频、音频等数据向量化，本质是&lt;font color=red>**将&amp;quot;人类可理解的数据问题&amp;quot;转换为&amp;quot;机器可理解的机器学习问题&amp;rdquo;**&lt;/font>。&lt;/p>
-&lt;p>我们来看一个向量化的例子：&lt;/p>
-&lt;ul>
-&lt;li>人类小孩儿第一次看到苹果，人类小孩儿是怎么记住这种东西就是苹果呢？&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817143249956.png" alt="image-20230817143249956">&lt;/p>
-&lt;ul>
-&lt;li>人类小孩儿会从不同维度描述苹果的特征(如：纹理、颜色、形状、大小等)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817143358437.png" alt="image-20230817143358437">&lt;/p>
-&lt;ul>
-&lt;li>假设人类小孩大脑的工作机制，是将不同维度的特征用数字表达并存储，这些维度的特征值就是&lt;strong>向量&lt;/strong>了。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817143456600.png" alt="image-20230817143456600">&lt;/p>
-&lt;ul>
-&lt;li>当人类小孩看到新的苹果，大脑也会将新苹果的特征提取为向量。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817143619055.png" alt="image-20230817143619055">&lt;/p>
-&lt;ul>
-&lt;li>大苹果、小苹果，从颜色、大小、形状、纹理等等维度是很相似的，显然，把这些苹果抽象成多个向量，这些向量在向量空间中的距离肯定是很近的。&lt;/li>
-&lt;li>这就是信息向量化，词的向量化就是信息向量化的一种。&lt;/li>
-&lt;/ul>
-&lt;p>上述例子，来自于一段腾讯云介绍向量数据库的视频，各位小伙伴可以通过视频，看到更多形象化理解向量的例子：&lt;/p>
-&lt;iframe src="//player.bilibili.com/player.html?aid=489914023&amp;bvid=BV13N41167Q9&amp;cid=1237875667&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;h2 id="2嵌入">(2)嵌入&lt;/h2>
-&lt;p>先看一下嵌入的学术概念：&lt;/p>
-&lt;ul>
-&lt;li>嵌入：Embedding，表示学习的一种形式，用于&lt;strong>将高维数据映射到低维空间&lt;/strong>。嵌入包括：
-&lt;ul>
-&lt;li>词嵌入&lt;/li>
-&lt;li>图像嵌入&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>这里以图像嵌入的一种经典算法t-SNE(t-Distributed Stochastic Neighbor Embedding)为例：&lt;/p>
-&lt;ul>
-&lt;li>图像嵌入的第一阶段是将图像转换为高维向量。&lt;/li>
-&lt;li>图像嵌入的第二阶段是将高维向量映射到低维向量，但是要保证高维向量中邻近的点，在低维空间中也有相同的距离关系。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/t-sne_optimise.gif" alt="t-sne_optimise">&lt;/p>
-&lt;p>&lt;strong>嵌入&lt;/strong>本身是一个很抽象的术语，但我们可以简单地认为&lt;strong>嵌入就是向量化&lt;/strong>的过程。&lt;/p>
-&lt;p>对于嵌入，最关键的信息只有一个：&lt;strong>高维&lt;/strong>映射到&lt;strong>低维&lt;/strong>。&lt;/p>
-&lt;p>什么是高维向量？什么是低维向量？为什么要从高维映射到低维？&lt;/p>
-&lt;p>这些问题的有趣之处，和人类的学习过程非常相似：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>有一日未死之身，则有一日未闻之道&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>人类开始学习一门新知识，越学越觉得这个知识领域博大精深。这是人类学习的第一阶段——&amp;quot;&lt;strong>把书读厚&lt;/strong>&amp;quot;。&lt;/li>
-&lt;li>在嵌入过程中，也就是把信息向量化过程中，显然是把一个信息用更高维度的向量去描述，信息越准确。&lt;/li>
-&lt;li>比如：小时候练习看图说话，老师会鼓励小朋友把图上看到的东西从更多角度去描绘出来，这些角度就是向量的维度。&lt;/li>
-&lt;li>再比如：一个哲学思想，不同流派的哲学家会从不同角度、不同立场去阐述、论证和思辨，这些角度、立场也等效于向量的维度。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>读书之道，愈进愈简，百卷如一页&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>人类学习新知识到了一个阶段，会出现&lt;strong>顿悟&lt;/strong>——发现、归纳各个知识点的内在联系。这是人类学习的第二阶段——&amp;quot;&lt;strong>把书读薄&lt;/strong>&amp;quot;。&lt;/li>
-&lt;li>比如：杨过的重剑无锋，大巧不工。比如：老子的大道至简，有言无言。&lt;/li>
-&lt;li>在嵌入过程中，也有类似的过程，虽然单个高维向量有丰富的表达，但是多个高维向量存在某些内在联系，把它们降低为低维向量，不仅抓住了信息的本质，而且更加精炼、大道至简。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>这就是&lt;strong>嵌入&lt;/strong>的&lt;strong>核心思想&lt;/strong>——将&lt;strong>高维向量降低成低维向量&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817221709020.png" alt="image-20230817221709020">&lt;/p>
-&lt;h1 id="3什么是词向量什么是词嵌入">3.什么是词向量？什么是词嵌入？&lt;/h1>
-&lt;p>先来看词向量、词嵌入的学术概念：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>词向量的定义&lt;/strong>：将词语转换成对应数值向量的表达形式，便于计算机读取和运算。&lt;/li>
-&lt;li>&lt;strong>词向量的数学表达&lt;/strong>：将字典D中的任意词w，设定固定长度的实值向量V(w)。其中：V(w)就是词向量，m表示词向量长度。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817142112513.png" alt="image-20230817142112513">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>词嵌入&lt;/strong>：Word Embedding，将词映射到向量空间，形成词向量的过程和方法，就是词嵌入。&lt;/li>
-&lt;/ul>
-&lt;p>再来看一个经典的例子：&lt;/p>
-&lt;ul>
-&lt;li>对&lt;strong>男人、女人、国王、皇后&lt;/strong>开展词嵌入，它们变成了四个向量，存在与三维的向量空间中。&lt;/li>
-&lt;li>假设词嵌入的具体代码实现没有问题，那么男人和国王的向量距离应该很近，女人和皇后的向量距离应该很近。&lt;/li>
-&lt;li>这样，对人类的文字开展词嵌入后，有两个关键的输出：
-&lt;ul>
-&lt;li>&lt;strong>词以向量的形式存在&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>有关联的词对应的向量的距离也会很小&lt;/strong>(如：对两个词向量求余弦相似度)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817222631960.png" alt="image-20230817222631960">&lt;/p>
-&lt;h1 id="4如何实现词嵌入">4.如何实现词嵌入？&lt;/h1>
-&lt;p>词嵌入，或者说词的向量化过程分为两个阶段：&lt;/p>
-&lt;ul>
-&lt;li>文本变为One-Hot编码。&lt;/li>
-&lt;li>One-Hot编码变为低维词向量。&lt;/li>
-&lt;/ul>
-&lt;h2 id="1one-hot编码">(1)One-Hot编码&lt;/h2>
-&lt;p>&lt;strong>One-Hot编码&lt;/strong>：One-Hot Representation，也叫独热编码。&lt;/p>
-&lt;p>比如：对于男、女两个词，One-Hot编码可以表示为：&lt;/p>
-&lt;ul>
-&lt;li>男：[1, 0]，女：[0, 1]&lt;/li>
-&lt;/ul>
-&lt;p>再比如：对于初一、初二、初三三个词，可以表示为：&lt;/p>
-&lt;ul>
-&lt;li>初一：[1, 0, 0]，初二：[0, 1, 0]，初三：[0, 0, 1]&lt;/li>
-&lt;/ul>
-&lt;p>如果说One-Hot编码算得上广义的向量，那么它明显的缺点是：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>过于稀疏&lt;/strong>：在各个维度上，只有1个维度是1，其它维度都是0。&lt;/li>
-&lt;/ul>
-&lt;h2 id="2distributed表示">(2)Distributed表示&lt;/h2>
-&lt;p>&lt;strong>Distributed表示&lt;/strong>：Distributed Representation，分布式表示，它是表示学习中的一种。&lt;/p>
-&lt;ul>
-&lt;li>Word2Vec、GloVe、fastText等都是其中一种具体实现。&lt;/li>
-&lt;/ul>
-&lt;p>分布式表示的核心思想是：&lt;/p>
-&lt;ul>
-&lt;li>通过训练，将词典里每个单词转换为固定长度的低维向量。&lt;/li>
-&lt;li>这些向量之间可以通过余弦相似度之类的数学工具，表示向量之间的距离。语义越接近的向量之间，距离越近。&lt;/li>
-&lt;/ul>
-&lt;p>Distributed表示才算得上真正的向量，它明显的优点是：&lt;/p>
-&lt;ul>
-&lt;li>从&lt;strong>过于稀疏&lt;/strong>的One-Hot编码，变为了&lt;strong>密集向量&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h2 id="3word2vecdistributed表示的一种实现">(3)Word2Vec，Distributed表示的一种实现&lt;/h2>
-&lt;p>Word2Vec是Distributed表示的一种具体实现：&lt;/p>
-&lt;ul>
-&lt;li>Word2Vec将词汇表中的每个词表示成固定长度的向量。&lt;/li>
-&lt;li>Word2Vec的核心思想本质是——&lt;strong>近朱者赤，近墨者黑&lt;/strong>：
-&lt;ul>
-&lt;li>一个词可以根据它的的周边词，推测出自己的语义。&lt;/li>
-&lt;li>一个词也可以通过自己的语义，推测出它的周边词。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Word2Vec的实现算法有两种：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>CBOW&lt;/strong>：Continuous Bag of Words，连续词袋，输入是周围词，输出是中心词。&lt;/li>
-&lt;li>&lt;strong>Skip-Gram&lt;/strong>：跳字模型，输入是中心词，输出是周围词。&lt;/li>
-&lt;/ul>
-&lt;p>Word2Vec基于神经网络实现：&lt;/p>
-&lt;ul>
-&lt;li>但，无论是CBOW，还是Skip-Gram，都属于浅层神经网络。&lt;/li>
-&lt;li>一说浅，显然就不那么高级。浅层神经网络的效果可以参考Word2Vec的原始论文：https://arxiv.org/pdf/1301.3781.pdf&lt;/li>
-&lt;/ul>
-&lt;h1 id="5代码实例手撸word2vec">5.代码实例：手撸Word2Vec&lt;/h1>
-&lt;h2 id="step1构建语料库">STEP1.构建语料库&lt;/h2>
-&lt;ul>
-&lt;li>首先，以四个句子作为训练语料&lt;/li>
-&lt;li>然后，形成&lt;strong>词+索引的Map&lt;/strong>和&lt;strong>索引+词的Map&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817233124145.png" alt="image-20230817233124145">&lt;/p>
-&lt;h2 id="step2生成skip-gram数据">STEP2.生成Skip-Gram数据&lt;/h2>
-&lt;ul>
-&lt;li>根据句子中的各个词，将相邻的词形成词对。&lt;/li>
-&lt;li>如：(小美，是)、(是，小美)，(美女，小美)，(小美，美女)等&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817233354716.png" alt="image-20230817233354716">&lt;/p>
-&lt;h2 id="step3对skip-gram数据进行one-hot编码">STEP3.对Skip-Gram数据进行One-Hot编码&lt;/h2>
-&lt;ul>
-&lt;li>将STEP2的各个词对进行One-Hot编码&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817233557328.png" alt="image-20230817233557328">&lt;/p>
-&lt;h2 id="step4定义skip-gram模型">STEP4.定义Skip-Gram模型&lt;/h2>
-&lt;ul>
-&lt;li>我们复现出论文描述的神经网络结构
-&lt;ul>
-&lt;li>一个线性层学习出词向量&lt;/li>
-&lt;li>一个输出层验证学习到词向量作为中心词，是否能够预测出周围词。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817233757848.png" alt="image-20230817233757848">&lt;/p>
-&lt;p>看一下具体的代码实现：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817234116518.png" alt="image-20230817234116518">&lt;/p>
-&lt;h2 id="step5训练skip-gram模型">STEP5.训练Skip-Gram模型&lt;/h2>
-&lt;ul>
-&lt;li>训练3000次，每一次都会从输出层触发反向传播，更新线性层的参数，最终确定本次学习到的词向量。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817234302231.png" alt="image-20230817234302231">&lt;/p>
-&lt;ul>
-&lt;li>这是损失函数曲线，经过3000次的训练，损失逐渐降低。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817234532709.png" alt="image-20230817234532709">&lt;/p>
-&lt;h2 id="step6显示词向量">STEP6.显示词向量&lt;/h2>
-&lt;ul>
-&lt;li>将词向量打印出来，并绘制在向量空间中&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817234606438.png" alt="image-20230817234606438">&lt;/p>
-&lt;ul>
-&lt;li>绘制出来的向量空间，结果如下：
-&lt;ul>
-&lt;li>小美和大漂亮的词向量分别为： [-0.45549557 0.4471412 ]，[-0.47936678 0.40784693]&lt;/li>
-&lt;li>小帅和大壮的词向量分别为：[0.0154954 1.6643344]，[0.01839364 1.6814741 ]&lt;/li>
-&lt;li>小美和大漂亮两个词关系密切，甚至重合，说明这两个向量有关联性。&lt;/li>
-&lt;li>小帅和大壮两个词也关系密切，甚至重合，说明这两个向量有关联性。&lt;/li>
-&lt;li>但，美女、帅哥两个词向量学习的不好。小美、大漂亮更接近于帅哥，出现了&lt;strong>不一定斩男但是一定斩女&lt;/strong>的现象。。。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07-%E8%AF%8D%E7%9A%84%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6/image-20230817234631498.png" alt="image-20230817234631498">&lt;/p>
-&lt;h1 id="6再看表示学习嵌入">6.再看表示学习、嵌入&lt;/h1>
-&lt;p>笔者在第5章以Word2Vec的Skip-Gram的代码实现，给大家阐述了词嵌入的实现过程和训练过程。&lt;/p>
-&lt;p>回头再来看1~4章出现的各种概念和理论，可以归纳词嵌入的几个关键知识点：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>自然语言问题转换为数学问题&lt;/strong>：将文字向量化的本质是将信息转换为向量，所以文字的语义关系巧妙地转换为了向量距离的数学问题。&lt;/li>
-&lt;li>&lt;strong>自动化的学习过程&lt;/strong>：获得文字的向量是一个自动化的过程，通过神经网络这种工具自动学习得到词向量。&lt;/li>
-&lt;li>&lt;strong>词向量的降维技术&lt;/strong>：对于词嵌入，学界有很多种降维技术，Word2Vec的CBOW和Skip-Gram都是实现了降维的具体算法。&lt;/li>
-&lt;/ul>
-&lt;p>再看第1章的表示学习，我们可以重新理解一下表示学习的三个特性：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>可分性&lt;/strong>：不相关的向量距离会很远，不相关的向量之间应该会有明显的分界线。这就体现了可分性——不同类别之间的向量样本应该有明显的边界或区别。&lt;/li>
-&lt;li>&lt;strong>可解释性&lt;/strong>：为什么提到唐伯虎，人类会立刻联想到秋香？向量空间中相关的向量距离就会很近，这就体现了可解释性。&lt;/li>
-&lt;li>&lt;strong>可推理性&lt;/strong>：给出小美，我们可以联想到大漂亮、帅哥，进而可能就会联想到小帅、大壮，说不定小美和小帅之间就一段故事，这就体现了可推理性。&lt;/li>
-&lt;/ul>
-&lt;p>写到这里，我们可以看到：&lt;/p>
-&lt;ul>
-&lt;li>以Word2Vec为代表的词向量化技术极大地推进了语言模型的进步&lt;/li>
-&lt;li>词嵌入也成为了如今大语言模型GPT、LLama、Bert的核心组件之一。&lt;/li>
-&lt;/ul>
-&lt;p>在了解了词嵌入相关技术之后，我们下一步就来看大语言模型的另一个核心组件的起源：神经概率语言模型。&lt;/p></description></item></channel></rss>
+&lt;p>但，NPLM也存在历史局限性，于是才有了后来的大模型的关键部件Transformer，且听下回分解。&lt;/p></description></item></channel></rss>

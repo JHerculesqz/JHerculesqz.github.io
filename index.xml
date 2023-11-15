@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Nov 2023 13:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Nov 2023 13:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,117 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记26-CNCC 2023参会纪要</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</link><pubDate>Fri, 10 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</guid><description>&lt;p>本文记录笔者参加CNCC 2023 AI相关的议题，方便各位小伙伴快速了解学界在AI的理论研究和行业应用情况。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记27-提示词解读3-实战案例之摘要总结</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/</link><pubDate>Tue, 14 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/</guid><description>&lt;p>在《【chatGPT】学习笔记25-提示词解读2-通用技巧》中，我们看到了提示词的各种通用技巧，但无论哪种技巧，都是为了激发大语言模型的某种潜在能力。&lt;/p>
+&lt;p>那么，大语言模型有哪些常见、实用的能力呢？作为生成式语言模型，大模型常见、实用的能力如下：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231113210314835.png" alt="image-20231113210314835">&lt;/p>
+&lt;p>本篇先阐述如何通过提示词激发LLM的第一种能力——总结能力(&lt;code>summarizing&lt;/code>)。&lt;/p>
+&lt;h1 id="1激发总结能力的提示词">1.激发总结能力的提示词&lt;/h1>
+&lt;h2 id="1什么是llm的总结能力">(1)什么是LLM的总结能力&lt;/h2>
+&lt;p>在如下场景中，特别需要&lt;strong>LLM的总结能力&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>会议纪要&lt;/strong>：秘书MM，如何快速输出一个时长4小时的会议纪要？&lt;/li>
+&lt;li>&lt;strong>编写书评&lt;/strong>：编辑GG，如何快速阅读一本书，提取要点，编写一个书评呢？&lt;/li>
+&lt;li>&lt;strong>编写新闻稿&lt;/strong>：记者MM，如何快速输出一个4小时的产品发布会的新闻稿？&lt;/li>
+&lt;/ul>
+&lt;p>再来理解一下，&lt;strong>LLM的总结能力&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>LLM具备捕捉文本中的重要细节和关联关系的能力，所以它可对文本进行&lt;strong>总结(summary)&lt;strong>和&lt;/strong>摘录(extract)&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>总结(summary)&lt;strong>和&lt;/strong>摘录(extract)&lt;strong>就是&lt;/strong>LLM的总结能力&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>总结(summary)&lt;/strong>：归纳总结一段文本的核心思想、主要内容。&lt;/li>
+&lt;li>&lt;strong>摘录(extract)&lt;/strong>：快速提炼一段文本的关键要点，原文出处。&lt;/li>
+&lt;/ul>
+&lt;h2 id="2如何激发llm的总结能力">(2)如何激发LLM的总结能力&lt;/h2>
+&lt;p>我们可以这样构建提示词：&lt;/p>
+&lt;ul>
+&lt;li>提示词中，出现明确的指令词，如：请&lt;strong>总结&lt;/strong>xxxx，请&lt;strong>摘录&lt;/strong>xxxx。&lt;/li>
+&lt;li>明确输出的总结、摘录的约束，如：总结成几句话，多少个字。&lt;/li>
+&lt;li>明确总结的侧重点、关注点，如：请总结&lt;strong>价格方面&lt;/strong>的内容。&lt;/li>
+&lt;li>设定背景信息，如：你是一名新华社记者，这是一篇新闻稿。&lt;/li>
+&lt;/ul>
+&lt;h1 id="2实战案例">2.实战案例&lt;/h1>
+&lt;p>我们以智界S7发布会新闻稿为例，演示通过提示词激发LLM总结能力：&lt;/p>
+&lt;ul>
+&lt;li>我是一名自媒体记者，我获取了华为智界S7发布会的演讲稿。&lt;/li>
+&lt;li>我想快速输出一篇&amp;quot;智界S7发布会的新闻稿&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;h2 id="step1编写引言">STEP1.编写引言&lt;/h2>
+&lt;p>首先，我需要为新闻稿写一个引言，简明扼要地介绍新闻的核心内容，如：何时、何地、发生何事。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115111855070.png" alt="image-20231115111855070">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115111905241.png" alt="image-20231115111905241">&lt;/p>
+&lt;h2 id="step2编写主体段落">STEP2.编写主体段落&lt;/h2>
+&lt;p>接下来，写新闻稿的主体段落。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115112026820.png" alt="image-20231115112026820">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115112057272.png" alt="image-20231115112057272">&lt;/p>
+&lt;h2 id="step3编写记者观点">STEP3.编写记者观点&lt;/h2>
+&lt;p>接下来，需要记者输出对该产品的观点，如：通过产品的功能参数、产品的价格，记者如何看待该产品的性价比。&lt;/p>
+&lt;ul>
+&lt;li>我对价格方面的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115112357958.png" alt="image-20231115112357958">&lt;/p>
+&lt;ul>
+&lt;li>LLM对价格的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115112405603.png" alt="image-20231115112405603">&lt;/p>
+&lt;ul>
+&lt;li>我对产品参数的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115112515271.png" alt="image-20231115112515271">&lt;/p>
+&lt;ul>
+&lt;li>LLM对产品参数的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115112523094.png" alt="image-20231115112523094">&lt;/p>
+&lt;ul>
+&lt;li>综上，记者观点如下：
+&lt;ul>
+&lt;li>智界S7车长4971mm，轴距2950mm，车宽1963mm，首发搭载华为途灵智能底盘和HarmonyOS 4智能座舱，还有HUAWEI ADS 2.0高阶智能驾驶辅助系统等领先科技，将为轿车市场用户带来全场景智慧出行新体验。它的预售价仅25.8万起，&lt;strong>对于这样一辆高性能的新能源车，性价比极高&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="step4提炼发言人重要观点">STEP4.提炼发言人重要观点&lt;/h2>
+&lt;p>然后，引用发言人余承东的几个重要观点，在新闻稿中突出发布会的重点信息。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115113113849.png" alt="image-20231115113113849">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231115113122691.png" alt="image-20231115113122691">&lt;/p>
+&lt;h2 id="step5汇总形成新闻稿">STEP5.汇总形成新闻稿&lt;/h2>
+&lt;ul>
+&lt;li>汇总上述信息，得到的新闻稿如下：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>【标题】智界S7发布会再次引爆市场热点&lt;/p>
+&lt;p>【引言】华为11月9日在深圳举行了智慧出行解决方案新战略发布会，同时推出华为智选车业务新生态。发布会上，华为智选车首款轿车智界S7正式开启预售，预售价格从25.8万元起，并将于11月28日正式发布。华为旨在通过全新平台和领先科技为用户带来全场景智慧出行新体验。&lt;/p>
+&lt;p>【内容】&lt;/p>
+&lt;p>华为于11月9日在深圳发布了智慧出行解决方案新战略，并推出华为智选车业务新生态，旗下拥有问界和智界系列车型。华为智选车首款轿车智界S7正式开启预售，预售价格为25.8万元起，并将于11月28日正式发布。华为常务董事余承东表示，问界系列车型的销量火爆，华为将全力提升产能以满足需求。&lt;/p>
+&lt;p>华为智选车首款智慧轿车智界S7由华为与奇瑞强强联合打造，采用华为全栈智能汽车解决方案，拥有舒适大空间和出色性能体验。它搭载了华为途灵智能底盘和HarmonyOS 4智能座舱，以及HUAWEI ADS 2.0高阶智能驾驶辅助系统等先进技术。智界S7将为用户带来全新的智慧出行体验，11月28日将正式发布。&lt;/p>
+&lt;p>华为表示要持续引领智能汽车的技术创新并推动智能化发展。华为与赛力斯联合打造的问界系列车型取得了优异的市场表现。余承东透露，问界新M7上市不到两月就获得了86000辆大定订单，其中70%以上的用户选择智驾版。问界M9订单突破25000台，火爆销售。华为将全力提升产能以满足订单需求。&lt;/p>
+&lt;p>余承东表示：“价格方面我们内部反复讨论，多次测算，最后发现这款车四个版本定价我们都是亏钱的，只能期待后期这款车的放量出货来弥补亏损，目的也是让更多消费者体验华为的产品。”&lt;/p>
+&lt;p>智界S7车长4971mm，轴距2950mm，车宽1963mm，首发搭载华为途灵智能底盘和HarmonyOS 4智能座舱，还有HUAWEI ADS 2.0高阶智能驾驶辅助系统等领先科技，将为轿车市场用户带来全场景智慧出行新体验。它的预售价仅25.8万起，&lt;strong>对于这样一辆高性能的新能源车，性价比极高&lt;/strong>。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文介绍了一个非常实用的提示词技巧，能够很好的激发大语言模型摘要总结的能力，让大模型成为我们的办公助手。&lt;/p>
+&lt;p>摘要总结提示词构建方法：&lt;/p>
+&lt;ul>
+&lt;li>提示词中，出现明确的指令词，如：请&lt;strong>总结&lt;/strong>xxxx，请&lt;strong>摘录&lt;/strong>xxxx。&lt;/li>
+&lt;li>明确输出的总结、摘录的约束，如：总结成几句话，多少个字。&lt;/li>
+&lt;li>明确总结的侧重点、关注点，如：请总结&lt;strong>价格方面&lt;/strong>的内容。&lt;/li>
+&lt;li>设定背景信息，如：你是一名新华社记者，这是一篇新闻稿。&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记26-CNCC 2023参会纪要</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</link><pubDate>Fri, 10 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</guid><description>&lt;p>本文记录笔者参加CNCC 2023 AI相关的议题，方便各位小伙伴快速了解学界在AI的理论研究和行业应用情况。&lt;/p>
 &lt;h1 id="1cncc-2023概览">1.CNCC 2023概览&lt;/h1>
 &lt;h2 id="1会议简介">(1)会议简介&lt;/h2>
 &lt;ul>
@@ -5478,113 +5588,4 @@
 &lt;li>本文解析了Seq2Seq的内部实现，理解下图的关键是——&lt;strong>按照时序&lt;/strong>，分析清楚每个编码器or解码器&lt;strong>有几个输入、几个输出&lt;/strong>。&lt;/li>
 &lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162726199.png" alt="image-20230831162726199">&lt;/li>
 &lt;li>理解了Seq2Seq，我们接下来就可以逐步实现完整的Transformer了，且听下回分解。&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记8-神经概率语言模型，大语言模型的关键部件2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</link><pubDate>Sat, 19 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/</guid><description>&lt;h1 id="1问题词嵌入的局限性">1.问题：词嵌入的局限性&lt;/h1>
-&lt;p>在《【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件》中，我们了解了词嵌入。&lt;/p>
-&lt;p>获取词向量后，在向量空间中可以获得每个词的向量表示，也可以通过向量了解词和词之间的语义关联性。&lt;/p>
-&lt;p>似乎，仅通过词嵌入就能解决很多NLP问题了，但词嵌入存在如下局限性：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>词向量的静态性&lt;/strong>：Word2Vec，以及后续的GloVe，在训练完成后，学习到的词向量是不会再被更新的。&lt;/li>
-&lt;li>&lt;strong>词向量的静态性&lt;/strong>决定了：
-&lt;ul>
-&lt;li>&lt;strong>词嵌入无法应对多义词&lt;/strong>：1个词只有1个向量，无法表示多义词。&lt;/li>
-&lt;li>&lt;strong>词嵌入无法应对未知词&lt;/strong>：没见过的词，显然Word2Vec不可能在向量空间中无中生有它对应的向量。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>于是，神经概率语言模型NPLM横空出世。&lt;/p>
-&lt;h1 id="2对策神经概率语言模型nplm">2.对策：神经概率语言模型NPLM&lt;/h1>
-&lt;h2 id="1什么是神经概率语言模型">(1)什么是神经概率语言模型？&lt;/h2>
-&lt;p>科学家和大神们，很早就有了引入具有强大表示力和学习力的神经网络的想法。大致思想是：&lt;/p>
-&lt;ul>
-&lt;li>输入海量语料，神经网络学习词语在不同上下文中的概率分布。&lt;/li>
-&lt;li>词最终还是会被向量化，只是这些词向量的学习过程成为神经网络的一部分，词向量表达的人类语言规律(词语、语义等)最终被记录到神经网络的参数中。&lt;/li>
-&lt;/ul>
-&lt;p>接下来，深度学习三巨头之一Bengio，在2003年推出了神作《A Neural Probabilistic Language Model》：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>NPLM&lt;/strong>：Neural Probabilistic Language Model，神经概率语言模型。NPLM包含输入层、隐藏层、输出层。&lt;/li>
-&lt;li>&lt;strong>输入层&lt;/strong>：将单词映射到连续的词向量空间。&lt;/li>
-&lt;li>&lt;strong>隐藏层&lt;/strong>：通过非线性激活函数学习单词间的复杂关系。&lt;/li>
-&lt;li>&lt;strong>输出层&lt;/strong>：通过Softmax层产生下一个单词的概率分布。&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>论文链接：https://dl.acm.org/doi/pdf/10.5555/944919.944966&lt;/p>
-&lt;/blockquote>
-&lt;p>下图是Bengio论文中的阐述的神经概率语言模型的架构，后续NLP方向上的各种技术都是围绕这个架构进行各层的优化！&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230818065825957.png" alt="image-20230818065825957">&lt;/p>
-&lt;p>对上图进行细化，笔者标出了输入层、隐藏层、输出层：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825094252544.png" alt="image-20230825094252544">&lt;/p>
-&lt;h2 id="2输入层">(2)输入层&lt;/h2>
-&lt;ul>
-&lt;li>输入层的&lt;strong>职责&lt;/strong>：将输入的词，开展词嵌入，学习到词向量后存储在输入层。因此，输入层也可以叫嵌入层。&lt;/li>
-&lt;li>输入层的&lt;strong>输入&lt;/strong>：词本身&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095132476.png" alt="image-20230825095132476">&lt;/li>
-&lt;li>输入层的&lt;strong>输出&lt;/strong>：词向量&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095205472.png" alt="image-20230825095205472">&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095238666.png" alt="image-20230825095238666">&lt;/p>
-&lt;h2 id="3隐藏层">(3)隐藏层&lt;/h2>
-&lt;ul>
-&lt;li>隐藏层的&lt;strong>职责&lt;/strong>：学习词与词之间的关系&lt;/li>
-&lt;li>隐藏层采用了&lt;strong>非线性激活函数&lt;/strong>：采用非线性激活函数的本质是让神经网络的**&amp;ldquo;脑回路&amp;rdquo;**复杂起来(如：使用激活函数可以将线性层提升为非线性层)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825095635192.png" alt="image-20230825095635192">&lt;/p>
-&lt;h2 id="4输出层">(4)输出层&lt;/h2>
-&lt;ul>
-&lt;li>输出层的&lt;strong>职责&lt;/strong>：通过Softmax层，输出下个单词的概率分布&lt;/li>
-&lt;li>&lt;strong>Softmax&lt;/strong>：归一化，Softmax层的输入是各个词得到的分数，输出是将这些分数归一化到0~1的值域内。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230825102215771.png" alt="image-20230825102215771">&lt;/p>
-&lt;h2 id="4隐藏层的优化">(4)隐藏层的优化&lt;/h2>
-&lt;ul>
-&lt;li>神经网络似乎天生不擅长长序列问题，所以后续很多NLP发展的技术，都是在&lt;strong>优化NPLM在长序列上的表现&lt;/strong>。
-&lt;ul>
-&lt;li>浅层网络无法捕捉文本中复杂的信息规律。&lt;/li>
-&lt;li>普通的深层神经网络也不能很好处理长距离的依赖关系。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>NPLM的巧妙之处在于：&lt;strong>隐藏层可以使用任意的神经网络去替换&lt;/strong>。&lt;/li>
-&lt;li>RNN、LSTM横空出世，在NLPM中长期霸榜：
-&lt;ul>
-&lt;li>RNN，循环神经网络，这种特殊的神经网络结构，可以将网络的输出作为网络的输入，使得神经网络能够处理数据的同时保留了&lt;strong>前世的记忆&lt;/strong>。&lt;/li>
-&lt;li>LSTM，是RNN的经典代表作，很长一段时间作为NLP问题的SOTA(state of the art)模型
-&lt;ul>
-&lt;li>注意：被评为SOTA，而不是benchmark，或者baseline，是一种极高的荣誉。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3代码nplm">3.代码：NPLM&lt;/h1>
-&lt;p>接下来，进入代码环节。&lt;/p>
-&lt;h2 id="step11构建数据集">STEP1.1.构建数据集&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093203843.png" alt="image-20230826093203843">&lt;/p>
-&lt;h2 id="step12格式化训练数据">STEP1.2.格式化训练数据&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093227289.png" alt="image-20230826093227289">&lt;/p>
-&lt;h2 id="step2构建nplm网络">STEP2.构建NPLM网络&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093351356.png" alt="image-20230826093351356">&lt;/p>
-&lt;h2 id="step3训练nplm网络">STEP3.训练NPLM网络&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093407105.png" alt="image-20230826093407105">&lt;/p>
-&lt;h2 id="step4测试nplm">STEP4.测试NPLM&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093420906.png" alt="image-20230826093420906">&lt;/p>
-&lt;h1 id="4代码nplm优化">4.代码：NPLM优化&lt;/h1>
-&lt;p>再使用RNN、LSTM优化NPLM架构。&lt;/p>
-&lt;h2 id="step11构建数据集-1">STEP1.1.构建数据集&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093203843.png" alt="image-20230826093203843">&lt;/p>
-&lt;h2 id="step12格式化训练数据-1">STEP1.2.格式化训练数据&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093227289.png" alt="image-20230826093227289">&lt;/p>
-&lt;h2 id="step2构建nplm网络-1">STEP2.构建NPLM网络&lt;/h2>
-&lt;ul>
-&lt;li>核心就是在此替换隐藏层和输出层&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093621577.png" alt="image-20230826093621577">&lt;/p>
-&lt;h2 id="step3训练nplm网络-1">STEP3.训练NPLM网络&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093643273.png" alt="image-20230826093643273">&lt;/p>
-&lt;h2 id="step4测试nplm-1">STEP4.测试NPLM&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08-%E7%A5%9E%E7%BB%8F%E6%A6%82%E7%8E%87%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B62/image-20230826093701798.png" alt="image-20230826093701798">&lt;/p>
-&lt;h1 id="5小结">5.小结&lt;/h1>
-&lt;p>最后，我们来做一些对比和小结：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从目标看&lt;/strong>：NPLM是解决词汇出现概率的问题，Word2Vec是解决如何将词转换为向量的问题。&lt;/li>
-&lt;li>&lt;strong>从实现看&lt;/strong>：NPLM和Word2Vec都是基于神经网络的模型，但Word2Vec没有激活函数，属于利用了浅层神经网络。&lt;/li>
-&lt;li>&lt;strong>从词向量看&lt;/strong>：NPLM中的词向量是神经网络的一部分，基于NPLM的目标，人类对它的训练是不会停止的，训练一次，词向量就会变化一次。而基于Word2Vec的目标，人类只会对它训练一次，训练好，词向量就固化不变了。&lt;/li>
-&lt;/ul>
-&lt;p>NPLM可以算作如今大语言模型的祖师爷了，在学界存在极高的地位和价值，后续很多年的RNN、LSTM都只能算作对NPLM的架构优化。&lt;/p>
-&lt;p>但，NPLM也存在历史局限性，于是才有了后来的大模型的关键部件Transformer，且听下回分解。&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

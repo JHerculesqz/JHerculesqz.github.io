@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Nov 2023 13:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Nov 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,252 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记27-提示词解读3-实战案例之摘要总结</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/</link><pubDate>Tue, 14 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/</guid><description>&lt;p>在《【chatGPT】学习笔记25-提示词解读2-通用技巧》中，我们看到了提示词的各种通用技巧，但无论哪种技巧，都是为了激发大语言模型的某种潜在能力。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记26-LangChain解读1-快速入门</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link><pubDate>Thu, 23 Nov 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid><description>&lt;p>虽然利用提示词工程，我们已经能较好地使用LLM，但即使开发一个很简单的LLM应用，依然需要编写大量复杂代码(调用LLM只是最简单的一步)。&lt;/p>
+&lt;p>&lt;strong>LangChain&lt;/strong>的目标就是让开发LLM应用变的简单，但LangChain更新极快，导致我们的学习成本较高。&lt;/p>
+&lt;p>因此，我们准备做两件事，帮助大家提升学习LangChain的效率：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>翻译LangChain官方文档&lt;/strong>
+&lt;ul>
+&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>解读LangChain官方文档&lt;/strong>
+&lt;ul>
+&lt;li>在本技术专栏中，将详细地逐一解读LangChain官方文档中的各个重要特性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>本篇我们就来解读LangChain官方文档的《&lt;strong>Quickstart&lt;/strong>》章节(&lt;a href="https://python.langchain.com/docs/get_started/quickstart">https://python.langchain.com/docs/get_started/quickstart&lt;/a>)，帮助大家快速上手LangChain。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/5d7KfRriC6zji11ZFnwLotdqcHQ.svg" alt="LangChain">&lt;/p>
+&lt;h1 id="1langchain概览">1.LangChain概览&lt;/h1>
+&lt;h2 id="1什么是langchain">(1)什么是LangChain&lt;/h2>
+&lt;p>&lt;strong>LangChain 是一个开源框架，支持由LLM驱动的应用程序的开发&lt;/strong>。它使应用程序能够：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>具有上下文感知能力&lt;/strong>：连接大语言模型和上下文的数据源 (如：提示词、few-shot、聊天历史记录等)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>推理&lt;/strong>：依靠语言模型进行推理 (如：根据给出的上下文回答问题，或者决定下一步动作）&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>LangChain 的价值点主要有两个:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>模块化组件&lt;/strong>：专注于组合和模块化，提供了基于LLM的各种组件。这些组件可以单独使用，也可以组合使用。&lt;/li>
+&lt;li>&lt;strong>直接可用的链&lt;/strong>：将各种组件组合成可完成特定任务的&amp;quot;链&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;h2 id="2langchain整体架构">(2)LangChain整体架构&lt;/h2>
+&lt;p>LangChain为以下模块提供标准的、可扩展的接口和外部集成，从简单到复杂排序如下:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Model I/O&lt;/strong>：与大语言模型的接口。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>检索 (Retrieval)&lt;/strong>：与应用程序特定数据的接口。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>链 (Chains)&lt;/strong>：构建调用序列。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>代理 (Agents)&lt;/strong>：让模型根据高级指令选择使用哪些工具。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Memory&lt;/strong>：在链运行期间保持应用程序状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Callbacks&lt;/strong>：记录并传送链的中间步骤。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="3如何构建llm应用程序">(3)如何构建LLM应用程序&lt;/h2>
+&lt;p>LangChain提供了许多用来构建LLM应用程序的模块，其中最常用且最重要的模块是&lt;strong>LLMChain&lt;/strong>。&lt;/p>
+&lt;p>&lt;strong>LLMChain&lt;/strong>包含三个主要组件:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>LLM&lt;/strong>：LLM是你要构建的应用程序的核心推理引擎。GPT、GLM等大模型LangChain都已适配支持。&lt;/li>
+&lt;li>&lt;strong>提示模板&lt;/strong>：它为LLM提供指令，从而控制LLM的输出。所以大家要好好学习提示词工程。&lt;/li>
+&lt;li>&lt;strong>输出解析器&lt;/strong>：把LLM的原始响应转化为程序更易处理的格式，方便后续使用。&lt;/li>
+&lt;/ul>
+&lt;p>接下来我们就基于LLMChain来体验LangChain的便捷吧。&lt;/p>
+&lt;h1 id="2快速上手langchain">2.快速上手LangChain&lt;/h1>
+&lt;p>下面，我们演示如何用LangChain来做文本总结：&lt;/p>
+&lt;ul>
+&lt;li>环境准备&lt;/li>
+&lt;li>构造LLM&lt;/li>
+&lt;li>构造提示词模板&lt;/li>
+&lt;li>创建Chain，执行指定任务&lt;/li>
+&lt;/ul>
+&lt;h2 id="step1环境准备">STEP1.环境准备&lt;/h2>
+&lt;ul>
+&lt;li>安装LangChain。因为LangChain版本更新很快，安装时优先用&amp;rdquo;-U&amp;quot;升级模式安装。&lt;/li>
+&lt;li>安装openai(需申请OpenAPI的Token)。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123190055109.png" alt="image-20231123190055109">&lt;/p>
+&lt;h2 id="step2构造llm">STEP2.构造LLM&lt;/h2>
+&lt;ul>
+&lt;li>使用langchain 中的 OpenAI 函数来初始化一个大语言模型&lt;code>llm&lt;/code>。
+&lt;ul>
+&lt;li>本例用的是&amp;quot;text-davinci-003&amp;rdquo;，当然你可以根据需求用gpt或其它模型。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123174527077.png" alt="image-20231123174527077">&lt;/p>
+&lt;h2 id="step3构造提示词模板">STEP3.构造提示词模板&lt;/h2>
+&lt;blockquote>
+&lt;p>应用程序不会把用户的输入直接传给LLM，通常的做法是把用户输入传给提示词模板。&lt;/p>
+&lt;p>提示词模板的好处是：&lt;/p>
+&lt;ul>
+&lt;li>格式化的提示词结构，包括指令、上下文、输入、输出要求等，为给LLM提供更详细的语境。&lt;/li>
+&lt;li>支持设置变量，这可以让好用的提示词最大化被复用。&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>使用langchain的提示词模板函数初始化一个提示词模板&lt;code>prompt_template&lt;/code>
+&lt;ul>
+&lt;li>提示词指令是总结文本内容&lt;/li>
+&lt;li>要处理的文本内容设成变量，本次任务是处理一段新闻，后面也可以随意处理其它文本内容&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123202743359.png" alt="image-20231123202743359">&lt;/p>
+&lt;h2 id="step4创建chain">STEP4.创建Chain&lt;/h2>
+&lt;p>现在，我们将以上组件组合成一个链，就可以执行任务了。&lt;/p>
+&lt;ul>
+&lt;li>使用LLMChain构建我们自己的链&lt;code>chain&lt;/code>，传入上面的两个组件&lt;code>llm&lt;/code>、&lt;code>prompt_template&lt;/code>。&lt;/li>
+&lt;li>运行&lt;code>chain&lt;/code>，参数只需传入变量text(要处理的文本内容)，可以看到如下运行过程：
+&lt;ul>
+&lt;li>链开始，&lt;/li>
+&lt;li>读取text变量，格式化提示词，传给LLM&lt;/li>
+&lt;li>得到结果，链结束&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123203230173.png" alt="image-20231123203230173">&lt;/p>
+&lt;p>从上面的示例可以看到，只需一个命令就实现了提示词构建和LLM调用，我们利用Langchain很好的完成了任务。&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文解读了LangChain官方文档的《QuickStart》章节，并给出了基于LangChain构建LLM应用的实例代码。QuickStart章节关键要点如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>LangChain简介&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>LangChain 是一个开源框架，支持由LLM驱动的应用程序的开发。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LangChain 的主要价值点：提供了各种模块化组件和好用的链&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LLMChain是LangChain最常见且最重要的一个链，它包含3个主要组件：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>LLM&lt;/strong>：应用程序的核心推理引擎。&lt;/li>
+&lt;li>&lt;strong>提示模板&lt;/strong>：它为LLM提供指令，从而控制LLM的输出。&lt;/li>
+&lt;li>&lt;strong>输出解析器&lt;/strong>：把LLM的原始响应转化为程序更易处理的格式。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>基于LangChain构建具备总结功能的LLM应用
+&lt;ul>
+&lt;li>环境准备&lt;/li>
+&lt;li>构造LLM&lt;/li>
+&lt;li>构造提示词模板&lt;/li>
+&lt;li>创建Chain，执行指定任务&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记28-提示词解读4-实战案例之推理</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/</link><pubDate>Thu, 23 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/</guid><description>&lt;p>在《【chatGPT】学习笔记27-提示词解读3-实战案例之摘要总结》中，我们演示了LLM的总结能力。&lt;/p>
+&lt;p>接下来，我们继续跟着吴恩达老师的课程，解锁LLM另一个更强大的能力——推理(&lt;code>Inferring&lt;/code>)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231122092928495.png" alt="image-20231122092928495">&lt;/p>
+&lt;blockquote>
+&lt;p>本文的“推理”是指利用LLM处理推理型的任务。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="1激发推理能力的提示词">1.激发推理能力的提示词&lt;/h1>
+&lt;h2 id="1什么是llm的推理能力">(1)什么是LLM的推理能力&lt;/h2>
+&lt;p>LLM的推理能力是指从已知信息中推导出新的结论的能力。&lt;/p>
+&lt;p>例如在下面的例子中，LLM根据上下文理解用户意图，经过推理生成了新的信息，包括结论和相应的解释。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123133732549.png" alt="image-20231123133732549">&lt;/p>
+&lt;h2 id="2如何激发llm的推理能力">(2)如何激发LLM的推理能力&lt;/h2>
+&lt;p>我们可以这样构建提示词：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>使用清晰明确的指令词，让LLM理解做什么类型的推理任务，如判断xxx、预测xxx。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2实战案例">2.实战案例&lt;/h1>
+&lt;p>假设我是某智能问答系统的IT人员，要用LLM的推理能力帮忙做运营维护：&lt;/p>
+&lt;ul>
+&lt;li>判断用户对问答系统是否满意。&lt;/li>
+&lt;li>用户问题千奇百怪，让智能客服能够应对各式花样提问。&lt;/li>
+&lt;/ul>
+&lt;h2 id="21满意度识别">2.1.满意度识别&lt;/h2>
+&lt;p>一般问答系统都希望通过点赞👍/点踩👎按钮获取用户的反馈，但大部分用户都不会去点。&lt;/p>
+&lt;p>利用LLM的推理能力，直接拿用户的对话信息来做满意度分析，可以大大提升运营效率。&lt;/p>
+&lt;p>例如，让LLM判断用户回复的信息是什么感情色彩：&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123141130339.png" alt="image-20231123141130339">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123140406001.png" alt="image-20231123140406001">&lt;/p>
+&lt;p>吴恩达老师&amp;quot;提示词工程课程&amp;quot;中说LLM擅长做情感判断，所以我又试了下让LLM列出评论中包含的情绪元素。看来LLM感情还是挺丰富的。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123141823738.png" alt="image-20231123141823738">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123141845933.png" alt="image-20231123141845933">&lt;/p>
+&lt;h2 id="22应对花式提问">2.2.应对花式提问&lt;/h2>
+&lt;p>传统智能问答系统是建立在知识库基础上的，通过关键词匹配最相关的答案，语义理解和推理能力非常有限。&lt;/p>
+&lt;p>现实用户提问方式五花八门，如果某个问题不在知识库，系统将无法提供准确答案。&lt;/p>
+&lt;p>基于LLM的推理能力，我们通过2个技巧快速提升智能问答系统的应对能力。&lt;/p>
+&lt;h3 id="技巧1基于已知问题推导类似问题">技巧1：基于已知问题推导类似问题&lt;/h3>
+&lt;p>基于知识库中的预置问题，利用LLM推导扩充不同的问法，丰富问题集，同时弥补传统问答系统语义理解的不足。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123152748076.png" alt="image-20231123152748076">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123152830392.png" alt="image-20231123152830392">&lt;/p>
+&lt;h3 id="技巧2归纳推理">技巧2：归纳推理&lt;/h3>
+&lt;p>上面的方法可能仍然不足以完全应对用户问题的多样性，那么可以继续用LLM来补漏。&lt;/p>
+&lt;p>利用LLM的归纳推理能力，将用户问题和系统关键词检索出的相关问题做比较，从语义上判断是否相近。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153737082.png" alt="image-20231123153737082">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153803235.png" alt="image-20231123153803235">&lt;/p>
+&lt;p>换个相关但不相近的问题&amp;ndash;都有关键词”会员“但语义不同，LLM仍然回答正确，看来LLM的推理能力还是可靠的。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153723987.png" alt="image-20231123153723987">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153820768.png" alt="image-20231123153820768">&lt;/p>
+&lt;ul>
+&lt;li>综上，利用LLM推导和归纳推理这两个技巧，可以实现快速扩充知识库、增强检索能力。&lt;/li>
+&lt;/ul>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文介绍了一个LLM另一个实用的提示词技巧，解锁大语言模型的推理能力，充分利用大模型的智慧。&lt;/p>
+&lt;p>推理提示词的构建方法：&lt;/p>
+&lt;ul>
+&lt;li>使用清晰明确的指令词，让LLM理解做什么类型的推理任务，如判断xxx、预测xxx。&lt;/li>
+&lt;li>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记27-提示词解读3-实战案例之摘要总结</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/</link><pubDate>Tue, 14 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/</guid><description>&lt;p>在《【chatGPT】学习笔记25-提示词解读2-通用技巧》中，我们看到了提示词的各种通用技巧，但无论哪种技巧，都是为了激发大语言模型的某种潜在能力。&lt;/p>
 &lt;p>那么，大语言模型有哪些常见、实用的能力呢？作为生成式语言模型，大模型常见、实用的能力如下：&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B027-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB3-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%91%98%E8%A6%81%E6%80%BB%E7%BB%93/image-20231113210314835.png" alt="image-20231113210314835">&lt;/p>
 &lt;p>本篇先阐述如何通过提示词激发LLM的第一种能力——总结能力(&lt;code>summarizing&lt;/code>)。&lt;/p>
@@ -5261,331 +5506,4 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>今天就写到这里，后续专栏会继续展示基于大语言模型的LLM应用，欢迎共同探索(上述环境已做成镜像，需要的同学可后台联系作者)。&lt;/p></description></item><item><title>【chatGPT】学习笔记10-LangChain之Model IO，对LLM的抽象1</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-langchain%E4%B9%8Bmodelio%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A11/</link><pubDate>Mon, 28 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-langchain%E4%B9%8Bmodelio%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A11/</guid><description>&lt;p>最近的专栏都是在拆解大语言模型的内部实现及论文，我们再来写点儿偏工程实践的内容——LangChain。&lt;/p>
-&lt;h1 id="1langchain简介">1.LangChain简介&lt;/h1>
-&lt;h2 id="1如何实现基于ai的app">(1)如何实现基于AI的App？&lt;/h2>
-&lt;p>如果我们想开发一个基于大语言模型的AI知识库，怎么做呢？这个App的架构如下图：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>准备环节&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>STEP1.数据管理&lt;/strong>：需要将垂直领域的知识进行词嵌入，放到向量数据库中。&lt;/li>
-&lt;li>&lt;strong>STEP2.提示词管理&lt;/strong>：需要构造好提示词模板。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>微调&amp;amp;应用环节&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>STEP3.知识查询&lt;/strong>：将用户输入的自然语言问题向量化，寻找与输入问题相关的知识向量。&lt;/li>
-&lt;li>&lt;strong>STEP4.提示词查询&lt;/strong>：找到和输入问题有关的提示词模板。&lt;/li>
-&lt;li>&lt;strong>STEP5.调用大语言模型&lt;/strong>：将&lt;code>知识向量&lt;/code>+&lt;code>提示词模板&lt;/code>传递给大语言模型(大语言模型可能在本地，也可能在云端，大语言模型可能是1个也可能是多个)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901152726410.png" alt="image-20230901152726410">&lt;/p>
-&lt;p>从这个架构可以看出，存在以下问题：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>文档解析多样&lt;/strong>：垂直领域的知识文档，存在不同的文件格式，如何解析？&lt;/li>
-&lt;li>&lt;strong>提示词需要复用&lt;/strong>：无论面向多少种不同厂商的大语言模型，提示词如何最大化复用？&lt;/li>
-&lt;li>&lt;strong>模型多样&lt;/strong>：需要面向不同厂商大语言模型的不同调用接口，如何适配？&lt;/li>
-&lt;/ul>
-&lt;h2 id="2rag">(2)RAG&lt;/h2>
-&lt;p>LangChain，为私有知识库App这类应用，定义了一个新的领域——&lt;strong>RAG&lt;/strong>(Retrieval Augmented Generation，生成式检索增强)。&lt;/p>
-&lt;p>在RAG领域，通常有5类需要考虑的因素：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>文本处理&lt;/strong>：对各类型文档的加载，对文本的切分等。&lt;/li>
-&lt;li>&lt;strong>向量存储&lt;/strong>：适配不同向量数据库，将文档内容向量化并存储。&lt;/li>
-&lt;li>&lt;strong>提示词管理&lt;/strong>：创建提示词模板，最大化重用提示词。&lt;/li>
-&lt;li>&lt;strong>模型适配&lt;/strong>：针对不同厂商，适配各类大语言模型的接口。&lt;/li>
-&lt;li>&lt;strong>输出解析&lt;/strong>：对大语言模型输出的文本进行结构化解析。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901154308580.png" alt="image-20230901154308580">&lt;/p>
-&lt;h2 id="3langchain的体系结构">(3)LangChain的体系结构&lt;/h2>
-&lt;p>LangChain为了解决RAG领域的五类问题，提供了6大模块，如下图：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901154845846.png" alt="image-20230901154845846">&lt;/p>
-&lt;p>我们在接下来的内容中，逐一解读各个模块的特性以及关键源码。&lt;/p>
-&lt;h1 id="2核心模块1model-io">2.核心模块1：Model I/O&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>LangChain的第一个核心模块，就是&lt;code>Model I/O&lt;/code>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Model I/O最重要的能力就是封装了各大厂商大语言模型的不同接口。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Model I/O包括三个子特性：&lt;/p>
-&lt;ul>
-&lt;li>Prompts&lt;/li>
-&lt;li>Models&lt;/li>
-&lt;li>Output Parsers&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/model_io-1f23a36233d7731e93576d6885da2750.jpg" alt="model_io_diagram">&lt;/p>
-&lt;h2 id="21models模型">2.1.Models(模型)&lt;/h2>
-&lt;ul>
-&lt;li>在Models特性中，LangChain抽象了两类模型：
-&lt;ul>
-&lt;li>语言模型：LLMs，LangChain在这里封装了各厂商大语言模型的接口。&lt;/li>
-&lt;li>聊天模型：ChatModels，对语言模型的高层封装，提供输入一组聊天消息对象、输出聊天结果对象的模式。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="211llm语言模型">2.1.1.LLM(语言模型)&lt;/h3>
-&lt;h4 id="1langchain源码解读">(1)LangChain源码解读&lt;/h4>
-&lt;ul>
-&lt;li>LangChain通过3个关键类实现LLM：
-&lt;ul>
-&lt;li>class &lt;strong>BaseLanguageModel&lt;/strong>&lt;/li>
-&lt;li>class &lt;strong>BaseLM&lt;/strong>：继承class &lt;strong>BaseLanguageModel&lt;/strong>&lt;/li>
-&lt;li>class &lt;strong>LLM&lt;/strong>：继承class &lt;strong>BaseLM&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>与LLM相关的关键类如下：
-&lt;ul>
-&lt;li>&lt;code>LLMReusult&lt;/code>，&lt;code>PromptValue&lt;/code>&lt;/li>
-&lt;li>&lt;code>CallbackManagerForLLMRun&lt;/code>，&lt;code>AsyncCallbackManagerForLLMRun&lt;/code>&lt;/li>
-&lt;li>&lt;code>CallbackManager&lt;/code>, &lt;code>AsyncCallbackManager&lt;/code>&lt;/li>
-&lt;li>&lt;code>AIMessage&lt;/code>, &lt;code>BaseMessage&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901160851034.png" alt="image-20230901160851034">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>class &lt;strong>BaseLanguageModel&lt;/strong>：语言模型的基类，所有语言模型封装子类，都继承自本类。&lt;/p>
-&lt;ul>
-&lt;li>def &lt;strong>generate_prompt&lt;/strong>：这是一个抽象函数，该函数由各个语言模型封装子类自行实现，输入提示词序列，输出是语言模型返回的结果。&lt;/li>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901161907636.png" alt="image-20230901161907636">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>class &lt;strong>BaseLLM&lt;/strong>：继承class &lt;strong>BaseLanguageModel&lt;/strong>，实现了各语言模型封装子类的共性函数。&lt;/p>
-&lt;ul>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901162431013.png" alt="image-20230901162431013">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>class &lt;strong>LLM&lt;/strong>：继承class &lt;strong>BaseLLM&lt;/strong>，进一步封装个语言模型封装子类的共性函数。&lt;/p>
-&lt;ul>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901162650458.png" alt="image-20230901162650458">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>LangChain实现的各类语言模型封装的子类：&lt;/p>
-&lt;ul>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901163511284.png" alt="image-20230901163511284">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h4 id="2例子">(2)例子&lt;/h4>
-&lt;ul>
-&lt;li>示例代码中，&lt;strong>调用了GPT的达芬奇003模型&lt;/strong>。其中，class &lt;strong>OpenAI&lt;/strong>就是对GPT的模型进行的封装。&lt;/li>
-&lt;li>&lt;strong>输入&lt;/strong>：给我一个Java的ArrayList的代码示例。&lt;/li>
-&lt;li>&lt;strong>输出&lt;/strong>：是一段ArrayList代码。&lt;/li>
-&lt;li>这样，就&lt;font color=red>&lt;strong>屏蔽了GPT的API未来可能的变化&lt;/strong>&lt;/font>，适配是由LangChain完成的。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901163837808.png" alt="image-20230901163837808">&lt;/p>
-&lt;h3 id="212chatmodel聊天模型">2.1.2.ChatModel(聊天模型)&lt;/h3>
-&lt;h4 id="1langchain源码解读-1">(1)LangChain源码解读&lt;/h4>
-&lt;ul>
-&lt;li>LangChain通过2个关键类实现聊天模型：
-&lt;ul>
-&lt;li>class &lt;strong>BaseLanguageModel&lt;/strong>&lt;/li>
-&lt;li>class &lt;strong>BaseChatModel&lt;/strong>：继承class &lt;strong>BaseLanguageModel&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>相关的关键类如下：
-&lt;ul>
-&lt;li>&lt;code>AIMessage&lt;/code>, &lt;code>BaseMessage&lt;/code>, &lt;code>HumanMessage&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901164637931.png" alt="image-20230901164637931">&lt;/p>
-&lt;h4 id="2例子-1">(2)例子&lt;/h4>
-&lt;ul>
-&lt;li>示例代码中，&lt;strong>调用了GPT3.5 Turbo模型&lt;/strong>。其中，class &lt;strong>ChatOpenAI&lt;/strong>就是对GPT的聊天模型进行的封装。&lt;/li>
-&lt;li>&lt;strong>输入&lt;/strong>：一组聊天消息对象&lt;/li>
-&lt;li>&lt;strong>输出&lt;/strong>：聊天消息的回答对象。&lt;/li>
-&lt;li>这样，就&lt;font color=red>&lt;strong>屏蔽了GPT的API未来可能的变化&lt;/strong>&lt;/font>，适配是由LangChain完成的。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901165247536.png" alt="image-20230901165247536">&lt;/p>
-&lt;h2 id="22prompts提示词">2.2.Prompts(提示词)&lt;/h2>
-&lt;h3 id="1langchain源码解读-2">(1)LangChain源码解读&lt;/h3>
-&lt;ul>
-&lt;li>LangChain通过2个关键类实现LLM：
-&lt;ul>
-&lt;li>class &lt;strong>BasePromptTemplate&lt;/strong>：基础提示词的基类。&lt;/li>
-&lt;li>class &lt;strong>BaseMessagePromptTemplate&lt;/strong>：聊天模型提示词的基类。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>相关的关键类如下：
-&lt;ul>
-&lt;li>&lt;code>PromptValue&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901165527920.png" alt="image-20230901165527920">&lt;/p>
-&lt;h3 id="2例子-基础提示词">(2)例子-基础提示词&lt;/h3>
-&lt;ul>
-&lt;li>示例代码中，通过&lt;code>from_template&lt;/code>方法构造了提示词模版&lt;/li>
-&lt;li>调用时，传入了&lt;code>lang&lt;/code>变量，通过1个提示词模板，实现了生成&lt;code>java&lt;/code>、&lt;code>python&lt;/code>、&lt;code>C++&lt;/code>的冒泡排序代码。&lt;/li>
-&lt;li>这样，就&lt;font color=red>&lt;strong>实现了一个模板引擎，最大化复用了提示词&lt;/strong>&lt;/font>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901170042600.png" alt="image-20230901170042600">&lt;/p>
-&lt;h3 id="2例子-chatmodel提示词">(2)例子-ChatModel提示词&lt;/h3>
-&lt;ul>
-&lt;li>示例代码中，通过&lt;code>from_messages&lt;/code>方法构造了提示词模版&lt;/li>
-&lt;li>调用时，传入了&lt;code>user_input&lt;/code>变量，通过1个提示词模板，实现了生成对Java的ArrayList的知识点摘要。&lt;/li>
-&lt;li>这样，就&lt;font color=red>&lt;strong>实现了一个模板引擎，最大化复用了聊天模型的提示词&lt;/strong>&lt;/font>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901170414376.png" alt="image-20230901170414376">&lt;/p>
-&lt;h3 id="3例子-fewshot提示词">(3)例子-FewShot提示词&lt;/h3>
-&lt;ul>
-&lt;li>示例代码中，通过&lt;code>FewShotPromptTemplate&lt;/code>构造了FewShot提示词模版&lt;/li>
-&lt;li>调用时，传入了&lt;code>input&lt;/code>变量，通过1个提示词模板，实现了一系列FewShot语料。&lt;/li>
-&lt;li>这样，就&lt;font color=red>&lt;strong>实现了一个模板引擎，最大化复用了FewShot的提示词&lt;/strong>&lt;/font>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901170805004.png" alt="image-20230901170805004">&lt;/p>
-&lt;h2 id="23output-parsers输出解析器">2.3.Output Parsers(输出解析器)&lt;/h2>
-&lt;ul>
-&lt;li>输出解析器是一个很有趣的特性，大语言模型返回的答案是千奇百怪的，如何解析呢？&lt;/li>
-&lt;li>这里以&lt;code>List Parser&lt;/code>为例：
-&lt;ul>
-&lt;li>LangChain提供了class &lt;strong>CommaSeparatedListOutputParser&lt;/strong>，这个类会在提示词中限定大语言模型的返回。&lt;/li>
-&lt;li>比如：输入的问题是&lt;code>请问《圣斗士星矢》中，有哪几个主角？&lt;/code>。&lt;/li>
-&lt;li>class &lt;strong>CommaSeparatedListOutputParser&lt;/strong>会构造提示词：Your response should be a list of comma separated values, eg: &lt;code>foo, bar, baz&lt;/code>。&lt;/li>
-&lt;li>大语言模型回答问题的文本就有了固定格式：&lt;code>星矢、紫龙、冰河、瞬、一辉&lt;/code>，这样就可以解析成list了。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010-LangChain%E4%B9%8BModelIO%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A11/image-20230901171701655.png" alt="image-20230901171701655">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文介绍了：&lt;/p>
-&lt;ul>
-&lt;li>LangChain的功能，为大家构建了对LangChain的宏观认识。&lt;/li>
-&lt;li>LangChain的Model I/O核心模块：
-&lt;ul>
-&lt;li>该模块通过Models，抽象了各厂商的大语言模型，我们可以使用统一接口去调用不同的大语言模型。&lt;/li>
-&lt;li>该模块通过Prompts，提供了多种提示词模板的构建。&lt;/li>
-&lt;li>该模块通过Output Parsers，提供了对大语言模型输出结果的结构化解析。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>后续文章，我们继续解读LangChain的核心模块，感谢阅读。&lt;/p></description></item><item><title>【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-transformer%E4%B9%8Bseq2seq%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/</link><pubDate>Mon, 21 Aug 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-transformer%E4%B9%8Bseq2seq%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/</guid><description>&lt;h1 id="1seq2seqtransformer的雏形">1.Seq2Seq，Transformer的雏形&lt;/h1>
-&lt;h2 id="11为什么会出现seq2seq">1.1.为什么会出现Seq2Seq？&lt;/h2>
-&lt;p>在神经概率语言模型NPLM出现后的很长一段时间，都是在这种网络架构下进行优化。但，依然面临很多难题(主要是循环神经网络RNNs的局限)：&lt;/p>
-&lt;ul>
-&lt;li>如：输入序列长度增加时性能下降&lt;/li>
-&lt;li>如：顺讯处理导致计算效率低&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;p>在2014年，Seq2Seq的提出，给人类一个不错的启发。&lt;/p>
-&lt;p>随后在自注意力机制的加持下，Transformer就诞生了。&lt;/p>
-&lt;h2 id="12seq2seq架构概览">1.2.Seq2Seq架构概览&lt;/h2>
-&lt;p>大神&lt;code>Ilya Sutskever&lt;/code>在2014年，以第一作者的身份，发表了论文《Sequence to Sequence Learning with Neural Networks》。&lt;/p>
-&lt;blockquote>
-&lt;p>论文地址：https://papers.nips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162206474.png" alt="image-20230831162206474">&lt;/p>
-&lt;p>顺便说一嘴，大神&lt;code>Ilya Sutskever&lt;/code>就是这位大哥，OpenAI联合创始人和首席科学家，各大自媒体都在播放他老人家的演讲视频：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162529973.png" alt="image-20230831162529973">&lt;/p>
-&lt;p>这篇论文的核心就是这张图，阐述了Seq2Seq的&lt;strong>编码器-解码器架构&lt;/strong>：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162726199.png" alt="image-20230831162726199">&lt;/p>
-&lt;p>初次理解这张图，&lt;strong>需要费点儿脑细胞&lt;/strong>，我们接下来详细拆解。&lt;/p>
-&lt;h2 id="13seq2seq架构详解">1.3.Seq2Seq架构详解&lt;/h2>
-&lt;h3 id="1整体模型架构">(1)&amp;ldquo;整体模型&amp;quot;架构&lt;/h3>
-&lt;p>Seq2Seq会将变长的&lt;strong>输入序列&lt;/strong>，转换为变长的&lt;strong>输出序列&lt;/strong>。如下图：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831170025140.png" alt="image-20230831170025140">&lt;/p>
-&lt;p>这里举一个例子——将&amp;quot;你是谁&amp;quot;翻译为英文&amp;quot;Who are u&amp;rdquo;：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>t1时刻&lt;/strong>：用户输入序列&amp;quot;你是谁&amp;quot;三个字。&lt;/li>
-&lt;li>&lt;strong>t2时刻&lt;/strong>：&amp;ldquo;你&amp;quot;字输入给Seq2Seq。&lt;/li>
-&lt;li>&lt;strong>t3时刻&lt;/strong>：&amp;ldquo;是&amp;quot;字输入给Seq2Seq。&lt;/li>
-&lt;li>&lt;strong>t4时刻&lt;/strong>：&amp;ldquo;谁&amp;quot;字输入给Seq2Seq。&lt;/li>
-&lt;li>&lt;strong>t5时刻&lt;/strong>：Seq2Seq输出&amp;quot;Who&amp;rdquo;。&lt;/li>
-&lt;li>&lt;strong>t6时刻&lt;/strong>：Seq2Seq输出&amp;quot;are&amp;rdquo;。&lt;/li>
-&lt;li>&lt;strong>t7时刻&lt;/strong>：Seq2Seq输出&amp;quot;u&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831170404160.png" alt="image-20230831170404160">&lt;/p>
-&lt;h3 id="2编码器-解码器架构">(2)&amp;ldquo;编码器-解码器&amp;quot;架构&lt;/h3>
-&lt;p>进一步拆解整体模型架构，Seq2Seq由编码器+解码器组成：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831171003578.png" alt="image-20230831171003578">&lt;/p>
-&lt;p>这里还是以将&amp;quot;你是谁&amp;quot;翻译为英文&amp;quot;Who are u&amp;quot;例子来解析：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>t1时刻&lt;/strong>：用户输入序列&amp;quot;你是谁&amp;quot;三个字。&lt;/li>
-&lt;li>&lt;strong>t2时刻&lt;/strong>：&amp;ldquo;你&amp;quot;字输入给编码器。&lt;/li>
-&lt;li>&lt;strong>t3时刻&lt;/strong>：&amp;ldquo;是&amp;quot;字输入给编码器。&lt;/li>
-&lt;li>&lt;strong>t4时刻&lt;/strong>：&amp;ldquo;谁&amp;quot;字输入给编码器。&lt;/li>
-&lt;li>&lt;strong>t5时刻&lt;/strong>：编码器将学习到上下文向量，传递给解码器&lt;/li>
-&lt;li>&lt;strong>t6时刻&lt;/strong>：解码器输出&amp;quot;Who&amp;rdquo;。&lt;/li>
-&lt;li>&lt;strong>t7时刻&lt;/strong>：解码器输出&amp;quot;are&amp;rdquo;。&lt;/li>
-&lt;li>&lt;strong>t8时刻&lt;/strong>：解码器输出&amp;quot;u&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831171625206.png" alt="image-20230831171625206">&lt;/p>
-&lt;h3 id="3编码器解码器微观逻辑">(3)&amp;ldquo;编码器、解码器&amp;quot;微观逻辑&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>编码器、解码器的具体实现&lt;/strong>：在论文中，它们都是采用RNN实现。如下图所示：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>编码器的输入&lt;/strong>：0号隐藏层状态向量 + 1号输入词向量&lt;/li>
-&lt;li>&lt;strong>编码器的输出&lt;/strong>：1号隐藏层状态向量 + 1号词输出向量&lt;/li>
-&lt;li>&lt;strong>编码器的下一次输入&lt;/strong>：1号隐藏层状态向量 + 2号输入词向量&lt;/li>
-&lt;li>&lt;strong>编码器的下一次输出&lt;/strong>：2号隐藏层状态向量 + 2号输出词向量&lt;/li>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831222457684.png" alt="image-20230831222457684">&lt;/li>
-&lt;li>&lt;strong>解码器的输入&lt;/strong>：0号隐藏层状态向量 + 1号Teach Forcing输入词向量&lt;/li>
-&lt;li>&lt;strong>解码器的输出&lt;/strong>：1号词输出向量&lt;/li>
-&lt;li>&lt;strong>解码器的下一次输入&lt;/strong>：0号隐藏层状态向量 + 1号词输出向量 + 2号Teach Forcing输入词向量&lt;/li>
-&lt;li>&lt;strong>解码器的下一次输出&lt;/strong>：2号输出词向量&lt;/li>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831225007834.png" alt="image-20230831225007834">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>这还是不太直观，我们再把编码器、解码器&lt;strong>按时序进一步展开&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>t1时刻&lt;/strong>：用户输入序列&amp;quot;你是谁&amp;quot;三个字。&lt;/li>
-&lt;li>&lt;strong>t2时刻&lt;/strong>：&amp;ldquo;你&amp;quot;字输入给编码器，编码器输出&lt;code>1号隐藏层状态&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>t3时刻&lt;/strong>：&amp;ldquo;是&amp;quot;字 + &lt;code>1号隐藏层状态&lt;/code>，输入给编码器，编码器输出&lt;code>2号隐藏层状态&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>t4时刻&lt;/strong>：&amp;ldquo;谁&amp;quot;字 + &lt;code>2号隐藏层状态&lt;/code>，输入给编码器，编码器输出&lt;code>3号隐藏层状态&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>t5时刻&lt;/strong>：&lt;code>3号隐藏层状态&lt;/code> + TeachForcing的&amp;quot;Who&amp;quot;字，输入给解码器，解码器输出&lt;code>Who&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>t6时刻&lt;/strong>：&lt;code>3号隐藏层状态&lt;/code> + TeachForcing的&amp;quot;are&amp;quot;字 + 解码器输出&lt;code>who&lt;/code>，输入给解码器，解码器输出&lt;code>are&lt;/code>。&lt;/li>
-&lt;li>&lt;strong>t7时刻&lt;/strong>：&lt;code>3号隐藏层状态&lt;/code> + TeachForcing的&amp;quot;u&amp;quot;字 + 解码器输出&lt;code>are&lt;/code>，输入给解码器，解码器输出&lt;code>u&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831225749199.png" alt="image-20230831225749199">&lt;/p>
-&lt;ul>
-&lt;li>这里有一个细节，什么是&lt;strong>Teach Forcing&lt;/strong>？
-&lt;ul>
-&lt;li>我们可以想象，如果1号解码器的预测错了，那么2号、3号解码器都会错，进而导致学习效率非常低。&lt;/li>
-&lt;li>Teach Forcing好像&lt;strong>开卷考试&lt;/strong>，如果1号解码器预测错了，Teach Forcing会纠正预测结果，进而加速学习效率。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="3优点">(3)优点&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>变长序列&lt;/strong>：由于编码器、解码器采用RNN实现，所以输入序列可以是变长、输出序列也可以是变长。而CNN、DNN都不支持变长序列。&lt;/li>
-&lt;li>&lt;strong>信息压缩&lt;/strong>：隐藏层状态，或者叫上下文向量，本质上将输入序列进行了信息压缩，转变为含有上下文语义的向量。&lt;/li>
-&lt;/ul>
-&lt;h3 id="4劣势">(4)劣势&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>长序列信息损失&lt;/strong>：由于上下文向量为定长，所以当输入序列过长时编码器会出现信息损失。&lt;font color=red>&lt;strong>这就是注意力机制的发力点，先埋个伏笔&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>&lt;strong>效率&lt;/strong>：采用RNN(如：LSTM、GRU)实现编码器、解码器，RNN会面临梯度消失、梯度爆炸等问题。&lt;/li>
-&lt;/ul>
-&lt;h1 id="2代码">2.代码&lt;/h1>
-&lt;h2 id="step11构建数据集">STEP1.1.构建数据集&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231557775.png" alt="image-20230831231557775">&lt;/p>
-&lt;h2 id="step12结构化训练数据">STEP1.2.结构化训练数据&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231753952.png" alt="image-20230831231753952">&lt;/p>
-&lt;h2 id="step21定义编码器和解码器类">STEP2.1.定义编码器和解码器类&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231855888.png" alt="image-20230831231855888">&lt;/p>
-&lt;h2 id="step22定义seq2seq模型">STEP2.2.定义Seq2Seq模型&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831231925444.png" alt="image-20230831231925444">&lt;/p>
-&lt;h2 id="step3训练seq2seq模型">STEP3.训练Seq2Seq模型&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831232035429.png" alt="image-20230831232035429">&lt;/p>
-&lt;h2 id="step4测试seq2seq模型">STEP4.测试Seq2Seq模型&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831232116723.png" alt="image-20230831232116723">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;ul>
-&lt;li>本文解析了Seq2Seq的内部实现，理解下图的关键是——&lt;strong>按照时序&lt;/strong>，分析清楚每个编码器or解码器&lt;strong>有几个输入、几个输出&lt;/strong>。&lt;/li>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09-Transformer%E4%B9%8BSeq2Seq%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B63/image-20230831162726199.png" alt="image-20230831162726199">&lt;/li>
-&lt;li>理解了Seq2Seq，我们接下来就可以逐步实现完整的Transformer了，且听下回分解。&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>今天就写到这里，后续专栏会继续展示基于大语言模型的LLM应用，欢迎共同探索(上述环境已做成镜像，需要的同学可后台联系作者)。&lt;/p></description></item></channel></rss>

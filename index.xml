@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Dec 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Dec 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,144 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记30-提示词解读5-实战案例之转换</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</link><pubDate>Sat, 02 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</guid><description>&lt;p>今天我们跟着吴恩达老师的课程，学习LLM另一个强大的能力——转换(&lt;code>Transforming&lt;/code>)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记31-提示词解读6-实战案例之扩展</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/</link><pubDate>Sun, 03 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/</guid><description>&lt;p>LLM可以帮忙写文案、写剧本、写论文？相信很多小伙伴当初都是被LLM的这个爆裂功能路转粉的。&lt;/p>
+&lt;p>这种文本生成的能力——通常也被叫做AIGC(人工智能生成内容)，就是LLM的扩展能力。&lt;/p>
+&lt;p>本篇我们跟着吴恩达老师的课程，学习如何激发LLM这个最受欢迎的能力——扩展(&lt;code>Expanding&lt;/code>)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95//image-20231130080342036.png" alt="image-20231130080342036">&lt;/p>
+&lt;h1 id="1激发扩展能力的提示词">1.激发扩展能力的提示词&lt;/h1>
+&lt;h2 id="1什么是llm的扩展能力">(1)什么是LLM的扩展能力&lt;/h2>
+&lt;p>LLM的扩展能力是指&lt;strong>基于一小段文字或指令或主题，让LLM生成连贯、有逻辑的长文本&lt;/strong>。&lt;/p>
+&lt;p>LLM的扩展能力使得LLM可以生成更长、更丰富的文本，可以用在很多创作类的工作：&lt;/p>
+&lt;ul>
+&lt;li>写营销文案&lt;/li>
+&lt;li>写工作报告&lt;/li>
+&lt;li>创意策划(Brainstorming)&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;h2 id="2如何激发llm的扩展能力">(2)如何激发LLM的扩展能力&lt;/h2>
+&lt;p>我们可以这样构建提示词：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>明确的指令词&lt;/strong>，让LLM知道是写文章还是出点子，如&amp;quot;请&lt;strong>撰写&lt;/strong>&amp;hellip;&amp;quot;，&amp;ldquo;请&lt;strong>设计&lt;/strong>&amp;hellip;&amp;quot;。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>明确的内容要求&lt;/strong>，如&amp;quot;以xxx&lt;strong>为主题&lt;/strong>&amp;quot;，&amp;ldquo;涵盖xxx&lt;strong>内容要点&lt;/strong>&amp;quot;，&amp;ldquo;针对xxx&lt;strong>举个例子&lt;/strong>&amp;quot;，&amp;ldquo;用新潮有趣的&lt;strong>文字风格&lt;/strong>&amp;quot;。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>提供背景信息&lt;/strong>，让LLM更好的模拟语境。如&amp;quot;你是个童话大王&amp;rdquo;，&amp;ldquo;这是给总裁的汇报材料&amp;rdquo;。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2实战案例">2.实战案例&lt;/h1>
+&lt;p>笔者最近在研究Java编程语言的面试题，要针对一些难度大的面试题编写案例解析。&lt;/p>
+&lt;p>以下面这道面试题为例，用LLM的扩展能力来帮忙：&lt;/p>
+&lt;ul>
+&lt;li>制定提纲&lt;/li>
+&lt;li>生成文章内容&lt;/li>
+&lt;li>优化部分章节&lt;/li>
+&lt;/ul>
+&lt;p>面试题如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="n">以下有关垃圾收集器&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="n">说法正确的有&lt;/span>&lt;span class="err">：（&lt;/span> &lt;span class="err">）&lt;/span>
+&lt;span class="n">A&lt;/span>&lt;span class="o">.&lt;/span> &lt;span class="n">ParNew收集器支持多线程垃圾收集&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="n">所以不会回收停顿&lt;/span>&lt;span class="err">。&lt;/span>&lt;span class="n">当老年代选择CMS收集器后&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="n">新生代智能选择Serial或ParNew收集器&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;span class="n">B&lt;/span>&lt;span class="o">.&lt;/span> &lt;span class="n">Parallel&lt;/span> &lt;span class="n">Scavenge收集器是一个新生代收集器&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="n">其目标是达到一个可控的吞吐量&lt;/span>&lt;span class="err">。&lt;/span>&lt;span class="n">MaxGCPauseMillis参数值设置越小&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="n">系统垃圾手机速度越快&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;span class="n">C&lt;/span>&lt;span class="o">.&lt;/span> &lt;span class="n">CMS收集器出生标记和重新标记阶段均需要停顿&lt;/span>&lt;span class="err">。&lt;/span>&lt;span class="n">CMS收集器若出现Concurrent&lt;/span> &lt;span class="n">Mode&lt;/span> &lt;span class="n">Failure&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="n">虚拟机就会启动Serial&lt;/span> &lt;span class="n">Old收集器进行垃圾回收&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;span class="n">D&lt;/span>&lt;span class="o">.&lt;/span> &lt;span class="n">G1收集器可用于新生代和老年代的垃圾回收&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="step1制定提纲">STEP1.制定提纲&lt;/h2>
+&lt;p>画虎先画骨。先跟LLM头脑风暴一下，把案例提纲定下来。&lt;/p>
+&lt;p>让LLM生成题目解析案例的提纲。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231203161432017.png" alt="image-20231203161432017">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231203160613178.png" alt="image-20231203160613178">&lt;/p>
+&lt;p>LLM给出了一个相对全面的目录结构，结合LLM带来的灵感，最终目录确定如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1.题目描述&lt;/strong>：描述Java面试题原文&lt;/li>
+&lt;li>&lt;strong>2.题目解析&lt;/strong>：对每个选项进行分析，说明是否是正确答案&lt;/li>
+&lt;li>&lt;strong>3.知识点解读&lt;/strong>：列出该Java试题涉及的知识点，并做解读&lt;/li>
+&lt;li>&lt;strong>4.知识点总结&lt;/strong>：对知识点做总结，说明用途和错误影响&lt;/li>
+&lt;li>&lt;strong>5.推荐学习资料&lt;/strong>：该知识点相关的学习资料&lt;/li>
+&lt;/ul>
+&lt;h2 id="step2生成文章内容">STEP2.生成文章内容&lt;/h2>
+&lt;p>接着让LLM根据目录提纲生成案例主体内容。&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231203161448434.png" alt="image-20231203161448434">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231201200439022.png" alt="image-20231201200439022">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231201232902361.png" alt="image-20231201232902361">&lt;/p>
+&lt;p>LLM根据提纲很好的生成了案例内容，对试题四个选项的解析、正确答案的识别也很到位。&lt;/p>
+&lt;h2 id="step3优化部分章节">STEP3.优化部分章节&lt;/h2>
+&lt;p>知识点解读是重点章节，增加一些示例可以帮助读者更好的理解。&lt;/p>
+&lt;p>所以，让LLM帮忙优化知识点解读章节的内容，增加代码示例：&lt;/p>
+&lt;ul>
+&lt;li>我的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231201233451643.png" alt="image-20231201233451643">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB6-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%89%A9%E5%B1%95/image-20231201233557314.png" alt="image-20231201233557314">&lt;/p>
+&lt;p>LLM不仅精通自然语言，同时也是个编程语言专家，所以生成代码示例的任务也很轻松的完成了。&lt;/p>
+&lt;h2 id="step4编写正式文稿">STEP4.编写正式文稿&lt;/h2>
+&lt;p>LLM已经帮忙完成了文稿内容的生成和优化，现在该笔者我出马了。&lt;/p>
+&lt;p>笔者的意见是——稿件内容审核通过，可以用于发布 😄&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文介绍了激发LLM扩展能力的提示词技巧，让LLM成为设计、写作等工作中的得力助手。&lt;/p>
+&lt;p>扩展提示词的构建方法：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>明确的指令词&lt;/strong>，让LLM知道是写文章还是出点子，如&amp;quot;请&lt;strong>撰写&lt;/strong>&amp;hellip;&amp;quot;，&amp;ldquo;请&lt;strong>设计&lt;/strong>&amp;hellip;&amp;quot;。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>明确的内容要求&lt;/strong>，如&amp;quot;以xxx&lt;strong>为主题&lt;/strong>&amp;quot;，&amp;ldquo;涵盖xxx&lt;strong>内容要点&lt;/strong>&amp;quot;，&amp;ldquo;针对xxx&lt;strong>举个例子&lt;/strong>&amp;quot;，&amp;ldquo;用新潮有趣的&lt;strong>文字风格&lt;/strong>&amp;quot;。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>提供背景信息&lt;/strong>，让LLM更好的模拟语境。如&amp;quot;你是个童话大王&amp;rdquo;，&amp;ldquo;这是给总裁的汇报材料&amp;rdquo;。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>至此，我们已经完成了吴恩达老师提示词课程的学习，包括：&lt;/p>
+&lt;ul>
+&lt;li>提示词的基本原则&lt;/li>
+&lt;li>提示词的四个组成要素，及通用使用技巧&lt;/li>
+&lt;li>提示词实战，解锁LLM四大能力：总结、推理、转换、扩展&lt;/li>
+&lt;/ul>
+&lt;p>LLM是个&amp;quot;通才&amp;rdquo;，而且还在快速成长，提示词是我们与这个&amp;quot;通才&amp;quot;对话的主要接口。小伙伴们也都行动起来吧，用好提示词，轻松驾驭LLM。&lt;/p>
+&lt;h1 id="4资料汇总">4.资料汇总&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>本技术专栏&lt;/strong>：
+&lt;ul>
+&lt;li>《【chatGPT】学习笔记24-提示词解读1-提示词基本概念》&lt;/li>
+&lt;li>《【chatGPT】学习笔记25-提示词解读2-通用技巧》&lt;/li>
+&lt;li>《【chatGPT】学习笔记27-提示词解读3-实战案例之摘要总结》&lt;/li>
+&lt;li>《【chatGPT】学习笔记28-提示词解读4-实战案例之推理》&lt;/li>
+&lt;li>《【chatGPT】学习笔记30-提示词解读5-实战案例之转换》&lt;/li>
+&lt;li>《【chatGPT】学习笔记31-提示词解读6-实战案例之扩展》&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>吴恩达提示词课程：
+&lt;ul>
+&lt;li>原文：https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction&lt;/li>
+&lt;li>翻译：https://jherculesqz.gitbook.io/chatgpt-prompt-engineering-for-developers-1/&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记30-提示词解读5-实战案例之转换</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</link><pubDate>Sat, 02 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</guid><description>&lt;p>今天我们跟着吴恩达老师的课程，学习LLM另一个强大的能力——转换(&lt;code>Transforming&lt;/code>)。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231128162542742.png" alt="image-20231128162542742">&lt;/p>
 &lt;h1 id="1激发转换能力的提示词">1.激发转换能力的提示词&lt;/h1>
 &lt;h2 id="1什么是llm的转换能力">(1)什么是LLM的转换能力&lt;/h2>
@@ -5126,220 +5263,4 @@
 &lt;p>解读GPT背后的论文及实现技术实属不易，&lt;/p>
 &lt;p>从N-Gram到词嵌入，再到神经概率语言模型，再到Seq2Seq，直到本文的注意力机制，&lt;/p>
 &lt;p>我们距离自行实现一个简化版大语言模型越来越近了，同时笔者也受益匪浅。&lt;/p>
-&lt;p>欢迎各位小伙伴探讨交流，我们继续探索这个有趣的技术领域！&lt;/p></description></item><item><title>【chatGPT】学习笔记12-昇腾计算产业发展白皮书解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 12 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>本文来解读华为的《昇腾计算产业发展白皮书》，跟踪一下国内AI行业的宏观动态。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912224057905.png" alt="image-20230912224057905">&lt;/p>
-&lt;h2 id="1ai发展趋势和挑战">1.AI发展趋势和挑战&lt;/h2>
-&lt;h3 id="11ai发展趋势">1.1.AI发展趋势&lt;/h3>
-&lt;p>白皮书首先阐述了AI发展趋势：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>AI已成为推动社会发展的关键引擎&lt;/strong>：
-&lt;ul>
-&lt;li>AI在诸多特定领域超过人类能力。如：计算机视觉、语音识别、自然语言处理领域。&lt;/li>
-&lt;li>AI将助力各产业实现智能化转型升级。根据弗若斯特沙利文数据，2019年中国AI市场规模为598.6亿元，2020~2024年复合增长率达34.8%。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>AI处于爆发式创新的前夜&lt;/strong>：
-&lt;ul>
-&lt;li>联接、AI、云、计算、行业应用等多种先进技术和机会将会互相催化、有机融合。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="12ai产业挑战">1.2.AI产业挑战&lt;/h3>
-&lt;p>白皮书再阐述了AI产业的挑战：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>计算系统&lt;/strong>要满足AI场景的&lt;strong>复杂巨大、多样性的计算需求&lt;/strong>。
-&lt;ul>
-&lt;li>&lt;strong>算力增速快&lt;/strong>：2012~2018年，算力需求增加30万倍，远超摩尔定律。大语言模型时代，算力需求从TFLOPS级别，增至PFLOPS级别，甚至EFLOPS级别。&lt;/li>
-&lt;li>&lt;strong>计算架构设计面临挑战&lt;/strong>：大规模算力需求，对计算系统的&lt;strong>计算性能、通信性能、可扩展性&lt;/strong>是巨大的挑战。&lt;/li>
-&lt;li>&lt;strong>全方位面临挑战&lt;/strong>：基础软件、编程模型、编程语言、编译器、工具链、大规模运行时、调度系统、平台软件、通信组件、加速组件、加速引擎、AI框架、行业软件，都需要适配大规模算力需求。&lt;/li>
-&lt;li>参考：https://openai.com/research/ai-and-compute&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/ai-and-compute-all.png" alt="ai-and-compute-all">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>从算法到产品化落地&lt;/strong>面临8大鸿沟：
-&lt;ul>
-&lt;li>&lt;strong>模型获取&lt;/strong>鸿沟：针对行业数据，选择、测试合适地模型，需要巨大的时间成本和算力成本。&lt;/li>
-&lt;li>&lt;strong>数据准备&lt;/strong>鸿沟：构建能够真实反映实际业务数据分布的数据集，面临较大挑战。&lt;/li>
-&lt;li>&lt;strong>模型训练&lt;/strong>鸿沟：超参数调优等模型训练环节，对大量传统行业开发者挡在AI门外。&lt;/li>
-&lt;li>&lt;strong>准确度验证&lt;/strong>鸿沟：模型泛化能力的验证，是阻碍算法快速落地的因素之一。&lt;/li>
-&lt;li>&lt;strong>应用开发&lt;/strong>鸿沟：AI需要接受包含行业知识的各种输入数据，对AI应用开发系统产生整合要求，开发效率是重要影响因素之一。&lt;/li>
-&lt;li>&lt;strong>NPU性能&lt;/strong>鸿沟：AI算力真正转化为行业生产率，实际的运行性能将决定系统最终的性价比和业务执行能力。&lt;/li>
-&lt;li>&lt;strong>业务流程监控&lt;/strong>鸿沟：确保AI系统在业务环境的持续准确运行，是行业应用的重中之重。&lt;strong>AI算法需要具备持续更新、增量学习的能力&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>适配开发&lt;/strong>鸿沟：面对不同业务场景，需要以服务化和API形式封装AI算法，封装AI服务、部署AI服务于复杂的计算系统上，都将面临挑战。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912232100695.png" alt="image-20230912232100695">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>可信AI&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>AI具有自我演化潜力&lt;/strong>：人类对于AI核心运行机制、AI隐式编程、学习能力，依然没有彻底研究清楚。&lt;/li>
-&lt;li>&lt;strong>可信AI是大规模商用的基础&lt;/strong>：保护隐私、避免偏见、防止滥用、可靠边界、可解释、鲁棒性、防攻击等方面，都是AI能够真正大规模应用的挑战。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>人才需求&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>AI人才缺口巨大&lt;/strong>：中国AI人才缺口500万，供求比1:10。&lt;/li>
-&lt;li>&lt;strong>与美国差距巨大&lt;/strong>：中国的AI人才数量仅为美国四分之一。&lt;/li>
-&lt;li>&lt;strong>新一代AI发展规划&lt;/strong>：国务院《新一代AI发展规划》发布，明确指出建立AI高端人才队伍是AI发展重中之重。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="2昇腾计算产业">2.昇腾计算产业&lt;/h2>
-&lt;h3 id="21昇腾计算产业体系和定位">2.1.昇腾计算产业体系和定位&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>昇腾计算产业覆盖全产业链，全生态链&lt;/strong>，包括：昇腾处理器、硬件、CANN(Compute Architecture for Neural Networks，异构计算架构)、AI计算框架、应用使能、开发工具链、运维工具、行业应用及服务。&lt;/li>
-&lt;li>&lt;strong>昇腾计算硬件体系&lt;/strong>包括：
-&lt;ul>
-&lt;li>基于达芬奇内核的昇腾系列芯片，提供多样化AI算力。&lt;/li>
-&lt;li>基于昇腾系列芯片的硬件产品，如嵌入式模组、板卡、小站、服务器、集群等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>昇腾计算软件体系&lt;/strong>包括：
-&lt;ul>
-&lt;li>异构计算架构CANN，对标CUDA。&lt;/li>
-&lt;li>AI计算框架MindSpore，对标Pytorch。&lt;/li>
-&lt;li>工具链：运行时、加速库、编译器、调试调优工具、开发工具链MindStudio及运维工具。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>昇腾应用使能&lt;/strong>：基于MindX支撑的ModelArts、HiAI等。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912234104109.png" alt="image-20230912234104109">&lt;/p>
-&lt;h3 id="22昇腾计算产业价值">2.2.昇腾计算产业价值&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>硬件开放、软件开元、使能合作伙伴&lt;/strong>是华为构建昇腾生态的方式。&lt;/li>
-&lt;li>华为&lt;strong>聚焦AI芯片、基础软件&lt;/strong>的创新与研发。&lt;/li>
-&lt;li>&lt;strong>自有硬件+伙伴硬件&lt;/strong>，为客户提供多样化算力选择。&lt;/li>
-&lt;li>昇腾通过模组、板卡、小站、服务器、集群等产品形态，&lt;strong>打造&amp;quot;端、边、云&amp;quot;的全场景AI基础设施解决方案&lt;/strong>。&lt;/li>
-&lt;li>昇腾计算产业的三个愿景：
-&lt;ul>
-&lt;li>&lt;strong>用得起&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>用得好&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>用得放心&lt;/strong>：特指某国的芯片封锁吧。。。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="3昇腾计算技术体系">3.昇腾计算技术体系&lt;/h2>
-&lt;h3 id="31昇腾计算架构">3.1.昇腾计算架构&lt;/h3>
-&lt;p>下图展开了昇腾计算架构细节，从架构中可以看出：&lt;/p>
-&lt;ul>
-&lt;li>昇腾计算架构支持端边云全场景。&lt;/li>
-&lt;li>超强算力：Atlas训练卡提供320 TFLOPS FP16高算力，Atlas集群提供1024P FLOPS算力。&lt;/li>
-&lt;li>全站开放，模块间具备相互协同能力、各层之间支持独立演进。&lt;/li>
-&lt;li>MindX将设备资源、算力资源抽象并管理，应用软件无需了解底层硬件的复杂配置和调度。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230912235737889.png" alt="image-20230912235737889">&lt;/p>
-&lt;h3 id="32硬件体系">3.2.硬件体系&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>昇腾系列处理器&lt;/strong>：NPU针对矩阵运算进行专门优化设计，华为达芬奇架构面向AI计算设计的架构，独创16&lt;em>16&lt;/em>16的3D Cube设计。&lt;/li>
-&lt;li>&lt;strong>模组和板卡&lt;/strong>：Atlas 200加速模块、Atlas 300推理卡、Atlas 900。&lt;/li>
-&lt;li>&lt;strong>小站&lt;/strong>：基于昇腾系列处理器的边缘计算盒子。&lt;/li>
-&lt;li>&lt;strong>服务器&lt;/strong>：Atlas 800、Atlas500。&lt;/li>
-&lt;li>&lt;strong>集群&lt;/strong>：Atlas 900。&lt;/li>
-&lt;/ul>
-&lt;h3 id="33基础软件">3.3.基础软件&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>异构计算架构&lt;/strong>：
-&lt;ul>
-&lt;li>CANN支持10种设备形态、EMUI、Android、openEuler、UOS、Ubuntu、Debian、Suse等14种操作系统和AI计算框架。&lt;/li>
-&lt;li>CANN是一个开发体系，包含了编程语言、编译器等编程模型。&lt;/li>
-&lt;li>CANN包含4层：
-&lt;ul>
-&lt;li>Driver实现硬件和操作系统的适配。&lt;/li>
-&lt;li>Runtime、DVPP、HCCL提供内存管理、算力分配、资源调度。其中，HCCL，Huawei Collective Communication Library，华为集合通信库，提供板间和框间通信能力。&lt;/li>
-&lt;li>图引擎实现了大计算图拆分、图融合，最大化芯片算力利用率。&lt;/li>
-&lt;li>AscendCL提供插件适配、开放图融合接口、支持自定义算子融合、提供Ascend IR中间表达接口、支持自定义模型、开放预置算子库。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>CANN提供两种算子开发方式，
-&lt;ul>
-&lt;li>一种是TBE-DSL(Tensor Boost Engine-Domain Specific Language)，实现数据切分和调度。&lt;/li>
-&lt;li>一种是TBE-TIK(Tensor Iterator Kernel)，通过指令级编程，实现数据编排、计算表达。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913000935774.png" alt="image-20230913000935774">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>开发工具链MindStudio，提供工程管理、编译、调试、运行、性能分析等全流程开发。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>AI计算框架MindSpore，提供动静态图转换、自动并行、端边云协同能力。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>应用使能的核心是MindX DL和MindX Edge，封装了底层硬件、算子的协同调度能力。&lt;/p>
-&lt;ul>
-&lt;li>MindX DL架构图：&lt;/li>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913001119293.png" alt="image-20230913001119293">&lt;/li>
-&lt;li>MindX Edge架构图：&lt;/li>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913001132605.png" alt="image-20230913001132605">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="4行业实践">4.行业实践&lt;/h2>
-&lt;p>白皮书在本章节阐述了基于昇腾计算，构建的各行各业的解决方案：&lt;/p>
-&lt;ul>
-&lt;li>AI计算中心&lt;/li>
-&lt;li>互联网&lt;/li>
-&lt;li>制造&lt;/li>
-&lt;li>机器人&lt;/li>
-&lt;li>能源&lt;/li>
-&lt;li>金融&lt;/li>
-&lt;li>平安城市&lt;/li>
-&lt;li>电信&lt;/li>
-&lt;li>交通&lt;/li>
-&lt;li>医疗&lt;/li>
-&lt;/ul>
-&lt;p>这里展开3个行业解决方案：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>计算中心&lt;/strong>解决方案：从解决方案看，昇腾计算覆盖了AI芯片、AI驱动，是AI最核心的基础设施，完全国产化，很牛。
-&lt;ul>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913004001231.png" alt="image-20230913004001231">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>工业&lt;/strong>解决方案：针对半导体晶圆质检，基于昇腾强大算力，实现工业领域的目标定位、测量、质检等能力。这一点真正突破了AI在工业领域落地的，很牛。
-&lt;ul>
-&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913004208756.png" alt="image-20230913004208756">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>交通&lt;/strong>解决方案：
-&lt;ul>
-&lt;li>高速自由流收费稽核&lt;/li>
-&lt;li>交通视频云&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="5产业生态">5.产业生态&lt;/h2>
-&lt;p>在产业政策方面：&lt;/p>
-&lt;ul>
-&lt;li>昇腾与各地政府共建昇腾生态创新中心&lt;/li>
-&lt;li>通过行业联盟聚拢厂家、ISV、用户，建立各行业标杆。&lt;/li>
-&lt;/ul>
-&lt;p>在开发者方面：&lt;/p>
-&lt;ul>
-&lt;li>90%的开发者聚焦于基于AI算法的应用软件开发。&lt;/li>
-&lt;li>10%的开发者聚焦AI算法、AI驱动的开发。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913004825461.png" alt="image-20230913004825461">&lt;/p>
-&lt;p>在高校培养方面：&lt;/p>
-&lt;ul>
-&lt;li>昇腾与高校共建AI人才培养基地，与各高校推出昇腾计算体系课程与教材。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913005027655.png" alt="image-20230913005027655">&lt;/p>
-&lt;p>在合作伙伴方面：&lt;/p>
-&lt;ul>
-&lt;li>昇腾推出覆盖软件开发商、硬件开发商、云服务供应商、设备制造商等各类合作伙伴计划，华为为合作伙伴提供了资金+市场。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B012-%E6%98%87%E8%85%BE%E8%AE%A1%E7%AE%97%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E7%99%BD%E7%9A%AE%E4%B9%A6%E8%A7%A3%E8%AF%BB/image-20230913005123533.png" alt="image-20230913005123533">&lt;/p>
-&lt;h2 id="6未来展望昇腾推动ai成为通用目的技术">6.未来展望：昇腾推动AI成为通用目的技术&lt;/h2>
-&lt;p>引用白皮书中的一段话：&lt;strong>把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界&lt;/strong>。&lt;/p>
-&lt;p>昇腾计算产业的愿景是作为中国的AI基石，AI的基础设施，成为通用目的技术。&lt;/p>
-&lt;h2 id="7总结">7.总结&lt;/h2>
-&lt;p>当我第一次看到昇腾的AI芯片层，CANN对标CUDA，无比惊讶、激动、自豪，这可是对标英伟达的大事，技术难度、商业难度都不可想象。&lt;/p>
-&lt;p>昇腾计算已雏形初见，这可不是短期突击出来的。不得不说，华为在AI领域的持续投资令人钦佩！&lt;/p></description></item></channel></rss>
+&lt;p>欢迎各位小伙伴探讨交流，我们继续探索这个有趣的技术领域！&lt;/p></description></item></channel></rss>

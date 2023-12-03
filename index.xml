@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Nov 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Dec 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,116 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记29-LangChain解读1-快速入门</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link><pubDate>Thu, 23 Nov 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid><description>&lt;p>虽然利用提示词工程，我们已经能较好地使用LLM，但即使开发一个很简单的LLM应用，依然需要编写大量复杂代码(调用LLM只是最简单的一步)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记30-提示词解读5-实战案例之转换</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</link><pubDate>Sat, 02 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</guid><description>&lt;p>今天我们跟着吴恩达老师的课程，学习LLM另一个强大的能力——转换(&lt;code>Transforming&lt;/code>)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231128162542742.png" alt="image-20231128162542742">&lt;/p>
+&lt;h1 id="1激发转换能力的提示词">1.激发转换能力的提示词&lt;/h1>
+&lt;h2 id="1什么是llm的转换能力">(1)什么是LLM的转换能力&lt;/h2>
+&lt;p>LLM的转换能力是指&lt;strong>将文本从一种形式或格式转换为另一种形式或格式的能力&lt;/strong>。&lt;/p>
+&lt;p>转换能力使得LLM成为一个强大的文本处理工具，可以在如下场景应用：&lt;/p>
+&lt;ul>
+&lt;li>文本翻译&lt;/li>
+&lt;li>修正内容错误&lt;/li>
+&lt;li>改变内容风格&lt;/li>
+&lt;li>转换文本格式&lt;/li>
+&lt;/ul>
+&lt;p>注：目前很火的&lt;strong>LLM4SE领域&lt;/strong>(如：代码转换、代码修正、代码检视等)，&lt;strong>本质都是在激发LLM的转换能力&lt;/strong>。&lt;/p>
+&lt;h2 id="2如何激发llm的转换能力">(2)如何激发LLM的转换能力&lt;/h2>
+&lt;p>我们可以这样构建提示词：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>根据任务类型，使用清晰明确的指令词，如：&lt;strong>转换&lt;/strong>xxx、&lt;strong>翻译&lt;/strong>xxx、校正xxx。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2实战案例">2.实战案例&lt;/h1>
+&lt;p>假设我是某跨境电商的售前客服，要用LLM的转换能力来支撑处理用户问题：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>翻译&lt;/strong>国外用户反馈的问题。&lt;/li>
+&lt;li>写问题回复，让LLM&lt;strong>校正&lt;/strong>内容错误。&lt;/li>
+&lt;li>把回复内容&lt;strong>转换&lt;/strong>成商务邮件风格。&lt;/li>
+&lt;li>将问题及回复&lt;strong>转换&lt;/strong>成JSON和表格，便于后续建单留档。&lt;/li>
+&lt;/ul>
+&lt;h2 id="step1翻译用户问题">STEP1.翻译用户问题&lt;/h2>
+&lt;p>黑色星期五，电商客服收到一条问题如下：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>“Avez-vous encore des stocks de smartphones ? Comment puis-je participer à vos promotions ?”&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>这是哪国语言，什么意思？😵 (客服小姐姐一脸黑线)&lt;/p>
+&lt;p>程序员小哥哥英雄救美，让LLM帮忙&lt;strong>翻译&lt;/strong>下。&lt;/p>
+&lt;ul>
+&lt;li>程序员小哥的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129171159198.png" alt="image-20231129171159198">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129171243074.png" alt="image-20231129171243074">&lt;/p>
+&lt;p>LLM识别出了文字的语种，并按指令进行了机器翻译。&lt;/p>
+&lt;h2 id="step2回复客户邮件">STEP2.回复客户邮件&lt;/h2>
+&lt;p>生意上门，客服小姐姐非常开心，但迅速陷入了沉思：如何给法语客户回复专业的售前邮件呢？😵&lt;/p>
+&lt;p>通常，回复售前邮件需要有如下流程：&lt;/p>
+&lt;ul>
+&lt;li>编写回复信息并校正&lt;/li>
+&lt;li>设计回复信息风格&lt;/li>
+&lt;li>记录JSON和表格，归档到IT系统&lt;/li>
+&lt;/ul>
+&lt;p>此时，程序员小哥哥再次出手，英雄救美。&lt;/p>
+&lt;h3 id="step21编写并校正回复信息">STEP2.1.编写并校正回复信息&lt;/h3>
+&lt;p>客服小姐姐用中文写了回复信息：&lt;em>“我们手机的库存非长充足。优惠活动是买两部送一步。尽管放心下单吧。”&lt;/em>&lt;/p>
+&lt;p>程序员小哥哥让LLM帮忙&lt;strong>校对&lt;/strong>下是否有文字错误。&lt;/p>
+&lt;ul>
+&lt;li>程序员小哥的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129173833270.png" alt="image-20231129173833270">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129174109866.png" alt="image-20231129174109866">&lt;/p>
+&lt;p>LLM识别出了错别字，并修正了回复信息。&lt;/p>
+&lt;h3 id="step22改变内容风格">STEP2.2.改变内容风格&lt;/h3>
+&lt;p>商务对话要正式点儿，让LLM把初始信息&lt;strong>转换&lt;/strong>成商务&lt;strong>风格&lt;/strong>的回复，然后翻译成法语。&lt;/p>
+&lt;ul>
+&lt;li>程序员小哥的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129181528670.png" alt="image-20231129181528670">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129181557507.png" alt="image-20231129181557507">&lt;/p>
+&lt;p>LLM很好的完成了任务，让客服小姐姐不用在翻译、措辞上花太多时间。&lt;/p>
+&lt;h3 id="step23将问题及回复转换成json和表格">STEP2.3.将问题及回复转换成JSON和表格&lt;/h3>
+&lt;p>客户问题很多，需要客服小姐姐将问题及回复，整理成JSON和表格形式，提交到IT系统归档。&lt;/p>
+&lt;p>程序员小哥哥，利用LLM的&lt;strong>文本格式转换功能&lt;/strong>快速处理这些文本。&lt;/p>
+&lt;p>如：转换成程序容易处理的JSON格式：&lt;/p>
+&lt;ul>
+&lt;li>程序员小哥的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183618410.png" alt="image-20231129183618410">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183643134.png" alt="image-20231129183643134">&lt;/p>
+&lt;p>还可以把JSON转成直观易读的表格：&lt;/p>
+&lt;ul>
+&lt;li>程序员小哥的提示词如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183705048.png" alt="image-20231129183705048">&lt;/p>
+&lt;ul>
+&lt;li>LLM的回答如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183727101.png" alt="image-20231129183727101">&lt;/p>
+&lt;p>最后，翻译、校正、文本转换、格式转换，只需用LLM一个工具就可以搞定。&lt;/p>
+&lt;p>最后，程序员小哥哥和客服小姐姐开启了一段美好的爱情故事。&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文介绍了一个LLM另一个实用的提示词技巧，可以充分利用LLM的文本转换能力，帮助我们处理繁琐的文档工作。&lt;/p>
+&lt;p>转换提示词的构建方法：&lt;/p>
+&lt;ul>
+&lt;li>根据任务类型，使用清晰明确的指令词，如&lt;strong>转换&lt;/strong>xxx、&lt;strong>翻译&lt;/strong>xxx、校正xxx。&lt;/li>
+&lt;li>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/li>
+&lt;/ul>
+&lt;p>此外，这个故事还告诉我们：作为程序员小哥哥，要努力学习AI，高效使用AI，才能抱得美人归。&lt;/p></description></item><item><title>【chatGPT】学习笔记29-LangChain解读1-快速入门</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link><pubDate>Thu, 23 Nov 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid><description>&lt;p>虽然利用提示词工程，我们已经能较好地使用LLM，但即使开发一个很简单的LLM应用，依然需要编写大量复杂代码(调用LLM只是最简单的一步)。&lt;/p>
 &lt;p>&lt;strong>LangChain&lt;/strong>的目标就是让开发LLM应用变的简单，但LangChain更新极快，导致我们的学习成本较高。&lt;/p>
 &lt;p>因此，我们准备做两件事，帮助大家提升学习LangChain的效率：&lt;/p>
 &lt;ul>
@@ -5233,277 +5342,4 @@
 &lt;p>昇腾计算产业的愿景是作为中国的AI基石，AI的基础设施，成为通用目的技术。&lt;/p>
 &lt;h2 id="7总结">7.总结&lt;/h2>
 &lt;p>当我第一次看到昇腾的AI芯片层，CANN对标CUDA，无比惊讶、激动、自豪，这可是对标英伟达的大事，技术难度、商业难度都不可想象。&lt;/p>
-&lt;p>昇腾计算已雏形初见，这可不是短期突击出来的。不得不说，华为在AI领域的持续投资令人钦佩！&lt;/p></description></item><item><title>【chatGPT】学习笔记11-LLM应用-垂直领域知识问答系统(基于ChatGLM2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</link><pubDate>Tue, 05 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-llm%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E5%9F%BA%E4%BA%8Echatglm2/</guid><description>&lt;p>今天我们再来写一篇关于大语言模型的实战应用——如何开发一个垂直领域的知识问答系统？&lt;/p>
-&lt;h1 id="1原理">1.原理&lt;/h1>
-&lt;h2 id="1基于传统技术的实现方案">(1)基于传统技术的实现方案&lt;/h2>
-&lt;p>在没有大语言模型之前，有如下传统技术实现知识问答系统：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键词匹配&lt;/strong>：在系统内预设一些关键词，系统根据用户提出的问题进行关键词匹配，从中提取出匹配的答案。
-&lt;ul>
-&lt;li>&lt;strong>局限性&lt;/strong>：仅适用于简单、明确的问题，但复杂问题、多义词等，效果就不好。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>规则匹配&lt;/strong>：在系统内预设一些规则模板，系统根据用户提出的问题结构进行匹配，这些规则模板包括：语法规则、语义规则、业务领域规则。
-&lt;ul>
-&lt;li>&lt;strong>局限性&lt;/strong>：需要人类专家编写规则模板，对领域知识的抽象和表达能力有一定要求。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>统计方法&lt;/strong>：系统基于统计学模型构建，如：条件随机场(CRF，Conditional Random Field)，进行问题分类、命名实体识别等。
-&lt;ul>
-&lt;li>&lt;strong>局限性&lt;/strong>：强依赖数据，数据采集、数据清洗、数据标注，都要消耗人类巨大的工作量。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>知识图谱&lt;/strong>：系统基于领域相关的知识图谱或实体构建，可以通过图谱中的实体、关系和属性实现问题解析和答案生成。
-&lt;ul>
-&lt;li>&lt;strong>局限性&lt;/strong>：需要人类专家对业务领域的知识进行建模、抽象，好不容易构建好，知识刷新了。。。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="2基于大语言模型的实现方案">(2)基于大语言模型的实现方案&lt;/h2>
-&lt;p>和老李师傅聊大语言模型，他说：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>大语言模型，是从&lt;strong>word&lt;/strong>到&lt;strong>world&lt;/strong>的过程——AI学习一堆word的关系，然后就具备了概括、抽象、推理的能力去描述世界。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>人类程序员，是从&lt;strong>world&lt;/strong>到&lt;strong>word&lt;/strong>的过程——人类学习这个世界，然后用代码描述世界(代码就是一堆word的组合)。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>最后，他老人家感叹道：&amp;ldquo;N年后，别人看我们，就像我们看伏尔加河上的纤夫。纤夫光着腚，我们光着头。&amp;rdquo;&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230905163751495.png" alt="image-20230905163751495">&lt;/p>
-&lt;p>的确如此，相较于前述传统技术，基于大语言模型实现知识问答系统，有很多天然优势：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>学习效率高&lt;/strong>：大语言模型学习速度极快。后文实践章节中，有这么一个例子：我找公路军团的同学要了1000多份交通专业的文档和书籍，大语言模型&lt;strong>1分钟学习10个文档，2小时学完1000份&lt;/strong>，而&lt;strong>每小时只消耗了1.39元&lt;/strong>。这位交通领域的专家无比惊讶地告诉我——这1000多个文档，他也只详细看完了其中200个。&lt;/li>
-&lt;li>&lt;strong>无需人工干预&lt;/strong>：传统技术需要大量的人工干预，特别强依赖人类专家那些&lt;strong>只可意会、不可言传&lt;/strong>的经验。而大语言模型可以自动学习和更新知识，无需人工干预。这意味着问答应用可以及时获取最新的知识，随着时间的推移变得更加智能和准确。&lt;/li>
-&lt;li>&lt;strong>多轮对话&lt;/strong>：大语言模型还可以处理复杂的问题和多轮对话。它能够理解问题的语义和上下文，并根据用户的追问进行适当的回答。这使得问答应用更加交互式和人性化，提供更好的用户体验。&lt;/li>
-&lt;li>……好处太多，省略千言万语……&lt;/li>
-&lt;/ul>
-&lt;h2 id="3大语言模型选型">(3)大语言模型选型&lt;/h2>
-&lt;p>大语言模型的选型需要根据LLM App的应用场景，并且也不是只选1个，而是选择N个，形成大语言模型矩阵。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906090930061.png" alt="image-20230906090930061">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>世界知识&lt;/strong>：从世界知识看，目前主流的LLM如下：
-&lt;ul>
-&lt;li>&lt;strong>GPT系&lt;/strong>：当红炸子鸡的它，提供的接口包括&lt;code>Model&lt;/code>、&lt;code>Completions&lt;/code>、&lt;code>Chat&lt;/code>、&lt;code>Edits&lt;/code>、&lt;code>Images&lt;/code>、&lt;code>Embeddings&lt;/code>、&lt;code>Audio&lt;/code>、&lt;code>Files&lt;/code>、&lt;code>Fine-tunes&lt;/code>、&lt;code>Others&lt;/code>等10大类，完整地覆盖了&lt;strong>训练&lt;/strong>、&lt;strong>推理&lt;/strong>场景。针对&lt;strong>微调场景&lt;/strong>，覆盖了词嵌入、微调，在&lt;strong>推理&lt;/strong>场景，覆盖了预测、聊天、修正、多模态。&lt;strong>知识文档不涉密且不差钱&lt;/strong>的公司，可直接使用。笔者为了测试GPT4的API，&lt;font color=green>&lt;strong>半小时就花光了40大洋&lt;/strong>&lt;/font>，求赞助！&lt;/li>
-&lt;li>&lt;strong>LLama系&lt;/strong>：卷王Meta的开源大戏，LLama一出，瞬间抢走了chatGPT的焦点。随后各顶流大学就开始了基于LLama的训练微调，推出了以Vicuna、Alpaca为代表的一系列模型。LLama2发布后更是好评无数，没几天又推出了最会写代码的CodeLLama。。。大语言模型界的卷王实至名归！&lt;/li>
-&lt;li>&lt;strong>Claude系&lt;/strong>：谷歌前员工的大神们拉旗单干的产品，也是GPT系的强劲对手。&lt;/li>
-&lt;li>&lt;strong>GLM系&lt;/strong>：清华大学出品，公司化商业运作。chatGLM的中文能力非常不错，GLM-130B成为2022年亚洲唯一入选全球30个主流大模型全方位测评报告的候选对象。国货之光，本文的知识问答系统就是演示的它。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>模型系列&lt;/th>
-&lt;th>版本&lt;/th>
-&lt;th>厂商/机构&lt;/th>
-&lt;th>开源or闭源&lt;/th>
-&lt;th>调用形式&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>GPT系&lt;/td>
-&lt;td>GPT3.5Turbo、GPT4&lt;/td>
-&lt;td>OpenAI&lt;/td>
-&lt;td>闭源&lt;/td>
-&lt;td>远程调用&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>LLama系&lt;/td>
-&lt;td>LLama、LLama2、CodeLLama&lt;/td>
-&lt;td>Meta&lt;/td>
-&lt;td>开源&lt;/td>
-&lt;td>本地调用&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Claude系&lt;/td>
-&lt;td>Claude-instant、Claude-2-100k&lt;/td>
-&lt;td>Anthropic&lt;/td>
-&lt;td>闭源&lt;/td>
-&lt;td>远程调用&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>GLM系&lt;/td>
-&lt;td>chatGLM2、GLM-130B、VisualGLM-6B&lt;/td>
-&lt;td>清华大学&lt;/td>
-&lt;td>开源&lt;/td>
-&lt;td>本地调用&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;ul>
-&lt;li>&lt;strong>领域知识&lt;/strong>：以编程辅助领域为例，目前表现不错的LLM如下：&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>模型系列&lt;/th>
-&lt;th>版本&lt;/th>
-&lt;th>厂商/机构&lt;/th>
-&lt;th>开源or闭源&lt;/th>
-&lt;th>调用形式&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>BigCode系&lt;/td>
-&lt;td>StarCoder、OctoPack、SantaCoder&lt;/td>
-&lt;td>Hugging Face&lt;/td>
-&lt;td>开源&lt;/td>
-&lt;td>本地调用&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>LLama系&lt;/td>
-&lt;td>CodeLLama&lt;/td>
-&lt;td>Meta&lt;/td>
-&lt;td>开源&lt;/td>
-&lt;td>本地调用&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>GLM系&lt;/td>
-&lt;td>CodeGeeX2&lt;/td>
-&lt;td>清华大学&lt;/td>
-&lt;td>开源&lt;/td>
-&lt;td>本地调用&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>综上分析：&lt;/p>
-&lt;ul>
-&lt;li>对世界知识的表现体现的是大语言模型的&lt;strong>通才&lt;/strong>，对领域知识的表现体现的是大语言模型的&lt;strong>专才&lt;/strong>。&lt;/li>
-&lt;li>在没有一个大语言模型即是通才又是专才的限制下，垂直领域知识问答系统需要的是&lt;strong>大语言模型矩阵&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h2 id="4大语言模型之外的关键技术">(4)大语言模型之外的关键技术&lt;/h2>
-&lt;p>是不是选择好了大语言模型，LLM APP就信手拈来呢？很不幸，不是！&lt;/p>
-&lt;p>在最近的一次行业交流中，有两个议题值得思考：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>量变引起质变&lt;/strong>：百度智能云/技术委员会主席王耀，针对大语言模型的训练推理场景，阐述了通用云计算、分布式云、智能计算的计算范式的变化。其中，最心酸的一个故事是：以前硬件上某个万分之一的故障是可以接受的，现在不可以了，因为大语言模型训练的计算量级无比巨大！&lt;/li>
-&lt;li>&lt;strong>淘金时代的卖铲人&lt;/strong>：LangChain CEO Harrision Chase分享的议题是《Why LangChain，What I Saw When Building AI Application with LLM》，在各大厂商逐鹿中原的时候，LangChain忽然火了，按照这个趋势，它应该会成为LLM APP的开发框架了。&lt;/li>
-&lt;/ul>
-&lt;p>因为，&lt;strong>训练&lt;/strong>大语言模型的计算量剧增，对原有的云计算有新的诉求。&lt;/p>
-&lt;p>因为，&lt;strong>粘合&lt;/strong>大语言模型需要有很多工作，需要有LLM APP的开发框架。&lt;/p>
-&lt;p>通过LangChain的特性介绍和架构，我们可以知道大语言模型之外，我们还需要做如下事情：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>文本处理&lt;/strong>：对各类型文档的加载，对文本的切分等。&lt;/li>
-&lt;li>&lt;strong>向量存储&lt;/strong>：适配不同向量数据库，将文档内容向量化并存储。&lt;/li>
-&lt;li>&lt;strong>提示词管理&lt;/strong>：创建提示词模板，最大化重用提示词。&lt;/li>
-&lt;li>&lt;strong>模型适配&lt;/strong>：针对不同厂商，适配各类大语言模型的接口。&lt;/li>
-&lt;li>&lt;strong>输出解析&lt;/strong>：对大语言模型输出的文本进行结构化解析。&lt;/li>
-&lt;/ul>
-&lt;p>具体可以看笔者这篇文章：《【chatGPT】学习笔记10-LangChain之ModelIO，对LLM的抽象1》&lt;/p>
-&lt;h2 id="5架构示例langchain-chatchat">(5)架构示例：LangChain-ChatChat&lt;/h2>
-&lt;p>垂直领域问答系统的开源项目已经有很多了，以LangChain-ChatChat为例，可以看到这类LLM APP的软件架构：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906095324183.png" alt="image-20230906095324183">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>训练环节&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Unstructured Loader&lt;/strong>：负责将知识文档加载并解析。&lt;/li>
-&lt;li>&lt;strong>Text Splitter&lt;/strong>：将文档按照标点符号，拆分断句。&lt;/li>
-&lt;li>&lt;strong>Text Chunks&lt;/strong>：将断句分词分组，分词分组间存在一定的上下文关联。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906095608282.png" alt="image-20230906095608282">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Embedding&lt;/strong>：词嵌入，并将词向量存储于向量数据库中。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>应用环节&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Query Embedding&lt;/strong>：将用户提问转换了词向量。&lt;/li>
-&lt;li>&lt;strong>Vector Similarity&lt;/strong>：在向量数据库中，用问题词向量，去搜索相关的知识文本向量。&lt;/li>
-&lt;li>&lt;strong>Related Text Chunks&lt;/strong>：根据相关的知识文本向量，反查出对应的知识文本分词分组。这里有个细节，还会将文本分词分组的前后分词分组一并返回(因为这些文字可能有上下文关联关系)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906100110319.png" alt="image-20230906100110319">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Prompt Template&lt;/strong>：提示词模板，这个模块是知识问答系统的关键！最简单的提示词模板就是：
-&lt;ul>
-&lt;li>&lt;strong>已知&lt;/strong>：[Related Text Chunks获得的知识文本分词分组]，&lt;strong>请问&lt;/strong>[用户的问题]如何答复？&lt;/li>
-&lt;li>这，不就是开卷考试吗？&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906100510639.png" alt="image-20230906100510639">&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>从上述架构可以看出来，曾经很复杂的知识问答系统，大部分核心难点，都被大语言模型搞定了。&lt;/p>
-&lt;p>接下来，我们来动手实践一下，构建一个我们自己的知识问答系统。&lt;/p>
-&lt;h1 id="2实践">2.实践&lt;/h1>
-&lt;h2 id="21推理环境搭建">2.1.推理环境搭建&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>STEP1.基于MiniCoda，创建虚拟环境&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906101650577.png" alt="image-20230906101650577">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP2.激活虚拟环境，安装运行时环境&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906101852342.png" alt="image-20230906101852342">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP3.下载依赖。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102057137.png" alt="image-20230906102057137">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP5.初始化向量数据库。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102553686.png" alt="image-20230906102553686">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP6.配置model_config.py、server_config.py、llm_api.py。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102733935.png" alt="image-20230906102733935">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102716203.png" alt="image-20230906102716203">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102703074.png" alt="image-20230906102703074">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102652268.png" alt="image-20230906102652268">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP7.启动应用&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906103336869.png" alt="image-20230906103336869">&lt;/p>
-&lt;h2 id="22模型部署">2.2.模型部署&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>STEP1.下载大语言模型和词嵌入模型&lt;/strong>——chatGLM2-6B、m3e-base&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102213647.png" alt="image-20230906102213647">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906102246753.png" alt="image-20230906102246753">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP2.部署大语言模型和词嵌入模型。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906103747404.png" alt="image-20230906103747404">&lt;/p>
-&lt;h2 id="23模型微调">2.3.模型微调&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>STEP1.通过WebUI，上传知识文档。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906103254463.png" alt="image-20230906103254463">&lt;/p>
-&lt;ul>
-&lt;li>&lt;font color=red>&lt;strong>STEP2.编写提示词模板&lt;/strong>&lt;/font>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906104642146.png" alt="image-20230906104642146">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906104709680.png" alt="image-20230906104709680">&lt;/p>
-&lt;ul>
-&lt;li>经过2小时的学习，LLM修炼完了1000多份智慧交通的资料，这学习效率杠杠滴！
-&lt;ul>
-&lt;li>PS：感谢公路军团的专家，提供珍藏多年的资料，改天请您吃饭！&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011-LLM%E5%BA%94%E7%94%A8-%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F(%E5%9F%BA%E4%BA%8EChatGLM2)/image-20230906105032126.png" alt="image-20230906105032126">&lt;/p>
-&lt;h2 id="24模型测试">2.4.模型测试&lt;/h2>
-&lt;p>直接上视频，咨询了一下交通行业的这位专家，回答挺靠谱：&lt;/p>
-&lt;iframe src="//player.bilibili.com/player.html?aid=830744059&amp;bvid=BV1C34y1N7QG&amp;cid=1258811184&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;h1 id="3总结">3.总结&lt;/h1>
-&lt;p>本文阐述了基于大语言模型的知识问答系统的实现原理及原型实践过程，原型距离可商用还有很多细节需打磨，但我们可以得到如下观点：&lt;/p>
-&lt;ul>
-&lt;li>从实现原理看：
-&lt;ul>
-&lt;li>&lt;strong>技术关键点1&lt;/strong>：要&lt;font color=red>&lt;strong>选择合适的多种大语言模型，形成大语言模型的矩阵&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>&lt;strong>技术关键点2&lt;/strong>：除大语言模型选型，还需&lt;strong>借助LangChain处理好诸多环节&lt;/strong>(文档结构化、分段分词、词嵌入、上下文、向量搜索、提示词等)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>从实践看：
-&lt;ul>
-&lt;li>&lt;strong>数据&lt;/strong>：数据收集、数据清洗、词嵌入等，极为重要。&lt;/li>
-&lt;li>&lt;strong>大语言模型&lt;/strong>：需跟踪各大厂商大语言模型的最新能力，快速替换到应用软件中，&lt;font color=red>&lt;strong>保持大语言模型的先进性&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>&lt;strong>提示词&lt;/strong>：提示词模板的设计，决定了能否&lt;font color=red>&lt;strong>充分发挥大语言模型的潜力&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>&lt;strong>工具链&lt;/strong>：熟练运用LangChain、向量数据库等工具，有助于设计并实现适应业务场景的问答业务流。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>今天就写到这里，后续专栏会继续展示基于大语言模型的LLM应用，欢迎共同探索(上述环境已做成镜像，需要的同学可后台联系作者)。&lt;/p></description></item></channel></rss>
+&lt;p>昇腾计算已雏形初见，这可不是短期突击出来的。不得不说，华为在AI领域的持续投资令人钦佩！&lt;/p></description></item></channel></rss>

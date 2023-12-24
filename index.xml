@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Dec 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Dec 2023 14:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,161 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记32-LangChain解读-LCEL语言之基础语法(1)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B032-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%951/</link><pubDate>Wed, 13 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B032-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%951/</guid><description>&lt;p>在《【chatGPT】学习笔记29-LangChain解读1-快速入门》中，我们学习了LangChain的入门文档，了解到LangChain的模块化组件和链让开发LLM应用变得简单。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记33-LangChain解读-LCEL语言之基础语法(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/</link><pubDate>Sat, 23 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/</guid><description>&lt;p>LCEL让我们可以用&lt;code>|&lt;/code>管道符把不同的组件或链组合起来，这都得益于这些组件都实现了Runnable接口。&lt;/p>
+&lt;p>本篇我们就带着Runnable的概念继续学习下LCEL的基础用法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231222104906413.png" alt="image-20231222104906413">&lt;/p>
+&lt;h1 id="1-lcel核心接口runnable">1. LCEL核心接口Runnable&lt;/h1>
+&lt;h2 id="1runnable接口">(1)Runnable接口&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Langchain定义了“Runnable”协议，协议中实现了一系列方法，比如对管道运算符&lt;code>|&lt;/code>的支持、invoke方法等。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这里介绍下Runnable定义的一组标准调用接口（其中后三个是前面三个异步方式）：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#stream">&lt;code>stream&lt;/code>&lt;/a>：流式输出&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#invoke">&lt;code>invoke&lt;/code>&lt;/a>：基于单一输入调用链&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#batch">&lt;code>batch&lt;/code>&lt;/a>：基于列表输入调用链&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#async-stream">&lt;code>astream&lt;/code>&lt;/a>：异步流式输出&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#async-invoke">&lt;code>ainvoke&lt;/code>&lt;/a>：基于单一输入异步调用链&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#async-batch">&lt;code>abatch&lt;/code>&lt;/a>：基于列表输入异步调用链&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>LangChain的很多组件(对象)都应用了Runnable协议，可以把他们称为Runnable对象，这些对象都实现了上述接口，因此这些对象组成的链也都支持上述调用方法。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="2常用runnable对象的输入输出类型">(2)常用Runnable对象的输入输出类型&lt;/h2>
+&lt;p>LCEL中使用&lt;code>|&lt;/code>将前一个Runnable对象的输出传递给下一个Runnable对象作为输入，因此需要保证管道两端的型号一致。&lt;/p>
+&lt;p>LangChain常用组件的输入、输出数据类型如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>组件&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>输入类型&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>输出类型&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Prompt (提示词)&lt;/td>
+&lt;td>字典&lt;/td>
+&lt;td>PromptValue&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ChatModel (聊天模型)&lt;/td>
+&lt;td>单个字符串、聊天消息列表或 PromptValue&lt;/td>
+&lt;td>ChatMessage&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LLM (非聊天模型)&lt;/td>
+&lt;td>单个字符串、聊天消息列表或 PromptValue&lt;/td>
+&lt;td>String&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>OutputParser (输出解析器)&lt;/td>
+&lt;td>LLM 或 ChatModel 的输出&lt;/td>
+&lt;td>取决于解析器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Retriever (检索器 )&lt;/td>
+&lt;td>单个字符串&lt;/td>
+&lt;td>文档清单&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Tool (工具)&lt;/td>
+&lt;td>单个字符串或字典，具体取决于工具&lt;/td>
+&lt;td>取决于工具&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="3-runnablepassthrough在管道中的作用">(3) RunnablePassthrough在管道中的作用&lt;/h2>
+&lt;p>在使用LCEL构建链时，原始用户输入可能不仅要传给第一个组件，还要传给后续组件，这时可以用RunnablePassthrough。RunnablePassthrough可以透传用户输入。&lt;/p>
+&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
+&lt;p>下面我们通过一个包含4个组件的RAG检索链来再次体验LCEL的便捷。&lt;/p>
+&lt;p>示例场景是基于给定的文本回答用户问题。&lt;/p>
+&lt;h2 id="step1环境准备">STEP1.环境准备&lt;/h2>
+&lt;ul>
+&lt;li>注意：由于示例的是检索本地文本，所以安装了向量数据库及其所需的库。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223004634709.png" alt="image-20231223004634709">&lt;/p>
+&lt;h2 id="step2构建检索器组件">STEP2.构建检索器组件&lt;/h2>
+&lt;ul>
+&lt;li>为方便演示，本地文本简单的放一句话：”大鱼吃小鱼，小鱼吃虾米“。&lt;/li>
+&lt;li>用langchain的检索器&lt;code>as_retriever&lt;/code>，它可以根据输入查询向量库并返回相关文本。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223005234058.png" alt="image-20231223005234058">&lt;/p>
+&lt;h2 id="step3构建prompt提示词组件">STEP3.构建Prompt提示词组件&lt;/h2>
+&lt;ul>
+&lt;li>提示词设计的是根据给定的文字回答问题。&lt;/li>
+&lt;li>提示词中共2个变量：&lt;code>question&lt;/code>用来接收用户问题，&lt;code>context&lt;/code>来接收检索器的查询结果。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223010525145.png" alt="image-20231223010525145">&lt;/p>
+&lt;h2 id="step4构建llm组件">STEP4.构建llm组件&lt;/h2>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223011307090.png" alt="image-20231223011307090">&lt;/p>
+&lt;h2 id="step5组合成链">STEP5.组合成链&lt;/h2>
+&lt;ul>
+&lt;li>把检索器、提示词、模型、输出解析器四个组件串起来，命名为检索链&lt;code>retrieval_chain&lt;/code>。&lt;/li>
+&lt;li>这一步注意两点：
+&lt;ul>
+&lt;li>用户输入的问题，不止组件1的检索器要用，组件2也要用它来构建提示词，因此组件1使用RunnablePassthrough方法把原始输入透传给下一步。&lt;/li>
+&lt;li>由于组件2 prompt的输入要求是字典类型，所以组件1把检索器和用户问题写成字典格式，并用组件2的变量作为键。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223011350292.png" alt="image-20231223011350292">&lt;/p>
+&lt;h2 id="step6运行链">STEP6.运行链&lt;/h2>
+&lt;ul>
+&lt;li>传入用户问题，得到期望结果。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223011640703.png" alt="image-20231223011640703">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本文解读了LangChain LCEL及其Runnable基础语法，关键要点如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Runnable接口&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Runnable是Langchain表达式语言的核心接口&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Runnable提供了一组标准调用接口：stream、invoke、batch及对应的异步方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Langchain很多组件都遵循Runnable协议，因此可以方便的组合、调用。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>常用Runnable对象的输入输出类型要求，用管道&lt;code>|&lt;/code>方式组合时需注意管道两端的类型一致。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>RunnablePassthrough在管道中的作用。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>构建了包含四个组件的检索链。&lt;/li>
+&lt;li>通过实操关注了管道前后数据类型的匹配、RunnablePassthrough的作用。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记32-LangChain解读-LCEL语言之基础语法(1)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B032-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%951/</link><pubDate>Wed, 13 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B032-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%951/</guid><description>&lt;p>在《【chatGPT】学习笔记29-LangChain解读1-快速入门》中，我们学习了LangChain的入门文档，了解到LangChain的模块化组件和链让开发LLM应用变得简单。&lt;/p>
 &lt;p>同时，LangChain还推出了自己的语法——LCEL(LangChain表达式语言)，让复杂的组合链变得更简单。&lt;/p>
 &lt;p>本篇我们跟着官方文档来学习LCEL的概念及如何使用。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B032-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(1)/image-20231208175706824.png" alt="image-20231208175706824">&lt;/p>
@@ -4654,516 +4808,5 @@
 &lt;li>&lt;strong>顺序链&lt;/strong>：SequentialChain，实现了多输入多输出的串行执行的工作流。&lt;/li>
 &lt;li>&lt;strong>决策链&lt;/strong>：RouterChain，实现了根据问题内容，选择工作流走向的能力。&lt;/li>
 &lt;li>Chain类拥有很多子类，实现不同的业务流程，可以根据实战需要继续阅读源码和实践。&lt;/li>
-&lt;/ul>
-&lt;p>后续文章，我们继续解读LangChain的核心模块，感谢阅读。&lt;/p></description></item><item><title>【chatGPT】学习笔记14-LangChain之Memory，对LLM的抽象2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</link><pubDate>Tue, 19 Sep 2023 19:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-langchain%E4%B9%8Bmemory%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A12/</guid><description>&lt;p>我们继续写点儿偏工程实践的内容——LangChain的核心模块2——Chain。&lt;/p>
-&lt;h1 id="1核心模块2memory">1.核心模块2：Memory&lt;/h1>
-&lt;p>实现一个问答系统，通常需要将历史上的问题和答案，作为本次问题的上下文。&lt;/p>
-&lt;p>因此，LangChain提供了Memory模块，这个模块对记忆进行了抽象：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP1&lt;/strong>.当用户提出问题时，LangChain会去读&lt;strong>Memory&lt;/strong>，获得过去的消息&lt;strong>past_messages&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>STEP2&lt;/strong>.LangChain构造提示词，格式为&amp;rdquo;&lt;strong>{past_messages}{question}&lt;/strong>&amp;quot;。&lt;/li>
-&lt;li>&lt;strong>STEP3&lt;/strong>.LLM进行回答后，得到答案**{answer:&amp;hellip;}**。&lt;/li>
-&lt;li>STEP4.LangChain将本次的答案**{answer:&amp;hellip;}**，**写入Memory**。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920062809577.png" alt="image-20230920062809577">&lt;/p>
-&lt;p>LangChain提供了多种ChatMessageHistory、ChatMemory，我们接下来详细解读。&lt;/p>
-&lt;h2 id="11chatmessagehistory">1.1.ChatMessageHistory&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>类的继承关系&lt;/strong>：BaseChatMessageHistory &amp;ndash;&amp;gt; &lt;name>ChatMessageHistory # Example: ZepChatMessageHistory&lt;/li>
-&lt;li>&lt;strong>BaseChatMessageHistory&lt;/strong>：聊天消息历史记录的基类，定义了一系列方法，由子类实现&lt;/li>
-&lt;li>代码路径/libs/langchain/langchain/schema/chat_history.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920064148308.png" alt="image-20230920064148308">&lt;/p>
-&lt;h2 id="12basememory">1.2.BaseMemory&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>类的继承关系&lt;/strong>：BaseMemory &amp;ndash;&amp;gt; BaseChatMemory &amp;ndash;&amp;gt; &lt;name>Memory # Examples: ZepMemory, MotorheadMemory&lt;/li>
-&lt;li>&lt;strong>BaseMemory&lt;/strong>：Memory基类，定义了一系列方法，由子类实现&lt;/li>
-&lt;li>代码路径/libs/langchain/langchain/schema/memory.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">BaseMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Serializable&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Abstract base class for memory in Chains.
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> Memory refers to state in Chains. Memory can be used to store information about
-&lt;/span>&lt;span class="s2"> past executions of a Chain and inject that information into the inputs of
-&lt;/span>&lt;span class="s2"> future executions of the Chain. For example, for conversational Chains Memory
-&lt;/span>&lt;span class="s2"> can be used to store conversations and automatically add them to future model
-&lt;/span>&lt;span class="s2"> prompts so that the model has the necessary context to respond coherently to
-&lt;/span>&lt;span class="s2"> the latest input.
-&lt;/span>&lt;span class="s2">这里的内存指的是Chains中的状态。内存可以用来存储Chain过去执行的信息，并将信息注入到Chain的未来执行的输入中。
-&lt;/span>&lt;span class="s2">例如：对于会话型Chains，内存可以用来存储会话，并自动将它们添加到未来的模型提示词中，以便模型具有必要的上下文来连贯地响应最新的输入。
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> class Config:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Configuration&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">this&lt;/span> &lt;span class="n">pydantic&lt;/span> &lt;span class="nb">object&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
-&lt;/span>&lt;span class="s2"> 使用pydantic库，并在本类中定义抽象方法，待子类实现
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> arbitrary_types_allowed = True
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> @property
-&lt;/span>&lt;span class="s2"> @abstractmethod
-&lt;/span>&lt;span class="s2"> def memory_variables(self) -&amp;gt; List[str]:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">The&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="n">keys&lt;/span> &lt;span class="n">this&lt;/span> &lt;span class="n">memory&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">will&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">chain&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> @abstractmethod
-&lt;/span>&lt;span class="s2"> def load_memory_variables(self, inputs: Dict[str, Any]) -&amp;gt; Dict[str, Any]:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Return&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="n">pairs&lt;/span> &lt;span class="n">given&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">text&lt;/span> &lt;span class="nb">input&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">chain&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> @abstractmethod
-&lt;/span>&lt;span class="s2"> def save_context(self, inputs: Dict[str, Any], outputs: Dict[str, str]) -&amp;gt; None:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Save&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">context&lt;/span> &lt;span class="n">of&lt;/span> &lt;span class="n">this&lt;/span> &lt;span class="n">chain&lt;/span> &lt;span class="n">run&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> @abstractmethod
-&lt;/span>&lt;span class="s2"> def clear(self) -&amp;gt; None:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="n">Clear&lt;/span> &lt;span class="n">memory&lt;/span> &lt;span class="n">contents&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="13basechatmemory">1.3.BaseChatMemory&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>BaseChatMemory&lt;/strong>：BaseMemoryd的子类，实现了一部分通用方法，剩余由子类扩展&lt;/li>
-&lt;li>BaseChatMemory维护了ChatMessageHistory&lt;/li>
-&lt;li>代码路径/libs/langchain/langchain/memory/chat_memory.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">BaseChatMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseMemory&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ABC&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Abstract base class for chat memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">chat_memory&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">BaseChatMessageHistory&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Field&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">default_factory&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">ChatMessageHistory&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">output_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
-&lt;span class="n">input_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>
-&lt;span class="n">return_messages&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">False&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">_get_input_output&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">prompt_input_key&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">output_key&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">save_context&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Save context from this conversation to buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">input_str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">output_str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_get_input_output&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_user_message&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_str&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_ai_message&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">output_str&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">clear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Clear memory contents.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">clear&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>接下来就可以看一下常用的几种Memory了。&lt;/p>
-&lt;h2 id="14conversationbuffermemory">1.4.ConversationBufferMemory&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>ConversationBufferMemory&lt;/strong>：一种Memory的具体实现。提供了记录历史聊天记录的能力。&lt;/li>
-&lt;li>代码路径/libs/langchain/langchain/memory/buffer.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ConversationBufferMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseChatMemory&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Buffer for storing conversation memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Human&amp;#34;&lt;/span>
-&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;AI&amp;#34;&lt;/span>
-&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;history&amp;#34;&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;String buffer of memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_messages&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">return_messages&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_str&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a string in case return_messages is True.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="n">get_buffer_string&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="n">human_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="n">ai_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a list of messages in case return_messages is False.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Will always return list of memory variables.
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> :meta private:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">load_memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return history buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>我们再来看一个例子：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920072953322.png" alt="image-20230920072953322">&lt;/p>
-&lt;ul>
-&lt;li>针对第一个问题，LangChain发送给LLM真实的问题如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920073630423.png" alt="image-20230920073630423">&lt;/p>
-&lt;ul>
-&lt;li>针对第二个问题，LangChain会把&lt;strong>第一次发给LLM的问题和答案&lt;/strong>+&lt;strong>第二次的问题&lt;/strong>发送给LLM：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920073804453.png" alt="image-20230920073804453">&lt;/p>
-&lt;h2 id="15conversationbufferwindowmemory">1.5.ConversationBufferWindowMemory&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>ConversationBufferWindowMemory&lt;/strong>：一种Memory的具体实现。提供了带有滑动窗口的记录历史聊天记录的能力。&lt;/li>
-&lt;li>代码路径/libs/langchain/langchain/memory/buffer_window.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ConversationBufferWindowMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseChatMemory&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Buffer for storing conversation memory inside a limited size window.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Human&amp;#34;&lt;/span>
-&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;AI&amp;#34;&lt;/span>
-&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;history&amp;#34;&lt;/span> &lt;span class="c1">#: :meta private:&lt;/span>
-&lt;span class="n">k&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">5&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Number of messages to store in buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Union&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;String buffer of memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_messages&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">return_messages&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer_as_str&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a string in case return_messages is True.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">messages&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">[]&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="n">get_buffer_string&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="n">messages&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="n">human_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="n">ai_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ai_prefix&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer_as_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Exposes the buffer as a list of messages in case return_messages is False.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">[]&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Will always return list of memory variables.
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> :meta private:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">load_memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return history buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>我们看一个例子：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074018406.png" alt="image-20230920074018406">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第一次问答&lt;/strong>：LangChain真实发送的问题只有&amp;quot;你好&amp;rdquo;&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074115794.png" alt="image-20230920074115794">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第二次问答&lt;/strong>：LangChain真实发送的问题是&lt;strong>第一次问题答案&lt;/strong>+&lt;strong>第二次问题&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074225759.png" alt="image-20230920074225759">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第三次问答&lt;/strong>：LangChain真实发送的问题是&lt;strong>第一次问题答案&lt;/strong>+&lt;strong>第二次问题答案&lt;/strong>+&lt;strong>第三次问题&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074328411.png" alt="image-20230920074328411">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>第四次问答&lt;/strong>：LangChain真实发送的问题是&lt;strong>第二次问题答案&lt;/strong>+&lt;strong>第三次问题答案&lt;/strong>+&lt;strong>第四次问题&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074412212.png" alt="image-20230920074412212">&lt;/p>
-&lt;p>为什么会有近3次问答内容的限制呢？因为初始化ConversationBufferWindowMemory时，设置了&lt;code>k=2&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074524136.png" alt="image-20230920074524136">&lt;/p>
-&lt;h2 id="16conversationsummarybuffermemory">1.6.ConversationSummaryBufferMemory&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>ConversationSummaryBufferMemory&lt;/strong>：一种Memory的具体实现。提供了记录历史聊天记录，并对历史聊天记录进行归纳总结的能力。&lt;/li>
-&lt;li>代码路径/libs/langchain/langchain/memory/summary_buffer.py，&lt;strong>详细源码如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;span class="lnt">41
-&lt;/span>&lt;span class="lnt">42
-&lt;/span>&lt;span class="lnt">43
-&lt;/span>&lt;span class="lnt">44
-&lt;/span>&lt;span class="lnt">45
-&lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
-&lt;/span>&lt;span class="lnt">49
-&lt;/span>&lt;span class="lnt">50
-&lt;/span>&lt;span class="lnt">51
-&lt;/span>&lt;span class="lnt">52
-&lt;/span>&lt;span class="lnt">53
-&lt;/span>&lt;span class="lnt">54
-&lt;/span>&lt;span class="lnt">55
-&lt;/span>&lt;span class="lnt">56
-&lt;/span>&lt;span class="lnt">57
-&lt;/span>&lt;span class="lnt">58
-&lt;/span>&lt;span class="lnt">59
-&lt;/span>&lt;span class="lnt">60
-&lt;/span>&lt;span class="lnt">61
-&lt;/span>&lt;span class="lnt">62
-&lt;/span>&lt;span class="lnt">63
-&lt;/span>&lt;span class="lnt">64
-&lt;/span>&lt;span class="lnt">65
-&lt;/span>&lt;span class="lnt">66
-&lt;/span>&lt;span class="lnt">67
-&lt;/span>&lt;span class="lnt">68
-&lt;/span>&lt;span class="lnt">69
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">ConversationSummaryBufferMemory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BaseChatMemory&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">SummarizerMixin&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Buffer with summarizer for storing conversation memory.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">max_token_limit&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2000&lt;/span>
-&lt;span class="n">moving_summary_buffer&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;history&amp;#34;&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">buffer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>
-&lt;span class="nd">@property&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Will always return list of memory variables.
-&lt;/span>&lt;span class="s2">
-&lt;/span>&lt;span class="s2"> :meta private:
-&lt;/span>&lt;span class="s2"> &amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">load_memory_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return history buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="nb">buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">buffer&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="n">first_messages&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">BaseMessage&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">summary_message_cls&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">]&lt;/span>
-&lt;span class="nb">buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">first_messages&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nb">buffer&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">return_messages&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="n">final_buffer&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Any&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">buffer&lt;/span>
-&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="n">final_buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">get_buffer_string&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="nb">buffer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">human_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">human_prefix&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ai_prefix&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ai_prefix&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory_key&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">final_buffer&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="nd">@root_validator&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">validate_prompt_input_variables&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">cls&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">values&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Validate that prompt input variables are consistent.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="n">prompt_variables&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">values&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;prompt&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">input_variables&lt;/span>
-&lt;span class="n">expected_keys&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;summary&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;new_lines&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="n">expected_keys&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prompt_variables&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="k">raise&lt;/span> &lt;span class="ne">ValueError&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="s2">&amp;#34;Got unexpected prompt input variables. The prompt expects &amp;#34;&lt;/span>
-&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;{prompt_variables}, but it should have {expected_keys}.&amp;#34;&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="n">values&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">save_context&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Dict&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Save context from this conversation to buffer.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="nb">super&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">save_context&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">prune&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">prune&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Prune buffer if it exceeds max token limit&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="nb">buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">chat_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">messages&lt;/span>
-&lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">llm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_num_tokens_from_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">buffer&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">max_token_limit&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="n">pruned_memory&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
-&lt;span class="k">while&lt;/span> &lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">max_token_limit&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="n">pruned_memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">buffer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pop&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">))&lt;/span>
-&lt;span class="n">curr_buffer_length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">llm&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_num_tokens_from_messages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">buffer&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">predict_new_summary&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="n">pruned_memory&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;span class="k">def&lt;/span> &lt;span class="nf">clear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Clear memory contents.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span class="nb">super&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">clear&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">moving_summary_buffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>我们看一个例子：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B014-LangChain%E4%B9%8BMemory%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A12/image-20230920074831714.png" alt="image-20230920074831714">&lt;/p>
-&lt;ul>
-&lt;li>从这段代码的输出，可以看到LangChain对历史问题和答案进行了概括总结：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>&lt;span class="err">&amp;#39;history&amp;#39;:&lt;/span> &lt;span class="err">[&lt;/span>
-&lt;span class="err">SystemMessage(content=&amp;#39;\nThe&lt;/span> &lt;span class="err">human&lt;/span> &lt;span class="err">asks&lt;/span> &lt;span class="err">what&lt;/span> &lt;span class="err">the&lt;/span> &lt;span class="err">AI&lt;/span> &lt;span class="err">thinks&lt;/span> &lt;span class="err">of&lt;/span> &lt;span class="err">artificial&lt;/span> &lt;span class="err">intelligence.&lt;/span> &lt;span class="err">The&lt;/span> &lt;span class="err">AI&lt;/span> &lt;span class="err">thinks&lt;/span> &lt;span class="err">artificial&lt;/span> &lt;span class="err">intelligence&lt;/span> &lt;span class="err">is&lt;/span> &lt;span class="err">a&lt;/span> &lt;span class="err">force&lt;/span> &lt;span class="err">for&lt;/span> &lt;span class="err">good&lt;/span> &lt;span class="err">because&lt;/span> &lt;span class="err">it&lt;/span> &lt;span class="err">will&lt;/span> &lt;span class="err">help&lt;/span> &lt;span class="err">humans&lt;/span> &lt;span class="err">reach&lt;/span> &lt;span class="err">their&lt;/span> &lt;span class="err">full&lt;/span> &lt;span class="err">potential.&lt;/span> &lt;span class="err">The&lt;/span> &lt;span class="err">human&lt;/span> &lt;span class="err">then&lt;/span> &lt;span class="err">asks&lt;/span> &lt;span class="err">what&lt;/span> &lt;span class="err">LLM&lt;/span> &lt;span class="err">is,&lt;/span> &lt;span class="err">to&lt;/span> &lt;span class="err">which&lt;/span> &lt;span class="err">the&lt;/span> &lt;span class="err">AI&lt;/span> &lt;span class="err">responds&lt;/span> &lt;span class="err">that&lt;/span> &lt;span class="err">it&lt;/span> &lt;span class="err">stands&lt;/span> &lt;span class="err">for&lt;/span> &lt;span class="err">Large&lt;/span> &lt;span class="err">Language&lt;/span> &lt;span class="err">Model,&lt;/span> &lt;span class="err">and&lt;/span> &lt;span class="err">provides&lt;/span> &lt;span class="err">a&lt;/span> &lt;span class="err">list&lt;/span> &lt;span class="err">of&lt;/span> &lt;span class="err">LLM&lt;/span> &lt;span class="err">models,&lt;/span> &lt;span class="err">including&lt;/span> &lt;span class="err">GPT-3,&lt;/span> &lt;span class="err">GPT-J-6B,&lt;/span> &lt;span class="err">CLIP,&lt;/span> &lt;span class="err">BERT,&lt;/span> &lt;span class="err">and&lt;/span> &lt;span class="err">T5.&amp;#39;,&lt;/span>
-&lt;span class="err">additional_kwargs={&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="err">)&lt;/span>
-&lt;span class="err">]}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1 id="2小结">2.小结&lt;/h1>
-&lt;p>本文阐述了Memory模块的内部实现：&lt;/p>
-&lt;ul>
-&lt;li>ChatMessageHistory：提供记录历史聊天记录的对象&lt;/li>
-&lt;li>BaseChatMemory：维护1个ChatMessageHistory对象，并对外提供CRUD历史聊天记录的接口&lt;/li>
-&lt;li>ConversationBufferMemory：BaseChatMemory的1种子类，对外提供最终的CRUD历史聊天记录的接口&lt;/li>
-&lt;li>ConversationBufferWindowMemory：在ConversationBufferMemory的基础上，提供了滑动窗口能力&lt;/li>
-&lt;li>ConversationSummaryBufferMemory：在ConversationBufferMemory的基础上，提供了历史聊天记录的摘要能力&lt;/li>
 &lt;/ul>
 &lt;p>后续文章，我们继续解读LangChain的核心模块，感谢阅读。&lt;/p></description></item></channel></rss>

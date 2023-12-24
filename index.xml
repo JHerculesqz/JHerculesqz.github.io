@@ -21,12 +21,11 @@
 &lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记34-Show一下我们的语音克隆技术</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B034-show%E4%B8%80%E4%B8%8B%E6%88%91%E4%BB%AC%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86%E6%8A%80%E6%9C%AF/</link><pubDate>Sun, 24 Dec 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B034-show%E4%B8%80%E4%B8%8B%E6%88%91%E4%BB%AC%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86%E6%8A%80%E6%9C%AF/</guid><description>&lt;p>小刚刚同学是小伙伴中的TTS专家，他训练的语音克隆模型已经初见雏形，口音、语速、情绪都还不错。&lt;/p>
 &lt;p>小刚刚的AI模型克隆了他自己的声音之后为我们念出了如下文章，听到人工智能的声音，激动且开心，为小刚刚的AI儿子点赞！&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;strong>这是AI的念稿的声音&lt;/strong>：&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>如下为AI念的稿件&lt;/strong>：&lt;/p>
-&lt;/li>
+&lt;li>&lt;strong>这是AI的念稿的声音&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://www.bilibili.com/audio/au4209312?type=1">B站链接&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>如下为AI念的稿件&lt;/strong>：&lt;/li>
 &lt;/ul>
 &lt;p>接下来，我给大家介绍一下TTS原理：&lt;/p>
 &lt;h2 id="1-引言">1. 引言&lt;/h2>

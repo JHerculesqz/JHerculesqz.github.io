@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 27 Dec 2023 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Jan 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,87 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记35-LangChain解读-LCEL语言之领域功能(1)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD1/</link><pubDate>Wed, 27 Dec 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD1/</guid><description>&lt;p>LCEL是专门为方便开发LLM应用而设计的编程语言，它提供了一系列直观、好用的功能和语法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记36-LangChain解读-LCEL语言之领域功能(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD2/</link><pubDate>Wed, 03 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD2/</guid><description>&lt;p>并发是LLM应用常见的使用场景，LCEL提供了非常简便的方式来实现并发处理。&lt;/p>
+&lt;p>本篇我们就来学习LCEL这一核心特性——batch/abatch。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(2)/image-20240104090138975.png" alt="">&lt;/p>
+&lt;h1 id="1-lcel并发接口-batchabatch">1. LCEL并发接口-batch/abatch&lt;/h1>
+&lt;h2 id="1接口介绍">(1)接口介绍&lt;/h2>
+&lt;p>batch和abatch是两个非常实用的接口，它们允许并发处理多个用户输入，从而提高程序的执行效率。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>batch&lt;/strong>: 开发LLM应用时，有可能需要同时处理多个用户输入(如：多个提示词)，batch内部通过线程池并行处理多个用户输入(每个线程都是在调用上一篇介绍的&lt;code>invoke&lt;/code>接口)，最终汇总结果。&lt;/li>
+&lt;li>&lt;strong>abatch&lt;/strong>: batch的非阻塞接口。&lt;/li>
+&lt;/ul>
+&lt;h2 id="2接口语法">(2)接口语法&lt;/h2>
+&lt;p>batch/abatch是LCEL在Runnable协议中定义的标准接口，LangChain的组件和链(Runnable对象)可以直接调用该方法。&lt;/p>
+&lt;p>以链chain为例：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>chain.batch([&amp;ldquo;input1&amp;rdquo;, &amp;ldquo;input2&amp;rdquo;, &amp;hellip;])&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>await chain.abatch([&amp;ldquo;input1&amp;rdquo;, &amp;ldquo;input2&amp;rdquo;, &amp;hellip;])&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
+&lt;p>以利用LLM做试题解析为例，用batch/abatch功能来批量处理多个试题。&lt;/p>
+&lt;ul>
+&lt;li>构造任务链&lt;/li>
+&lt;li>使用batch方法处理&lt;/li>
+&lt;li>使用abatch方法处理&lt;/li>
+&lt;/ul>
+&lt;h2 id="step1-构造任务链">STEP1: 构造任务链&lt;/h2>
+&lt;p>任务链的构造方法不再赘述，见下面代码。&lt;/p>
+&lt;ul>
+&lt;li>链的任务是判断题目是否正确。&lt;/li>
+&lt;li>设置列表变量topics，存放3个题目。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(2)/image-20240104084034633.png" alt="">&lt;/p>
+&lt;h2 id="step2-使用batch方法处理">STEP2: 使用batch方法处理&lt;/h2>
+&lt;ul>
+&lt;li>调用语法：chain.batch(topics)&lt;/li>
+&lt;li>执行效果：任务启动后，马上得到答案，没有因为问题多导致过多等待。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(2)/image-20240104084838085.png" alt="">&lt;/p>
+&lt;h2 id="step3-使用abatch方法处理">STEP3: 使用abatch方法处理&lt;/h2>
+&lt;ul>
+&lt;li>调用语法：await.chain.abatch(topics)&lt;/li>
+&lt;li>执行效果：任务启动后，马上得到答案。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(2)/image-20240104084749830.png" alt="">&lt;/p>
+&lt;h1 id="3batch-vs-invoke">3.Batch vs Invoke&lt;/h1>
+&lt;p>看到这里，我们再来回顾一下本文的&lt;code>batch&lt;/code>和前文的&lt;code>invoke&lt;/code>的区别：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>batch&lt;/code>不仅实现了批量处理多个输入，而且是多线程并行调用LLM，很好的提升了处理效率。&lt;/li>
+&lt;li>而&lt;code>invoke&lt;/code>更适合需要串行执行。&lt;/li>
+&lt;/ul>
+&lt;p>具体看前文的例子，我们发现耗时的差别如下：&lt;/p>
+&lt;ul>
+&lt;li>使用invoke处理单个题目，耗时1.13s&lt;/li>
+&lt;li>使用batch处理3个题目，耗时1.3s&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(2)/image-20240104010153222.png" alt="">&lt;/p>
+&lt;h1 id="4小结">4.小结&lt;/h1>
+&lt;p>Batch/abatch 是LCEL中用于实现并发请求的重要工具，也为开发人员带来高效、简洁的编程体验。&lt;/p>
+&lt;p>本文关键要点如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>LCEL并发接口-batch/abatch&lt;/p>
+&lt;ul>
+&lt;li>输入为列表，内部实际是使用线程池执行器&lt;strong>并行&lt;/strong>执行invoke()。&lt;/li>
+&lt;li>LangChain的Runnable对象可以直接调用batch/abatch方法。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>以让LLM来批改试卷为例，演示batch/abatch语法。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记35-LangChain解读-LCEL语言之领域功能(1)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD1/</link><pubDate>Wed, 27 Dec 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD1/</guid><description>&lt;p>LCEL是专门为方便开发LLM应用而设计的编程语言，它提供了一系列直观、好用的功能和语法。&lt;/p>
 &lt;p>本篇我们来学习提升LLM应用体验的一个功能——stream流式输出。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/image-20231227115947187.png" alt="image-20231227115947187">&lt;/p>
 &lt;h1 id="1-lcel流式输出接口-stream">1. LCEL流式输出接口-stream&lt;/h1>
@@ -4317,133 +4397,4 @@
 &lt;li>预训练模型是什么？如何&lt;strong>辩证地&lt;/strong>看待&lt;strong>预训练模型、涌现能力、神经网络的学习能力&lt;/strong>？&lt;/li>
 &lt;li>SFT(有监督微调)的概念、原理，最后展示了&lt;strong>如何针对简版GPT进行SFT&lt;/strong>。&lt;/li>
 &lt;/ul>
-&lt;p>我们下一步继续针对简版ChatGPT开展RLHF，且听下回分解。&lt;/p></description></item><item><title>【chatGPT】学习笔记17-自己实现一个简版ChatGPT(上)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</link><pubDate>Mon, 16 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%8A/</guid><description>&lt;p>接下来，我们用三篇文章阐述&lt;font color=red>**如何实现一个简版ChatGPT。**&lt;/font>&lt;/p>
-&lt;h1 id="1回顾">1.回顾&lt;/h1>
-&lt;p>想实现一个简版ChatGPT，依赖于如下前置知识：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>机器学习基本原理&lt;/strong>，可参考笔者这几篇文章：
-&lt;ul>
-&lt;li>《【chatGPT】学习笔记3-机器学习基本原理(上)》&lt;/li>
-&lt;li>《【chatGPT】学习笔记4-机器学习基本原理(下)》&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>经典NLP相关技术&lt;/strong>，可参考笔者这几篇文章：
-&lt;ul>
-&lt;li>&lt;strong>N-Gram&lt;/strong>：《【chatGPT】学习笔记6-手撸一个上古GPT》&lt;/li>
-&lt;li>&lt;strong>Embedding&lt;/strong>：《【chatGPT】学习笔记7-词的向量化，大语言模型的关键部件》&lt;/li>
-&lt;li>&lt;strong>神经概率语言模型&lt;/strong>：《【chatGPT】学习笔记8-神经概率语言模型，大语言模型的关键部件2》&lt;/li>
-&lt;li>&lt;strong>Seq2Seq&lt;/strong>：《【chatGPT】学习笔记9-Transformer之Seq2Seq，大语言模型的关键部件3》&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>现代NLP相关技术&lt;/strong>，可参考笔者这几篇文章：
-&lt;ul>
-&lt;li>&lt;strong>注意力机制&lt;/strong>：《【chatGPT】学习笔记13-Transformer之注意力机制，大语言模型的关键部件4》&lt;/li>
-&lt;li>&lt;strong>Transformer&lt;/strong>：《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2实现简版gpt">2.实现简版GPT&lt;/h1>
-&lt;p>这是参考Transformer架构绘制的简版ChatGPT整体架构，我们将对它进行拆解：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017113929233.png" alt="image-20231017113929233">&lt;/p>
-&lt;h2 id="1整体">(1)整体&lt;/h2>
-&lt;p>将上图抽象化，我们可以看到：&lt;/p>
-&lt;ul>
-&lt;li>简版GPT遵循Transfomer架构，但是没有实现编码器&lt;/li>
-&lt;li>Decoder的输出交给一个线性层，将解码器的输出转换为目标词汇表大小的概率分布——这属于常规操作，与Transformer核心思想关系不大。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017134713086.png" alt="image-20231017134713086">&lt;/p>
-&lt;p>代码实现如下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>1&lt;/strong>：对应上图将&lt;strong>Outputs&lt;/strong>输入给&lt;strong>Decoder&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>2&lt;/strong>：对应上图将&lt;strong>Decoder的输出&lt;/strong>，传入给线性层。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017135734066.png" alt="image-20231017135734066">&lt;/p>
-&lt;h2 id="2局部1正弦位置编码表">(2)局部1：正弦位置编码表&lt;/h2>
-&lt;p>首先，我们来细化&lt;strong>Outputs&lt;/strong>和&lt;strong>Decoder&lt;/strong>之间的流程：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>STEP1&lt;/strong>.对&lt;strong>Outputs&lt;/strong>实施词嵌入，得到词向量。&lt;/li>
-&lt;li>&lt;strong>STEP2&lt;/strong>.在&lt;strong>词向量&lt;/strong>和&lt;strong>Decoder&lt;/strong>之间增加了&lt;strong>位置编码表&lt;/strong>(也是一个向量)，这个位置编码表体现了&lt;strong>词和词序的关系&lt;/strong>。
-&lt;ul>
-&lt;li>由于Transformer取消了RNN，也就不再逐个词串行处理，所以必须建立&lt;strong>词和词序的关系&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>STEP3&lt;/strong>.将STEP2的&lt;strong>位置表码表&lt;/strong>向量和&lt;strong>词向量&lt;/strong>相加，输入给&lt;strong>Decoder&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017140335543.png" alt="image-20231017140335543">&lt;/p>
-&lt;p>正弦位置编码表的计算原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(2)局部1：正弦位置编码表&amp;quot;章节，本文不再赘述。&lt;/p>
-&lt;p>代码实现如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017140636308.png" alt="image-20231017140636308">&lt;/p>
-&lt;h2 id="3局部2解码器堆栈">(3)局部2：解码器堆栈&lt;/h2>
-&lt;p>我们再来细化&lt;strong>解码器&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>编码器本质上由&lt;strong>N个解码器&lt;/strong>串联而成的&lt;strong>解码器堆栈&lt;/strong>。&lt;/li>
-&lt;li>我们的实现，也按照论文的设定层数，&lt;strong>N=6&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150909585.png" alt="image-20231017150909585">&lt;/p>
-&lt;h2 id="4局部3解码器">(4)局部3：解码器&lt;/h2>
-&lt;p>我们再进一步细化&lt;strong>解码器Decoder&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>解码器Decoder&lt;/strong>由&lt;strong>多头注意力&lt;/strong>和&lt;strong>前向传播网络&lt;/strong>组成。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150925061.png" alt="image-20231017150925061">&lt;/p>
-&lt;p>&lt;strong>解码器堆栈&lt;/strong>的代码实现如下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>①&lt;/strong>：这就是创建的&lt;strong>位置编码层&lt;/strong>，再将&lt;strong>词向量和位置编码向量相加&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>②&lt;/strong>：这就是将多个&lt;strong>解码器&lt;/strong>叠加成&lt;strong>解码器堆栈&lt;/strong>，每个&lt;strong>解码器的输入&lt;/strong>是&lt;strong>上个解码器的输出&lt;/strong>和&lt;strong>上个解码器输出的注意力权重&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>③&lt;/strong>：这就是表示&lt;strong>解码器堆栈&lt;/strong>输出的&lt;strong>解码器输出&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017142049236.png" alt="image-20231017142049236">&lt;/p>
-&lt;p>&lt;strong>解码器&lt;/strong>的代码实现如下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>①&lt;/strong>：就是&lt;strong>多头注意力层&lt;/strong>，&lt;strong>第一个解码器&lt;/strong>的&lt;strong>多头注意力层&lt;/strong>的输入是&lt;strong>词嵌入+位置编码向量之和&lt;/strong>以及&lt;strong>自注意力掩码&lt;/strong>，&lt;strong>后续解码器&lt;/strong>的&lt;strong>多头注意力层&lt;/strong>的输入是&lt;strong>上一个解码器的输出&lt;/strong>和&lt;strong>自注意力掩码&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>②&lt;/strong>：就是&lt;strong>前向传播网络&lt;/strong>，它的输入是&lt;strong>多头注意力层的输出&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017145220345.png" alt="image-20231017145220345">&lt;/p>
-&lt;p>我们接下来看&lt;strong>多头注意力层、前向传播网络、自注意力位置掩码&lt;/strong>如何实现？&lt;/p>
-&lt;h2 id="5局部4多头注意力">(5)局部4：多头注意力&lt;/h2>
-&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(5)局部4：多头注意力&amp;quot;章节，本文不再赘述。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150943298.png" alt="image-20231017150943298">&lt;/p>
-&lt;p>代码实现如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017145622219.png" alt="image-20231017145622219">&lt;/p>
-&lt;h2 id="6局部5前向传播网络">(6)局部5：前向传播网络&lt;/h2>
-&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(6)局部5：前向传播网络&amp;quot;章节，本文不再赘述。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151000709.png" alt="image-20231017151000709">&lt;/p>
-&lt;p>代码实现如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150114991.png" alt="image-20231017150114991">&lt;/p>
-&lt;h2 id="7局部6填充位置掩码">(7)局部6：填充位置掩码&lt;/h2>
-&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(7)局部6：填充位置掩码&amp;quot;章节，本文不再赘述。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151014381.png" alt="image-20231017151014381">&lt;/p>
-&lt;p>代码实现如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150413819.png" alt="image-20231017150413819">&lt;/p>
-&lt;h2 id="8局部7后续位置掩码">(8)局部7：后续位置掩码&lt;/h2>
-&lt;p>多头注意力的原理参见《【chatGPT】学习笔记16-Transformer架构，大语言模型的关键部件5》的&amp;rdquo;(10)局部9：后续位置掩码&amp;quot;章节，本文不再赘述。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151026419.png" alt="image-20231017151026419">&lt;/p>
-&lt;p>代码实现如下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017150515799.png" alt="image-20231017150515799">&lt;/p>
-&lt;h2 id="9模型训练">(9)模型训练&lt;/h2>
-&lt;p>至此，我们已经完整地实现了Transformer架构，我们开始对其进行训练：&lt;/p>
-&lt;ul>
-&lt;li>数据集如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151515137.png" alt="image-20231017151515137">&lt;/p>
-&lt;ul>
-&lt;li>模型训练：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151651529.png" alt="image-20231017151651529">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151717714.png" alt="image-20231017151717714">&lt;/p>
-&lt;ul>
-&lt;li>训练好后，会生成简版GPT的pth模型文件：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151835127.png" alt="image-20231017151835127">&lt;/p>
-&lt;h2 id="10模型测试">(10)模型测试&lt;/h2>
-&lt;ul>
-&lt;li>测试用例采用贪婪编码和集束编码，比较简单，具体代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B017-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%8A)/image-20231017151956136.png" alt="image-20231017151956136">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;ul>
-&lt;li>本文基于Transformer架构，复现了简版ChatGPT，其关键在于只有解码器。&lt;/li>
-&lt;li>理论上，如果有足够算力、足够训练数据，可以将此简版ChatGPT训练到GPT3的水平。&lt;/li>
-&lt;li>那么，GPT3到ChatGPT还有一定的距离，我们知道ChatGPT公开的信息中，还对GPT3进行了&lt;strong>监督学习微调SFT&lt;/strong>、&lt;strong>基于人类反馈的强化学习RLHF&lt;/strong>等，得到了InstructGPT，进而得到了ChatGPT。&lt;/li>
-&lt;/ul>
-&lt;p>我们下一步继续针对简版ChatGPT开展SFT和RLHF，且听下回分解。&lt;/p></description></item></channel></rss>
+&lt;p>我们下一步继续针对简版ChatGPT开展RLHF，且听下回分解。&lt;/p></description></item></channel></rss>

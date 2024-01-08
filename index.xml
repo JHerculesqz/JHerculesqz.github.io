@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Jan 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 08 Jan 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,186 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记36-LangChain解读-LCEL语言之领域功能(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD2/</link><pubDate>Wed, 03 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD2/</guid><description>&lt;p>并发是LLM应用常见的使用场景，LCEL提供了非常简便的方式来实现并发处理。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记36-LangChain解读-LCEL语言之领域功能(3)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD3/</link><pubDate>Mon, 08 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD3/</guid><description>&lt;p>LCEL 可以轻松的构建复杂的链，并灵活调用它们，是因为LCEL基于&lt;code>Runnable&lt;/code>协议封装了一系列组合方法和调用接口。&lt;/p>
+&lt;p>之前我们介绍了LCEL的核心调用接口&lt;code>invoke/ainvoke&lt;/code>、&lt;code>stream/astream&lt;/code>、&lt;code>batch/abatch&lt;/code>，本篇开始我们来学习LCEL的组合方法。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240105205805572.png" alt="">&lt;/p>
+&lt;h1 id="1-lcel的组合原语">1. LCEL的组合原语&lt;/h1>
+&lt;p>LCEL的主要组合原语有两种：**RunnableSequence(串行组合)**和 &lt;strong>RunnableParallel( 并行组合)&lt;/strong>。&lt;/p>
+&lt;h2 id="1runnablesequence-串行组合">(1)RunnableSequence: 串行组合&lt;/h2>
+&lt;p>&lt;strong>方法简介&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>RunnableSequence可以将多个链组成一个串行工作流，各链串行执行。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>每个链的输出是下个链的输入，最后一个链的输出就是该整个工作流的输出。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>组合语法&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>RunnableSequence的原始调用语法如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">RunnableSequence对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableSequence&lt;span class="o">(&lt;/span>&lt;span class="nv">first&lt;/span>&lt;span class="o">=&lt;/span>组件1, &lt;span class="nv">middle&lt;/span>&lt;span class="o">=[&lt;/span>组件2, 组件3, ...&lt;span class="o">]&lt;/span>, &lt;span class="nv">last&lt;/span>&lt;span class="o">=&lt;/span>组件n&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>RunnableSequence在构建串行工作流的示例如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">串行工作流对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableSequence&lt;span class="o">(&lt;/span>&lt;span class="nv">first&lt;/span>&lt;span class="o">=&lt;/span>chain1, &lt;span class="nv">middle&lt;/span>&lt;span class="o">=[&lt;/span>chain2, chain3, ...&lt;span class="o">]&lt;/span>, &lt;span class="nv">last&lt;/span>&lt;span class="o">=&lt;/span>chainn&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>LCEL实现了用管道符&lt;code>|&lt;/code>来做串行组合的连接符。我们之前的案例都是在用这种方式来做串行组合。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">串行工作流对象&lt;/span> &lt;span class="o">=&lt;/span> chain1 &lt;span class="p">|&lt;/span> chain2 &lt;span class="p">|&lt;/span> ... &lt;span class="p">|&lt;/span> chainn&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h2 id="2runnableparallel-并行组合">(2)RunnableParallel: 并行组合&lt;/h2>
+&lt;p>&lt;strong>方法简介&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>RunnableParallel可以把多个链组成并行工作流，各链并行执行。&lt;/li>
+&lt;li>各链的输入是相同的，整个工作流的输出是用各链的输出构造的字典。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>组合语法&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>RunnableParallel的调用语法如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">RunnableParallel对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableParallel&lt;span class="o">({&lt;/span>&lt;span class="s2">&amp;#34;Key1&amp;#34;&lt;/span>: 组件1, &lt;span class="s2">&amp;#34;Key2&amp;#34;&lt;/span>: 组件2, ..., &lt;span class="s2">&amp;#34;Keyn&amp;#34;&lt;/span>: 组件n&lt;span class="o">})&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>由于&lt;code>Runnable&lt;/code>支持类型转换，所以也可以这样调用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">RunnableParallel对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableParallel&lt;span class="o">(&lt;/span>&lt;span class="nv">Key1&lt;/span>&lt;span class="o">=&lt;/span>组件1, &lt;span class="nv">Key2&lt;/span>&lt;span class="o">=&lt;/span>组件2, ..., &lt;span class="nv">Keyn&lt;/span>&lt;span class="o">=&lt;/span>组件n&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>RunnableParallel的输出是字典格式，是由原键+组件执行结果组成的键值对，示例如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="o">{&lt;/span>&lt;span class="s1">&amp;#39;Key1&amp;#39;&lt;/span>: 组件1的结果, &lt;span class="s1">&amp;#39;Key2&amp;#39;&lt;/span>: 组件2的结果, ..., &lt;span class="s1">&amp;#39;Keyn&amp;#39;&lt;/span>: 组件n的结果&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>RunnableParallel构建工作流的示例如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">并行工作流对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableParallel&lt;span class="o">({&lt;/span>&lt;span class="s2">&amp;#34;Key1&amp;#34;&lt;/span>: chain1, &lt;span class="s2">&amp;#34;Key2&amp;#34;&lt;/span>: chain2, ..., &lt;span class="s2">&amp;#34;Keyn&amp;#34;&lt;/span>: chainn&lt;span class="o">})&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h2 id="3runnablesequence和runnableparallel的组合使用">(3)RunnableSequence和RunnableParallel的组合使用&lt;/h2>
+&lt;p>遵循LCEL &lt;code>Runnable&lt;/code>协议的组件都可以使用上述两种方式组合。同时，由于组合成的链也是一个Runnable对象，这就意味着在一个链里可以混合使用RunnableSequence和RunnableParallel两种组合方式，进而实现了串并结合的工作流。&lt;/p>
+&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
+&lt;p>下面通过一个实例来看下RunnableSequence和RunnableParallel的用法。&lt;/p>
+&lt;p>示例场景：利用LLM做病情摘要，然后提供治疗建议，最后把结果翻译成英文和日语。&lt;/p>
+&lt;p>我们用4个链实现上述功能，然后用RunnableSequence和RunnableParallel组合成完整工作流。&lt;/p>
+&lt;h2 id="step1-构建chain1病情简介">STEP1: 构建chain1：病情简介&lt;/h2>
+&lt;ul>
+&lt;li>引入相关类库，构建第一个链chain1，任务是根据疾病标题和患者年龄生成病情简介。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108195544772.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>先执行chain1观察下输出结果，输出内容符合预期。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108195656025.png" alt="">&lt;/p>
+&lt;h2 id="step2-构建chain2治疗方案">STEP2: 构建chain2：治疗方案&lt;/h2>
+&lt;ul>
+&lt;li>构建第二个链chain2，任务是根据病情简介生成治疗方案。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108202230067.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>执行chain2观察输出结果，LLM给出了治疗方案。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108195753143.png" alt="">&lt;/p>
+&lt;h2 id="step3构建chain3chain4文本翻译">STEP3:构建Chain3、Chain4：文本翻译&lt;/h2>
+&lt;ul>
+&lt;li>构建Chain3、Chain4，任务是把指定的文本内容分别翻译成英文、日语&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108192549849.png" alt="">&lt;/p>
+&lt;h2 id="step4-构建工作流链medical_chain组合chain1chain4">STEP4: 构建工作流链medical_chain：组合chain1~chain4&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>基于上面4个任务链，工作流设计为：首先生成病情简介，然后根据病情生成治疗方案，最后把治疗方案同时翻译成英语、日语。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>因此，工作流链medical_chain组合如下：&lt;/p>
+&lt;ul>
+&lt;li>chain1、chain2与后面的翻译链(chain3、chain4)是串行组合&lt;/li>
+&lt;li>chain3、chain4使用RunnableParallel组合，把chain2的输出作为输入，并行执行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108200421256.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>执行medical_chain观察结果，得到了英语和日语的治疗方案。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108200458628.png" alt="">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本篇介绍了LCEL的两种主要的组合原语：**RunnableSequence(串行组合)**和 &lt;strong>RunnableParallel( 并行组合)&lt;/strong>。&lt;/p>
+&lt;p>关键要点如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>RunnableSequence&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>可以将多个链组成一个串行工作流，各链串行执行。支持用管道符&lt;code>|&lt;/code>组合。&lt;/li>
+&lt;li>每个链的输出是下个链的输入，最后一个链的输出就是该整个工作流的输出。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>RunnableParallel&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>可以把多个链组成并行工作流，各链并行执行。&lt;/li>
+&lt;li>各链的输入是相同的，整个工作流的输出是用各链的输出构造的字典。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>用RunnableSequence和RunnableParallel构建了一个诊疗工作流。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记36-LangChain解读-LCEL语言之领域功能(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD2/</link><pubDate>Wed, 03 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD2/</guid><description>&lt;p>并发是LLM应用常见的使用场景，LCEL提供了非常简便的方式来实现并发处理。&lt;/p>
 &lt;p>本篇我们就来学习LCEL这一核心特性——batch/abatch。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B036-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(2)/image-20240104090138975.png" alt="">&lt;/p>
 &lt;h1 id="1-lcel并发接口-batchabatch">1. LCEL并发接口-batch/abatch&lt;/h1>
@@ -4230,171 +4409,4 @@
 &lt;li>PPO算法&lt;/li>
 &lt;li>……&lt;/li>
 &lt;/ul>
-&lt;p>编写本专栏受益匪浅，也非常感恩因为编写本专栏认识的大神们，期待与各位小伙伴持续的讨论和思辨！&lt;/p></description></item><item><title>【chatGPT】学习笔记18-自己实现一个简版ChatGPT(中)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</link><pubDate>Wed, 18 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88chatgpt%E4%B8%AD/</guid><description>&lt;p>根据上文我们实现的简版GPT，在足够数据、足够算力的前提下，理论上是可以训练出类GPT3的大语言模型的。&lt;/p>
-&lt;p>但GPT3距离ChatGPT还有很远的距离，这一段距离涉及OpenAI未公开论文、源码的关键技术。&lt;/p>
-&lt;p>我们接下来从OpenAPI已公开的信息来看看&lt;font color=red>&lt;strong>ChatGPT是如何炼成的&lt;/strong>&lt;/font>。&lt;/p>
-&lt;h1 id="1chatgpt的历史版本">1.ChatGPT的历史版本&lt;/h1>
-&lt;p>下图摘自Yule Wang的技术专栏，阐述了基于Transformer的大语言模型不同版本的脉络：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>BERT&lt;/strong>是编码器Only架构，&lt;strong>BART&lt;/strong>是编码器-解码器架构，它们延伸出去大语言模型下载后&lt;font color=red>&lt;strong>不能直接使用，需要垂域微调&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>&lt;strong>T5&lt;/strong>是编码器-解码器架构，&lt;strong>GPT-2&lt;/strong>是解码器Only架构，它们下载后&lt;font color=red>&lt;strong>不做垂域微调，也能完成一些AI任务&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>&lt;strong>GPT-3、GPT-4&lt;/strong>是解码器Only架构，它们下载后&lt;font color=red>&lt;strong>不做垂域微调，能完成大部分AI任务&lt;/strong>&lt;/font>。&lt;/li>
-&lt;li>针对&lt;strong>GPT-3&lt;/strong>进行&lt;font color=red>&lt;strong>SFT(有监督微调)+RLHF(基于人类反馈的强化学习)&lt;strong>&lt;/font>，最终得到了&lt;/strong>ChatGPT&lt;/strong>，&lt;strong>GPT-3.5、InstructGPT&lt;/strong>算是过渡产品。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019083053465.png" alt="image-20231019083053465">&lt;/p>
-&lt;h1 id="2chatgpt的整体训练流程">2.ChatGPT的整体训练流程&lt;/h1>
-&lt;p>在《Introducing ChatGPT》(详见https://openai.com/blog/chatgpt)中，给出了从GPT3演进到ChatGPT的整体训练流程图：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/ChatGPT_Diagram.svg" alt="ChatGPT_Diagram">&lt;/p>
-&lt;p>以前看这张图很模糊，通过前面复现Transformer架构、简版GPT的代码，才逐渐变得清晰。&lt;/p>
-&lt;p>接下来，我们来逐一拆解。&lt;/p>
-&lt;h1 id="3chatgpt的三大训练方法">3.ChatGPT的三大训练方法&lt;/h1>
-&lt;p>下图比较形象地归纳了ChatGPT整体训练流程：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019094239673.png" alt="image-20231019094239673">&lt;/p>
-&lt;h2 id="1方法1预训练pre-traning">(1)方法1：预训练(Pre-Traning)&lt;/h2>
-&lt;ul>
-&lt;li>构建好大语言模型的神经网络架构后，&lt;strong>通过大数据、大算力进行训练&lt;/strong>，得到预训练模型。如：GPT3就属于这类预训练模型。&lt;/li>
-&lt;li>大语言模型的本质是生成内容，构建训练数据基本都是自动化的，所以&lt;strong>预训练的过程属于无监督学习&lt;/strong>。&lt;/li>
-&lt;li>预训练模型非常庞大，&lt;strong>算是通才&lt;/strong>，具备&lt;strong>基本的自然语言处理能力、世界知识&lt;/strong>，甚至还有了&lt;strong>顿悟能力(涌现能力)&lt;/strong>。&lt;/li>
-&lt;li>就好像下图红框内庞大的AI大脑(&lt;strong>画的有点恶心&lt;/strong>)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019150044511.png" alt="image-20231019150044511">&lt;/p>
-&lt;h2 id="2方法2指令调优instruction-tuning">(2)方法2：指令调优(Instruction Tuning)&lt;/h2>
-&lt;ul>
-&lt;li>虽然花了巨大的时间成本和空间成本获得了预训练模型，但是它的水平，依然无法像一个真人，与人类对话。&lt;/li>
-&lt;li>接下来还要进行微调——人工&lt;strong>准备少量的数据&lt;/strong>，对&lt;strong>预训练模型进行增量训练&lt;/strong>——因此也称为&lt;strong>有监督微调(SFT，Supervised Fine-tunning)&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>指令微调&lt;/strong>本质是站在巨人的肩膀上&lt;strong>对预训练模型进行增量训练&lt;/strong>。它可以针对世界知识进行增强，也可以针对某个垂直领域进行增强。&lt;/li>
-&lt;li>指令微调后得到的大语言训练模型，将会接近于一个真人。&lt;/li>
-&lt;li>就好像下图红框内的红色人脸(&lt;strong>画的也挺恶心&lt;/strong>)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019150129023.png" alt="image-20231019150129023">&lt;/p>
-&lt;h2 id="3方法3对齐alignment">(3)方法3：对齐(Alignment)&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>在指令调优后，大语言模型虽然接近于真人，但生成的内容依然会很生硬。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>为什么呢？这就是人类的主观感受——人类对某些问题的答案，会有情绪、语气、风格等主观的特征。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>那么，又如何&lt;strong>让AI学会人类的主观感受&lt;/strong>呢？这&lt;strong>就是对齐Alignment&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>RLHF(基于人类反馈的强化学习)就是对齐的具体实现之一，利用这种强化学习手段，让大语言模型学会人类的主观感受，GPT3就演进成为了ChatGPT。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>就好像下图右侧红框内小黄球(&lt;strong>画的依然挺恶心&lt;/strong>)。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019151032099.png" alt="image-20231019151032099">&lt;/p>
-&lt;p>接下来，我们逐一分析这三大方法。&lt;/p>
-&lt;h1 id="4方法1预训练pre-training">4.方法1：预训练(Pre-Training)&lt;/h1>
-&lt;h2 id="1与chatgpt整体训练流程图的对应关系">(1)与ChatGPT整体训练流程图的对应关系&lt;/h2>
-&lt;p>我们对比两张图：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>预训练&lt;/strong>得到的大语言模型，就&lt;strong>是ChatGPT整体训练流程STEP1的输入&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019151849173.png" alt="image-20231019151849173">&lt;/p>
-&lt;h2 id="2辩证看待预训练模型涌现能力神经网络">(2)辩证看待预训练模型、涌现能力、神经网络&lt;/h2>
-&lt;p>前段时间，师父问了我3个终极问题，让我一时语塞：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>为什么ChatGPT大力能出奇迹，小力就不行？&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>为什么这样的神经网络模型就可以大力出奇迹，换个神经网络模型行不行？&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>如果无论什么神经网络模型只要能做到大力就能出奇迹，那么这些神经网络的本质是什么？&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>前面半年一直在复现Transformer论文的细节中，的确缺少了对宏观本质的思考，结合预训练这个章节的写作，正好梳理一下我的宏观思考：&lt;/p>
-&lt;h3 id="思考1神经网络的本质是什么">思考1：神经网络的本质是什么？&lt;/h3>
-&lt;ul>
-&lt;li>观点1：客观世界中，&lt;strong>一切问题都能用函数表达&lt;/strong>。
-&lt;ul>
-&lt;li>只不过有的函数极其复杂，只有上帝才知道这个函数是什么。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>观点2：&lt;strong>神经网络的本质进行函数近似(Function Approximation)的工具&lt;/strong>。
-&lt;ul>
-&lt;li>&lt;strong>神经网络的输入&lt;/strong>：是大量的数据，数据中隐藏了某个问题背后的函数的数学规律。&lt;/li>
-&lt;li>&lt;strong>神经网络的输出&lt;/strong>：找到无限逼近于某个问题背后的函数的近似函数。&lt;/li>
-&lt;li>数学上，已经证明&lt;strong>神经网络能够近似出任意一个问题背后的函数&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>神经网络的结构&lt;/strong>，&lt;strong>决定了找到这个近似函数的成本&lt;/strong>(时间成本、空间成本……)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="思考2假设思考1正确如何解释神经网络的5种现象">思考2：假设思考1正确，如何解释神经网络的5种现象？&lt;/h3>
-&lt;ul>
-&lt;li>现象1：&lt;strong>过于简单的神经网络&lt;/strong>，需要很大力才能出奇迹。
-&lt;ul>
-&lt;li>任务是&amp;quot;让AI对红点和蓝点进行分类&amp;rdquo;，由于神经网络过于简单，所以迭代了2000多次才找出答案。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;iframe src="//player.bilibili.com/player.html?aid=364782652&amp;bvid=BV1F94y1b7MW&amp;cid=1304339810&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;ul>
-&lt;li>现象2：&lt;strong>过于简单的任务&lt;/strong>，不需要大力也能出奇迹。&lt;/li>
-&lt;/ul>
-&lt;iframe src="//player.bilibili.com/player.html?aid=874844018&amp;bvid=BV1EN4y1C7v2&amp;cid=1304340008&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;ul>
-&lt;li>现象3：恒定难度的任务，&lt;strong>加宽神经网络&lt;/strong>，大力能出奇迹。&lt;/li>
-&lt;/ul>
-&lt;iframe src="//player.bilibili.com/player.html?aid=234774107&amp;bvid=BV1N8411r78C&amp;cid=1304339757&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;ul>
-&lt;li>现象4：恒定难度的任务，&lt;strong>加深神经网络&lt;/strong>，大力能出奇迹。&lt;/li>
-&lt;/ul>
-&lt;iframe src="//player.bilibili.com/player.html?aid=789763364&amp;bvid=BV1Ry4y1N7CU&amp;cid=1304340937&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;ul>
-&lt;li>现象5：恒定难度的任务，&lt;strong>增强神经元&lt;/strong>，大力能出奇迹。&lt;/li>
-&lt;/ul>
-&lt;iframe src="//player.bilibili.com/player.html?aid=277344904&amp;bvid=BV14w411w7Nx&amp;cid=1304343623&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
-&lt;p>从上述5种现象，应该可以得到2个结论：&lt;/p>
-&lt;ul>
-&lt;li>在神经网络结构恒定的前提下，&lt;strong>待执行的任务难度&lt;/strong>，决定了&lt;strong>能否大力出奇迹、是否需要大力&lt;/strong>。&lt;/li>
-&lt;li>在待执行的任务难度恒定的前提下，&lt;strong>神经网络结构&lt;/strong>，决定了&lt;strong>能否大力出奇迹、是否需要大力&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h3 id="思考3辩证地看待预训练模型涌现能力transformer">思考3：辩证地看待预训练模型、涌现能力、Transformer&lt;/h3>
-&lt;p>当GPT3.5出现&lt;strong>涌现能力(emergent capabilities)&lt;strong>后，它似乎被神话成了&lt;/strong>人类尚无办法解释的神迹&lt;/strong>。&lt;/p>
-&lt;p>我们应该如此这般辩证地看待预训练模型、涌现、Transformer&lt;/p>
-&lt;ul>
-&lt;li>预训练模型不是ChatGPT首创，在深度学习时代就有了，有很多神经网络都是预训练好，节省后来人的训练成本。&lt;/li>
-&lt;li>Transformer只是GPT3这种预训练模型遵循的神经网络结构，&lt;strong>Transformer这种神经网络结构本质是换了一种姿势寻找近似函数&lt;/strong>。&lt;/li>
-&lt;li>如果问题P1、问题P2、……问题Pn背后的函数都极为相近，当神经网络结构找到了问题P1的近似函数，那么这个近似函数也能用来解决问题P2、……问题Pn——这就是经过训练，神经网络能自我学习到一些额外的能力的原因，即涌现能力。
-&lt;ul>
-&lt;li>进一步思考：深度学习时代有没有涌现呢？可能有，只是n这个值比较小，不太明显吧。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="5方法2指令调优instruction-tuning">5.方法2：指令调优(Instruction Tuning)&lt;/h1>
-&lt;h2 id="1与chatgpt整体训练流程图的对应关系-1">(1)与ChatGPT整体训练流程图的对应关系&lt;/h2>
-&lt;ul>
-&lt;li>指令调优对应于ChatGPT整体训练流程的STEP1。&lt;/li>
-&lt;li>&lt;strong>SFT&lt;/strong>：有监督微调，属于有监督学习。包括In-context Tuning(上下文调优)和Instruction Tuning(指令调优)。
-&lt;ul>
-&lt;li>&lt;strong>In-context Tuning&lt;/strong>：上下文调优，这种调优方式的本质是将多轮对话的聊天记录一起发送给大语言模型，有了上下文，大语言模型就能更好地回答问题。&lt;/li>
-&lt;li>&lt;strong>Instruction Tuning&lt;/strong>：指令调优，这种调优方式的本质就是问题中带有明确的指令、明确的要求。Instruction Tuning是OpenAI在GPT-3.5-turbo模型中引入的一种新方法，是在传统的微调过程上的一种变体。&lt;/li>
-&lt;li>对于上述两种调优方式，在提示词工程中都体现了它们的思想——&lt;strong>&amp;ldquo;上下文&amp;rdquo;、&amp;ldquo;指令&amp;rdquo;&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019170641604.png" alt="image-20231019170641604">&lt;/p>
-&lt;h2 id="2训练sft模型的伪码">(2)训练SFT模型的伪码&lt;/h2>
-&lt;p>前文讲了很多理论，还是需要撸一下代码比较便于理解。&lt;/p>
-&lt;blockquote>
-&lt;p>由于OpenAI对于SFT、RLHF并未公开源码，所以在这里只编写伪码，在后续实例中展示真实代码。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019181420212.png" alt="image-20231019181420212">&lt;/p>
-&lt;h2 id="3sft实例">(3)SFT实例&lt;/h2>
-&lt;p>针对简版GPT，只需要增加如下代码：&lt;/p>
-&lt;ul>
-&lt;li>首先，通过&lt;code>torch.load方法&lt;/code>加载上一篇已经预训练好的简版GPT模型，这个模型的训练数据仅包含了维基百科的基本数据。&lt;/li>
-&lt;li>然后，将新增的医学知识数据集，对简版GPT模型进行增量训练。&lt;/li>
-&lt;li>最后，通过&lt;code>torch.save方法&lt;/code>保存增量训练的简版GPT模型，此时，这个模型就包含了医学知识了。&lt;/li>
-&lt;li>具体代码详见下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B018-%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E7%89%88ChatGPT(%E4%B8%AD)/image-20231019182641050.png" alt="image-20231019182641050">&lt;/p>
-&lt;h1 id="6小结">6.小结&lt;/h1>
-&lt;p>讲到这里，内容已经比较饱和了，我们将在最后一篇阐述&lt;strong>方法3：对齐训练&lt;/strong>以及&lt;strong>RLHF的实例&lt;/strong>。&lt;/p>
-&lt;p>我们接下来对本文进行一下小结：&lt;/p>
-&lt;ul>
-&lt;li>ChatGPT的历史版本：&lt;strong>GPT3、InstructGPT、ChatGPT&lt;/strong>。&lt;/li>
-&lt;li>ChatGPT&lt;strong>整体训练流程&lt;/strong>，支撑了&lt;strong>GPT3到ChatGPT的演进&lt;/strong>。&lt;/li>
-&lt;li>预训练模型是什么？如何&lt;strong>辩证地&lt;/strong>看待&lt;strong>预训练模型、涌现能力、神经网络的学习能力&lt;/strong>？&lt;/li>
-&lt;li>SFT(有监督微调)的概念、原理，最后展示了&lt;strong>如何针对简版GPT进行SFT&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>我们下一步继续针对简版ChatGPT开展RLHF，且听下回分解。&lt;/p></description></item></channel></rss>
+&lt;p>编写本专栏受益匪浅，也非常感恩因为编写本专栏认识的大神们，期待与各位小伙伴持续的讨论和思辨！&lt;/p></description></item></channel></rss>

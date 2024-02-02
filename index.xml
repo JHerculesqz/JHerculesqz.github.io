@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 21 Jan 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 Feb 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,106 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记38-LangChain解读-LCEL语言之领域功能(4)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD4/</link><pubDate>Sun, 21 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD4/</guid><description>&lt;p>langchain基础的链包括三个组件：提示词、LLM模型、输出解析器，但实际LLM应用开发会复杂很多，可能需要更多组件。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记39-LangChain解读-LCEL语言之领域功能(5)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD5/</link><pubDate>Thu, 01 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD5/</guid><description>&lt;p>在LLM应用程序中，不可避免的会存在大量可知或不可知的故障点，比如模型API调用异常、链组合集成的问题、自定义的组件运行出错等。如果针对这些情况准备了fallback备用方法，就可以让程序更稳健。&lt;/p>
+&lt;p>本篇我们来看下在LCEL中如何实现&amp;quot;fallback&amp;rdquo;。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202010923281.png" alt="image-20240202010923281">&lt;/p>
+&lt;h1 id="1-lcel的fallback方法">1. LCEL的Fallback方法&lt;/h1>
+&lt;p>LCEL在runnable中定义了fallback方法&lt;code>withfallback&lt;/code>，runnable组件及其组成的链都可以直接使用这个方法。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>功能简介&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>当调用方出现异常，则执行fallback中预置的备用方法。&lt;/li>
+&lt;li>通常用于预防LLM API错误，也可用于其它runnable组件，或者工作链。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>使用语法&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>withfallbacks&lt;/code>的第一个参数是&lt;strong>备用方法&lt;/strong>，放在方括号&lt;code>[]&lt;/code>中。&lt;/li>
+&lt;li>第二个参数&lt;code>exceptions_to_handle&lt;/code>为可选，用于&lt;strong>指定要处理的错误&lt;/strong>——当发生这些错误时才执行备用方法。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">chain&lt;/span> &lt;span class="o">=&lt;/span> runnable对象.withfallback&lt;span class="o">(&lt;/span>
+&lt;span class="o">[&lt;/span>备用方法&lt;span class="o">]&lt;/span>,
+&lt;span class="nv">exceptions_to_handle&lt;/span>&lt;span class="o">=(&lt;/span>KeyboardInterrupt, ...,&lt;span class="o">)&lt;/span>
+&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
+&lt;p>以智能客服场景为例，模拟LLM模型发生异常的情况，使用fallback来预防这些错误，提升用户体验。&lt;/p>
+&lt;h2 id="step1-构建故障链">STEP1: 构建故障链&lt;/h2>
+&lt;ul>
+&lt;li>构造一个工作链，专门负责回答物流问题。通过设置不存在的模型来模拟模型故障。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003427497.png" alt="image-20240202003427497">&lt;/p>
+&lt;ul>
+&lt;li>运行链，返回关于模型的错误信息。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003628125.png" alt="image-20240202003628125">&lt;/p>
+&lt;h2 id="step2-构建备用链">STEP2: 构建备用链&lt;/h2>
+&lt;ul>
+&lt;li>构建默认回复链，该链使用正常模型。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003914611.png" alt="image-20240202003914611">&lt;/p>
+&lt;h2 id="step3-构建fallback链">STEP3: 构建Fallback链&lt;/h2>
+&lt;ul>
+&lt;li>使用&lt;code>with_fallbacks&lt;/code>方法，构造工作链service_chain，把默认回复链作为物流链的后备方法。&lt;/li>
+&lt;li>运行具有fallback能力service_chain，顺利得到回复。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003948900.png" alt="image-20240202003948900">&lt;/p>
+&lt;ul>
+&lt;li>除了上述基础用法，我们还可以指定fallback服务于特殊的异常类型。如下示例中，指定故障链一旦发生了KeyboardInterrupt异常，才执行备用链。&lt;/li>
+&lt;li>具体如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202004341255.png" alt="image-20240202004341255">&lt;/p>
+&lt;h2 id="step4-构建fallback链自定义备用方法">STEP4: 构建Fallback链：自定义备用方法&lt;/h2>
+&lt;ul>
+&lt;li>假设LLM模型全部失效，把默认回复链的模型也改成无效的模型。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202005006014.png" alt="image-20240202005006014">&lt;/p>
+&lt;ul>
+&lt;li>自定义一个备用方法，来兜底保证给用户及时回复。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202005208000.png" alt="image-20240202005208000">&lt;/p>
+&lt;ul>
+&lt;li>构造新的工作链new_service_chain，把兜底回复作为后备方法。&lt;/li>
+&lt;li>运行链，顺利得到回复。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202005233635.png" alt="image-20240202005233635">&lt;/p>
+&lt;h1 id="3小结">3.小结&lt;/h1>
+&lt;p>本篇介绍了LCEL的fallback方法&lt;code>withfallbacks&lt;/code>，可以有效解决LLM API、模型输出不佳以及其他集成问题带来的问题。&lt;/p>
+&lt;p>关键要点如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>&lt;code>withfallbacks&lt;/code>方法&lt;/strong>：&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LCEL在runnable中定义了fallback方法&lt;code>withfallbacks&lt;/code>，runnable组件及其组成的链都可以直接使用这个方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>withfallbacks&lt;/code>的第一个参数是&lt;strong>备用方法&lt;/strong>，第二个参数&lt;code>exceptions_to_handle&lt;/code>为可选，用于&lt;strong>指定要处理的错误&lt;/strong>——当发生这些错误时才执行备用方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用上述方法，构建了一个具有fallback机制的客服问答工作链。模拟LLM模型发生异常时，通过预置的后备方法及时回复用户消息。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记38-LangChain解读-LCEL语言之领域功能(4)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD4/</link><pubDate>Sun, 21 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD4/</guid><description>&lt;p>langchain基础的链包括三个组件：提示词、LLM模型、输出解析器，但实际LLM应用开发会复杂很多，可能需要更多组件。&lt;/p>
 &lt;p>本篇我们介绍LCEL提供的几个常用方法，可以帮助开发者构建自定义runnable组件，进而组合成功能更强大的链。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120130624759.png" alt="">&lt;/p>
 &lt;h1 id="1-lcel组件构建方法">1. LCEL组件构建方法&lt;/h1>
@@ -4247,197 +4346,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>文档向量化时，有多种词嵌入模型，有多种向量数据库，实战时也需要熟练掌握。&lt;/li>
 &lt;li>文档检索时，支持多种文档检索策略，实战时需熟练掌握。&lt;/li>
 &lt;/ul>
-&lt;p>下一篇，我们对LangChain最火的模块Agents进行探索，下篇见！&lt;/p></description></item><item><title>【chatGPT】学习笔记20-如何搭建ChatGLM3</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAchatglm3/</link><pubDate>Sun, 29 Oct 2023 18:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAchatglm3/</guid><description>&lt;h1 id="1chatglm3更新了什么">1.ChatGLM3更新了什么&lt;/h1>
-&lt;h2 id="1模型列表">(1)模型列表&lt;/h2>
-&lt;p>智谱AI刚刚发布了ChatGLM3，其中&lt;strong>ChatGLM3-6B&lt;/strong>的能力提升如下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>更强大的基础模型&lt;/strong>： 采用了更多样的训练数据、更充分的训练步数和更合理的训练策略。在语义、数学、推理、代码、知识等不同角度的数据集上表现更好。&lt;/li>
-&lt;li>&lt;strong>更完整的功能支持&lt;/strong>：重新设计了Prompt模版格式，支持&lt;code>Function Call&lt;/code>、&lt;code>Code Interpreter&lt;/code>、&lt;code>Agent&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;p>除了ChatGLM3-6B，还发布了：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>ChatGLM3-6B-Base&lt;/strong>：它是ChatGLM3-6B的预训练模型，在10B以下的表现同比更好。&lt;/li>
-&lt;li>&lt;strong>ChatGLM3-6B-32K&lt;/strong>：适用于长文本对话场景。&lt;/li>
-&lt;/ul>
-&lt;p>ChatGLM3发布的&lt;strong>模型列表&lt;/strong>如下：&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Model&lt;/th>
-&lt;th>Seq Length&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ChatGLM3-6B&lt;/td>
-&lt;td>8k&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ChatGLM3-6B-Base&lt;/td>
-&lt;td>8k&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ChatGLM3-6B-32K&lt;/td>
-&lt;td>32k&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="2测评结果">(2)测评结果&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>典型数据集测试&lt;/strong>：在8个中英文典型数据集上，ChatGLM3-6B-Base的性能表现如下：
-&lt;ul>
-&lt;li>&lt;strong>测试方法&lt;/strong>：BBH 采用3-shot测试，GSM8K(需要推理)采用0-shot CoT测试、MATH(需要推理)采用0-shot CoT测试，MBPP 采用0-shot生成后运行测例计算 Pass@1 ，其它选择题类型数据集均采用0-shot测试。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Model&lt;/th>
-&lt;th>GSM8K&lt;/th>
-&lt;th>MATH&lt;/th>
-&lt;th>BBH&lt;/th>
-&lt;th>MMLU&lt;/th>
-&lt;th>C-Eval&lt;/th>
-&lt;th>CMMLU&lt;/th>
-&lt;th>MBPP&lt;/th>
-&lt;th>AGIEval&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ChatGLM2-6B-Base&lt;/td>
-&lt;td>32.4&lt;/td>
-&lt;td>6.5&lt;/td>
-&lt;td>33.7&lt;/td>
-&lt;td>47.9&lt;/td>
-&lt;td>51.7&lt;/td>
-&lt;td>50.0&lt;/td>
-&lt;td>-&lt;/td>
-&lt;td>-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Best Baseline&lt;/td>
-&lt;td>52.1&lt;/td>
-&lt;td>13.1&lt;/td>
-&lt;td>45.0&lt;/td>
-&lt;td>60.1&lt;/td>
-&lt;td>63.5&lt;/td>
-&lt;td>62.2&lt;/td>
-&lt;td>47.5&lt;/td>
-&lt;td>45.8&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ChatGLM3-6B-Base&lt;/td>
-&lt;td>72.3&lt;/td>
-&lt;td>25.7&lt;/td>
-&lt;td>66.1&lt;/td>
-&lt;td>61.4&lt;/td>
-&lt;td>69.0&lt;/td>
-&lt;td>67.5&lt;/td>
-&lt;td>52.4&lt;/td>
-&lt;td>53.7&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;ul>
-&lt;li>&lt;strong>长文本测试&lt;/strong>：进行人工评估测试，ChatGLM3-6B-32K的性能表现如下。
-&lt;ul>
-&lt;li>&lt;strong>测试结论&lt;/strong>：与ChatGLM2相比，效果提升超50%(对论文阅读、文档摘要和财报分析等提升显著)。&lt;/li>
-&lt;li>&lt;strong>测试方法&lt;/strong>：在LongBench评测集上进行。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Model&lt;/th>
-&lt;th>平均&lt;/th>
-&lt;th>Summary&lt;/th>
-&lt;th>Single-Doc QA&lt;/th>
-&lt;th>Multi-Doc QA&lt;/th>
-&lt;th>Code&lt;/th>
-&lt;th>Few-shot&lt;/th>
-&lt;th>Synthetic&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ChatGLM2-6B-32K&lt;/td>
-&lt;td>41.5&lt;/td>
-&lt;td>24.8&lt;/td>
-&lt;td>37.6&lt;/td>
-&lt;td>34.7&lt;/td>
-&lt;td>52.8&lt;/td>
-&lt;td>51.3&lt;/td>
-&lt;td>47.7&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ChatGLM3-6B-32K&lt;/td>
-&lt;td>50.2&lt;/td>
-&lt;td>26.6&lt;/td>
-&lt;td>45.8&lt;/td>
-&lt;td>46.1&lt;/td>
-&lt;td>56.2&lt;/td>
-&lt;td>61.2&lt;/td>
-&lt;td>65&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h1 id="2准备硬件资源及基础软件">2.准备硬件资源及基础软件&lt;/h1>
-&lt;p>笔者准备的硬件资源及基础软件如下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>GPU&lt;/strong>：V100，32G显存，避免OOM问题。&lt;/li>
-&lt;li>&lt;strong>CUDA&lt;/strong>：Cuda11.6&lt;/li>
-&lt;li>&lt;strong>OS&lt;/strong>：Ubuntu22.04&lt;/li>
-&lt;li>&lt;strong>Conda&lt;/strong>：Miniconda3&lt;/li>
-&lt;li>&lt;strong>Python&lt;/strong>：Python3.10&lt;/li>
-&lt;li>&lt;strong>Pytorch&lt;/strong>：Pytorch3.8&lt;/li>
-&lt;/ul>
-&lt;h1 id="3创建虚拟环境">3.创建虚拟环境&lt;/h1>
-&lt;ul>
-&lt;li>创建虚拟环境：&lt;code>conda create -p ./envs/HCZ_ChatGLM2 python=3.10&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030003623799.png" alt="image-20231030003623799">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>激活虚拟环境&lt;/strong>：&lt;code>conda activate ./envs/HCZ_ChatGLM3&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030003931661.png" alt="image-20231030003931661">&lt;/p>
-&lt;h1 id="4上传模型及模型容器">4.上传模型及模型容器&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>chatglm3-6b下载地址&lt;/strong>：https://huggingface.co/THUDM/chatglm3-6b&lt;/li>
-&lt;li>&lt;strong>chatglm3-6b容器下载地址&lt;/strong>：https://github.com/THUDM/ChatGLM3/archive/refs/heads/main.zip&lt;/li>
-&lt;li>下载完成后，&lt;strong>上传到服务器&lt;/strong>，如下图：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030071806371.png" alt="image-20231030071806371">&lt;/p>
-&lt;h1 id="5安装依赖包">5.安装依赖包&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>进入容器目录&lt;/strong>：&lt;code>cd /opt/model/THUDM_chatglm3-6b-container&lt;/code>&lt;/li>
-&lt;li>&lt;strong>安装依赖包&lt;/strong>：&lt;code>pip install -r requirements.txt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030071933817.png" alt="image-20231030071933817">&lt;/p>
-&lt;h1 id="6构建restful接口">6.构建Restful接口&lt;/h1>
-&lt;ul>
-&lt;li>借鉴ChatGLM2的&lt;code>api.py&lt;/code>，具体代码如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030074839307.png" alt="image-20231030074839307">&lt;/p>
-&lt;h1 id="7运行chatglm3服务">7.运行ChatGLM3服务&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>进入容器目录&lt;/strong>：&lt;code>cd /opt/model/THUDM_chatglm3-6b-container&lt;/code>&lt;/li>
-&lt;li>&lt;strong>运行服务&lt;/strong>：&lt;code>python api.py&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030075223648.png" alt="image-20231030075223648">&lt;/p>
-&lt;h1 id="8测试">8.测试&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>向ChatGLM3提问&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030083402685.png" alt="image-20231030083402685">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>服务器端运行日志如下&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B020-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAChatGLM3/image-20231030083320605.png" alt="image-20231030083320605">&lt;/p>
-&lt;h1 id="9小结">9.小结&lt;/h1>
-&lt;ul>
-&lt;li>本文阐述了ChatGLM3的官宣能力，并演示了如何搭建自己的ChatGLM3。&lt;/li>
-&lt;li>ChatGLM3的新能力有待进一步集成到产品中进行验证。&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>下一篇，我们对LangChain最火的模块Agents进行探索，下篇见！&lt;/p></description></item></channel></rss>

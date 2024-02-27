@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 05 Feb 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 26 Feb 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,214 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记40-LLM应用-如何构建RAG数据集</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-llm%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BArag%E6%95%B0%E6%8D%AE%E9%9B%86/</link><pubDate>Mon, 05 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-llm%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BArag%E6%95%B0%E6%8D%AE%E9%9B%86/</guid><description>&lt;p>2023年是基础大模型的爆发元年，专家预测2024年将是AI应用的爆发元年。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记41-多模态-Sora浅析</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-sora%E6%B5%85%E6%9E%90/</link><pubDate>Mon, 26 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-sora%E6%B5%85%E6%9E%90/</guid><description>&lt;p>Sora自2024年2月16日发布以来，持续霸屏、热度不断。从OpenAI官网上的演示视频看，效果也是相当震撼。&lt;/p>
+&lt;p>本篇基于OpenAI发布的技术报告对Sora的技术特点和原理进行解读。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226144755598.png" alt="image-20240226144755598">&lt;/p>
+&lt;h1 id="1sora是什么">1.Sora是什么？&lt;/h1>
+&lt;p>Sora是一个文生视频的AI模型，可以根据文本信息生成真实且富有想象力的视频内容。主要特点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>以自然语言为输入(提示词)，生成符合提示词描述的视频&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>可生成1分钟内容连贯的视频，视频尺寸/分辨率可调整，目前只有Sora做到&lt;/strong>。其它模型只能生成4秒以内、256x256固定尺寸的视频。&lt;/li>
+&lt;li>&lt;strong>真实世界的模拟器&lt;/strong>，不仅理解物理实体(如人、猫、狗、&amp;hellip;)，还懂得物理规律(如光照、碰撞、粒子、&amp;hellip;)。&lt;/li>
+&lt;/ul>
+&lt;p>Sora出道即颠峰，让一众顶级文生视频模型望尘莫及。我们来直观感受下Sora生成的视频的震撼效果：&lt;/p>
+&lt;p>提示词如下：&lt;/p>
+&lt;blockquote>
+&lt;p>Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field.&lt;/p>
+&lt;/blockquote>
+&lt;p>视频如下：&lt;/p>
+&lt;iframe src="//player.bilibili.com/player.html?aid=1301071173&amp;bvid=BV1zu4m1c7gg&amp;cid=1452188766&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;h1 id="2sora原理浅析和技术优势">2.Sora原理浅析和技术优势&lt;/h1>
+&lt;p>OpenAI没有公开Sora的模型细节，本文后续分析依据OpenAI的&amp;quot;Technic Report&amp;quot;推测所得。&lt;/p>
+&lt;h2 id="21sora是否采用了新的模型架构技术">2.1.Sora是否采用了新的模型架构&amp;amp;技术？&lt;/h2>
+&lt;p>答案是没有。&lt;/p>
+&lt;p>文生视频可能涉及的模型架构如下：&lt;/p>
+&lt;ul>
+&lt;li>RRN (循环神经网络)&lt;/li>
+&lt;li>GAN (生成式对抗网络)&lt;/li>
+&lt;li>自回归Transformer&lt;/li>
+&lt;li>Diffusion (扩散模型)&lt;/li>
+&lt;/ul>
+&lt;p>Sora采用的是：&lt;/p>
+&lt;ul>
+&lt;li>自回归Transformer&lt;/li>
+&lt;li>Diffusion (扩散模型)&lt;/li>
+&lt;/ul>
+&lt;h2 id="22sora对现有模型架构技术的创新">2.2.Sora对现有模型架构&amp;amp;技术的创新&lt;/h2>
+&lt;p>Sora架构是结合了Diffusion扩散模型和Transformer架构的创新设计。&lt;/p>
+&lt;h3 id="1用transformer架构学习视频特征">(1)用Transformer架构，学习视频特征&lt;/h3>
+&lt;p>灵感来自于Tranformer架构在GPT中的成功应用，OpenAI把自然语言的特征表示方法引入到了视频处理中：&lt;/p>
+&lt;ul>
+&lt;li>通过编码器，把视频的每一帧转换为有时序的向量，若干帧形成了&lt;strong>向量矩阵&lt;/strong>，Sora称之为&lt;strong>Turning visual data into patches&lt;/strong>。(大语言模型是把文字转换成一个个token，Sora则是把视频转换成一个个patch。)&lt;/li>
+&lt;li>与大语言模型中token线性序列不同，由patch组成的高维向量矩阵包含了时序、分辨率、高宽比等丰富信息。&lt;/li>
+&lt;li>和大语言模型一样(文本信息压缩网络)，Sora模型本质是一个视频压缩网络&lt;strong>Video compression network&lt;/strong>，使用该视频压缩网络把高维向量矩阵压缩成单维向量序列。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240223161152675.png" alt="image-20240223161152675">&lt;/p>
+&lt;h3 id="2用结合了transformer的diffusion模型学习还原视频的特征">(2)用结合了Transformer的Diffusion模型，学习还原视频的特征&lt;/h3>
+&lt;h4 id="--什么是扩散模型diffusion-model">- 什么是扩散模型Diffusion Model&lt;/h4>
+&lt;p>Diffusion Model的基本原理是将原始图片逐渐加入噪声(Noise)，让原本清晰的图片逐渐变成全是噪声的状态。&lt;/p>
+&lt;p>Diffusion Model主要有两个过程：前向处理和反向处理。图解如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>前向处理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>AI训练过程中的1次噪声扩散&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226131740185.png" alt="image-20240226131740185">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>AI训练过程中，进行N次噪声扩散&lt;/p>
+&lt;ul>
+&lt;li>进行N次噪声扩散，将图片变成全是噪点的图像&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226132019285.png" alt="image-20240226132019285">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>后向处理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>AI训练过程中，进行N次噪声降噪，变成清晰图片&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226132143014.png" alt="image-20240226132143014">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>经过如上扩散处理，我们得到了&lt;strong>噪声与图像的关系。&lt;/strong>&lt;/p>
+&lt;p>利用transformer模型，既可以理解噪声的特性向量，也可以理解自然语言的特征向量，那么就可以建立&lt;strong>噪声与提示词的关系&lt;/strong>。基于这种机制，模型就能够根据提示词来生成图片了。图片是视频的一帧，文生视频也可以用同样的原理来生成。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240227084715255.png" alt="image-20240227084715255">&lt;/p>
+&lt;h4 id="--sora的diffusion-transformer模型">- Sora的Diffusion Transformer模型&lt;/h4>
+&lt;p>在Diffusion Model的基础上，引入Transformer技术方法：&lt;/p>
+&lt;ul>
+&lt;li>通过编码器，将每一帧噪声转换为向量，若干帧形成了&lt;strong>噪声向量矩阵&lt;/strong>，Sora称之为&lt;strong>Noisy patches&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226104456184.png" alt="image-20240226104456184">&lt;/p>
+&lt;ul>
+&lt;li>Sora的创新点：&lt;strong>一次性生成&lt;/strong>Noise Vector Cude，用以保证帧与帧之间的逻辑关系。从而生成时间和空间更流畅、更连贯的视频。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226104436506.png" alt="image-20240226104436506">&lt;/p>
+&lt;h2 id="23sora的技术优势">2.3.Sora的技术优势&lt;/h2>
+&lt;p>虽然OpenAI没有公布Sora模型的训练细节，但即使公布了，其他厂家可能也很难复制或追赶。&lt;/p>
+&lt;h3 id="1sora的video-compression-network依托于强大的算力">(1)Sora的Video compression network依托于强大的算力&lt;/h3>
+&lt;p>模型成功的一个重要因素是海量的训练数据，训练需要消耗大量算力。Sora采用高维向量矩阵模式的视频处理方式，意味着更大算力消耗。中信证券曾简单估算，一个6~8秒的视频（约60帧）需要约6万个Patches，如果去噪步数是20的话，相当于要生成120万个Tokens，这是相当大的计算量。那么Sora生成1分钟视频需要的算力可想而知。&lt;/p>
+&lt;p>同一个提示词，算力越高，生成视频效果越好。Sora给出基础算力、4倍算力、32倍算力下的效果展示：&lt;/p>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1uC411s7y9&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1ey421q72G&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;h3 id="2gpt4加速孵化多模态大模型多模态大模型反哺llm">(2)GPT4加速孵化多模态大模型，多模态大模型反哺LLM&lt;/h3>
+&lt;ul>
+&lt;li>遥遥领先的自然语言理解能力：
+&lt;ul>
+&lt;li>文生视频模型的训练离不开大量带有文字标注的视频，OpenAI基于GPT4专门训练一个高度描述性的字幕模型，使用它来为训练数据集中的所有视频生成文本字幕。这样进行训练极大的保证了文本保真度以及视频的整体质量。&lt;/li>
+&lt;li>同时，GPT优秀的文本扩展能力，可以丰富用户输入的提示词，让文本描述更丰富、更细致，从而生成丰富、细腻的视频。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226141517838.png" alt="image-20240226141517838">&lt;/p>
+&lt;h1 id="3sora有哪些创意玩法">3.Sora有哪些创意玩法&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>Animating DALL·E images&lt;/strong>：图生视频
+&lt;ul>
+&lt;li>左边是图片和提示词，右边是生成的视频&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1pZ421y7RF&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>&lt;strong>Extending generated videos&lt;/strong>：视频续写
+&lt;ul>
+&lt;li>基于原视频，向前或向后续写新的视频&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1oK42187Kc&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>&lt;strong>Video-to-video editing&lt;/strong>：编辑视频
+&lt;ul>
+&lt;li>左边是原视频，右边是根据提示词修改的视频&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1Vu4m1w7QY&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>&lt;strong>Connecting videos&lt;/strong>：连接视频
+&lt;ul>
+&lt;li>通过左侧视频和右侧视频，生成中间过渡视频&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV19w4m1f7dr&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>&lt;strong>Image generation capabilities&lt;/strong>：生成高质量图片
+&lt;ul>
+&lt;li>生成各种尺寸的图片，分辨率最高可达 2048x2048&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226173623135.png" alt="image-20240226173623135">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>卓越的仿真能力&lt;/strong>：生成现实世界仿真视频&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>3D consistency&lt;/strong>：空间一致性&lt;/p>
+&lt;ul>
+&lt;li>模拟摄像机镜头旋转和运行，画面中的人和场景元素在三维空间中也一致的移动。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV11K421t75e&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>&lt;strong>Long-range coherence and object permanence&lt;/strong>：时间一致性
+&lt;ul>
+&lt;li>Sora能够有效地为短期和长期依赖关系建模。例如，模型可以保存人物、动物和物体，即使它们被遮挡或离开了框架(下左视频)。同样，可以基于单个样本生成同一角色的多个镜头，并在整个视频中保持其外观(下右视频)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1Av421k7vD&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;ul>
+&lt;li>&lt;strong>Interacting with the world&lt;/strong>：模拟真实世界的动作和结果
+&lt;ul>
+&lt;li>随着画笔的移动，画面中增加了花瓣；人吃汉堡，汉堡留下咬痕。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1vF4m157Hm&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=600px> &lt;/iframe>
+&lt;h1 id="4sora对视频相关领域的影响">4.Sora对视频相关领域的影响&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>内容创作与媒体行业&lt;/strong>：&lt;/p>
+&lt;p>在内容创作领域，Sora将缩短创作周期，降低制作成本。&lt;/p>
+&lt;p>导演、视频编辑等岗位将直面Sora的影响。&lt;/p>
+&lt;p>抖音类短视频App是否会面临挑战？&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>教育和培训：&lt;/strong>
+教育工作者可以利用Sora创建生动的教学材料，提高课程互动性和学习效果。
+但Sora仍然面临垂域微调的难题——我们尝试生成一个排序算法的Demo，得到的视频不尽如人意。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>营销和广告&lt;/strong>
+广告设计师和品牌经理可以通过Sora来快速生成视频广告内容。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>游戏开发与动画制作&lt;/strong>
+游戏设计师和动画制作人员可能会使用Sora快速原型制作和动画创建。
+这不仅能够加快项目开发速度，还能使得复杂场景的测试和迭代变得更为高效。
+不过，这也可能引发对传统动画和建模技艺的重新评估。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>上下游基础设施：&lt;/strong>
+上游厂商：AI服务器、AI芯片、通信行业、云厂商。
+下游应用：大量的短/中/长视频应用和服务需求。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5参考">5.参考&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;a href="https://openai.com/research/video-generation-models-as-world-simulators">https://openai.com/research/video-generation-models-as-world-simulators&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记40-LLM应用-如何构建RAG数据集</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-llm%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BArag%E6%95%B0%E6%8D%AE%E9%9B%86/</link><pubDate>Mon, 05 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-llm%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BArag%E6%95%B0%E6%8D%AE%E9%9B%86/</guid><description>&lt;p>2023年是基础大模型的爆发元年，专家预测2024年将是AI应用的爆发元年。&lt;/p>
 &lt;p>因此，本专栏希望通过一系列文章，和大家探讨AI应用的规划、落地、实践等问题：&lt;/p>
 &lt;blockquote>
 &lt;p>如何在千行百业寻找AI应用的落地点？如何用AI为客户带来真实的价值？&lt;/p>
@@ -2653,131 +2860,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;p>如果小伙伴们对其它LLM相关的文献、课程感兴趣，欢迎后台联系我们。&lt;/p>
 &lt;blockquote>
 &lt;p>免责声明：我们的翻译出于对技术的执着和个人兴趣，开源免费，仅供个人学习，不得商用。&lt;/p>
-&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记22-LangChain之Agent，对LLM的抽象5</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</link><pubDate>Tue, 31 Oct 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-langchain%E4%B9%8Bagent%E5%AF%B9llm%E7%9A%84%E6%8A%BD%E8%B1%A15/</guid><description>&lt;p>业界目前的AI助手应用集中于两大功能：&lt;/p>
-&lt;ul>
-&lt;li>基于垂直领域知识的&lt;strong>智能问答&lt;/strong>&lt;/li>
-&lt;li>基于垂直领域知识的&lt;strong>智能行动&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>在《【chatGPT】学习笔记21-LangChain之Retrieval，对LLM的抽象4》中，着重介绍了&lt;strong>智能问答&lt;/strong>依赖的技术点。&lt;/p>
-&lt;p>本文重点介绍与&lt;strong>智能行动&lt;/strong>依赖的技术点。&lt;/p>
-&lt;h1 id="1什么是react">1.什么是ReAct&lt;/h1>
-&lt;h2 id="1基本概念">(1)基本概念&lt;/h2>
-&lt;p>常见的LLM推理模式有两种：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Reason Only&lt;/strong>：比如CoT，利用提示词诱导LLM进行逻辑推理，进而回答偏数理逻辑类的问题。&lt;/li>
-&lt;li>&lt;strong>Act Only&lt;/strong>：比如指令微调提到的，明确在问题中带有指令。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>ReAct&lt;/strong>提出了一种新的推理模式——&lt;strong>Reason + Act&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>LLM推理出&amp;rdquo;&lt;strong>把大象装进冰箱需要几步&lt;/strong>&amp;quot;，&lt;/li>
-&lt;li>再针对待执行的每一步&lt;strong>选择合适的工具&lt;/strong>，&lt;/li>
-&lt;li>在执行当前步骤后，通过环境的反馈，&lt;strong>决策下一步是什么&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031152602671.png" alt="image-20231031152602671">&lt;/p>
-&lt;h2 id="2react优势">(2)ReAct优势&lt;/h2>
-&lt;p>在论文《ReAct: Synergizing Reasoning and Acting in Language Models》中，阐述了ReAct的训练效果比&lt;code>Reson Only&lt;/code>和&lt;code>Act Only&lt;/code>都好：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031153243968.png" alt="image-20231031153243968">&lt;/p>
-&lt;h2 id="3agents内部结构">(3)Agents内部结构&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>数据结构&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;code>AgentAction&lt;/code>：表示Agent应采取的行为。包含1个&lt;code>tool&lt;/code>属性和一个&lt;code>tool_input&lt;/code>属性，表示这个行为可采用的工具及工具输入。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>AgentFinish&lt;/code>：表示Agent完成后的返回结果。包含1个&lt;code>return_values&lt;/code>属性，字典类型。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>intermediate_steps&lt;/code>：表示之前的Agent行为和返回结果。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Agent&lt;/strong>：智能体，可以分析出&amp;rdquo;&lt;strong>将大象放进冰箱里需要几步&lt;/strong>&amp;quot;，内部实现&lt;strong>依赖LLM的逻辑推理能力&lt;/strong>。它的输入包括：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>工具列表&lt;/strong>：&lt;code>List of available tools&lt;/code>，Agent可以用的工具集合。&lt;/li>
-&lt;li>&lt;strong>用户输入&lt;/strong>：User input。&lt;/li>
-&lt;li>&lt;strong>之前的Agent行为和返回结果&lt;/strong>：Any previously executed steps，就是&lt;code>intermediate_steps&lt;/code>对象。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Tools&lt;/strong>：它是Agent某个行为可以使用的工具。每个工具需要有两个明确信息：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>工具的可用性&lt;/strong>：如&amp;quot;使用Google搜索&amp;quot;是一个工具，这个工具本身要真的可用、可靠。&lt;/li>
-&lt;li>&lt;strong>工具的准确描述&lt;/strong>：对工具的作用有准确的描述，这段描述最终会变成提示词，帮助Agent知道要执行什么行为的时候，应该选择哪个工具更合适。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>AgentExecutor&lt;/strong>：Agent执行器。能够调用&lt;code>Agent&lt;/code>，不断获得下一步&lt;code>action(行为)&lt;/code>并执行。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>除了&lt;code>AgentExecutor&lt;/code>，LangChain还提供了实验性质的其它Agent执行器：&lt;/p>
-&lt;ul>
-&lt;li>Plan-and-execute Agent&lt;/li>
-&lt;li>Baby AGI&lt;/li>
-&lt;li>Auto GPT&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>AgentExecutor&lt;/code>核心代码如下：&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">next_action&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_action&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">...&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">while&lt;/span> &lt;span class="n">next_action&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">AgentFinish&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="n">observation&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">next_action&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">next_action&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_action&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">...&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">next_action&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">observation&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="n">next_action&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="4langchain已经支持的agent和tool列表">(4)LangChain已经支持的Agent和Tool列表&lt;/h2>
-&lt;ul>
-&lt;li>LangChain已经提供了很多&lt;code>Agent&lt;/code>和&lt;code>Tools&lt;/code>，具体如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031151549996.png" alt="image-20231031151549996">&lt;/p>
-&lt;h1 id="2代码示例">2.代码示例&lt;/h1>
-&lt;p>&lt;code>Agent&lt;/code>是当前LLM App的一个热点方向，展开阐述会有很多的内容。本文仅通过1个经典问题代码示例，为各位小伙伴建立&lt;code>Agent&lt;/code>的宏观认识。后续本专栏再详细阐述&lt;code>Agent&lt;/code>开发的内容。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>问题&lt;/strong>：周杰伦的老婆是谁？她现在的年龄的0.43次方等于多少？&lt;/li>
-&lt;li>&lt;strong>代码&lt;/strong>：
-&lt;ul>
-&lt;li>创建了&lt;code>tools&lt;/code>工具集对象&lt;/li>
-&lt;li>初始化了&lt;code>agent&lt;/code>对象，&lt;code>agent&lt;/code>对象包含1个&lt;code>LLM&lt;/code>和1个&lt;code>tools&lt;/code>对象&lt;/li>
-&lt;li>执行&lt;code>agent&lt;/code>对象的&lt;code>run&lt;/code>方法，由&lt;code>LLM&lt;/code>自行开展行动，直到获得最终答案。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>运行结果分析&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>LLM&lt;/code>首先明确任务目标&lt;/strong>：背后应该是由一个复杂的提示词驱动的。&lt;/li>
-&lt;li>&lt;strong>&lt;code>LLM&lt;/code>再分解出三个步骤&lt;/strong>：每个步骤的输出，都会作为下一个步骤的输入。&lt;/li>
-&lt;li>&lt;strong>&lt;code>LLM&lt;/code>最后汇总结果&lt;/strong>：&lt;code>LLM&lt;/code>判断如果达成目标，则给出最终答案，并终止执行。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031154927730.png" alt="image-20231031154927730">&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B022-LangChain%E4%B9%8BAgent%EF%BC%8C%E5%AF%B9LLM%E7%9A%84%E6%8A%BD%E8%B1%A15/image-20231031160426352.png" alt="image-20231031160426352">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>简述了&lt;code>Agent&lt;/code>理论基础&lt;code>ReAct&lt;/code>&lt;/li>
-&lt;li>描述了论文&lt;code>ReAct: Synergizing Reasoning and Acting in Language Models&lt;/code>中的实验现象、&lt;code>ReAct&lt;/code>的优势。&lt;/li>
-&lt;li>给出了一个有关&lt;strong>大语言模型不知道的有时效性的知识&lt;/strong>的问题，&lt;code>Agent&lt;/code>如何&lt;strong>利用大语言模型的推理能力&lt;/strong>解决此类问题的代码示例。&lt;/li>
-&lt;/ul>
-&lt;p>如果说上篇文章的&lt;code>Retrieval&lt;/code>帮助AI助手具备了&lt;strong>智能问答&lt;/strong>能力，这篇文章的&lt;code>Agent&lt;/code>则帮助AI助手实现了&lt;strong>智能行动&lt;/strong>。&lt;/p>
-&lt;p>所以，&lt;code>Agent&lt;/code>这个方向是目前开发LLM应用的诸多厂商的关注热点，这里还有一些未及展开讨论的内容：&lt;/p>
-&lt;ul>
-&lt;li>如何自定义1个满足垂直领域的&lt;strong>自定义Agent&lt;/strong>？&lt;/li>
-&lt;li>如何自定义1组满足垂直领域的&lt;strong>自定义Tool&lt;/strong>？&lt;/li>
-&lt;/ul>
-&lt;p>这些高级话题，留待本专栏后续分解，敬请期待。&lt;/p></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>

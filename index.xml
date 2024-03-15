@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 26 Feb 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Mar 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,156 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记41-多模态-Sora浅析</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-sora%E6%B5%85%E6%9E%90/</link><pubDate>Mon, 26 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-sora%E6%B5%85%E6%9E%90/</guid><description>&lt;p>Sora自2024年2月16日发布以来，持续霸屏、热度不断。从OpenAI官网上的演示视频看，效果也是相当震撼。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记42-LLM微调技术概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 15 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</guid><description>&lt;p>笔者在使用大语言模型开展具体业务领域的任务时，遇到了如下问题：&lt;/p>
+&lt;ul>
+&lt;li>LLM的预训练模型不具备垂域知识，无法很好回答垂域的问题；&lt;/li>
+&lt;li>希望用各种提示词技巧让模型理解专业问题，但效果有限，而且提高了使用门槛和模型推理成本；&lt;/li>
+&lt;li>微调词嵌入模型成本低、速度快，但容易出现过拟合或泛化不足，也是治标不治本。&lt;/li>
+&lt;/ul>
+&lt;p>经过不断尝试总结，最终落脚点还是回到了大模型自身 &amp;ndash; 大模型的微调才是关键。&lt;/p>
+&lt;p>什么是大模型微调？微调如何做？本篇开始，我们将为大家一步步揭开大模型微调的神秘面纱。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240314173850356.png" alt="image-20240314173850356">&lt;/p>
+&lt;h1 id="1大语言模型的技术金字塔">1.大语言模型的技术金字塔&lt;/h1>
+&lt;p>大语言模型相关技术可分为四层，其中：&lt;/p>
+&lt;ul>
+&lt;li>预训练的难度和成本最高，通常只有巨型公司(如谷歌、微软、OpenAI)才能承担其成本。&lt;/li>
+&lt;li>提示词工程难度和成本最低，普通人就可以掌握。&lt;/li>
+&lt;li>大模型微调的难度和成本次高，但从效果来看，是中小型公司可落地的折中技术。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315141452986.png" alt="image-20240315141452986">&lt;/p>
+&lt;p>以下是各层技术的详细阐述：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>提示词工程&lt;/strong>
+&lt;ul>
+&lt;li>技术原理：通过设计合适的提示或上下文来引导LLM生成期望的输出，侧重于用提示来激活预训练模型的能力，如总结摘要、翻译转换等。适用于文本处理、机器翻译等场景。&lt;/li>
+&lt;li>技术特征：技术门槛低，终端用户即可掌握。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Agents&lt;/strong>：
+&lt;ul>
+&lt;li>技术原理：让LLM来决策一系列的动作，这些动作可以是让LLM分步解决问题，也可以是调用工具查询外部信息。这些动作形成一个工作流，最终完成任务目标。适用于相对复杂的用户交互应用，如智能客服。&lt;/li>
+&lt;li>技术特征：有技术门槛，需要专业的LLM应用开发人员，并且了解大模型的基础原理，熟悉其领域的业务逻辑和流程。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>大模型微调&lt;/strong>：
+&lt;ul>
+&lt;li>技术原理：在预训练模型的基础上，针对特定任务的参数做调整。通过少量的数据训练即可提升模型在特定任务上的能力，同时保留模型原已学到的知识。适用于语义理解、垂域的各类应用。&lt;/li>
+&lt;li>技术特征：技术门槛相对高，需要垂域有自己的LLM应用研发团队，具有数据处理、模型训练的能力和经验。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>预训练技术&lt;/strong>：
+&lt;ul>
+&lt;li>技术原理：比如训练出一个&amp;quot;GPT3.5&amp;rdquo;，或者&amp;quot;GLM3.0&amp;rdquo;。&lt;/li>
+&lt;li>技术特征：百G甚至千G的GPU资源需求，大量的大模型研究人员、数据科学家投入，超出了大部分公司的能力。一旦功成，效果显著。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>由于大模型微调的实用性，本专栏后续会展开介绍大模型微调技术。&lt;/p>
+&lt;h1 id="2大模型微调的可行性及理论基础">2.大模型微调的可行性及理论基础&lt;/h1>
+&lt;h2 id="1in-context-learning">(1)In-Context Learning&lt;/h2>
+&lt;p>OpenAI在预训练过程中，发现LLM能够挖掘训练数据中的潜在特征和通用范式，进而习得训练数据之外的新能力。研究者把这一发现称之为In-Context Learning(基于上下文的学习)。&lt;/p>
+&lt;p>基于In-Context Learning思想，衍生出了两种训练微调技术：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Prompt-tuning&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Instruction-tuning&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>In-Context Learning的本质就是举一反三，基于已知的知识和训练数据可以挑战从没做过工作(下游任务)。预训练模型所蕴含的知识、预训练模型所使用的数据是广义上的&lt;code>context&lt;/code>。正因为In-Context Learning的有效性，所以对预训练模型进行微调是业界公认可行的技术路线。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315152229685.png" alt="image-20240315152229685">&lt;/p>
+&lt;h2 id="2transfer-learning">(2)Transfer Learning&lt;/h2>
+&lt;p>Transfer Learning(迁移学习)是人工智能发展过程中的一个重要思想，它的目标是将已经训练好的模型所包含的知识、推理能力迁移到未经训练的新模型上。比如对模型进行压缩、复用开源模型已经具备的能力来新模型，都是基于迁移学习思想。&lt;/p>
+&lt;p>迁移学习包含很多具体的工程方法：&lt;/p>
+&lt;ul>
+&lt;li>Conservative Training&lt;/li>
+&lt;li>Multi-task Learning&lt;/li>
+&lt;li>Progressive Neural Network&lt;/li>
+&lt;li>Domain-adversarial training&lt;/li>
+&lt;li>Zero Shot Learning&lt;/li>
+&lt;li>&amp;hellip;&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>无论有多少种工程方法，其核心思想是：&lt;strong>已训练的数据和任务与未训练的数据和任务存在因果、关联等逻辑关系&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315151715205.png" alt="image-20240315151715205">&lt;/p>
+&lt;h2 id="3bert的优秀实践">(3)Bert的优秀实践&lt;/h2>
+&lt;p>Bert充分发挥了Fine-tuning的技术优势和特点，在已经训练好的Bert模型基础上，加入少量的task-specific parameters。&lt;/p>
+&lt;ul>
+&lt;li>如分类任务，只需要在Bert模型上加一层softmax网络，然后对softmax网络进行微调。&lt;/li>
+&lt;li>再如情感分析任务，取第一个token的输出表示，喂给一个softmax层得到分类结果输出。&lt;/li>
+&lt;/ul>
+&lt;p>微调Bert之所以成功，其本质原因是由于In-context Learning和Transfer Learning的有效性。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315153411365.png" alt="image-20240315153411365">&lt;/p>
+&lt;h1 id="3大模型微调的技术全景图">3.大模型微调的技术全景图&lt;/h1>
+&lt;h2 id="1大模型微调技术全景">(1)大模型微调技术全景&lt;/h2>
+&lt;p>大模型微调技术从大的流派上可分为两类：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Full Fine-Tuning&lt;/strong>：简称FFT，全量微调，即全参数微调。&lt;/li>
+&lt;li>&lt;strong>Parameter-Efficient Fine-Tuning&lt;/strong>: 简称PEFT，高效微调，即通过某些技术手段选择部分参数微调。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315160640710.png" alt="image-20240315160640710">&lt;/p>
+&lt;p>与FFT相比，PEFT是当前业界主流的技术路线，其原因主要是FFT存在如下缺陷：&lt;/p>
+&lt;ul>
+&lt;li>训练成本过高&lt;/li>
+&lt;li>灾难性遗忘&lt;/li>
+&lt;/ul>
+&lt;h2 id="2peft技术分支">(2)PEFT技术分支&lt;/h2>
+&lt;p>PEFT从微调目标方面可分为两类：&lt;/p>
+&lt;ul>
+&lt;li>Supervised Fine-Tuning: 简称SFT，属于有监督的微调。&lt;/li>
+&lt;li>Reinforce Learning Human Feedback: 简称RLHF，属于利用人类反馈的强化学习。&lt;/li>
+&lt;/ul>
+&lt;p>其中SFT又具有诸多工程实践，因此产生了很多技术分支：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Additive&lt;/strong>: 增量派，在原有模型上增加额外小模型和少量参数。&lt;/li>
+&lt;li>&lt;strong>Selective&lt;/strong>: 选择派，从原有模型的海量参数中，选择与下游任务相关的少量参数。&lt;/li>
+&lt;li>&lt;strong>Reparametrization-based&lt;/strong>: 数学派，基于重参数化方法，将原有模型参数低秩化，获得小参数矩阵。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315161446294.png" alt="image-20240315161446294">&lt;/p>
+&lt;p>在上述流派中，每个流派都有自己的代表方法，目前在业界广泛使用：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Sparse Adapter&lt;/strong>: 稀疏适配器。新增小模型，并从原有大模型中选择一部分参数，对这两部分参数进行微调。&lt;/li>
+&lt;li>&lt;strong>Prefix-Tuning&lt;/strong>: 模块化轻量微调。增加prefix模块(Prefix模块会在用户输入前增加虚拟token)，训练prefix模块的参数。&lt;/li>
+&lt;li>&lt;strong>LoRA&lt;/strong>: Low-Rank Adaption，低秩适配微调。它是目前业界在大语言模型、大视觉模型、多模态模型微调中的热门技术。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315162656941.png" alt="image-20240315162656941">&lt;/p>
+&lt;p>上述技术分支的关系错综复杂，我们可以抽象的概括一下它们的技术思想：&lt;/p>
+&lt;ul>
+&lt;li>基于数据的技术分支：其核心思想是对进入预训练模型的训练语料进行前置处理。
+&lt;ul>
+&lt;li>如soft prompts中的Prompt-Tuning、Prefix-Tuning、P-Tuning，都是属于此技术分支。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>基于模型的技术分支：其核心思想是在预训练模型基础上增加额外的模型分层，仅针对增量模型的参数和预训练模型的少量参数进行微调和变换。
+&lt;ul>
+&lt;li>如Adapter模型属于此技术分支。&lt;/li>
+&lt;li>如LoRA、QLoRA、AdaLoRA也属于此技术分支。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="4小结">4.小结&lt;/h1>
+&lt;p>本文从宏观上介绍了大模型微调技术的全景图，重点梳理了PEFT微调技术的众多技术分支，旨在帮助大家了解大模型微调技术的全貌。本专栏后续文章会展开阐述PEFT的各类微调技术。&lt;/p>
+&lt;ul>
+&lt;li>大语言模型的技术金字塔
+&lt;ul>
+&lt;li>大语言模型相关技术可分为四层：提示词工程、Agents、大模型微调、预训练技术。&lt;/li>
+&lt;li>预训练的难度和成本最高；提示词工程难度和成本最低；大模型微调的难度和成本次高，但从效果来看，是中小型公司可落地的折中技术。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>大模型微调的可行性及理论基础
+&lt;ul>
+&lt;li>In-Context Learning&lt;/li>
+&lt;li>Transfer Learning&lt;/li>
+&lt;li>Bert的优秀实践&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>大模型微调的技术全景图
+&lt;ul>
+&lt;li>Full Fine-Tuning&lt;/li>
+&lt;li>Parameter-Efficient Fine-Tuning&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>【chatGPT】学习笔记41-多模态-Sora浅析</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-sora%E6%B5%85%E6%9E%90/</link><pubDate>Mon, 26 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-sora%E6%B5%85%E6%9E%90/</guid><description>&lt;p>Sora自2024年2月16日发布以来，持续霸屏、热度不断。从OpenAI官网上的演示视频看，效果也是相当震撼。&lt;/p>
 &lt;p>本篇基于OpenAI发布的技术报告对Sora的技术特点和原理进行解读。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B041-%E5%A4%9A%E6%A8%A1%E6%80%81-Sora%E6%B5%85%E6%9E%90/image-20240226144755598.png" alt="image-20240226144755598">&lt;/p>
 &lt;h1 id="1sora是什么">1.Sora是什么？&lt;/h1>
@@ -2821,43 +2970,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>&lt;strong>选择合适的提示词风格&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记23-让我们一起来翻译吴恩达LLM课程</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BEllm%E8%AF%BE%E7%A8%8B/</link><pubDate>Thu, 02 Nov 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BEllm%E8%AF%BE%E7%A8%8B/</guid><description>&lt;p>哈喽小伙伴，我是小牛，初次见面，请多关照。&lt;/p>
-&lt;p>最近跟着猴哥的学习笔记各种手撸GPT，理解了LLM原理。&lt;/p>
-&lt;p>但我跟GPT的交情好像只停留在say hello的程度，说好的能替代“表哥”、“码农”、“ppt经理”的能力呢？&lt;/p>
-&lt;p>然后chatGPT跟我说，有个叫吴恩达的大咖，有好几门神课，理论+实践，易学易懂，学会了就可以在职场上大放异彩。那还犹豫什么，卷！&lt;/p>
-&lt;p>这些课程都是英文视频，为了方便学习，我们准备把它们翻译成中文。&lt;/p>
-&lt;p>欢迎感兴趣的小伙伴们一起来翻译。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BELLM%E8%AF%BE%E7%A8%8B/image-20231102181630937.png" alt="image-20231102181630937">&lt;/p>
-&lt;h1 id="1已翻译的课程">1.已翻译的课程&lt;/h1>
-&lt;ul>
-&lt;li>《提示词工程 by 吴恩达》：https://jherculesqz.gitbook.io/chatgpt-prompt-engineering-for-developers-1&lt;/li>
-&lt;li>《LangChain by 吴恩达》：https://jherculesqz.gitbook.io/langchain-by-wu-en-da&lt;/li>
-&lt;/ul>
-&lt;h2 id="11提示词工程-by-吴恩达简介">1.1.《提示词工程 by 吴恩达》简介&lt;/h2>
-&lt;p>GPT神器虽好，但要会用。本课程将介绍：&lt;/p>
-&lt;ul>
-&lt;li>如何构建清晰、明确的提示词，有哪些技巧&lt;/li>
-&lt;li>如何通过提示词发掘大语言模型总结、推理、转换以及生成文本的能力&lt;/li>
-&lt;li>动手做一个自己的聊天机器人&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BELLM%E8%AF%BE%E7%A8%8B/image-20231102181807030.png" alt="image-20231102181807030">&lt;/p>
-&lt;h2 id="12langchain-by-吴恩达简介">1.2.《LangChain by 吴恩达》简介&lt;/h2>
-&lt;p>LangChain是开发LLM应用的开发框架，是当红炸子鸡。本课程将介绍：&lt;/p>
-&lt;ul>
-&lt;li>什么是LangChain&lt;/li>
-&lt;li>LangChain有哪些Chain&lt;/li>
-&lt;li>如何用LangChain做聊天模型、QA问答系统&lt;/li>
-&lt;li>如何用LangChain的agent功能使能大模型的推理能力&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B023-%E8%AE%A9%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E7%BF%BB%E8%AF%91%E5%90%B4%E6%81%A9%E8%BE%BELLM%E8%AF%BE%E7%A8%8B/image-20231102181929184.png" alt="image-20231102181929184">&lt;/p>
-&lt;h1 id="2待翻译的课程">2.待翻译的课程&lt;/h1>
-&lt;p>我们已经计划翻译的课程、论文有：&lt;/p>
-&lt;ul>
-&lt;li>《Finetuning Large Language Models》&lt;/li>
-&lt;li>《Attention Is All You Need》&lt;/li>
-&lt;li>&amp;hellip;&lt;/li>
-&lt;/ul>
-&lt;p>如果小伙伴们对其它LLM相关的文献、课程感兴趣，欢迎后台联系我们。&lt;/p>
-&lt;blockquote>
-&lt;p>免责声明：我们的翻译出于对技术的执着和个人兴趣，开源免费，仅供个人学习，不得商用。&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

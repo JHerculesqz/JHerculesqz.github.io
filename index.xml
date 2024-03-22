@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Mar 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Mar 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,96 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记42-LLM微调技术概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 15 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</guid><description>&lt;p>笔者在使用大语言模型开展具体业务领域的任务时，遇到了如下问题：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</link><pubDate>Fri, 22 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</guid><description>&lt;p>&lt;code>Adapter Tuning&lt;/code>是LLM微调技术中一个重要的技术分支，于2019年由Google的Neil Houlsby等研究员提出。&lt;/p>
+&lt;p>&lt;code>Adapter Tuning&lt;/code>方法证明了：微调&lt;strong>少量参数&lt;/strong>即可获得与&lt;strong>全参数微调&lt;/strong>接近的大模型性能。&lt;/p>
+&lt;p>本文解读Neil Houlsby的论文**《Parameter-Efficient Transfer Learning for NLP》**，与小伙伴们一起学习理解&lt;code>Adapter Tuning&lt;/code>思想和方法。&lt;/p>
+&lt;p>![image-20240322130214258](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322130214258.png)&lt;/p>
+&lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
+&lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>问题&lt;/strong>：基于迁移学习思想，需要针对特定的下游任务，对预训练模型进行&lt;strong>全参数微调&lt;/strong>。但针对每个下游任务都要做一次全参数微调，&lt;strong>成本高效率低&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>解决方案&lt;/strong>：论文提出的&lt;code>Adapter Tuning&lt;/code>，是一种使用&lt;strong>&lt;code>Adapter(适配器模块)&lt;/code>&lt;/strong>进行迁移学习的方法。&lt;strong>&lt;code>Adapter(适配器模块)&lt;/code>&lt;/strong>仅需要微调少量参数，就可以支持不同的下游任务。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实验效果&lt;/strong>：在&lt;strong>GLUE基准测试&lt;/strong>中，用&lt;strong>&lt;code>Adapter Tuning&lt;/code>&lt;/strong>方法仅需在预训练模型基础上&lt;strong>增加并微调3.6%的参数&lt;/strong>，即可达到BERT Transformer模型全参数微调的效果。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>通过上述摘要的内容，我们可以想象一下，在2019年绝大多数人还在采用全参数微调这种高成本方案时，&lt;strong>&lt;code>Adapter Tuning&lt;/code>&lt;/strong>仅需微调3.6%的少量参数，会产生多大的&lt;strong>生产效率差异&lt;/strong>。&lt;/p>
+&lt;p>![image-20240322103351046](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322103351046.png)&lt;/p>
+&lt;h1 id="2introduction介绍">2.Introduction(介绍)&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>背景技术1&lt;/strong>：&lt;strong>基于特征的迁移和微调&lt;/strong>(&lt;code>feature-based transfer and fine-tuning&lt;/code>)是迁移学习思想中的重要工程方法，它也是BERT模型的重要理论基础。论文中：&lt;code>Fine-tuning involves copying the weights from a pre-trained network and tuning them on the downstream task&lt;/code>，表达了BERT模型的训练范式——复用1个BERT的预训练模型的参数(&lt;strong>基于特征的迁移&lt;/strong>)，再针对不同下游任务进行微调(&lt;strong>基于特征的微调&lt;/strong>)。&lt;/li>
+&lt;li>&lt;strong>背景技术2&lt;/strong>：历史上，已证明针对预训练模型的网络结构中的高层(&lt;code>top layer&lt;/code>)进行&lt;strong>基于特征的微调&lt;/strong>，相较于&lt;strong>基于特征的全参数微调&lt;/strong>，更具有性价比。&lt;/li>
+&lt;li>&lt;strong>实验效果&lt;/strong>：对比&lt;strong>Adapter Tuning&lt;/strong>、&lt;strong>Top Layer Fine Tuing&lt;/strong>、&lt;strong>Full Fine Tuning&lt;/strong>在多任务微调场景下的效果：
+&lt;ul>
+&lt;li>&lt;strong>在小参数模型上的表现&lt;/strong>：&lt;strong>Adapter Tuning&lt;/strong>可达到&lt;strong>Full Fine Tuning&lt;/strong>的效果，&lt;strong>Top Layer Fine Tuing&lt;/strong>达不到。&lt;/li>
+&lt;li>&lt;strong>在稳定性方面的表现&lt;/strong>：&lt;strong>Adapter Tuning&lt;/strong>的训练效果很稳定，&lt;strong>Top Layer Fine Tuing&lt;/strong>在小参数模型上波动大、只有在大参数模型上才能保证稳定的训练效果。&lt;/li>
+&lt;li>&lt;strong>在性价比方面的对比&lt;/strong>：&lt;strong>Adapter Tuning&lt;/strong>可以微调少量参数，即可达到&lt;strong>Full Fine Tuning&lt;/strong>的训练效果。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240322115129249](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322115129249.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Adapter Tuning的核心思想&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>基于特征的迁移和微调&lt;/strong>的思想是将预训练模型抽象为&lt;code>f(w)&lt;/code>，对下游任务微调抽象为&lt;code>g(v, f(w))&lt;/code>，微调的过程是不断学习修改参数&lt;code>w&lt;/code>和&lt;code>v&lt;/code>，这样就导致预训练模型的参数&lt;code>w&lt;/code>被修改，进而导致极高的训练成本。&lt;/li>
+&lt;li>&lt;strong>Adapter Tuning&lt;/strong>的思想是将预训练模型抽象为&lt;code>f(w)&lt;/code>，对下游任务微调抽象为&lt;code>g(v, w)&lt;/code>，微调的过程是不断学习修改参数&lt;code>v&lt;/code>，直接复用预训练模型的参数&lt;code>w&lt;/code>而不是修改它，又因为参数&lt;code>v&lt;/code>的数量级远小于参数&lt;code>w&lt;/code>，因此训练成本极低。另外，针对新的&lt;code>下游任务n&lt;/code>只需要增加新的Adapter，训练对应的参数&lt;code>vn&lt;/code>。&lt;/li>
+&lt;li>&lt;code>g(v, w)&lt;/code>的具体代码实现等效于，在原有预训练模型的网络结构中，插入一些&lt;strong>Adapter层&lt;/strong>，预训练模型参数&lt;code>w&lt;/code>作为Adapter层的入参，&lt;strong>训练的目标是学习并修改Adapter层的参数&lt;code>v&lt;/code>&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240322120647325](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322120647325.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>容易与Adapter Tuning混淆的其它训练方法&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>多任务学习&lt;/strong>：multi-task learning，也会在预训练模型的网络结构中增加新层，最终也是修改了新层的参数。但多任务学习的训练，是将所有下游任务作为训练新层参数的输入。&lt;/li>
+&lt;li>&lt;strong>持续学习&lt;/strong>：contiuanl learning，是将N个下游任务组成任务流后逐一学习，这样就要求训练&lt;code>任务m&lt;/code>时，预训练模型的网络结构能够记住之前已经训练过的&lt;code>任务1~任务m-1&lt;/code>得到的参数。这将对预训练模型的记忆能力产生巨大的挑战。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240322122001309](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322122001309.png)&lt;/p>
+&lt;h1 id="3adapter-tuning原理">3.Adapter Tuning(原理)&lt;/h1>
+&lt;p>Adatper Tuning具体是如何实现的呢？论文中详细解释了Adapter层的网络结构，以及如何在原始的预训练模型上插入这些Adapter层：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Adapter层的插入位置&lt;/strong>：在Transformer的多头注意力+前馈网络层之后，2x前馈网络层之后，分别插入了&lt;strong>Adapter层&lt;/strong>。另外，在每个Adapter层之后还插入了一个Layer Norm层。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240322124748365](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322124748365.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Adapter层的内部结构&lt;/strong>：Adapter层包含3层
+&lt;ul>
+&lt;li>&lt;strong>前馈网络的向量降维层&lt;/strong>：用于将前一层预训练模型输出的高维向量，降维为低维向量。&lt;/li>
+&lt;li>&lt;strong>非线性处理层&lt;/strong>：对下游任务微调时，学习参数&lt;code>v&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>前馈网络的向量升维层&lt;/strong>：用于将Adapter层输出的低维向量，升维为高维向量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Adapter层的参数数量计算公式&lt;/strong>：&lt;code>count(v)=2md+d+m&lt;/code>
+&lt;ul>
+&lt;li>&lt;strong>d&lt;/strong>：前一层预训练模型输出的高维向量的维数。&lt;/li>
+&lt;li>&lt;strong>m&lt;/strong>：Adapter层降维后的低维向量维数。&lt;/li>
+&lt;li>&lt;strong>实践经验&lt;/strong>：当m远小于d时，Adapter层的参数量会很小。论文给出的经验数据是可以通过控制m的数值，将Adapter层的参数量控制为预训练大模型参数量的0.5%~8%。这样，可以精准控制微调成本。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240322124814661](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322124814661.png)&lt;/p>
+&lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
+&lt;p>论文至此就一个实验结论：&lt;strong>Adapter Tuning&lt;/strong>就是香，具体如下：&lt;/p>
+&lt;ul>
+&lt;li>在GLUE基准测试和其他17个公共文本分类任务上，适配器调优效果，优于全参数微调。&lt;/li>
+&lt;li>适配器调优在参数数量大幅减少的情况下，仍能保持与全参数微调相近的性能。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240322125615723](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322125615723.png)&lt;/p>
+&lt;p>![image-20240322125621882](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322125621882.png)&lt;/p>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>从上述论文解读中，我们收获了如下技术观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Adapter Tuning的价值&lt;/strong>：追求微调少量参数，仍能达到全参数微调效果。&lt;/li>
+&lt;li>&lt;strong>Adapter Tuning的核心思想&lt;/strong>：增加一个新的小模型，微调小模型的少量参数，冻结预训练模型的海量参数。&lt;/li>
+&lt;li>&lt;strong>Adapter Tuning的具体实现&lt;/strong>：改变预训练模型的网络结构，通过高维向量到低维向量的转换，训练不同下游任务的Adapter层。&lt;/li>
+&lt;/ul>
+&lt;p>论文链接：https://arxiv.org/pdf/1902.00751.pdf&lt;/p></description></item><item><title>【chatGPT】学习笔记42-LLM微调技术概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 15 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</guid><description>&lt;p>笔者在使用大语言模型开展具体业务领域的任务时，遇到了如下问题：&lt;/p>
 &lt;ul>
 &lt;li>LLM的预训练模型不具备垂域知识，无法很好回答垂域的问题；&lt;/li>
 &lt;li>希望用各种提示词技巧让模型理解专业问题，但效果有限，而且提高了使用门槛和模型推理成本；&lt;/li>
@@ -2869,105 +2958,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>&lt;strong>技巧6：Few-Shot。&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>技巧7：CoT&lt;/strong>。&lt;/li>
 &lt;li>&lt;strong>技巧8：Self-Consistency&lt;/strong>。&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记24-提示词解读1-提示词基本概念</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link><pubDate>Thu, 09 Nov 2023 15:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid><description>&lt;p>吴恩达老师的《ChatGPT Prompt Engineering for Developers》是一门学习提示词工程不错的课程，我们接下来用几篇文章来解读这门课程。&lt;/p>
-&lt;h1 id="1什么是提示词工程">1.什么是提示词工程&lt;/h1>
-&lt;p>首先看1个问题：&lt;/p>
-&lt;ul>
-&lt;li>向大语言模型输入&amp;quot;一二三四五&amp;rdquo;，它很可能回答&amp;quot;上山打老虎&amp;rdquo;。但，我们的意图是希望它把&amp;quot;一二三四五&amp;rdquo;&lt;strong>翻译成英文&lt;/strong>，怎么办？&lt;/li>
-&lt;/ul>
-&lt;p>我们的解决方法是：&lt;/p>
-&lt;ul>
-&lt;li>问大语言模型：&amp;ldquo;请将如下文字翻译为英文：一二三四五&amp;rdquo;，大语言模型就会回答&amp;quot;One Two Three Four Five&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;p>上述解决方法本质是什么呢？&lt;/p>
-&lt;ul>
-&lt;li>即在问题里明确表达&lt;strong>期望大语言模型如何处理&lt;/strong>一段文字。&lt;/li>
-&lt;li>明确表达期望大语言模型做什么，就是一条指令，也就是&lt;strong>提示词&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>提示词理论的出现，源于两个假设：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>假设1&lt;/strong>：大语言模型已经掌握了很多世界知识，但由于知道的太多，一时想不起来。&lt;/li>
-&lt;li>&lt;strong>假设2&lt;/strong>：自然语言存在二义性，需要更多的提示，才能准确地向大语言模型表达人类的真实意图。&lt;/li>
-&lt;/ul>
-&lt;p>因此，人类通过提示词，可以唤起大语言模型对已有知识的记忆，也可以让大语言模型更加准确地理解人类意图。&lt;/p>
-&lt;p>开发提示词、优化提示词的过程，被称为&lt;strong>提示词工程&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>提示词工程包含了诸多工程方法，如：设计有效的提示策略、优化提示词表达等。&lt;/li>
-&lt;/ul>
-&lt;p>伴随着大语言模型的发展，提示词工程也形成了一套体系化的工程方法。它成为AI领域的热点技术之一，是AI工程师的必备技能。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231110144405400.png" alt="From《Pre-train, Prompt, and Predict: A Systematic Survey ofPrompting Methods in Natural Language Processing》">&lt;/p>
-&lt;h1 id="2提示词基本原则">2.提示词基本原则&lt;/h1>
-&lt;h2 id="1原则1简洁明确">(1)原则1：简洁明确&lt;/h2>
-&lt;p>假想两个人类在说话，两人的表达能力有限，词不达意、含糊其辞、鸡同鸭讲&amp;hellip;，最终就导致两人之间的沟通极其困难。&lt;/p>
-&lt;p>与大语言模型交互，和人类交流类似，也需要简洁明确的同问，向大语言模型清晰表达意图。&lt;/p>
-&lt;p>我们来看一个例子：&lt;/p>
-&lt;ul>
-&lt;li>我们让ChatGPT写一首诗，它以立冬为题生成一首诗：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231110145755795.png" alt="image-20231110145755795">&lt;/p>
-&lt;ul>
-&lt;li>如果我们希望这首诗是五言绝句，则进一步这样提问，可以看到ChatGPT生成了一首以立冬为题的五言绝句。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231110145923990.png" alt="image-20231110145923990">&lt;/p>
-&lt;p>上述示例，可以看出：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>写一首诗&lt;/strong>是一条&lt;strong>简洁的指令&lt;/strong>。&lt;/li>
-&lt;li>相较于写一首诗，&lt;strong>写一首五言绝句&lt;/strong>是一条更加&lt;strong>简洁明确的指令&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h2 id="2原则2迭代式提示词开发">(2)原则2：迭代式提示词开发&lt;/h2>
-&lt;p>我们要知道两个事实：&lt;/p>
-&lt;ul>
-&lt;li>没有可以适应所有场景的完美提示词，需要我们针对不同场景，开发不同的提示词。&lt;/li>
-&lt;li>即使在一个很小的场景下存在完美提示词，我们也无法一次性就找到它。&lt;/li>
-&lt;/ul>
-&lt;p>针对某个场景，寻找提示词的过程，就是&lt;strong>迭代式提示词开发&lt;/strong>。&lt;/p>
-&lt;p>迭代式提示词开发的过程如下：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Idea阶段&lt;/strong>：针对特定场景，设计初始提示词。&lt;/li>
-&lt;li>&lt;strong>Implementation阶段&lt;/strong>：将初始提示词传递给大语言模型，获得返回结果(&lt;code>Experimental result&lt;/code>)。&lt;/li>
-&lt;li>&lt;strong>Error Analysis阶段&lt;/strong>：分析返回结果，思考改进提示词的方法，重新进入&lt;strong>Idea阶段&lt;/strong>，直到找到特定场景下的完美提示词。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231108102255487.png" alt="From 吴恩达提示词课程">&lt;/p>
-&lt;p>我们再来看一个示例：我们需要一段用于营销的产品介绍。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Idea阶段&lt;/strong>：针对产品介绍场景，设计初始提示词。&lt;/li>
-&lt;li>&lt;strong>Implementation阶段&lt;/strong>：将初始提示词传递给大语言模型，获得返回结果。可以看到ChatGPT返回了一段不错的文案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231108110737288.png" alt="image-20231108110737288">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Error Analysis阶段&lt;/strong>：从上一步获得的ChatGPT文案内容太长，我们思考改进提示词的方法是进一步明确字数要求。&lt;/li>
-&lt;li>&lt;strong>Idea阶段&lt;/strong>：根据上一阶段的改进思路，编写改进后的提示词。&lt;/li>
-&lt;li>&lt;strong>Implementation阶段&lt;/strong>：将改进后的提示词传递给大语言模型，获得返回结果。可以看到ChatGPT返回了一段简短的文案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231108110819852.png" alt="image-20231108110819852">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Error Analysis阶段&lt;/strong>：从上一步获得的ChatGPT文案没有突出要点，我们思考改进提示词的方法是限定明确要突出的关键点。&lt;/li>
-&lt;li>&lt;strong>Idea阶段&lt;/strong>：根据上一阶段的改进思路，编写改进后的提示词。&lt;/li>
-&lt;li>&lt;strong>Implementation阶段&lt;/strong>：将改进后的提示词传递给大语言模型，获得返回结果。可以看到ChatGPT返回了一段简短、要点突出的文案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B024-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20231108110848960.png" alt="image-20231108110848960">&lt;/p>
-&lt;p>这就是&lt;strong>迭代式提示词开发&lt;/strong>的流程，核心要点是&lt;strong>多次迭代&lt;/strong>。&lt;/p>
-&lt;h2 id="3原则3选择合适的提示词风格">(3)原则3：选择合适的提示词风格&lt;/h2>
-&lt;p>提示词工程是一种&lt;code>Instruct-Tuning&lt;/code>技术，提示词的风格包含：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Prompt&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Instruction&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>初学者极易混淆这两种风格，我们来看一个例子：&lt;/p>
-&lt;ul>
-&lt;li>幼儿园老师希望引导小朋友唱歌，于是她说：在小小的花园里面挖呀挖呀挖&amp;hellip;，老师此时停顿下来并对小朋友投去了期待的目光，小朋友按耐不住激动的心情，接下句：种小小的种子开小小的花——这就是&lt;strong>Prompt(提示)&lt;/strong>。&lt;/li>
-&lt;li>幼儿园老师希望小朋友背诵五言绝句，于是她说：请背诵《鹅鹅鹅》，小朋友在老师又一次期待的目光下，整齐划一地背诵出&amp;quot;鹅鹅鹅曲项向天歌&amp;hellip;&amp;quot;——这就是&lt;strong>Instruction(指令)&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>我们了解了提示词的两大风格后，就要针对不同场景、不同意图，选择不同的提示词风格。&lt;/p>
-&lt;h1 id="4小结">4.小结&lt;/h1>
-&lt;p>提示词工程是一项热门技术，本文对提示词工程基本概念进行了阐述：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>提示词工程是开发和优化提示词的过程&lt;/strong>，包括选择合适的提示词、设计有效的提示策略，以及优化提示词的表达方式等。&lt;/li>
-&lt;li>提示词三个基本原则：
-&lt;ul>
-&lt;li>&lt;strong>简洁、明确&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>迭代式提示词开发&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>选择合适的提示词风格&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul></description></item></channel></rss>

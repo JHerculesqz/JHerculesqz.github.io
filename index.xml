@@ -21,7 +21,7 @@
 &lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</link><pubDate>Fri, 22 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</guid><description>&lt;p>&lt;code>Adapter Tuning&lt;/code>是LLM微调技术中一个重要的技术分支，于2019年由Google的Neil Houlsby等研究员提出。&lt;/p>
 &lt;p>&lt;code>Adapter Tuning&lt;/code>方法证明了：微调&lt;strong>少量参数&lt;/strong>即可获得与&lt;strong>全参数微调&lt;/strong>接近的大模型性能。&lt;/p>
 &lt;p>本文解读Neil Houlsby的论文**《Parameter-Efficient Transfer Learning for NLP》**，与小伙伴们一起学习理解&lt;code>Adapter Tuning&lt;/code>思想和方法。&lt;/p>
-&lt;p>![image-20240322130214258](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322130214258.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322130214258.png" alt="image-20240322130214258">&lt;/p>
 &lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
 &lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
 &lt;ul>
@@ -36,7 +36,7 @@
 &lt;/li>
 &lt;/ul>
 &lt;p>通过上述摘要的内容，我们可以想象一下，在2019年绝大多数人还在采用全参数微调这种高成本方案时，&lt;strong>&lt;code>Adapter Tuning&lt;/code>&lt;/strong>仅需微调3.6%的少量参数，会产生多大的&lt;strong>生产效率差异&lt;/strong>。&lt;/p>
-&lt;p>![image-20240322103351046](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322103351046.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322103351046.png" alt="image-20240322103351046">&lt;/p>
 &lt;h1 id="2introduction介绍">2.Introduction(介绍)&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>背景技术1&lt;/strong>：&lt;strong>基于特征的迁移和微调&lt;/strong>(&lt;code>feature-based transfer and fine-tuning&lt;/code>)是迁移学习思想中的重要工程方法，它也是BERT模型的重要理论基础。论文中：&lt;code>Fine-tuning involves copying the weights from a pre-trained network and tuning them on the downstream task&lt;/code>，表达了BERT模型的训练范式——复用1个BERT的预训练模型的参数(&lt;strong>基于特征的迁移&lt;/strong>)，再针对不同下游任务进行微调(&lt;strong>基于特征的微调&lt;/strong>)。&lt;/li>
@@ -49,7 +49,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>![image-20240322115129249](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322115129249.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322115129249.png" alt="image-20240322115129249">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Adapter Tuning的核心思想&lt;/strong>：
 &lt;ul>
@@ -59,7 +59,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>![image-20240322120647325](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322120647325.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322120647325.png" alt="image-20240322120647325">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>容易与Adapter Tuning混淆的其它训练方法&lt;/strong>：
 &lt;ul>
@@ -68,13 +68,13 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>![image-20240322122001309](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322122001309.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322122001309.png" alt="image-20240322122001309">&lt;/p>
 &lt;h1 id="3adapter-tuning原理">3.Adapter Tuning(原理)&lt;/h1>
 &lt;p>Adatper Tuning具体是如何实现的呢？论文中详细解释了Adapter层的网络结构，以及如何在原始的预训练模型上插入这些Adapter层：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Adapter层的插入位置&lt;/strong>：在Transformer的多头注意力+前馈网络层之后，2x前馈网络层之后，分别插入了&lt;strong>Adapter层&lt;/strong>。另外，在每个Adapter层之后还插入了一个Layer Norm层。&lt;/li>
 &lt;/ul>
-&lt;p>![image-20240322124748365](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322124748365.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322124748365.png" alt="image-20240322124748365">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Adapter层的内部结构&lt;/strong>：Adapter层包含3层
 &lt;ul>
@@ -91,15 +91,15 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>![image-20240322124814661](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322124814661.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322124814661.png" alt="image-20240322124814661">&lt;/p>
 &lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
 &lt;p>论文至此就一个实验结论：&lt;strong>Adapter Tuning&lt;/strong>就是香，具体如下：&lt;/p>
 &lt;ul>
 &lt;li>在GLUE基准测试和其他17个公共文本分类任务上，适配器调优效果，优于全参数微调。&lt;/li>
 &lt;li>适配器调优在参数数量大幅减少的情况下，仍能保持与全参数微调相近的性能。&lt;/li>
 &lt;/ul>
-&lt;p>![image-20240322125615723](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322125615723.png)&lt;/p>
-&lt;p>![image-20240322125621882](/AI拾遗/【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning/image-20240322125621882.png)&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322125615723.png" alt="image-20240322125615723">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322125621882.png" alt="image-20240322125621882">&lt;/p>
 &lt;h1 id="5总结">5.总结&lt;/h1>
 &lt;p>从上述论文解读中，我们收获了如下技术观点：&lt;/p>
 &lt;ul>

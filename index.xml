@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Mar 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 29 Mar 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,189 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</link><pubDate>Fri, 22 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</guid><description>&lt;p>&lt;code>Adapter Tuning&lt;/code>是LLM微调技术中一个重要的技术分支，于2019年由Google的Neil Houlsby等研究员提出。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprefix-tuning/</link><pubDate>Fri, 29 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprefix-tuning/</guid><description>&lt;p>&lt;code>Prefix Tuning&lt;/code>是LLM微调技术中另一个重要的技术分支，于2021年由Stanford提出。&lt;/p>
+&lt;p>本文通过解读论文**《Prefix-Tuning: Optimizing Continuous Prompts for Generation》**，与小伙伴们一起学习理解&lt;code>Prefix Tuning&lt;/code>思想和方法。&lt;/p>
+&lt;p>![image-20240329153821295](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329153821295.png)&lt;/p>
+&lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
+&lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>问题&lt;/strong>：**FFT(全参数微调)**针对不同的下游任务都需要产生一个新的微调后大模型，存在成本效率等诸多工程问题。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>解决方案&lt;/strong>：论文提出的&lt;code>Prefix Tuning&lt;/code>，是一种使用&lt;strong>&lt;code>Soft Prompt(软提示)&lt;/code>&lt;/strong>进行迁移学习的方法。针对不同下游任务创建不同的&lt;strong>&lt;code>Prefix(前缀向量模块)&lt;/code>&lt;/strong>，这样不同下游任务只需要在一套预训练大模型上加载不同&lt;strong>Prefix小模型&lt;/strong>即可。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实验效果&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>在GPT-2的&lt;strong>&lt;code>Table-To-Text(表格生成文本)&lt;/code>&lt;/strong>下游任务中，&lt;code>Prefix&lt;/code>模型参数仅占GPT-2参数的0.1%，即可达到GPT-2同等水平。&lt;/li>
+&lt;li>在BART的&lt;strong>&lt;code>Sumarization(摘要)&lt;/code>&lt;/strong>下游任务中，&lt;code>Prefix&lt;/code>模型参数仅占BART参数的0.1%，即可达到BART同等水平。&lt;/li>
+&lt;li>在上述两种实验中，额外还观察到一定的泛化涌现能力，&lt;code>Prefix Tuning&lt;/code>可外推到训练期间未见过的任务主题。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329111747247](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329111747247.png)&lt;/p>
+&lt;h1 id="2introduction介绍">2.Introduction(介绍)&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>背景技术1&lt;/strong>：&lt;strong>Adapter Tuning&lt;/strong>是向预训练模型中增加新的小模型，仅微调小模型参数以达到高效微调的目的。实验效果证明仅需微调2%~4%的参数即可达到全参数微调的效果。&lt;/p>
+&lt;ul>
+&lt;li>Adapter Tuning的详细解读可参见本技术专栏这篇文章《【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning》&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>背景技术2&lt;/strong>：GPT-3的一个重要贡献就是&lt;strong>Context Learning&lt;/strong>和&lt;strong>Prompt Engineering&lt;/strong>，GPT-3是一套统一的大语言模型，用户不需要针对下游任务单独微调，直接通过提示词和上下文，影响GPT-3输出的答案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Prefix Tuning的核心思想&lt;/strong>：&lt;strong>Prefix Tuning&lt;/strong>借鉴了&lt;strong>Adapter Tuning&lt;/strong>和&lt;strong>Prompt Engineering&lt;/strong>的思想：&lt;/p>
+&lt;ul>
+&lt;li>Prefix Tuning也额外&lt;strong>增加了N个小模型&lt;/strong>，这些小模型外挂于同一套预训练模型上，&lt;strong>不同小模型解决不同的下游任务&lt;/strong>。&lt;/li>
+&lt;li>Prefix Tuning增加的这些小模型的作用类似&lt;strong>Prompt(提示词)&lt;/strong>，它们会在用户输入的文本前额外增加针对不同下游任务的&lt;strong>提示词前缀Prefix&lt;/strong>。这些前缀不是自然语言，而是Transformer架构中向量形式的Token，这种Token叫做&lt;strong>虚拟Token&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实验效果&lt;/strong>：在&lt;strong>GPT-2的Table-To-Text&lt;/strong>和&lt;strong>BART的Sumarization&lt;/strong>的测试效果：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GPT-2的Table-To-Text&lt;/strong>：在完整数据集上训练时，&lt;strong>Prefix Tuning&lt;/strong>和&lt;strong>FFT&lt;/strong>在表格到文本的下游任务的性能相当。&lt;/li>
+&lt;li>&lt;strong>BART的Sumarization&lt;/strong>：在摘要方面，&lt;strong>Prefix Tuning&lt;/strong>和&lt;strong>FFT&lt;/strong>性能略有下降。&lt;/li>
+&lt;li>&lt;strong>Low Data Settting&lt;/strong>：在数据量少的数据集上，&lt;strong>Prefix Tuning&lt;/strong>能够克服数据集样本不足、提炼数据特征困难的问题，表现出了泛化涌现能力。在上述两项任务中性能表现优于FFT。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329113337615](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329113337615.png)&lt;/p>
+&lt;h1 id="3prefix-tuning">3.Prefix Tuning&lt;/h1>
+&lt;h2 id="31problem-statement问题陈述">3.1.Problem Statement(问题陈述)&lt;/h2>
+&lt;p>Prefix Tuning采用了严谨的数学描述来阐述待解决的问题，这也是算法工程中的算法建模环节，我们尽量通俗地理解这个问题模型，也感受一下算法工程师的思维模式。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>x和y&lt;/strong>：x是大语言模型的输入，y是大语言模型的输出。&lt;/p>
+&lt;ul>
+&lt;li>如下图右侧上方所示，在摘要型下游任务中，人类输入的原始文本就是x，大语言模型输出的总结结果就是y。&lt;/li>
+&lt;li>如下图右侧下方所示，在表格转文本的下游任务中，人类输入的结构化的表格字符串是x，大语言模型输出的表格描述就是y。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>自回归语言模型的问题子域&lt;/strong>(如下图左上所示)：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>pφ(y | x)&lt;/strong>：根据Transformer这种自回归模型的网络结构，其本质可抽象为&lt;strong>pφ(y | x)&lt;/strong>，φ为大语言模型的参数，p就是在**&amp;ldquo;人类输入字符串x的条件下，大语言模型输出y的概率分布&amp;rdquo;**。&lt;/li>
+&lt;li>&lt;strong>z = [x; y]&lt;/strong>：z被定义为x和y的序列，其中X&lt;sub>idx&lt;/sub>表示了x的索引，Y&lt;sub>idx&lt;/sub>表示y的索引。&lt;/li>
+&lt;li>&lt;strong>h&lt;sub>i&lt;/sub>&lt;/strong>：h&lt;sub>i&lt;/sub>表示&lt;strong>时间步i的激活(activation)&lt;/strong>，h&lt;sub>i&lt;/sub>又是由第i个时间步中的n层激活组成的序列(即h&lt;sub>i&lt;/sub>= [h&lt;sub>i&lt;/sub>&lt;sup>(1)&lt;/sup>;···;h&lt;sub>i&lt;/sub>&lt;sup>(n)&lt;/sup>])，其中h&lt;sub>i&lt;/sub>&lt;sup>(n)&lt;/sup>表示在Transformer架构中的第i个时间步的第n层的激活。&lt;/li>
+&lt;li>&lt;strong>h&lt;sub>i&lt;/sub>=LM&lt;sub>φ&lt;/sub>(z&lt;sub>i&lt;/sub>, h&lt;sub>&amp;lt;i&lt;/sub>)&lt;/strong>：此数学公式表示——根据z&lt;sub>i&lt;/sub>，以及h&lt;sub>1&lt;/sub>~h&lt;sub>i-1&lt;/sub>，计算当前的h&lt;sub>i&lt;/sub>。展开解释一下就是，Transformer模型会根据第i个时间步的x、y，以及第1个时间步~第i-1个时间步计算的各时间步计算的各层激活向量，计算当前时间步下Transformer各层的激活。&lt;/li>
+&lt;li>&lt;strong>p&lt;sub>φ&lt;/sub>(z&lt;sub>i+1&lt;/sub> | h&lt;sub>≤i&lt;/sub>) = softmax(W&lt;sub>φ&lt;/sub>h&lt;sub>i&lt;/sub>&lt;sup>(n)&lt;/sup>)&lt;/strong>：最后一层的h&lt;sub>i&lt;/sub>是Transformer训练后获得的概率分布，用来根据当前Token预测下一个Token。其中，W&lt;sub>φ&lt;/sub>是一个用于将h&lt;sub>i&lt;/sub>&lt;sup>(n)&lt;/sup>映射到词汇表上logits的预训练矩阵。&lt;/li>
+&lt;li>上述数学描述中，包含很多AI相关术语(如：自回归模型、时间步i的激活(activation)、各层激活向量、词汇表上logits等)，可参见本技术专栏**《NLP底层原理》篇**的系列文章。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Encoder-Decoder模型的问题子域&lt;/strong>(如下图左下所示)：&lt;/p>
+&lt;ul>
+&lt;li>与自回归语言模型的问题子域大部分数学描述相同。&lt;/li>
+&lt;li>不同点在于基于Encoder-Decoder架构的结构特点，x和y被拆分开了。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Prefix Tuning的微调求解目标&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>max&lt;sub>φ&lt;/sub> log p&lt;sub>φ&lt;/sub>(y | x) = Σ&lt;sub>i∈Y&lt;sub>idx&lt;/sub>&lt;/sub> log p&lt;sub>φ&lt;/sub>(z&lt;sub>i&lt;/sub> | h&lt;sub>&amp;lt;i&lt;/sub>)&lt;/strong>：这个看着复杂的公式，就是在表达微调的最终目标就是在各个时间步的各时间步激活的条件下x和y序列的概率分布求和。说人话就是，&lt;strong>微调后的模型能够根据x预测最大概率应该输出y&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329125952458](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329125952458.png)&lt;/p>
+&lt;h2 id="32intuition直觉">3.2.Intuition(直觉)&lt;/h2>
+&lt;p>论文在正式阐述&lt;strong>Prefix Tuning&lt;/strong>的原理之前，描述了研究员的灵感来源：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Based on intuition from prompting&lt;/strong>：提示词被证明是可以影响大语言模型输出，提示词的思想本质是——大语言模型像一个什么都知道的老人，人类的输入需要使用一定的提示技巧唤醒老人的记忆，从而帮助他输出正确的答案。&lt;/li>
+&lt;li>&lt;strong>z = [x; y]&lt;strong>和&lt;/strong>h&lt;sub>i&lt;/sub>=LM&lt;sub>φ&lt;/sub>(z&lt;sub>i&lt;/sub>, h&lt;sub>&amp;lt;i&lt;/sub>)&lt;/strong>：再看3.1问题陈述章节的这两个数学公式，提示词有两个作用：
+&lt;ul>
+&lt;li>&lt;strong>作用1&lt;/strong>：提示词作为人类输入x的一部分，它起到了&lt;strong>影响大语言模型关注x的哪些Token&lt;/strong>的作用。&lt;/li>
+&lt;li>&lt;strong>作用2&lt;/strong>：在作用1的驱动下，影响了大语言模型各层的激活计算结果h&lt;sub>i&lt;/sub>，进而&lt;strong>影响了在x条件下应该接什么y的概率&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>but fail for most pretrained LMs&lt;/strong>：虽然提示词从理论上可以影响大语言模型的输出，但论文进一步阐述了提示词的局限性——做过提示词工程的小伙伴应该知道，仅仅通过自然语言形式的提示词，对大语言模型输出的效果提升很有限。&lt;/li>
+&lt;li>&lt;strong>continuous word embeddings&lt;/strong>：论文根据上述头脑实验，准备新增1个Prefix模型，在人类输入x词嵌入为向量后，在这个词嵌入向量前增加1个&lt;strong>Prefix Token(前缀向量)&lt;/strong>(这种向量不同于离散向量，不会引发计算的困难)。为了保证Prefix Token有足够的提示性，论文在Transformer的所有层都增加了这种前缀向量。&lt;/li>
+&lt;/ul>
+&lt;h2 id="33methodparametrization-of-psubθsub原理">3.3.Method/Parametrization of P&lt;sub>θ&lt;/sub>(原理)&lt;/h2>
+&lt;p>论文至此，正式阐述了&lt;strong>Prefix Tuning&lt;/strong>的实现方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>z=[x;y]到z=[prefix;x;y]&lt;/strong>：给自回归模型和Encoder-Decoder模型的z向量增加了前缀&lt;strong>PREFIX&lt;/strong>向量。其中P&lt;sub>idx&lt;/sub>表示了前缀的索引。(如：)&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329142053466](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329142053466.png)&lt;/p>
+&lt;ul>
+&lt;li>基于前缀向量，h&lt;sub>i&lt;/sub>的数学公式表示为各层的激活包含前缀向量的计算和大语言模型预测的概率分布。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329143101780](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329143101780.png)&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>|P&lt;sub>idx&lt;/sub>| × dim(h&lt;sub>i&lt;/sub>)&lt;/strong>：P&lt;sub>θ&lt;/sub>是Prefix Tuning新增的小模型的参数，参数的维数必然是有限的，因为它的维数等于前缀向量个数乘以h&lt;sub>i&lt;/sub>的维度。这也解释了为什么Prefix Tuning新增的小模型参数规模仅占预训练模型的0.1%。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>P&lt;sub>θ&lt;/sub>[i, :] = MLP&lt;sub>θ&lt;/sub>(P ′&lt;sub>θ&lt;/sub>[i, :])&lt;/strong>：论文还发现直接微调P&lt;sub>θ&lt;/sub>会导致训练效果不好，于是采用了重参数化方法，引入了前馈神经网络MLP&lt;sub>θ&lt;/sub>。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
+&lt;h2 id="41实验结果">4.1.实验结果&lt;/h2>
+&lt;p>论文的实验结论：&lt;strong>Prefix Tuning&lt;/strong>在Table-To-Text下游任务表现良好、在外推涌现方面表现良好，具体如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Table-To-Text实验&lt;/strong>：用GPT2-Medium和GPT2-Large对比FFT和Prefix Tuning，Prefix Tuning都达到了SOTA水平。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329150136166](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329150136166.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Low-Data-Setting&lt;/strong>实验：在少数据测试中，Prefix Tuning的性能表现和训练稳定度优于FFT。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329150354433](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329150354433.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Summarization实验&lt;/strong>：使用XSUM数据集，Prefix Tuning性能略低于FFT。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329150524132](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329150524132.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Extrapolation实验&lt;/strong>：外推涌现实验中，使用XSUM数据集，Prefix Tuning效果优于FFT。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329150541755](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329150541755.png)&lt;/p>
+&lt;h2 id="42intrinsic-evaluation重要发现">4.2.Intrinsic Evaluation(重要发现)&lt;/h2>
+&lt;p>论文在前述实验结果下，有如下重要发现：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prefix长度的影响&lt;/strong>：
+&lt;ul>
+&lt;li>不同下游任务需要增加不同长度的前缀向量。&lt;/li>
+&lt;li>Prefix长度越长，提示效果越好，但过犹不及——超过了一定的阈值，就会出现推理性能下降。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329151553754](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329151553754.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>在哪些层做Prefix的影响&lt;/strong>：仅在词嵌入层做Prefix的效果远差于在Transformer各层做Prefx的效果。&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329151830368](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329151830368.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prefix和Infix的影响&lt;/strong>：用前缀法的性能效果优于中缀法。
+&lt;ul>
+&lt;li>研究员猜测，前缀法可能影响x和y，中缀法可能只影响y。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329152257513](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329152257513.png)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prefix的初始值选择的影响&lt;/strong>：随机初始化Prefix向量的效果远差于与下游任务相关联的Prefix向量初始化的效果。
+&lt;ul>
+&lt;li>这种现象可能由于用与下游任务不相关的提示词向量，会导致更长时间的前缀神经网络的收敛(甚至不收敛)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>![image-20240329152826581](/AI拾遗/【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning/image-20240329152826581.png)&lt;/p>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>从上述论文解读中，我们收获了如下技术观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prefix Tuning的价值&lt;/strong>：追求一套预训练模型，搞定多个下游任务。&lt;/li>
+&lt;li>&lt;strong>Prefix Tuning的核心思想&lt;/strong>：增加一个新的具备提示能力的前缀向量小模型，微调小模型的少量参数，冻结预训练模型的海量参数。&lt;/li>
+&lt;li>&lt;strong>Prefix Tuning的工程实践经验&lt;/strong>：
+&lt;ul>
+&lt;li>Prefix长度不宜过长或过短，需根据下游任务实验获得。&lt;/li>
+&lt;li>对Transformer做全层的Prefix效果更好。&lt;/li>
+&lt;li>Prefix会影响x和y，效果优于Infix。&lt;/li>
+&lt;li>Prefix的初始值需选择与下游任务相关的提示向量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>论文链接：https://arxiv.org/pdf/2101.00190.pdf&lt;/p></description></item><item><title>【chatGPT】学习笔记43-LLM微调技术之Adapter Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</link><pubDate>Fri, 22 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badapter-tuning/</guid><description>&lt;p>&lt;code>Adapter Tuning&lt;/code>是LLM微调技术中一个重要的技术分支，于2019年由Google的Neil Houlsby等研究员提出。&lt;/p>
 &lt;p>&lt;code>Adapter Tuning&lt;/code>方法证明了：微调&lt;strong>少量参数&lt;/strong>即可获得与&lt;strong>全参数微调&lt;/strong>接近的大模型性能。&lt;/p>
 &lt;p>本文解读Neil Houlsby的论文**《Parameter-Efficient Transfer Learning for NLP》**，与小伙伴们一起学习理解&lt;code>Adapter Tuning&lt;/code>思想和方法。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B043-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdapterTuning/image-20240322130214258.png" alt="image-20240322130214258">&lt;/p>
@@ -2813,149 +2995,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>&lt;strong>关键点&lt;/strong>：如何处理数据的异构特性、不同终端用户数据的不完整性、以及终端设备资源受限造成的低质量数据等问题？感知模态的多样性为感知能力的突破带来的新机会点？&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记25-提示词解读2-通用技巧</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/</link><pubDate>Fri, 10 Nov 2023 12:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/</guid><description>&lt;p>上一篇，我们了解了提示词基本概念，本篇我们继续解读吴恩达老师的《ChatGPT Prompt Engineering for Developers》课程，看一下提示词常用技巧。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231108115607959.png" alt="image-20231108115607959">&lt;/p>
-&lt;h1 id="1技巧构建合理的提示词结构">1.技巧：构建合理的提示词结构&lt;/h1>
-&lt;p>完整的提示词包含以下四个要素：&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>要素&lt;/th>
-&lt;th>说明&lt;/th>
-&lt;th>举例&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>指令词&lt;/strong>&lt;/td>
-&lt;td>想要模型执行的特定任务或指令&lt;/td>
-&lt;td>如：翻译、总结、生成&amp;hellip;&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>背景(上下文)&lt;/strong>&lt;/td>
-&lt;td>包含外部信息或额外的上下文信息，引导语言模型更好地响应&lt;/td>
-&lt;td>如：“在人工智能领域”, “在医学领域”&amp;hellip;&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>输入&lt;/strong>&lt;/td>
-&lt;td>用户输入的内容或问题&lt;/td>
-&lt;td>如：需要总结的文章&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>输出要求&lt;/strong>&lt;/td>
-&lt;td>指定输出的类型或格式&lt;/td>
-&lt;td>如：以JSON格式输出&amp;hellip;&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;font color=red>**注意：**提示词结构取决于您的任务类型，并非所有以上要素都是必须的。&lt;/font>&lt;/p>
-&lt;h1 id="2技巧设定角色">2.技巧：设定角色&lt;/h1>
-&lt;h2 id="1设定llm的角色">(1)设定LLM的角色&lt;/h2>
-&lt;p>在提示词中设定LLM角色，&lt;strong>让模型进行角色扮演&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>直接提问&lt;/strong>，ChatGPT返回的答案较笼统，没有针对性。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110154844353.png" alt="image-20231110154844353">&lt;/p>
-&lt;ul>
-&lt;li>在提示词中&lt;strong>让LLM角色扮演&lt;/strong>，ChatGPT再次返回的答案就会出现医学领域的专有名词和专业指导。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110155206497.png" alt="image-20231110155206497">&lt;/p>
-&lt;h2 id="2设定提问者的角色">(2)设定提问者的角色&lt;/h2>
-&lt;p>除了让大语言模型进行角色扮演，还可以设定提问者的角色，为不同的提问对象生成定制化的答案。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>设定提问者的角色是一位百岁老人&lt;/strong>，ChatGPT的回答会考虑到老人的身体状况。(PS：百岁老人你都敢建议他去跑马拉松&amp;hellip;)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110155639302.png" alt="image-20231110155639302">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>设定提问者的角色是缺乏运动的程序员&lt;/strong>，ChatGPT的回答会提醒程序员循序渐进。(PS：这个缺乏运动的程序员就是我&amp;hellip;)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110155824839.png" alt="image-20231110155824839">&lt;/p>
-&lt;h1 id="3技巧分隔符划分指令和内容">3.技巧：分隔符划分指令和内容&lt;/h1>
-&lt;p>如果提示词包含2个要素：&lt;strong>指令词&lt;/strong>和&lt;strong>输入&lt;/strong>，那么我们如何让大语言模型知道哪些是&lt;strong>指令词&lt;/strong>，哪些是&lt;strong>输入&lt;/strong>？&lt;/p>
-&lt;ul>
-&lt;li>我们可以&lt;strong>使用分隔符&lt;/strong>(如```、&amp;quot;&amp;quot;&amp;quot;、&amp;lt;&amp;gt;等)区分&lt;strong>指令&lt;/strong>和待处理的&lt;strong>输入&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>看一个例子：&lt;/p>
-&lt;ul>
-&lt;li>我们不是想大语言模型给100岁老人参加马拉松的建议，而是希望将这段文字翻译为英文——我们可以通过&lt;code>&amp;quot;&amp;quot;&amp;quot;&lt;/code>，&lt;strong>区分出指令和输入&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110160402261.png" alt="">&lt;/p>
-&lt;h1 id="4技巧指定文本判断条件">4.技巧：指定文本判断条件&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>在提示词中&lt;strong>指定文本判断条件&lt;/strong>，激发大语言模型对文字的分类能力。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>示例：在本示例中，激发了大语言模型对**&amp;ldquo;是否为指令&amp;rdquo;**的分类能力。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110161203289.png" alt="image-20231110161203289">&lt;/p>
-&lt;h1 id="5技巧指定输出的格式">5.技巧：指定输出的格式&lt;/h1>
-&lt;ul>
-&lt;li>在提示词中&lt;strong>指定输出答案的格式&lt;/strong>，便于应用软件系统获得答案后的文本处理。&lt;/li>
-&lt;li>示例：在本示例中，ChatGPT按照提示词中设定的JSON格式返回了答案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110163709627.png" alt="image-20231110163709627">&lt;/p>
-&lt;h1 id="6-技巧few-shot">6. 技巧：Few-Shot&lt;/h1>
-&lt;ul>
-&lt;li>在提示词中，给出&lt;strong>一些示例的问答&lt;/strong>，可能&lt;strong>激发大语言模型的模仿能力&lt;/strong>。&lt;/li>
-&lt;li>根据给出的示例问答的数量，可分为：
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>zero-shot&lt;/strong>：零样本提示。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>one-shot&lt;/strong>：单样本提示。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>few-shot&lt;/strong>：少样本提示。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>我们来看一个示例：&lt;/p>
-&lt;ul>
-&lt;li>直接问大语言模型问题，属于&lt;strong>zero-shot&lt;/strong>，大语言模型的答案风格比较自由。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110162842622.png" alt="image-20231110162842622">&lt;/p>
-&lt;ul>
-&lt;li>问大语言模型的同时，给出了老师、学生的一个问答对，属于&lt;strong>one-shot&lt;/strong>，大语言模型的答案风格就会&lt;strong>大致模仿&lt;/strong>一下示例问答对的风格。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110163038324.png" alt="image-20231110163038324">&lt;/p>
-&lt;ul>
-&lt;li>问大语言模型的同时，给出了老师、学生的多个问答对，属于&lt;strong>few-shot&lt;/strong>，大语言模型的答案风格就会&lt;strong>模仿&lt;/strong>示例问答对的风格及&lt;strong>老师的情绪&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110163115561.png" alt="image-20231110163115561">&lt;/p>
-&lt;h1 id="7技巧cot">7.技巧：CoT&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>CoT&lt;/strong>：Chain of Thought，思维链。AI科学家在研究中发现，只需要在提示词最后增加一句话——&amp;ldquo;让我们一步一步思考&amp;rdquo;，&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>我们看一下示例：我们的提问是大语言模型目前的短板能力(数学问题)，在没有任何提示的情况下，答案是错的。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110165008611.png" alt="image-20231110165008611">&lt;/p>
-&lt;ul>
-&lt;li>我们加上这句神奇的咒语——&lt;code>Let's think step by step.&lt;/code>，ChatGPT就可以回答正确了。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110165440078.png" alt="image-20231110165440078">&lt;/p>
-&lt;h1 id="8技巧自洽self-consistency">8.技巧：自洽(SELF-CONSISTENCY)&lt;/h1>
-&lt;ul>
-&lt;li>&lt;strong>Self-Consistency&lt;/strong>：自洽，即推理过程中，用多种推理路径得到结果，出现最大的答案大概率就是正确答案，从而体现了&lt;strong>自洽性&lt;/strong>。&lt;/li>
-&lt;li>随着大语言模型能力日益增强，Self-Consistency已成为大语言模型的内部能力，需要多次实验才能观测到自洽的推理过程。&lt;/li>
-&lt;li>我们来看一个例子：通过CoT，激发大语言模型推理思考，从它的回答中，可以看出大语言模型的推理过程产生了多种不同推理路径及答案，最终大语言模型自行选择了一个自洽的回答。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B025-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB2-%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7/image-20231110170209475.png" alt="image-20231110170209475">&lt;/p>
-&lt;h1 id="9小结">9.小结&lt;/h1>
-&lt;p>本文阐述了多种提示词常用技巧，实战中需要综合应用上述技巧，根据场景激发大语言模型的不同能力：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>技巧1：构建合理的提示词结构&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>技巧2：设定角色&lt;/strong>，设定LLM角色、设定提问者角色。&lt;/li>
-&lt;li>&lt;strong>技巧3：分隔符划分指令和内容&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>技巧4：指定文本判断条件&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>技巧5：指定输出格式&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>技巧6：Few-Shot。&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>技巧7：CoT&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>技巧8：Self-Consistency&lt;/strong>。&lt;/li>
 &lt;/ul></description></item></channel></rss>

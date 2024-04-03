@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 29 Mar 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Apr 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,207 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprefix-tuning/</link><pubDate>Fri, 29 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprefix-tuning/</guid><description>&lt;p>&lt;code>Prefix Tuning&lt;/code>是LLM微调技术中另一个重要的技术分支，于2021年由Stanford提出。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记45-LLM微调技术之Prompt Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprompt-tuning/</link><pubDate>Wed, 03 Apr 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprompt-tuning/</guid><description>&lt;p>紧接着Stanford的&lt;code>Prefix Tuning&lt;/code>论文，Google迅速发表了&lt;code>Prompt Tuning&lt;/code>技术论文。Google声称该技术比&lt;code>Prefix Tuning&lt;/code>更易上手且成本更低，因此该技术随后也成为了微调技术中的一个重要分支。&lt;/p>
+&lt;p>本文解读论文**《The Power of Scale for Parameter-Efficient Prompt Tuning》**，与大家共同感受&lt;code>Prompt Tuning&lt;/code>技术的奇妙之处。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403122759085.png" alt="image-20240403122759085">&lt;/p>
+&lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
+&lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>问题&lt;/strong>：&lt;strong>Prompt Tuning&lt;/strong>与&lt;strong>Prefix Tuning&lt;/strong>一样，都是以任务为中心的思路解决问题。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>以任务为中心&lt;/strong>：它们都在试图解决&lt;strong>FFT&lt;/strong>针对不同的下游任务都需产生一个新的微调后大模型而导致的成本效率问题。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>解决方案&lt;/strong>：论文提出的&lt;code>Prompt Tuning&lt;/code>，也是一种使用&lt;strong>&lt;code>Soft Prompt(软提示)&lt;/code>&lt;/strong>进行迁移学习的方法。统一不同下游任务的训练数据格式，并将这些不同下游任务的训练数据汇总成一个乱序的数据集，微调预训练模型，最终获得一个能处理不同下游任务的大模型。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>实验效果&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>在小参数规模的T5上，&lt;strong>Prompt Tuning&lt;/strong>略差于FFT性能。&lt;/li>
+&lt;li>在中参数规模的T5上，&lt;strong>Prompt Tuning&lt;/strong>快速接近于FFT性能。&lt;/li>
+&lt;li>在大参数规模的T5上，&lt;strong>Prompt Tuning&lt;/strong>与FFT性能持平。&lt;/li>
+&lt;li>因此，&lt;strong>Prompt Tuning&lt;/strong>在大参数规模的模型上，更具成本效率优势。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403092613314.png" alt="image-20240403092613314">&lt;/p>
+&lt;h1 id="2introduction介绍">2.Introduction(介绍)&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>背景技术1&lt;/strong>：论文中提到的&lt;strong>Prompt Design&lt;/strong>可以理解为大家耳熟能详的&lt;strong>提示词及提示词工程&lt;/strong>。&lt;/p>
+&lt;ul>
+&lt;li>经过工程实践，大家都知道提示词工程有一定的效果，但效果远不及FFT。为什么呢？论文中总结了提示词工程的两个短板：&lt;strong>the discrete space of words(离散空间的单词)&lt;strong>和&lt;/strong>requires human involvement(人类的投入)&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>the discrete space of words(离散空间的单词)&lt;/strong>：提示词工程中的提示词是数学意义上的&lt;strong>离散&lt;/strong>，大语言模型不能很好地学习其隐含的特征。隐含特征不是提示词内容本身的显式特征，而是诸如提示词的句式、问法、潜台词等隐式特征。业界针对提取离散空间词汇也提出了一些算法(如：&lt;strong>a search algorithm over the discrete space of words&lt;/strong>)，但效果也非常限。&lt;/li>
+&lt;li>&lt;strong>requires human involvement(人类的投入)&lt;/strong>：提示词工程依赖有经验的提示词工程师，针对不同下游任务设计提示词，工作量巨大，并且对大模型推理能力的提升又极其有限。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>背景技术2&lt;/strong>：论文中提到的&lt;strong>Model Tuning&lt;/strong>和&lt;strong>Model Tuning(Multi Task)&lt;/strong>，可以理解为&lt;strong>FFT&lt;/strong>。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Model Tuing(Multi Task)&lt;/strong>：&lt;strong>Model Tuning(Multi Task)&lt;strong>是针对每个下游任务都微调出一个大模型，而&lt;/strong>Model Tuning&lt;/strong>是将N个下游任务都微调到一个大模型中。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Prompt Tuning的核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>统一下游任务的数据格式&lt;/strong>：论文中提到&lt;code>an additional k tunable tokens per downstream task to be prepended to the input text&lt;/code>，就是为了达成统一下游任务的数据格式。如：['[CLS]&amp;rsquo;, &amp;lsquo;中&amp;rsquo;, &amp;lsquo;国&amp;rsquo;, &amp;lsquo;的&amp;rsquo;, &amp;lsquo;春&amp;rsquo;, &amp;lsquo;节&amp;rsquo;, &amp;lsquo;是&amp;rsquo;, &amp;lsquo;[MASK]&amp;rsquo;, &amp;lsquo;[MASK]&amp;rsquo;, &amp;lsquo;。&amp;rsquo;, &amp;lsquo;[SEP]']。&lt;/li>
+&lt;li>&lt;strong>合并下游任务的数据集合&lt;/strong>：当我们统一了下游任务的数据格式，就可以将这些下游任务数据集合混合在一起。&lt;/li>
+&lt;li>&lt;strong>LLM具备学习数据集合隐式特征的能力&lt;/strong>：论文假设LLM是具备学习上述数据格式隐式特征的能力，并通过实验验证了这个假设。&lt;/li>
+&lt;li>&lt;strong>Prompt Tuning的本质&lt;/strong>：该技术的本质是LLM的核心能力之一就是&lt;strong>提特征&lt;/strong>。如果特征很明显，LLM就可以低成本提取。如果特征很隐晦，LLM无法低成本提取、甚至无法提取，&lt;strong>Prompt Tuning&lt;/strong>就是改变数据集，将隐式特征转为显式特征。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403101321581.png" alt="image-20240403101321581">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>实验效果&lt;/strong>：
+&lt;ul>
+&lt;li>在小规模T5模型上，提示词工程效果最差、FFT效果最好、Promp Tuning效果中等。&lt;/li>
+&lt;li>在大规模T5模型上，Promp Tuing效果与FFT持平。&lt;/li>
+&lt;li>因此，在大规模模型上，&lt;strong>Promp Tuning&lt;/strong>具备巨大的成本优势。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403101305842.png" alt="image-20240403101305842">&lt;/p>
+&lt;h1 id="3prompt-tuning">3.Prompt Tuning&lt;/h1>
+&lt;h2 id="31design-decisions实验设计">3.1.Design Decisions(实验设计)&lt;/h2>
+&lt;h3 id="1下游任务数据格式归一化的理论基础">(1)下游任务数据格式归一化的理论基础&lt;/h3>
+&lt;p>论文的实验对象是T5，因为T5有一个有趣的观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Following the “text-to-text” approach of T5 (Raffelet al., 2020), we cast all tasks as text generation&lt;/strong>：所有的下游任务都可以等效于文本生成。这个观点就可以支撑&lt;strong>Prompt Tuning&lt;/strong>将所有下游任务的训练数据格式统一起来。&lt;/li>
+&lt;li>如：翻译下游任务，可以将训练数据构造为：&amp;ldquo;translate English to German: hello world!&amp;rdquo;&lt;/li>
+&lt;li>如：摘要下游任务，可以将训练数据构造为：&amp;ldquo;summarize: xxxxxxxxxxxxxxxxxxx&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403112458776.png" alt="image-20240403112458776">&lt;/p>
+&lt;h3 id="2问题建模">(2)问题建模&lt;/h3>
+&lt;p>论文对问题进行了数学建模：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Pr&lt;sub>θ&lt;/sub>(Y|X)&lt;/strong>：在不同下游任务的训练数据可归一化的前提下，大语言模型可被建模为&lt;strong>Pr&lt;sub>θ&lt;/sub>(Y|X)&lt;/strong>，X是用户输入的Tokens，Y是在X发生的概率下模型的输出。&lt;/li>
+&lt;li>&lt;strong>Prompt Design&lt;/strong>的短板：提示词工程需要人类不断尝试寻找出合适提示词，这种不断尝试方法可能是人工寻找的，也可能采用了非可微的搜索方法(如：前文提到的&lt;strong>a search algorithm over the discrete space of words&lt;/strong>)。&lt;/li>
+&lt;li>&lt;strong>Pr&lt;sub>θ;θ&lt;sub>P&lt;/sub>&lt;/sub> (Y|[P; X])&lt;/strong>：这个公式表达了Prompt Tuning的核心思想——在训练数据中植入特殊Token，大模型除了学习训练数据中的显式特征外，还能学习Prompt形式训练数据的隐式特征。对于Prompt隐式特征的学习最终影响的不是预训练模型的参数θ，而是在修正θ&lt;sub>P&lt;/sub>。&lt;/li>
+&lt;li>&lt;strong>[P&lt;sub>e&lt;/sub>; X&lt;sub>e&lt;/sub>] ∈ R&lt;sup>(p+n)×e&lt;/sup>&lt;/strong>：Prompt中的普通标记被大模型嵌入后得到&lt;strong>X&lt;sub>e&lt;/sub>&lt;/strong>(e是向量空间的维度)，Prompt中的特殊标记被大模型嵌入后得到&lt;strong>P&lt;sub>e&lt;/sub>&lt;/strong>(e是向量空间的维度)。[P&lt;sub>e&lt;/sub>; X&lt;sub>e&lt;/sub>]则表示输入给大模型后续神经网络层的高维向量。训练的影响并不会修正&lt;strong>X&lt;sub>e&lt;/sub>&lt;/strong>关联的模型参数，只会修正&lt;strong>P&lt;sub>e&lt;/sub>&lt;/strong>关联的模型参数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403115838249.png" alt="image-20240403115838249">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403115900991.png" alt="image-20240403115900991">&lt;/p>
+&lt;p>因此，实验的关注点如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>P&lt;sub>e&lt;/sub>的初始值&lt;/strong>：和Prefix Tuning一样，都需要关注软提示的初始值，以提升训练速度和效果。&lt;/li>
+&lt;li>&lt;strong>P&lt;sub>e&lt;/sub>的长度&lt;/strong>：和Prefix Tuning一样，也需要关注软提示的长度，以降低训练成本。
+&lt;ul>
+&lt;li>&lt;strong>Prompt Tuning的参数成本=E*P&lt;/strong>：E是普通标记的向量维数，P是特殊标记的长度。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="3如何消减特殊标记的影响">(3)如何消减特殊标记的影响&lt;/h3>
+&lt;p>由于增加了特殊标记，大模型学习的内容就不再是原汁原味的&amp;quot;人类自然语言&amp;quot;了。这样就可能导致大模型无法用自然语言作答——这就好像你在训练大模型鸟语但又期待它能说人话、你在用中文教英语最后学会的是Chinglish。&lt;/p>
+&lt;p>论文中提出了**Span Corruption(跨度损失)**的概念：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Span Corruption(跨度损失)&lt;/strong>：比如，训练数据&lt;code>Thank you [X] me to your party [Y] week&lt;/code>，&lt;input checked="" disabled="" type="checkbox"> 、[Y]就是特殊标记，将这种特殊标记植入自然语言的目的是&amp;quot;问题模式等隐式特征的显性化&amp;rdquo;，但弊端就是让大语言模型学会了非人类的自然语言。&lt;/li>
+&lt;li>&lt;strong>论文提出了三种解决方法&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>Span Corruption法&lt;/strong>：啥都不做，任由大语言模型输出特殊标记，忽略这种影响。&lt;/li>
+&lt;li>&lt;strong>Span Corruption+Sentinel法&lt;/strong>：在大语言模型中增加Sentinel，一定程度地降低这种影响。&lt;/li>
+&lt;li>&lt;strong>LM Adaptation法&lt;/strong>：采用Raffel提出的一个小模型，纠正大语言模型输出特殊标记的倾向，最终输出纯粹的自然语言。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403115956245.png" alt="image-20240403115956245">&lt;/p>
+&lt;h2 id="32intuition直觉">3.2.Intuition(直觉)&lt;/h2>
+&lt;p>论文在正式阐述&lt;strong>Prefix Tuning&lt;/strong>的原理之前，描述了研究员的灵感来源：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Based on intuition from prompting&lt;/strong>：提示词被证明是可以影响大语言模型输出，提示词的思想本质是——大语言模型像一个什么都知道的老人，人类的输入需要使用一定的提示技巧唤醒老人的记忆，从而帮助他输出正确的答案。&lt;/li>
+&lt;li>&lt;strong>z = [x; y]&lt;strong>和&lt;/strong>h&lt;sub>i&lt;/sub>=LM&lt;sub>φ&lt;/sub>(z&lt;sub>i&lt;/sub>, h&lt;sub>&amp;lt;i&lt;/sub>)&lt;/strong>：再看3.1问题陈述章节的这两个数学公式，提示词有两个作用：
+&lt;ul>
+&lt;li>&lt;strong>作用1&lt;/strong>：提示词作为人类输入x的一部分，它起到了&lt;strong>影响大语言模型关注x的哪些Token&lt;/strong>的作用。&lt;/li>
+&lt;li>&lt;strong>作用2&lt;/strong>：在作用1的驱动下，影响了大语言模型各层的激活计算结果h&lt;sub>i&lt;/sub>，进而&lt;strong>影响了在x条件下应该接什么y的概率&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>but fail for most pretrained LMs&lt;/strong>：虽然提示词从理论上可以影响大语言模型的输出，但论文进一步阐述了提示词的局限性——做过提示词工程的小伙伴应该知道，仅仅通过自然语言形式的提示词，对大语言模型输出的效果提升很有限。&lt;/li>
+&lt;li>&lt;strong>continuous word embeddings&lt;/strong>：论文根据上述头脑实验，准备新增1个Prefix模型，在人类输入x词嵌入为向量后，在这个词嵌入向量前增加1个&lt;strong>Prefix Token(前缀向量)&lt;/strong>(这种向量不同于离散向量，不会引发计算的困难)。为了保证Prefix Token有足够的提示性，论文在Transformer的所有层都增加了这种前缀向量。&lt;/li>
+&lt;/ul>
+&lt;h2 id="33methodparametrization-of-psubθsub原理">3.3.Method/Parametrization of P&lt;sub>θ&lt;/sub>(原理)&lt;/h2>
+&lt;p>论文至此，正式阐述了&lt;strong>Prefix Tuning&lt;/strong>的实现方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>z=[x;y]到z=[prefix;x;y]&lt;/strong>：给自回归模型和Encoder-Decoder模型的z向量增加了前缀&lt;strong>PREFIX&lt;/strong>向量。其中P&lt;sub>idx&lt;/sub>表示了前缀的索引。(如：)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240329142053466.png" alt="image-20240329142053466">&lt;/p>
+&lt;ul>
+&lt;li>基于前缀向量，h&lt;sub>i&lt;/sub>的数学公式表示为各层的激活包含前缀向量的计算和大语言模型预测的概率分布。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240329143101780.png" alt="image-20240329143101780">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>|P&lt;sub>idx&lt;/sub>| × dim(h&lt;sub>i&lt;/sub>)&lt;/strong>：P&lt;sub>θ&lt;/sub>是Prefix Tuning新增的小模型的参数，参数的维数必然是有限的，因为它的维数等于前缀向量个数乘以h&lt;sub>i&lt;/sub>的维度。这也解释了为什么Prefix Tuning新增的小模型参数规模仅占预训练模型的0.1%。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>P&lt;sub>θ&lt;/sub>[i, :] = MLP&lt;sub>θ&lt;/sub>(P ′&lt;sub>θ&lt;/sub>[i, :])&lt;/strong>：论文还发现直接微调P&lt;sub>θ&lt;/sub>会导致训练效果不好，于是采用了重参数化方法，引入了前馈神经网络MLP&lt;sub>θ&lt;/sub>。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
+&lt;h2 id="41实验结果">4.1.实验结果&lt;/h2>
+&lt;p>论文阐述了详细的实验过程、实验数据，最终的实验结果如前文所述：&lt;/p>
+&lt;ul>
+&lt;li>在小规模T5模型上，提示词工程效果最差、FFT效果最好、Promp Tuning效果中等。&lt;/li>
+&lt;li>在大规模T5模型上，Promp Tuing效果与FFT持平。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403120117025.png" alt="image-20240403120117025">&lt;/p>
+&lt;ul>
+&lt;li>当模型规模逐渐变大，&lt;strong>Promp Tuning&lt;/strong>涉及的参数相较于&lt;strong>Prefix Tuning&lt;/strong>更少，但微调效果持平，因此&lt;strong>Prompt Tuning具备巨大的成本优势&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403120213717.png" alt="image-20240403120213717">&lt;/p>
+&lt;h2 id="42重要发现">4.2.重要发现&lt;/h2>
+&lt;p>论文在前述实验结果下，有如下重要发现：&lt;/p>
+&lt;p>论文从可解释性方面发现了&lt;strong>语义聚合现象&lt;/strong>，进一步证明了Prompt形式的数据更有利于大语言模型学习其隐式特征：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>语义聚合现象&lt;/strong>：观测被大语言模型嵌入后的特殊标记和普通标记，可以发现出现了物以类聚的现象：
+&lt;ul>
+&lt;li>如：Technology / technology / Technologies / technological / technologies相关的训练数据，向量相似度发生了语义聚合。&lt;/li>
+&lt;li>语义聚合的出现，说明了大语言模型学习到了Prompt形式的训练数据中的隐式特征，因此可以举一反三地处理为见过的下游任务相关输入。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>论文还证明了&lt;strong>Prompt Ensembling(提示集成能力)&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>基于Prompt Tuning的技术思想，可以做到数据格式统一、不同下游任务的训练数据混合训练，进而达到&amp;rdquo;&lt;strong>一个大模型支持多种不同下游任务&lt;/strong>&amp;quot;。&lt;/li>
+&lt;li>这种思想可以在超大规模的模型上极大地降低训练成本、使用成本。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403101321581.png" alt="image-20240403101321581">&lt;/p>
+&lt;p>在工程实践方面，论文也给出了&lt;strong>Prompt长度、Prompt初始值&lt;/strong>的相关推荐：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Prompt长度的影响&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>在中小参数规模的模型上，Prompt长度越长，提示效果越好，但过犹不及(实验长度的临界值是150)——超过了一定的阈值，就会出现推理性能下降。&lt;/li>
+&lt;li>在大参数规模的模型上，Prompt长度反而没有什么影响了。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Prompt的初始值选择的影响&lt;/strong>：随机初始化Prompt的效果远差于用下游任务相关联提示词做初始值的效果。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403121146629.png" alt="image-20240403121146629">&lt;/p>
+&lt;p>最后，论文还通过消融实验，补充了消减&lt;strong>Span Corruption&lt;/strong>的建议：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>LM Adaptation&lt;/strong>：在中小规模模型上，采用LM Adaptation，对大语言模型的纠正效果更好。LM Adaptation增加步数会达到更好的纠正效果。&lt;/li>
+&lt;li>在大规模模型上，Span Corruption的影响也可以忽略不计了。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403121223051.png" alt="image-20240403121223051">&lt;/p>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>从上述论文解读中，我们收获了如下技术观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prompt Tuning的价值&lt;/strong>：追求一套预训练模型，搞定多个下游任务。&lt;/li>
+&lt;li>&lt;strong>Prompt Tuning的核心思想&lt;/strong>：通过归一化不同下游任务的训练数据，并将隐式特征显性化，帮助大语言模型学习。&lt;/li>
+&lt;li>&lt;strong>Prefix Tuning的工程实践经验&lt;/strong>：
+&lt;ul>
+&lt;li>Prompt形式的训练数据有助于LLM学习隐式特征。&lt;/li>
+&lt;li>采用Prompt Tuning可用一套模型搞定多个下游任务。&lt;/li>
+&lt;li>对于大规模参数的模型，Prompt长度和初始化影响很小。&lt;/li>
+&lt;li>对于中小规模参数的模型，Prompt长度和初始值可参考Prefix Tuning的实践。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>论文链接：https://arxiv.org/pdf/2104.08691.pdf&lt;/p></description></item><item><title>【chatGPT】学习笔记44-LLM微调技术之Prefix Tuning</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprefix-tuning/</link><pubDate>Fri, 29 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bprefix-tuning/</guid><description>&lt;p>&lt;code>Prefix Tuning&lt;/code>是LLM微调技术中另一个重要的技术分支，于2021年由Stanford提出。&lt;/p>
 &lt;p>本文通过解读论文**《Prefix-Tuning: Optimizing Continuous Prompts for Generation》**，与小伙伴们一起学习理解&lt;code>Prefix Tuning&lt;/code>思想和方法。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B044-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPrefixTuning/image-20240329153821295.png" alt="image-20240329153821295">&lt;/p>
 &lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
@@ -2360,639 +2560,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>明确输出的总结、摘录的约束，如：总结成几句话，多少个字。&lt;/li>
 &lt;li>明确总结的侧重点、关注点，如：请总结&lt;strong>价格方面&lt;/strong>的内容。&lt;/li>
 &lt;li>设定背景信息，如：你是一名新华社记者，这是一篇新闻稿。&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记26-CNCC 2023参会纪要</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</link><pubDate>Fri, 10 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B026-cncc-2023%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</guid><description>&lt;p>本文记录笔者参加CNCC 2023 AI相关的议题，方便各位小伙伴快速了解学界在AI的理论研究和行业应用情况。&lt;/p>
-&lt;h1 id="1cncc-2023概览">1.CNCC 2023概览&lt;/h1>
-&lt;h2 id="1会议简介">(1)会议简介&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>本届大会以“&lt;strong>发展数字基础设施，支撑数字中国建设&lt;/strong>”为主题，探讨计算及信息科学技术领域的最新进展和宏观发展趋势，为数字中国建设提供支持。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>大会特邀了国际知名学者、两院院士、产学研各界代表在内的&lt;strong>700余位报告嘉宾&lt;/strong>，覆盖了&lt;strong>人工智能&lt;/strong>、安全、计算+、&lt;strong>软件工程&lt;/strong>、教育、网络、&lt;strong>芯片&lt;/strong>、&lt;strong>云计算&lt;/strong>等30余个领域，推动不同领域的交叉融合，为各界专业人士提供了广泛的专业内容。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>![image-20231109151407115](/AI拾遗/【chatGPT】学习笔记26-CNCC 2023参会纪要/image-20231109151407115.png)&lt;/p>
-&lt;h2 id="2议题分布">(2)议题分布&lt;/h2>
-&lt;p>CNCC 2023的众多议题中，LLM相关分会场73个。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>基础设施&lt;/strong>：18个分会场&lt;/li>
-&lt;li>&lt;strong>LLM理论研究&amp;amp;工程化实践&lt;/strong>：15个分会场&lt;/li>
-&lt;li>&lt;strong>LLM应用&lt;/strong>：38个分会场&lt;/li>
-&lt;/ul>
-&lt;p>![image-20231109195425387](/AI拾遗/【chatGPT】学习笔记26-CNCC 2023参会纪要/image-20231109195425387.png)&lt;/p>
-&lt;h1 id="2方向1基础设施">2.方向1：基础设施&lt;/h1>
-&lt;h2 id="21dpu相关">2.1.DPU相关&lt;/h2>
-&lt;h3 id="议题1dpu标准化工作实践">议题1：DPU标准化工作实践&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>： 钟伟军，中国电子技术标准化研究院技术总监。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：DPU标准化工作，是DPU大规模落地应用中重要环节。&lt;/li>
-&lt;li>&lt;strong>成果&lt;/strong>：DPU标准工作实践的成果和现状。如：《数据处理器(DPU)第1部分：参考框架》、《数据处理器(DPU)测试方法》等。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：DPU标准化工作的挑战及下一阶段的计划。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2面向ai时代的dpu云计算融合底座设计与实践">议题2：面向AI时代的DPU云计算融合底座设计与实践&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：曹辉，中科驭数产品运营部副总经理&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>趋势&lt;/strong>：越来越多的云计算基础设施组件正在计划融合或支持DPU方案，是下一代云计算架构演进的主流方向。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：在云原生领域，随着智算中心架构的发展，高吞吐、低时延是智算中心架构发展的挑战。&lt;/li>
-&lt;li>&lt;strong>案例&lt;/strong>：中科驭数的解决方案是&lt;strong>IaaS on DPU&lt;/strong>，将IaaS平台下沉至DPU，提供高性能的容器、虚拟机、裸金属服务。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3网络域场景dpu应用探索">议题3：网络域场景DPU应用探索&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：曹畅，中国联通研究院未来网络研究部总监&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：DPU具有高效、灵活的可编程网络数据处理加速能力，可支撑网络、存储、安全、管理等数据中心基础设施层可定制的业务加速能力。&lt;/li>
-&lt;li>&lt;strong>枢纽&lt;/strong>：DPU衔接了算力和网络两大领域的重要枢纽，推动了计算和网络融合，助力传统算力基础设施向&lt;strong>算网一体的算力网络&lt;/strong>演进。&lt;/li>
-&lt;li>&lt;strong>案例&lt;/strong>：在算力网络、5/6G、数据中心网络等网络域场景中，中国联通如果对DPU进行的探索及创新方案。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4dpu--如何使能高性能ai网络">议题4：DPU , 如何使能高性能AI网络&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：王瑞雪，中国移动通信有限公司研究院基础网络技术研究所技术经理&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>NICC&lt;/strong>：New Intelligent Computing Center，以高性能GPU、AI加速卡为中心，以高速互联智算集群为目标，形成E级超大规模算力基础设施。&lt;/li>
-&lt;li>&lt;strong>价值&lt;/strong>：强化互联技术、深化算力协同、定义新型存储、新增算力原生、升级绿色节能。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：AI大模型以GPU集群分布式训练为基础，集群节点间频繁参数同步带来大通信开销，因此网络是提升AI大模型训练效率的关键之一。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="22芯粒相关">2.2.芯粒相关&lt;/h2>
-&lt;h3 id="议题1智能计算时代下的chiplet生态建设">议题1：智能计算时代下的Chiplet生态建设&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：谭展宏，北极雄芯信息科技有限公司CTO。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>趋势&lt;/strong>：海内外多家公司也陆续推出了基于Chiplet技术的产品。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：很多公司标榜着Chiplet这个关键词，但Chiplet的定义、使用方式和技术路线都有各自说法。&lt;/li>
-&lt;li>&lt;strong>探索&lt;/strong>：本议题探讨Chiplet如何助力面向计算资源与智能计算，分享Chiplet的生态发展的思考。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2面向百芯万核的芯粒仿真初探">议题2：面向百芯万核的芯粒仿真初探&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：王小航，浙江大学教授。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：软件仿真器是探索集成芯片设计空间的重要工具&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：在大芯片和大模型的时代芯片规模提高，仿真性能无法支撑百芯万核规模的芯片仿真，仿真精度校准难，仿真配置多等。&lt;/li>
-&lt;li>&lt;strong>方案&lt;/strong>：分析了上述问题的形成原因，通过并行仿真、精度调节、自动化设计空间探索等技术解决上述问题。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3芯粒测试关键技术研究">议题3：芯粒测试关键技术研究&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：蔡志匡，南京邮电大学教授。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：Chiplet是延续摩尔定律的关键技术，通过先进封装将芯粒集成在一个中介层上，解决芯片研制的规模大、成本高、周期长等问题。&lt;/li>
-&lt;li>&lt;strong>关键点1&lt;/strong>：基本DFT技术、单芯粒测试技术、多芯粒测试技术。&lt;/li>
-&lt;li>&lt;strong>关键点2&lt;/strong>：覆盖芯粒测试各个环节的芯粒系统级可测试设计方案(测试技术、测试EDA、测试装备)，实现高可靠性、全流程的系统级测试。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4从aigc到百模大战异构计算和chiplet-协同以致胜">议题4：从AIGC到百模大战，异构计算和Chiplet 协同以致胜&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：祝俊东，奇异摩尔产品及解决方案副总裁。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：随着LLM发展及百模大战，异构计算与Chiplet协同扮演关键角色。&lt;/li>
-&lt;li>&lt;strong>趋势&lt;/strong>：百模大战引导出的关键挑战之一是&lt;strong>高性能芯片、更大规模的智算平台&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题5面向25d集成的先进封装工艺与设计协同方案">议题5：面向2.5D集成的先进封装工艺与设计协同方案&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：樊嘉祺，华进半导体封装设计经理&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：摩尔定律趋缓，封装技术成为电子产品小型化、多功能化、降低功耗、提高带宽的重要手段。&lt;/li>
-&lt;li>&lt;strong>趋势&lt;/strong>：芯片封装从传统的平面封装向系统集成、高速、高频、三维方向发展。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：芯片-封装协同设计、满足可靠性要求，材料和工艺方面，存在诸多挑战。&lt;/li>
-&lt;li>&lt;strong>案例&lt;/strong>：华进半导体致力于系统封装设计、2.5D/3D 集成关键核心技术研发，提供设计仿真、晶圆制造、系统集成、模组测试等全方位解决方案。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="23信息器件与智能计算相关">2.3.信息器件与智能计算相关&lt;/h2>
-&lt;h3 id="议题1存算一体异构计算芯片">议题1：存算一体异构计算芯片&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：高滨，清华大学长聘副教授/博导，清华大学教务处副处长&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>背景&lt;/strong>：存算一体技术聚焦在单片三维集成的新型存储器技术。&lt;/li>
-&lt;li>&lt;strong>技术点&lt;/strong>：忆阻器相关的制造工艺和设计技术，包括28nm集成、EDA工具开发、IP单元电路设计、异构计算架构设计、编译器等。&lt;/li>
-&lt;li>&lt;strong>成果&lt;/strong>：基于忆阻器的&lt;strong>超近存计算+存内计算&lt;/strong>的异构计算系统，在算力、灵活性、可扩展性、效率、精度等方面展现出巨大的优势，在多个场景已得到初步的应用验证。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2基于忆阻器的储池计算">议题2：基于忆阻器的储池计算&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：王中锐，香港大学电气与电子工程系助理教授&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：由于内存的物理上分离、处理单元以及晶体管工艺节点限制，传统数字硬件面临巨大挑战，忆阻器是高效和高集成度的深度学习解决方案。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：忆阻器的非理想特性使其难以在边缘侧AI实现原位学习。&lt;/li>
-&lt;li>&lt;strong>技术点&lt;/strong>：利用新颖的硬件-软件协同设计，利用忆阻器的高度并行和高效的存内计算，将忆阻器的随机性转化为优势。&lt;/li>
-&lt;li>&lt;strong>技术点&lt;/strong>：基于忆阻器的回声状态储池网络用于时空信号学习、利用随机忆阻器阵列进行图结构数据学习、图嵌入方法与忆阻器联想记忆相结合以满足少样本图学习的需求、基于忆阻器液态机的零样本学习用于多模态事件数据。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3新型神经元器件电路及其类脑系统应用">议题3：新型神经元器件、电路及其类脑系统应用&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：张续猛，复旦大学青年副研究员，2023年度CCF-之江实验室联合创新基金获得者，全国智能计算标准化工作组委员&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：忆阻器基神经元器件，具有丰富动力学、低功耗、以及高集成度等特点，被认为是构建紧凑神经元电路的理想单元之一。&lt;/li>
-&lt;li>&lt;strong>技术&lt;/strong>：利用神经元不同放电模式实现高效计算方面的研究工作，神经元器件的本征温度响应和它在多模态感知方面的应用。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4模拟矩阵计算求解ax--b">议题4：模拟矩阵计算求解Ax = b&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：高滨，清华大学长聘副教授/博导，清华大学教务处副处长&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：求解矩阵方程&lt;strong>Ax = b&lt;/strong>是历史上计算机技术发展的重要驱动力，也构成了现代计算任务的核心。如：科学计算、机器学习、信号处理等。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：传统数字计算机通过执行串行算法(直接法/迭代法)求解该方程，具有高的计算复杂度。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：传统计算机采用冯·诺伊曼架构，求解速度与能效受存储器、处理器之间的通信瓶颈限制。&lt;/li>
-&lt;li>&lt;strong>方案&lt;/strong>：模拟矩阵计算，基于存储器阵列架构与全局反馈实现，具有极高的计算并行度；设计存储器阵列的反馈连接方式，模拟矩阵计算电路能够以O(1)的时间求解矩阵求逆、广义逆(如最小二乘)，以及稀疏近似(如压缩感知还原、稀疏编码)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题5基于rram硬件的高效小样本学习和图处理">议题5：基于RRAM硬件的高效小样本学习和图处理&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：李灿，香港大学电机与电子工程系的助理教授&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：RRAM，抗变存储器，一种新兴的非易失性模拟存储技术，在存算一体应用方面展示了巨大的潜力。&lt;/li>
-&lt;li>&lt;strong>技术点&lt;/strong>：使用RRAM进行哈希运算和相似度搜索。通过在交叉阵列中进行特殊编码以及在注意力机制中用于相似度搜索。结合这些操作能够使用基于记忆增强的神经网络(MANN)进行少样本学习，以及使用图注意力(Graph Attention Network)网络进行图数据处理。这可能相较于传统计算平台如CPU和GPU，能耗显著降低，准确度损失最小。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="25云计算相关">2.5.云计算相关&lt;/h2>
-&lt;h3 id="议题1大模型与国产算力">议题1：大模型与国产算力&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：翟季冬，清华大学计算机系长聘教授。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：在新一代国产超级计算机上，从底层算子库、并行加速库、负载均衡和混合精度等多方面对大模型进行了性能优化，最终实现了百万亿级参数量的预训练模型训练加速，达到了 EFLOPS级别的训练性能。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="26国内厂商的基础设施情况">2.6.国内厂商的基础设施情况&lt;/h2>
-&lt;h3 id="议题1构建泛化普惠的智能算力中科曙光">议题1：构建泛化普惠的智能算力(中科曙光)&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：杜夏威，中科曙光智能计算产品事业部总经理。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>趋势&lt;/strong>：通用超算中心-&amp;gt;专用智算中心-&amp;gt;通用智能计算中心。&lt;/li>
-&lt;li>&lt;strong>技术点&lt;/strong>：成熟兼容的DTK，&lt;strong>兼容CUDA和ROCm&lt;/strong>。&lt;/li>
-&lt;li>&lt;strong>成果&lt;/strong>：适配百度飞桨，上限飞桨官网。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2算力为基共筑数智未来华为昇腾">议题2：算力为基，共筑数智未来(华为昇腾)&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：刘鑫，华为昇腾计算业务副总裁。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>介绍华为在AI领域通过昇腾计算构筑坚实算力底座，聚焦根技术创新，打造好用、易用、可信的人工智能平台，发展普惠算力，降低大模型开发门槛，加速大模型模型创新落地，与各产业界共同构筑AI生态未来。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3昇腾大模型基础设施解决方案华为昇腾">议题3：昇腾大模型基础设施解决方案(华为昇腾)&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：周斌，华为昇腾计算业务研发总裁&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>挑战&lt;/strong>：大模型是复杂系统工程，每个环节都存在大量工程技术挑战。&lt;/li>
-&lt;li>&lt;strong>关键技术&lt;/strong>：高密度计算、复杂通信、内存优化等，打造大模型超级流水线，全流程使能大模型创新落地。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4华为计算领域技术挑战难题解读华为昇腾">议题4：华为计算领域技术挑战难题解读(华为昇腾)&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：石晓钟，华为计算产品线技术合作总监&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>难题1&lt;/strong>：计算系统的高可靠计算容错技术。&lt;/li>
-&lt;li>&lt;strong>难题2&lt;/strong>：片上和系统相结合的内存纠错技术。&lt;/li>
-&lt;li>&lt;strong>难题3&lt;/strong>：多言行算力下的高鲁棒性混合精度求解。&lt;/li>
-&lt;li>&lt;strong>难题4&lt;/strong>：基于原生硬件的高性能算子/算法(Matmul、Self-Attention)。&lt;/li>
-&lt;li>&lt;strong>难题5&lt;/strong>：基于原生硬件的高性能算子/算法(FFT、Conv2D)。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题5壁仞科技">议题5：壁仞科技&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：丁云帆，壁仞科技系统架构副总裁&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>服务于百度飞桨、文心一言。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：GPT的大规模分布式训练在模型的参数规模、算力规模和训练性能等维度都存在巨大的挑战，大模型的应用落地也存在成本高、延时大的难题。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：本报告介绍GPT大模型的分布式并行训练策略、如何基于国产大算力通用GPU打造大模型训练系统及低延时高性能的大模型推理引擎。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题6飞腾">议题6：飞腾&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：窦强，中国电子信息产业集团科技委副主任，飞腾信息技术有限公司首席科学家&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>归属&lt;/strong>：隶属于中国电子信息产业集团。&lt;/li>
-&lt;li>&lt;strong>关键路径&lt;/strong>：体系结构优化、设计工艺协同优化DTCO、先进封装推动Chiplet、系统垂直优化。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="3方向2llm基础理论工程化实践">3.方向2：LLM基础理论&amp;amp;工程化实践&lt;/h1>
-&lt;h2 id="31预训练微调">3.1.预训练&amp;amp;微调&lt;/h2>
-&lt;h3 id="议题1大模型技术研究及应用">议题1：大模型技术研究及应用&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：宗成庆，中国科学院自动化研究所研究员、博士生导师&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>PS：宗老师这个议题讲的非常通透，NLP造诣很深厚。&lt;/li>
-&lt;li>&lt;strong>对大模型改进1&lt;/strong>：丰富生成文本的信息。预训练模型过于关注提示词中给出的实体or事件，难以包含更丰富的实体和信息。&lt;/li>
-&lt;li>&lt;strong>对大模型改进2&lt;/strong>：无梯度计算的大模型参数调试。即，仅微调模型参数的一小部分就可以达到不错的微调性能。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="32端云协同下分布式训练">3.2.端云协同下，分布式训练&lt;/h2>
-&lt;h3 id="议题1端云协同下分布式模型训练">议题1：端云协同下分布式模型训练&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：吴飞，浙江大学求是特聘教授，博士生导师&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：在&lt;strong>泛在互联、端云协同、AI赋能&lt;/strong>背景下，形成端云协同机器学习计算范式，是人工智能成为&lt;strong>普惠化能力&lt;/strong>的关键问题之一。&lt;/li>
-&lt;li>&lt;strong>技术点&lt;/strong>：将&lt;strong>云侧的泛化能力&lt;/strong>与&lt;strong>端侧的个性化能力&lt;/strong>结合起来，体现&lt;strong>须弥纳于芥子&lt;/strong>的哲学思想。云端or端侧学习能力提升、端云协同模型化、端云系统开放平台是研究重点。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="33神经符号计算">3.3.神经符号计算&lt;/h2>
-&lt;h3 id="议题1神经符号双轮驱动的信息检索与知识获取">议题1：神经符号双轮驱动的信息检索与知识获取&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：程学旗，中国科学院计算技术研究所副所长&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>挑战&lt;/strong>：反绎学习面临弱标注数据和弱逻辑规则情形时，可能导致性能下降、不稳定。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：反绎学习是融合机器学习与逻辑推理并使它们能够比较均衡地协同发挥作用的新范式，提升反绎学习鲁棒性是研究重点。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2细粒度多模态协同感知认知与生成">议题2：细粒度多模态协同感知、认知与生成&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：彭宇新，北京大学博雅特聘教授、国家杰青、国家万人。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：细粒度多模态协同感知、认知与生成对于刻画真实世界和人类生产生活方式具有重要意义。&lt;/li>
-&lt;li>&lt;strong>研究目标&lt;/strong>：借鉴人脑的跨模态特性，通过挖掘并协同多源、互补、关联的细粒度和多模态信息，实现对真实世界概念、规则及其演化的深层感知、认知与综合归纳。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：细粒度图像分类、行人再识别、细粒度视频检索、细粒度跨媒体检索、跨媒体推理、细粒度视觉生成。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3从语言大模型到神经符号ai">议题3：从语言大模型到神经符号AI&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：杨博，吉林大学计算机学院教授/博导，计算机学院、软件学院院长。&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>趋势&lt;/strong>：神经符号AI期望将符号主义和链接注意融合起来，取长补短，建立具有高效、鲁棒、可解释的智能系统，是当前人工智能研究的一个热点。&lt;/li>
-&lt;li>&lt;strong>本质&lt;/strong>：符号主义和链接主义是人工智能的两大方法论，分别模拟演绎推理和归纳学习两种认知过程。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4鲁棒反绎学习迈向安全利用弱标注与弱规则">议题4：鲁棒反绎学习：迈向安全利用弱标注与弱规则&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：李宇峰，南京大学人工智能学院教授&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>**关键：**提升反绎学习鲁棒性方面的近期研究进展。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="34知识图谱">3.4.知识图谱&lt;/h2>
-&lt;h3 id="议题1大模型时代的知识图谱">议题1：大模型时代的知识图谱&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：白硕，CCF上海分部主席，CCF理事，恒生电子有限公司首席科学家。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：报告人从逻辑学出发，阐述命题逻辑、描述逻辑、一阶逻辑、高阶逻辑等，深入剖析NLP领域的远距关联、隐形资产以及大语言模型的短板。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：从描述逻辑到知识图谱，事理图谱，阐述知识图谱的四大特点，进一步阐述了知识图谱融合大模型的应用场景分类和应用深度分类。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2大模型应用体会澜舟科技">议题2：大模型应用体会(澜舟科技)&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：周明，澜舟科技创始人兼CEO。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>定位&lt;/strong>：在大语言模型时代，各公司应如何选择产品定位？澜舟科技介绍了自身在大模型时代的定位。&lt;/li>
-&lt;li>&lt;strong>模型选择&lt;/strong>：报告人提出了&lt;strong>周明曲线&lt;/strong>，阐述了如何为客户选择合适的大模型规模，量体裁衣，打造专业赛道的垂域大模型。&lt;/li>
-&lt;li>&lt;strong>趋势&lt;/strong>：&lt;strong>AI Agents&lt;/strong>是大模型落地的必然趋势，以解决复杂问题求解、实时信息获取和分析、领域专业知识补充、外部系统交互等问题。&lt;/li>
-&lt;li>&lt;strong>案例&lt;/strong>：报告人分享了&lt;strong>垂域知识库搜索问答、企业用户智能搜索+AI问答、对话生成式BI分析、智能客服、会议内容智能分析&lt;/strong>领域的案例。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3类chatgpt语言大模型与知识图谱新进展">议题3：类ChatGPT语言大模型与知识图谱新进展&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：王鑫，天津大学智能与计算学部教授、博导，人工智能学院副院长&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：以ChatGPT为代表的语言大模型是“联结主义”的最新成果，而知识图谱是“符号主义”的集大成者，如何充分发挥知识图谱的积累的能力，补齐大语言模型的短板，是重要的研究方向。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：探究类ChatGPT语言大模型与知识图谱相互作用而实现“神经+符号”结合的可能途径。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="35安全治理价值观对齐联邦学习">3.5.安全治理&amp;amp;价值观对齐&amp;amp;联邦学习&lt;/h2>
-&lt;h3 id="议题1大语言模型之价值观对齐">议题1：大语言模型之价值观对齐&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：秦兵，哈尔滨工业大学计算学部教授，博士生导师。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>挑战&lt;/strong>：大模型智能时代革命到来，生成式人工智能存在的安全隐患等价值观伦理问题。&lt;/li>
-&lt;li>&lt;strong>研究方向&lt;/strong>：探索大模型安全性内容生成方法，包括研究大模型辨别是非能力，以及人类普世价值观，社会文化价值观及立场对齐上的内容检测与生成方法，探索AI社会协作式的价值观对齐机制。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2面向异构计算环境的去中心化联邦学习框架">议题2：面向异构计算环境的去中心化联邦学习框架&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：吕建成，四川大学教授/博导、计算机学院(软件学院、智能科学与技术学院)院长&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：联邦学习可以突破数据孤岛和隐私保护瓶颈，是助力人工智能落地的新兴技术。&lt;/li>
-&lt;li>&lt;strong>挑战&lt;/strong>：联邦学习应用于实际场景时，面临异构的计算环境：设备计算性能异构、通信网络和训练数据异构。现有基于中心化参数服务器的主流优化范式存在计算和通信瓶颈，面临扩展性差、通信开销大、模型性能低等现实问题。&lt;/li>
-&lt;li>&lt;strong>方案&lt;/strong>：以去中心基础架构、通信优化、个性化模型优化为代表的去中心化架构及其衍生算法 。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="36机器语音机器听觉">3.6.机器语音/机器听觉&lt;/h2>
-&lt;h3 id="议题1听觉注意力的理论与算法">议题1：听觉注意力的理论与算法&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：李海洲，新加坡工程院院士，新加坡国立大学终身教授、德国不来梅大学卓越讲座教授&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>技术点&lt;/strong>：听觉注意力是面对复杂的声学场景，人的眼睛和耳朵紧密配合、由大脑协调而实现对目标声源的选择。报告人阐述了听觉注意力算法在语音增强、说话人提取、语言提取等应用课题中的实践。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2说话人声音模仿与鉴别技术">议题2：说话人声音模仿与鉴别技术&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：陶建华，CCF语音对话与听觉专委会副主任，清华大学自动化系教授，博导&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：迁移学习&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：高度拟人化和个性化的人物声音模仿技术，对通信、教育、金融、社交、娱乐等领域有重要作用。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：阐述了通过迁移学习、生成式网络模型，声音模仿技术的多项成果。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：系统性地介绍伪造声音鉴别技术，伪造溯源分析方法、面向复杂场景的声音生成与鉴别对抗博弈机制。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3speechgpt让大语言模型具有内生的语音对话能力">议题3：SpeechGPT：让大语言模型具有内生的语音对话能力&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：邱锡鹏，复旦大学计算机学院教授，博导&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>案例&lt;/strong>：介绍SpeechGPT的跨模态能力，SpeechGPT突破了传统语音到语音对话流水线方式 (ASR+LLM+TTS) 的束缚，实现了模态之间的知识传递，不需要额外的ASR和TTS系统也能和LLM直接进行语音对话。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="37全脑神经联接与类脑智能">3.7.全脑神经联接与类脑智能&lt;/h2>
-&lt;h3 id="议题1破解脊椎动物全脑神经联接--脑与类脑研究的基石">议题1：破解脊椎动物全脑神经联接 – 脑与类脑研究的基石&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：杜久林，中国科学院脑科学与智能技术卓越创新中心副主任&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：大脑是在跨时空尺度上具有高度非线性作用的复杂动力学系统，心智的奥秘就蕴藏在这精巧的组织结构中。揭示大脑组织规律及其基础上产生的神经功能的机制，不仅是理解大脑奥秘的必由之路，也将为发展类脑智能构架与算法、突破冯•偌依曼构架提供新策略。&lt;/li>
-&lt;li>&lt;strong>成果&lt;/strong>：斑马鱼具有脊椎动物保守的神经系统结构，可以从全脑尺度上解读其大脑工作的基本原理。报告人讲述本研究团队运用自创的“既见森林(全脑)、又见树木(神经元)甚或树叶(突触)”的研究范式，实现了对脊椎动物全脑所有神经元形态结构与神经活动的在体观测与调控、以及动物行为的同时记录。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2文曲星基于开源芯片与敏捷开发的开源类脑芯片">议题2：文曲星：基于“开源芯片与敏捷开发”的开源类脑芯片&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：赵地，中科院计算所副研究员&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：在神经形态计算中，脉冲神经网络(Spiking Neural Network，SNN)是硬件实现的最佳选择。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：大多数加速器解决方案都基于CPU 加速器架构，这种结构因为复杂的控制流程而能源效率低下。报告人基于脉冲卷积神经网络的开源芯片构架：开发脉冲卷积单元，对现有的卷积神经网络单元进行特征提取和事件驱动设置，进一步提高单元工作工作的效率，并降低功耗的开销。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3全脑尺度的信息维持和行为策略调整">议题3：全脑尺度的信息维持和行为策略调整&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：穆宇，中国科学院脑科学与智能技术卓越创新中心研究员&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：空间上，大脑的每个部分都接收来自其他区域的输入并对其产生作用。时间上，每一刻的大脑都携带着前一刻的信息并影响着下一刻。对&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：报告人阐述如何开发一种系统，支持在单个细胞的分辨率监测整个斑马鱼大脑，并实时处理所获得的神经元或行为信息以生成闭环干扰从感觉到运动的完整转导过程，在全脑尺度上进行剖析，助力理解复杂的脑功能并总结其完整的计算原理。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4类脑器件与系统">议题4：类脑器件与系统&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：缪峰，南京大学物理学院教授、博导、副院长&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：报告人阐述了二维材料与“原子乐高”电子学如何在发展未来的类脑智能技术中发挥重要作用，包括神经形态计算与类视网膜形态计算等。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="4方向3llm应用落地">4.方向3：LLM应用落地&lt;/h1>
-&lt;h2 id="41软件工程">4.1.软件工程&lt;/h2>
-&lt;h3 id="议题1大模型时代的软件研发华为">议题1：大模型时代的软件研发(华为)&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：王千祥，华为云智能化软件研发首席专家&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>引导&lt;/strong>：从软件研发角度，大模型将带来哪些变化？报告人结合华为在基于LLM的代码生成等软件研发领域开展的系列探索，分享软件研发大模型的进展。&lt;/li>
-&lt;li>&lt;strong>问题&lt;/strong>：开发者如何与大模型协同研发？程序如何与大模型协同运行？人类如何与大模型协同存在？&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2大模型催生ai原生研发新范式百度">议题2：大模型催生AI原生研发新范式(百度)&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：臧志，百度工程效能部总监&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：探讨在大模型技术影响下，&lt;strong>产品思维-应用框架-研发过程&lt;/strong>将发生哪些变化。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：如何适配大模型时代的新要素构建新的研发生产力，以及新型的研发智能体如何在企业场景中落地应用。&lt;/li>
-&lt;li>&lt;strong>核心要点&lt;/strong>：&lt;strong>SE 4 AI，AI 4 SE&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题3代码大模型赋能软件研发的探索与实践科大讯飞">议题3：代码大模型赋能软件研发的探索与实践(科大讯飞)&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：薛增奎，科大讯飞效能平台首席技术专家&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：介绍科大讯飞的iFlyCode(基于自研代码大模型的智能编程助手产品)，以及在内外部应用的典型场景和成效。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题4基于代码大模型的代码智能体字节跳动">议题4：基于代码大模型的代码智能体(字节跳动)&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：许晶晶，字节跳动研究员&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：讨论基于代码大模型的自主代理的构建和具体的应用场景。在智能体构建方面，如何结合代码规划、代码执行等能力？在应用场景方面，以数据分析场景为例，探讨智能体在其中的应用和实践。&lt;/li>
-&lt;li>PS：这个小姐姐功力深厚。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题5大模型对软件开发模式的影响北大">议题5：大模型对软件开发模式的影响(北大)&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：李戈，北京大学长聘教授&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：软件自动化理论认为AI辅助研发的瓶颈是模型大小。大语言模型为软件自动化打开了一扇窗。反之，模型不够大就是多少人工多少智能。&lt;/li>
-&lt;li>**PS：**李老师很诙谐，净说大实话。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题6大模型时代软件测试技术方向与趋势同济大学">议题6：大模型时代软件测试技术方向与趋势(同济大学)&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：朱少民，同济大学特聘教授&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：阐述了早期采用遗传算法、粒子群优化算法等生成测试数据，AI覆盖了测试建模、测试用例集优化、GUI白动化测试、测试结果分析等方面。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：报告人着重讨论如何应用大模型为软件测试赋能、如何借助LLM相关技术更高效地完成测试工作，以及未来技术发展方向。阐述了大模型时代软件测试的新范式、大模型时代软件测试的技术方向。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="42智慧交通">4.2.智慧交通&lt;/h2>
-&lt;h3 id="议题1视频物联网中云端协同智能计算">议题1：视频物联网中云端协同智能计算&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：马华东，北京邮电大学计算机学院教授&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>价值&lt;/strong>：视频物联是物联网的一种重要形态，也是支撑智慧城市、智能安防等应用的关键基础设施。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：报告人以人、车、事件为典型目标，阐述了面向多任务多场景的深度神经网络智能视频算法体系&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：针对端设备资源受限、云端协同计算难、单一视觉模型能力弱等挑战，介绍了模型轻量化、云端模型互动、视觉大模型等相关技术&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="43智慧医疗">4.3.智慧医疗&lt;/h2>
-&lt;h3 id="议题1exploring-different-modalities-for-healthcare-applications">议题1：Exploring Different Modalities for Healthcare Applications&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>报告人&lt;/strong>：邱锂力，微软亚洲研究院副院长&lt;/li>
-&lt;li>&lt;strong>内容小结&lt;/strong>：
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：报告人介绍如何利用无线传感和机器学习技术利用不同模式进行疾病诊断的探索，从语言、运动、呼吸、心跳、脑电波、医学图像等方面衡量一个人的健康状况。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="议题2生命科学基础模型">议题2：生命科学基础模型&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：宋乐，BioMap CTO和首席人工智能科学家&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>挑战&lt;/strong>：能否利用大量无监督数据来加速生命科学发现和药物设计？&lt;/li>
-&lt;li>&lt;strong>成果&lt;/strong>：介绍xTrimo系列跨多尺度生物过程的大规模预训练模型，整合来自蛋白质序列、结构、蛋白质-蛋白质相互作用和单细胞转录组数据的大量数据。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="44智慧农业">4.4.智慧农业&lt;/h2>
-&lt;h3 id="议题1智慧农业领域的大模型初探">议题1：智慧农业领域的大模型初探&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：刘劼，哈尔滨工业大学（深圳）国际人工智能研究院院长，IEEE Fellow&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>关键点&lt;/strong>：介绍大模型在遥感图像处理、作物数据生成等方面的尝试，并展望建立作物生长等大模型的前景。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="45aiot">4.5.AIoT&lt;/h2>
-&lt;h3 id="议题1aiiot-human-centric-smart-sensing-design">议题1：AI+IoT: Human-Centric Smart Sensing Design&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>报告人&lt;/strong>：张黔，香港科技大学腾讯工程学教授、计算机科学与工程系讲座教授、IEEE Fellow、香港工程科学院院士&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>趋势&lt;/strong>：AI与IoT的融合，为以人为中心的应用创造了赋能的机会，也产生了相关的挑战。&lt;/li>
-&lt;li>&lt;strong>关键点&lt;/strong>：如何处理数据的异构特性、不同终端用户数据的不完整性、以及终端设备资源受限造成的低质量数据等问题？感知模态的多样性为感知能力的突破带来的新机会点？&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul></description></item></channel></rss>

@@ -81,9 +81,8 @@
 &lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403101305842.png" alt="image-20240403101305842">&lt;/p>
-&lt;h1 id="3prompt-tuning">3.Prompt Tuning&lt;/h1>
-&lt;h2 id="31design-decisions实验设计">3.1.Design Decisions(实验设计)&lt;/h2>
-&lt;h3 id="1下游任务数据格式归一化的理论基础">(1)下游任务数据格式归一化的理论基础&lt;/h3>
+&lt;h1 id="3design-decisions实验设计">3.Design Decisions(实验设计)&lt;/h1>
+&lt;h2 id="1下游任务数据格式归一化的理论基础">(1)下游任务数据格式归一化的理论基础&lt;/h2>
 &lt;p>论文的实验对象是T5，因为T5有一个有趣的观点：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Following the “text-to-text” approach of T5 (Raffelet al., 2020), we cast all tasks as text generation&lt;/strong>：所有的下游任务都可以等效于文本生成。这个观点就可以支撑&lt;strong>Prompt Tuning&lt;/strong>将所有下游任务的训练数据格式统一起来。&lt;/li>
@@ -91,7 +90,7 @@
 &lt;li>如：摘要下游任务，可以将训练数据构造为：&amp;ldquo;summarize: xxxxxxxxxxxxxxxxxxx&amp;rdquo;&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403112458776.png" alt="image-20240403112458776">&lt;/p>
-&lt;h3 id="2问题建模">(2)问题建模&lt;/h3>
+&lt;h2 id="2问题建模">(2)问题建模&lt;/h2>
 &lt;p>论文对问题进行了数学建模：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Pr&lt;sub>θ&lt;/sub>(Y|X)&lt;/strong>：在不同下游任务的训练数据可归一化的前提下，大语言模型可被建模为&lt;strong>Pr&lt;sub>θ&lt;/sub>(Y|X)&lt;/strong>，X是用户输入的Tokens，Y是在X发生的概率下模型的输出。&lt;/li>
@@ -110,7 +109,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h3 id="3如何消减特殊标记的影响">(3)如何消减特殊标记的影响&lt;/h3>
+&lt;h2 id="3如何消减特殊标记的影响">(3)如何消减特殊标记的影响&lt;/h2>
 &lt;p>由于增加了特殊标记，大模型学习的内容就不再是原汁原味的&amp;quot;人类自然语言&amp;quot;了。这样就可能导致大模型无法用自然语言作答——这就好像你在训练大模型鸟语但又期待它能说人话、你在用中文教英语最后学会的是Chinglish。&lt;/p>
 &lt;p>论文中提出了**Span Corruption(跨度损失)**的概念：&lt;/p>
 &lt;ul>
@@ -124,37 +123,6 @@
 &lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240403115956245.png" alt="image-20240403115956245">&lt;/p>
-&lt;h2 id="32intuition直觉">3.2.Intuition(直觉)&lt;/h2>
-&lt;p>论文在正式阐述&lt;strong>Prefix Tuning&lt;/strong>的原理之前，描述了研究员的灵感来源：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Based on intuition from prompting&lt;/strong>：提示词被证明是可以影响大语言模型输出，提示词的思想本质是——大语言模型像一个什么都知道的老人，人类的输入需要使用一定的提示技巧唤醒老人的记忆，从而帮助他输出正确的答案。&lt;/li>
-&lt;li>&lt;strong>z = [x; y]&lt;strong>和&lt;/strong>h&lt;sub>i&lt;/sub>=LM&lt;sub>φ&lt;/sub>(z&lt;sub>i&lt;/sub>, h&lt;sub>&amp;lt;i&lt;/sub>)&lt;/strong>：再看3.1问题陈述章节的这两个数学公式，提示词有两个作用：
-&lt;ul>
-&lt;li>&lt;strong>作用1&lt;/strong>：提示词作为人类输入x的一部分，它起到了&lt;strong>影响大语言模型关注x的哪些Token&lt;/strong>的作用。&lt;/li>
-&lt;li>&lt;strong>作用2&lt;/strong>：在作用1的驱动下，影响了大语言模型各层的激活计算结果h&lt;sub>i&lt;/sub>，进而&lt;strong>影响了在x条件下应该接什么y的概率&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>but fail for most pretrained LMs&lt;/strong>：虽然提示词从理论上可以影响大语言模型的输出，但论文进一步阐述了提示词的局限性——做过提示词工程的小伙伴应该知道，仅仅通过自然语言形式的提示词，对大语言模型输出的效果提升很有限。&lt;/li>
-&lt;li>&lt;strong>continuous word embeddings&lt;/strong>：论文根据上述头脑实验，准备新增1个Prefix模型，在人类输入x词嵌入为向量后，在这个词嵌入向量前增加1个&lt;strong>Prefix Token(前缀向量)&lt;/strong>(这种向量不同于离散向量，不会引发计算的困难)。为了保证Prefix Token有足够的提示性，论文在Transformer的所有层都增加了这种前缀向量。&lt;/li>
-&lt;/ul>
-&lt;h2 id="33methodparametrization-of-psubθsub原理">3.3.Method/Parametrization of P&lt;sub>θ&lt;/sub>(原理)&lt;/h2>
-&lt;p>论文至此，正式阐述了&lt;strong>Prefix Tuning&lt;/strong>的实现方法：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>z=[x;y]到z=[prefix;x;y]&lt;/strong>：给自回归模型和Encoder-Decoder模型的z向量增加了前缀&lt;strong>PREFIX&lt;/strong>向量。其中P&lt;sub>idx&lt;/sub>表示了前缀的索引。(如：)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240329142053466.png" alt="image-20240329142053466">&lt;/p>
-&lt;ul>
-&lt;li>基于前缀向量，h&lt;sub>i&lt;/sub>的数学公式表示为各层的激活包含前缀向量的计算和大语言模型预测的概率分布。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B045-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPromptTuning/image-20240329143101780.png" alt="image-20240329143101780">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>|P&lt;sub>idx&lt;/sub>| × dim(h&lt;sub>i&lt;/sub>)&lt;/strong>：P&lt;sub>θ&lt;/sub>是Prefix Tuning新增的小模型的参数，参数的维数必然是有限的，因为它的维数等于前缀向量个数乘以h&lt;sub>i&lt;/sub>的维度。这也解释了为什么Prefix Tuning新增的小模型参数规模仅占预训练模型的0.1%。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>P&lt;sub>θ&lt;/sub>[i, :] = MLP&lt;sub>θ&lt;/sub>(P ′&lt;sub>θ&lt;/sub>[i, :])&lt;/strong>：论文还发现直接微调P&lt;sub>θ&lt;/sub>会导致训练效果不好，于是采用了重参数化方法，引入了前馈神经网络MLP&lt;sub>θ&lt;/sub>。&lt;/p>
-&lt;/li>
-&lt;/ul>
 &lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
 &lt;h2 id="41实验结果">4.1.实验结果&lt;/h2>
 &lt;p>论文阐述了详细的实验过程、实验数据，最终的实验结果如前文所述：&lt;/p>

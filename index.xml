@@ -20,7 +20,7 @@
 &lt;/ul>
 &lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记46-LLM微调技术之P-Tuning V1</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B046-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv1/</link><pubDate>Wed, 01 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B046-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv1/</guid><description>&lt;p>前面给大家分享了&lt;code>Soft Prompt&lt;/code>技术分支下的&lt;code>Prefix-Tuning&lt;/code>和&lt;code>Prompt Tuning&lt;/code>，在这个技术分支下，还有一项需要重点了解的微调技术——&lt;code>P-Tuning&lt;/code>。&lt;/p>
 &lt;p>&lt;code>P-Tuning&lt;/code>是清华大学和MIT于2021年联合发布的一项微调技术，在NLU(自然语言理解)任务上有重大突破。&lt;/p>
-&lt;p>本文解读论文**《GPT Understands, Too》**，我们一起来学习一下&lt;code>Prompt Tuning&lt;/code>技术的原理。&lt;/p>
+&lt;p>本文解读论文**《GPT Understands, Too》**，我们一起来学习一下&lt;code>P-Tuning&lt;/code>技术的原理。&lt;/p>
 &lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
 &lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
 &lt;ul>

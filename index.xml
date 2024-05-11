@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 01 May 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 May 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,138 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记46-LLM微调技术之P-Tuning V1</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B046-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv1/</link><pubDate>Wed, 01 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B046-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv1/</guid><description>&lt;p>前面给大家分享了&lt;code>Soft Prompt&lt;/code>技术分支下的&lt;code>Prefix-Tuning&lt;/code>和&lt;code>Prompt Tuning&lt;/code>，在这个技术分支下，还有一项需要重点了解的微调技术——&lt;code>P-Tuning&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记47-LLM微调技术之P-Tuning V2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv2/</link><pubDate>Sat, 11 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv2/</guid><description>&lt;p>上篇专栏我们讲到，&lt;code>P-Tuning V1&lt;/code>通过在预训练模型的输入层加入可训练的连续提示，有效提升了训练效果。但其在复杂NLU任务和小参数模型上表现并不理想。&lt;/p>
+&lt;p>&lt;code>P-Tuning V2&lt;/code>是对&lt;code>P-Tuning V1&lt;/code>的改进，使其能在不同规模的模型和各种NLU任务中都能与全量微调相媲美。&lt;/p>
+&lt;p>本文解读论文**《P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks》**，探究&lt;code>Prompt Tuning V2&lt;/code>技术的原理。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511112022603.png" alt="image-20240511112022603">&lt;/p>
+&lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
+&lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：&lt;strong>P-Tuning v1&lt;/strong>的最大问题是不具备普适性(&lt;strong>a lack of universality&lt;/strong>)。
+&lt;ul>
+&lt;li>&lt;strong>不同规模模型的微调效果不稳定&lt;/strong>：Lack of universality across scales。模型规模超过10B时，&lt;strong>P-Tuning v1&lt;/strong>和&lt;strong>Fine Tuning&lt;/strong>水平相当。模型规模在0.1B到1B时，&lt;strong>P-Tuning v1&lt;/strong>的效果远不如&lt;strong>Fine Tuning&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>不同下游任务的微调效果不稳定&lt;/strong>：Lack of universality across tasks。实验证明，针对某些下游任务进行&lt;strong>P-Tuning v1&lt;/strong>，效果远差于&lt;strong>Fine Tuning&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>解决方案&lt;/strong>：论文提出&lt;strong>P-Tuning v2&lt;/strong>技术，采用&lt;strong>Deep Prompt Tuning&lt;/strong>方法，同时针对NLU任务做了一定适配和优化。&lt;/li>
+&lt;li>&lt;strong>实验效果&lt;/strong>：实验证明&lt;strong>P-Tuning v2&lt;/strong>，在不同规模的模型上、在不同下游任务上都可获得较高的稳定性。是一种对&lt;strong>P-Tuning v1&lt;/strong>更好的替代方法。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511112132956.png" alt="image-20240511112132956">&lt;/p>
+&lt;h1 id="2introduction介绍">2.Introduction(介绍)&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>问题&lt;/strong>：&lt;strong>P-Tuning v1&lt;/strong>在不同规模的模型下、不同下游任务中，微调效果不稳定。&lt;/p>
+&lt;ul>
+&lt;li>如：当模型大小不大，特别是少于10B参数时，&lt;strong>P-Tuning v1&lt;/strong>的表现不如&lt;strong>Fine Tuning&lt;/strong>。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511114454639.png" alt="image-20240511114454639">&lt;/li>
+&lt;li>如：抽取式问答(extractive question answering)，&lt;strong>P-Tuning v1&lt;/strong>的表现不如&lt;strong>Fine Tuning&lt;/strong>。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511114429201.png" alt="image-20240511114429201">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>P-Tuning v2的核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>P-Tuning v2采用&lt;strong>Deep P-Tuning&lt;/strong>的优化方式，用于探索垂域知识。&lt;/li>
+&lt;li>Deep表现于在预训练模型的每一层注意力层增加了一个小模型，作用于每一层的输入。而P-Tuning v1仅在第一层增加了一个LSTM小模型。&lt;/li>
+&lt;li>这种方法的本质是：不同规模的模型对于&lt;strong>P-Tuning v1&lt;/strong>在第一层增加的前缀向量的特征提取能力不同。越大的模型特征提取越强，后续各层都能感知注意到这个前缀向量的特征。反之，小模型特征提取能力弱，后续各层无法感知注意到前缀向量的特征。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511115216844.png" alt="image-20240511115216844">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>实验效果&lt;/strong>：
+&lt;ul>
+&lt;li>对300M到10B参数的模型上实验，&lt;strong>P-Tuning v2&lt;/strong>具备很稳定的微调效果。&lt;/li>
+&lt;li>以抽取式问答和命名实体识别为代表的下游任务上，&lt;strong>P-Tuning v2&lt;/strong>具备很稳定的微调效果。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3design-decisions实验设计">3.Design Decisions(实验设计)&lt;/h1>
+&lt;h2 id="1问题域">(1)问题域&lt;/h2>
+&lt;p>&lt;strong>P-Tuning v1&lt;/strong>提出了将&lt;strong>数学意义上的离散提示词转换为连续可微的提示词&lt;/strong>，但存在的问题还有2个：&lt;/p>
+&lt;ul>
+&lt;li>不同规模的模型微调效果不稳定。&lt;/li>
+&lt;li>不同下游任务的模型微调效果不稳定。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>离散到连续&lt;/strong>是&lt;strong>Soft Prompt&lt;/strong>技术分支的&lt;strong>重要思想、重要里程碑&lt;/strong>，但&lt;strong>P-Tuning v1&lt;/strong>已经做到连续可微了，还有什么改进空间呢？&lt;/p>
+&lt;h2 id="2问题建模">(2)问题建模&lt;/h2>
+&lt;p>为了寻找突破口，我们还是进行数学建模：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>V、M、e&lt;/strong>：V表示模型M的词汇表，e表示模型M的词嵌入层。&lt;/li>
+&lt;li>&lt;strong>离散到连续的转换&lt;/strong>：假定离散提示词为序列**[h&lt;sub>0&lt;/sub>, &amp;hellip;, h&lt;sub>i&lt;/sub>]**，经过**P-Tuning v1**的**Prompt Encoder**模块转换为向量序列**[e(x), e(h&lt;sub>0&lt;/sub>), &amp;hellip;, e(h&lt;sub>i&lt;/sub>)]**。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511144119291.png" alt="image-20240511144119291">&lt;/li>
+&lt;/ul>
+&lt;p>通过问题建模，我们可以看到&lt;strong>数学意义上&lt;/strong>的&lt;strong>离散提示&lt;/strong>已经表示为&lt;strong>连续提示&lt;/strong>。那么不同规模的模型、不同下游任务的微调效果不稳定，很可能源于&lt;strong>P-Tuning v1&lt;/strong>在输入层添加的前缀向量没有起到有效作用，从逻辑上，我们可以有如下猜测：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>模型规模对前缀向量的影响&lt;/strong>：不同规模的模型对前缀向量的特征提取能力是不同的，小模型特征提取不足，导致后续预训练模型的各层无法感知注意到前缀向量。&lt;/li>
+&lt;li>&lt;strong>下游任务类型对前缀向量的影响&lt;/strong>：从离散提示词看，不同下游任务的提示词是不同的。同理，不同下游任务的连续提示词应该也是不同的。&lt;/li>
+&lt;/ul>
+&lt;p>因此：&lt;/p>
+&lt;ul>
+&lt;li>从数学上，&lt;strong>P-Tuning v1&lt;/strong>的连续可微前缀向量没有太多改进空间。&lt;/li>
+&lt;li>从模型结构上，
+&lt;ul>
+&lt;li>&lt;strong>可以在Transformer的各层添加前缀向量&lt;/strong>，以抵消小模型对前缀向量的特征提取不足的局限。&lt;/li>
+&lt;li>&lt;strong>可以改变前缀向量的长度&lt;/strong>，以实现不同下游任务有不同的前缀向量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>为了更好地阐述论文的改进思路，我们列出相关源码：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>DebertaPrefixModelForQuestionAnswering&lt;/strong>类，是针对QA下游任务的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>支持通过超参数，&lt;strong>设置不同下游任务的前缀向量长度&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511150051142.png" alt="image-20240511150051142">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>RobertaPrefixForSequenceClassification&lt;/strong>类，是针对序列分类下游任务的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>支持通过超参数，&lt;strong>设置不同下游任务的前缀向量长度&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511151145088.png" alt="image-20240511151145088">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>覆写Deberta的注意力层，支持在Deberta各注意力层都增加了前缀向量：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511151537379.png" alt="image-20240511151537379">&lt;/p>
+&lt;p>最后，在train方法中，将上述对模型结构的改进串联起来：&lt;/p>
+&lt;ul>
+&lt;li>创建前缀向量编码器对象，根据本下游任务指定的提示长度，生成前缀向量。&lt;/li>
+&lt;li>前向传播时，将前缀向量传入本下游任务对应的各注意力层，实现不同层都能提取到前缀向量特征。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511151852070.png" alt="image-20240511151852070">&lt;/p>
+&lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
+&lt;h2 id="1实验结果1across-scales">(1)实验结果1：Across Scales&lt;/h2>
+&lt;p>针对不同规模的模型，&lt;strong>P-Tuning v2&lt;/strong>的微调效果比较稳定。&lt;/p>
+&lt;ul>
+&lt;li>在四种&lt;strong>参数小于10B的模型&lt;/strong>上，&lt;strong>P-Tuning v1&lt;/strong>微调效果远低于&lt;strong>P-Tuning v2&lt;/strong>微调效果，&lt;strong>P-Tuning v2&lt;/strong>微调效果与&lt;strong>Fine Tuning&lt;/strong>相当。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511152631012.png" alt="image-20240511152631012">&lt;/p>
+&lt;h2 id="2实验结果2across-tasks">(2)实验结果2：Across Tasks&lt;/h2>
+&lt;ul>
+&lt;li>在&lt;strong>CoNLL03、OntoNotes5.0、CoNLL04、SQuAD1.1dev、SQuAD2.0dev、CoNLL12、CoNLL05 WSJ、CoNLL05 Brown&lt;/strong>八种下游任务中，&lt;strong>P-Tuning v1&lt;/strong>微调效果远低于&lt;strong>P-Tuning v2&lt;/strong>微调效果，&lt;strong>P-Tuning v2&lt;/strong>微调效果与&lt;strong>Fine Tuning&lt;/strong>相当。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511153327159.png" alt="image-20240511153327159">&lt;/p>
+&lt;h2 id="3其它重要发现实现prompt-encoder的神经网络结构的选择技巧">(3)其它重要发现：实现Prompt Encoder的神经网络结构的选择技巧&lt;/h2>
+&lt;ul>
+&lt;li>在&lt;strong>P-Tuning v1&lt;/strong>中，采用&lt;strong>LSTM+MLP&lt;/strong>或&lt;strong>MLP&lt;/strong>，其中MLP采用2层线性层、ReLU作为激活函数。&lt;/li>
+&lt;li>在&lt;strong>P-Tuning v2&lt;/strong>中，通过超参数针对不同下游任务选择不同神经网络，其中MLP的一种实现可以采用2层线性层、tanh作为激活函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511153852283.png" alt="image-20240511153852283">&lt;/p>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>从上述论文解读中，我们收获了如下技术观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>P-Tuning v1&lt;/strong>的局限性：不同的下游任务、不同规模的模型，微调结果不稳定。&lt;/li>
+&lt;li>&lt;strong>P-Tuning v2的核心思想&lt;/strong>：修改模型结构，在各层注意力层增加前缀处理器网络以抵消小模型对前缀向量特征提取不足的局限，支持不同下游任务选择不同前缀提示长度、选择不同前缀编码器神经网络结构。&lt;/li>
+&lt;/ul>
+&lt;p>论文链接：https://arxiv.org/pdf/2110.07602&lt;/p></description></item><item><title>【chatGPT】学习笔记46-LLM微调技术之P-Tuning V1</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B046-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv1/</link><pubDate>Wed, 01 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B046-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv1/</guid><description>&lt;p>前面给大家分享了&lt;code>Soft Prompt&lt;/code>技术分支下的&lt;code>Prefix-Tuning&lt;/code>和&lt;code>Prompt Tuning&lt;/code>，在这个技术分支下，还有一项需要重点了解的微调技术——&lt;code>P-Tuning&lt;/code>。&lt;/p>
 &lt;p>&lt;code>P-Tuning&lt;/code>是清华大学和MIT于2021年联合发布的一项微调技术，在NLU(自然语言理解)任务上有重大突破。&lt;/p>
 &lt;p>本文解读论文**《GPT Understands, Too》**，我们一起来学习一下&lt;code>P-Tuning&lt;/code>技术的原理。&lt;/p>
 &lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
@@ -2488,95 +2619,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记28-提示词解读4-实战案例之推理</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/</link><pubDate>Thu, 23 Nov 2023 13:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/</guid><description>&lt;p>在《【chatGPT】学习笔记27-提示词解读3-实战案例之摘要总结》中，我们演示了LLM的总结能力。&lt;/p>
-&lt;p>接下来，我们继续跟着吴恩达老师的课程，解锁LLM另一个更强大的能力——推理(&lt;code>Inferring&lt;/code>)。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231122092928495.png" alt="image-20231122092928495">&lt;/p>
-&lt;blockquote>
-&lt;p>本文的“推理”是指利用LLM处理推理型的任务。&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="1激发推理能力的提示词">1.激发推理能力的提示词&lt;/h1>
-&lt;h2 id="1什么是llm的推理能力">(1)什么是LLM的推理能力&lt;/h2>
-&lt;p>LLM的推理能力是指从已知信息中推导出新的结论的能力。&lt;/p>
-&lt;p>例如在下面的例子中，LLM根据上下文理解用户意图，经过推理生成了新的信息，包括结论和相应的解释。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123133732549.png" alt="image-20231123133732549">&lt;/p>
-&lt;h2 id="2如何激发llm的推理能力">(2)如何激发LLM的推理能力&lt;/h2>
-&lt;p>我们可以这样构建提示词：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>使用清晰明确的指令词，让LLM理解做什么类型的推理任务，如判断xxx、预测xxx。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2实战案例">2.实战案例&lt;/h1>
-&lt;p>假设我是某智能问答系统的IT人员，要用LLM的推理能力帮忙做运营维护：&lt;/p>
-&lt;ul>
-&lt;li>判断用户对问答系统是否满意。&lt;/li>
-&lt;li>用户问题千奇百怪，让智能客服能够应对各式花样提问。&lt;/li>
-&lt;/ul>
-&lt;h2 id="21满意度识别">2.1.满意度识别&lt;/h2>
-&lt;p>一般问答系统都希望通过点赞👍/点踩👎按钮获取用户的反馈，但大部分用户都不会去点。&lt;/p>
-&lt;p>利用LLM的推理能力，直接拿用户的对话信息来做满意度分析，可以大大提升运营效率。&lt;/p>
-&lt;p>例如，让LLM判断用户回复的信息是什么感情色彩：&lt;/p>
-&lt;ul>
-&lt;li>我的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123141130339.png" alt="image-20231123141130339">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123140406001.png" alt="image-20231123140406001">&lt;/p>
-&lt;p>吴恩达老师&amp;quot;提示词工程课程&amp;quot;中说LLM擅长做情感判断，所以我又试了下让LLM列出评论中包含的情绪元素。看来LLM感情还是挺丰富的。&lt;/p>
-&lt;ul>
-&lt;li>我的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123141823738.png" alt="image-20231123141823738">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123141845933.png" alt="image-20231123141845933">&lt;/p>
-&lt;h2 id="22应对花式提问">2.2.应对花式提问&lt;/h2>
-&lt;p>传统智能问答系统是建立在知识库基础上的，通过关键词匹配最相关的答案，语义理解和推理能力非常有限。&lt;/p>
-&lt;p>现实用户提问方式五花八门，如果某个问题不在知识库，系统将无法提供准确答案。&lt;/p>
-&lt;p>基于LLM的推理能力，我们通过2个技巧快速提升智能问答系统的应对能力。&lt;/p>
-&lt;h3 id="技巧1基于已知问题推导类似问题">技巧1：基于已知问题推导类似问题&lt;/h3>
-&lt;p>基于知识库中的预置问题，利用LLM推导扩充不同的问法，丰富问题集，同时弥补传统问答系统语义理解的不足。&lt;/p>
-&lt;ul>
-&lt;li>我的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123152748076.png" alt="image-20231123152748076">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123152830392.png" alt="image-20231123152830392">&lt;/p>
-&lt;h3 id="技巧2归纳推理">技巧2：归纳推理&lt;/h3>
-&lt;p>上面的方法可能仍然不足以完全应对用户问题的多样性，那么可以继续用LLM来补漏。&lt;/p>
-&lt;p>利用LLM的归纳推理能力，将用户问题和系统关键词检索出的相关问题做比较，从语义上判断是否相近。&lt;/p>
-&lt;ul>
-&lt;li>我的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153737082.png" alt="image-20231123153737082">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153803235.png" alt="image-20231123153803235">&lt;/p>
-&lt;p>换个相关但不相近的问题&amp;ndash;都有关键词”会员“但语义不同，LLM仍然回答正确，看来LLM的推理能力还是可靠的。&lt;/p>
-&lt;ul>
-&lt;li>我的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153723987.png" alt="image-20231123153723987">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B028-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB4-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E6%8E%A8%E7%90%86/image-20231123153820768.png" alt="image-20231123153820768">&lt;/p>
-&lt;ul>
-&lt;li>综上，利用LLM推导和归纳推理这两个技巧，可以实现快速扩充知识库、增强检索能力。&lt;/li>
-&lt;/ul>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文介绍了一个LLM另一个实用的提示词技巧，解锁大语言模型的推理能力，充分利用大模型的智慧。&lt;/p>
-&lt;p>推理提示词的构建方法：&lt;/p>
-&lt;ul>
-&lt;li>使用清晰明确的指令词，让LLM理解做什么类型的推理任务，如判断xxx、预测xxx。&lt;/li>
-&lt;li>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/li>
 &lt;/ul></description></item></channel></rss>

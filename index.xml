@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 May 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 20 May 2024 00:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,29 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记47-LLM微调技术之P-Tuning V2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv2/</link><pubDate>Sat, 11 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv2/</guid><description>&lt;p>上篇专栏我们讲到，&lt;code>P-Tuning V1&lt;/code>通过在预训练模型的输入层加入可训练的连续提示，有效提升了训练效果。但其在复杂NLU任务和小参数模型上表现并不理想。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【音乐】陈升-恨情歌</title><link>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E8%AF%BB%E4%B9%A6%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B0/</link><pubDate>Mon, 20 May 2024 00:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E8%AF%BB%E4%B9%A6%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B0/</guid><description>&lt;p>迷茫有一阵子了，感觉应该慢下来，那就读书吧。&lt;/p>
+&lt;p>耐不下性子，就用AI来帮我读吧。&lt;/p>
+&lt;h1 id="我的阿勒泰想表达什么">《我的阿勒泰》想表达什么？&lt;/h1>
+&lt;p>&lt;img src="images/image-20240520000811635.png" alt="image-20240520000811635">&lt;/p>
+&lt;h1 id="这本书的目录">这本书的目录？&lt;/h1>
+&lt;p>&lt;img src="images/image-20240520000905619.png" alt="image-20240520000905619">&lt;/p>
+&lt;h1 id="我所能带给你们的事物">我所能带给你们的事物&lt;/h1>
+&lt;p>写这篇文章的时候，我的手机还在播放着马斯克的星舰IFT-4飞行测试。&lt;/p>
+&lt;p>一半原始、一半现代。让我去阿勒泰旅行可以，但很难想象生活在阿勒泰。&lt;/p>
+&lt;p>在那种原始的状态，为什么人类可以保持希望和期待？&lt;/p>
+&lt;p>&lt;img src="images/image-20240520001118886.png" alt="image-20240520001118886">&lt;/p>
+&lt;h1 id="属于我的马">属于我的马&lt;/h1>
+&lt;p>原来马是自由的隐喻。经历太多，我能理解生命的脆弱，一直想知道生命的意义和死亡的意义。&lt;/p>
+&lt;p>&lt;img src="images/image-20240520001249488.png" alt="image-20240520001249488">&lt;/p>
+&lt;h1 id="小鸟牌香烟">小鸟牌香烟&lt;/h1>
+&lt;p>香烟隐喻了时间的流逝？挺新奇的说法。很佩服你们这些感性的人——任何一个小小的器物就能帮你赋予生活的意义。&lt;/p>
+&lt;p>但我习惯了量化和计划，我很迷惑，目前一知半解地认为康德想告诉我——生命的意义就是生命的意义、良善的实践就是人类自由意志的实现。&lt;/p>
+&lt;p>&lt;img src="images/image-20240520002142006.png" alt="image-20240520002142006">&lt;/p>
+&lt;h1 id="打电话">打电话&lt;/h1>
+&lt;p>对文中小伙子和恋人打电话那个扭捏片段，i人不仅是对恋人，即使是面对稍有好感的人，也会语无伦次。&lt;/p>
+&lt;p>i人在酒吧都是自己玩，从不和人搭讪。有一次和朋友打赌去要一位陌生女生的联系方式，鼓了半天气请那女生喝了杯酒(还是委托调酒师转告)，结果还是不敢过去。最后，那位女生临走之前，很cute地过来说谢谢你啊，我应该是全身僵住、支支吾吾。。。&lt;/p>
+&lt;p>&lt;img src="images/image-20240520002635384.png" alt="image-20240520002635384">&lt;/p>
+&lt;p>睡了，明天再继续。&lt;/p></description></item><item><title>【chatGPT】学习笔记47-LLM微调技术之P-Tuning V2</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv2/</link><pubDate>Sat, 11 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bptuningv2/</guid><description>&lt;p>上篇专栏我们讲到，&lt;code>P-Tuning V1&lt;/code>通过在预训练模型的输入层加入可训练的连续提示，有效提升了训练效果。但其在复杂NLU任务和小参数模型上表现并不理想。&lt;/p>
 &lt;p>&lt;code>P-Tuning V2&lt;/code>是对&lt;code>P-Tuning V1&lt;/code>的改进，使其能在不同规模的模型和各种NLU任务中都能与全量微调相媲美。&lt;/p>
 &lt;p>本文解读论文**《P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks》**，探究&lt;code>Prompt Tuning V2&lt;/code>技术的原理。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B047-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BPTuningV2/image-20240511112022603.png" alt="image-20240511112022603">&lt;/p>
@@ -2465,158 +2487,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>根据任务类型，使用清晰明确的指令词，如&lt;strong>转换&lt;/strong>xxx、&lt;strong>翻译&lt;/strong>xxx、校正xxx。&lt;/li>
 &lt;li>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/li>
 &lt;/ul>
-&lt;p>此外，这个故事还告诉我们：作为程序员小哥哥，要努力学习AI，高效使用AI，才能抱得美人归。&lt;/p></description></item><item><title>【chatGPT】学习笔记29-LangChain解读1-快速入门</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link><pubDate>Thu, 23 Nov 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-langchain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid><description>&lt;p>虽然利用提示词工程，我们已经能较好地使用LLM，但即使开发一个很简单的LLM应用，依然需要编写大量复杂代码(调用LLM只是最简单的一步)。&lt;/p>
-&lt;p>&lt;strong>LangChain&lt;/strong>的目标就是让开发LLM应用变的简单，但LangChain更新极快，导致我们的学习成本较高。&lt;/p>
-&lt;p>因此，我们准备做两件事，帮助大家提升学习LangChain的效率：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>翻译LangChain官方文档&lt;/strong>
-&lt;ul>
-&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>解读LangChain官方文档&lt;/strong>
-&lt;ul>
-&lt;li>在本技术专栏中，将详细地逐一解读LangChain官方文档中的各个重要特性。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>本篇我们就来解读LangChain官方文档的《&lt;strong>Quickstart&lt;/strong>》章节(&lt;a href="https://python.langchain.com/docs/get_started/quickstart">https://python.langchain.com/docs/get_started/quickstart&lt;/a>)，帮助大家快速上手LangChain。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/5d7KfRriC6zji11ZFnwLotdqcHQ.svg" alt="LangChain">&lt;/p>
-&lt;h1 id="1langchain概览">1.LangChain概览&lt;/h1>
-&lt;h2 id="1什么是langchain">(1)什么是LangChain&lt;/h2>
-&lt;p>&lt;strong>LangChain 是一个开源框架，支持由LLM驱动的应用程序的开发&lt;/strong>。它使应用程序能够：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>具有上下文感知能力&lt;/strong>：连接大语言模型和上下文的数据源 (如：提示词、few-shot、聊天历史记录等)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>推理&lt;/strong>：依靠语言模型进行推理 (如：根据给出的上下文回答问题，或者决定下一步动作）&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>LangChain 的价值点主要有两个:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>模块化组件&lt;/strong>：专注于组合和模块化，提供了基于LLM的各种组件。这些组件可以单独使用，也可以组合使用。&lt;/li>
-&lt;li>&lt;strong>直接可用的链&lt;/strong>：将各种组件组合成可完成特定任务的&amp;quot;链&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;h2 id="2langchain整体架构">(2)LangChain整体架构&lt;/h2>
-&lt;p>LangChain为以下模块提供标准的、可扩展的接口和外部集成，从简单到复杂排序如下:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>Model I/O&lt;/strong>：与大语言模型的接口。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>检索 (Retrieval)&lt;/strong>：与应用程序特定数据的接口。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>链 (Chains)&lt;/strong>：构建调用序列。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>代理 (Agents)&lt;/strong>：让模型根据高级指令选择使用哪些工具。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Memory&lt;/strong>：在链运行期间保持应用程序状态。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Callbacks&lt;/strong>：记录并传送链的中间步骤。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="3如何构建llm应用程序">(3)如何构建LLM应用程序&lt;/h2>
-&lt;p>LangChain提供了许多用来构建LLM应用程序的模块，其中最常用且最重要的模块是&lt;strong>LLMChain&lt;/strong>。&lt;/p>
-&lt;p>&lt;strong>LLMChain&lt;/strong>包含三个主要组件:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>LLM&lt;/strong>：LLM是你要构建的应用程序的核心推理引擎。GPT、GLM等大模型LangChain都已适配支持。&lt;/li>
-&lt;li>&lt;strong>提示模板&lt;/strong>：它为LLM提供指令，从而控制LLM的输出。所以大家要好好学习提示词工程。&lt;/li>
-&lt;li>&lt;strong>输出解析器&lt;/strong>：把LLM的原始响应转化为程序更易处理的格式，方便后续使用。&lt;/li>
-&lt;/ul>
-&lt;p>接下来我们就基于LLMChain来体验LangChain的便捷吧。&lt;/p>
-&lt;h1 id="2快速上手langchain">2.快速上手LangChain&lt;/h1>
-&lt;p>下面，我们演示如何用LangChain来做文本总结：&lt;/p>
-&lt;ul>
-&lt;li>环境准备&lt;/li>
-&lt;li>构造LLM&lt;/li>
-&lt;li>构造提示词模板&lt;/li>
-&lt;li>创建Chain，执行指定任务&lt;/li>
-&lt;/ul>
-&lt;h2 id="step1环境准备">STEP1.环境准备&lt;/h2>
-&lt;ul>
-&lt;li>安装LangChain。因为LangChain版本更新很快，安装时优先用&amp;rdquo;-U&amp;quot;升级模式安装。&lt;/li>
-&lt;li>安装openai(需申请OpenAPI的Token)。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123190055109.png" alt="image-20231123190055109">&lt;/p>
-&lt;h2 id="step2构造llm">STEP2.构造LLM&lt;/h2>
-&lt;ul>
-&lt;li>使用langchain 中的 OpenAI 函数来初始化一个大语言模型&lt;code>llm&lt;/code>。
-&lt;ul>
-&lt;li>本例用的是&amp;quot;text-davinci-003&amp;rdquo;，当然你可以根据需求用gpt或其它模型。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123174527077.png" alt="image-20231123174527077">&lt;/p>
-&lt;h2 id="step3构造提示词模板">STEP3.构造提示词模板&lt;/h2>
-&lt;blockquote>
-&lt;p>应用程序不会把用户的输入直接传给LLM，通常的做法是把用户输入传给提示词模板。&lt;/p>
-&lt;p>提示词模板的好处是：&lt;/p>
-&lt;ul>
-&lt;li>格式化的提示词结构，包括指令、上下文、输入、输出要求等，为给LLM提供更详细的语境。&lt;/li>
-&lt;li>支持设置变量，这可以让好用的提示词最大化被复用。&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>使用langchain的提示词模板函数初始化一个提示词模板&lt;code>prompt_template&lt;/code>
-&lt;ul>
-&lt;li>提示词指令是总结文本内容&lt;/li>
-&lt;li>要处理的文本内容设成变量，本次任务是处理一段新闻，后面也可以随意处理其它文本内容&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123202743359.png" alt="image-20231123202743359">&lt;/p>
-&lt;h2 id="step4创建chain">STEP4.创建Chain&lt;/h2>
-&lt;p>现在，我们将以上组件组合成一个链，就可以执行任务了。&lt;/p>
-&lt;ul>
-&lt;li>使用LLMChain构建我们自己的链&lt;code>chain&lt;/code>，传入上面的两个组件&lt;code>llm&lt;/code>、&lt;code>prompt_template&lt;/code>。&lt;/li>
-&lt;li>运行&lt;code>chain&lt;/code>，参数只需传入变量text(要处理的文本内容)，可以看到如下运行过程：
-&lt;ul>
-&lt;li>链开始，&lt;/li>
-&lt;li>读取text变量，格式化提示词，传给LLM&lt;/li>
-&lt;li>得到结果，链结束&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B029-LangChain%E8%A7%A3%E8%AF%BB1-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20231123203230173.png" alt="image-20231123203230173">&lt;/p>
-&lt;p>从上面的示例可以看到，只需一个命令就实现了提示词构建和LLM调用，我们利用Langchain很好的完成了任务。&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文解读了LangChain官方文档的《QuickStart》章节，并给出了基于LangChain构建LLM应用的实例代码。QuickStart章节关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>LangChain简介&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>LangChain 是一个开源框架，支持由LLM驱动的应用程序的开发。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>LangChain 的主要价值点：提供了各种模块化组件和好用的链&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>LLMChain是LangChain最常见且最重要的一个链，它包含3个主要组件：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>LLM&lt;/strong>：应用程序的核心推理引擎。&lt;/li>
-&lt;li>&lt;strong>提示模板&lt;/strong>：它为LLM提供指令，从而控制LLM的输出。&lt;/li>
-&lt;li>&lt;strong>输出解析器&lt;/strong>：把LLM的原始响应转化为程序更易处理的格式。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>基于LangChain构建具备总结功能的LLM应用
-&lt;ul>
-&lt;li>环境准备&lt;/li>
-&lt;li>构造LLM&lt;/li>
-&lt;li>构造提示词模板&lt;/li>
-&lt;li>创建Chain，执行指定任务&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>此外，这个故事还告诉我们：作为程序员小哥哥，要努力学习AI，高效使用AI，才能抱得美人归。&lt;/p></description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 20 May 2024 00:00:30 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 24 May 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,250 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【读书】李娟-我的阿勒泰11</title><link>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E8%AF%BB%E4%B9%A6%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B01/</link><pubDate>Mon, 20 May 2024 00:00:30 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E8%AF%BB%E4%B9%A6%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B01/</guid><description>&lt;p>迷茫有一阵子了，感觉应该慢下来，那就读书吧。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记48-AiDD 2024参会纪要</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-aidd-2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</link><pubDate>Fri, 24 May 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-aidd-2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/</guid><description>&lt;p>本文记录笔者参加AiDD 2024(AI+研发数字峰会)相关的议题，方便各位小伙伴快速了解最新AI理论研究和行业应用情况。&lt;/p>
+&lt;h1 id="1aidd-2024概览">1.AiDD 2024概览&lt;/h1>
+&lt;h2 id="1会议简介">(1)会议简介&lt;/h2>
+&lt;ul>
+&lt;li>AI+研发数字峰会(AiDD)专注“&lt;strong>AI技术和软件研发融合&lt;/strong>” ，AiDD 2024在上海举办，旨在&amp;rdquo;&amp;quot;&lt;strong>帮助企业借助AI技术，推动研发全面进入数智化时代&lt;/strong>&amp;quot;。&lt;/li>
+&lt;li>大会特邀&lt;strong>100+业界大咖&lt;/strong>分享行业洞察及专家见解，通过&lt;strong>60+创新案例&lt;/strong>展示全新研发思路，设置&lt;strong>15+个分论坛&lt;/strong>涵盖了软件研发全流程。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524133916685.png" alt="image-20240524133916685">&lt;/p>
+&lt;h2 id="2议题分布">(2)议题分布&lt;/h2>
+&lt;p>AiDD设置了15个分论坛，覆盖AI+研发全流程。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>编程Copilot&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>算法与模型训练&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>知识工程&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI工具链与工程平台&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>智能运维&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI算力与优化&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI原生应用开发&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>智能需求工程&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI驱动产品创新&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI人才培养&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>数据智能&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI赋能测试&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI智能体&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>领域大模型&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI对齐&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>接下来，我们从&lt;strong>3个方向&lt;/strong>总结相关会议议题：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>基础模型及Agent&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>基础设施&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>LLM应用落地&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2方向1基础模型及agent">2.方向1：基础模型及Agent&lt;/h1>
+&lt;p>通过本次会议可以观察到2点趋势：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>趋势1&lt;/strong>：2023年的研究热点还是&lt;strong>LLM基础理论&lt;/strong>，2024年的热点逐步转向到&lt;strong>VLM及多模态模型&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>趋势2&lt;/strong>：LLM基础模型的成熟与落地，促成了&lt;strong>Agent技术&lt;/strong>成为2024年的行业热点。&lt;/li>
+&lt;/ul>
+&lt;h2 id="议题1多模态大语言模型中的上下文学习">议题1：多模态大语言模型中的上下文学习&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>： 杨旭，南洋理工博士，东南大学副教授。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>价值&lt;/strong>：通过ICL(上下文学习)，提升多模态大模型的字幕生成能力、视觉问答能力(VQA)、解决视觉语言任务。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：
+&lt;ul>
+&lt;li>探索不同的上下文配置对图像字幕生成任务中的视觉-语言(VL)模型的影响，提出了四种图像选择策略和四种字幕分配策略。&lt;/li>
+&lt;li>探索在视觉问答(VQA)任务中，如何配置有效的上下文序列以增强大型视觉语言模型(LVLMs)的上下文学习(ICL)性能。为了提高ICL的性能，作者设计了多种检索方法，并采用不同的策略来操作检索到的示例。&lt;/li>
+&lt;li>通过在视觉问答(VQA)和图像字幕(IC)任务中的实验验证了使用语言模型配置ICD的方法的可行性，并通过全面的消融研究进一步探讨了数据集构建和ICD-LM开发设置对结果的影响。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524163938055.png" alt="image-20240524163938055">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524164044361.png" alt="image-20240524164044361">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524164420747.png" alt="image-20240524164420747">&lt;/p>
+&lt;h2 id="议题2基于多模态大语言模型的gui智能体">议题2：基于多模态大语言模型的GUI智能体&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：张驰，腾讯研究科学家，入选斯坦福大学发布的《2023全球前2%顶尖科学家榜单》&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>产品&lt;/strong>：AppAgent是由腾讯公司开发的一种高级多模态代理框架，主要用于智能手机应用程序的操作和管理。它基于大型语言模型（LLM），能够通过直观的点击、滑动等手势与应用程序进行交互，模仿类似人类的动作。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>多模态交互&lt;/strong>：AppAgent结合了视觉和文本输入，使得代理能够理解和执行基于视觉信息的任务，这在以往的文本中心的Agent模型中是不可能的。&lt;/li>
+&lt;li>&lt;strong>无需系统后端访问&lt;/strong>：与传统的智能助手(如Siri)不同，AppAgent通过模拟用户在图形用户界面（GUI）上的操作，如点击和滑动，而不是依赖于系统后端访问，从而实现更高的灵活性和安全性。&lt;/li>
+&lt;li>&lt;strong>自主学习能力&lt;/strong>：AppAgent通过预定义操作与手机app交互来学习，也可以通过观察人类演示来学习。这些观察被记录成文档，供后续使用&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524165245515.png" alt="image-20240524165245515">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524164953565.png" alt="image-20240524164953565">&lt;/p>
+&lt;h2 id="议题3多场景下智能体应用构建技巧">议题3：多场景下智能体应用构建技巧&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：卢建晖，微软高级云技术布道师&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>产品&lt;/strong>：微软的Semantic Kernel构建智能体是一个轻量级的软件开发工具包，旨在帮助开发者更有效地将大型语言模型集成到他们的应用程序中。&lt;/li>
+&lt;li>&lt;strong>价值&lt;/strong>：Semantic Kernel的价值在于它为开发者提供了一个高效的方式来利用大型语言模型解决复杂的问题，通过定义插件并自动协调这些插件与AI，开发者可以快速实现特定的功能或解决特定的问题。还允许开发者在应用程序中充分利用与Copilot和Bing相同的人工智能协调模式，从而增强应用程序的功能。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524170304878.png" alt="image-20240524170304878">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524170402852.png" alt="image-20240524170402852">&lt;/p>
+&lt;h2 id="议题4aiagent认知框架与案例实践">议题4：AIAgent认知框架与案例实践&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：黄佳，新加坡科技研究局AI研究员、技术作家。主攻方向LLM的开发和应用、AI for FinTech、AI for MedTech、持续学习等。著有多部AI相关畅销书。&lt;/li>
+&lt;/ul>
+&lt;p>个人感觉黄佳老师的议题比较出彩的一个，他不愧为技术作家，议题讲解也带有很强的技术科普风格，具体内容如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>AI应用的五个层次&lt;/strong>：分L1~L5，目前很多AI助手停留在L3，但业界都在向L4，即Agent方向努力。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524170728959.png" alt="image-20240524170728959">&lt;/li>
+&lt;li>&lt;strong>Agent方法论&lt;/strong>：黄老师的这个总结非常精彩。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524171055835.png" alt="image-20240524171055835">&lt;/li>
+&lt;li>&lt;strong>Agent认知框架的四种设计模式&lt;/strong>：&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524171224406.png" alt="image-20240524171224406">&lt;/li>
+&lt;li>&lt;strong>Agent认知框架选型方法&lt;/strong>：&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524171326589.png" alt="image-20240524171326589">&lt;/li>
+&lt;li>&lt;strong>Agent研究综述&lt;/strong>：黄佳老师介绍了Agent研究综述，非常值得学习的一篇综述性论文。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524171839884.png" alt="image-20240524171839884">&lt;/li>
+&lt;/ul>
+&lt;h2 id="议题5个性化智能体价值观与社交能力的评估与对齐">议题5：个性化智能体价值观与社交能力的评估与对齐&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：高星，通义星尘算法负责人。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>成果&lt;/strong>：
+&lt;ul>
+&lt;li>通过基于专家指导原则的自我对齐，有效提升了人类价值观对齐的效果。&lt;/li>
+&lt;li>通过多阶段迭代训练、CycleAlign方法、大小模型协同等，提升个性化角色的模型能力，打造类人智能体。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524172521205.png" alt="image-20240524172521205">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240524172501644.png" alt="image-20240524172501644">&lt;/p>
+&lt;h1 id="3方向2基础设施">3.方向2：基础设施&lt;/h1>
+&lt;h2 id="议题1构建agi时代的推理基础设施">议题1：构建AGI时代的推理基础设施&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>： 单一舟，南洋理工博士，东南大学副教授。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>主题&lt;/strong>：介绍华为云构建满足AGI需求的推理基础设施的解决方案。&lt;/li>
+&lt;li>&lt;strong>成果&lt;/strong>：
+&lt;ul>
+&lt;li>以存代算，降低首字时延&lt;/li>
+&lt;li>分离式内存弹性伸缩，降低推理集群成本&lt;/li>
+&lt;li>资源感知调度，提升推理集群利用率&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525142746428.png" alt="image-20240525142746428">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525142816516.png" alt="image-20240525142816516">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525142834332.png" alt="image-20240525142834332">&lt;/p>
+&lt;h2 id="议题2向量数据库大模型时代的基础设施构建">议题2：向量数据库大模型时代的基础设施构建&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：刘力，Zilliz首席工程师&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>主题&lt;/strong>：介绍了Zilliz Cloud产品，以及其关键特性，如：向量数据库即服务、Saas架构、Logic Clusters、分层存储、冷热数据分离、Zilliz Cloud Pipeline、Cardinal极致性能。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525143445461.png" alt="image-20240525143445461">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525145559234.png" alt="image-20240525145559234">&lt;/p>
+&lt;h2 id="议题3构建云原生算力基础设施驱动大模型创新实践">议题3：构建云原生算力基础设施驱动大模型创新实践&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：王羽中，杭州谐云科技有限公司技术总监&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>主题&lt;/strong>：介绍了支撑大模型的云原生算力基础设施解决方案，阐述了多项关键技术，如：跨算力中心的纳管和调度、异构资源纳管和调度、算力超分和优先级调度、算力资源共享和隔离、算力资源动态共享、多卡共享、精细化计费等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525150032505.png" alt="image-20240525150032505">&lt;/p>
+&lt;h2 id="议题4ai原生应用开发工具链详解">议题4：AI原生应用开发工具链详解&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：罗义云，阿里云资深技术专家、PAI平台工程负责人&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>主题&lt;/strong>：介绍阿里云PAI的整体架构，阐述了模型微调工具链的模型微调、模型评测Eval-Scope、实验管理、量化压缩、BladeLLM等特性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525150748022.png" alt="image-20240525150748022">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525151401633.png" alt="image-20240525151401633">&lt;/p>
+&lt;h1 id="4方向3llm应用落地">4.方向3：LLM应用落地&lt;/h1>
+&lt;h2 id="议题1大模型加持如何改变需求工程任务">议题1：大模型加持如何改变需求工程任务&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>报告人&lt;/strong>：金芝，北京大学教授，IEEE/CCF/AAIA Fellow，高可信软件技术教育部重点实验室常务副主任。&lt;/li>
+&lt;li>&lt;strong>内容小结&lt;/strong>：介绍大模型对需求工程的改变
+&lt;ul>
+&lt;li>&lt;strong>需求相关的提示模式&lt;/strong>：《Requirements Engineering using Generative AI：Prompts and Prompting Patterns》阐述了5种提示模式。&lt;/li>
+&lt;li>&lt;strong>人机协作架构设计&lt;/strong>：《Towards Human-Bot Collaborative Software Architecting with ChatGPT》展示了人类和ChatGPT协同开展架构设计的实践。&lt;/li>
+&lt;li>&lt;strong>AI Agent协同目标建模&lt;/strong>：《MAPE-K Loop-based Goal Model Generation Using Generative AI》论述了一种由AI Agent扮演需求分析师、领域业务专家的角色，共同开展设计建模的方法。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525153313639.png" alt="image-20240525153313639">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525153706831.png" alt="image-20240525153706831">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525153909763.png" alt="image-20240525153909763">&lt;/p>
+&lt;h2 id="议题2智能化研发在百度的落地">议题2：智能化研发在百度的落地&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：张立理，百度前端架构师，百度前端CMC主席，技术组织委员会 Web方向负责人。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>如何构建强力的代码模型&lt;/strong>：构造高质量代码数据集、多种代码生成模式、降低模型对算力的依赖提升计算速度。&lt;/li>
+&lt;li>&lt;strong>如何有效服务产品用户&lt;/strong>：多语言多IDE覆盖、提供丰富的编码器能力、基于研发现场知识增强、构建与实践紧密结合的模型训练飞轮。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525154247326.png" alt="image-20240525154247326">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525154737151.png" alt="image-20240525154737151">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525154838530.png" alt="image-20240525154838530">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525154855168.png" alt="image-20240525154855168">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525154920249.png" alt="image-20240525154920249">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525154950695.png" alt="image-20240525154950695">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525155007958.png" alt="image-20240525155007958">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525155020779.png" alt="image-20240525155020779">&lt;/p>
+&lt;h2 id="议题3阿里云服务器智能异常调度系统及llmops构建与实践">议题3：阿里云服务器智能异常调度系统及LLMOPS构建与实践&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：郭红科，阿里云高级开发工程师&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>主题&lt;/strong>：介绍了阿里云服务器的AI for Ops解决方案，分享了query重写/意图识别、AI Agent等关键技术实践的经验。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525160135574.png" alt="image-20240525160135574">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525160335459.png" alt="image-20240525160335459">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525160407489.png" alt="image-20240525160407489">&lt;/p>
+&lt;h2 id="议题4aiops在线评测基准系统">议题4：AIOps在线评测基准系统&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>报告人&lt;/strong>：聂晓辉，必示科技产品部总监、算法研究员，清华大学计算机系博士, 研究领域为智能运维 (AIOps)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内容小结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>介绍了必示科技的AIOps平台，展示了AI在IT运维领域的一些能力，如：异常检测、告警分析、故障处理、成本效率、混沌工程、可观测等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B048-AiDD2024%E5%8F%82%E4%BC%9A%E7%BA%AA%E8%A6%81/image-20240525160625980.png" alt="image-20240525160625980">&lt;/p>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>AiDD 2024会议的收获如下：&lt;/p>
+&lt;ul>
+&lt;li>基础模型的研究热点是多模态大模型、AI Agent，需要进一步跟踪探索。&lt;/li>
+&lt;li>各大厂商已经在布局基础设施建设，AI算力基础设施是近几年重要的营收点。&lt;/li>
+&lt;li>在AI for SE方面，各厂商的AI辅助研发逐渐在落地，同时也在启动AIOps的探索。&lt;/li>
+&lt;/ul></description></item><item><title>【读书】李娟-我的阿勒泰11</title><link>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E8%AF%BB%E4%B9%A6%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B01/</link><pubDate>Mon, 20 May 2024 00:00:30 +0800</pubDate><guid>https://jherculesqz.github.io/post/%E6%9D%82%E8%B4%A7%E9%93%BA/%E8%AF%BB%E4%B9%A6%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B01/</guid><description>&lt;p>迷茫有一阵子了，感觉应该慢下来，那就读书吧。&lt;/p>
 &lt;p>耐不下性子，就用AI来帮我读吧。&lt;/p>
 &lt;h1 id="我的阿勒泰想表达什么">《我的阿勒泰》想表达什么？&lt;/h1>
 &lt;p>&lt;img src="https://jherculesqz.github.io/%E6%9D%82%E8%B4%A7%E9%93%BA/%E3%80%90%E8%AF%BB%E4%B9%A6%E3%80%91%E6%9D%8E%E5%A8%9F-%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B01/image-20240520000811635.png" alt="image-20240520000811635">&lt;/p>
@@ -2378,113 +2621,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>翻译：https://jherculesqz.gitbook.io/chatgpt-prompt-engineering-for-developers-1/&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记30-提示词解读5-实战案例之转换</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</link><pubDate>Sat, 02 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/</guid><description>&lt;p>今天我们跟着吴恩达老师的课程，学习LLM另一个强大的能力——转换(&lt;code>Transforming&lt;/code>)。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231128162542742.png" alt="image-20231128162542742">&lt;/p>
-&lt;h1 id="1激发转换能力的提示词">1.激发转换能力的提示词&lt;/h1>
-&lt;h2 id="1什么是llm的转换能力">(1)什么是LLM的转换能力&lt;/h2>
-&lt;p>LLM的转换能力是指&lt;strong>将文本从一种形式或格式转换为另一种形式或格式的能力&lt;/strong>。&lt;/p>
-&lt;p>转换能力使得LLM成为一个强大的文本处理工具，可以在如下场景应用：&lt;/p>
-&lt;ul>
-&lt;li>文本翻译&lt;/li>
-&lt;li>修正内容错误&lt;/li>
-&lt;li>改变内容风格&lt;/li>
-&lt;li>转换文本格式&lt;/li>
-&lt;/ul>
-&lt;p>注：目前很火的&lt;strong>LLM4SE领域&lt;/strong>(如：代码转换、代码修正、代码检视等)，&lt;strong>本质都是在激发LLM的转换能力&lt;/strong>。&lt;/p>
-&lt;h2 id="2如何激发llm的转换能力">(2)如何激发LLM的转换能力&lt;/h2>
-&lt;p>我们可以这样构建提示词：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>根据任务类型，使用清晰明确的指令词，如：&lt;strong>转换&lt;/strong>xxx、&lt;strong>翻译&lt;/strong>xxx、校正xxx。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2实战案例">2.实战案例&lt;/h1>
-&lt;p>假设我是某跨境电商的售前客服，要用LLM的转换能力来支撑处理用户问题：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>翻译&lt;/strong>国外用户反馈的问题。&lt;/li>
-&lt;li>写问题回复，让LLM&lt;strong>校正&lt;/strong>内容错误。&lt;/li>
-&lt;li>把回复内容&lt;strong>转换&lt;/strong>成商务邮件风格。&lt;/li>
-&lt;li>将问题及回复&lt;strong>转换&lt;/strong>成JSON和表格，便于后续建单留档。&lt;/li>
-&lt;/ul>
-&lt;h2 id="step1翻译用户问题">STEP1.翻译用户问题&lt;/h2>
-&lt;p>黑色星期五，电商客服收到一条问题如下：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;em>“Avez-vous encore des stocks de smartphones ? Comment puis-je participer à vos promotions ?”&lt;/em>&lt;/p>
-&lt;/blockquote>
-&lt;p>这是哪国语言，什么意思？😵 (客服小姐姐一脸黑线)&lt;/p>
-&lt;p>程序员小哥哥英雄救美，让LLM帮忙&lt;strong>翻译&lt;/strong>下。&lt;/p>
-&lt;ul>
-&lt;li>程序员小哥的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129171159198.png" alt="image-20231129171159198">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129171243074.png" alt="image-20231129171243074">&lt;/p>
-&lt;p>LLM识别出了文字的语种，并按指令进行了机器翻译。&lt;/p>
-&lt;h2 id="step2回复客户邮件">STEP2.回复客户邮件&lt;/h2>
-&lt;p>生意上门，客服小姐姐非常开心，但迅速陷入了沉思：如何给法语客户回复专业的售前邮件呢？😵&lt;/p>
-&lt;p>通常，回复售前邮件需要有如下流程：&lt;/p>
-&lt;ul>
-&lt;li>编写回复信息并校正&lt;/li>
-&lt;li>设计回复信息风格&lt;/li>
-&lt;li>记录JSON和表格，归档到IT系统&lt;/li>
-&lt;/ul>
-&lt;p>此时，程序员小哥哥再次出手，英雄救美。&lt;/p>
-&lt;h3 id="step21编写并校正回复信息">STEP2.1.编写并校正回复信息&lt;/h3>
-&lt;p>客服小姐姐用中文写了回复信息：&lt;em>“我们手机的库存非长充足。优惠活动是买两部送一步。尽管放心下单吧。”&lt;/em>&lt;/p>
-&lt;p>程序员小哥哥让LLM帮忙&lt;strong>校对&lt;/strong>下是否有文字错误。&lt;/p>
-&lt;ul>
-&lt;li>程序员小哥的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129173833270.png" alt="image-20231129173833270">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129174109866.png" alt="image-20231129174109866">&lt;/p>
-&lt;p>LLM识别出了错别字，并修正了回复信息。&lt;/p>
-&lt;h3 id="step22改变内容风格">STEP2.2.改变内容风格&lt;/h3>
-&lt;p>商务对话要正式点儿，让LLM把初始信息&lt;strong>转换&lt;/strong>成商务&lt;strong>风格&lt;/strong>的回复，然后翻译成法语。&lt;/p>
-&lt;ul>
-&lt;li>程序员小哥的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129181528670.png" alt="image-20231129181528670">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129181557507.png" alt="image-20231129181557507">&lt;/p>
-&lt;p>LLM很好的完成了任务，让客服小姐姐不用在翻译、措辞上花太多时间。&lt;/p>
-&lt;h3 id="step23将问题及回复转换成json和表格">STEP2.3.将问题及回复转换成JSON和表格&lt;/h3>
-&lt;p>客户问题很多，需要客服小姐姐将问题及回复，整理成JSON和表格形式，提交到IT系统归档。&lt;/p>
-&lt;p>程序员小哥哥，利用LLM的&lt;strong>文本格式转换功能&lt;/strong>快速处理这些文本。&lt;/p>
-&lt;p>如：转换成程序容易处理的JSON格式：&lt;/p>
-&lt;ul>
-&lt;li>程序员小哥的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183618410.png" alt="image-20231129183618410">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183643134.png" alt="image-20231129183643134">&lt;/p>
-&lt;p>还可以把JSON转成直观易读的表格：&lt;/p>
-&lt;ul>
-&lt;li>程序员小哥的提示词如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183705048.png" alt="image-20231129183705048">&lt;/p>
-&lt;ul>
-&lt;li>LLM的回答如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B030-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A7%A3%E8%AF%BB5-%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%BD%AC%E6%8D%A2/image-20231129183727101.png" alt="image-20231129183727101">&lt;/p>
-&lt;p>最后，翻译、校正、文本转换、格式转换，只需用LLM一个工具就可以搞定。&lt;/p>
-&lt;p>最后，程序员小哥哥和客服小姐姐开启了一段美好的爱情故事。&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文介绍了一个LLM另一个实用的提示词技巧，可以充分利用LLM的文本转换能力，帮助我们处理繁琐的文档工作。&lt;/p>
-&lt;p>转换提示词的构建方法：&lt;/p>
-&lt;ul>
-&lt;li>根据任务类型，使用清晰明确的指令词，如&lt;strong>转换&lt;/strong>xxx、&lt;strong>翻译&lt;/strong>xxx、校正xxx。&lt;/li>
-&lt;li>提供足够的上下文信息，让LLM知道要处理的内容。&lt;/li>
-&lt;/ul>
-&lt;p>此外，这个故事还告诉我们：作为程序员小哥哥，要努力学习AI，高效使用AI，才能抱得美人归。&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

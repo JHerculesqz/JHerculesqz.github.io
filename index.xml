@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 10 Jun 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jun 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,160 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记50-LLM微调技术之LoRA</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B050-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Blora/</link><pubDate>Mon, 10 Jun 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B050-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Blora/</guid><description>&lt;p>前面的专栏我们介绍了&lt;strong>Adapt Tuning&lt;/strong>、&lt;strong>Soft Prompt Tuning&lt;/strong>等微调技术，本文让我们跟随着论文《&lt;strong>LORA: LOW-RANK ADAPTATION OF LARGE LAN-&lt;/strong>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记51-LLM微调技术之AdaLoRA</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badalora/</link><pubDate>Wed, 26 Jun 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badalora/</guid><description>&lt;p>今天我们通过解读论文《&lt;strong>ADALORA: ADAPTIVE BUDGET ALLOCATION FOR&lt;/strong>
+&lt;strong>PARAMETER-EFFICIENT FINE-TUNING&lt;/strong>》来学习一下AdaLoRA。&lt;/p>
+&lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
+&lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：&lt;strong>AdaLoRA&lt;/strong>也是解决全参数微调参数量过大、成本过高的问题。&lt;/li>
+&lt;li>&lt;strong>解决方案&lt;/strong>：论文提出了&lt;strong>AdaLoRA&lt;/strong>微调技术，是对&lt;strong>LoRA&lt;/strong>的一种改进，&lt;strong>LoRA&lt;/strong>没有考虑不同权重参数的重要性不同。AdaLoRA以奇异值分解的形式参数化增量更新，有效地修剪不重要更新的奇异值，避免了密集的精确SVD计算。&lt;/li>
+&lt;li>&lt;strong>实验效果&lt;/strong>：在自然语言处理、问答和自然语言生成等多个预训练模型上的实验表明，AdaLoRA在低预算设置下，微调效果有显著的改进。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240621144023004.png" alt="image-20240621144023004">&lt;/p>
+&lt;h1 id="2introduction介绍">2.Introduction(介绍)&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：LoRA有哪些局限性呢？论文给出了一个测试。
+&lt;ul>
+&lt;li>&lt;strong>左图&lt;/strong>：针对不同模块进行LoRA微调，效果是不一样的。针对前馈网络FFN进行LoRA微调的效果要远优于自注意力模块的LoRA微调。&lt;/li>
+&lt;li>&lt;strong>右图&lt;/strong>：针对不同层进行LoRA微调，效果也是不一样的。10~12层的微调效果要远优于1~3层的微调效果。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240621164711429.png" alt="image-20240621164711429">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>AdaLoRA的核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>通过上述实验可以看到：在理想状态下，&lt;strong>微调关键模块/关键层的权重矩阵是最有效的&lt;/strong>，而微调不太重要的模块/层的权重矩阵不仅毫无意义，甚至有负面的影响。&lt;/li>
+&lt;li>AdaLoRA针对关键矩阵设置为高秩，对于不重要的矩阵修剪为低秩。设置为高秩的增量矩阵可以捕获更细粒度的特征。&lt;/li>
+&lt;li>AdaLoRA如何实现上述这种&lt;strong>对秩的调整&lt;/strong>呢？答案是数学工具&lt;strong>SVD(矩阵奇异值分解)&lt;/strong>，SVD是将高维矩阵拆分为三个矩阵，即&lt;strong>∆=PΛQ&lt;/strong>。P和Q分别表示∆的左/右奇异向量，Λ表示∆的对角矩阵。SVD在数据科学、机器学习中应用广泛，常用于降维、数据压缩、噪声过滤、文本数据的潜在语义结构提取等。&lt;/li>
+&lt;li>AdaLoRA通过对某层、某模块的重要性评分，动态调整&lt;strong>∆=PΛQ&lt;/strong>的秩。AdaLoRA构造了N个三元组，每个三元组G&lt;sub>i&lt;/sub>=(P, Λ, Q)，AdaLoRA设计了一种重要性度量方法，重要性得分高的三元组被赋予高秩。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>AdaLoRA的实验效果：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>针对DeBERTaV3-base进行自然语言理解(GLUE)、问题(SQuADv1)进行了评估，AdaLoRA有了更好的性能表现。&lt;/li>
+&lt;li>针对BART-large进行自然语言生成(XSum)进行了评估，AdaLoRA始终优于基线的性能。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="3design-decisions实验设计">3.Design Decisions(实验设计)&lt;/h1>
+&lt;h2 id="1问题域">(1)问题域&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>对Transformer的建模&lt;/strong>：Transformer模型有L个堆叠的块组成，每个块包含2个子模块——MHA(多头注意力)、FFN(全连接前馈网络)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>MHA函数&lt;/strong>：给定输入序列X∈R&lt;sup>n×d&lt;/sup>，MHA执行了h个多头注意力函数表示为&lt;/p>
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240621184305094.png" alt="image-20240621184305094">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>FFN函数&lt;/strong>：前馈网络由两个线性变换组成，中间有一个ReLU激活函数。&lt;/p>
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI拾遗/【chatGPT】学习笔记51-LLM微调技术之AdaLoRA/image-20240621185258000.png" alt="image-20240621185258000" style="zoom:80%;" />&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>对LoRA建模&lt;/strong>：LoRA的本质是用两个小矩阵替代一个大矩阵。&lt;/p>
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240621185936493.png" alt="image-20240621185936493">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>LoRA模型的问题&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>LoRA的低秩分解方法选择了相同的秩r&lt;/li>
+&lt;li>不同层的矩阵参数都采用相同的AB分解方法吗？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="2问题建模">(2)问题建模&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>SVD&lt;/strong>：SVD是对高维矩阵进行降维的行之有效的数学工具。
+&lt;ul>
+&lt;li>&lt;strong>SVD的目标&lt;/strong>：将1个高维矩阵，转换为3个低维矩阵，并且可以通过调整秩r来控制对角矩阵Λ(公式3)。&lt;/li>
+&lt;li>&lt;strong>Λ的数学性质&lt;/strong>：对角矩阵Λ的特征值逐步递减，不严谨地说特征值越高，这个维度的特征越重要。&lt;/li>
+&lt;li>&lt;strong>Λ的近似&lt;/strong>：当我们用秩r舍弃对角矩阵Λ较小的特征值，就实现了降维的同时又不丢失有效的信息。&lt;/li>
+&lt;li>&lt;strong>PQ的数学性质&lt;/strong>：在SVD中，PQ要满足正交性，因此论文中引入了对P和Q的正则损失约束(公式4)。&lt;/li>
+&lt;li>SVD的详细原理和数学推导本文不赘述，可以参考机器学习的PCA方法。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626162821750.png" alt="image-20240626162821750">&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626170654390.png" alt="image-20240626170654390">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>重要性评估&lt;/strong>：某一层的某个参数矩阵对于整个Transformer到底是不是重要的？&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>G&lt;sub>k,i&lt;/sub>&lt;/strong>： 假设G这个三元组表示训练过程中对P、Λ、Q的更新。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626170842830.png" alt="image-20240626170842830">&lt;/li>
+&lt;li>&lt;strong>C(P, E, Q)&lt;/strong>：假设C表示对P、Λ、Q的更新代价。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626171118350.png" alt="image-20240626171118350">&lt;/li>
+&lt;li>&lt;strong>R(P&lt;sub>k&lt;/sub>, Q&lt;sub>k&lt;/sub>)&lt;/strong>：假设R表示P和Q满足公式4R(P, Q)正交性的代价。&lt;/li>
+&lt;li>&lt;strong>L(P, E, Q)&lt;/strong>：则，L表示训练目标是要保证C和R都尽量小，才能得到满足训练效果的最优训练成本。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626171425594.png" alt="image-20240626171425594">&lt;/li>
+&lt;li>&lt;strong>Λ&lt;sup>(t)&lt;/sup>&lt;sub>k&lt;/sub>&lt;/strong>：则，Λ&lt;sup>(t)&lt;/sup>&lt;sub>k&lt;/sub>表示采用梯度更新的计算过程(公式5)。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626171551548.png" alt="image-20240626171551548">&lt;/li>
+&lt;li>但是我们知道对每轮迭代、对每一层的高维参数矩阵进行SVD，存在巨大的计算成本，因此论文终于从逻辑上引出了重要性评估：&lt;/li>
+&lt;li>&lt;strong>SVD剪枝&lt;/strong>：假设S是一个重要性评估的函数，那么Λ&lt;sup>(t)&lt;/sup>&lt;sub>k&lt;/sub>和S&lt;sup>(t)&lt;/sup>&lt;sub>k&lt;/sub>共同决定了Λ&lt;sup>(t+1)&lt;/sup>&lt;sub>k&lt;/sub>是否还有必要进行更新(公式6)。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626171655605.png" alt="image-20240626171655605">&lt;/li>
+&lt;li>&lt;strong>S&lt;sup>t&lt;/sup>&lt;sub>k&lt;/sub>&lt;/strong>：重要性评估函数考虑P、Λ、Q三个矩阵重要性的影响(公式7)，其中**s(·)**表示具体的重要性计算方法。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626172223409.png" alt="image-20240626172223409">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>s(·)的三种计算方法&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>不考虑P、Q的影响&lt;/strong>：对角矩阵Λ中特征值越大越重要，这是传统的SVD判定重要性的方法，这种方法忽略了P和Q对各层参数矩阵的重要性影响。&lt;/li>
+&lt;li>&lt;strong>考虑P、Q影响，但不考虑重要性函数的平滑&lt;/strong>：(公式8)。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626172632400.png" alt="image-20240626172632400">&lt;/li>
+&lt;li>考虑P、Q影响，但考虑重要性函数的平滑：什么情况会导致重要性不平滑呢？通俗地说，模型对于某一批次的数据已经训练地很好了，那么可能会导致认为当前的参数矩阵对整个模型并不重要。3个公式相当于增加了二级平滑的函数，保证了考虑P和Q的同时，也能相对客观地评估它们的重要性(公式9、公式10、公式11)。&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626172937743.png" alt="image-20240626172937743">&lt;/li>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626172945391.png" alt="image-20240626172945391">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="4experiments实验结果">4.Experiments(实验结果)&lt;/h1>
+&lt;h2 id="1实验结果">(1)实验结果&lt;/h2>
+&lt;p>从整体的实验结果来看，AdaLoRA的微调效果全面优于LoRA。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626174406600.png" alt="image-20240626174406600">&lt;/p>
+&lt;h2 id="2关键发现">(2)关键发现&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>增加计算预算&lt;/strong>，AdaLoRA的训练效果会显著优于LoRA。&lt;/p>
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626173949733.png" alt="image-20240626173949733">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>SVD降维、保证PQ矩阵的正交性&lt;/strong>，对AdaLoRA的训练效果都有影响。&lt;/p>
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626174221946.png" alt="image-20240626174221946">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Transformer中，&lt;strong>FNN的参数矩阵重要性要大于自注意力层的参数矩阵&lt;/strong>、&lt;strong>顶层的参数矩阵重要性大于低层的参数矩阵重要性&lt;/strong>。&lt;/p>
+&lt;ul>
+&lt;li>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BAdaLoRA/image-20240626174532657.png" alt="image-20240626174532657">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="5总结">5.总结&lt;/h1>
+&lt;p>从上述论文解读中，我们收获了如下技术观点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>AdaLoRA的核心思想&lt;/strong>：采用SVD、正则损失、二次平滑的重要性评估，精准地控制每一层的参数矩阵降维。&lt;/li>
+&lt;li>&lt;strong>AdaLoRA的关键发现&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>SVD降维、保证PQ矩阵的正交性&lt;/strong>，对AdaLoRA的训练效果都有影响。&lt;/li>
+&lt;li>Transformer中，&lt;strong>FNN的参数矩阵重要性要大于自注意力层的参数矩阵&lt;/strong>、&lt;strong>顶层的参数矩阵重要性大于低层的参数矩阵重要性&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>阅读AdaLoRA最大的感触就是数学的奇妙，AdaLoRA是一个主要依赖数学公式推导解决算法问题的典型代表&lt;/strong>。&lt;/p>
+&lt;p>论文链接：https://arxiv.org/pdf/2303.10512&lt;/p></description></item><item><title>【chatGPT】学习笔记50-LLM微调技术之LoRA</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B050-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Blora/</link><pubDate>Mon, 10 Jun 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B050-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Blora/</guid><description>&lt;p>前面的专栏我们介绍了&lt;strong>Adapt Tuning&lt;/strong>、&lt;strong>Soft Prompt Tuning&lt;/strong>等微调技术，本文让我们跟随着论文《&lt;strong>LORA: LOW-RANK ADAPTATION OF LARGE LAN-&lt;/strong>
 &lt;strong>GUAGE MODELS&lt;/strong>》，来看一下&lt;strong>LoRA微调技术&lt;/strong>。&lt;/p>
 &lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
 &lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
@@ -2611,158 +2764,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;li>更广泛的应用：通过改进TTS技术，使其在更多的领域得到应用，如智能客服、智能家居等。&lt;/li>
 &lt;/ol>
 &lt;h2 id="5-结论">5. 结论&lt;/h2>
-&lt;p>TTS技术是将文本转换为语音的技术，其原理主要包括语音合成、语音合成模型、声学模型等。随着人工智能、自然语言处理等技术的不断发展，TTS技术在未来将会呈现出更高的语音质量、更自然的发音、更丰富的语言支持和更广泛的应用等特点。&lt;/p></description></item><item><title>【chatGPT】学习笔记33-LangChain解读-LCEL语言之基础语法(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/</link><pubDate>Sat, 23 Dec 2023 14:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/</guid><description>&lt;p>LCEL让我们可以用&lt;code>|&lt;/code>管道符把不同的组件或链组合起来，这都得益于这些组件都实现了Runnable接口。&lt;/p>
-&lt;p>本篇我们就带着Runnable的概念继续学习下LCEL的基础用法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231222104906413.png" alt="image-20231222104906413">&lt;/p>
-&lt;h1 id="1-lcel核心接口runnable">1. LCEL核心接口Runnable&lt;/h1>
-&lt;h2 id="1runnable接口">(1)Runnable接口&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>Langchain定义了“Runnable”协议，协议中实现了一系列方法，比如对管道运算符&lt;code>|&lt;/code>的支持、invoke方法等。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>这里介绍下Runnable定义的一组标准调用接口（其中后三个是前面三个异步方式）：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#stream">&lt;code>stream&lt;/code>&lt;/a>：流式输出&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#invoke">&lt;code>invoke&lt;/code>&lt;/a>：基于单一输入调用链&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#batch">&lt;code>batch&lt;/code>&lt;/a>：基于列表输入调用链&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#async-stream">&lt;code>astream&lt;/code>&lt;/a>：异步流式输出&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#async-invoke">&lt;code>ainvoke&lt;/code>&lt;/a>：基于单一输入异步调用链&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://python.langchain.com/docs/expression_language/interface#async-batch">&lt;code>abatch&lt;/code>&lt;/a>：基于列表输入异步调用链&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>LangChain的很多组件(对象)都应用了Runnable协议，可以把他们称为Runnable对象，这些对象都实现了上述接口，因此这些对象组成的链也都支持上述调用方法。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="2常用runnable对象的输入输出类型">(2)常用Runnable对象的输入输出类型&lt;/h2>
-&lt;p>LCEL中使用&lt;code>|&lt;/code>将前一个Runnable对象的输出传递给下一个Runnable对象作为输入，因此需要保证管道两端的型号一致。&lt;/p>
-&lt;p>LangChain常用组件的输入、输出数据类型如下：&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>&lt;strong>组件&lt;/strong>&lt;/th>
-&lt;th>&lt;strong>输入类型&lt;/strong>&lt;/th>
-&lt;th>&lt;strong>输出类型&lt;/strong>&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Prompt (提示词)&lt;/td>
-&lt;td>字典&lt;/td>
-&lt;td>PromptValue&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ChatModel (聊天模型)&lt;/td>
-&lt;td>单个字符串、聊天消息列表或 PromptValue&lt;/td>
-&lt;td>ChatMessage&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>LLM (非聊天模型)&lt;/td>
-&lt;td>单个字符串、聊天消息列表或 PromptValue&lt;/td>
-&lt;td>String&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>OutputParser (输出解析器)&lt;/td>
-&lt;td>LLM 或 ChatModel 的输出&lt;/td>
-&lt;td>取决于解析器&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Retriever (检索器 )&lt;/td>
-&lt;td>单个字符串&lt;/td>
-&lt;td>文档清单&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Tool (工具)&lt;/td>
-&lt;td>单个字符串或字典，具体取决于工具&lt;/td>
-&lt;td>取决于工具&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="3-runnablepassthrough在管道中的作用">(3) RunnablePassthrough在管道中的作用&lt;/h2>
-&lt;p>在使用LCEL构建链时，原始用户输入可能不仅要传给第一个组件，还要传给后续组件，这时可以用RunnablePassthrough。RunnablePassthrough可以透传用户输入。&lt;/p>
-&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
-&lt;p>下面我们通过一个包含4个组件的RAG检索链来再次体验LCEL的便捷。&lt;/p>
-&lt;p>示例场景是基于给定的文本回答用户问题。&lt;/p>
-&lt;h2 id="step1环境准备">STEP1.环境准备&lt;/h2>
-&lt;ul>
-&lt;li>注意：由于示例的是检索本地文本，所以安装了向量数据库及其所需的库。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223004634709.png" alt="image-20231223004634709">&lt;/p>
-&lt;h2 id="step2构建检索器组件">STEP2.构建检索器组件&lt;/h2>
-&lt;ul>
-&lt;li>为方便演示，本地文本简单的放一句话：”大鱼吃小鱼，小鱼吃虾米“。&lt;/li>
-&lt;li>用langchain的检索器&lt;code>as_retriever&lt;/code>，它可以根据输入查询向量库并返回相关文本。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223005234058.png" alt="image-20231223005234058">&lt;/p>
-&lt;h2 id="step3构建prompt提示词组件">STEP3.构建Prompt提示词组件&lt;/h2>
-&lt;ul>
-&lt;li>提示词设计的是根据给定的文字回答问题。&lt;/li>
-&lt;li>提示词中共2个变量：&lt;code>question&lt;/code>用来接收用户问题，&lt;code>context&lt;/code>来接收检索器的查询结果。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223010525145.png" alt="image-20231223010525145">&lt;/p>
-&lt;h2 id="step4构建llm组件">STEP4.构建llm组件&lt;/h2>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223011307090.png" alt="image-20231223011307090">&lt;/p>
-&lt;h2 id="step5组合成链">STEP5.组合成链&lt;/h2>
-&lt;ul>
-&lt;li>把检索器、提示词、模型、输出解析器四个组件串起来，命名为检索链&lt;code>retrieval_chain&lt;/code>。&lt;/li>
-&lt;li>这一步注意两点：
-&lt;ul>
-&lt;li>用户输入的问题，不止组件1的检索器要用，组件2也要用它来构建提示词，因此组件1使用RunnablePassthrough方法把原始输入透传给下一步。&lt;/li>
-&lt;li>由于组件2 prompt的输入要求是字典类型，所以组件1把检索器和用户问题写成字典格式，并用组件2的变量作为键。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223011350292.png" alt="image-20231223011350292">&lt;/p>
-&lt;h2 id="step6运行链">STEP6.运行链&lt;/h2>
-&lt;ul>
-&lt;li>传入用户问题，得到期望结果。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B033-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95(2)/image-20231223011640703.png" alt="image-20231223011640703">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文解读了LangChain LCEL及其Runnable基础语法，关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>Runnable接口&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Runnable是Langchain表达式语言的核心接口&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Runnable提供了一组标准调用接口：stream、invoke、batch及对应的异步方法。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Langchain很多组件都遵循Runnable协议，因此可以方便的组合、调用。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>常用Runnable对象的输入输出类型要求，用管道&lt;code>|&lt;/code>方式组合时需注意管道两端的类型一致。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>RunnablePassthrough在管道中的作用。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>构建了包含四个组件的检索链。&lt;/li>
-&lt;li>通过实操关注了管道前后数据类型的匹配、RunnablePassthrough的作用。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>TTS技术是将文本转换为语音的技术，其原理主要包括语音合成、语音合成模型、声学模型等。随着人工智能、自然语言处理等技术的不断发展，TTS技术在未来将会呈现出更高的语音质量、更自然的发音、更丰富的语言支持和更广泛的应用等特点。&lt;/p></description></item></channel></rss>

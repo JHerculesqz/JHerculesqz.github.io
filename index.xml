@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jun 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Jul 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,180 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记51-LLM微调技术之AdaLoRA</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badalora/</link><pubDate>Wed, 26 Jun 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badalora/</guid><description>&lt;p>今天我们通过解读论文《&lt;strong>ADALORA: ADAPTIVE BUDGET ALLOCATION FOR&lt;/strong>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记52-麦肯锡《生成式AI与美国的未来工作》报告解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E7%94%9F%E6%88%90%E5%BC%8Fai%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link><pubDate>Mon, 15 Jul 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E7%94%9F%E6%88%90%E5%BC%8Fai%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>近期萝卜快跑成为了热点话题，人工智能对就业产生多大的影响成为社会关注的焦点。&lt;/p>
+&lt;p>我们试图通过解读麦肯锡《生成式AI与美国的未来工作》研究报告，为大家展示美国的就业形式、生成式AI对美国劳动力市场的影响、以及美国社会和美国政府的观点及解决方案，以他山之石为我们提供一些思考。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240708090201905.png" alt="image-20240708090201905">&lt;/p>
+&lt;h1 id="1核心观点1就业结构正在发生变化">1.核心观点1：就业结构正在发生变化&lt;/h1>
+&lt;p>报告指出：&lt;strong>人力需求结构已发生变革&lt;/strong>——过去三年美国劳动市场已经历&lt;strong>860万职业转换&lt;/strong>，到2030年将再发生&lt;strong>1200万个职业转换&lt;/strong>，比两年前预测的&lt;strong>高出25%&lt;/strong>。&lt;/p>
+&lt;p>调查报告通过数据分析，给我们展示了一张&lt;strong>宏观的就业结构图&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从AI技术对各行业的影响看&lt;/strong>：教育行业、金融行业、法律行业、艺术创作领域、STEM(科学技术)领域，AI技术将极大地提升这些行业和领域的自动化程度。&lt;/li>
+&lt;li>&lt;strong>从职业转换的程度看&lt;/strong>：医疗行业新增岗位最多，建筑、运输、机械、房地产行业岗位变化大，制造、餐饮行业岗位需求量小且略有下跌，客服、办公服务(如：文员)需求量大幅下降。&lt;strong>预计在2030年，将产生1200万个职业转换&lt;/strong>。
+&lt;ul>
+&lt;li>我们可以发现，自动化程度很高的行业，对人的招聘需求会越来越低。&lt;/li>
+&lt;li>如：在制造领域，AI和具身智能的渗透率非常高，导致这个行业自动化程度很高，因此对人的岗位需求出现了负增长。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>说明：职业转换表示某个岗位消失，导致打工人需要转岗。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240715145303000.png" alt="image-20240715145303000">&lt;/p>
+&lt;p>在就业结构发生变化的情况下，社会不同阶层的就业有哪些变化呢？&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>低工资职业的就业人数下降&lt;/strong>：年收入低于3.5万美元的就业人数下降3.7%，这种趋势会持续下去。&lt;/li>
+&lt;li>&lt;strong>中等工资职业的就业人数保持稳定&lt;/strong>：年收入3.5万至5.7万美元的就业人数保持相对稳定，微幅增长0.1%。&lt;/li>
+&lt;li>&lt;strong>高工资职业的就业人数增加&lt;/strong>：年收入超过5.7万美元的就业人数增加了9%，同时新增了约350万个就业岗位。&lt;/li>
+&lt;/ul>
+&lt;p>通过以上数据可以看到，&lt;strong>低端岗位在逐步减少，高端岗位在急剧增加&lt;/strong>。预计到2030年，最低工资阶层的工作将减少110万个，而最高工资阶层的工作将急剧增加380万个。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>可能增加的工作岗位：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>医疗保健&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>STEM(科学、技术、工程和数学)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>建筑&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>商业法律专业人员&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>可能消失的工作岗位&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>办公支持&lt;/li>
+&lt;li>客户服务&lt;/li>
+&lt;li>餐饮服务&lt;/li>
+&lt;li>产业工人&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240707232142776.png" alt="image-20240707232142776">&lt;/p>
+&lt;p>但随着低端岗位在逐步减少以及高端岗位在急剧增加，也&lt;strong>造成了劳动力短缺&lt;/strong>的现象：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>劳动力短缺&lt;/strong>：2022年初~2023年上半年，出现了约1000万个职位空缺。&lt;/li>
+&lt;li>&lt;strong>低端岗位产生了空缺&lt;/strong>：美国社会出现了打工人宁可不工作，也不愿意从事低端岗位的情况。&lt;/li>
+&lt;li>&lt;strong>高端岗位产生了空缺&lt;/strong>：随着AI替代了某些人类岗位，打工人需要转型从事新的岗位，转型需要的时间导致了劳动力短缺。&lt;/li>
+&lt;/ul>
+&lt;p>职位空缺预示着&lt;strong>人力需求结构&lt;/strong>问题，也凸显了确保关键岗位被填补，以及为人们提供获得新岗位技能的紧迫性。&lt;/p>
+&lt;p>最后，麦肯锡的研究报告归纳了3个结论：&lt;/p>
+&lt;ul>
+&lt;li>就业结构在AI等科技进步下发生了巨大变化。&lt;/li>
+&lt;li>生成式AI将使部分&lt;strong>基础、低薪工作岗位消失&lt;/strong>，但&lt;strong>高端工作岗位会大量增加&lt;/strong>。&lt;/li>
+&lt;li>劳动力短缺凸显了&lt;strong>人才需求结构失衡&lt;/strong>的情况。&lt;/li>
+&lt;/ul>
+&lt;h1 id="2核心观点2生成式ai是就业结构变化的重要因素">2.核心观点2：生成式AI是就业结构变化的重要因素&lt;/h1>
+&lt;p>疫情和美国政府投资向基建倾斜等因素，导致了美国就业结构的变化。但生成式AI的出现以及新一代人工智能的爆发，进一步加速了就业结构的改变。&lt;/p>
+&lt;ul>
+&lt;li>生成式AI大大&lt;strong>加快所有场景的自动化进程&lt;/strong>：
+&lt;ul>
+&lt;li>预计到2030年，目前工种30%的工作量将被AI自动化替代。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240707232511264.png" alt="image-20240707232511264">&lt;/p>
+&lt;ul>
+&lt;li>在生成式AI的加持下，所有场景的&lt;strong>自动化程度会显著提升&lt;/strong>：
+&lt;ul>
+&lt;li>没有生成式AI，可使用自动化替代人类工作的小时数，占美国经济目前工作小时数的21.5%。&lt;/li>
+&lt;li>有了生成式AI，预计到2030年，这一比例将提升至29.5%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240707232558539.png" alt="image-20240707232558539">&lt;/p>
+&lt;p>生成式AI提升了自动化率和自动化程度，不仅影响了低薪岗位，也影响了传统高薪岗位。这些传统高薪岗位包括：律师、计算机程序员、科学研究人员、市场研究人员、翻译员和金融顾问等——这些传统高薪岗位30%的工作任务都可以被借助生成式AI实现自动化，比如：&lt;/p>
+&lt;ul>
+&lt;li>律师需要花大量的时间搜索案例、修改法律模板文件，现在可以用生成式AI来做。&lt;/li>
+&lt;li>土木工程师可以使用生成式AI来设计复杂的机械、电气和管道系统，加快设计过程。生成式AI可以更高效的考虑所有建筑规范、找到最节能或使用最少材料的方案。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240707232643540.png" alt="image-20240707232643540">&lt;/p>
+&lt;p>由于生成式AI技术的重要影响力，与AI相关的技术岗位、科学研究岗位需求也大幅增加：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>STEM(科学、技术、工程和数学)领域的工作预计到2030年将&lt;strong>增长23%&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>增长最快的职业包括&lt;strong>软件开发人员、计算机系统分析师和数据科学家&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>各行各业对数字化的持续扩大需求，推动对STEM人才需求的增加。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240707232002157.png" alt="image-20240707232002157">&lt;/p>
+&lt;h1 id="3核心观点3打工人企业主应该如何应对变化">3.核心观点3：打工人、企业主应该如何应对变化&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>打工人：拥抱AI技术，将AI作为生产力工具，打造超级个体。&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>报告指出：&lt;strong>生成式AI带来的技术革命不可阻挡&lt;/strong>，变革的步伐还在加速。传统岗位会非常快地被AI所替代，因此&lt;strong>每个人都会面临职业转换&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>打工人们应该将这些AI工具视为工作增强器，而不是替代人类工作的破坏者。&lt;strong>当机器接管了枯燥或不愉快的任务时，人们可以留下更多需要创造力、解决问题能力和与他人合作的有趣工作。&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240707234640601.png" alt="image-20240707234640601">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>企业主：需要创新招聘策略，思考人机协同新场景下的劳动制度。&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>报告指出：企业主将面临高端岗位招聘困难，因此企业主需要有一个持续的实施策略，包括对人才和生态系统的补充投资。&lt;/li>
+&lt;li>创新性的招聘策略包括：提高工作质量、薪酬、福利，扩大招聘范围——生成式AI降低了专业门槛和技术难度，因此可以引入跨专业人才、低学历人才。&lt;/li>
+&lt;li>生成式AI工具将成为人类的提效降本助手，因此企业主需要制定&lt;strong>符合人机协同新场景下的劳动制度&lt;/strong>。&lt;/li>
+&lt;li>企业主还应该考虑提高AI可替代岗位的自动化率和自动化程度，这将为企业带来更大的长期价值。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>政府：制定宏观政策，为工人提供学习机会以适应变革。&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>随着数以百万计的工作可能因自动化而被淘汰，以及更多在需要不同技能的领域中被创造出来，政府需要雇主、教育机构、非营利组织、工会和行业团体联合起来，应对这一挑战。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>大学前：学校中设立与未来工作(STEM)相关的课程，以激励孩子们在STEM领域的学习和未来职业选择。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>大学：鼓励企业与大学和社区学院合作，建立高度针对性的职业管道和学术计划，以满足高需求领域。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>职业教育：企业与教育机构合作，创建专业课程和职业发展通道，以满足特定行业的需求。&lt;/p>
+&lt;ul>
+&lt;li>面向应聘者：教育机构根据本地产业需求定制课程，企业为学生提供实践机会和就业机会，如纽约城市大学在数据分析和网络安全课程上的修订。&lt;/li>
+&lt;li>面向失业人群：组织可以建立培训计划和路径，将失业者引入需求高的工作岗位。例如，确定新员工所需的基本技能，然后将这些技能提炼成短期的四到十二周的技术培训课程，并伴有导师指导和与合作雇主的安置服务。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="4思考">4.思考&lt;/h1>
+&lt;p>上述就是对《生成式AI与美国未来工作》调查报告的解读，从报告中可以看到AI技术对未来就业与劳动力的巨大影响和挑战：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>科技进步带来的影响不可阻挡&lt;/strong>：
+&lt;ul>
+&lt;li>报告中委婉地提出&lt;strong>职业转换&lt;/strong>这个概念，本质就是AI可能造成人类的失业。&lt;/li>
+&lt;li>但，科技进步是历史潮流，科技带来的影响也不可阻挡。&lt;/li>
+&lt;li>打工人、企业主、政府需要共同面对科技进步带来的挑战。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>AI竞争是残酷的&lt;/strong>：
+&lt;ul>
+&lt;li>发展中国家依靠中低端产业和廉价劳动力推动经济发展，与发达国家形成差异化竞争。&lt;/li>
+&lt;li>但，生成式AI带来的自动化能力提升，AI和机器人的劳动力成本将远低于人类的劳动力成本。&lt;/li>
+&lt;li>这样，发展中国家必须积极追赶AI技术发展的步伐，降低和发达国家科技上的差距——这是一个不进则退的科技竞争游戏。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>政府需要做好&lt;strong>顶层设计&lt;/strong>、企业主需要&lt;strong>提升自动化程度&amp;amp;制定长远招聘策略&lt;/strong>、打工人需要&lt;strong>掌握AI工具终身学习&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h1 id="5参考">5.参考&lt;/h1>
+&lt;p>原文链接：https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america&lt;/p></description></item><item><title>【chatGPT】学习笔记51-LLM微调技术之AdaLoRA</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badalora/</link><pubDate>Wed, 26 Jun 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B051-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Badalora/</guid><description>&lt;p>今天我们通过解读论文《&lt;strong>ADALORA: ADAPTIVE BUDGET ALLOCATION FOR&lt;/strong>
 &lt;strong>PARAMETER-EFFICIENT FINE-TUNING&lt;/strong>》来学习一下AdaLoRA。&lt;/p>
 &lt;h1 id="1abstract摘要">1.Abstract(摘要)&lt;/h1>
 &lt;p>首先我们看一下论文摘要，快速理解论文的&lt;strong>核心内容&lt;/strong>：&lt;/p>
@@ -2718,50 +2891,4 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记34-Show一下我们的语音克隆技术</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B034-show%E4%B8%80%E4%B8%8B%E6%88%91%E4%BB%AC%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86%E6%8A%80%E6%9C%AF/</link><pubDate>Sun, 24 Dec 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B034-show%E4%B8%80%E4%B8%8B%E6%88%91%E4%BB%AC%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86%E6%8A%80%E6%9C%AF/</guid><description>&lt;p>小刚刚同学是小伙伴中的TTS专家，他训练的语音克隆模型已经初见雏形，口音、语速、情绪都还不错。&lt;/p>
-&lt;p>小刚刚的AI模型克隆了他自己的声音之后为我们念出了如下文章，听到人工智能的声音，激动且开心，为小刚刚的AI儿子点赞！&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>这是AI的念稿的声音&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://www.bilibili.com/audio/au4209312?type=1">B站链接&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>如下为AI念的稿件&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;p>接下来，我给大家介绍一下TTS原理：&lt;/p>
-&lt;h2 id="1-引言">1. 引言&lt;/h2>
-&lt;p>文字到语音（TTS，Text-to-Speech）技术是将人类语言文本转换为人类语音输出的技术。随着人工智能、自然语言处理等技术的快速发展，TTS技术在智能语音助手、虚拟主播、教育、娱乐等领域得到了广泛应用。本文将介绍TTS技术的原理及其发展历程，并探讨其在未来的发展趋势。&lt;/p>
-&lt;h2 id="2-tts原理">2. TTS原理&lt;/h2>
-&lt;h3 id="21-语音合成">2.1 语音合成&lt;/h3>
-&lt;p>语音合成是将文本转换为语音的过程，主要包括以下几个步骤：&lt;/p>
-&lt;ol>
-&lt;li>音素到状态的转换：将输入的音素序列转换为声道状态序列。&lt;/li>
-&lt;li>声道状态到声码元的转换：将声道状态序列转换为声码元序列。&lt;/li>
-&lt;li>声码元到语音的转换：将声码元序列转换为语音信号。&lt;/li>
-&lt;/ol>
-&lt;h3 id="22-语音合成模型">2.2 语音合成模型&lt;/h3>
-&lt;p>目前主流的语音合成模型主要包括以下几种：&lt;/p>
-&lt;ol>
-&lt;li>参数模型：将语音合成看作是一个参数估计问题，通过训练模型来获得参数值。&lt;/li>
-&lt;li>统计模型：基于统计学原理，通过概率模型来生成语音。&lt;/li>
-&lt;li>深度学习模型：利用深度神经网络模型进行语音合成。&lt;/li>
-&lt;/ol>
-&lt;h3 id="23-声学模型">2.3 声学模型&lt;/h3>
-&lt;p>声学模型是TTS技术中的关键部分，其主要任务是模拟人类听觉系统，通过声学模型可以计算出每个音素的声学特征，并将其用于语音合成。目前主流的声学模型包括线性预测编码（LPC）、高斯混合模型（GMM）等。&lt;/p>
-&lt;h2 id="3-tts发展历程">3. TTS发展历程&lt;/h2>
-&lt;p>TTS技术的发展历程可以分为以下几个阶段：&lt;/p>
-&lt;ol>
-&lt;li>基于规则的方法：早期的TTS技术采用基于规则的方法，通过手动设计规则来生成语音。&lt;/li>
-&lt;li>基于模板的方法：基于模板的方法通过预先定义的语音模板来生成语音，效率较低。&lt;/li>
-&lt;li>基于统计的方法：基于统计的方法采用概率模型来生成语音，效果较好，但需要大量的训练数据。&lt;/li>
-&lt;li>基于深度学习的方法：基于深度学习的方法利用神经网络模型进行语音合成，效果最好，但需要大量的训练数据和计算资源。&lt;/li>
-&lt;/ol>
-&lt;h2 id="4-tts未来发展趋势">4. TTS未来发展趋势&lt;/h2>
-&lt;p>随着人工智能、自然语言处理等技术的不断发展，TTS技术在未来将会呈现出以下发展趋势：&lt;/p>
-&lt;ol>
-&lt;li>更高的语音质量：通过改进声学模型和语音合成算法，提高语音质量。&lt;/li>
-&lt;li>更自然的发音：通过改进语音合成算法，使生成的语音更加自然。&lt;/li>
-&lt;li>更丰富的语言支持：通过扩大语言模型和语音合成模型的训练数据集，支持更多的语言。&lt;/li>
-&lt;li>更广泛的应用：通过改进TTS技术，使其在更多的领域得到应用，如智能客服、智能家居等。&lt;/li>
-&lt;/ol>
-&lt;h2 id="5-结论">5. 结论&lt;/h2>
-&lt;p>TTS技术是将文本转换为语音的技术，其原理主要包括语音合成、语音合成模型、声学模型等。随着人工智能、自然语言处理等技术的不断发展，TTS技术在未来将会呈现出更高的语音质量、更自然的发音、更丰富的语言支持和更广泛的应用等特点。&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>

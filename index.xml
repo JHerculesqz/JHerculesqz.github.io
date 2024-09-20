@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Jul 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Sep 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,197 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记52-麦肯锡《生成式AI与美国的未来工作》报告解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E7%94%9F%E6%88%90%E5%BC%8Fai%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link><pubDate>Mon, 15 Jul 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E7%94%9F%E6%88%90%E5%BC%8Fai%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>近期萝卜快跑成为了热点话题，人工智能对就业产生多大的影响成为社会关注的焦点。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记53-LLM微调技术之QLoRA(1)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora1/</link><pubDate>Fri, 20 Sep 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora1/</guid><description>&lt;p>我们下一步是解读QLoRA这种微调技术。与LoRA、AdaLoRA不同，理解QLoRA还需要对模型量化技术有一定的了解。因此，本专栏将通过后续3~4篇文章来详细理解一下QLoRA。今天我先简单地介绍一下模型量化技术。&lt;/p>
+&lt;h1 id="1模型量化技术概览">1.模型量化技术概览&lt;/h1>
+&lt;h2 id="11模型参数与显存占用计算方法">1.1.模型参数与显存占用计算方法&lt;/h2>
+&lt;p>在模型训练、模型推理的过程中，需要考虑GPU的显存是否满足要求，那么模型参数与GPU显存具体怎么估算呢？&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>总参数量&lt;/strong>：已Qwen2-7B-Instruct为例，7B就是参数量为7Billion，即70亿参数。&lt;/li>
+&lt;li>&lt;strong>每个参数的显存占用&lt;/strong>：假设Qwen2-7B-Instruct的dtype选择为Float16，那么每个参数占2个字节，即16bit。&lt;/li>
+&lt;li>&lt;strong>总显存量&lt;/strong>：&lt;font color=red>总参数量 = 每个参数的显存占用 * 总参数量&lt;/font>，因此：
+&lt;ul>
+&lt;li>QWen2-7B-Instruct总显存占用量 = 2字节 * 70亿 = 140亿字节 = 14 * 10&lt;sup>9&lt;/sup>字节&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>总显存量换算&lt;/strong>：&lt;font color=red>1GB = 2&lt;sup>30&lt;/sup>B ≈ 10&lt;sup>9&lt;/sup>字节&lt;/font>，因此：
+&lt;ul>
+&lt;li>Qwen2-7B-Instruct总显存占用量 = 14GB&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>我们将Qwen2-7B-Instruct以Float16加载到GPU中，观察一下GPU的显存占用大致也是14GB。&lt;/p>
+&lt;p>根据上述原理，我们可以提出一个问题：&lt;strong>&lt;font color=red>如果降低每个参数的显存占用，是不是就可以降低GPU的总显存量？&lt;/font>&lt;/strong>&lt;/p>
+&lt;h2 id="12模型量化解决的问题及关键要素">1.2.模型量化解决的问题及关键要素&lt;/h2>
+&lt;p>&lt;strong>模型量化(Model Quantization)&lt;/strong>，就是聚焦于用更少位数的信息表示法，降低模型每个参数的显存占用量，进而降低模型的总显存占用量。&lt;/p>
+&lt;ul>
+&lt;li>如：模型权重以Float32存储(即每个参数的显存占用量为32bit)，假设总显存占用量M。&lt;/li>
+&lt;li>如果将每个参数量化为Float16(即每个参数的显存占用量为16bit)，则只需要&lt;strong>二分之一&lt;/strong>的总显存占用量M。&lt;/li>
+&lt;li>如果将每个参数量化为Int8(即每个参数的显存占用量为8bit)，则只需要&lt;strong>四分之一&lt;/strong>的总显存占用量M。&lt;/li>
+&lt;li>如果将每个参数量话为NF4(即每个菜单树的显存占用量为4bit)，则只需要&lt;strong>八分之一&lt;/strong>的总显存占用量M。&lt;/li>
+&lt;/ul>
+&lt;p>因此，我们可以很自然地想到模型量化技术的&lt;strong>关键要素之一&lt;/strong>——&lt;strong>量化精度&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>用更少位数表示更高位数的数字，精度不会丢失吗？丢失的精度会给模型训练和模型推理带来多少误差？&lt;/li>
+&lt;li>简单地将模型的参数向量的每个元素认为是一个用&lt;strong>32bit表达的小数转为用4bit表达&lt;/strong>，直觉上就会带来极大地误差。&lt;/li>
+&lt;/ul>
+&lt;p>另外，还有其它2个关键要素：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>模型架构&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>硬件设备&lt;/strong>：GPU、NPU、TPU等&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723154227521.png" alt="image-20240723154227521">&lt;/p>
+&lt;h1 id="2量化三步曲">2.量化三步曲&lt;/h1>
+&lt;p>量化过程包括：&lt;font color=red>&lt;strong>向量量化、算子量化、模型量化&lt;/strong>&lt;/font>&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723160736130.png" alt="image-20240723160736130">&lt;/p>
+&lt;h2 id="21向量量化">2.1.向量量化&lt;/h2>
+&lt;p>向量量化是所有量化的基础，量化过程包括&lt;strong>量化函数&lt;/strong>和&lt;strong>反量化函数&lt;/strong>。&lt;/p>
+&lt;ul>
+&lt;li>假设&lt;strong>量化函数&lt;/strong>为：&lt;strong>X&lt;/strong>表示原始向量，&lt;strong>INT8&lt;/strong>表示&lt;strong>量化后向量&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723162534164.png" alt="image-20240723162534164">&lt;/p>
+&lt;ul>
+&lt;li>假设&lt;strong>反量化函数&lt;/strong>为：&lt;strong>INT8&lt;/strong>表示&lt;strong>量化后向量&lt;/strong>，&lt;strong>QX&lt;/strong>表示通过&lt;strong>量化后向量&lt;/strong>，还原的&lt;strong>还原向量&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723162633015.png" alt="image-20240723162633015">&lt;/p>
+&lt;ul>
+&lt;li>假设&lt;strong>误差函数&lt;/strong>为：&lt;strong>原始向量X&lt;/strong>和&lt;strong>还原向量QX&lt;/strong>可能存在误差，误差当然越小越好，衡量这个误差的函数就是误差函数。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723162954824.png" alt="image-20240723162954824">&lt;/p>
+&lt;h3 id="1int4">(1)INT4&lt;/h3>
+&lt;p>以&lt;strong>INT4的向量量化&lt;/strong>过程为例：&lt;/p>
+&lt;ul>
+&lt;li>假设&lt;strong>向量系数&lt;/strong>为：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723165432046.png" alt="image-20240723165432046">&lt;/p>
+&lt;ul>
+&lt;li>假设&lt;strong>原始向量&lt;/strong>为：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723165524411.png" alt="image-20240723165524411">&lt;/p>
+&lt;ul>
+&lt;li>对&lt;strong>原始向量&lt;/strong>进行计算：
+&lt;ul>
+&lt;li>求每个分量的绝对值的最大值，结果为1.52。&lt;/li>
+&lt;li>将每个分量除以1.52，得到&lt;strong>过程向量&lt;/strong>[0.18, 0.38, -0.49, 1.00]。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723165559900.png" alt="image-20240723165559900">&lt;/p>
+&lt;ul>
+&lt;li>对&lt;strong>过程向量&lt;/strong>进行计算：
+&lt;ul>
+&lt;li>在量化系数中，找到最近的值，得到&lt;strong>最近值向量&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723165922698.png" alt="image-20240723165922698">&lt;/p>
+&lt;ul>
+&lt;li>对&lt;strong>最近值向量&lt;/strong>进行计算，得到最终的&lt;strong>量化后向量&lt;/strong>：
+&lt;ul>
+&lt;li>将最近值向量的每个分量用量化系数的索引进行替换，得到最终的&lt;strong>量化后向量&lt;/strong>[9, 10, 4, 15]。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723170126385.png" alt="image-20240723170126385">&lt;/p>
+&lt;p>再来看看&lt;strong>INT4的向量反量化&lt;/strong>过程：&lt;/p>
+&lt;ul>
+&lt;li>将&lt;strong>量化后向量&lt;/strong>，根据索引还原为&lt;strong>过程向量&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723170439886.png" alt="image-20240723170439886">&lt;/p>
+&lt;ul>
+&lt;li>将&lt;strong>过程向量&lt;/strong>乘以稀疏1.52，得到&lt;strong>还原向量&lt;/strong>：
+&lt;ul>
+&lt;li>还原向量为[0.304, 0.5016, -0.7144, 1.52]。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723170605292.png" alt="image-20240723170605292">&lt;/p>
+&lt;ul>
+&lt;li>我们可以看到，&lt;strong>原始向量&lt;/strong>和&lt;strong>还原向量&lt;/strong>存在一定的&lt;strong>误差&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240723170731983.png" alt="image-20240723170731983">&lt;/p>
+&lt;p>从数据分布上看，INT4量化方法更适合如下数据分布特征(中段数据过于一致，此量化方法有局限性)：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240724095119629.png" alt="image-20240724095119629">&lt;/p>
+&lt;h3 id="2fp4">(2)FP4&lt;/h3>
+&lt;p>FP4的计算过程不赘述，可参考：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://huggingface.co/blog/4bit-transformers-bitsandbytes#fp4-precision-in-a-few-words">https://huggingface.co/blog/4bit-transformers-bitsandbytes#fp4-precision-in-a-few-words&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240920110352774.png" alt="image-20240920110352774">&lt;/p>
+&lt;h3 id="3nf4">(3)NF4&lt;/h3>
+&lt;p>NF4 Quant是QLoRA提出的一种新的数据类型(4-bit NormalFloat)，量化过程中保留了零点，使用2&lt;sup>k&lt;/sup>位表示k位数据类型。&lt;/p>
+&lt;p>NF4通过估计&lt;strong>两个范围的分位数q&lt;sup>i&lt;/sup>&lt;/strong>，创建了一个非对称的数据类型。第一个范围表示负数部分[-1, 0]的2&lt;sup>k-1&lt;/sup>，第二个范围表示正数部分[0, 1]的2&lt;sup>k-1&lt;/sup>+1.&lt;/p>
+&lt;p>这种量化方法在每个量化bin中都具备相等的期望值数量，这种以零为中心的正态分布数据在信息论中是最优的。&lt;/p>
+&lt;p>上述数学方法到底解决什么问题呢？预训练的权重通常具有以零为中心的正态分布(标准差为σ)，缩放σ可以使得权重分布适应NF的范围，量化时的数据类型和神经网络权重的分位数最终都会被归一化到[-1, 1]的范围内。计算分位数的公式：&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240920112507633.png" alt="image-20240920112507633">&lt;/p>
+&lt;p>更详细的代码参考：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/bitsandbytes-foundation/bitsandbytes/blob/main/csrc/kernels.cu">https://github.com/bitsandbytes-foundation/bitsandbytes/blob/main/csrc/kernels.cu&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="n">__device__&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="kt">float&lt;/span> &lt;span class="n">nf4_data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">0.6961928009986877&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">0.5250730514526367&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">0.39491748809814453&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">0.28444138169288635&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">0.18477343022823334&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">0.09105003625154495&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.07958029955625534&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.16093020141124725&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.24611230194568634&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.33791524171829224&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.44070982933044434&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.5626170039176941&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.7229568362236023&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">1.0&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="22算子量化">2.2.算子量化&lt;/h2>
+&lt;p>在数学领域，一个函数空间到函数空间上的映射O：X→Y，称为算子。广义上，对任何函数进行某一项操作都是一个算子：&lt;/p>
+&lt;ul>
+&lt;li>如：微分算子&lt;/li>
+&lt;li>如：不定积分算子&lt;/li>
+&lt;/ul>
+&lt;p>在深度学习中，各种网络结构，都是由若干的计算单元组成，这些计算单元就是算子(Operator)。&lt;/p>
+&lt;ul>
+&lt;li>如：卷积层(Convolution Layer)是一个算子&lt;/li>
+&lt;li>如：全连接层(Fully-connected Layer， FC layer)中的权值求和过程，也是一个算子。&lt;/li>
+&lt;/ul>
+&lt;p>如下图所示，Conv1、Pool1、Conv2都是网络中的算子，Conv1和Conv2都是做卷积运算的算子(Convolution)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240920133118786.png" alt="image-20240920133118786">&lt;/p>
+&lt;blockquote>
+&lt;p>参考：https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC2alpha002/devguide/opdevg/tbeaicpudevg/atlasopdev_10_0006.html&lt;/p>
+&lt;/blockquote>
+&lt;p>算子量化如何开展呢？我们可以看到算子的前端有输入，算子的后端有输出。因此，算子量化就是将输入向量进行量化，对输出向量进行量化，而不修改算子的逻辑。但算子量化也有一些特殊情况：有的算子不能量化输入，有的算子不能量化输出。&lt;/p>
+&lt;h2 id="23网络量化">2.3.网络量化&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>关闭冗余量化信息&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>在量化神经网络过程中，需要有量化控制信息向量TQC。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在神经网络中，算子Conv连接到算子Reshape上，那么就会出现两个一模一样的TQC。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这种量化控制信息就是多余的，我们就需要消除掉Reshape侧的量化控制信息。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240920134759671.png" alt="image-20240920134759671">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>图融合&lt;/strong>
+&lt;ul>
+&lt;li>本质是将N个标准的小算子进行融合，如：对Conv后的激活函数进行算子融合。&lt;/li>
+&lt;li>算子融合后得到了一个新的非标的大算子，进而减少了量化控制信息。&lt;/li>
+&lt;li>如下图：为了实现FlashAttention，将图中的MatMul算子(Cube）、Scale算子(Vector)、Mask算子(Vector)、SoftMax算子(Vector)融合为一个大的算子Flash Attention。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B053-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(1)/image-20240920135602648.png" alt="image-20240920135602648">&lt;/p>
+&lt;blockquote>
+&lt;p>参考：https://www.hiascend.com/doc_center/source/zh/canncommercial/80RC2/developmentguide/opdevg/Ascendcopdevg/atlas_ascendc_10_0041.html&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="3总结">3.总结&lt;/h1>
+&lt;p>为了解读QLoRA的原理，我们简要地介绍了模型量化技术的概念和基本原理：&lt;/p>
+&lt;ul>
+&lt;li>模型量化的第一层是向量量化，即针对向量量化，有量化函数和反量化函数。&lt;/li>
+&lt;li>模型量化的第二层是算子量化，即针对算子的输入向量和输出向量进行量化。&lt;/li>
+&lt;li>模型量化的第三层是网络量化，即针对网络去除冗余的量化控制信息、将小算子融合为大算子进行整体量化处理。&lt;/li>
+&lt;/ul>
+&lt;p>有了本文的模型量化基础知识，我们就可以进一步阅读QLoRA的论文了。&lt;/p>
+&lt;p>论文链接：https://arxiv.org/pdf/2303.10512&lt;/p></description></item><item><title>【chatGPT】学习笔记52-麦肯锡《生成式AI与美国的未来工作》报告解读</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E7%94%9F%E6%88%90%E5%BC%8Fai%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link><pubDate>Mon, 15 Jul 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E7%94%9F%E6%88%90%E5%BC%8Fai%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p>近期萝卜快跑成为了热点话题，人工智能对就业产生多大的影响成为社会关注的焦点。&lt;/p>
 &lt;p>我们试图通过解读麦肯锡《生成式AI与美国的未来工作》研究报告，为大家展示美国的就业形式、生成式AI对美国劳动力市场的影响、以及美国社会和美国政府的观点及解决方案，以他山之石为我们提供一些思考。&lt;/p>
 &lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B052-%E9%BA%A6%E8%82%AF%E9%94%A1%E3%80%8A%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E7%BE%8E%E5%9B%BD%E5%B7%A5%E4%BD%9C%E6%9C%AA%E6%9D%A5%E3%80%8B%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/image-20240708090201905.png" alt="image-20240708090201905">&lt;/p>
 &lt;h1 id="1核心观点1就业结构正在发生变化">1.核心观点1：就业结构正在发生变化&lt;/h1>
@@ -2808,83 +2998,6 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>以让LLM来批改试卷为例，演示batch/abatch语法。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记35-LangChain解读-LCEL语言之领域功能(1)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD1/</link><pubDate>Wed, 27 Dec 2023 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD1/</guid><description>&lt;p>LCEL是专门为方便开发LLM应用而设计的编程语言，它提供了一系列直观、好用的功能和语法。&lt;/p>
-&lt;p>本篇我们来学习提升LLM应用体验的一个功能——stream流式输出。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/image-20231227115947187.png" alt="image-20231227115947187">&lt;/p>
-&lt;h1 id="1-lcel流式输出接口-stream">1. LCEL流式输出接口-stream&lt;/h1>
-&lt;h2 id="1为什么要用流式输出">(1)为什么要用流式输出&lt;/h2>
-&lt;p>在使用LLM应用时，用户总是期望立即得到答案，不管他的问题有多么复杂，或者让LLM生成的文本有多么长。&lt;/p>
-&lt;p>&amp;ldquo;&lt;strong>流式输出&lt;/strong>&amp;ldquo;这时就派上用场了，它能够&lt;strong>使LLM在生成文本时逐步提供结果&lt;/strong>，而不是等到整个文本生成完成后再一次性返回给用户。&lt;/p>
-&lt;p>流式输出的方式有以下几个优点：&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>实时性&lt;/strong>：不用等待整个文本生成完毕再返回结果，减少响应时间，用户获得实时响应体验。&lt;/li>
-&lt;li>&lt;strong>交互性&lt;/strong>：生成结果逐步提供，可匹配用户阅读速度，增强交互感。&lt;/li>
-&lt;li>&lt;strong>节省资源和带宽&lt;/strong>：逐步返回生成的结果可以减少对网络带宽的需求。&lt;/li>
-&lt;li>&lt;strong>支持长文本生成&lt;/strong>：生成长文本时无需担心超出内存限制。&lt;/li>
-&lt;/ol>
-&lt;p>总之，流式输出可以让用户得到更好的体验，让用户觉得你的LLM程序&amp;rdquo;&lt;strong>性能&lt;/strong>&amp;ldquo;很棒。&lt;/p>
-&lt;h2 id="2流式输出接口的使用">(2)流式输出接口的使用&lt;/h2>
-&lt;p>LangChain在Runnable协议中定义了流式输出方法&lt;strong>stream&lt;/strong>，以及它的异步方法&lt;strong>astream&lt;/strong>。&lt;/p>
-&lt;p>LangChain的很多组件都是遵循Runnable的对象，可以直接调用stream/astream方法。以之前专栏多次构建过的链chain为例：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>chain.stream()&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>chain.astream()&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
-&lt;p>以让LLM生成一首诗为例，对比下直接输出、流式输出的差异效果。&lt;/p>
-&lt;p>任务链的构建不再赘述，如下代码，我们构建了名为&lt;code>chain&lt;/code>的链，它的功能是根据输入的主题生成一首诗。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/image-20231227125844993.png" alt="image-20231227125844993">&lt;/p>
-&lt;h2 id="1使用invoke方法直接调用">(1)使用invoke方法直接调用&lt;/h2>
-&lt;ul>
-&lt;li>调用语法：chain.invoke(&amp;ldquo;犀牛&amp;rdquo;)&lt;/li>
-&lt;li>执行效果：任务启动后，没有立即得到响应；大概6秒后，生成结果一次性闪现。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/invoke.gif" alt="invoke">&lt;/p>
-&lt;h2 id="2使用stream方法流式输出">(2)使用stream方法流式输出&lt;/h2>
-&lt;ul>
-&lt;li>调用语法：chain.stream(&amp;ldquo;犀牛&amp;rdquo;)
-&lt;ul>
-&lt;li>注意：由于stream()是迭代输出，因此用for语句来循环遍历输出结果。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>执行效果：任务启动后，立即得到响应，以一定的字频逐行输出结果。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/stream.gif" alt="stream">&lt;/p>
-&lt;ul>
-&lt;li>如果想用异步方式astream，则调用语法如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/image-20231227145757283.png" alt="image-20231227145757283">&lt;/p>
-&lt;h2 id="3-对比总结-invoke-vs-stream">(3) 对比总结 Invoke vs Stream&lt;/h2>
-&lt;p>对于一个交互式的LLM应用程序，stream流式输出的响应实时性和交互体验都更好。&lt;/p>
-&lt;p>在 Python 中，没有名为&amp;quot;stream&amp;rdquo; 的内置方法，但是有类似于流式操作的机制，比如生成器(yield)、迭代器(iterator)。所以，如果没有LCEL提供的stream方法，而是要我们自己来实现的话，将是一件费脑筋的事。&lt;/p>
-&lt;p>如下是不使用LCEL实现流式输出的示例代码，可以跟上面简单的一行方法调用对比下：&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B035-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(1)/image-20231227124359421.png" alt="image-20231227124359421">&lt;/p>
-&lt;p>LangChain的大牛们用python实现了与Java &amp;ldquo;Stream API&amp;quot;类似的流式处理方法，极大的方便了开发人员。&lt;/p>
-&lt;p>某种意义上来说，LangChain不仅仅是定义了一套Runnable协议，也是对Python语法的重构，构建了自己的语法——LCEL。&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本文解读了LangChain LCEL语法中提升性能的一种方法——stream流式输出。关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>流式输出接口&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&amp;ldquo;流式输出&amp;quot;使LLM在生成文本时逐步提供结果，提升LLM应用程序的性能，让用户得到更好的体验。&lt;/li>
-&lt;li>LangChain的Runnable对象可以直接调用stream/astream方法。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>对比invoke直接输出和stream流式输出的效果差异。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Oct 2024 10:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Oct 2024 11:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,157 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记54-AgentScope解读-概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 18 Oct 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</guid><description>&lt;p>人类一直试图构建一个能够自主完成任务的代理或实体，即&lt;strong>智能体 (AI Agents 或 Agents)&lt;/strong>。大型语言模型（LLM）的引入为智能体的构建提供了新的核心组件，让智能体能够理解复杂指令，具有了更广泛的应用场景，智能体也不再局限于处理单一任务的单智能体，能够处理复杂任务的多智能体已成为当前热点。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记55-LLM微调技术之QLoRA(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora2/</link><pubDate>Fri, 18 Oct 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora2/</guid><description>&lt;p>笔者在写模型量化技术相关文章时，正逢2024诺贝尔颁奖，Hiton、Lecun这些大神萦绕耳边。那我们就借Lecun在1990年发表的《Optimal Brain Damage》，以及1992年的《Second order derivatives for network pruning: Optimal Brain Surgeon》，来理解一下大神们在90年代如何解决模型剪枝问题的。&lt;/p>
+&lt;h1 id="1模型剪枝">1.模型剪枝&lt;/h1>
+&lt;h2 id="1什么是模型剪枝">(1)什么是模型剪枝？&lt;/h2>
+&lt;p>模型剪枝是一种模型优化技术，通过移除神经网络中的冗余连接或神经元，达到降低模型复杂度的目的。&lt;/p>
+&lt;p>降低模型复杂度，除了通过降低模型计算量提高模型的推理速度，还能在一定程度上提升模型的泛化能力。&lt;/p>
+&lt;h2 id="2模型剪枝的分类">(2)模型剪枝的分类&lt;/h2>
+&lt;p>模型剪枝主要分两大类：结构化剪枝和非结构化剪枝。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>非结构化剪枝&lt;/strong>：这种剪枝方式涉及单个权重或神经元的移除，结果是权重矩阵中出现不规则的稀疏模式。&lt;/p>
+&lt;ul>
+&lt;li>由于这种剪枝方式不遵循特定的规则，因此压缩后的模型可能需要特殊的处理才能被有效地存储和计算。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>结构化剪枝&lt;/strong>：这种剪枝方式会按照一定的规则移除权重，保持模型原有的结构。&lt;/p>
+&lt;ul>
+&lt;li>这种方法实现成本低，剪枝后的模型更容易被深度学习框架1支持。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="3模型剪枝的流程">(3)模型剪枝的流程&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>STEP1.预训练&lt;/strong>：首先在大量数据集上预训练一个深度学习模型。&lt;/li>
+&lt;li>&lt;strong>STEP2.剪枝&lt;/strong>：根据一定的剪枝准则(如：权重的绝对值、激活值、梯度信息等)，选择并剪除那些对模型性能影响较小的连接或神经元。&lt;/li>
+&lt;li>&lt;strong>STEP3.微调&lt;/strong>：剪枝后，在剩余的数据集上对剪枝后模型进行微调，以恢复或提升模型的性能。&lt;/li>
+&lt;li>&lt;strong>STEP4.评估&lt;/strong>：最后对剪枝后的模型进行评估，以确保其性能满足特定任务的要求。&lt;/li>
+&lt;/ul>
+&lt;h2 id="4模型剪枝的收益">(4)模型剪枝的收益&lt;/h2>
+&lt;ul>
+&lt;li>减少模型的计算复杂度和存储空间。&lt;/li>
+&lt;li>改善模型的泛化能力。&lt;/li>
+&lt;li>移除不必要的参数，使得模型的结构更加清晰，更易于理解和解释，提高模型的可解释性。&lt;/li>
+&lt;li>适应不同的任务和环境，特别是在资源受限的设备上部署模型时尤为重要&lt;/li>
+&lt;/ul>
+&lt;h2 id="5模型剪枝的挑战">(5)模型剪枝的挑战&lt;/h2>
+&lt;ul>
+&lt;li>模型剪枝时，剪哪里、怎么剪，需要对模型的深度理解和数学能力，如：本文即将解读的OBD、OBS就是给出了两种剪枝方法及数学推导。&lt;/li>
+&lt;li>剪枝不当可能消耗大量算力后却损失了信息，反而导致模型性能下降。&lt;/li>
+&lt;li>剪枝后模型还需要进一步调整和优化，以适应不同更广泛的场景。&lt;/li>
+&lt;/ul>
+&lt;h1 id="2optimal-brain-damage">2.Optimal Brain Damage&lt;/h1>
+&lt;h2 id="1obd的推导过程">(1)OBD的推导过程&lt;/h2>
+&lt;p>&lt;strong>首先，我们了解一下OBD解决什么问题：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>这篇论文由Lecun发表，Optimal Brain Damage (OBD)是一种神经网络模型剪枝技术。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018144556744.png" alt="image-20241018144556744">&lt;/p>
+&lt;ul>
+&lt;li>在论文的开篇，Lecun就提出了问题：模型剪枝就是删除没用的权重，那么如何衡量&amp;quot;这个权重没用？&amp;quot;，如何&amp;quot;删除权重，清零吗？&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018154321755.png" alt="image-20241018154321755">&lt;/p>
+&lt;ul>
+&lt;li>因此，Lecun提出了Optimal Brain Damage (OBD)，通过选择性地删除网络中的权重来减少模型的大小。&lt;/li>
+&lt;li>“选择性”的核心思想是：利用目标函数的二阶导数信息来评估每个权重的重要性，即通过海森矩阵(Hessian matrix)来确定权重的“贡献度”或“saliency”。
+&lt;ul>
+&lt;li>权重的贡献度：指删除该权重后对目标函数(通常是损失函数)的影响程度。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>OBD的目标是找到一个参数集合，使得删除这些参数后目标函数的增加最小，从而在减少网络复杂度的同时尽量保持模型性能。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018154349795.png" alt="image-20241018154349795">&lt;/p>
+&lt;p>&lt;strong>然后，我们再看看推导过程的关键细节：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>目标函数E：比如目标函数E就是损失函数。&lt;/li>
+&lt;li>泰勒展开：我们对目标函数E进行泰勒展开，就得到&amp;quot;参数向量影响δU对目标函数E的影响公式&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018155414749.png" alt="image-20241018155414749">&lt;/p>
+&lt;ul>
+&lt;li>g&lt;sub>i&lt;/sub>是U对E的梯度，h&lt;sub>ij&lt;/sub>是U对E的海森矩阵的元素。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018155355488.png" alt="image-20241018155355488">&lt;/p>
+&lt;ul>
+&lt;li>但即使是泰勒展开了，公式(1)依然有很大的计算量，Lecun做了三个近似简化：
+&lt;ul>
+&lt;li>数学意义上对角线近似简化上述公式的第3项，业务意义上就是证明了删除权重a导致的损失函数的Loss增大和删除权重b导致的Loss增大是独立的。&lt;/li>
+&lt;li>数学意义上通过极值点简化上述公式的第1项，业务意义上就是证明了如果神经网络已经训练收敛了，U对E就达到了局部最小值，即U对E的梯度等于0。&lt;/li>
+&lt;li>数学意义上假设E是二次函数简化上述公式的第4项。&lt;/li>
+&lt;li>综合上述3个简化，公式(1)简化为公式(3)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018160514805.png" alt="image-20241018160514805">&lt;/p>
+&lt;h2 id="2obd的执行流程">(2)OBD的执行流程&lt;/h2>
+&lt;p>有了上述公式，OBD的执行流程如下：&lt;/p>
+&lt;ul>
+&lt;li>STEP1.选择1个神经网络结构&lt;/li>
+&lt;li>STEP2.训练这个神经网络&lt;/li>
+&lt;li>STEP3.计算每个权重的二阶导h&lt;sub>kk&lt;/sub>&lt;/li>
+&lt;li>STEP4.计算每个参数对目标函数的影响s&lt;sub>k&lt;/sub>&lt;/li>
+&lt;li>STEP5.删除最低影响的参数&lt;/li>
+&lt;li>STEP6.回到STEP2&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018160651088.png" alt="image-20241018160651088">&lt;/p>
+&lt;h1 id="3optimal-brain-surgeon">3.Optimal Brain Surgeon&lt;/h1>
+&lt;h2 id="1obs的推导过程">(1)OBS的推导过程&lt;/h2>
+&lt;p>&lt;strong>首先，我们也了解一下OBS解决什么问题：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>这篇论文是对OBD的优化，Optimal Brain Surgeon(OBS)也是一种神经网络模型剪枝技术。&lt;/li>
+&lt;li>Optimal Brain Damage(OBD)衡量了某个权重对贡献度并删除贡献度最低的权重，但一旦删除了某个错误的权重，反而会导致在错误的剪枝方向上越走越远。&lt;/li>
+&lt;li>OBS的目标就是允许比其他方法剪枝更多的权重，在测试数据上产生更好的泛化。其核心思想就是从训练数据和网络的结构信息中计算逆Hessian矩阵H的逆。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018161259795.png" alt="image-20241018161259795">&lt;/p>
+&lt;ul>
+&lt;li>OBS本质是考虑的&amp;quot;局部最优&amp;rdquo;，即训练得到局部最小误差。那么我们将相对权重扰动的Loss函数进行泰勒展开：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018161832293.png" alt="image-20241018161832293">&lt;/p>
+&lt;ul>
+&lt;li>其中，H是Loss对权重的海森矩阵，依然对公式(1)进行近似简化，忽略公式(1)的第1项和第3项。&lt;/li>
+&lt;li>那么，删除权重w&lt;sub>q&lt;/sub>的操作可以表示为公式(2)，其中e&lt;sub>q&lt;/sub>是权重空间w中相对于w&lt;sub>q&lt;/sub>的单位向量。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018162056961.png" alt="image-20241018162056961">&lt;/p>
+&lt;ul>
+&lt;li>那么，OBS的目标就是求解公式(3)的最优化问题：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018162249685.png" alt="image-20241018162249685">&lt;/p>
+&lt;ul>
+&lt;li>转换为拉格朗日乘法：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018162354240.png" alt="image-20241018162354240">&lt;/p>
+&lt;ul>
+&lt;li>求解出δw，即剪切w&lt;sub>q&lt;/sub>的同时，调整了其它权重，并保证Loss变动最小。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018162518230.png" alt="image-20241018162518230">&lt;/p>
+&lt;h2 id="2obs为什么优于obd">(2)OBS为什么优于OBD？&lt;/h2>
+&lt;p>论文基于上述推导，解释了为什么OBS优于OBD：&lt;/p>
+&lt;ul>
+&lt;li>基于OBD，
+&lt;ul>
+&lt;li>从w&lt;sup>*&lt;/sup>处的局部最小值开始，基于贡献度误删除了权重2(假设：上帝知道权重2不应该被删掉)。&lt;/li>
+&lt;li>通过再次训练，权重1将增加，权重1将在错误的方向上越走越远，直到达到平衡，但此时不是局部最优。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>基于OBS，
+&lt;ul>
+&lt;li>从w&lt;sup>*&lt;/sup>处的局部最小值开始，删除权重2的同时，权重1也会被修正。&lt;/li>
+&lt;li>通过再次训练，由于局部最优的约束，会尽快达到稳态。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8BQLoRA(2)/image-20241018163243850.png" alt="image-20241018163243850">&lt;/p>
+&lt;h1 id="4总结">4.总结&lt;/h1>
+&lt;p>为了解读QLoRA的原理，我们扩展阅读了模型剪枝技术，并解读了经典的两篇论文OBD和OBS：&lt;/p>
+&lt;ul>
+&lt;li>模型剪枝：通过移除神经网络中的冗余连接或神经元，达到降低模型复杂度的目的。&lt;/li>
+&lt;li>关键问题：删什么权重，怎么删除？&lt;/li>
+&lt;li>OBD：Optimal Brain Damage (OBD)，利用目标函数的二阶导数信息来评估每个权重的重要性，即通过海森矩阵(Hessian matrix)来确定权重的“贡献度”或“saliency”。&lt;/li>
+&lt;li>OBS：Optimal Brain Surgeon(OBS)，利用相对权重扰动的Loss函数进行泰勒展开，剪切w&lt;sub>q&lt;/sub>的同时，调整了其它权重，并保证Loss变动最小。&lt;/li>
+&lt;/ul>
+&lt;p>论文链接1：https://arxiv.org/pdf/2303.10512&lt;/p>
+&lt;p>论文链接2：https://proceedings.neurips.cc/paper/1992/hash/303ed4c69846ab36c2904d3ba8573050-Abstract.html&lt;/p></description></item><item><title>【chatGPT】学习笔记54-AgentScope解读-概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 18 Oct 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</guid><description>&lt;p>人类一直试图构建一个能够自主完成任务的代理或实体，即&lt;strong>智能体 (AI Agents 或 Agents)&lt;/strong>。大型语言模型（LLM）的引入为智能体的构建提供了新的核心组件，让智能体能够理解复杂指令，具有了更广泛的应用场景，智能体也不再局限于处理单一任务的单智能体，能够处理复杂任务的多智能体已成为当前热点。&lt;/p>
 &lt;p>本文为小伙伴介绍阿里多智能体框架——AgentScope.&lt;/p>
 &lt;h1 id="1agentscope简介">1.AgentScope简介&lt;/h1>
 &lt;h2 id="11agentscope是什么">1.1.AgentScope是什么&lt;/h2>
@@ -3034,185 +3184,6 @@ chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&am
 &lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>使用上述方法，构建了一个客服问答工作链，自动判断用户问题类别并路由到对应领域的客服。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记37-LangChain解读-LCEL语言之领域功能(3)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD3/</link><pubDate>Mon, 08 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD3/</guid><description>&lt;p>LCEL 可以轻松的构建复杂的链，并灵活调用它们，是因为LCEL基于&lt;code>Runnable&lt;/code>协议封装了一系列组合方法和调用接口。&lt;/p>
-&lt;p>之前我们介绍了LCEL的核心调用接口&lt;code>invoke/ainvoke&lt;/code>、&lt;code>stream/astream&lt;/code>、&lt;code>batch/abatch&lt;/code>，本篇开始我们来学习LCEL的组合方法。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240105205805572.png" alt="">&lt;/p>
-&lt;h1 id="1-lcel的组合原语">1. LCEL的组合原语&lt;/h1>
-&lt;p>LCEL的主要组合原语有两种：**RunnableSequence(串行组合)**和 &lt;strong>RunnableParallel( 并行组合)&lt;/strong>。&lt;/p>
-&lt;h2 id="1runnablesequence-串行组合">(1)RunnableSequence: 串行组合&lt;/h2>
-&lt;p>&lt;strong>方法简介&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>RunnableSequence可以将多个链组成一个串行工作流，各链串行执行。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>每个链的输出是下个链的输入，最后一个链的输出就是该整个工作流的输出。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>组合语法&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>RunnableSequence的原始调用语法如下：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">RunnableSequence对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableSequence&lt;span class="o">(&lt;/span>&lt;span class="nv">first&lt;/span>&lt;span class="o">=&lt;/span>组件1, &lt;span class="nv">middle&lt;/span>&lt;span class="o">=[&lt;/span>组件2, 组件3, ...&lt;span class="o">]&lt;/span>, &lt;span class="nv">last&lt;/span>&lt;span class="o">=&lt;/span>组件n&lt;span class="o">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>RunnableSequence在构建串行工作流的示例如下：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">串行工作流对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableSequence&lt;span class="o">(&lt;/span>&lt;span class="nv">first&lt;/span>&lt;span class="o">=&lt;/span>chain1, &lt;span class="nv">middle&lt;/span>&lt;span class="o">=[&lt;/span>chain2, chain3, ...&lt;span class="o">]&lt;/span>, &lt;span class="nv">last&lt;/span>&lt;span class="o">=&lt;/span>chainn&lt;span class="o">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>LCEL实现了用管道符&lt;code>|&lt;/code>来做串行组合的连接符。我们之前的案例都是在用这种方式来做串行组合。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">串行工作流对象&lt;/span> &lt;span class="o">=&lt;/span> chain1 &lt;span class="p">|&lt;/span> chain2 &lt;span class="p">|&lt;/span> ... &lt;span class="p">|&lt;/span> chainn&lt;span class="o">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h2 id="2runnableparallel-并行组合">(2)RunnableParallel: 并行组合&lt;/h2>
-&lt;p>&lt;strong>方法简介&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>RunnableParallel可以把多个链组成并行工作流，各链并行执行。&lt;/li>
-&lt;li>各链的输入是相同的，整个工作流的输出是用各链的输出构造的字典。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>组合语法&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>RunnableParallel的调用语法如下：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">RunnableParallel对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableParallel&lt;span class="o">({&lt;/span>&lt;span class="s2">&amp;#34;Key1&amp;#34;&lt;/span>: 组件1, &lt;span class="s2">&amp;#34;Key2&amp;#34;&lt;/span>: 组件2, ..., &lt;span class="s2">&amp;#34;Keyn&amp;#34;&lt;/span>: 组件n&lt;span class="o">})&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>由于&lt;code>Runnable&lt;/code>支持类型转换，所以也可以这样调用：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">RunnableParallel对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableParallel&lt;span class="o">(&lt;/span>&lt;span class="nv">Key1&lt;/span>&lt;span class="o">=&lt;/span>组件1, &lt;span class="nv">Key2&lt;/span>&lt;span class="o">=&lt;/span>组件2, ..., &lt;span class="nv">Keyn&lt;/span>&lt;span class="o">=&lt;/span>组件n&lt;span class="o">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>RunnableParallel的输出是字典格式，是由原键+组件执行结果组成的键值对，示例如下&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="o">{&lt;/span>&lt;span class="s1">&amp;#39;Key1&amp;#39;&lt;/span>: 组件1的结果, &lt;span class="s1">&amp;#39;Key2&amp;#39;&lt;/span>: 组件2的结果, ..., &lt;span class="s1">&amp;#39;Keyn&amp;#39;&lt;/span>: 组件n的结果&lt;span class="o">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>RunnableParallel构建工作流的示例如下：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">并行工作流对象&lt;/span> &lt;span class="o">=&lt;/span> RunnableParallel&lt;span class="o">({&lt;/span>&lt;span class="s2">&amp;#34;Key1&amp;#34;&lt;/span>: chain1, &lt;span class="s2">&amp;#34;Key2&amp;#34;&lt;/span>: chain2, ..., &lt;span class="s2">&amp;#34;Keyn&amp;#34;&lt;/span>: chainn&lt;span class="o">})&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h2 id="3runnablesequence和runnableparallel的组合使用">(3)RunnableSequence和RunnableParallel的组合使用&lt;/h2>
-&lt;p>遵循LCEL &lt;code>Runnable&lt;/code>协议的组件都可以使用上述两种方式组合。同时，由于组合成的链也是一个Runnable对象，这就意味着在一个链里可以混合使用RunnableSequence和RunnableParallel两种组合方式，进而实现了串并结合的工作流。&lt;/p>
-&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
-&lt;p>下面通过一个实例来看下RunnableSequence和RunnableParallel的用法。&lt;/p>
-&lt;p>示例场景：利用LLM做病情摘要，然后提供治疗建议，最后把结果翻译成英文和日语。&lt;/p>
-&lt;p>我们用4个链实现上述功能，然后用RunnableSequence和RunnableParallel组合成完整工作流。&lt;/p>
-&lt;h2 id="step1-构建chain1病情简介">STEP1: 构建chain1：病情简介&lt;/h2>
-&lt;ul>
-&lt;li>引入相关类库，构建第一个链chain1，任务是根据疾病标题和患者年龄生成病情简介。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108195544772.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>先执行chain1观察下输出结果，输出内容符合预期。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108195656025.png" alt="">&lt;/p>
-&lt;h2 id="step2-构建chain2治疗方案">STEP2: 构建chain2：治疗方案&lt;/h2>
-&lt;ul>
-&lt;li>构建第二个链chain2，任务是根据病情简介生成治疗方案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108202230067.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>执行chain2观察输出结果，LLM给出了治疗方案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108195753143.png" alt="">&lt;/p>
-&lt;h2 id="step3构建chain3chain4文本翻译">STEP3:构建Chain3、Chain4：文本翻译&lt;/h2>
-&lt;ul>
-&lt;li>构建Chain3、Chain4，任务是把指定的文本内容分别翻译成英文、日语&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108192549849.png" alt="">&lt;/p>
-&lt;h2 id="step4-构建工作流链medical_chain组合chain1chain4">STEP4: 构建工作流链medical_chain：组合chain1~chain4&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>基于上面4个任务链，工作流设计为：首先生成病情简介，然后根据病情生成治疗方案，最后把治疗方案同时翻译成英语、日语。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>因此，工作流链medical_chain组合如下：&lt;/p>
-&lt;ul>
-&lt;li>chain1、chain2与后面的翻译链(chain3、chain4)是串行组合&lt;/li>
-&lt;li>chain3、chain4使用RunnableParallel组合，把chain2的输出作为输入，并行执行&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108200421256.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>执行medical_chain观察结果，得到了英语和日语的治疗方案。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B037-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(3)/image-20240108200458628.png" alt="">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本篇介绍了LCEL的两种主要的组合原语：**RunnableSequence(串行组合)**和 &lt;strong>RunnableParallel( 并行组合)&lt;/strong>。&lt;/p>
-&lt;p>关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>RunnableSequence&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>可以将多个链组成一个串行工作流，各链串行执行。支持用管道符&lt;code>|&lt;/code>组合。&lt;/li>
-&lt;li>每个链的输出是下个链的输入，最后一个链的输出就是该整个工作流的输出。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>RunnableParallel&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>可以把多个链组成并行工作流，各链并行执行。&lt;/li>
-&lt;li>各链的输入是相同的，整个工作流的输出是用各链的输出构造的字典。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>用RunnableSequence和RunnableParallel构建了一个诊疗工作流。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>

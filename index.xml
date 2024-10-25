@@ -168,7 +168,180 @@
 &lt;li>OBS：Optimal Brain Surgeon(OBS)，利用相对权重扰动的Loss函数进行泰勒展开，剪切w&lt;sub>q&lt;/sub>的同时，调整了其它权重，并保证Loss变动最小。&lt;/li>
 &lt;/ul>
 &lt;p>论文链接1：https://arxiv.org/pdf/2303.10512&lt;/p>
-&lt;p>论文链接2：https://proceedings.neurips.cc/paper/1992/hash/303ed4c69846ab36c2904d3ba8573050-Abstract.html&lt;/p></description></item><item><title>【chatGPT】学习笔记54-AgentScope解读-概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 18 Oct 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</guid><description>&lt;p>人类一直试图构建一个能够自主完成任务的代理或实体，即&lt;strong>智能体 (AI Agents 或 Agents)&lt;/strong>。大型语言模型（LLM）的引入为智能体的构建提供了新的核心组件，让智能体能够理解复杂指令，具有了更广泛的应用场景，智能体也不再局限于处理单一任务的单智能体，能够处理复杂任务的多智能体已成为当前热点。&lt;/p>
+&lt;p>论文链接2：https://proceedings.neurips.cc/paper/1992/hash/303ed4c69846ab36c2904d3ba8573050-Abstract.html&lt;/p></description></item><item><title>【chatGPT】学习笔记56-AgentScope解读-模型</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B056-agentscope%E8%A7%A3%E8%AF%BB-%E6%A8%A1%E5%9E%8B/</link><pubDate>Fri, 18 Oct 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B056-agentscope%E8%A7%A3%E8%AF%BB-%E6%A8%A1%E5%9E%8B/</guid><description>&lt;p>模型是智能体的&amp;quot;大脑&amp;rdquo;，帮助智能体实现复杂的自然语言交互和精准的推理决策。&lt;/p>
+&lt;p>本文为小伙伴介绍AgentScope中模型的部署和调用。&lt;/p>
+&lt;h1 id="1agentscope模型服务">1.AgentScope模型服务&lt;/h1>
+&lt;h2 id="11支持的模型">1.1.支持的模型&lt;/h2>
+&lt;p>构建一个多智能体系统，需要根据任务的复杂性和不同子任务的专业领域，用到多种类型的模型和不同厂商的模型。&lt;/p>
+&lt;p>从模型类型看，多智能体系统可能需要综合运用大语言模型和多模态模型：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>大语言模型&lt;/strong>：用于处理复杂的语言任务，促进智能体之间的交流和任务指示的解释。&lt;/li>
+&lt;li>&lt;strong>多模态模型&lt;/strong>：处理图像、视频和语音等多种信息，帮助智能体理解和响应非文本输入。&lt;/li>
+&lt;/ul>
+&lt;p>从厂商看，多智能体系统针对不同下游任务可能选择不同厂商的模型：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>OpenAI&lt;/strong>：在推理和任务分解上可能需要调用OpenAI的模型，以获得更好的任务分解效果。&lt;/li>
+&lt;li>&lt;strong>Qwen&lt;/strong>：在多模态相关任务上可能需要调用QwenVL，以平衡推理成本和推理性能。&lt;/li>
+&lt;/ul>
+&lt;p>基于上述使用场景，AgentScope内置了以下模型服务API，支撑自然语言、多模态等各类任务的应用。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>OpenAI API&lt;/strong>：对话（Chat）、图片生成（DALL-E）和文本嵌入（Embedding）。&lt;/li>
+&lt;li>&lt;strong>DashScope API&lt;/strong>：对话（Chat）、图片生成（Image Synthesis）和文本嵌入（Text Embedding）。&lt;/li>
+&lt;li>&lt;strong>Gemini API&lt;/strong>：对话（Chat）和嵌入（Embedding）。&lt;/li>
+&lt;li>&lt;strong>ZhipuAi API&lt;/strong>：对话（Chat）和嵌入（Embedding）。&lt;/li>
+&lt;li>&lt;strong>Ollama API&lt;/strong>：对话（Chat）、嵌入（Embedding）和生成（Generation）。&lt;/li>
+&lt;li>&lt;strong>LiteLLM API&lt;/strong>：对话（Chat），兼容多种模型的API。&lt;/li>
+&lt;li>&lt;strong>Post请求API&lt;/strong>：基于Post请求实现的模型推理服务，包括Huggingface/ModelScope Inference API和各种符合Post请求格式的API。&lt;/li>
+&lt;/ul>
+&lt;h2 id="12模型服务">1.2.模型服务&lt;/h2>
+&lt;h3 id="1模型服务集成的难点">(1)模型服务集成的难点&lt;/h3>
+&lt;p>多智能体系统需要集成多种类型的模型和不同厂商的模型，但不同模型提供的API风格迥异，因此多智能体系统的模型服务层面临多适配的难点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>API风格差异&lt;/strong>：不同的模型服务由不同的团队或厂家开发，采用不同的设计理念和技术栈，API的风格差异大，如参数命名、请求格式、响应结构等。&lt;/li>
+&lt;li>&lt;strong>功能特性差异&lt;/strong>：不同的模型服务专注于不同的功能或应用场景，需要根据功能需求来设计API。例如，一些模型专注于文本生成，而另一些可能专注于图像识别。&lt;/li>
+&lt;li>&lt;strong>性能模式差异&lt;/strong>：不同的模型服务可能针对不同的性能要求进行优化。例如，一些模型可能需要更快的响应时间，而另一些可能需要处理更大规模的数据。这些性能差异可能导致API设计上的不同。&lt;/li>
+&lt;li>&lt;strong>安全性和权限管理差异&lt;/strong>：不同的模型服务可能有不同的安全要求和权限管理机制。例如，一些服务可能需要更复杂的认证流程，而另一些可能提供更细粒度的访问控制。这些安全差异也会影响API的设计。&lt;/li>
+&lt;li>&lt;strong>版本迭代导致的差异&lt;/strong>：模型服务版本迭代和更新的过程中，API可能会产生变化，这导致不同版本的API之间存在差异。&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-agentscope模型服务的解耦设计">(2) AgentScope模型服务的解耦设计&lt;/h3>
+&lt;p>AgentScope通过解耦设计，让模型的集成和维护变得灵活、简单：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>统一的接口抽象&lt;/strong>：AgentScope定义了一个统一的接口抽象，即&lt;code>ModelWrapper&lt;/code>基类。所有的模型服务API都必须实现这个基类，从而确保了接口的一致性。这样，无论底层API如何变化，上层的应用代码都可以保持不变。&lt;/li>
+&lt;li>&lt;strong>模型配置的灵活性&lt;/strong>：AgentScope允许用户通过模型配置来指定使用的模型服务。这些配置可以是字典、字典列表，或者是指向模型配置文件的路径。这种灵活性使得用户可以轻松地切换不同的模型服务，而不需要修改代码。&lt;/li>
+&lt;li>&lt;strong>子类化和多态&lt;/strong>：AgentScope通过子类化和多态来支持不同的模型服务API。每个模型服务都有一个对应的&lt;code>ModelWrapper&lt;/code>子类，这些子类实现了与特定模型服务交互的具体逻辑。当用户通过配置指定使用某个模型服务时，AgentScope会动态地创建相应的&lt;code>ModelWrapper&lt;/code>子类实例。&lt;/li>
+&lt;li>&lt;strong>自定义模型包装器&lt;/strong>：AgentScope允许开发者自定义自己的模型包装器。开发者可以通过继承&lt;code>ModelWrapperBase&lt;/code>类并实现必要的方法来创建自定义的&lt;code>ModelWrapper&lt;/code>子类。这样，即使AgentScope原生不支持某个模型服务，开发者也可以通过自定义包装器来实现支持。&lt;/li>
+&lt;li>&lt;strong>脚本和工具的支持&lt;/strong>：AgentScope提供了一些脚本来帮助开发者快速搭建和部署模型服务。这些脚本和工具可以简化部署过程，使得开发者可以更容易地集成不同的模型服务。&lt;/li>
+&lt;/ul>
+&lt;h3 id="3agentscope-model-wrapper解耦设计的优势">(3)AgentScope Model Wrapper解耦设计的优势&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>易用性&lt;/strong>：用户不需要了解模型服务的具体实现，只需通过配置和统一的接口来使用模型。&lt;/li>
+&lt;li>&lt;strong>灵活性&lt;/strong>：如果需要更换模型服务，用户只需要修改配置文件，而不需要修改调用模型的代码。&lt;/li>
+&lt;li>&lt;strong>可维护性&lt;/strong>：模型服务的更新和维护在&lt;code>ModelWrapper&lt;/code>内部进行，无论底层模型服务如何变化，只要&lt;code>ModelWrapper&lt;/code>接口保持不变，用户代码就不需要修改。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B056-AgentScope%E8%A7%A3%E8%AF%BB-%E6%A8%A1%E5%9E%8B/image-20241025145705780.png" alt="image-20241025145705780">&lt;/p>
+&lt;h1 id="2搭建自己的模型服务">2.搭建自己的模型服务&lt;/h1>
+&lt;p>在上一篇“AgentScope解读之概述”中，我们已经尝试过用AgentScope的API快速构建一套模型服务。&lt;/p>
+&lt;p>如果想使用已有的本地模型搭建自己的模型服务，如何操作呢？下面我们就动手实操一下。&lt;/p>
+&lt;p>AgentScope内置了一些脚本来帮助开发者快速搭建自己的模型服务，在AgentScope的&lt;code>scripts&lt;/code>目录下，包括：&lt;/p>
+&lt;ul>
+&lt;li>CPU推理引擎ollama&lt;/li>
+&lt;li>基于Flask + Transformers的模型服务&lt;/li>
+&lt;li>基于Flask + ModelScope的模型服务&lt;/li>
+&lt;li>FastChat推理引擎&lt;/li>
+&lt;li>vllm推理引擎&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B056-AgentScope%E8%A7%A3%E8%AF%BB-%E6%A8%A1%E5%9E%8B/image-20241025151841025.png" alt="image-20241025151841025">&lt;/p>
+&lt;p>我们以vllm为例，来搭建一套本地模型服务。&lt;/p>
+&lt;h2 id="step1安装vllm">STEP1.安装vllm&lt;/h2>
+&lt;p>在python环境中安装vllm，可通过2种方式：&lt;/p>
+&lt;ul>
+&lt;li>pip直接安装：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">pip install vllm
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>从源码编译安装(如果pip安装遇到问题)：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">git clone https://github.com/vllm-project/vllm.git
+cd vllm
+pip install -e .
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="step2启动大模型">STEP2.启动大模型&lt;/h2>
+&lt;ul>
+&lt;li>本示例使用Llama模型，从 ModelScope 平台下载模型文件，上传到服务器&amp;quot;meta-llama/Llama-2-7b-chat-hf&amp;quot;目录下。&lt;/li>
+&lt;li>直接使用AgentScope提供脚本，命令如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">./vllm/vllm_setup.sh -m meta-llama/Llama-2-7b-chat-hf -p 8000
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="step3agentscope的模型配置">STEP3.AgentScope的模型配置&lt;/h2>
+&lt;p>在AgentScope中，模型的配置是通过&lt;code>model_configs&lt;/code>参数来指定的。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>用户通过提供模型配置来指定要使用的模型。这些配置可以是字典、字典列表，或者是指向模型配置文件的路径。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>模型配置中包含了模型的类型（&lt;code>model_type&lt;/code>）、名称（&lt;code>model_name&lt;/code>）、API密钥（&lt;code>api_key&lt;/code>）、组织名称（&lt;code>organization&lt;/code>）以及其他可能的参数（如生成参数&lt;code>generate_args&lt;/code>）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在vllm/model_config.json中，配置模型服务信息：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;model_type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;openai_chat&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;config_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;vllm_llama2-7b-chat-hf&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;model_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;meta-llama/Llama-2-7b-chat-hf&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;api_key&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;EMPTY&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;client_args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;base_url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://127.0.0.1:8000/v1/&amp;#34;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;generate_args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;temperature&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="step4初始化agentscope模型服务">STEP4.初始化AgentScope模型服务&lt;/h2>
+&lt;ul>
+&lt;li>使用agentscope.init初始化模型服务，模型配置使用上一步配好的文件。&lt;/li>
+&lt;li>然后就可以使用该模型服务创建agent去执行任务了。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">agentscope&lt;/span>
+&lt;span class="c1"># 读取模型配置&lt;/span>
+&lt;span class="n">agentscope&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">model_configs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;./model_configs.json&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="3总结">3.总结&lt;/h1>
+&lt;p>本文要点如下：&lt;/p>
+&lt;ul>
+&lt;li>AgentScope内置支持多种模型服务API，包括OpenAI、DashScope、Gemini、ZhipuAi、Ollama、LiteLLM和Post请求API等。&lt;/li>
+&lt;li>AgentScope通过&lt;code>ModelWrapper&lt;/code>实现模型的部署和调用解耦，实现对不同模型的灵活部署和调用。&lt;/li>
+&lt;li>AgentScope支持自定义模型服务，并内置了服务部署脚本。&lt;/li>
+&lt;/ul>
+&lt;p>参考：https://arxiv.org/pdf/2402.14034&lt;/p></description></item><item><title>【chatGPT】学习笔记54-AgentScope解读-概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 18 Oct 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B054-agentscope%E8%A7%A3%E8%AF%BB-%E6%A6%82%E8%A7%88/</guid><description>&lt;p>人类一直试图构建一个能够自主完成任务的代理或实体，即&lt;strong>智能体 (AI Agents 或 Agents)&lt;/strong>。大型语言模型（LLM）的引入为智能体的构建提供了新的核心组件，让智能体能够理解复杂指令，具有了更广泛的应用场景，智能体也不再局限于处理单一任务的单智能体，能够处理复杂任务的多智能体已成为当前热点。&lt;/p>
 &lt;p>本文为小伙伴介绍阿里多智能体框架——AgentScope.&lt;/p>
 &lt;h1 id="1agentscope简介">1.AgentScope简介&lt;/h1>
 &lt;h2 id="11agentscope是什么">1.1.AgentScope是什么&lt;/h2>
@@ -3005,186 +3178,6 @@ R&lt;sup>|V|×d&lt;/sup>。如下图：&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>使用上述方法，构建了一个具有fallback机制的客服问答工作链。模拟LLM模型发生异常时，通过预置的后备方法及时回复用户消息。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记38-LangChain解读-LCEL语言之领域功能(4)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD4/</link><pubDate>Sun, 21 Jan 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD4/</guid><description>&lt;p>langchain基础的链包括三个组件：提示词、LLM模型、输出解析器，但实际LLM应用开发会复杂很多，可能需要更多组件。&lt;/p>
-&lt;p>本篇我们介绍LCEL提供的几个常用方法，可以帮助开发者构建自定义runnable组件，进而组合成功能更强大的链。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120130624759.png" alt="">&lt;/p>
-&lt;h1 id="1-lcel组件构建方法">1. LCEL组件构建方法&lt;/h1>
-&lt;p>LCEL在Runnable协议中定义了如下方法，帮助开发者灵活构建runnable组件：&lt;/p>
-&lt;ul>
-&lt;li>RunnablePassthrough&lt;/li>
-&lt;li>RunnableLambda&lt;/li>
-&lt;li>RunnableBranch&lt;/li>
-&lt;/ul>
-&lt;h2 id="1runnablepassthrough">(1)RunnablePassthrough:&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>功能简介&lt;/strong>：&lt;/p>
-&lt;p>透传用户输入。通常与一个键组成键值对，用于构造下一个组件的输入。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>使用语法&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>如下示例，prompt组件需要的输入是以topic为键的字典，但实际用户输入是字符串&amp;quot;袋鼠&amp;rdquo;。&lt;/li>
-&lt;li>利用&lt;code>RunnablePassthrough&lt;/code>透传用户输入，并与topic组成键值对，构造了promt所需的输入。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">prompt&lt;/span> &lt;span class="o">=&lt;/span> ChatPromptTemplate.from_template&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;请讲一个关于{topic}的笑话。&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
-&lt;span class="nv">output_parser&lt;/span> &lt;span class="o">=&lt;/span> StrOutputParser&lt;span class="o">()&lt;/span>
-&lt;span class="nv">model&lt;/span> &lt;span class="o">=&lt;/span> ChatOpenAI&lt;span class="o">()&lt;/span>
-&lt;span class="nv">chain&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{&lt;/span>&lt;span class="s2">&amp;#34;topic&amp;#34;&lt;/span>: RunnablePassthrough&lt;span class="o">()}&lt;/span> &lt;span class="p">|&lt;/span> prompt&lt;span class="p">|&lt;/span> model &lt;span class="p">|&lt;/span> output_parser
-chain.invoke&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;袋鼠&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h2 id="2runnablelambda">(2)RunnableLambda:&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>功能简介&lt;/strong>：&lt;/p>
-&lt;p>&lt;code>RunnableLambda&lt;/code>可以把自定义函数转换成Runnable对象，以便在组件中使用。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>使用语法&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>如下示例，自定义函数my_function，然后通过RunnableLambda(my_function)转换为runnable组件。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">def my_function&lt;span class="o">()&lt;/span>
-...
-&lt;span class="k">return&lt;/span> xxxx
-&lt;span class="nv">chain&lt;/span> &lt;span class="o">=&lt;/span> RunnableLambda&lt;span class="o">(&lt;/span>my_function&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span> 其它组件&lt;span class="p">|&lt;/span> ...
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h2 id="3runnablebranch">(3)RunnableBranch&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>功能简介&lt;/strong>：&lt;/p>
-&lt;p>类似路由功能，可以根据条件选择要运行的分支，即当条件满足时，则执行该分支。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>使用语法&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>如下示例，&lt;code>RunnableBranch&lt;/code>的参数是&amp;quot;条件、分支&amp;quot;对 + 默认分支。&lt;/li>
-&lt;li>当某个条件满足时，则执行对应分支；如果条件都不满足，则执行默认分支。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">branch&lt;/span> &lt;span class="o">=&lt;/span> RunnableBranch&lt;span class="o">(&lt;/span>
-&lt;span class="o">(&lt;/span>条件1, 分支1&lt;span class="o">)&lt;/span>,
-...,
-&lt;span class="o">(&lt;/span>条件n, 分支n&lt;span class="o">)&lt;/span>,
-默认分支,
-&lt;span class="o">)&lt;/span>
-&lt;span class="nv">chain&lt;/span> &lt;span class="o">=&lt;/span> branch &lt;span class="p">|&lt;/span> 其它组件&lt;span class="p">|&lt;/span> ...
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
-&lt;p>以智能客服场景为例，我们使用上述三个方法来组成一个相对复杂的工作链：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>利用LLM判断问题类别、感情色彩&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>自定义函数对LLM输出结果格式化，以便后续组件使用&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>根据问题类别，构造不同的客服分支，组建客服路由链&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>组成完整工作链，根据问题类别回答问题&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="step1-构建问题分类链">STEP1: 构建问题分类链&lt;/h2>
-&lt;ul>
-&lt;li>构建问题分类链topic_chain，任务是判断问题属于&amp;quot;产品质量&amp;rdquo; or &amp;ldquo;物流&amp;rdquo;，情绪是&amp;quot;积极&amp;rdquo;、&amp;ldquo;消极&amp;rdquo; or &amp;ldquo;中立&amp;rdquo;。&lt;/li>
-&lt;li>使用&lt;code>RunnablePassthrough&lt;/code>透传用户问题，并与&amp;quot;question&amp;quot;组成键值对，作为prompt组件的输入。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120115926742.png" alt="">&lt;/p>
-&lt;h2 id="step2-自定义runnable组件格式化输出结果">STEP2: 自定义Runnable组件：格式化输出结果&lt;/h2>
-&lt;ul>
-&lt;li>LangChain自带的输出解析器&lt;code>StrOutputParser&lt;/code>输出的是字符串，但我们下个组件的输入要求是字典。所以自己写个函数format_func，把字符串转成字典格式。&lt;/li>
-&lt;li>使用&lt;code>RunnableLambda&lt;/code>把自定义函数format_func转换成runnable，并作为组件加入到工作链service_chain中。&lt;/li>
-&lt;li>使用相同的用户问题调用工作链service_chain，输出结果为字典。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120121343812.png" alt="">&lt;/p>
-&lt;h2 id="step3-构建路由链由3个分支链组成物流产品和默认">STEP3: 构建路由链：由3个分支链组成(物流、产品和默认)&lt;/h2>
-&lt;ul>
-&lt;li>先创建3个分支链，用于回答产品质量、物流等不同类别的问题。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120122633665.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>利用&lt;code>RunnableBranch&lt;/code>构造客服路由链anwser_routing_chain：
-&lt;ul>
-&lt;li>当用户问题类别为产品质量时，走产品客服链prod_response&lt;/li>
-&lt;li>当用户问题类别为物流时，走物流客服链logistic_response链&lt;/li>
-&lt;li>当用户问题类别不是上面两类时，走默认链general_response&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120123827219.png" alt="">&lt;/p>
-&lt;h2 id="step4-组成完整工作链">STEP4: 组成完整工作链&lt;/h2>
-&lt;ul>
-&lt;li>现在，把工作链service_chain增加客服路由组件，组成完整工作链。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120124737826.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>使用不同的问题来测试，不同类别的问题都得到了对应领域客服的回复。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B038-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(4)/image-20240120124807112.png" alt="">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本篇介绍了LCEL提供的几种常用方法，可以帮助开发者灵活构建自己的Runnable组件，以支撑开发复杂的LLM应用。&lt;/p>
-&lt;p>关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>RunnablePassthrough: 透传用户输入。通常与一个键组成键值对，用于构造下一个组件的输入。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>RunnableLambda: 把自定义函数转换成Runnable对象，以便在组件中使用。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>RunnableBranch: 类似路由功能，可以根据条件选择要运行的分支，即当条件满足时，则执行该分支。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>使用上述方法，构建了一个客服问答工作链，自动判断用户问题类别并路由到对应领域的客服。&lt;/li>
-&lt;/ul>
 &lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>

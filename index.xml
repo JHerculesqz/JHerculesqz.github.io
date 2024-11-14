@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Oct 2024 11:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Nov 2024 11:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,245 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记55-LLM微调技术之QLoRA(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora2/</link><pubDate>Fri, 18 Oct 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora2/</guid><description>&lt;p>笔者在写模型量化技术相关文章时，正逢2024诺贝尔颁奖，Hiton、Lecun这些大神萦绕耳边。那我们就借Lecun在1990年发表的《Optimal Brain Damage》，以及1992年的《Second order derivatives for network pruning: Optimal Brain Surgeon》，来理解一下大神们在90年代如何解决模型剪枝问题的。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记57-LLM微调技术之QLoRA(3)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B057-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora3/</link><pubDate>Thu, 14 Nov 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B057-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora3/</guid><description>&lt;p>在论文《GPTQ：Accurate Post-Training Quantization for Generative Pre-trained Transformers》中，提出了GPTQ这种模型量化的方法。它针对生成式预训练大模型，实现精准的模型事后模型量化(Post-Training Quantization)。&lt;/p>
+&lt;blockquote>
+&lt;p>PS：理解GPTQ，就需要理解前两篇专栏介绍的&lt;strong>模型量化基本概念&lt;/strong>、&lt;strong>模型剪枝及OBD/OBS&lt;/strong>，不熟悉的小伙伴可以翻一下前面的专栏。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="1gptq相关技术">1.GPTQ相关技术&lt;/h1>
+&lt;h2 id="11量化方法分类">1.1.量化方法分类&lt;/h2>
+&lt;p>从量化时机看，有两类量化方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>QAT&lt;/strong>：Quantization During Training，训练期量化。&lt;/li>
+&lt;li>&lt;strong>PTQ&lt;/strong>：Post-Training Quantization，训练后量化。&lt;/li>
+&lt;/ul>
+&lt;p>这两类量化方法由于量化时机不同，所以训练方法也有所不同。&lt;/p>
+&lt;h3 id="1quantization-during-training">(1)Quantization During Training&lt;/h3>
+&lt;p>训练期量化(Quantization During Training)，也称为&lt;strong>量化感知训练&lt;/strong>，是在模型训练的过程中进行量化，使得模型在训练时就适应量化带来的误差。&lt;/p>
+&lt;p>QAT算法的主要步骤如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>STEP1.模拟量化&lt;/strong>：在训练过程中，权重和激活值会被临时量化到较低精度(如：8bit)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>STEP2.反量化&lt;/strong>：量化后的值会在后续的计算中被反量化回浮点数，用于计算梯度和更新权重。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>STEP3.梯度传递&lt;/strong>：量化和反量化的过程会引入额外的误差，模型进一步学习如何最小化这些额外误差对最终性能的影响。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>STEP4.微调&lt;/strong>：在训练的最后阶段会移除量化操作，对模型进行微调以恢复由于量化而可能损失的精度。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>QAT的优点是可以更好地保持模型的精度，使得模型在训练过程中适应量化带来的变化。&lt;/p>
+&lt;p>QAT的缺点是增加训练复杂度和训练成本。&lt;/p>
+&lt;h3 id="2post-traning-quantization">(2)Post-Traning Quantization&lt;/h3>
+&lt;p>训练后量化(Post-Training Quantization)，是在模型训练完成后，再对模型权重、激活值进行量化。&lt;/p>
+&lt;p>PTQ算法的主要步骤如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>STEP1.离线校准&lt;/strong>：分析模型在特定数据集上的激活值分布来确定量化参数(如：比例因子)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>STEP2.量化&lt;/strong>：使用STEP1离线校准得到的量化参数，将模型的权重和激活值量化到较低的精度。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>STEP3.转换&lt;/strong>：将量化后的模型转换为可以在目标硬件上运行的形式。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>PTQ的的优点是简单且计算成本较低，它不需要在训练过程中模拟量化操作&lt;/p>
+&lt;p>PTQ的缺点是可能不如训练期间量化那样能够保持模型的精度，因为它没有给模型机会去适应量化带来的误差。&lt;/p>
+&lt;h3 id="3qat-vs-ptq">(3)QAT vs PTQ&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>从精度看&lt;/strong>：QAT通常能够更好地保持模型的精度，因为它允许模型在训练过程中适应量化操作。&lt;/li>
+&lt;li>&lt;strong>从计算成本看&lt;/strong>：PTQ的计算成本较低，因为它避免了在训练过程中模拟量化的额外计算。&lt;/li>
+&lt;li>&lt;strong>从灵活性看&lt;/strong>：PTQ提供了更大的灵活性，因为它允许在不同的硬件和部署环境中使用相同的量化模型。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>GPTQ属于PTQ量化方法，GPTQ就是G-PTQ，G表示GPT系列大语言模型。&lt;/strong>&lt;/p>
+&lt;h2 id="12模型剪枝技术回顾">1.2.模型剪枝技术回顾&lt;/h2>
+&lt;p>在PTQ(训练后量化)的思想下，模型剪枝技术得以发展与应用。这些技术更集中应用于视觉模型，但在大模型上应用面临诸多挑战。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>OBD&lt;/strong>：Opimal Brain Damage&lt;/li>
+&lt;li>&lt;strong>OBS&lt;/strong>：Optimal Brain Surgeon&lt;/li>
+&lt;li>&lt;strong>OBQ&lt;/strong>：Optimal Brain Quantization&lt;/li>
+&lt;/ul>
+&lt;h3 id="1optimal-brain-damage">(1)Optimal Brain Damage&lt;/h3>
+&lt;p>OBD是一种早期的剪枝算法(由LeCun提出)，其核心思想是通过Loss二阶导制定参数的影响，从而在剪枝过程中自动化地找出并裁剪&amp;quot;无影响&amp;quot;的参数。&lt;/p>
+&lt;p>&lt;strong>优点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>剪枝自动化&lt;/strong>：寻找到参数与Loss关系的数学方法，使剪枝过程自动化&lt;/li>
+&lt;li>&lt;strong>计算简单&lt;/strong>：从数学意义上，证明了可以忽略参数间的相互作用等因素，极大降低计算复杂度。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>缺点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>局部最优&lt;/strong>：OBD可能只找到局部最优解(由于忽略了参数间相互作用，可能会在剪枝过程中在错误的方向上越走越远)，而不是全局最优解。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>关于OBD详细内容，可阅读本专栏《【chatGPT】学习笔记55-LLM微调技术之QLoRA(2)》相关章节&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="2optimal-brain-surgeon">(2)Optimal Brain Surgeon&lt;/h3>
+&lt;p>OBS是OBD的改进版，它建立了模型参数间的关联关系。&lt;/p>
+&lt;p>OBS的核心思想是在剪枝过程中&lt;strong>找到对模型误差影响最小的权重&lt;/strong>，&lt;strong>并更新其他权重以补偿剪枝带来的影响&lt;/strong>。&lt;/p>
+&lt;p>&lt;strong>优点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>更精确&lt;/strong>：考虑了权重之间的交叉项，可以更准确地评估剪枝的影响。&lt;/li>
+&lt;li>&lt;strong>全局最优&lt;/strong>：相比于OBD，OBS更可能找到全局最优解。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>缺点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>计算复杂&lt;/strong>：由于需要考虑交叉项，计算复杂度较高，尤其是在大规模网络中。&lt;/li>
+&lt;li>&lt;strong>资源消耗&lt;/strong>：对于大规模网络，计算和存储资源消耗较大。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>关于OBD详细内容，可阅读本专栏《【chatGPT】学习笔记55-LLM微调技术之QLoRA(2)》相关章节&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="3optimal-brain-quantization">(3)Optimal Brain Quantization&lt;/h3>
+&lt;p>OBQ是将OBS的思想应用到量化问题中，它处理的是将浮点数权重转换为整数表示，而不是直接将权重设置为零。&lt;/p>
+&lt;p>&lt;strong>优点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>精度保持&lt;/strong>：相比于直接剪枝，量化可以保持模型的数值精度，减少信息损失。&lt;/li>
+&lt;li>&lt;strong>硬件友好&lt;/strong>：量化后的模型更适合在低精度硬件上运行，如移动设备和嵌入式系统。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>缺点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>量化策略选择&lt;/strong>：需要精心设计量化策略，以平衡模型性能和计算效率。&lt;/li>
+&lt;li>&lt;strong>后处理需求&lt;/strong>：量化后可能需要额外的步骤来微调模型，以恢复性能。&lt;/li>
+&lt;/ul>
+&lt;p>关于OBD、OBS、OBQ的简述以及GPTQ与之的关联，详见论文Related Work章节。&lt;/p>
+&lt;p>&lt;img src="images/image-20241114083900824.png" alt="image-20241114083900824">&lt;/p>
+&lt;h2 id="13大模型量化技术">1.3.大模型量化技术&lt;/h2>
+&lt;p>&lt;strong>大模型量化技术&lt;/strong>：Large-model Quantization，专门针对大模型实施模型量化的技术。&lt;/p>
+&lt;ul>
+&lt;li>大型模型量化技术的实验对象通常是BLOOM和OPT-175B这样的大型语言模型，&lt;/li>
+&lt;li>论文中列举的量化方法有：ZeroQuant、LLM.int8()和nuQmm。
+&lt;ul>
+&lt;li>ZeroQuant提出了逐层知识蒸馏，但只能应用于最多13亿参数的模型，且计算时间较长。&lt;/li>
+&lt;li>LLM.int8()关注到激活值中的异常值会破坏大型模型的量化，并提出通过保持这些维度的高精度来解决。&lt;/li>
+&lt;li>nuQmm则开发了针对特定二进制编码量化方案的高效GPU内核。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>而GPTQ的实验证明，它能在更短的时间内量化更大的模型。&lt;/p>
+&lt;p>&lt;img src="images/image-20241114091053556.png" alt="image-20241114091053556">&lt;/p>
+&lt;h2 id="14关键技术1层级量化">1.4.关键技术1：层级量化&lt;/h2>
+&lt;p>在宏观层面，GPTQ遵循层级量化思想(Layer-Wise Quantization)，层级量化属于PTQ方法，通过逐层量化、逐层重构。层级量化的目标是找到量化权重矩阵，这个矩阵用来保障最小化各层的平方误差。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>数学表达&lt;/strong>：W表示线性层的权重，X表示线性层的一小批数据点。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114102155494.png" alt="image-20241114102155494">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>量化目标&lt;/strong>：找到一组量化权重 W^，使得与全精度层输出的平方误差最小化。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114102506034.png" alt="image-20241114102506034">&lt;/p>
+&lt;h2 id="15关键技术2obq">1.5.关键技术2：OBQ&lt;/h2>
+&lt;p>OBQ是GPTQ的数学方法基础：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>量化目标&lt;/strong>：OBQ独立处理每一行权重，一次量化一个权重，同时更新其它未量化的权重，以最小化该层的输出误差。&lt;/li>
+&lt;li>&lt;strong>数学表达&lt;/strong>：w&lt;sub>q&lt;/sub>表示需要量化的权重，quant(w&lt;sub>q&lt;/sub>)是w&lt;sub>q&lt;/sub>的量化值，H&lt;sub>F&lt;/sub>&lt;sup>-1&lt;/sup>表示海森矩阵的逆。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114103135744.png" alt="image-20241114103135744">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>高效更新海森矩阵&lt;/strong>：在量化过程中，Hessian矩阵用来表征剩余全精度权重的集合。如下公式表示了OBQ更新海森矩阵的逻辑，OBQ在量化一个权重后，移除已量化权重的行和列，避免后续量化中的重复计算，从而避免了更新海森矩阵对算力的巨大消耗。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114140940163.png" alt="image-20241114140940163">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>量化并行&lt;/strong>：OBQ方法并行处理W的多行，实验中单GPU上消耗4小时量化OPT-175B模型(1750亿参数)，相较于其它量化方法提升了3个数量级的速度。&lt;/li>
+&lt;/ul>
+&lt;p>GPTQ就是在OBQ的基础上进行了重大修改，使其能够扩展到大型语言模型，使得在保持模型性能的同时，显著减少模型的存储和计算需求，使得大型模型的部署和推理变得更加可行。&lt;/p>
+&lt;h1 id="2gptq原理">2.GPTQ原理&lt;/h1>
+&lt;h2 id="21gptq对obq的改进">2.1.GPTQ对OBQ的改进&lt;/h2>
+&lt;h3 id="1arbitrary-order-insight">(1)Arbitrary Order Insight&lt;/h3>
+&lt;p>OBQ量化权重的顺序是按照贪婪法进行量化的，即总是选择当前量化误差最小的权重进行量化。然而GPTQ实验发现，这种量化顺序的策略在大模型中效果不佳。&lt;/p>
+&lt;p>GPTQ按照相同顺序量化所有行的权重相反能获得不错的效果，其数学原理是海森矩阵H&lt;sub>F&lt;/sub>仅依赖于层输入X&lt;sub>F&lt;/sub>，而不依赖于权重。因此可以对所有行的H&lt;sub>F&lt;/sub>&lt;sup>-1&lt;/sup>进行相同的更新，而替代了对每个权重单独更新。&lt;/p>
+&lt;blockquote>
+&lt;p>PS：Arbitrary Order Insight，我刚开始一脸懵逼地直译为&amp;quot;任意顺序洞察&amp;rdquo;，按照上述数学逻辑，应该翻译为“块量化”更为合适，正因为海森矩阵的特性才实现了块量化。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="2lazy-batch-updates">(2)Lazy Batch-Updates&lt;/h3>
+&lt;p>Lazy Batch-Updates，批量更新，是一种工程化方法。量化在GPU内非常快，但是更新剩余未量化的权重的内存访问将成为QPTQ的性能瓶颈。&lt;/p>
+&lt;ul>
+&lt;li>GPTQ的解决思路是每次处理128列，只更新这些列对应的子块(即，&lt;strong>B * B block of H&lt;sup>-1&lt;/sup>&lt;/strong>)。只有一个块完全处理后，才会驱动如下两个公式，对整个H&lt;sup>-1&lt;/sup>和W矩阵进行全局更新。其中，Q表示一组索引，H&lt;sup>-1&lt;/sup>&lt;sub>-Q&lt;/sub>表示移除了相应行和列的逆矩阵。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114161325271.png" alt="image-20241114161325271">&lt;/p>
+&lt;ul>
+&lt;li>上述更新方法，本质上解决的是内存吞吐量瓶颈。&lt;/li>
+&lt;/ul>
+&lt;h3 id="3cholesky-reformulation">(3)Cholesky Reformulation&lt;/h3>
+&lt;p>Cholesky Reformulation，切尔斯基分解。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>在量化过程中，可能会出现数值不准确性，进而导致海森矩阵的逆变为奇异(即不可逆) 。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>数值稳定性&lt;/strong>：GPTQ利用了Cholesky分解的数值稳定性，通过预先计算和更新Cholesky分解，避免直接计算和更新Hessian矩阵的逆。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="22gptq算法的全流程">2.2.GPTQ算法的全流程&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>STEP1.块量化(Arbitrary Order Insight)&lt;/strong>：选择一个连续块，如下图中粗线包含的区域。&lt;/li>
+&lt;li>&lt;strong>STEP2.Cholesky分解(Cholesky Reformulation)&lt;/strong>：利用Cholesky分解得到海森矩阵的逆，进而量化STEP1选择的块。橙色为已量化的权重，白色为正在量化的权重，蓝色为未量化的权重。&lt;/li>
+&lt;li>&lt;strong>STEP3.权重批量更新(Lazy Batch-Updates)&lt;/strong>：在当前块量化的最后，就更新所有剩余未量化的权重。&lt;/li>
+&lt;li>完成STEP1~STEP3后，&lt;strong>递归量化&lt;/strong>下一个块。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114164012033.png" alt="image-20241114164012033">&lt;/p>
+&lt;p>&lt;img src="images/image-20241114163908213.png" alt="image-20241114163908213">&lt;/p>
+&lt;h2 id="23gptq核心代码解读">2.3.GPTQ核心代码解读&lt;/h2>
+&lt;p>通过对GPTQ的论文解读，我们了解了GPTQ的相关技术，以及算法流程。&lt;/p>
+&lt;p>最后我们再来看一下GPTQ的核心代码，以加深对论文的理解：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/AutoGPTQ/AutoGPTQ/blob/main/auto_gptq/quantization/gptq.py">https://github.com/AutoGPTQ/AutoGPTQ/blob/main/auto_gptq/quantization/gptq.py&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="1关闭cuda的tf32精度">(1)关闭CUDA的TF32精度&lt;/h3>
+&lt;ul>
+&lt;li>TF32是一种混合精度计算，关闭它可以保证计算精确性。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114165123240.png" alt="image-20241114165123240">&lt;/p>
+&lt;h3 id="2gptq类的构造函数">(2)GPTQ类的构造函数&lt;/h3>
+&lt;ul>
+&lt;li>构造函数的输入是神经网络中的一个层。&lt;/li>
+&lt;li>复制层的权重，得到W。&lt;/li>
+&lt;li>根据层类型(Conv1D、Conv2d)，对权重矩阵的形状进行调整。&lt;/li>
+&lt;li>H就是海森矩阵，初始为零矩阵。&lt;/li>
+&lt;li>quantizer是量化器对象。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114165410715.png" alt="image-20241114165410715">&lt;/p>
+&lt;h3 id="3add_batch">(3)add_batch&lt;/h3>
+&lt;ul>
+&lt;li>处理输入和输出的batch&lt;/li>
+&lt;li>根据层类型，调整输入的形状&lt;/li>
+&lt;li>根据调整好的输入形状，更新海森矩阵H&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114165844565.png" alt="image-20241114165844565">&lt;/p>
+&lt;h3 id="4fasterquant">(4)fasterquant&lt;/h3>
+&lt;ul>
+&lt;li>克隆并调整当前层的权重矩阵的形状。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114170835985.png" alt="image-20241114170835985">&lt;/p>
+&lt;ul>
+&lt;li>根据块分组进行量化，逐步地计算损失并更新权重。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114170950349.png" alt="image-20241114170950349">&lt;/p>
+&lt;p>&lt;img src="images/image-20241114171103060.png" alt="image-20241114171103060">&lt;/p>
+&lt;ul>
+&lt;li>最终返回量化参数&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/image-20241114171215236.png" alt="image-20241114171215236">&lt;/p>
+&lt;h1 id="4小结">4.小结&lt;/h1>
+&lt;p>本文介绍了：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GPTQ相关技术&lt;/strong>：QAT和PTQ、OBD/OBS/OBQ、大模型量化技术
+&lt;ul>
+&lt;li>其中，层级量化和OBQ是GPTQ的关键技术基础&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>GPTQ的技术原理&lt;/strong>：
+&lt;ul>
+&lt;li>块量化&lt;/li>
+&lt;li>批量更新&lt;/li>
+&lt;li>Cholesky分解&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>GPTQ的算法流程及代码解读&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>论文地址：https://arxiv.org/abs/2210.17323&lt;/p></description></item><item><title>【chatGPT】学习笔记55-LLM微调技术之QLoRA(2)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora2/</link><pubDate>Fri, 18 Oct 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B055-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora2/</guid><description>&lt;p>笔者在写模型量化技术相关文章时，正逢2024诺贝尔颁奖，Hiton、Lecun这些大神萦绕耳边。那我们就借Lecun在1990年发表的《Optimal Brain Damage》，以及1992年的《Second order derivatives for network pruning: Optimal Brain Surgeon》，来理解一下大神们在90年代如何解决模型剪枝问题的。&lt;/p>
 &lt;h1 id="1模型剪枝">1.模型剪枝&lt;/h1>
 &lt;h2 id="1什么是模型剪枝">(1)什么是模型剪枝？&lt;/h2>
 &lt;p>模型剪枝是一种模型优化技术，通过移除神经网络中的冗余连接或神经元，达到降低模型复杂度的目的。&lt;/p>
@@ -3084,103 +3322,4 @@ R&lt;sup>|V|×d&lt;/sup>。如下图：&lt;/p>
 &lt;li>可采用AI辅助构建数据集，但关键还是&lt;strong>要关注数据集的内容本身符合上述工程实践的要求和原则&lt;/strong>。&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>【chatGPT】学习笔记39-LangChain解读-LCEL语言之领域功能(5)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD5/</link><pubDate>Thu, 01 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-langchain%E8%A7%A3%E8%AF%BB-lcel%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD5/</guid><description>&lt;p>在LLM应用程序中，不可避免的会存在大量可知或不可知的故障点，比如模型API调用异常、链组合集成的问题、自定义的组件运行出错等。如果针对这些情况准备了fallback备用方法，就可以让程序更稳健。&lt;/p>
-&lt;p>本篇我们来看下在LCEL中如何实现&amp;quot;fallback&amp;rdquo;。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202010923281.png" alt="image-20240202010923281">&lt;/p>
-&lt;h1 id="1-lcel的fallback方法">1. LCEL的Fallback方法&lt;/h1>
-&lt;p>LCEL在runnable中定义了fallback方法&lt;code>withfallback&lt;/code>，runnable组件及其组成的链都可以直接使用这个方法。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>功能简介&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>当调用方出现异常，则执行fallback中预置的备用方法。&lt;/li>
-&lt;li>通常用于预防LLM API错误，也可用于其它runnable组件，或者工作链。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>使用语法&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>withfallbacks&lt;/code>的第一个参数是&lt;strong>备用方法&lt;/strong>，放在方括号&lt;code>[]&lt;/code>中。&lt;/li>
-&lt;li>第二个参数&lt;code>exceptions_to_handle&lt;/code>为可选，用于&lt;strong>指定要处理的错误&lt;/strong>——当发生这些错误时才执行备用方法。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="nv">chain&lt;/span> &lt;span class="o">=&lt;/span> runnable对象.withfallback&lt;span class="o">(&lt;/span>
-&lt;span class="o">[&lt;/span>备用方法&lt;span class="o">]&lt;/span>,
-&lt;span class="nv">exceptions_to_handle&lt;/span>&lt;span class="o">=(&lt;/span>KeyboardInterrupt, ...,&lt;span class="o">)&lt;/span>
-&lt;span class="o">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h1 id="2快速上手">2.快速上手&lt;/h1>
-&lt;p>以智能客服场景为例，模拟LLM模型发生异常的情况，使用fallback来预防这些错误，提升用户体验。&lt;/p>
-&lt;h2 id="step1-构建故障链">STEP1: 构建故障链&lt;/h2>
-&lt;ul>
-&lt;li>构造一个工作链，专门负责回答物流问题。通过设置不存在的模型来模拟模型故障。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003427497.png" alt="image-20240202003427497">&lt;/p>
-&lt;ul>
-&lt;li>运行链，返回关于模型的错误信息。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003628125.png" alt="image-20240202003628125">&lt;/p>
-&lt;h2 id="step2-构建备用链">STEP2: 构建备用链&lt;/h2>
-&lt;ul>
-&lt;li>构建默认回复链，该链使用正常模型。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003914611.png" alt="image-20240202003914611">&lt;/p>
-&lt;h2 id="step3-构建fallback链">STEP3: 构建Fallback链&lt;/h2>
-&lt;ul>
-&lt;li>使用&lt;code>with_fallbacks&lt;/code>方法，构造工作链service_chain，把默认回复链作为物流链的后备方法。&lt;/li>
-&lt;li>运行具有fallback能力service_chain，顺利得到回复。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202003948900.png" alt="image-20240202003948900">&lt;/p>
-&lt;ul>
-&lt;li>除了上述基础用法，我们还可以指定fallback服务于特殊的异常类型。如下示例中，指定故障链一旦发生了KeyboardInterrupt异常，才执行备用链。&lt;/li>
-&lt;li>具体如下：&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202004341255.png" alt="image-20240202004341255">&lt;/p>
-&lt;h2 id="step4-构建fallback链自定义备用方法">STEP4: 构建Fallback链：自定义备用方法&lt;/h2>
-&lt;ul>
-&lt;li>假设LLM模型全部失效，把默认回复链的模型也改成无效的模型。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202005006014.png" alt="image-20240202005006014">&lt;/p>
-&lt;ul>
-&lt;li>自定义一个备用方法，来兜底保证给用户及时回复。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202005208000.png" alt="image-20240202005208000">&lt;/p>
-&lt;ul>
-&lt;li>构造新的工作链new_service_chain，把兜底回复作为后备方法。&lt;/li>
-&lt;li>运行链，顺利得到回复。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B039-LangChain%E8%A7%A3%E8%AF%BB-LCEL%E8%AF%AD%E8%A8%80%E4%B9%8B%E9%A2%86%E5%9F%9F%E5%8A%9F%E8%83%BD(5)/image-20240202005233635.png" alt="image-20240202005233635">&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>本篇介绍了LCEL的fallback方法&lt;code>withfallbacks&lt;/code>，可以有效解决LLM API、模型输出不佳以及其他集成问题带来的问题。&lt;/p>
-&lt;p>关键要点如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>&lt;code>withfallbacks&lt;/code>方法&lt;/strong>：&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>LCEL在runnable中定义了fallback方法&lt;code>withfallbacks&lt;/code>，runnable组件及其组成的链都可以直接使用这个方法。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>withfallbacks&lt;/code>的第一个参数是&lt;strong>备用方法&lt;/strong>，第二个参数&lt;code>exceptions_to_handle&lt;/code>为可选，用于&lt;strong>指定要处理的错误&lt;/strong>——当发生这些错误时才执行备用方法。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>实例演示&lt;/strong>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>使用上述方法，构建了一个具有fallback机制的客服问答工作链。模拟LLM模型发生异常时，通过预置的后备方法及时回复用户消息。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>参考文档：翻译的LangChain官方文档&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>翻译链接：https://jherculesqz.gitbook.io/langchain-guan-fang-wen-dang&lt;/li>
 &lt;/ul></description></item></channel></rss>

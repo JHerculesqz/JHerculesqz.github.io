@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Nov 2024 11:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Dec 2024 11:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,203 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记57-LLM微调技术之QLoRA(3)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B057-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora3/</link><pubDate>Thu, 14 Nov 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B057-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora3/</guid><description>&lt;p>在论文《GPTQ：Accurate Post-Training Quantization for Generative Pre-trained Transformers》中，提出了GPTQ这种模型量化的方法。它针对生成式预训练大模型，实现精准的模型事后模型量化(Post-Training Quantization)。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记58-AgentScope解读-流式输出</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B058-agentscope%E8%A7%A3%E8%AF%BB-%E6%B5%81%E5%BC%8F%E8%BE%93%E5%87%BA/</link><pubDate>Fri, 27 Dec 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B058-agentscope%E8%A7%A3%E8%AF%BB-%E6%B5%81%E5%BC%8F%E8%BE%93%E5%87%BA/</guid><description>&lt;p>流式输出是大语言模型的重要功能，可以提高模型输出效率、提升用户交互体验。&lt;/p>
+&lt;p>本文为小伙伴们介绍AgentScope中流式输出的用法。&lt;/p>
+&lt;h1 id="1agentscope流式输出">1.AgentScope流式输出&lt;/h1>
+&lt;h2 id="11-流式输出的概念">1.1 流式输出的概念&lt;/h2>
+&lt;p>流式输出是指大模型在生成文本或其他类型的数据时，生成时即刻发送，而不是等待所有数据生成完毕后一次性发送。&lt;/p>
+&lt;p>流式输出适用于生成较长文本或需要即时反馈的场景，可以减少等待时间，提高用户体验，并允许系统在数据生成过程中进行实时处理。&lt;/p>
+&lt;h2 id="12流式输出和非流式输出的应用场景">1.2.流式输出和非流式输出的应用场景&lt;/h2>
+&lt;p>流式输出适合需要实时反馈和处理连续数据的应用，而非流式输出适合批量处理和结果完整性要求较高的场景。&lt;/p>
+&lt;p>在多智能体（Multi-Agent）系统开发过程中，可根据业务需求和系统设计选择合适的输出方式：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>流式输出&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>实时交互应用&lt;/strong>：需要实时反馈的应用，如在线聊天机器人或实时监控系统。&lt;/li>
+&lt;li>&lt;strong>长任务处理&lt;/strong>：需要长时间处理的任务，流式输出可以让用户或系统在处理过程中逐步获取结果，而不是等待整个任务完成。&lt;/li>
+&lt;li>&lt;strong>数据流处理&lt;/strong>：处理连续的数据流时，如传感器数据或实时日志。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>非流式输出&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>批量处理任务&lt;/strong>：不需要实时反馈的批量处理任务，如夜间批处理作业。&lt;/li>
+&lt;li>&lt;strong>结果完整性要求&lt;/strong>：需要确保所有输出数据的完整性和一致性时，非流式输出可以确保在所有数据处理完成后一次性输出结果。&lt;/li>
+&lt;li>&lt;strong>复杂决策过程&lt;/strong>：需要综合所有输入数据才能做出决策的场景中，非流式输出可以确保在所有数据被处理和分析后，再输出最终的决策结果。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="13agentscope如何支持流式输出">1.3.AgentScope如何支持流式输出&lt;/h2>
+&lt;p>AgentScope支持集成不同厂家的大模型服务，对各家模型的流式输出也做了统一封装：&lt;/p>
+&lt;ul>
+&lt;li>通过&lt;code>stream&lt;/code>参数设置流式输出(参数值为&lt;code>True&lt;/code>表示流式输出)，这个参数会覆盖模型中的&lt;code>stream&lt;/code>参数。&lt;/li>
+&lt;/ul>
+&lt;p>目前，AgentScope支持以下大模型 API 的流式输出：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>OpenAI API&lt;/strong>：对话（Chat）&lt;/li>
+&lt;li>&lt;strong>DashScope API&lt;/strong>：对话（Chat）&lt;/li>
+&lt;li>&lt;strong>Gemini API&lt;/strong>：对话（Chat）&lt;/li>
+&lt;li>&lt;strong>ZhipuAi API&lt;/strong>：对话（Chat）&lt;/li>
+&lt;li>&lt;strong>Ollama API&lt;/strong>：对话（Chat）&lt;/li>
+&lt;li>&lt;strong>LiteLLM API&lt;/strong>：对话（Chat）&lt;/li>
+&lt;/ul>
+&lt;h1 id="2agentscope流式输出的配置和调用">2.AgentScope流式输出的配置和调用&lt;/h1>
+&lt;h2 id="21流式输出的配置">2.1.流式输出的配置&lt;/h2>
+&lt;p>AgentScope支持两种方式配置流式输出：&lt;/p>
+&lt;ul>
+&lt;li>在配置文件中
+&lt;ul>
+&lt;li>在&lt;code>model_config&lt;/code>模型配置中，将&lt;code>stream&lt;/code>参数设置为&lt;code>True&lt;/code>即表示启用流式输出模式：&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">model_config&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="s2">&amp;#34;config_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;xxx&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;model_type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;xxx&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;stream&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">True&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1"># ...&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>在python模型调用时
+&lt;ul>
+&lt;li>在python脚本中调用模型时，将&lt;code>stream&lt;/code>参数设置为&lt;code>True&lt;/code>，启用模型的流式输出模式：&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">MyAgent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">AgentBase&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="c1"># ...&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">reply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Msg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Sequence&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Msg&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Msg&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="c1"># ...&lt;/span>
+&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">model&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">prompt&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">stream&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">True&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="c1"># ...&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="22流式输出的调用">2.2.流式输出的调用&lt;/h2>
+&lt;h3 id="1流式打印">(1)流式打印&lt;/h3>
+&lt;ul>
+&lt;li>启用流式输出后，模型输出的&lt;code>stream&lt;/code>字段是生成器，&lt;code>text &lt;/code>字段为 None。&lt;/li>
+&lt;li>使用speak方法打印流式输出，参数是&lt;code>stream&lt;/code>。&lt;/li>
+&lt;li>访问&lt;code>text &lt;/code>字段，生成器将被迭代以生成完整的文本并存入&lt;code>text &lt;/code>字段。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">def&lt;/span> &lt;span class="nf">reply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Msg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Sequence&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Msg&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Msg&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="c1"># response.steam 为 生成器，response.text 为 None&lt;/span>
+&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">model&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prompt&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1"># 在 terminal 和 AgentScope Studio 中流式打印文本&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">speak&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">stream&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1"># 生成器被迭代时，产生的文本将自动被存储在 response.text 中，因此用户可以直接使用 response.text 处理响应文本&lt;/span>
+&lt;span class="n">msg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Msg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">role&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;assistant&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">msg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">msg&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2自定义流式输出">(2)自定义流式输出&lt;/h3>
+&lt;ul>
+&lt;li>AgentScope提供了&lt;code>log_stream_msg&lt;/code>函数，用户使用此函数自行处理生成器类型的消息，比如上例中的&lt;code>response.steam&lt;/code>:
+&lt;ul>
+&lt;li>&lt;code>stream&lt;/code> 字段中的生成器将生成一个布尔值和字符串的二元组。布尔值表示当前是否是最后一段文本，字符串是到目前为止的响应文本。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="c1"># ...&lt;/span>
+&lt;span class="k">elif&lt;/span> &lt;span class="nb">isinstance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">GeneratorType&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="c1"># 流式消息必须共享相同的 id 才能在 AgentScope Studio 中显示，因此这里通过同一条消息切换 content 字段来实现&lt;/span>
+&lt;span class="n">msg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Msg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">role&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;assistant&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="n">last&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">text_chunk&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">content&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">msg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">text_chunk&lt;/span>
+&lt;span class="n">log_stream_msg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">msg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">last&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">last&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="c1"># ...&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="3总结">3.总结&lt;/h1>
+&lt;p>本文要点如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>流式输出是大模型在生成数据时即时响应的一种方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>流式输出、非流式输出有各自的应用场景：&lt;/p>
+&lt;ul>
+&lt;li>流式输出适合需要实时反馈和处理连续数据的应用，而非流式输出适合批量处理和结果完整性要求较高的场景。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>AgentScope支持多种模型的流式输出，包括OpenAI、DashScope、Gemini、ZhipuAi、Ollama、LiteLLM。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>AgentScope流式输出的配置：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>model_config&lt;/code>的&lt;code>stream&lt;/code>参数。&lt;/li>
+&lt;li>脚本中的模型调用参数&lt;code>stream&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>AgentScope流式输出的调用：&lt;/p>
+&lt;ul>
+&lt;li>模型输出的stream字段是个生成器。&lt;/li>
+&lt;li>使用speak方法直接流式打印。&lt;/li>
+&lt;li>使用log_stream_msg方法自定义流式打印。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>参考：https://arxiv.org/pdf/2402.14034&lt;/p></description></item><item><title>【chatGPT】学习笔记57-LLM微调技术之QLoRA(3)</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B057-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora3/</link><pubDate>Thu, 14 Nov 2024 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B057-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E4%B9%8Bqlora3/</guid><description>&lt;p>在论文《GPTQ：Accurate Post-Training Quantization for Generative Pre-trained Transformers》中，提出了GPTQ这种模型量化的方法。它针对生成式预训练大模型，实现精准的模型事后模型量化(Post-Training Quantization)。&lt;/p>
 &lt;blockquote>
 &lt;p>PS：理解GPTQ，就需要理解前两篇专栏介绍的&lt;strong>模型量化基本概念&lt;/strong>、&lt;strong>模型剪枝及OBD/OBS&lt;/strong>，不熟悉的小伙伴可以翻一下前面的专栏。&lt;/p>
 &lt;/blockquote>
@@ -3101,225 +3297,4 @@ R&lt;sup>|V|×d&lt;/sup>。如下图：&lt;/p>
 &lt;h1 id="5参考">5.参考&lt;/h1>
 &lt;blockquote>
 &lt;p>&lt;a href="https://openai.com/research/video-generation-models-as-world-simulators">https://openai.com/research/video-generation-models-as-world-simulators&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>【chatGPT】学习笔记40-LLM应用-如何构建RAG数据集</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-llm%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BArag%E6%95%B0%E6%8D%AE%E9%9B%86/</link><pubDate>Mon, 05 Feb 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-llm%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BArag%E6%95%B0%E6%8D%AE%E9%9B%86/</guid><description>&lt;p>2023年是基础大模型的爆发元年，专家预测2024年将是AI应用的爆发元年。&lt;/p>
-&lt;p>因此，本专栏希望通过一系列文章，和大家探讨AI应用的规划、落地、实践等问题：&lt;/p>
-&lt;blockquote>
-&lt;p>如何在千行百业寻找AI应用的落地点？如何用AI为客户带来真实的价值？&lt;/p>
-&lt;p>如何开发高质量AI应用？如何评估和控制AI应用的开发成本？&lt;/p>
-&lt;/blockquote>
-&lt;p>RAG是目前AI应用落地的主要技术领域，本文首先来探讨RAG相关的产品实践。&lt;/p>
-&lt;h1 id="1开发ai应用前我们应该考虑什么">1.开发AI应用前，我们应该考虑什么？&lt;/h1>
-&lt;h2 id="1我们真的需要ai应用吗">(1)我们真的需要AI应用吗？&lt;/h2>
-&lt;p>相信大家有一种感觉：AI很强大，但问及AI解决什么具体的行业问题？又无从回答。&lt;/p>
-&lt;p>这是一个产品规划问题：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>行业痛点&lt;/strong>：我的行业领域有什么Gap点？&lt;/li>
-&lt;li>&lt;strong>业务设计&lt;/strong>：AI能解决这些Gap点吗？&lt;/li>
-&lt;li>&lt;strong>价值呈现&lt;/strong>：这些问题解决后能给客户带来什么价值？&lt;/li>
-&lt;/ul>
-&lt;p>我们不能叶公好龙式地迷失在AI浪潮中，还是要落脚于&lt;strong>解决客户痛点、呈现产品价值&lt;/strong>。&lt;/p>
-&lt;p>以&lt;strong>Khan Academy&lt;/strong>在AI赋能教育的实践为例：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Khan Academy是一家具备全球影响力的在线教育平台，愿景是为提供&lt;strong>普惠教育&lt;/strong>(为无法享受基础教育的学生提供覆盖学科广泛、内容专业的在线课程。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>行业痛点&lt;/strong>：Khan Academy的普惠教育理想，意味着既要&lt;strong>高教学质量、千人千面&lt;/strong>，又要&lt;strong>控制教学成本&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>业务设计&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>怎么学&lt;/strong>：通过AI对不同学生的画像，自动化(成本)、专业化(高质量)、针对性(千人千面)地给出学习地图。&lt;/li>
-&lt;li>&lt;strong>学什么&lt;/strong>：通过AI自主挖掘发现学习资源，自动化(成本)、针对性(千人千面)地为学生推荐学习资源。&lt;/li>
-&lt;li>&lt;strong>监督引导&lt;/strong>：通过AI，自动化(成本)、有耐心(高质量)地监督与调整学生进度及学习习惯。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>价值呈现&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>自主学习、个性化学习是普惠教育的基石。&lt;/li>
-&lt;li>&lt;strong>AI从教学质量和成本上使得自主学习、个性化学习成为了可能&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-LLM%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BARAG%E6%95%B0%E6%8D%AE%E9%9B%86/image-20240206095448606.png" alt="image-20240206095448606">&lt;/p>
-&lt;h2 id="2解决问题的手段只有锤子吗">(2)解决问题的手段只有锤子吗？&lt;/h2>
-&lt;p>AI智能问答是一把锤子(也是目前国内AI应用的主要形态)，但它只是AI能力的很小一部分。&lt;/p>
-&lt;p>为了更好地选择合适的AI能力解决客户问题，我们需要理解AI能力的全集。&lt;/p>
-&lt;p>AI能力可以分为&lt;strong>基础能力&lt;/strong>和&lt;strong>综合能力&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>基础能力&lt;/strong>：AI的听说读写能力，这些能力可以让AI将&amp;quot;文字&amp;rdquo;、&amp;ldquo;语音&amp;rdquo;、&amp;ldquo;图像及视频&amp;quot;进行相互转换。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-LLM%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BARAG%E6%95%B0%E6%8D%AE%E9%9B%86/image-20240203083813459.png" alt="image-20240203083813459">&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>综合能力&lt;/strong>：综合能力依托于AI基础能力，进而解决客户的业务问题。
-&lt;ul>
-&lt;li>&lt;strong>RAG能力&lt;/strong>：AI可以通过外挂形式，进行垂域知识问答。&lt;/li>
-&lt;li>&lt;strong>ReAct能力&lt;/strong>：可以发挥AI具备的一定的推理能力，分解任务，自动执行。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-LLM%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BARAG%E6%95%B0%E6%8D%AE%E9%9B%86/image-20240206101931437.png" alt="image-20240206101931437">&lt;/p>
-&lt;p>面向不同类型的客户问题，我们选择的AI能力不同：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>检索类问题适合采用RAG&lt;/strong>。
-&lt;ul>
-&lt;li>如：了解工作流程、学习专业知识等检索类客户问题，适合使用AI的RAG综合能力。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>任务执行类问题适合采用ReAct&lt;/strong>。
-&lt;ul>
-&lt;li>如：挖掘海量互联网学习资源、根据学生学习情况监督调整学习计划等任务执行类问题，适合采用ReAct综合能力。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="2如何构建rag数据集">2.如何构建RAG数据集？&lt;/h1>
-&lt;p>在确定采用RAG技术解决客户问题后，构建高质量的RAG数据集是RAG成功的关键(否则就是&amp;quot;垃圾进，垃圾出&amp;quot;的结果)。&lt;/p>
-&lt;p>我们接下来讨论如何构建高质量RAG数据集。&lt;/p>
-&lt;h2 id="21问题分类">2.1.问题分类&lt;/h2>
-&lt;p>在制作数据集前，要理清垂域中的&lt;strong>垂域用户问题&lt;/strong>和&lt;strong>垂域知识&lt;/strong>的&lt;strong>特点&lt;/strong>。&lt;/p>
-&lt;p>垂域用户问题有如下特点：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>高频问题易识别&lt;/strong>: 常见问题和重复性问题出现的频率较高，垂域专家清楚高频问题是什么。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>针对性强&amp;amp;辨识度高&lt;/strong>：通常针对特定的知识进行提问，问题描述包含垂域专业术语，不闲聊。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>兼具广度和深度&lt;/strong>：可能是问结构纲领级的问题，也可能是针对某个具体细节的问题。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>垂域知识有以下特点：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>独特性&lt;/strong>：垂域知识有其独特的知识体系和术语，需要具备一定的专业背景和知识储备才能理解和应用。&lt;/li>
-&lt;li>&lt;strong>结构明确&lt;/strong>：垂域知识通常有明确的结构和层次，各层知识间不存在重复和二义性。垂域知识更新很快，但知识结构变化相对小。&lt;/li>
-&lt;/ul>
-&lt;p>基于以上特点，可以将垂域用户向AI提问的&lt;strong>问题类型分为2类&lt;/strong>：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>高频问题&lt;/strong>：适合采用FAQ问答技术，一则可使&lt;strong>答案准确可控&lt;/strong>，二则减少AI的资源消耗。&lt;/li>
-&lt;li>&lt;strong>知识问答&lt;/strong>：适合采用文档问答技术，一则文档所覆盖的垂域知识深度与广度兼备，二则构建成本相对较低。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-LLM%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BARAG%E6%95%B0%E6%8D%AE%E9%9B%86/image-20240206103355976.png" alt="image-20240206103355976">&lt;/p>
-&lt;h2 id="22faq问答数据集构建">2.2.FAQ问答数据集构建&lt;/h2>
-&lt;h3 id="1关注构建成本">(1)关注构建成本&lt;/h3>
-&lt;p>FAQ问答数据数据集构建时，可能存在一种误区：&lt;strong>问题不够加问题&lt;/strong>？&lt;/p>
-&lt;ul>
-&lt;li>问题不是不够，而是AI的理解能力有限，无法理解同一个问题五花八门的表达形式。&lt;/li>
-&lt;li>问题不够加问题，本质就是穷举问题表达形式，但自然语言的表达形式穷举成本极高甚至不可穷举，因此会导致数据集构建成本不可承受。&lt;/li>
-&lt;/ul>
-&lt;p>如果上述方法行不通，则说明我们需要：用&lt;strong>有限的问答对&lt;/strong>覆盖&lt;strong>多样的问题表达形式&lt;/strong>，进而才能控制FAQ数据集的构建成本。&lt;/p>
-&lt;p>如下是我们的工程实践：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>从知识的覆盖度上构建问答对，而不是从问题的表达多样性上构建问答对——这样&lt;strong>问答对的数量就是有限的&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>覆盖多样的问题表达形式，可以采用关键词、扩展问等技巧。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>这个过程必须投入业务专家，根据上述两点工程实践进行把关和输出，业务专家需要保证。&lt;/p>
-&lt;ul>
-&lt;li>每个问题要保证&lt;strong>语义唯一性&lt;/strong>。&lt;/li>
-&lt;li>所有问题构成的语义集合要保证&lt;strong>业务覆盖性&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;h3 id="2关注关键词提取">(2)关注关键词提取&lt;/h3>
-&lt;p>关于前文提到的关键词技巧，也存在一个误区：直接将问题中的主谓宾作为关键词。&lt;/p>
-&lt;ul>
-&lt;li>这里举个例子：&lt;code>Java&lt;/code>是&amp;quot;如何提高Java的调试与定位能力？&amp;ldquo;这个问题的关键词吗？&lt;/li>
-&lt;li>显然，从自然语言角度&lt;code>Java&lt;/code>是关键词，但从业务角度&lt;code>Java&lt;/code>不是关键词。
-&lt;ul>
-&lt;li>因为用户对Java领域的常见问题，都会带有Java这个单词。&lt;/li>
-&lt;li>如果将Java作为本问题的关键词，那么所有的垂域问题都会被AI认为与本问题有关。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>我们的实践经验是：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>每个关键词必须具备&lt;strong>独特性&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>上述例子中，&lt;code>Java&lt;/code>没有独特性，失去了特征，而&lt;code>调试与定位能力&lt;/code>作为这个问题的关键词更为合适，因其具有独特性。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>关键词集合必须具备&lt;strong>丰富性&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>从业务角度，&amp;ldquo;调试与定位能力&amp;rdquo;，也有&amp;quot;调试定位&amp;rdquo;、&amp;ldquo;调试与定位&amp;quot;这种&lt;strong>惯用语&lt;/strong>，因此关键词集合可以丰富为[&amp;ldquo;调试与定位能力&amp;rdquo;, &amp;ldquo;调试与定位&amp;rdquo;, &amp;ldquo;调试定位&amp;rdquo;]。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="23文档问答数据集构建">2.3.文档问答数据集构建&lt;/h2>
-&lt;h3 id="1关注文档质量">(1)关注文档质量&lt;/h3>
-&lt;p>文档问答是AI对垂域文档进行学习理解(向量化)。这个过程类似老师(AI工程师)教小孩(AI)学习一本教材(垂域文档)。&lt;/p>
-&lt;p>需要充分理解AI的特点(&lt;strong>因材施教&lt;/strong>)，设计出AI更容易理解垂域文档(&lt;strong>好教材&lt;/strong>)，是构建文档问答数据集的关键技术。&lt;/p>
-&lt;p>构建垂域文档，有如下实践：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>知识组织形式&lt;/strong>会影响召回率：
-&lt;ul>
-&lt;li>通过实测和尝试，将垂域知识构建为树状结构，比较易于当前国内LLM理解和学习。&lt;/li>
-&lt;li>不要在垂域知识树的节点之间产生关联关系形成有向图，可以通过搬移树节点的形式用线性的形式表达知识节点的关系。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B040-LLM%E5%BA%94%E7%94%A8-%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BARAG%E6%95%B0%E6%8D%AE%E9%9B%86/image-20240206113907749.png" alt="image-20240206113907749">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>每个知识块节点的&lt;strong>粒度适中&lt;/strong>。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>知识块不宜过大&lt;/strong>：将整个垂域文档设计为一个知识块，会导致问啥问题都返回这个知识块。&lt;/li>
-&lt;li>&lt;strong>知识块不宜过小&lt;/strong>：将垂域文档设计为一句话一个知识块，会导致知识点太碎，知识点之间存在复杂的逻辑关联，远超出现有LLM的推理能力。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>每个知识块节点内容&lt;strong>避免重复&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>每个知识块节点内容&lt;strong>避免矛盾&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="24ai辅助构建数据集">2.4.AI辅助构建数据集&lt;/h2>
-&lt;p>前述FAQ数据集构建、文档问答数据集构建的过程，都可以采用AI、自动化工具等方式辅助构建。&lt;/p>
-&lt;p>我们会在后续文章中分享AI辅助构建数据集的工程方法与实践。&lt;/p>
-&lt;p>但，无论采用怎样的数据集构建过程，还是要关注数据集的内容本身，是否满足上述工程实践的要求和原则。&lt;/p>
-&lt;h1 id="3小结">3.小结&lt;/h1>
-&lt;p>构建RAG数据集，需要考虑一系列实践方法，建立标注规范，确保数据的质量和有效性。具体实践经验如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>AI应用的规划与设计：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>要用产品规划方法进行业务设计，落脚于&lt;strong>解决客户痛点、呈现产品价值&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>要选择合适的AI能力解决业务问题，可用的AI能力包括&lt;strong>基础能力(听说读写)&lt;strong>和&lt;/strong>综合能力(RAG、ReAct)&lt;/strong>。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>构建RAG数据集方法：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>问题分类：&lt;/strong>
-&lt;ul>
-&lt;li>&lt;strong>高频问题&lt;/strong>：适合采用FAQ问答技术，一则可使&lt;strong>答案准确可控&lt;/strong>，二则减少AI的资源消耗。&lt;/li>
-&lt;li>&lt;strong>知识问答&lt;/strong>：适合采用文档问答技术，一则文档所覆盖的垂域知识深度与广度兼备，二则构建成本相对较低。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>FAQ问答数据集构建方法：
-&lt;ul>
-&lt;li>每个问题要保证&lt;strong>语义唯一性&lt;/strong>。&lt;/li>
-&lt;li>所有问题构成的语义集合要保证&lt;strong>业务覆盖性&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>文档问答数据集构建方法：
-&lt;ul>
-&lt;li>&lt;strong>知识组织形式&lt;/strong>会影响召回率：将垂域知识构建为树状结构，可以通过搬移树节点的形式用线性的形式表达知识节点的关系。&lt;/li>
-&lt;li>每个知识块节点的&lt;strong>粒度适中&lt;/strong>：知识块不宜过大，也不宜过小。&lt;/li>
-&lt;li>每个知识块节点内容&lt;strong>避免重复&lt;/strong>。&lt;/li>
-&lt;li>每个知识块节点内容&lt;strong>避免矛盾&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>可采用AI辅助构建数据集，但关键还是&lt;strong>要关注数据集的内容本身符合上述工程实践的要求和原则&lt;/strong>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>

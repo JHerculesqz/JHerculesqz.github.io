@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Jan 2025 11:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>妙木山</title><link>https://jherculesqz.github.io/</link><description>Recent content on 妙木山</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 10 Mar 2025 08:00:59 +0800</lastBuildDate><atom:link href="https://jherculesqz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jherculesqz.github.io/about/</link><pubDate>Thu, 05 Aug 2021 13:01:37 +0800</pubDate><guid>https://jherculesqz.github.io/about/</guid><description>&lt;h1 id="关于博客">关于博客&lt;/h1>
 &lt;ul>
 &lt;li>&lt;strong>独立&lt;/strong>：一直在写技术博客，从微信公众号、头条号、SegmentFault、掘金、简书一路折腾过来，还是希望有一个自己独立的空间。&lt;/li>
 &lt;li>&lt;strong>坚持&lt;/strong>：随着年龄增长，逐渐欲说还休，还是文字更有韵味，希望自己能坚持写下去。&lt;/li>
@@ -18,7 +18,255 @@
 &lt;li>&lt;strong>哲学&lt;/strong>：不知何时，开始期待理解生命的意义。东一本西一本的书拿来乱翻，也没找到答案。不过，也不是全无收获——能模模糊糊地体会诗词的意境、能回味出毛选的奇妙、能敬畏金刚经的高深……继续求索吧……&lt;/li>
 &lt;li>&lt;strong>兴趣&lt;/strong>：年轻的时候，喜欢轮滑、滑板、快乐肥仔水。现在，喜欢滑雪、乒乓球、茶(特指正山小种)。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记59-AgentScope解读-提示工程</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B059-agentscope%E8%A7%A3%E8%AF%BB-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/</link><pubDate>Fri, 10 Jan 2025 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B059-agentscope%E8%A7%A3%E8%AF%BB-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/</guid><description>&lt;p>提示工程(Prompt Engineering)是与大语言模型交互的一项关键技术，作为以大语言模型为大脑的智能体，提示工程同样扮演着重要角色。&lt;/p>
+&lt;p>&lt;img src="https://jherculesqz.github.io/about/Me.png" alt="Me">&lt;/p></description></item><item><title>【chatGPT】学习笔记60-AgentScope解读-Agent</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B060-agentscope%E8%A7%A3%E8%AF%BB-agent/</link><pubDate>Mon, 10 Mar 2025 08:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B060-agentscope%E8%A7%A3%E8%AF%BB-agent/</guid><description>&lt;p>AgentScope是用来构建智能体的框架，其Agent模块是构建智能体的主要组件。AgentScope的agent模块提供哪些能力？如何使用？本文我们就来一起了解一下。&lt;/p>
+&lt;h1 id="1agentscope的agent模块">1.AgentScope的Agent模块&lt;/h1>
+&lt;p>智能体是能够&lt;strong>与环境和其他智能体交互&lt;/strong>，并&lt;strong>采取行动改变环境&lt;/strong>的自主实体，需要具备如下能力：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>交互能力&lt;/strong>：能够接收输入消息，并根据消息内容生成响应消息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>角色扮演&lt;/strong>：通过提示词等方式指定Agent承担的角色，例如“你是一个Python专家”，从而让其按照指定角色进行交互。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>记忆功能&lt;/strong>：用于存储和利用对话历史，使智能体能够根据上下文提供更加准确的响应。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>多模态支持&lt;/strong>：可以处理包含多模态数据（如图像、视频）的消息。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Agentscope中的agent模块，封装了上述能力，并提供以下方法帮助开发者快速构建自己的Agent：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>AgentBase&lt;/strong>：是AgentScope为所有自定义Agent提供的基类，负责维护所有agent的通用行为，定义了所有agent都应该遵循的基本规则和功能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>AgentPool&lt;/strong>：各种不同功能agent的集合，每个agent都是为了完成特定目的而设计的，用户可以从这个池中选择适合自己需求的agent。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>定制Agent&lt;/strong>：允许用户定制自己的agent，确保它能够满足用户项目的具体需求。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="2agentscope的agent构建">2.AgentScope的Agent构建&lt;/h1>
+&lt;h2 id="21agentbase">2.1.AgentBase&lt;/h2>
+&lt;h3 id="211关键特性和方法">2.1.1.关键特性和方法&lt;/h3>
+&lt;p>&lt;code>AgentBase&lt;/code> 是构成所有 agent 结构的基础，提供了一个包含基本属性和方法的模板。该类中的属性和方法支撑了任何会话 agent 的核心功能，确保它们能够有效地进行交互和处理任务。同时，它作为所有自定义 agent 的超类，可以保证不同 agent 之间的一致性和兼容性。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>关键特性&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>memory(记忆)&lt;/strong>：让agent能够记住之前的对话内容，让对话更连贯，响应更准确。&lt;/li>
+&lt;li>&lt;strong>model(模型)&lt;/strong>：agent的“大脑”，负责处理信息并做出反应，它根据记忆和接收到的新信息来决定怎么回应。&lt;/li>
+&lt;li>&lt;strong>sys_prompt和 engine(系统提示和引擎)&lt;/strong>：系统提示是给agent的指令，引擎则负责根据情况动态生成合适的提示，帮助智能体更好地互动。&lt;/li>
+&lt;li>&lt;strong>to_dist(分布式)&lt;/strong>：让智能体能够和其他智能体一起工作，提高效率。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>关键方法&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>observe()&lt;/strong>：允许 agent 注意到消息而不立即回复，从而根据观察到的消息更新它的记忆。&lt;/li>
+&lt;li>&lt;strong>reply()&lt;/strong>：定义了 agent 对于传入消息的响应行为，封装了 agent 输出的逻辑。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="212代码解读">2.1.2.代码解读&lt;/h3>
+&lt;p>&lt;code>AgentBase&lt;/code> 基类定义了一个智能体的基本框架，开发者需要根据这个框架来创建具体的智能体：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>AgentBase&lt;/code> 继承自另一个名为 &lt;code>Operator&lt;/code> 的类，这意味着 &lt;code>AgentBase&lt;/code> 可以使用 &lt;code>Operator&lt;/code> 类中的方法和属性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>AgentBase&lt;/code> 类的3个重要的部分：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>初始化方法 &lt;code>__init__&lt;/code>&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>创建一个新的 &lt;code>AgentBase&lt;/code> 对象时被调用。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>它接受几个参数，比如 &lt;code>name&lt;/code>（agent的名字）、&lt;code>sys_prompt&lt;/code>（系统提示）、&lt;code>model_config_name&lt;/code>（模型配置的名字）和 &lt;code>use_memory&lt;/code>（是否使用记忆功能）。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>观察方法 &lt;code>observe&lt;/code>&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>这是一个可选方法，用于根据agent观察到的信息来更新它的内部状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果智能体启用了记忆功能，这个方法会将观察到的信息添加到记忆中。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>回复方法 &lt;code>reply&lt;/code>&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>这是agent必须实现的核心方法，用于处理接收到的信息并生成一个合适的回复。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果没有实现这个方法，程序会抛出一个错误，提示缺少必需的 &lt;code>reply&lt;/code> 函数。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">AgentBase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Operator&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="c1"># ... [code omitted for brevity]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">sys_prompt&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">str&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">model_config_name&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">use_memory&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">True&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="c1"># ... [code omitted for brevity]&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">observe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Union&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">dict&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Sequence&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">dict&lt;/span>&lt;span class="p">]])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="c1"># An optional method for updating the agent&amp;#39;s internal state based on&lt;/span>
+&lt;span class="c1"># messages it has observed. This method can be used to enrich the&lt;/span>
+&lt;span class="c1"># agent&amp;#39;s understanding and memory without producing an immediate&lt;/span>
+&lt;span class="c1"># response.&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">memory&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">reply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Optional&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Union&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Msg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Sequence&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">Msg&lt;/span>&lt;span class="p">]]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">None&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">Msg&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="c1"># The core method to be implemented by custom agents. It defines the&lt;/span>
+&lt;span class="c1"># logic for processing an input message and generating a suitable&lt;/span>
+&lt;span class="c1"># response.&lt;/span>
+&lt;span class="k">raise&lt;/span> &lt;span class="ne">NotImplementedError&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s2">&amp;#34;Agent [{type(self).__name__}] is missing the required &amp;#34;&lt;/span>
+&lt;span class="n">f&lt;/span>&lt;span class="s1">&amp;#39;&amp;#34;reply&amp;#34; function.&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="c1"># ... [code omitted for brevity]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="22agentpool">2.2.AgentPool&lt;/h2>
+&lt;p>AgentScope还提供了AgentPool(agent池)，它是agent的集合，目的是提供具备不同功能agent的模板，帮助开发者更快地开发应用。&lt;/p>
+&lt;p>AgentPool中已经预置的agent包括：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>AgentBase&lt;/strong>：这是所有智能体的“爸爸”类，提供了智能体需要的基本属性和方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>DialogAgent&lt;/strong>：这个智能体擅长理解和管理对话，它能够根据上下文生成合适的回复。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>DictDialogAgent&lt;/strong>：和DialogAgent类似，但它回复的消息是Json格式的，方便程序理解。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>UserAgent&lt;/strong>：这个智能体负责和用户互动，收集用户的输入，然后生成可能包含链接或额外信息的消息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>ReActAgent&lt;/strong>：这个智能体使用了一种叫做ReAct的算法，能够自动调用工具来处理复杂的任务。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>AgentScope还在持续增加新的agent，以适应各种不同的应用需求。&lt;/p>
+&lt;p>总的来说，AgentPool就像是一个大家庭，里面有各种不同特长的智能体，开发者可以根据需要选择合适的智能体来帮助他们开发应用。&lt;/p>
+&lt;h2 id="23定制agent">2.3.定制Agent&lt;/h2>
+&lt;p>开发人员可以基于AgentPool中提供的agent，稍加配置，就可以快速实现一个满足需要的agent。&lt;/p>
+&lt;p>以&lt;code>DialogAgent&lt;/code>为例，我们来定制一个用于客户服务的&amp;quot;聊天智能体&amp;rdquo;。&lt;/p>
+&lt;ul>
+&lt;li>导入&lt;code>DialogAgent&lt;/code>类。&lt;/li>
+&lt;li>配置&lt;code>DialogAgent&lt;/code>，包括设置智能体的名字、使用的模型、系统提示等。&lt;/li>
+&lt;li>创建并配置你的&lt;code>DialogAgent&lt;/code>。&lt;/li>
+&lt;li>代码示例：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">from&lt;/span> &lt;span class="nn">agentscope.agents&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">DialogAgent&lt;/span>
+&lt;span class="c1"># Configuration for the DialogAgent&lt;/span>
+&lt;span class="n">dialog_agent_config&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ServiceBot&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;model_config_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;gpt-3.5&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># Specify the model used for dialogue generation&lt;/span>
+&lt;span class="s2">&amp;#34;sys_prompt&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Act as AI assistant to interact with the others. Try to &amp;#34;&lt;/span>
+&lt;span class="s2">&amp;#34;reponse on one line.&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># Custom prompt for the agent&lt;/span>
+&lt;span class="c1"># Other configurations specific to the DialogAgent&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1"># Create and configure the DialogAgent&lt;/span>
+&lt;span class="n">service_bot&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">DialogAgent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="n">dialog_agent_config&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="3总结">3.总结&lt;/h1>
+&lt;p>本文介绍了AgentScope框架中的agent模块，其提供一系列预置agent类，可以帮助开发者快速构建agent。&lt;/p>
+&lt;p>主要内容包括：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>AgentBase基类的特性和代码解读；&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>AgentPool：各种不同特长agent的集合，池子中已预置的agent类有：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>AgentBase&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>DialogAgent&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>DictDialogAgent&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>UserAgent&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ReActAgent&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>基于AgentPool提供的类定制agent。&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>参考：https://arxiv.org/pdf/2402.14034&lt;/p></description></item><item><title>【chatGPT】学习笔记59-AgentScope解读-提示工程</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B059-agentscope%E8%A7%A3%E8%AF%BB-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/</link><pubDate>Fri, 10 Jan 2025 11:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B059-agentscope%E8%A7%A3%E8%AF%BB-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/</guid><description>&lt;p>提示工程(Prompt Engineering)是与大语言模型交互的一项关键技术，作为以大语言模型为大脑的智能体，提示工程同样扮演着重要角色。&lt;/p>
 &lt;p>本文为小伙伴们介绍AgentScope中的提示工程。&lt;/p>
 &lt;h1 id="1提示工程">1.提示工程&lt;/h1>
 &lt;h2 id="11提示工程在智能体中的作用">1.1.提示工程在智能体中的作用&lt;/h2>
@@ -3202,153 +3450,4 @@ R&lt;sup>|V|×d&lt;/sup>。如下图：&lt;/p>
 &lt;li>&lt;strong>Adapter Tuning的核心思想&lt;/strong>：增加一个新的小模型，微调小模型的少量参数，冻结预训练模型的海量参数。&lt;/li>
 &lt;li>&lt;strong>Adapter Tuning的具体实现&lt;/strong>：改变预训练模型的网络结构，通过高维向量到低维向量的转换，训练不同下游任务的Adapter层。&lt;/li>
 &lt;/ul>
-&lt;p>论文链接：https://arxiv.org/pdf/1902.00751.pdf&lt;/p></description></item><item><title>【chatGPT】学习笔记42-LLM微调技术概览</title><link>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</link><pubDate>Fri, 15 Mar 2024 10:00:59 +0800</pubDate><guid>https://jherculesqz.github.io/post/ai%E6%8B%BE%E9%81%97/chatgpt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/</guid><description>&lt;p>笔者在使用大语言模型开展具体业务领域的任务时，遇到了如下问题：&lt;/p>
-&lt;ul>
-&lt;li>LLM的预训练模型不具备垂域知识，无法很好回答垂域的问题；&lt;/li>
-&lt;li>希望用各种提示词技巧让模型理解专业问题，但效果有限，而且提高了使用门槛和模型推理成本；&lt;/li>
-&lt;li>微调词嵌入模型成本低、速度快，但容易出现过拟合或泛化不足，也是治标不治本。&lt;/li>
-&lt;/ul>
-&lt;p>经过不断尝试总结，最终落脚点还是回到了大模型自身 &amp;ndash; 大模型的微调才是关键。&lt;/p>
-&lt;p>什么是大模型微调？微调如何做？本篇开始，我们将为大家一步步揭开大模型微调的神秘面纱。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240314173850356.png" alt="image-20240314173850356">&lt;/p>
-&lt;h1 id="1大语言模型的技术金字塔">1.大语言模型的技术金字塔&lt;/h1>
-&lt;p>大语言模型相关技术可分为四层，其中：&lt;/p>
-&lt;ul>
-&lt;li>预训练的难度和成本最高，通常只有巨型公司(如谷歌、微软、OpenAI)才能承担其成本。&lt;/li>
-&lt;li>提示词工程难度和成本最低，普通人就可以掌握。&lt;/li>
-&lt;li>大模型微调的难度和成本次高，但从效果来看，是中小型公司可落地的折中技术。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315141452986.png" alt="image-20240315141452986">&lt;/p>
-&lt;p>以下是各层技术的详细阐述：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>提示词工程&lt;/strong>
-&lt;ul>
-&lt;li>技术原理：通过设计合适的提示或上下文来引导LLM生成期望的输出，侧重于用提示来激活预训练模型的能力，如总结摘要、翻译转换等。适用于文本处理、机器翻译等场景。&lt;/li>
-&lt;li>技术特征：技术门槛低，终端用户即可掌握。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Agents&lt;/strong>：
-&lt;ul>
-&lt;li>技术原理：让LLM来决策一系列的动作，这些动作可以是让LLM分步解决问题，也可以是调用工具查询外部信息。这些动作形成一个工作流，最终完成任务目标。适用于相对复杂的用户交互应用，如智能客服。&lt;/li>
-&lt;li>技术特征：有技术门槛，需要专业的LLM应用开发人员，并且了解大模型的基础原理，熟悉其领域的业务逻辑和流程。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>大模型微调&lt;/strong>：
-&lt;ul>
-&lt;li>技术原理：在预训练模型的基础上，针对特定任务的参数做调整。通过少量的数据训练即可提升模型在特定任务上的能力，同时保留模型原已学到的知识。适用于语义理解、垂域的各类应用。&lt;/li>
-&lt;li>技术特征：技术门槛相对高，需要垂域有自己的LLM应用研发团队，具有数据处理、模型训练的能力和经验。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>预训练技术&lt;/strong>：
-&lt;ul>
-&lt;li>技术原理：比如训练出一个&amp;quot;GPT3.5&amp;rdquo;，或者&amp;quot;GLM3.0&amp;rdquo;。&lt;/li>
-&lt;li>技术特征：百G甚至千G的GPU资源需求，大量的大模型研究人员、数据科学家投入，超出了大部分公司的能力。一旦功成，效果显著。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>由于大模型微调的实用性，本专栏后续会展开介绍大模型微调技术。&lt;/p>
-&lt;h1 id="2大模型微调的可行性及理论基础">2.大模型微调的可行性及理论基础&lt;/h1>
-&lt;h2 id="1in-context-learning">(1)In-Context Learning&lt;/h2>
-&lt;p>OpenAI在预训练过程中，发现LLM能够挖掘训练数据中的潜在特征和通用范式，进而习得训练数据之外的新能力。研究者把这一发现称之为In-Context Learning(基于上下文的学习)。&lt;/p>
-&lt;p>基于In-Context Learning思想，衍生出了两种训练微调技术：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Prompt-tuning&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Instruction-tuning&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>In-Context Learning的本质就是举一反三，基于已知的知识和训练数据可以挑战从没做过工作(下游任务)。预训练模型所蕴含的知识、预训练模型所使用的数据是广义上的&lt;code>context&lt;/code>。正因为In-Context Learning的有效性，所以对预训练模型进行微调是业界公认可行的技术路线。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315152229685.png" alt="image-20240315152229685">&lt;/p>
-&lt;h2 id="2transfer-learning">(2)Transfer Learning&lt;/h2>
-&lt;p>Transfer Learning(迁移学习)是人工智能发展过程中的一个重要思想，它的目标是将已经训练好的模型所包含的知识、推理能力迁移到未经训练的新模型上。比如对模型进行压缩、复用开源模型已经具备的能力来新模型，都是基于迁移学习思想。&lt;/p>
-&lt;p>迁移学习包含很多具体的工程方法：&lt;/p>
-&lt;ul>
-&lt;li>Conservative Training&lt;/li>
-&lt;li>Multi-task Learning&lt;/li>
-&lt;li>Progressive Neural Network&lt;/li>
-&lt;li>Domain-adversarial training&lt;/li>
-&lt;li>Zero Shot Learning&lt;/li>
-&lt;li>&amp;hellip;&amp;hellip;&lt;/li>
-&lt;/ul>
-&lt;p>无论有多少种工程方法，其核心思想是：&lt;strong>已训练的数据和任务与未训练的数据和任务存在因果、关联等逻辑关系&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315151715205.png" alt="image-20240315151715205">&lt;/p>
-&lt;h2 id="3bert的优秀实践">(3)Bert的优秀实践&lt;/h2>
-&lt;p>Bert充分发挥了Fine-tuning的技术优势和特点，在已经训练好的Bert模型基础上，加入少量的task-specific parameters。&lt;/p>
-&lt;ul>
-&lt;li>如分类任务，只需要在Bert模型上加一层softmax网络，然后对softmax网络进行微调。&lt;/li>
-&lt;li>再如情感分析任务，取第一个token的输出表示，喂给一个softmax层得到分类结果输出。&lt;/li>
-&lt;/ul>
-&lt;p>微调Bert之所以成功，其本质原因是由于In-context Learning和Transfer Learning的有效性。&lt;/p>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315153411365.png" alt="image-20240315153411365">&lt;/p>
-&lt;h1 id="3大模型微调的技术全景图">3.大模型微调的技术全景图&lt;/h1>
-&lt;h2 id="1大模型微调技术全景">(1)大模型微调技术全景&lt;/h2>
-&lt;p>大模型微调技术从大的流派上可分为两类：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Full Fine-Tuning&lt;/strong>：简称FFT，全量微调，即全参数微调。&lt;/li>
-&lt;li>&lt;strong>Parameter-Efficient Fine-Tuning&lt;/strong>: 简称PEFT，高效微调，即通过某些技术手段选择部分参数微调。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315160640710.png" alt="image-20240315160640710">&lt;/p>
-&lt;p>与FFT相比，PEFT是当前业界主流的技术路线，其原因主要是FFT存在如下缺陷：&lt;/p>
-&lt;ul>
-&lt;li>训练成本过高&lt;/li>
-&lt;li>灾难性遗忘&lt;/li>
-&lt;/ul>
-&lt;h2 id="2peft技术分支">(2)PEFT技术分支&lt;/h2>
-&lt;p>PEFT从微调目标方面可分为两类：&lt;/p>
-&lt;ul>
-&lt;li>Supervised Fine-Tuning: 简称SFT，属于有监督的微调。&lt;/li>
-&lt;li>Reinforce Learning Human Feedback: 简称RLHF，属于利用人类反馈的强化学习。&lt;/li>
-&lt;/ul>
-&lt;p>其中SFT又具有诸多工程实践，因此产生了很多技术分支：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Additive&lt;/strong>: 增量派，在原有模型上增加额外小模型和少量参数。&lt;/li>
-&lt;li>&lt;strong>Selective&lt;/strong>: 选择派，从原有模型的海量参数中，选择与下游任务相关的少量参数。&lt;/li>
-&lt;li>&lt;strong>Reparametrization-based&lt;/strong>: 数学派，基于重参数化方法，将原有模型参数低秩化，获得小参数矩阵。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315161446294.png" alt="image-20240315161446294">&lt;/p>
-&lt;p>在上述流派中，每个流派都有自己的代表方法，目前在业界广泛使用：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Sparse Adapter&lt;/strong>: 稀疏适配器。新增小模型，并从原有大模型中选择一部分参数，对这两部分参数进行微调。&lt;/li>
-&lt;li>&lt;strong>Prefix-Tuning&lt;/strong>: 模块化轻量微调。增加prefix模块(Prefix模块会在用户输入前增加虚拟token)，训练prefix模块的参数。&lt;/li>
-&lt;li>&lt;strong>LoRA&lt;/strong>: Low-Rank Adaption，低秩适配微调。它是目前业界在大语言模型、大视觉模型、多模态模型微调中的热门技术。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://jherculesqz.github.io/AI%E6%8B%BE%E9%81%97/%E3%80%90chatGPT%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B042-LLM%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E6%A6%82%E8%A7%88/image-20240315162656941.png" alt="image-20240315162656941">&lt;/p>
-&lt;p>上述技术分支的关系错综复杂，我们可以抽象的概括一下它们的技术思想：&lt;/p>
-&lt;ul>
-&lt;li>基于数据的技术分支：其核心思想是对进入预训练模型的训练语料进行前置处理。
-&lt;ul>
-&lt;li>如soft prompts中的Prompt-Tuning、Prefix-Tuning、P-Tuning，都是属于此技术分支。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>基于模型的技术分支：其核心思想是在预训练模型基础上增加额外的模型分层，仅针对增量模型的参数和预训练模型的少量参数进行微调和变换。
-&lt;ul>
-&lt;li>如Adapter模型属于此技术分支。&lt;/li>
-&lt;li>如LoRA、QLoRA、AdaLoRA也属于此技术分支。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="4小结">4.小结&lt;/h1>
-&lt;p>本文从宏观上介绍了大模型微调技术的全景图，重点梳理了PEFT微调技术的众多技术分支，旨在帮助大家了解大模型微调技术的全貌。本专栏后续文章会展开阐述PEFT的各类微调技术。&lt;/p>
-&lt;ul>
-&lt;li>大语言模型的技术金字塔
-&lt;ul>
-&lt;li>大语言模型相关技术可分为四层：提示词工程、Agents、大模型微调、预训练技术。&lt;/li>
-&lt;li>预训练的难度和成本最高；提示词工程难度和成本最低；大模型微调的难度和成本次高，但从效果来看，是中小型公司可落地的折中技术。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>大模型微调的可行性及理论基础
-&lt;ul>
-&lt;li>In-Context Learning&lt;/li>
-&lt;li>Transfer Learning&lt;/li>
-&lt;li>Bert的优秀实践&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>大模型微调的技术全景图
-&lt;ul>
-&lt;li>Full Fine-Tuning&lt;/li>
-&lt;li>Parameter-Efficient Fine-Tuning&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>论文链接：https://arxiv.org/pdf/1902.00751.pdf&lt;/p></description></item></channel></rss>
